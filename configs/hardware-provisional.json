@@ -1,0 +1,18 @@
+{
+  "profile_id": 861034497,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 1000000,
+  "slope_hz_s": 30000000000000,
+  "carrier_hz": 60000000000,
+  "chirp_interval_s": 0.001,
+  "frame_interval_s": 0.1,
+  "geometry_wavelengths": [[0, 0], [0.5, 0], [0, 0.5]],
+  "gains_real": [1, 1, 1],
+  "gains_imag": [0, 0, 0],
+  "range_offset_m": 0,
+  "verified": false,
+  "calibration_id": "unverified-hardware-template",
+  "discard_chirps": 1,
+  "snr_db": 12
+}

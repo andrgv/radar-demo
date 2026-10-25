@@ -1,0 +1,14 @@
+{
+  "label": "unknown",
+  "session_id": "replace-with-unique-session",
+  "scene_id": "room01-day01",
+  "specimen_id": "specimen01",
+  "material": "unknown",
+  "thickness_mm": null,
+  "coating": "unknown",
+  "surveyed_range_m": null,
+  "incidence_deg": null,
+  "background": "empty",
+  "mount_pose": "fixed",
+  "operator_notes": "Set label to glass, non_glass, empty, or unknown before recording"
+}

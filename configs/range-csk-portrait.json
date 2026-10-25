@@ -1,0 +1,42 @@
+{
+  "profile_id": 861034497,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 1000000,
+  "slope_hz_s": 30000000000000,
+  "carrier_hz": 60000000000,
+  "chirp_interval_s": 0.001,
+  "frame_interval_s": 0.1,
+  "gains_real": [
+    1,
+    1,
+    1
+  ],
+  "gains_imag": [
+    0,
+    0,
+    0
+  ],
+  "range_offset_m": 0.007889536386001317,
+  "verified": false,
+  "calibration_id": "plate-range-pilot; physical-portrait-geometry; RX-phase-uncalibrated",
+  "discard_chirps": 1,
+  "snr_db": 12,
+  "range_scale": 4.4469550451027695,
+  "geometry_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2.35
+    ],
+    [
+      -2.35,
+      0
+    ]
+  ],
+  "geometry_label": "BGT60CUTR13AIP portrait antenna-face view (RX3 azimuth, RX2 elevation)",
+  "mount_roll_deg": 0
+}

@@ -1,0 +1,40 @@
+{
+  "profile_id": 861034497,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 1000000,
+  "slope_hz_s": 30000000000000,
+  "carrier_hz": 60000000000,
+  "chirp_interval_s": 0.001,
+  "frame_interval_s": 0.1,
+  "geometry_wavelengths": [
+    [
+      0,
+      0
+    ],
+    [
+      0.5,
+      0
+    ],
+    [
+      0,
+      0.5
+    ]
+  ],
+  "gains_real": [
+    1.0000000000000013,
+    -0.7351262109371954,
+    0.16598427072286884
+  ],
+  "gains_imag": [
+    -4.07167534943044e-19,
+    -0.4048932987299698,
+    -1.0856189190019367
+  ],
+  "range_offset_m": 0.007889536386001317,
+  "range_scale": 4.4469550451027695,
+  "verified": false,
+  "calibration_id": "c0a82c17-de51-49ce-bd02-62654b3b3b29",
+  "discard_chirps": 1,
+  "snr_db": 12
+}
