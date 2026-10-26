@@ -21,6 +21,9 @@ def range_readout(result):
         for distance in distances[:8])
     if len(distances) > 8:
         values += f" (+{len(distances) - 8} more)"
+    if any(item.close_range for item in result.detections):
+        spacing = result.ranges[1] - result.ranges[0]
+        values += f" | close-range candidate: bin 1; grid spacing {spacing:.2f} m; precise distance unresolved"
     return ("Detected ranges" if result.calibrated else "Detected spectral peaks") + qualification + ": " + values
 
 

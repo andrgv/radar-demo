@@ -15,6 +15,8 @@ class Detection:
     power_db: float
     moving: bool
     angle_valid: bool
+    range_resolution_m: float = 0.0
+    close_range: bool = False
 
 
 @dataclass
@@ -145,6 +147,7 @@ class Processor:
             self.history.clear()
         self.last_sequence = frame.sequence
         spectrum = range_fft(frame.adc, config)
+        supported = self.background.target_supported(spectrum, config) if self.background is not None else None
         if self.background is not None:
             spectrum = self.background.subtract(spectrum, config)
         # Mix snapshots BEFORE covariance; mixing an already reduced cross-vector
@@ -190,29 +193,39 @@ class Processor:
                     coherent_channels(spectrum[:, range_bin])[1:]))))
         detections = []
         moving_profile = moving_power.max(axis=0)
-        for range_bin in range(2, len(power) - 1):
+        for range_bin in range(1 if supported is not None else 2, len(power) - 1):
+            if supported is not None and not supported[range_bin]:
+                continue
             static_peak = (power[range_bin] >= thresholds[range_bin] and
                 power[range_bin] >= max(power[range_bin - 1], power[range_bin + 1]))
+            if range_bin == 1:
+                # Local CFAR near DC has no symmetric reference cells. Use the
+                # measured background gate and a resolved maximum instead.
+                static_peak = power[1] >= max(power[0], power[2])
             moving_peak = (moving_profile[range_bin] > moving_thresholds[range_bin] and
                 moving_profile[range_bin] >= max(moving_profile[range_bin - 1], moving_profile[range_bin + 1]))
+            if range_bin == 1:
+                moving_peak = False
             if not static_peak and not moving_peak:
                 continue
             static_channels = spectrum[:, range_bin].mean(axis=0)
             static_power = float(np.mean(abs(static_channels)**2))
             moving_bin = int(moving_power[:, range_bin].argmax())
             candidates = []
-            if static_peak and static_power > max(thresholds[range_bin] * 0.5, moving_power[moving_bin, range_bin] * 0.1):
+            if static_peak and static_power > max((0 if range_bin == 1 else thresholds[range_bin] * 0.5), moving_power[moving_bin, range_bin] * 0.1):
                 candidates.append((False, center, coherent_channels(angle_spectrum[:, range_bin]), static_power))
             if moving_peak:
                 candidates.append((True, moving_bin, config.angle_matrix @ moving_fft[moving_bin, range_bin], float(moving_power[moving_bin, range_bin])))
             for moving, doppler_bin, channels, peak_power in candidates:
                 azimuth, elevation, direction, valid = estimate_angle(channels, config)
-                distance = interpolated_range(moving_profile if moving else power, range_bin, config)
+                distance = (float(config.ranges[1]) if range_bin == 1 else
+                            interpolated_range(moving_profile if moving else power, range_bin, config))
                 velocity=(float(velocities[doppler_bin]) if moving else 0.0) if config.velocity_scale_verified else None
                 detections.append(Detection(distance, velocity,
                     azimuth, elevation, tuple(distance * value for value in direction),
                     float(10 * np.log10(max(peak_power, 1e-12) / max(thresholds[range_bin] / 10**(config.snr_db / 10), 1e-12))),
-                    float(10 * np.log10(max(peak_power, 1e-12))), moving, valid))
+                    float(10 * np.log10(max(peak_power, 1e-12))), moving, valid,
+                    float(config.ranges[1] - config.ranges[0]), range_bin == 1))
         beam = np.einsum("cra,ak->crk", angle_spectrum, self.steering.conj(), optimize=True) / 3
         heatmap = np.mean(abs(beam)**2, axis=0)
         self.history.append(power.copy())
