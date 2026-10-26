@@ -5,7 +5,7 @@
  * Establishes all necessary connections between hardware elements.
  * This file was automatically generated and should not be modified.
  * Configurator Backend 3.90.0
- * device-db 4.28.0.8806
+ * device-db 4.41.0.11271
  * mtb-pdl-cat1 3.24.0.47219
  *
  *******************************************************************************
@@ -35,8 +35,6 @@
 extern "C" {
 #endif /* defined(__cplusplus) */
 
-#define ioss_0_port_0_pin_0_ANALOG P0_0_SRSS_WCO_IN
-#define ioss_0_port_0_pin_1_ANALOG P0_1_SRSS_WCO_OUT
 #define ioss_0_port_6_pin_6_HSIOM P6_6_CPUSS_SWJ_SWDIO_TMS
 #define ioss_0_port_6_pin_7_HSIOM P6_7_CPUSS_SWJ_SWCLK_TCLK
 

@@ -37,7 +37,7 @@ python -m radar gui --port COM3 --config configs/range-csk-portrait.json --backg
 
 ## Implementation and limitations
 
-`SpectralBackground` fits one complex mean range-FFT coefficient per bin and RX, averaging the supplied background frames/chirps. It stores coefficients before channel-gain calibration. Runtime subtraction applies the current complex gains consistently to both frame and reference. Acquisition dimensions, profile and timing/RF metadata must match. This is fixed-reference subtraction: no online adaptation, target association, smoothing or missed-point persistence is introduced.
+`SpectralBackground` fits one complex mean range-FFT coefficient per bin and RX, averaging the supplied background frames/chirps. It stores coefficients before channel-gain calibration. Runtime subtraction applies the current complex gains consistently to both frame and reference. Acquisition dimensions, profile and timing/RF metadata must match. Background subtraction remains fixed-reference with no online adaptation. The processor now separately adds [range tracking, smoothing, missed-measurement persistence and diagnostics](RANGE_TRACKING.md); raw strong detections remain available.
 
 When recording with background subtraction, metadata identifies the method/source and a `spectral-background.npz` snapshot is saved inside the session. Raw ADC remains unchanged. GUI replay and headless `analyze` automatically load a stored snapshot when present; an explicit GUI `--background` overrides it. Snapshot values are numeric plus JSON and load with `allow_pickle=False`. Reprocessing under another range offset/scale, gain calibration or mounting roll is supported, since raw spectral coefficients precede those choices.
 

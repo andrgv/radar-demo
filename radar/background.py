@@ -51,14 +51,19 @@ class SpectralBackground:
         conservative fixed-scene gate, not a calibrated false-alarm probability.
         Legacy snapshots lack variability data and cannot enable bin-1 detection.
         """
+        supported = self.support_margin_db(spectrum, config) > 0
+        if self.power_envelope is None:
+            supported[1] = False
+        return supported
+
+    def support_margin_db(self, spectrum, config):
+        """dB margin of the second strongest RX above the fixed support gate."""
         envelope = self.power_envelope
         if envelope is None:
             envelope = abs(self.reference)**2
         raw_power = np.mean(abs(spectrum)**2, axis=0)
-        supported = np.sum(raw_power > np.maximum(envelope * abs(config.gains)**2, 1e-10) * 4, axis=1) >= 2
-        if self.power_envelope is None:
-            supported[1] = False
-        return supported
+        ratio = np.maximum(raw_power, 1e-30) / (np.maximum(envelope * abs(config.gains)**2, 1e-10) * 4)
+        return np.sort(10 * np.log10(ratio), axis=1)[:, -2]
 
     def subtract(self, spectrum, config):
         return spectrum - self.reference[None, :, :] * config.gains[None, None, :]

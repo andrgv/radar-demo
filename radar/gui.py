@@ -27,6 +27,41 @@ def range_readout(result):
     return ("Detected ranges" if result.calibrated else "Detected spectral peaks") + qualification + ": " + values
 
 
+def track_readout(result):
+    confirmed = [track for track in result.tracks if track.state != 'tentative']
+    qualification = '' if result.calibrated else ' (provisional range scale)'
+    if not confirmed:
+        return 'No confirmed range tracks' + qualification
+    return 'Range tracks' + qualification + ': ' + '; '.join(
+        f'#{track.track_id}: {track.range_m:.3f} m | '
+        + (f'last measured {track.measurement_age_s:.2f} s ago; retained estimate'
+           if not track.measured else
+           'weaker supporting measurement' if track.measurement_kind == 'supporting' else 'measured this frame')
+        + f' | confidence {track.confidence:.0%}'
+        + (' | direction unavailable' if not track.angle_valid else '')
+        + (' | close-range bin 1; precise distance unresolved' if track.close_range else '')
+        for track in confirmed[:8])
+
+
+def diagnostic_readout(result):
+    candidates = result.detection_diagnostics
+    if not candidates:
+        return ''
+    coasting = next((track for track in result.tracks if track.state == 'coasting'), None)
+    if coasting is not None:
+        candidate = min(candidates, key=lambda item: abs(item['range_m'] - coasting.range_m))
+        label = f'Track #{coasting.track_id} nearby bin'
+    else:
+        candidate = max(candidates, key=lambda item: item['residual_power_db'])
+        label = 'Strongest residual bin'
+    background = candidate['background_margin_db']
+    reason = ', '.join(candidate['static_rejection_reasons']) or 'passed'
+    return (f"{label} {candidate['range_bin']}: static checks {reason}; "
+            + (f'background margin {background:+.1f} dB; ' if background is not None else '')
+            + f"local margin {candidate['local_margin_db']:+.1f} dB; "
+            + f"coherent margin {candidate['coherent_margin_db']:+.1f} dB")
+
+
 class Window(QtWidgets.QMainWindow):
     acquisition_finished = QtCore.pyqtSignal()
 
@@ -87,6 +122,13 @@ class Window(QtWidgets.QMainWindow):
         self.distance_readout.setWordWrap(True)
         self.distance_readout.setStyleSheet("font-size: 16px; padding: 8px;")
         layout.addWidget(self.distance_readout)
+        self.track_readout = QtWidgets.QLabel('Waiting for range tracks...')
+        self.track_readout.setWordWrap(True)
+        self.track_readout.setVisible(config.tracking_enabled)
+        layout.addWidget(self.track_readout)
+        self.diagnostic_readout = QtWidgets.QLabel()
+        self.diagnostic_readout.setWordWrap(True)
+        layout.addWidget(self.diagnostic_readout)
         self.probe_readout = QtWidgets.QLabel()
         self.probe_readout.setWordWrap(True)
         self.probe_readout.setVisible(phase_probe_range is not None)
@@ -187,6 +229,7 @@ class Window(QtWidgets.QMainWindow):
                     "device_drops": frame.dropped, "device_errors": frame.errors,
                     "capture_elapsed_us":frame.capture_elapsed_us,
                     "detections": len(result.detections),
+                    "confirmed_tracks": sum(t.state != 'tentative' for t in result.tracks),
                     "valid_3d": sum(item.angle_valid for item in result.detections),
                     "scene_points": len(result.spatial_volume.point_cloud.xyz) if result.spatial_volume is not None and result.spatial_volume.point_cloud is not None else 0,
                     "background_subtracted": result.background_subtracted,
@@ -237,17 +280,18 @@ class Window(QtWidgets.QMainWindow):
             elif self.finished:
                 self.status.setText(self.completion_label + " | " + str(self.stats))
             return
+        self.distance_readout.setText(range_readout(result))
+        self.track_readout.setText(track_readout(result))
+        self.diagnostic_readout.setText(diagnostic_readout(result))
         if self.spatial_map and result.spatial_volume is not None:
             if self.spatial_tabs.currentIndex() == 0:
                 self.spatial_renderer.update(result.spatial_volume, self.spatial_dynamic_range.value(),
                                              self.spatial_range.value())
-                self.distance_readout.setText(range_readout(result))
                 self.status.setText(f"Frame {result.sequence} | {self.stats} | display skips {self.display_drops}")
                 return  # Hidden diagnostics must not rebuild or draw every frame.
         for axes in (self.profile, self.angle, self.cloud, self.doppler, self.temporal, self.feature_axes):
             axes.clear()
         self.profile.plot(result.ranges, result.profile_db)
-        self.distance_readout.setText(range_readout(result))
         detected_ranges = sorted({item.range_m for item in result.detections})
         for distance in detected_ranges[:8]:
             range_bin = int(np.argmin(abs(result.ranges - distance)))
@@ -256,15 +300,30 @@ class Window(QtWidgets.QMainWindow):
             peak_label = f"{distance:.3f} m" if result.calibrated else f"bin {range_bin}"
             self.profile.annotate(peak_label, (distance, power),
                 xytext=(0, 8), textcoords="offset points", ha="center", fontsize=8)
+        for track in result.tracks:
+            if track.state == 'tentative':
+                continue
+            self.profile.axvline(track.range_m, color='tab:green', alpha=max(0.15, track.confidence),
+                                 linestyle='-' if track.measured else '--')
+            self.profile.text(track.range_m, 0.95, f'#{track.track_id}',
+                              transform=self.profile.get_xaxis_transform(), color='tab:green')
         self.profile.set(title="Range profile", xlabel="Range (m)", ylabel="Power (dB ADC²)")
         self.angle.imshow(result.heatmap_db, origin="lower", aspect="auto",
             extent=[result.azimuths[0], result.azimuths[-1], result.ranges[0], result.ranges[-1]], cmap="magma")
         self.angle.set(title="Range–azimuth (elevation slice 0°)", xlabel="Azimuth (deg)", ylabel="Range (m)")
-        for moving, color in ((False, "tab:blue"), (True, "tab:orange")):
-            points = [item.xyz for item in result.detections if item.angle_valid and item.moving == moving]
-            if points:
-                points = np.asarray(points)
-                self.cloud.scatter(*points.T, c=color, label="moving" if moving else "stationary")
+        if self.config.tracking_enabled:
+            for track in result.tracks:
+                if track.state == 'tentative' or not track.angle_valid:
+                    continue
+                self.cloud.scatter(*track.xyz, c='tab:green', alpha=max(0.15, track.confidence),
+                                   marker='o' if track.measured else 'x')
+                self.cloud.text(*track.xyz, f'#{track.track_id}' + (' retained' if not track.measured else ''))
+        else:
+            for moving, color in ((False, "tab:blue"), (True, "tab:orange")):
+                points = [item.xyz for item in result.detections if item.angle_valid and item.moving == moving]
+                if points:
+                    points = np.asarray(points)
+                    self.cloud.scatter(*points.T, c=color, label="moving" if moving else "stationary")
         maximum = max(1, result.ranges[-1])
         probe = result.phase_probe
         if probe is not None:
@@ -289,7 +348,8 @@ class Window(QtWidgets.QMainWindow):
                     label="Phase probe (not a detection)")
                 self.cloud.legend(fontsize=7)
         self.cloud.set(xlim=(-maximum, maximum), ylim=(0, maximum), zlim=(-maximum / 2, maximum / 2),
-            xlabel="Right (m)", ylabel="Forward (m)", zlabel="Up (m)", title="3D frame detections (untracked)")
+            xlabel="Right (m)", ylabel="Forward (m)", zlabel="Up (m)",
+            title="Range tracks: o measured, x retained" if self.config.tracking_enabled else "3D frame detections (untracked)")
         self.doppler.imshow(result.doppler_db, origin="lower", aspect="auto",
             extent=[result.ranges[0], result.ranges[-1], result.velocities[0], result.velocities[-1]], cmap="viridis")
         self.doppler.set(title="Range–Doppler (static retained)", xlabel="Range (m)", ylabel=result.doppler_unit)

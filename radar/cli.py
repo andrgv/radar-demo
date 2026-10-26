@@ -43,6 +43,8 @@ def main(argv=None):
     record.add_argument("--background", metavar="RECORDING_OR_NPZ")
     analyze = commands.add_parser("analyze")
     analyze.add_argument("recording")
+    analyze.add_argument('--diagnostics-output', metavar='JSONL',
+                         help='Write per-frame tracks and gate margins while reprocessing raw frames')
     diagnostic = commands.add_parser("diagnose", help="Inspect raw ADC health and per-RX spectral bins")
     diagnostic.add_argument("recording")
     calibration = commands.add_parser("calibrate")
@@ -146,10 +148,20 @@ def main(argv=None):
         processor = Processor(config, background=background)
         count = 0
         result = None
-        for frame in replay(arguments.recording):
-            result = processor.process(frame)
-            count += 1
+        output = Path(arguments.diagnostics_output).open('x', encoding='utf-8') if arguments.diagnostics_output else None
+        try:
+            for frame in replay(arguments.recording):
+                result = processor.process(frame)
+                count += 1
+                if output is not None:
+                    output.write(json.dumps(dict(sequence=frame.sequence, timestamp_us=frame.timestamp_us,
+                        tracks=[asdict(item) for item in result.tracks],
+                        detection_diagnostics=result.detection_diagnostics), allow_nan=False) + '\n')
+        finally:
+            if output is not None:
+                output.close()
         print(json.dumps({"frames": count, "last_features": result.features if result else {},
+            "last_tracks": [asdict(item) for item in result.tracks] if result else [],
             "last_detections": [asdict(item) for item in result.detections] if result else []}, indent=2))
     elif arguments.command == "calibrate":
         from .calibration import calibrate_channels

@@ -17,6 +17,7 @@ class Recorder:
         self.wire = None
         self.transport = None
         self.clouds = None
+        self.tracking = None
         self.metadata = {"schema": 1, "created_unix_s": time.time(), "label": "unknown",
                          "session_id": self.path.name, "scene_id": "unspecified", **(metadata or {})}
         (self.path / "metadata.json").write_text(json.dumps(self.metadata, indent=2), encoding="utf-8")
@@ -26,6 +27,11 @@ class Recorder:
         self.timestamps.write(json.dumps({"sequence": frame.sequence, "host_unix_ns": time.time_ns(),
             "capture_elapsed_us":frame.capture_elapsed_us}) + "\n")
         if result is not None:
+            if self.tracking is None:
+                self.tracking = (self.path / 'tracking.jsonl').open('w', encoding='utf-8')
+            self.tracking.write(json.dumps(dict(schema=1, sequence=frame.sequence,
+                timestamp_us=frame.timestamp_us, tracks=[asdict(item) for item in result.tracks],
+                detection_diagnostics=result.detection_diagnostics), allow_nan=False) + '\n')
             self.features.write(json.dumps({"sequence": frame.sequence, **result.features,
                 "calibrated": result.calibrated, "label": self.metadata["label"]}, allow_nan=False) + "\n")
             volume=getattr(result,'spatial_volume',None)
@@ -43,6 +49,8 @@ class Recorder:
             self.features.flush()
             if self.clouds is not None:
                 self.clouds.flush()
+            if self.tracking is not None:
+                self.tracking.flush()
 
     def write_transport(self, data, parser):
         """Preserve original serial chunks, including rejected packets, for audit."""
@@ -55,6 +63,8 @@ class Recorder:
             restarts=parser.restarts,discarded_bytes=parser.discarded_bytes))+'\n')
 
     def close(self):
+        if self.tracking is not None:
+            self.tracking.close()
         if self.clouds is not None:
             self.clouds.close()
         if self.wire is not None:

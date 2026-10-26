@@ -17,7 +17,9 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The six panes show range power, a range–azimuth elevation-zero beamforming slice, 3D phase detections, range–Doppler including stationary returns, reflection history, and experimental material features. Blue detections are stationary; orange detections are moving. The status bar separates device drops, transport CRC/gaps, processing time, and display skips. The worker processes and records every accepted frame independently of GUI rendering; Qt can skip display updates when rendering is slow.
+The six panes show range power, a range–azimuth elevation-zero beamforming slice, range tracks with available 3D directions, range–Doppler including stationary returns, reflection history, and experimental material features. Raw detections remain red markers on the range profile. Green tracks have stable IDs; circles show current measurements and fading crosses show retained estimates. Tracks confirm after 3 hits in 5 frames and survive misses for up to 0.4 seconds. Range-only tracks remain in the readout when direction is unavailable. The status bar separates device drops, transport CRC/gaps, processing time, and display skips. The worker processes and records every accepted frame independently of GUI rendering; Qt can skip display updates when rendering is slow.
+
+See [range tracking and detection diagnostics](docs/RANGE_TRACKING.md) for tuning and replay export. New recordings include `tracking.jsonl` with per-frame tracks and rejection diagnostics. Existing recordings can be reprocessed with `python -m radar analyze RECORDING --diagnostics-output /tmp/radar-diagnostics.jsonl` (choose a new output filename).
 
 ## Build and connect
 

@@ -29,6 +29,14 @@ class Config:
     calibration_id: str = "uncalibrated"
     discard_chirps: int = 1
     snr_db: float = 12.0
+    tracking_enabled: bool = True
+    track_confirm_hits: int = 3
+    track_confirm_window: int = 5
+    track_hold_s: float = 0.4
+    track_match_bins: float = 1.0
+    track_max_speed_mps: float = 0.5
+    track_smoothing: float = 0.5
+    track_hysteresis_db: float = 3.0
     angle_matrix_real: list | None = None
     angle_matrix_imag: list | None = None
     probe_search_bins: int = 0
@@ -40,6 +48,17 @@ class Config:
         return self.chirp_timing_verified and self.carrier_frequency_verified
 
     def validate(self):
+        if type(self.tracking_enabled) is not bool:
+            raise ValueError('tracking_enabled must be a boolean')
+        if (type(self.track_confirm_hits) is not int or type(self.track_confirm_window) is not int
+                or not 1 <= self.track_confirm_hits <= self.track_confirm_window <= 100):
+            raise ValueError('Track confirmation requires 1 <= hits <= window <= 100')
+        for value in (self.track_hold_s, self.track_match_bins, self.track_max_speed_mps,
+                      self.track_smoothing, self.track_hysteresis_db):
+            if not np.isfinite(value) or value < 0:
+                raise ValueError('Tracking parameters must be finite and nonnegative')
+        if self.track_hold_s <= 0 or self.track_match_bins <= 0 or not 0 < self.track_smoothing <= 1:
+            raise ValueError('Track hold/matching must be positive and smoothing must be in (0, 1]')
         if type(self.chirp_timing_verified) is not bool or type(self.carrier_frequency_verified) is not bool:
             raise ValueError('Timing and carrier verification flags must be booleans')
         if type(self.probe_search_bins) is not int or not 0 <= self.probe_search_bins <= 3:

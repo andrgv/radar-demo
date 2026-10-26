@@ -1,5 +1,5 @@
 from collections import deque
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import numpy as np
 from .config import C
 
@@ -67,6 +67,8 @@ class Result:
     background_subtracted: bool = False
     spatial_volume: object = None
     doppler_unit: str = 'cycles/chirp (uniform spacing unverified)'
+    tracks: list = field(default_factory=list)
+    detection_diagnostics: list = field(default_factory=list)
 
 
 def range_fft(adc, config):
@@ -127,6 +129,8 @@ class Processor:
         if background is not None:
             background.validate(config)
         self.history = deque(maxlen=30)
+        from .tracking import RangeTracker
+        self.tracker = RangeTracker(config)
         self.last_sequence = None
         self.angles = np.linspace(-60, 60, 121)
         radians = np.radians(self.angles)
@@ -145,9 +149,11 @@ class Processor:
             raise ValueError("Frame/configuration mismatch; refusing incorrect axes")
         if self.last_sequence is not None and ((frame.sequence - self.last_sequence) & 0xffffffff) != 1:
             self.history.clear()
+            self.tracker.reset()
         self.last_sequence = frame.sequence
         spectrum = range_fft(frame.adc, config)
         supported = self.background.target_supported(spectrum, config) if self.background is not None else None
+        background_margin = self.background.support_margin_db(spectrum, config) if self.background is not None else None
         if self.background is not None:
             spectrum = self.background.subtract(spectrum, config)
         # Mix snapshots BEFORE covariance; mixing an already reduced cross-vector
@@ -192,10 +198,13 @@ class Processor:
                 tuple(float(value) for value in np.degrees(np.angle(
                     coherent_channels(spectrum[:, range_bin])[1:]))))
         detections = []
+        supporting = []
+        diagnostics = []
         moving_profile = moving_power.max(axis=0)
+        weak_factor = 10 ** (-config.track_hysteresis_db / 10)
         for range_bin in range(1 if supported is not None else 2, len(power) - 1):
-            if supported is not None and not supported[range_bin]:
-                continue
+            background_ok = supported is None or bool(supported[range_bin])
+            local_peak = power[range_bin] >= max(power[range_bin - 1], power[range_bin + 1])
             static_peak = (power[range_bin] >= thresholds[range_bin] and
                 power[range_bin] >= max(power[range_bin - 1], power[range_bin + 1]))
             if range_bin == 1:
@@ -206,26 +215,66 @@ class Processor:
                 moving_profile[range_bin] >= max(moving_profile[range_bin - 1], moving_profile[range_bin + 1]))
             if range_bin == 1:
                 moving_peak = False
-            if not static_peak and not moving_peak:
-                continue
             static_channels = spectrum[:, range_bin].mean(axis=0)
             static_power = float(np.mean(abs(static_channels)**2))
             moving_bin = int(moving_power[:, range_bin].argmax())
             candidates = []
-            if static_peak and static_power > max((0 if range_bin == 1 else thresholds[range_bin] * 0.5), moving_power[moving_bin, range_bin] * 0.1):
-                candidates.append((False, center, coherent_channels(angle_spectrum[:, range_bin]), static_power))
-            if moving_peak:
-                candidates.append((True, moving_bin, config.angle_matrix @ moving_fft[moving_bin, range_bin], float(moving_power[moving_bin, range_bin])))
-            for moving, doppler_bin, channels, peak_power in candidates:
+            coherent_threshold = max((0 if range_bin == 1 else thresholds[range_bin] * 0.5),
+                                     moving_power[moving_bin, range_bin] * 0.1)
+            static_ok = static_peak and static_power > coherent_threshold
+            weak_static = ((power[range_bin] >= thresholds[range_bin] * weak_factor and local_peak)
+                           and static_power > max((0 if range_bin == 1 else thresholds[range_bin] * 0.5 * weak_factor),
+                                                 moving_power[moving_bin, range_bin] * 0.1))
+            if range_bin == 1:
+                weak_static = static_ok  # preserve the special close-range gate
+            weak_moving = (range_bin != 1 and moving_profile[range_bin] > moving_thresholds[range_bin] * weak_factor
+                           and moving_profile[range_bin] >= max(moving_profile[range_bin-1], moving_profile[range_bin+1]))
+            reasons = []
+            if not background_ok:
+                reasons.append('background_gate')
+            if not static_peak:
+                if not local_peak:
+                    reasons.append('not_local_peak')
+                if range_bin != 1 and power[range_bin] < thresholds[range_bin]:
+                    reasons.append('local_power')
+            if static_power <= coherent_threshold:
+                reasons.append('coherent_power')
+            diagnostic = dict(range_bin=range_bin, range_m=float(config.ranges[range_bin]),
+                residual_power_db=float(10 * np.log10(max(power[range_bin], 1e-30))),
+                background_margin_db=None if background_margin is None else float(background_margin[range_bin]),
+                background_supported=background_ok, local_peak=bool(local_peak),
+                local_margin_db=float(10 * np.log10(max(power[range_bin], 1e-30) / max(thresholds[range_bin], 1e-30))),
+                coherent_margin_db=float(10 * np.log10(max(static_power, 1e-30) / max(coherent_threshold, 1e-30))),
+                moving_margin_db=float(10 * np.log10(max(moving_profile[range_bin], 1e-30) / max(moving_thresholds[range_bin], 1e-30))),
+                static_accepted=bool(background_ok and static_ok), moving_accepted=bool(background_ok and moving_peak),
+                static_rejection_reasons=reasons, angle_valid=None, supporting_only=False)
+            diagnostic['moving_rejection_reasons'] = (
+                ([] if background_ok else ['background_gate'])
+                + (['close_range_moving_disabled'] if range_bin == 1 else
+                   (['moving_power'] if moving_profile[range_bin] <= moving_thresholds[range_bin] else [])
+                   + (['not_local_peak'] if moving_profile[range_bin] <
+                      max(moving_profile[range_bin-1], moving_profile[range_bin+1]) else [])))
+            diagnostics.append(diagnostic)
+            if not background_ok:
+                continue
+            if static_ok or weak_static:
+                candidates.append((False, center, coherent_channels(angle_spectrum[:, range_bin]), static_power, static_ok))
+            if moving_peak or weak_moving:
+                candidates.append((True, moving_bin, config.angle_matrix @ moving_fft[moving_bin, range_bin], float(moving_power[moving_bin, range_bin]), moving_peak))
+            for moving, doppler_bin, channels, peak_power, strong in candidates:
                 azimuth, elevation, direction, valid = estimate_angle(channels, config)
                 distance = (float(config.ranges[1]) if range_bin == 1 else
                             interpolated_range(moving_profile if moving else power, range_bin, config))
                 velocity=(float(velocities[doppler_bin]) if moving else 0.0) if config.velocity_scale_verified else None
-                detections.append(Detection(distance, velocity,
+                detection = Detection(distance, velocity,
                     azimuth, elevation, tuple(distance * value for value in direction),
                     float(10 * np.log10(max(peak_power, 1e-12) / max(thresholds[range_bin] / 10**(config.snr_db / 10), 1e-12))),
                     float(10 * np.log10(max(peak_power, 1e-12))), moving, valid,
-                    float(config.ranges[1] - config.ranges[0]), range_bin == 1))
+                    float(config.ranges[1] - config.ranges[0]), range_bin == 1)
+                (detections if strong else supporting).append(detection)
+                diagnostic['angle_valid'] = valid if diagnostic['angle_valid'] is None else diagnostic['angle_valid'] or valid
+                diagnostic['supporting_only'] = not (diagnostic['static_accepted'] or diagnostic['moving_accepted'])
+        tracks = self.tracker.update(detections, supporting, frame.timestamp_us) if config.tracking_enabled else []
         beam = np.einsum("cra,ak->crk", angle_spectrum, self.steering.conj(), optimize=True) / 3
         heatmap = np.mean(abs(beam)**2, axis=0)
         self.history.append(power.copy())
@@ -255,4 +304,5 @@ class Processor:
             10 * np.log10(power + 1e-12), 10 * np.log10(rd_power + 1e-12),
             self.angles, 10 * np.log10(heatmap + 1e-12), detections, features, config.verified, probe,
             self.background is not None,
-            spatial_volume, 'm/s' if config.velocity_scale_verified else 'cycles/chirp (uniform spacing unverified)')
+            spatial_volume, 'm/s' if config.velocity_scale_verified else 'cycles/chirp (uniform spacing unverified)',
+            tracks, diagnostics)
