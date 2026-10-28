@@ -8,20 +8,24 @@ from matplotlib.figure import Figure
 from .acquisition import Source, paced_frames
 from .processing import Processor
 from .storage import Recorder
+from .tracking import RangeTracker, ShortRangeAmplitudeTracker
 
 
 def range_readout(result):
     qualification = "" if result.calibrated else " (provisional scale; NOT validated object distances)"
     distances = sorted({round(item.range_m, 3) for item in result.detections})
     if not distances:
-        return "No detections above threshold" + qualification
+        label = "No changed-scene detections above threshold" if result.background_subtracted else "No detections above threshold"
+        return label + qualification
     values = ", ".join(
         f"{distance:.3f} m" if result.calibrated else
-        f"bin {int(np.argmin(abs(result.ranges - distance)))} (~{distance:.3f} m from config)"
+        f"bin {int(np.argmin(abs(result.ranges - distance)))} (plot x={distance:.3f} m; NOT object distance)"
         for distance in distances[:8])
     if len(distances) > 8:
         values += f" (+{len(distances) - 8} more)"
-    return ("Detected ranges" if result.calibrated else "Detected spectral peaks") + qualification + ": " + values
+    label = ("Changed-scene ranges" if result.calibrated else "Changed-scene spectral peaks") \
+        if result.background_subtracted else ("Detected ranges" if result.calibrated else "Detected spectral peaks")
+    return label + qualification + ": " + values
 
 
 class Window(QtWidgets.QMainWindow):
@@ -55,6 +59,8 @@ class Window(QtWidgets.QMainWindow):
         self.error = None
         self.finished = False
         self.stats = {}
+        self.background_request = threading.Event()
+        self.background_status = "Ready to capture an empty scene"
         self.figure = Figure(layout="constrained")
         self.canvas = FigureCanvasQTAgg(self.figure)
         self.profile = self.figure.add_subplot(231)
@@ -63,7 +69,9 @@ class Window(QtWidgets.QMainWindow):
         self.doppler = self.figure.add_subplot(234)
         self.temporal = self.figure.add_subplot(235)
         self.feature_axes = self.figure.add_subplot(236)
-        self.history = []
+        self.range_history = []
+        self.zoom_center = None
+        self.latest_observed_range = None
         self.probe_history = []
         self.relative_phase_history = []
         self.phase_tabs = None
@@ -84,6 +92,41 @@ class Window(QtWidgets.QMainWindow):
         self.distance_readout.setWordWrap(True)
         self.distance_readout.setStyleSheet("font-size: 16px; padding: 8px;")
         layout.addWidget(self.distance_readout)
+        baseline_controls = QtWidgets.QHBoxLayout()
+        self.baseline_button = QtWidgets.QPushButton("Capture empty scene (30 frames)")
+        self.baseline_button.setEnabled(record is None and (port is not None or recording is not None))
+        self.baseline_button.clicked.connect(self.capture_empty_scene)
+        baseline_controls.addWidget(self.baseline_button)
+        self.baseline_label = QtWidgets.QLabel(
+            "Keep radar fixed, remove the box and your hands, then click."
+            if record is None and (port is not None or recording is not None) else
+            "Empty-scene capture requires live or replay data and no active recording.")
+        baseline_controls.addWidget(self.baseline_label)
+        baseline_controls.addStretch()
+        layout.addLayout(baseline_controls)
+        self.track_readout = QtWidgets.QLabel("Target check: capture an empty scene first.")
+        self.track_readout.setWordWrap(True)
+        layout.addWidget(self.track_readout)
+        zoom_controls = QtWidgets.QHBoxLayout()
+        self.zoom_checkbox = QtWidgets.QCheckBox("Zoom range profile")
+        self.zoom_checkbox.setChecked(True)
+        self.zoom_checkbox.toggled.connect(self.toggle_zoom)
+        zoom_controls.addWidget(self.zoom_checkbox)
+        zoom_controls.addWidget(QtWidgets.QLabel("Window:"))
+        self.zoom_width = QtWidgets.QDoubleSpinBox()
+        self.zoom_width.setRange(0.5, max(0.5, float(config.ranges[-1] - config.ranges[0])))
+        self.zoom_width.setSingleStep(0.5)
+        self.zoom_width.setValue(min(2.0, self.zoom_width.maximum()))
+        self.zoom_width.setSuffix(" m")
+        zoom_controls.addWidget(self.zoom_width)
+        self.recenter_button = QtWidgets.QPushButton("Recenter on green circle")
+        self.recenter_button.setEnabled(False)
+        self.recenter_button.clicked.connect(self.recenter_zoom)
+        zoom_controls.addWidget(self.recenter_button)
+        self.zoom_label = QtWidgets.QLabel("Zoom will lock on the first green circle, then stay fixed.")
+        zoom_controls.addWidget(self.zoom_label)
+        zoom_controls.addStretch()
+        layout.addLayout(zoom_controls)
         self.probe_readout = QtWidgets.QLabel()
         self.probe_readout.setWordWrap(True)
         self.probe_readout.setVisible(phase_probe_range is not None)
@@ -153,6 +196,33 @@ class Window(QtWidgets.QMainWindow):
         self.timer.timeout.connect(self.refresh)
         self.timer.start(50)
 
+    def capture_empty_scene(self):
+        self.background_request.set()
+        self.background_status = "Empty-scene capture requested; keep the box and hands away"
+        self.track_readout.setText("Target check: clearing the previous reference and track.")
+        self.distance_readout.setText("Capturing an empty-scene reference; previous peaks are not current targets.")
+        self.range_history.clear()
+        self.zoom_center = None
+        self.latest_observed_range = None
+        self.recenter_button.setEnabled(False)
+        self.zoom_label.setText("Zoom will lock on the first green circle, then stay fixed.")
+        while True:
+            try:
+                self.results.get_nowait()
+            except queue.Empty:
+                break
+
+    def recenter_zoom(self):
+        if self.latest_observed_range is not None:
+            self.zoom_center = self.latest_observed_range
+            self.zoom_checkbox.setChecked(True)
+
+    def toggle_zoom(self, enabled):
+        if enabled and self.latest_observed_range is not None:
+            self.zoom_center = self.latest_observed_range
+        elif not enabled:
+            self.zoom_label.setText("Full range shown; check Zoom to use a fixed window.")
+
     def acquire(self, port, recording, record, metadata):
         source = None
         recorder = None
@@ -162,6 +232,10 @@ class Window(QtWidgets.QMainWindow):
             background = SpectralBackground.from_path(self.background_path, self.config) if self.background_path else None
             processor = Processor(self.config, phase_probe_range=self.phase_probe_range, background=background,
                                   spatial_map=self.spatial_map,point_cloud=self.point_cloud)
+            tracker = RangeTracker()
+            short_range_tracker = None
+            baseline_frames = None
+            self.background_status = "Reference loaded" if background is not None else "Ready to capture an empty scene"
             source = Source(self.config, port, recording)
             metadata = {**(metadata or {}), "background_method": "fixed_complex_spectrum" if background else "none",
                         "background_source": self.background_path}
@@ -174,8 +248,35 @@ class Window(QtWidgets.QMainWindow):
                 duration_timer.daemon = True
                 duration_timer.start()
             for frame in paced_frames(source, self.stop):
+                if self.background_request.is_set() and recorder is None:
+                    self.background_request.clear()
+                    baseline_frames = []
+                    background = None
+                    tracker.reset()
+                    short_range_tracker = None
+                    processor = Processor(self.config, phase_probe_range=self.phase_probe_range,
+                                          spatial_map=self.spatial_map, point_cloud=self.point_cloud)
+                    self.background_status = "Capturing empty scene: 0/30 frames"
+                if baseline_frames is not None:
+                    baseline_frames.append(frame)
+                    self.background_status = f"Capturing empty scene: {len(baseline_frames)}/30 frames"
+                    if len(baseline_frames) == 30:
+                        background = SpectralBackground.fit(baseline_frames, self.config)
+                        short_range_tracker = ShortRangeAmplitudeTracker(self.config)
+                        short_range_tracker.fit(baseline_frames)
+                        baseline_frames = None
+                        processor = Processor(self.config, phase_probe_range=self.phase_probe_range,
+                                              background=background, spatial_map=self.spatial_map,
+                                              point_cloud=self.point_cloud)
+                        self.background_status = "Empty-scene reference ready; now place or move the box"
+                    continue
                 start = time.perf_counter()
                 result = processor.process(frame)
+                if short_range_tracker is not None:
+                    track, amplitude_change_db = short_range_tracker.update(frame)
+                else:
+                    amplitude_change_db = None
+                    track = tracker.update(result.detections, result.ranges) if background is not None else None
                 if recorder:
                     recorder.write(frame, result)
                 self.stats = {"sequence_gaps": source.parser.gaps, "crc_errors": source.parser.bad_crc,
@@ -189,14 +290,14 @@ class Window(QtWidgets.QMainWindow):
                     "background_subtracted": result.background_subtracted,
                     "processing_ms": round((time.perf_counter() - start) * 1000, 1)}
                 try:
-                    self.results.put_nowait(result)
+                    self.results.put_nowait((result, track, amplitude_change_db))
                 except queue.Full:
                     try:
                         self.results.get_nowait()
                     except queue.Empty:
                         pass
                     self.display_drops += 1
-                    self.results.put_nowait(result)
+                    self.results.put_nowait((result, track, amplitude_change_db))
         except Exception as error:
             self.error = str(error)
         finally:
@@ -210,6 +311,9 @@ class Window(QtWidgets.QMainWindow):
             self.acquisition_finished.emit()
 
     def refresh(self):
+        self.baseline_label.setText(self.background_status)
+        if self.background_status.startswith("Capturing empty scene"):
+            self.track_readout.setText("Target check: capturing the empty scene; no target is being tracked.")
         if self.pending_start:
             remaining = self.start_deadline - time.monotonic()
             if remaining > 0:
@@ -222,38 +326,95 @@ class Window(QtWidgets.QMainWindow):
             self.distance_readout.setText('Acquiring — waiting for radar data...')
             self.worker.start()
             return
-        result = None
+        displayed = None
         while True:
             try:
-                result = self.results.get_nowait()
+                displayed = self.results.get_nowait()
             except queue.Empty:
                 break
-        if result is None:
+        if displayed is None:
             if self.error:
                 self.status.setText("Acquisition error: " + self.error)
             elif self.finished:
                 self.status.setText(self.completion_label + " | " + str(self.stats))
             return
+        result, track, amplitude_change_db = displayed
+        short_range_mode = amplitude_change_db is not None
+        if self.background_status.startswith("Capturing empty scene"):
+            pass
+        elif track is None:
+            self.track_readout.setText("Target check: capture an empty scene first. Red dots are untracked reflection peaks.")
+        elif track.state == "confirmed":
+            label = f"bin {track.bin_index} (plot x={track.observed_range_m:.3f} m)"
+            mode = "SHORT-RANGE PRESENCE CHANGE ONLY" if short_range_mode else "PRESENCE CHANGE ONLY"
+            self.track_readout.setText(f"{mode}: {label} — seen repeatedly. "
+                                        "This is NOT the box's measured distance.")
+        elif track.state == "checking":
+            self.track_readout.setText(f"Target check: testing a change at bin {track.bin_index} "
+                                        f"({track.hits}/3 frames).")
+        elif track.state == "missing":
+            self.track_readout.setText("Target check: return missing; remembering its last bin briefly, "
+                                        "but showing no current target.")
+        else:
+            self.track_readout.setText("Target check: no persistent changed-scene return.")
+        observed_range = (track.observed_range_m if track is not None and track.state == "confirmed"
+                          else None)
+        self.range_history.append(float(observed_range) if observed_range is not None else np.nan)
+        self.range_history = self.range_history[-100:]
+        self.latest_observed_range = observed_range
+        self.recenter_button.setEnabled(observed_range is not None)
+        if observed_range is not None and self.zoom_center is None:
+            self.zoom_center = observed_range
+        if self.zoom_checkbox.isChecked():
+            if self.zoom_center is None:
+                self.zoom_label.setText("Zoom will lock on the first green circle, then stay fixed.")
+            else:
+                self.zoom_label.setText(f"Fixed zoom center: {self.zoom_center:.2f} m from config")
+                if observed_range is not None and abs(observed_range - self.zoom_center) > self.zoom_width.value() / 2:
+                    self.zoom_label.setText(self.zoom_label.text() + " — peak outside view; click Recenter")
         if self.spatial_map and result.spatial_volume is not None:
             if self.spatial_tabs.currentIndex() == 0:
                 self.spatial_renderer.update(result.spatial_volume, self.spatial_dynamic_range.value(),
                                              self.spatial_range.value())
-                self.distance_readout.setText(range_readout(result))
+                if not short_range_mode:
+                    self.distance_readout.setText(range_readout(result))
                 self.status.setText(f"Frame {result.sequence} | {self.stats} | display skips {self.display_drops}")
                 return  # Hidden diagnostics must not rebuild or draw every frame.
         for axes in (self.profile, self.angle, self.cloud, self.doppler, self.temporal, self.feature_axes):
             axes.clear()
-        self.profile.plot(result.ranges, result.profile_db)
-        self.distance_readout.setText(range_readout(result))
-        detected_ranges = sorted({item.range_m for item in result.detections})
-        for distance in detected_ranges[:8]:
-            range_bin = int(np.argmin(abs(result.ranges - distance)))
-            power = result.profile_db[range_bin]
-            self.profile.plot(distance, power, "o", color="tab:red")
-            peak_label = f"{distance:.3f} m" if result.calibrated else f"bin {range_bin}"
-            self.profile.annotate(peak_label, (distance, power),
-                xytext=(0, 8), textcoords="offset points", ha="center", fontsize=8)
-        self.profile.set(title="Range profile", xlabel="Range (m)", ylabel="Power (dB ADC²)")
+        profile_values = amplitude_change_db if short_range_mode else result.profile_db
+        self.profile.plot(result.ranges, profile_values)
+        if short_range_mode:
+            self.distance_readout.setText("SHORT-RANGE EMPTY-SCENE COMPARISON: blue line shows power change "
+                                          "from the empty scene. Green circle is an experimental changed bin, "
+                                          "NOT a measured box distance.")
+        else:
+            self.distance_readout.setText(range_readout(result))
+            detected_ranges = sorted({item.range_m for item in result.detections})
+            for distance in detected_ranges[:8]:
+                range_bin = int(np.argmin(abs(result.ranges - distance)))
+                power = result.profile_db[range_bin]
+                self.profile.plot(distance, power, "o", color="tab:red")
+                peak_label = f"{distance:.3f} m" if result.calibrated else f"bin {range_bin}"
+                self.profile.annotate(peak_label, (distance, power),
+                    xytext=(0, 8), textcoords="offset points", ha="center", fontsize=8)
+        if track is not None and track.state == "confirmed":
+            tracked_bin = track.bin_index
+            self.profile.plot(track.observed_range_m, profile_values[tracked_bin], "o",
+                              markerfacecolor="none", markeredgecolor="limegreen", markersize=14,
+                              markeredgewidth=2)
+        profile_title = ("Short-range power change vs empty scene" if short_range_mode else
+                         "Range profile (empty-scene subtracted)" if result.background_subtracted else "Range profile")
+        self.profile.set(title=profile_title,
+                         xlabel="Config plot coordinate (m; unvalidated)" if short_range_mode else "Range (m)",
+                         ylabel="Change vs empty (dB)" if short_range_mode else "Power (dB ADC²)")
+        if self.zoom_checkbox.isChecked() and self.zoom_center is not None:
+            half_width = self.zoom_width.value() / 2
+            left = max(float(result.ranges[0]), self.zoom_center - half_width)
+            right = min(float(result.ranges[-1]), self.zoom_center + half_width)
+            self.profile.set_xlim(left, right)
+            for bin_range in result.ranges[(result.ranges >= left) & (result.ranges <= right)]:
+                self.profile.axvline(bin_range, color="0.8", linewidth=0.7, zorder=0)
         self.angle.imshow(result.heatmap_db, origin="lower", aspect="auto",
             extent=[result.azimuths[0], result.azimuths[-1], result.ranges[0], result.ranges[-1]], cmap="magma")
         self.angle.set(title="Range–azimuth (elevation slice 0°)", xlabel="Azimuth (deg)", ylabel="Range (m)")
@@ -290,10 +451,19 @@ class Window(QtWidgets.QMainWindow):
         self.doppler.imshow(result.doppler_db, origin="lower", aspect="auto",
             extent=[result.ranges[0], result.ranges[-1], result.velocities[0], result.velocities[-1]], cmap="viridis")
         self.doppler.set(title="Range–Doppler (static retained)", xlabel="Range (m)", ylabel=result.doppler_unit)
-        self.history.append(result.features["reflection_db"])
-        self.history = self.history[-100:]
-        self.temporal.plot(self.history)
-        self.temporal.set(title="Strongest return over displayed frames", xlabel="Displayed frame", ylabel="dB ADC²")
+        self.temporal.plot(self.range_history, color="tab:blue", marker=".", markersize=4)
+        self.temporal.set(title="Changed peak coordinate (NOT BOX DISTANCE)",
+                          xlabel="Displayed update (last 100)", ylabel="Plot x from config (m)")
+        observed_values = np.asarray(self.range_history)
+        observed_values = observed_values[np.isfinite(observed_values)]
+        if len(observed_values):
+            bin_width = float(result.ranges[1] - result.ranges[0])
+            self.temporal.set_ylim(max(0, float(observed_values.min()) - bin_width),
+                                   min(float(result.ranges[-1]), float(observed_values.max()) + bin_width))
+        else:
+            self.temporal.text(0.5, 0.5, "No confirmed changed-scene peak",
+                               transform=self.temporal.transAxes, ha="center", va="center")
+        self.temporal.grid(alpha=0.25)
         self.feature_axes.axis("off")
         feature_text = "Material: UNKNOWN (no trained classifier)\n\n" + "\n".join(
             f"{key}: {value:.4g}" for key, value in result.features.items())

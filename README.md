@@ -17,7 +17,33 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The six panes show range power, a range–azimuth elevation-zero beamforming slice, 3D phase detections, range–Doppler including stationary returns, reflection history, and experimental material features. Blue detections are stationary; orange detections are moving. The status bar separates device drops, transport CRC/gaps, processing time, and display skips. The worker processes and records every accepted frame independently of GUI rendering; Qt can skip display updates when rendering is slow.
+The six panes show range power, a range–azimuth elevation-zero beamforming slice, 3D phase detections, range–Doppler including stationary returns, selected-peak range history, and experimental material features. Blue detections are stationary; orange detections are moving. The status bar separates device drops, transport CRC/gaps, processing time, and display skips. The worker processes and records every accepted frame independently of GUI rendering; Qt can skip display updates when rendering is slow.
+
+## Live box movement check
+
+On macOS, launch the GUI from this repository with:
+
+```bash
+.venv/bin/python -m radar gui --port /dev/cu.usbmodem2103 --config configs/range-source-derived.json
+```
+
+The launcher stages PyQt6's installed platform plugins in a temporary directory because the virtualenv copies on this Mac carry a hidden file flag that makes Qt report the Cocoa plugin as missing. It removes the temporary copy when the GUI exits. An explicit `QT_QPA_PLATFORM_PLUGIN_PATH` is respected.
+
+With the radar fixed, start the live GUI with a configuration matching its firmware. Remove the box and keep hands away from the radar, then click **Capture empty scene (30 frames)**. Wait for **Empty-scene reference ready** before placing or moving the box. The reference is recaptured by clicking the button again after returning to an empty scene; it is not saved between runs. Live capture is disabled during `--record` to keep a recording's processing metadata consistent.
+
+After a live empty-scene capture, the blue range line shows raw-power change in dB versus that reference. The green ring selects a sustained positive change among usable bins 1 and above at config plot coordinates up to 2 m, rather than the strongest complex-subtracted reflection anywhere in the room. Bin zero is excluded as a leakage/DC region. It needs three associated frames and at least 3 dB excess over empty, with a 2 dB lead over nonadjacent short-range bins; neighboring bins may be part of the same broad return. Distant clutter cannot become the green-ring candidate. A missing return removes the ring immediately; the previous bin is remembered for at most two frames for reacquisition. This is an experimental short-range presence indicator, not proof the return is the box or that its plotted coordinate is physical distance. Other panels still show the original spectral processing. A preloaded complex background without a live empty-scene capture retains the old spectral-peak display.
+
+The range-profile zoom centers on the first green-ring bin and then stays fixed, so movement is visible rather than hidden by a following axis. Change the window width, click **Recenter on green circle** after a jump, or uncheck **Zoom range profile** for the full view. The lower-middle plot shows the selected bin's config-derived coordinate over the last 100 displayed updates; missing/rejected updates leave gaps. The plot is provisional and does not add range resolution. In the source-derived configuration, FFT bin centers are about 0.35 m apart. In one recorded check, the 0.30 m box selected bin 1 and the 0.90 m box selected bin 3; their plotted coordinates must not be relabeled as calibrated object distances.
+
+Keep the radar and surrounding objects still after capturing the reference. Moving the sensor, changing the room, or including the box in the empty-scene capture invalidates the comparison. The close-range analog filter and the unvalidated range scale are unchanged; software cannot recover a return the hardware does not provide. Use measured box positions and saved raw recordings to evaluate close-range misses and distance error before claiming tracking accuracy.
+
+If a physically closer box appears at a *higher* bin than a farther box, do not use the green ring as a distance reading. Close the GUI so the serial port is free, then run this single guided raw-data check on macOS:
+
+```bash
+.venv/bin/python -m radar range-check recordings/box_range_01 --port /dev/cu.usbmodem2103 --config configs/range-source-derived.json
+```
+
+It prompts for an empty scene, a measured near position, and a measured far position; each starts after a three-second step-away delay and records six seconds of unchanged raw ADC. The sensor stays connected and a reader keeps draining the stream during position changes, matching the live GUI rather than restarting or accumulating old frames. Each scene's sensor-timestamp span is checked against wall time; a stale/backlogged capture is rejected. Keep the sensor fixed and report measured distances from its antenna face to the nearest box face. It writes a `range-check-report.json` comparing both the complex residual peaks and the same short-range amplitude selector used by the GUI. A bin changing or moving outward is only a diagnostic clue, not validation of box identity, close-range accuracy, or the meter scale. The output directory must not already exist; use a new name for another run. Re-analyze saved data with `python -m radar range-check-analyze recordings/box_range_01`.
 
 ## Build and connect
 

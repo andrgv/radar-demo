@@ -76,6 +76,13 @@ def main(argv=None):
     paired.add_argument('recordings')
     paired.add_argument('--config', required=True)
     paired.add_argument('--output', required=True)
+    range_check = commands.add_parser('range-check', help='Guided empty/near/far raw capture and provisional range-response check')
+    range_check.add_argument('output')
+    range_check.add_argument('--port', required=True)
+    range_check.add_argument('--config', required=True)
+    range_check.add_argument('--seconds', type=float, default=6)
+    range_check_analyze = commands.add_parser('range-check-analyze', help='Recheck a saved empty/near/far raw capture')
+    range_check_analyze.add_argument('recordings')
     arguments = parser.parse_args(argv)
     if arguments.command == "gui":
         if not math.isfinite(arguments.start_delay) or arguments.start_delay < 0:
@@ -95,11 +102,13 @@ def main(argv=None):
             snapshot = Path(arguments.replay) / "spectral-background.npz"
             if snapshot.exists():
                 background_path = str(snapshot)
-        from .gui import run
-        return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
-                   metadata=metadata, phase_probe_range=arguments.phase_probe, background_path=background_path,
-                   spatial_map=arguments.spatial_map, seconds=arguments.seconds, start_delay=arguments.start_delay,
-                   point_cloud=arguments.point_cloud)
+        from .qt_platform import staged_platform_plugins
+        with staged_platform_plugins():
+            from .gui import run
+            return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
+                       metadata=metadata, phase_probe_range=arguments.phase_probe, background_path=background_path,
+                       spatial_map=arguments.spatial_map, seconds=arguments.seconds, start_delay=arguments.start_delay,
+                       point_cloud=arguments.point_cloud)
     if arguments.command == "synthetic":
         config = Config(calibration_id="synthetic-known-geometry", verified=True,
                         chirp_timing_verified=True,carrier_frequency_verified=True)
@@ -195,4 +204,12 @@ def main(argv=None):
         from .research import evaluate
         report = evaluate(arguments.root, arguments.output, set(arguments.heldout_scenes))
         print(json.dumps({key: value for key, value in report.items() if key != "model"}, indent=2))
+    elif arguments.command == "range-check":
+        from .range_check import record_range_check
+        report = record_range_check(arguments.output, Config.load(arguments.config), arguments.port,
+                                    arguments.seconds)
+        print(json.dumps(report, indent=2))
+    elif arguments.command == "range-check-analyze":
+        from .range_check import analyze_range_check
+        print(json.dumps(analyze_range_check(arguments.recordings), indent=2))
     return 0

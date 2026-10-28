@@ -23,3 +23,8 @@ class RangeReadoutTests(unittest.TestCase):
     def test_verified_configuration_label(self):
         result = Processor(Config()).process(generate(Config(), seed=1))
         self.assertNotIn("provisional", range_readout(replace(result, calibrated=True)))
+
+    def test_background_subtracted_peaks_are_labeled_as_scene_changes(self):
+        result = Processor(Config()).process(generate(Config(), seed=1))
+        text = range_readout(replace(result, background_subtracted=True))
+        self.assertIn("Changed-scene spectral peaks", text)
