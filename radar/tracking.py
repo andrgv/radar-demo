@@ -103,6 +103,7 @@ class ShortRangeAmplitudeTracker:
                                       (np.arange(len(config.ranges)) >= 1) &
                                       (np.arange(len(config.ranges)) < len(config.ranges) - 1))
         self.reference_power = None
+        self.excess_history = __import__("collections").deque(maxlen=5)
         self.tracker = RangeTracker()
 
     def power(self, frame):
@@ -115,6 +116,7 @@ class ShortRangeAmplitudeTracker:
         if len(frames) < 10:
             raise ValueError("Short-range reference needs at least ten empty frames")
         self.reference_power = np.median([self.power(frame) for frame in frames], axis=0)
+        self.excess_history.clear()
         self.tracker.reset()
 
     def update(self, frame):
@@ -122,14 +124,28 @@ class ShortRangeAmplitudeTracker:
             raise ValueError("Capture an empty-scene reference first")
         excess_db = 10 * np.log10(np.maximum(self.power(frame), 1e-12) /
                                   np.maximum(self.reference_power, 1e-12))
+        self.excess_history.append(excess_db.copy())
+        filtered_db = np.median(np.asarray(self.excess_history), axis=0)
+
+        # Current-frame evidence controls target presence.
+        # Historical filtering must never preserve a disappeared target.
+        if len(self.indices) and np.max(excess_db[self.indices]) < self.min_excess_db:
+            self.excess_history.clear()
+            return self.tracker.update([], self.config.ranges), excess_db
+
+        # Current-frame evidence controls target presence.
+        # Historical filtering must never preserve a disappeared target.
+        if len(self.indices) and np.max(excess_db[self.indices]) < self.min_excess_db:
+            self.excess_history.clear()
+            return self.tracker.update([], self.config.ranges), excess_db
         candidates = []
         if len(self.indices):
-            ranked = sorted(self.indices, key=lambda index: excess_db[index], reverse=True)
+            ranked = sorted(self.indices, key=lambda index: filtered_db[index], reverse=True)
             best = ranked[0]
             # An extended target spreads energy into adjacent FFT bins. Compare
             # against separate peaks, not the same return's immediate neighbor.
-            runner_up = max((excess_db[index] for index in ranked if abs(index - best) > 1),
+            runner_up = max((filtered_db[index] for index in ranked if abs(index - best) > 1),
                             default=-np.inf)
-            if excess_db[best] >= self.min_excess_db and excess_db[best] - runner_up >= self.min_margin_db:
-                candidates = [_AmplitudeCandidate(float(self.config.ranges[best]), float(excess_db[best]))]
+            if filtered_db[best] >= self.min_excess_db and filtered_db[best] - runner_up >= self.min_margin_db:
+                candidates = [_AmplitudeCandidate(float(self.config.ranges[best]), float(filtered_db[best]))]
         return self.tracker.update(candidates, self.config.ranges), excess_db

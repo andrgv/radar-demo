@@ -45,7 +45,7 @@ class Window(QtWidgets.QMainWindow):
             self.acquisition_finished.connect(self.close)
         self.completion_label = 'Replay complete' if recording else 'Acquisition complete; recording closed'
         mode = f"LIVE {port}" if port else ("REPLAY" if recording else "SYNTHETIC")
-        self.setWindowTitle(f"3 RX radar | {mode} | material feature research")
+        self.setWindowTitle(f"Wavvy | {mode} | live range monitor")
         self.resize(1350, 900)
         self.config = config
         self.spatial_map = spatial_map or point_cloud
@@ -182,6 +182,32 @@ class Window(QtWidgets.QMainWindow):
             self.spatial_range.setValue(min(4.0, float(config.ranges[-2])))
             controls.addWidget(self.spatial_range)
             layout.addLayout(controls)
+        # Simplified default monitor; preserve every original diagnostic panel in a tab.
+        original_view = self.spatial_tabs if spatial_map else (self.phase_tabs if self.phase_tabs is not None else self.canvas)
+        layout.removeWidget(original_view)
+        self.monitor_tabs = QtWidgets.QTabWidget()
+        monitor_widget = QtWidgets.QWidget()
+        monitor_layout = QtWidgets.QVBoxLayout(monitor_widget)
+        self.live_value = QtWidgets.QLabel("NO TARGET")
+        self.live_value.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.live_value.setStyleSheet("font-size: 44px; font-weight: bold; padding: 12px;")
+        self.live_detail = QtWidgets.QLabel("Capture an empty scene to begin. Distance scale is unvalidated.")
+        self.live_detail.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.live_detail.setWordWrap(True)
+        monitor_layout.addWidget(self.live_value)
+        monitor_layout.addWidget(self.live_detail)
+        self.monitor_figure = Figure(figsize=(9, 5), layout="constrained")
+        self.monitor_canvas = FigureCanvasQTAgg(self.monitor_figure)
+        self.monitor_history_ax, self.monitor_profile_ax = self.monitor_figure.subplots(2, 1)
+        monitor_layout.addWidget(self.monitor_canvas, 1)
+        self.distance_readout.setVisible(False)
+        self.zoom_checkbox.setVisible(False)
+        self.zoom_width.setVisible(False)
+        self.recenter_button.setVisible(False)
+        self.zoom_label.setVisible(False)
+        self.monitor_tabs.addTab(monitor_widget, "Live distance monitor")
+        self.monitor_tabs.addTab(original_view, "Advanced diagnostics")
+        layout.addWidget(self.monitor_tabs, 1)
         layout.addWidget(self.status)
         self.setCentralWidget(widget)
         self.worker = threading.Thread(target=self.acquire,
@@ -202,6 +228,8 @@ class Window(QtWidgets.QMainWindow):
         self.track_readout.setText("Target check: clearing the previous reference and track.")
         self.distance_readout.setText("Capturing an empty-scene reference; previous peaks are not current targets.")
         self.range_history.clear()
+        self.live_value.setText("CALIBRATING")
+        self.live_detail.setText("Remove target and wait for the empty-scene reference.")
         self.zoom_center = None
         self.latest_observed_range = None
         self.recenter_button.setEnabled(False)
@@ -372,6 +400,11 @@ class Window(QtWidgets.QMainWindow):
                 self.zoom_label.setText(f"Fixed zoom center: {self.zoom_center:.2f} m from config")
                 if observed_range is not None and abs(observed_range - self.zoom_center) > self.zoom_width.value() / 2:
                     self.zoom_label.setText(self.zoom_label.text() + " — peak outside view; click Recenter")
+        if self.monitor_tabs.currentIndex() == 0:
+            self.render_live_monitor(result, track, amplitude_change_db)
+            self.status.setText(f"Frame {result.sequence} | display skips {self.display_drops} | "
+                                f"processing {self.stats.get('processing_ms', '?')} ms")
+            return
         if self.spatial_map and result.spatial_volume is not None:
             if self.spatial_tabs.currentIndex() == 0:
                 self.spatial_renderer.update(result.spatial_volume, self.spatial_dynamic_range.value(),
@@ -472,6 +505,51 @@ class Window(QtWidgets.QMainWindow):
         self.status.setText(f"{state} | frame {result.sequence} | {self.stats} | display skips {self.display_drops}")
         if self.phase_tabs is None or self.phase_tabs.currentIndex() == 1:
             self.canvas.draw_idle()
+
+    def render_live_monitor(self, result, track, amplitude_change_db):
+        """Display only observed targets; never promote an unverified axis to true distance."""
+        confirmed = track is not None and track.state == "confirmed" and track.observed_range_m is not None
+        if confirmed:
+            self.live_value.setText(f"BIN {track.bin_index}")
+            self.live_detail.setText(
+                f"Selected plot coordinate: {track.observed_range_m:.3f} m (UNCALIBRATED)  |  "
+                f"Status: CONFIRMED  |  Not a measured object distance")
+        elif track is None:
+            self.live_value.setText("CALIBRATE FIRST")
+            self.live_detail.setText("Remove the target and click Capture empty scene (30 frames).")
+        else:
+            self.live_value.setText("NO CURRENT TARGET")
+            self.live_detail.setText(f"Status: {track.state.upper()}  |  No distance reported")
+
+        self.monitor_history_ax.clear()
+        self.monitor_profile_ax.clear()
+        values = np.asarray(self.range_history, dtype=float)
+        if np.isfinite(values).any():
+            self.monitor_history_ax.plot(np.arange(len(values)), values, '.-',
+                                         color='tab:blue', linewidth=1.5, markersize=4)
+        else:
+            self.monitor_history_ax.text(0.5, 0.5, "No confirmed target yet",
+                                         transform=self.monitor_history_ax.transAxes,
+                                         ha='center', va='center')
+        self.monitor_history_ax.set(title="Selected peak history (gaps = no target)",
+                                    xlabel="Recent displayed frames", ylabel="Uncalibrated plot coordinate (m)")
+        self.monitor_history_ax.grid(alpha=0.25)
+
+        values = amplitude_change_db if amplitude_change_db is not None else result.profile_db
+        self.monitor_profile_ax.plot(result.ranges, values, color='tab:blue', linewidth=1.5)
+        if confirmed and track.bin_index is not None and 0 <= track.bin_index < len(values):
+            i = track.bin_index
+            self.monitor_profile_ax.plot(result.ranges[i], values[i], 'o', color='tab:green', markersize=9)
+            self.monitor_profile_ax.annotate(f"bin {i}", (result.ranges[i], values[i]),
+                                             xytext=(6, 7), textcoords='offset points')
+        self.monitor_profile_ax.set(
+            title="Change relative to empty scene" if amplitude_change_db is not None else "Raw range profile",
+            xlabel="Uncalibrated plot coordinate (m)",
+            ylabel="Change (dB)" if amplitude_change_db is not None else "Power (dB)")
+        self.monitor_profile_ax.grid(alpha=0.25)
+        if amplitude_change_db is not None:
+            self.monitor_profile_ax.set_xlim(0, min(2.0, float(result.ranges[-1])))
+        self.monitor_canvas.draw_idle()
 
     def render_phase_view(self, probe, usable):
         span = self.angle_span.value()
