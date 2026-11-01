@@ -8,10 +8,19 @@ import numpy as np
 from radar.protocol import Frame,encode
 from radar_min.core import Config
 from radar_min.__main__ import stream,read_recording
-from radar_min.gui import display_values
+from radar_min.gui import display_values,range_displayable
 
 
 class GuiStreamTests(unittest.TestCase):
+    def test_search_boundary_preserves_presence_but_not_distance(self):
+        for distance in [.15,1.5]:
+            r=dict(target_detected=True,experimental_range_m=distance,fit_boundary=True)
+            self.assertFalse(range_displayable(r))
+            self.assertEqual(display_values(r,True)[0],'—')
+            self.assertIn('distance unresolved',display_values(r,True)[1])
+            self.assertTrue(r['target_detected'])
+            self.assertEqual(r['experimental_range_m'],distance)
+
     def test_rejected_and_stale_estimate_never_main_readout(self):
         r=dict(target_detected=True,experimental_range_m=.4,excess_db=7,reason='spectral_change_uncalibrated')
         self.assertEqual(display_values(r,True)[0],'40.0 cm')

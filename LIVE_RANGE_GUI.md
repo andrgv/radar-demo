@@ -61,3 +61,11 @@ tests cover stale/rejected readouts, stop preserving raw data and enhanced logs,
 and timeout clearing/port closure. Existing acquisition tests still pass.
 Fresh hardware GUI calibration/live use awaits the user's setup/button clicks;
 no unlabelled scene is automatically treated as empty.
+
+Search-limit correction: fits at the configured 15 cm / 150 cm endpoints now
+show **distance unresolved** and leave a gap in the main range history, even
+when presence is detected. The candidate remains visible and recorded; this is
+not proof of a physical sensor minimum/maximum range. Saved readings also include
+fit_boundary and fit_near_optimal_width_m; the latter is not a confidence interval.
+This correction does not resolve wrong estimates away from the search limits.
+Restart an already open GUI to load code changes.

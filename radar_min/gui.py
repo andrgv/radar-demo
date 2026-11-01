@@ -36,17 +36,29 @@ class Estimate:
             result=self.fitter.fit(traces(frame,self.c)-self.reference)
             reading['experimental_range_m']=result['range_m']
             reading['fit_residual_fraction']=result['residual_fraction']
+            reading['fit_boundary']=result['boundary']
+            reading['fit_near_optimal_width_m']=result['near_optimal_width_m']
 
 
 def display_values(reading,fresh):
     if not fresh:return '—','No fresh reading','—','—'
     candidate=reading.get('experimental_range_m')
-    accepted=reading.get('target_detected',False) and candidate is not None
+    accepted=range_displayable(reading)
     distance=f'{candidate*100:.1f} cm' if accepted else '—'
     detail=(f'{candidate*100:.1f} cm · candidate only' if candidate is not None and not accepted else 'Experimental estimate · uncalibrated')
+    if reading.get('fit_boundary'):
+        detail += ' · fit at search limit; distance unresolved'
     strength=reading.get('excess_db')
     strength=f'{strength:+.1f} dB' if strength is not None else '—'
     return distance,detail,strength,reading.get('reason','No reading')
+
+
+def range_displayable(reading):
+    # A constrained optimum at the search endpoint does not resolve distance.
+    # Presence remains a separate recorded fact; keep the raw fitted candidate.
+    return (reading.get('target_detected',False)
+            and reading.get('experimental_range_m') is not None
+            and not reading.get('fit_boundary',False))
 
 
 class Window(QtWidgets.QMainWindow):
@@ -96,7 +108,7 @@ class Window(QtWidgets.QMainWindow):
                     value=reading.get('experimental_range_m')
                     with self.lock:
                         self.latest=(stamp,dict(reading))
-                        self.history.append((stamp-self.t0,value*100 if reading.get('target_detected') and value is not None else np.nan))
+                        self.history.append((stamp-self.t0,value*100 if range_displayable(reading) else np.nan))
                 if self.args.replay:
                     _,frames,_=read_recording(Path(self.args.replay),self.c);d=Detector(self.baseline)
                     for f in frames:
