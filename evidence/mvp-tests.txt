@@ -6,7 +6,7 @@ test_malformed_config_adc_profile (test_range_min.RangeTests.test_malformed_conf
 test_new_bin_does_not_keep_previous_detection (test_range_min.RangeTests.test_new_bin_does_not_keep_previous_detection) ... ok
 test_persistence_and_immediate_disappearance (test_range_min.RangeTests.test_persistence_and_immediate_disappearance) ... ok
 test_serial_capture_preserves_corruption_and_replays (test_range_min.RangeTests.test_serial_capture_preserves_corruption_and_replays) ... ok
-test_serial_timeout_clears_and_closes (test_range_min.RangeTests.test_serial_timeout_clears_and_closes) ... 
+test_serial_timeout_clears_and_closes (test_range_min.RangeTests.test_serial_timeout_clears_and_closes) ...
 NO RELIABLE READING: serial timeout
 ok
 test_timestamp_and_device_error (test_range_min.RangeTests.test_timestamp_and_device_error) ... ok
