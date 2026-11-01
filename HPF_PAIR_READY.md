@@ -1,5 +1,13 @@
 # Built HPF pair and hardware experiment status
 
+**Current hardware:** Returned to the reviewed HPF350 qualification image after
+completing the 100-a captures. The 100-a separate empty-after has 0/101 false
+detections (earlier unused empty frames: 0/71). The return flash verified and its
+startup check returned 30 valid frames, profile 0x33514802 / flags 3, no errors
+or ADC container rails. Evidence: `evidence/hpf-pair-2/flash-350-b/`.
+All three authorized flashes are complete. Fresh 350-b reference/target/empty
+captures remain to check repeatability before drawing the filter comparison.
+
 **Latest state:** The 350-a control series is complete (empty, 30/50/40 cm,
 untouched 40 cm repeat, empty-after). Its separate empty-after has 0/101 false
 detections; earlier unused empty frames had 0/71. Individual target errors and

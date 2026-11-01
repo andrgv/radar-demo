@@ -1,0 +1,26 @@
+{
+  "recording": "recordings/hpf100-a-empty-after",
+  "raw_sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34",
+  "frames": 101,
+  "false_detections": 0,
+  "reasons": {
+    "no_candidate_above_noise": 101
+  },
+  "adc_min": 22025,
+  "adc_max": 47739,
+  "container_rails": 0,
+  "capture_summary": {
+    "frames": 101,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "reference": "artifacts/hpf100-a-baseline.json",
+  "reference_updated": false
+}
