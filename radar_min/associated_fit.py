@@ -7,11 +7,14 @@ import numpy as np
 from tools.fit_range_signal import ToneFit
 
 class AssociatedFit(ToneFit):
+    def prepare(self,x):
+        return x-x.mean(axis=1,keepdims=True)
+
     def fit_associated(self,traces,candidate_bin,qualified_bins=None,allow_boundary=False):
         x=np.asarray(traces,dtype=float)
         if x.ndim!=2 or x.shape[1]!=self.c.samples or not np.isfinite(x).all():
             raise ValueError('Expected finite traces x samples')
-        x=x-x.mean(axis=1,keepdims=True);energy=float(np.sum(x*x))
+        x=self.prepare(x);energy=float(np.sum(x*x))
         if energy<=1e-20:return dict(range_m=None,reason='no_ac_energy')
         scores=np.sum(np.einsum('ts,gsb->gtb',x,self.q,optimize=True)**2,axis=(1,2))
         if not allow_boundary and int(np.argmax(scores)) in (0,len(scores)-1):
