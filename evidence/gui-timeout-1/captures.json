@@ -1,0 +1,92 @@
+[
+  {
+    "recording": "recordings/gui-20261101-153315-782345/empty-001",
+    "summary": {
+      "frames": 0,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 0
+    },
+    "readings": [
+      {
+        "target_detected": false,
+        "range_m": null,
+        "reason": "serial_timeout",
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        }
+      }
+    ],
+    "wire_file_exists": false
+  },
+  {
+    "recording": "recordings/gui-20261101-153315-782345/empty-002",
+    "summary": {
+      "frames": 0,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 0
+    },
+    "readings": [
+      {
+        "target_detected": false,
+        "range_m": null,
+        "reason": "serial_timeout",
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        }
+      }
+    ],
+    "wire_file_exists": false
+  },
+  {
+    "recording": "recordings/gui-20261101-153315-782345/empty-004",
+    "summary": {
+      "frames": 0,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 0
+    },
+    "readings": [
+      {
+        "target_detected": false,
+        "range_m": null,
+        "reason": "serial_timeout",
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        }
+      }
+    ],
+    "wire_file_exists": false
+  }
+]

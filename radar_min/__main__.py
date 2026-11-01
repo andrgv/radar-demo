@@ -39,7 +39,7 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None,observer
     if serial_factory is None:
         import serial
         serial_factory=serial.Serial
-    parser=Parser();guard=Continuity(config);count=0;rejected=0
+    parser=Parser();guard=Continuity(config);count=0;rejected=0;received_bytes=0
     started=time.monotonic();last=started;anchor=None;elapsed=0;previous_ts=None
     with ExitStack() as stack:
         recorder=stack.enter_context(Recorder(output,config,dict(label='live' if detector else 'capture',
@@ -51,6 +51,7 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None,observer
             ser.reset_input_buffer();ser.write(b'B')
             while time.monotonic()-started<seconds and not (stop_event and stop_event.is_set()):
                 chunk=ser.read(max(1,min(ser.in_waiting,65536)))
+                received_bytes+=len(chunk)
                 now=time.monotonic()
                 frames=parser.feed(chunk)
                 if chunk: recorder.write_transport(chunk,parser)
@@ -86,15 +87,21 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None,observer
                         emit({k:v for k,v in reading.items() if k not in ('power','excess_profile_db')})
                 if now-last>1:
                     if detector: detector.clear()
-                    timeout=dict(target_detected=False,range_m=None,reason='serial_timeout',serial=stats(parser))
+                    if not received_bytes:
+                        detail='No serial bytes received from the board. Close other serial readers, reconnect board USB, then retry.'
+                    elif not count:
+                        detail=f'Received {received_bytes} serial bytes but no complete radar frame. Check firmware/protocol and port; raw bytes preserved.'
+                    else:
+                        detail=f'Stream stalled after {count} frames: no fresh frame for one second. Partial recording preserved.'
+                    timeout=dict(target_detected=False,range_m=None,reason='serial_timeout',serial=stats(parser),received_bytes=received_bytes,frames=count,detail=detail)
                     if observer:observer(None,timeout)
                     emit(timeout,readings)
                     print('\nNO RELIABLE READING: serial timeout',flush=True)
-                    raise TimeoutError('No fresh frame for one second; partial recording preserved')
+                    raise TimeoutError(detail)
         finally:
             try: ser.write(b'c')
             finally: ser.close()
-            summary=dict(frames=count,rejected_frames=rejected,serial=stats(parser),incomplete_tail_bytes=len(parser.buffer))
+            summary=dict(frames=count,rejected_frames=rejected,serial=stats(parser),incomplete_tail_bytes=len(parser.buffer),received_bytes=received_bytes)
             (Path(output)/'capture-summary.json').write_text(json.dumps(summary,indent=2))
     if not count: raise ValueError('No frames captured')
     return summary

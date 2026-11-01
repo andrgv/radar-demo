@@ -109,7 +109,7 @@ class Window(QtWidgets.QMainWindow):
         if self.thread and self.thread.is_alive():return
         self.stop.clear();self.latest=None;self.last_seen=None;self.history.clear();self.t0=time.monotonic();self.controls(True)
         self.counter+=1;output=self.root/f'{"empty" if empty else "live"}-{self.counter:03d}'
-        self.status.setText('Recording empty background: keep box removed and step away.' if empty else 'Starting…')
+        self.status.setText('Step away: waiting 5 seconds, then capturing empty for 10 seconds.' if empty else 'Starting…')
         self.saved.setText('Replay: '+self.args.replay if self.args.replay else 'Recording: '+str(output.resolve()))
         def work():
             try:
@@ -131,6 +131,7 @@ class Window(QtWidgets.QMainWindow):
                     self.root.mkdir(parents=True,exist_ok=True)
                     # Five seconds to step away before empty acquisition begins.
                     if empty and self.stop.wait(5):return
+                    self.events.put(('acquiring',empty))
                     stream(self.args.port,self.c,output,10 if empty else 3600,
                         detector=None if empty else Detector(self.baseline),observer=observe,
                         stop_event=self.stop,quiet=True)
@@ -142,7 +143,10 @@ class Window(QtWidgets.QMainWindow):
                         b.save(output/'baseline.json');d=Detector(b);hits=sum(d.update(f)['target_detected'] for f in frames[30:])
                         (output/'empty-holdout.json').write_text(json.dumps(dict(training_frames=30,unused_frames=len(frames)-30,false_detections=hits,independent_recording=False),indent=2))
                         self.events.put(('baseline',(b,hits,len(frames)-30)))
-            except Exception as error:self.events.put(('error',str(error)))
+            except Exception as error:
+                if output.exists():
+                    (output/'gui-error.json').write_text(json.dumps(dict(type=type(error).__name__,message=str(error)),indent=2))
+                self.events.put(('error',str(error)))
             finally:self.latest=None;self.events.put(('done',None))
         self.thread=threading.Thread(target=work,daemon=False);self.thread.start()
 
@@ -151,6 +155,7 @@ class Window(QtWidgets.QMainWindow):
             kind,value=self.events.get()
             if kind=='baseline':
                 self.baseline,hits,n=value;self.status.setText(f'Background ready. Unused empty frames: {hits}/{n} detections. Place target, then Start live.')
+            elif kind=='acquiring':self.status.setText('Opening board stream; waiting for first frame…')
             elif kind=='saved':self.saved.setText('Recording saved: '+value)
             elif kind=='error':self.status.setText('Stopped: '+value)
             elif kind=='done':

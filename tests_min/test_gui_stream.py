@@ -59,6 +59,30 @@ class GuiStreamTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t,patch('radar_min.__main__.time.monotonic',side_effect=lambda:next(ticks)):
             with self.assertRaises(TimeoutError):stream('fake',Config(),Path(t)/'r',5,serial_factory=lambda *a,**kw:Serial(),observer=lambda f,r:updates.append((f,r)),quiet=True)
         self.assertIsNone(updates[-1][0]);self.assertFalse(updates[-1][1]['target_detected'])
+        self.assertEqual(updates[-1][1]['received_bytes'],0)
+        self.assertIn('No serial bytes',updates[-1][1]['detail'])
+
+    def test_timeout_distinguishes_corrupt_input_from_stalled_stream(self):
+        c=Config();packet=encode(Frame(1,100000,c.profile_id,np.full((17,64,3),12000,dtype=np.uint16)))
+        for payload,expected_frames,detail in [(b'garbage',0,'no complete radar frame'),(packet,1,'Stream stalled after 1 frames')]:
+            class Serial:
+                in_waiting=0
+                def __init__(self):self.parts=iter([payload,b'']);self.closed=False
+                def reset_input_buffer(self):pass
+                def write(self,b):pass
+                def read(self,n):return next(self.parts)
+                def close(self):self.closed=True
+            ser=Serial();updates=[];ticks=iter([0,0,.2,.3,1.3])
+            with tempfile.TemporaryDirectory() as t,patch('radar_min.__main__.time.monotonic',side_effect=lambda:next(ticks)):
+                out=Path(t)/'r'
+                with self.assertRaisesRegex(TimeoutError,detail):
+                    stream('fake',c,out,5,serial_factory=lambda *a,**kw:ser,observer=lambda f,r:updates.append((f,r)),quiet=True)
+                summary=json.loads((out/'capture-summary.json').read_text())
+                self.assertEqual(summary['received_bytes'],len(payload))
+                self.assertEqual(summary['frames'],expected_frames)
+                self.assertEqual((out/'serial-wire.bin').read_bytes(),payload)
+            self.assertTrue(ser.closed)
+            self.assertFalse(updates[-1][1]['target_detected'])
 
 
 if __name__=='__main__':unittest.main()
