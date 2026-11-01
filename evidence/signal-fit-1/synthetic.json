@@ -1,0 +1,42 @@
+[
+  {
+    "distance_m": 0.15,
+    "phases": 360,
+    "max_absolute_error_m": 5.2572767889058625e-08
+  },
+  {
+    "distance_m": 0.1837,
+    "phases": 360,
+    "max_absolute_error_m": 4.0030727066486804e-08
+  },
+  {
+    "distance_m": 0.3,
+    "phases": 360,
+    "max_absolute_error_m": 1.1427932766761018e-08
+  },
+  {
+    "distance_m": 0.35,
+    "phases": 360,
+    "max_absolute_error_m": 1.1384231501931907e-08
+  },
+  {
+    "distance_m": 0.4,
+    "phases": 360,
+    "max_absolute_error_m": 8.133067719295894e-09
+  },
+  {
+    "distance_m": 0.5,
+    "phases": 360,
+    "max_absolute_error_m": 5.524671498058353e-09
+  },
+  {
+    "distance_m": 0.8732,
+    "phases": 360,
+    "max_absolute_error_m": 6.878130398568771e-09
+  },
+  {
+    "distance_m": 1.5,
+    "phases": 360,
+    "max_absolute_error_m": 5.4102600177685645e-09
+  }
+]
