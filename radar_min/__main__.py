@@ -30,7 +30,7 @@ def read_recording(path, config=None):
     return c,frames,parser
 
 
-def stream(port,config,output,seconds,detector=None,serial_factory=None):
+def stream(port,config,output,seconds,detector=None,serial_factory=None,observer=None,stop_event=None,quiet=False):
     """Original bytes are saved before DSP; processing never gates raw recording.
 
     Relative device/host timing catches backlog growth, not absolute sensor age.
@@ -49,7 +49,7 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None):
         ser=serial_factory(port,2000000,timeout=0.1,write_timeout=1)
         try:
             ser.reset_input_buffer();ser.write(b'B')
-            while time.monotonic()-started<seconds:
+            while time.monotonic()-started<seconds and not (stop_event and stop_event.is_set()):
                 chunk=ser.read(max(1,min(ser.in_waiting,65536)))
                 now=time.monotonic()
                 frames=parser.feed(chunk)
@@ -75,8 +75,10 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None):
                         reading=dict(frame_sequence=frame.sequence,reason=reason or 'raw_recorded',target_detected=False,range_m=None)
                     if reason: rejected+=1
                     reading.update(serial=stats(parser),relative_timing_error_s=drift)
+                    if observer: observer(frame,reading)
                     emit(reading,readings)
-                    if detector and sys.stdout.isatty():
+                    if quiet: pass
+                    elif detector and sys.stdout.isatty():
                         label=(f"BIN {reading['range_bin']} | provisional {reading['provisional_range_m']:.3f} m"
                                if reading['target_detected'] else 'NO RELIABLE READING')
                         print(f"\r{label} | UNCALIBRATED | {reading['reason']} | gaps {parser.gaps} CRC {parser.bad_crc}    ",end='',flush=True)
@@ -84,7 +86,9 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None):
                         emit({k:v for k,v in reading.items() if k not in ('power','excess_profile_db')})
                 if now-last>1:
                     if detector: detector.clear()
-                    emit(dict(target_detected=False,range_m=None,reason='serial_timeout',serial=stats(parser)),readings)
+                    timeout=dict(target_detected=False,range_m=None,reason='serial_timeout',serial=stats(parser))
+                    if observer:observer(None,timeout)
+                    emit(timeout,readings)
                     print('\nNO RELIABLE READING: serial timeout',flush=True)
                     raise TimeoutError('No fresh frame for one second; partial recording preserved')
         finally:
@@ -101,13 +105,19 @@ def main(argv=None):
     fit=sub.add_parser('baseline',help='Fit empty reference; never learns from holdout')
     fit.add_argument('recording');fit.add_argument('output');fit.add_argument('--count',type=int,default=30)
     rp=sub.add_parser('replay');rp.add_argument('recording');rp.add_argument('--baseline',required=True);rp.add_argument('--skip',type=int,default=0)
+    gui=sub.add_parser('gui',help='Thin experimental range display with raw recording')
+    gui.add_argument('--port',default='/dev/cu.usbmodem103');gui.add_argument('--config',required=True)
+    gui.add_argument('--baseline');gui.add_argument('--replay');gui.add_argument('--snapshot')
     for command in ('capture','live'):
         sp=sub.add_parser(command);sp.add_argument('output');sp.add_argument('--port',required=True)
         sp.add_argument('--seconds',type=float,default=60);sp.add_argument('--config',default='configs/range-source-derived.json')
         if command=='live': sp.add_argument('--baseline',required=True)
     args=p.parse_args(argv)
     try:
-        if args.cmd=='baseline':
+        if args.cmd=='gui':
+            from .gui import launch
+            return launch(args)
+        elif args.cmd=='baseline':
             c,frames,_=read_recording(args.recording)
             if not 20<=args.count<=len(frames): raise ValueError('Training count must be 20..recording length')
             raw=Path(args.recording)/'frames.grd'
