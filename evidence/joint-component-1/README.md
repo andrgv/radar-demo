@@ -73,6 +73,7 @@ histories. No fresh capture requested for this experiment.
 
 ```sh
 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3 -m tools.evaluate_joint_components
+python3 -m tools.summarize_joint_components
 ./range-v1 test
 ```
 
