@@ -1,0 +1,42 @@
+{
+  "recording": "recordings/gui-20261101-155623-972019/live-002",
+  "label_m": 0.2,
+  "label_basis": "User reports box at 20 cm; no synchronized motion truth",
+  "raw_sha256": "681ddeb01d30f0ee5f9a0945b76f42b0b5882c0a9d9bd136fdde2c78814c9621",
+  "live_replay_matches": true,
+  "metrics": {
+    "frames": 232,
+    "reported": 0,
+    "misses": 232,
+    "adjacent_pairs": 0,
+    "jumps_over_20cm": 0,
+    "median_cm": null,
+    "mae_cm": null,
+    "p95_error_cm": null,
+    "within_2cm": 0,
+    "errors_over_10cm": 0
+  },
+  "reasons": {
+    "no_candidate_above_noise": 232
+  },
+  "capture": {
+    "frames": 232,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1,
+    "received_bytes": 1526561
+  },
+  "empty_holdout": {
+    "training_frames": 30,
+    "unused_frames": 71,
+    "false_detections": 0,
+    "independent_recording": false
+  },
+  "range_min_max_cm": null
+}
