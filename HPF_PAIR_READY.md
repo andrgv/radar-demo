@@ -1,4 +1,19 @@
-# Built HPF pair: ready for flash approval, not yet on hardware
+# Built HPF pair and hardware experiment status
+
+**Update November 1:** User explicitly authorized the 350 -> 100 -> 350 flash
+sequence. The reviewed HPF350 image was programmed, verified and reset on probe
+170D0E8300023400 / CY8C624AFNI-S2D43. A three-second startup check produced 30
+valid frames with profile 0x33514802, flags 3, zero transport/device errors and
+no ADC container rails. Acquisition elapsed telemetry was 3461–3473 us; it is
+not chirp spacing. Startup scene was unspecified and is excluded from calibration.
+Evidence: `evidence/hpf-pair-2/flash-350-a/`. KitProg3's old-firmware warning was
+retained; its firmware was not updated. Capture the 350-a scenes next, before
+the already-authorized 100 and return-to-350 flashes. The first serial attempt
+was sandbox-blocked; its partial directory is preserved. The successful check
+is `recordings/hpf350-a-startup-check-2`. Original restoration image is unchanged.
+
+The sections below describe the build-time review; statements that no flash had
+occurred apply to that earlier build-only phase. Current state is recorded above.
 
 Two isolated variants compiled successfully with ModusToolbox 3.9 and ARM GCC
 14.2.1. No program, erase, reset, probe connection or serial command was executed.

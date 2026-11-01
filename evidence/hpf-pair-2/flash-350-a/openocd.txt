@@ -1,0 +1,91 @@
+Open On-Chip Debugger 0.12.0+dev-5.20.0.5177 (2026-09-25-19:00)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+adapter speed: 2000 kHz
+adapter speed: 12000 kHz
+adapter srst delay: 25
+adapter srst pulse_width: 25
+** Auto-acquire enabled, use "set ENABLE_ACQUIRE 0" to disable
+cortex_m reset_config sysresetreq
+cortex_m reset_config sysresetreq
+Info : Using CMSIS-DAPv2 interface with VID:PID=0x04b4:0xf155, serial=170D0E8300023400
+Info : CMSIS-DAP: SWD supported
+Info : CMSIS-DAP: Atomic commands supported
+Info : CMSIS-DAP: FW Version = 2.0.0
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 1 TDO = 1 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : KitProg3: FW version: 2.40.1241
+Info : KitProg3: Bridge control is not supported
+Info : KitProg3: Pipelined transfers enabled
+Info : KitProg3: Asynchronous USB transfers enabled
+Info : VTarget = 3.308 V
+Info : kitprog3: acquiring device in Test Mode using 'PSOC 6' target and 'xres' reset...
+Info : clock speed 12000 kHz
+Info : SWD DPIDR 0x6ba02477
+Info : [psoc6.cpu.cm0] Cortex-M0+ r0p1 processor detected
+Info : [psoc6.cpu.cm0] target has 4 breakpoints, 2 watchpoints
+***************************************
+** Silicon: 0xE455, Family: 0x102, Rev.: 0x12 (A1)
+** Detected Device: CY8C624AFNI-S2D43
+** Detected Main Flash size, kb: 2048
+** Flash Boot version: 3.1.0.378
+** SFlash version: 0x47530
+** Chip Protection: NORMAL
+***************************************
+Info : [psoc6.cpu.cm0] Examination succeed
+Info : [psoc6.cpu.cm4] Cortex-M4 r0p1 processor detected
+Info : [psoc6.cpu.cm4] target has 6 breakpoints, 4 watchpoints
+Info : [psoc6.cpu.cm4] Examination succeed
+Info : gdb port disabled
+Info : gdb port disabled
+Info : SWD DPIDR 0x6ba02477
+[psoc6.cpu.cm0] halted due to debug-request, current mode: Thread
+xPSR: 0x41000000 pc: 0x000000e0 msp: 0x080ff800
+Info : kitprog3: acquiring device in Test Mode using 'PSOC 6' target and 'xres' reset...
+Info : [psoc6.cpu.cm0] external reset detected
+[psoc6.cpu.cm0] halted due to debug-request, current mode: Thread
+xPSR: 0x41000000 pc: 0x00000190 msp: 0x080ff800
+** Device acquired successfully
+** psoc6.cpu.cm4: Ran after reset and before halt...
+[psoc6.cpu.cm4] halted due to debug-request, current mode: Thread
+xPSR: 0x01000000 pc: 0x0000012a msp: 0x080ff800
+** Programming Started **
+auto erase enabled
+Info : Flash write discontinued at 0x100018d0, next section at 0x10002000
+Info : Padding image section 0 at 0x100018d0 with 304 bytes (bank write end alignment)
+
+[100%] [################################] [ Erasing     ]
+
+[100%] [################################] [ Programming ]
+Info : Padding image section 1 at 0x1000bf2c with 212 bytes (bank write end alignment)
+
+[100%] [################################] [ Erasing     ]
+
+[ 72%] [#######################         ] [ Programming ]
+[ 75%] [########################        ] [ Programming ]
+[ 80%] [#########################       ] [ Programming ]
+[ 82%] [##########################      ] [ Programming ]
+[ 85%] [###########################     ] [ Programming ]
+[ 88%] [############################    ] [ Programming ]
+[ 91%] [#############################   ] [ Programming ]
+[ 95%] [##############################  ] [ Programming ]
+[ 97%] [############################### ] [ Programming ]
+[100%] [################################] [ Programming ]
+wrote 47616 bytes from file artifacts/hpf-pair-2/hpf350/glass-radar-3rx.hex in 0.605805s (76.757 KiB/s)
+** Programming Finished **
+** Verify Started **
+verified 47100 bytes in 0.085361s (538.842 KiB/s)
+** Verified OK **
+** Resetting Target **
+Info : SWD DPIDR 0x6ba02477
+shutdown command invoked
+Info : psoc6.dap: powering down debug domain...
+Warn :
+*******************************************************************************************
+* KitProg3 firmware is out of date. Update to the latest detected version (2.90.1804)
+* found in /Applications/ModusToolboxProgtools-2.0/kp-firmware
+* using ModusToolbox Programmer or Advanced KitProg3 Programming launch config option
+* in the Quick Panel of Eclipse IDE or fw-loader CLI tool
+*******************************************************************************************

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-11-01T19:03:34.829447+00:00",
+  "status": "350 kHz control flashed, verified and streaming",
+  "scene": "unspecified startup check; not baseline or target validation",
+  "board": "CY8C624AFNI-S2D43",
+  "probe_serial": "170D0E8300023400",
+  "image": "artifacts/hpf-pair-2/hpf350/glass-radar-3rx.hex",
+  "image_sha256": "a68e0646857d76d1511be8a5ec9ba2c8130a7d3ff897966afd6e391073163897",
+  "frames": 30,
+  "profile_ids": [
+    "0x33514802"
+  ],
+  "flags": [
+    3
+  ],
+  "elapsed_us_min_median_max": [
+    3461.0,
+    3461.5,
+    3473.0
+  ],
+  "adc_min": 27206,
+  "adc_max": 39181,
+  "container_rails": 0,
+  "device_errors": 0,
+  "device_dropped": 0,
+  "capture_summary": {
+    "frames": 30,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "remaining": "Capture 350-a scenes before authorized 100 and return-to-350 flashes. No further flash until captures complete."
+}
