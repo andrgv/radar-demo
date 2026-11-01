@@ -1,3 +1,5 @@
+> **November 2026 range-only takeover:** See [RANGE_V1.md](RANGE_V1.md) for the isolated MVP and [AUDIT_RANGE_V1.md](AUDIT_RANGE_V1.md) for current evidence. Historical setup/validation claims below are not proof of the flashed board or calibrated accuracy.
+
 # Three-RX radar and glass-feature research
 
 New CYSBSYSKIT-DEV-01 / BGT60CUTR13AIP firmware and a standalone Python Qt application. The sibling working demo is untouched. No camera, RGB-D, ROS2, cloud service, or GPU is required.

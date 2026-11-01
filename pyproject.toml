@@ -12,4 +12,4 @@ dependencies = ["numpy>=1.26,<3", "PyQt6>=6.6,<7", "matplotlib>=3.8,<4", "pyseri
 glass-radar = "radar.cli:main"
 
 [tool.setuptools]
-packages = ["radar"]
+packages = ["radar", "radar_min"]

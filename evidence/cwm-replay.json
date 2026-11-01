@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "measured_distances_m": {
+    "near": 0.25,
+    "far": 0.55
+  },
+  "one_continuous_sensor_session": true,
+  "sensor_timestamp_spans_s": {
+    "empty": 6.0,
+    "near": 6.0,
+    "far": 5.9
+  },
+  "capture_timing_valid": true,
+  "empty_frames": 61,
+  "empty_holdout_frames": 31,
+  "near": {
+    "frames": 61,
+    "top_changed_bins": [
+      {
+        "bin": 9,
+        "excess_over_empty_db": 7.85,
+        "config_plot_m_unvalidated": 3.128
+      },
+      {
+        "bin": 3,
+        "excess_over_empty_db": 5.83,
+        "config_plot_m_unvalidated": 1.043
+      },
+      {
+        "bin": 15,
+        "excess_over_empty_db": 4.76,
+        "config_plot_m_unvalidated": 5.214
+      },
+      {
+        "bin": 7,
+        "excess_over_empty_db": 1.45,
+        "config_plot_m_unvalidated": 2.433
+      },
+      {
+        "bin": 16,
+        "excess_over_empty_db": -0.08,
+        "config_plot_m_unvalidated": 5.561
+      }
+    ],
+    "strongest_changed_bin": 9
+  },
+  "far": {
+    "frames": 60,
+    "top_changed_bins": [
+      {
+        "bin": 15,
+        "excess_over_empty_db": 5.46,
+        "config_plot_m_unvalidated": 5.214
+      },
+      {
+        "bin": 3,
+        "excess_over_empty_db": 5.26,
+        "config_plot_m_unvalidated": 1.043
+      },
+      {
+        "bin": 9,
+        "excess_over_empty_db": 4.96,
+        "config_plot_m_unvalidated": 3.128
+      },
+      {
+        "bin": 7,
+        "excess_over_empty_db": 2.13,
+        "config_plot_m_unvalidated": 2.433
+      },
+      {
+        "bin": 28,
+        "excess_over_empty_db": 0.11,
+        "config_plot_m_unvalidated": 9.732
+      }
+    ],
+    "strongest_changed_bin": null
+  },
+  "short_range_live_selector": {
+    "empty": {
+      "dominant_confirmed_bin": 1,
+      "confirmed_frames_by_bin": {
+        "1": 22,
+        "2": 4
+      },
+      "median_excess_db_at_dominant_bin": 4.11
+    },
+    "near": {
+      "dominant_confirmed_bin": 1,
+      "confirmed_frames_by_bin": {
+        "1": 26
+      },
+      "median_excess_db_at_dominant_bin": 3.39
+    },
+    "far": {
+      "dominant_confirmed_bin": 2,
+      "confirmed_frames_by_bin": {
+        "1": 2,
+        "2": 14
+      },
+      "median_excess_db_at_dominant_bin": 2.53
+    },
+    "dominant_bin_moves_outward": true
+  },
+  "strongest_changed_bin_moves_outward": false,
+  "interpretation": "The short-range selector moves outward in this capture; object association and range calibration remain unverified.",
+  "caution": "A changed bin can be clutter or multipath. The meter coordinate is config-derived, not validated object distance."
+}

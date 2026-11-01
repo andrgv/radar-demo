@@ -1,0 +1,290 @@
+{
+  "box_range_01": {
+    "training_frames": 30,
+    "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+    "threshold_db": [
+      14.72272613790279,
+      6.539579894341667,
+      8.84179565083614,
+      12.409328724071925,
+      17.4499530114129,
+      11.234584776632365,
+      21.411557165178092,
+      9.569349987289405,
+      3.0,
+      3.019027044127398,
+      4.826047460498462,
+      17.17909614694421,
+      7.802214443690337,
+      7.046131702946301,
+      6.885965081695716,
+      7.0233388792245375,
+      16.052629844021133,
+      3.721163005106909,
+      4.629053473048372,
+      6.852225508122618,
+      3.7683692022539024,
+      4.468071027918288,
+      5.185923072607548,
+      3.5954973261219494,
+      7.308111199219725,
+      8.503793729404585,
+      3.0,
+      4.2904997475703786,
+      3.418336406779207,
+      4.112560482543745,
+      3.7022782443620015,
+      3.7052024235034313,
+      5.73432118479979
+    ],
+    "policy": "Fixed defaults; no holdout tuning. Track state reset for each stage.",
+    "stages": {
+      "empty": {
+        "frames": 31,
+        "measured_distance_m": null,
+        "raw_sha256": "72e0a2b4aa68e4405b0c996c0448d155f17f63a22726a6682f6ce408f3b11ae1",
+        "cwm_detected": 18,
+        "cwm_bins": {
+          "4": 18
+        },
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 31
+        },
+        "candidate_bins": {
+          "4": 23,
+          "3": 8
+        },
+        "interpretation": "false alarms"
+      },
+      "near": {
+        "frames": 60,
+        "measured_distance_m": 0.245,
+        "raw_sha256": "6c1505ab9e6b5f1fe926acd8af86bc35e099564006e502b2f9549c15c4017d29",
+        "cwm_detected": 6,
+        "cwm_bins": {
+          "3": 4,
+          "5": 2
+        },
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 60
+        },
+        "candidate_bins": {
+          "3": 28,
+          "4": 18,
+          "1": 14
+        },
+        "interpretation": "spectral-change detections; object association unverified"
+      }
+    },
+    "separate_session_empty_stress": {
+      "box_range_02": {
+        "frames": 61,
+        "false_alarms": 0,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      },
+      "box_range_20261028_002954": {
+        "frames": 61,
+        "false_alarms": 0,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      }
+    }
+  },
+  "box_range_02": {
+    "training_frames": 30,
+    "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+    "threshold_db": [
+      10.982330391219637,
+      6.727491964726884,
+      8.355805240527834,
+      7.868111844176823,
+      9.88330667203599,
+      4.635257405343837,
+      4.6781865914972025,
+      7.476350121324243,
+      3.0,
+      7.0094061713117295,
+      3.0,
+      5.7865271876030615,
+      4.142326652092367,
+      6.364994025983988,
+      11.599439265939292,
+      3.0,
+      12.5700140061508,
+      9.384080959375208,
+      5.706033845734282,
+      6.031937121160701,
+      3.0,
+      3.6224621221310334,
+      3.0,
+      3.0,
+      5.243394043009457,
+      3.2584662004016085,
+      3.4104226941113542,
+      4.775086424303176,
+      3.0,
+      4.238048098704674,
+      4.300156047844997,
+      3.0988175527464605,
+      4.930606170905168
+    ],
+    "policy": "Fixed defaults; no holdout tuning. Track state reset for each stage.",
+    "stages": {
+      "empty": {
+        "frames": 31,
+        "measured_distance_m": null,
+        "raw_sha256": "4482783aa2a6ff518b3becd2aef08eb426b0ab370d0fff80af5b9906812da5c6",
+        "cwm_detected": 0,
+        "cwm_bins": {},
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 31
+        },
+        "candidate_bins": {
+          "1": 8,
+          "2": 1,
+          "4": 22
+        },
+        "interpretation": "false alarms"
+      }
+    },
+    "separate_session_empty_stress": {
+      "box_range_01": {
+        "frames": 61,
+        "false_alarms": 0,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      },
+      "box_range_20261028_002954": {
+        "frames": 61,
+        "false_alarms": 35,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      }
+    }
+  },
+  "box_range_20261028_002954": {
+    "training_frames": 30,
+    "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+    "threshold_db": [
+      9.092934721395217,
+      16.38020685911727,
+      19.287862306579697,
+      15.021027554811855,
+      6.906616655844671,
+      4.973617862650043,
+      4.896983802566927,
+      8.904635222133852,
+      9.205411294070739,
+      16.54176843390725,
+      4.559800307063162,
+      3.9454279896889055,
+      4.0924438908599505,
+      3.0,
+      9.179791467415981,
+      4.068533472192344,
+      4.41517906743367,
+      5.276505547454337,
+      8.418404792374863,
+      7.802671053442234,
+      9.569965237396609,
+      8.143754724652913,
+      3.6775066691322156,
+      3.638615939893734,
+      5.384499818566671,
+      4.73008447469611,
+      5.439864493897186,
+      4.709775947866328,
+      4.66674446205009,
+      5.323646046049417,
+      4.502948206392047,
+      4.020163638932091,
+      5.729964083028097
+    ],
+    "policy": "Fixed defaults; no holdout tuning. Track state reset for each stage.",
+    "stages": {
+      "empty": {
+        "frames": 31,
+        "measured_distance_m": null,
+        "raw_sha256": "8df44edd82c9348505348e7f037d4bad0f2daa20e4d01587b5d0cfd358ceb3ca",
+        "cwm_detected": 26,
+        "cwm_bins": {
+          "1": 22,
+          "2": 4
+        },
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 31
+        },
+        "candidate_bins": {
+          "1": 24,
+          "2": 6,
+          "3": 1
+        },
+        "interpretation": "false alarms"
+      },
+      "near": {
+        "frames": 61,
+        "measured_distance_m": 0.25,
+        "raw_sha256": "85e4099fb7182e500b926e9e985b1bb15a13d6a1f7bd022fd968485bebacc921",
+        "cwm_detected": 24,
+        "cwm_bins": {
+          "1": 24
+        },
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 61
+        },
+        "candidate_bins": {
+          "1": 50,
+          "3": 8,
+          "4": 3
+        },
+        "interpretation": "spectral-change detections; object association unverified"
+      },
+      "far": {
+        "frames": 60,
+        "measured_distance_m": 0.55,
+        "raw_sha256": "ee34d7dccdb004641662e410100dda0109849b484c9ff0a3d122a78499153cb0",
+        "cwm_detected": 15,
+        "cwm_bins": {
+          "2": 14,
+          "1": 1
+        },
+        "mvp_detected": 0,
+        "mvp_bins": {},
+        "mvp_detection_fraction": 0.0,
+        "mvp_reasons": {
+          "no_candidate_above_noise": 60
+        },
+        "candidate_bins": {
+          "2": 33,
+          "1": 22,
+          "3": 5
+        },
+        "interpretation": "spectral-change detections; object association unverified"
+      }
+    },
+    "separate_session_empty_stress": {
+      "box_range_01": {
+        "frames": 61,
+        "false_alarms": 0,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      },
+      "box_range_02": {
+        "frames": 61,
+        "false_alarms": 0,
+        "caveat": "Separate capture; unchanged scene/pose not certified. Never used for fitting."
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+[
+  {
+    "path": "recordings/box_range_01/empty",
+    "frames": 61,
+    "span_s": 6.0,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161512.471793,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_01",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_01/near",
+    "frames": 60,
+    "span_s": 5.899999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161589.189135,
+      "label": "near",
+      "session_id": "near",
+      "scene_id": "box_range_01",
+      "measured_distance_m": 0.245,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_02/empty",
+    "frames": 61,
+    "span_s": 5.999999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161713.025227,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_02",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty",
+    "frames": 61,
+    "span_s": 5.999999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161803.226336,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far",
+    "frames": 60,
+    "span_s": 5.900001,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161888.806496,
+      "label": "far",
+      "session_id": "far",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": 0.55,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near",
+    "frames": 61,
+    "span_s": 6.0,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161829.493558,
+      "label": "near",
+      "session_id": "near",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": 0.25,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  }
+]
