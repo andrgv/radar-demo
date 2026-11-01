@@ -19,6 +19,29 @@ def baseline():
     return Baseline.fit([frame(i) for i in range(1,31)],C)
 
 class RangeTests(unittest.TestCase):
+    def test_noisy_neighbor_cannot_block_qualified_bin(self):
+        # Stable bin 1 is above its 3 dB threshold, while stronger bin 2 is
+        # below its own 12 dB variability threshold. No temporal smoothing.
+        thresholds=np.full(33,3.0);thresholds[2]=12
+        b=Baseline(C,np.zeros(33),thresholds,30,{})
+        excess=np.zeros(33);excess[1]=5;excess[2]=6
+        d=Detector(b)
+        with patch('radar_min.core.power',return_value=10**(excess/10)):
+            results=[d.update(frame(i)) for i in range(1,4)]
+        self.assertTrue(results[-1]['target_detected'])
+        self.assertEqual(results[-1]['range_bin'],1)
+        self.assertEqual(results[-1]['qualified_bins'],[1])
+        self.assertEqual(results[-1]['strongest_excess_bin'],2)
+        self.assertIsNone(results[-1]['range_m'])
+
+    def test_separate_competing_peak_still_rejects(self):
+        b=Baseline(C,np.zeros(33),np.full(33,3.0),30,{})
+        excess=np.zeros(33);excess[1]=5;excess[4]=4
+        with patch('radar_min.core.power',return_value=10**(excess/10)):
+            r=Detector(b).update(frame(1))
+        self.assertFalse(r['target_detected'])
+        self.assertEqual(r['reason'],'ambiguous_separate_peak')
+
     def test_fft_known_frequency_amplitude_and_dc(self):
         p=power(frame(1,k=3,amplitude=1000),C)
         self.assertEqual(int(np.argmax(p)),3)

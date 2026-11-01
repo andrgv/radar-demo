@@ -1,3 +1,5 @@
+> **Short-range diagnosis:** [SHORT_RANGE_FINDINGS.md](SHORT_RANGE_FINDINGS.md) documents a fixed candidate-selection defect, improved 50 cm replay, and the remaining physical range limits.
+
 > **November 2026 range-only takeover:** See [RANGE_V1.md](RANGE_V1.md) for the isolated MVP and [AUDIT_RANGE_V1.md](AUDIT_RANGE_V1.md) for current evidence. Historical setup/validation claims below are not proof of the flashed board or calibrated accuracy.
 
 # Three-RX radar and glass-feature research

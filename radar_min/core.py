@@ -145,7 +145,7 @@ class Detector:
     def update(self,frame):
         import time
         start=time.perf_counter()
-        out=dict(frame_sequence=frame.sequence,timestamp_us=frame.timestamp_us,target_detected=False,
+        out=dict(algorithm="range-v1-qualified-first-v2",frame_sequence=frame.sequence,timestamp_us=frame.timestamp_us,target_detected=False,
                  range_bin=None,range_m=None,calibrated=False,provisional_range_m=None,
                  candidate_bin=None,excess_db=None,threshold_db=None,margin_db=None,
                  device_dropped=frame.dropped,device_errors=frame.errors,reason='no_candidate_above_noise')
@@ -159,10 +159,15 @@ class Detector:
         else:
             excess=db(p)-self.baseline.median_db
             ids=np.arange(self.config.min_bin,self.config.max_bin+1)
-            best=int(ids[np.argmax(excess[ids])])
+            # A bin must qualify against its own variability before competing.
+            # Otherwise a noisy neighbor can suppress a valid lower-excess return.
+            strongest=int(ids[np.argmax(excess[ids])])
+            eligible=ids[excess[ids]>=self.baseline.threshold_db[ids]]
+            best=int(eligible[np.argmax(excess[eligible])]) if len(eligible) else strongest
             others=ids[abs(ids-best)>1]
             margin=float(excess[best]-max(excess[others])) if len(others) else None
-            out.update(candidate_bin=best,excess_db=float(excess[best]),threshold_db=float(self.baseline.threshold_db[best]),margin_db=margin,
+            out.update(strongest_excess_bin=strongest,qualified_bins=eligible.tolist(),
+                       candidate_bin=best,excess_db=float(excess[best]),threshold_db=float(self.baseline.threshold_db[best]),margin_db=margin,
                        power=p.tolist(),excess_profile_db=excess.tolist())
             if excess[best]<self.baseline.threshold_db[best]: self.clear()
             elif margin is not None and margin<self.config.margin_db:

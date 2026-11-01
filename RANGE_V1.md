@@ -1,3 +1,5 @@
+> **Selection-order fix:** [SHORT_RANGE_FINDINGS.md](SHORT_RANGE_FINDINGS.md) explains the new 50 cm evidence, before/after results and limits. Earlier audit results describe the original MVP.
+
 # Wavvy range-only MVP
 
 **Runnable experiment, not a validated distance instrument.** Saved close targets
@@ -90,10 +92,11 @@ a firmware start acknowledgment and identity readback remain future work.
 5. Search explicit bins1–4, roughly provisional 0.348–1.390 m. Bin0 and Nyquist
    are not accepted; all bins are still exported. This mask is a restricted
    experiment window, **not a verified minimum/maximum physical range**.
-6. Choose largest current excess; require its variability threshold and 2 dB
-   lead over nonadjacent bins in the mask. Adjacent Hann energy is not a separate
-   competing target. A stronger unstable candidate can conservatively block a
-   weaker one. This detector is single-return, not object identification.
+6. Qualify each bin against its own variability threshold, then choose the
+   largest current excess among qualifying bins. Require a 2 dB lead over all
+   nonadjacent bins in the mask. Adjacent Hann energy is not a separate competing
+   target. See SHORT_RANGE_FINDINGS.md for the fixed ranking-order defect.
+   This detector is single-return, not object identification.
 7. Require 3 consecutive valid frames at exactly that bin (nominal 0.2 s from
    first qualifying frame). No median history, hysteresis or distance smoothing.
    Absence, ambiguity, movement to another bin, sequence/time gap or corruption
@@ -159,7 +162,7 @@ profile change must be reviewed separately; flashing still needs explicit approv
 
 - `radar_min/core.py`: minimal typed config, spectrum, background, continuity, detector.
 - `radar_min/__main__.py`: capture/baseline/replay/live; reuses existing wire/storage.
-- `tests_min/test_range_min.py`: 11 offline unit/integration tests.
+- `tests_min/test_range_min.py`: 13 offline unit/integration tests.
 - `tools/compare_range_min.py`: reset-state before/after and separate-session stress.
 - `tools/audit_range_baseline.py`: original inventory/register/historical replay audit;
   accepts original repository and a new output directory. Requires its local `shafaa`
