@@ -1,0 +1,317 @@
+[
+  {
+    "recording": "recordings/hpf350-a-empty-before",
+    "label_m": null,
+    "metrics": {
+      "frames": 71,
+      "reported": 0,
+      "misses": 71,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-30cm",
+    "label_m": 0.3,
+    "metrics": {
+      "frames": 101,
+      "reported": 23,
+      "misses": 78,
+      "adjacent_pairs": 15,
+      "jumps_over_20cm": 0,
+      "median_cm": 32.0,
+      "mae_cm": 2.217391304347826,
+      "p95_error_cm": 3.9999999999999982,
+      "within_2cm": 10,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 29,
+      "misses": 72,
+      "adjacent_pairs": 19,
+      "jumps_over_20cm": 0,
+      "median_cm": 35.5,
+      "mae_cm": 4.396551724137936,
+      "p95_error_cm": 6.500000000000005,
+      "within_2cm": 1,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm-repeat",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 37,
+      "misses": 64,
+      "adjacent_pairs": 27,
+      "jumps_over_20cm": 0,
+      "median_cm": 35.5,
+      "mae_cm": 4.594594594594599,
+      "p95_error_cm": 8.000000000000002,
+      "within_2cm": 1,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-50cm",
+    "label_m": 0.5,
+    "metrics": {
+      "frames": 101,
+      "reported": 31,
+      "misses": 70,
+      "adjacent_pairs": 22,
+      "jumps_over_20cm": 0,
+      "median_cm": 54.0,
+      "mae_cm": 3.887096774193551,
+      "p95_error_cm": 5.500000000000005,
+      "within_2cm": 1,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-empty-after",
+    "label_m": null,
+    "metrics": {
+      "frames": 101,
+      "reported": 0,
+      "misses": 101,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-before",
+    "label_m": null,
+    "metrics": {
+      "frames": 71,
+      "reported": 0,
+      "misses": 71,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-30cm",
+    "label_m": 0.3,
+    "metrics": {
+      "frames": 101,
+      "reported": 48,
+      "misses": 53,
+      "adjacent_pairs": 38,
+      "jumps_over_20cm": 0,
+      "median_cm": 29.5,
+      "mae_cm": 0.968749999999999,
+      "p95_error_cm": 2.0000000000000018,
+      "within_2cm": 44,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 33,
+      "misses": 68,
+      "adjacent_pairs": 25,
+      "jumps_over_20cm": 0,
+      "median_cm": 40.5,
+      "mae_cm": 1.9848484848484858,
+      "p95_error_cm": 3.9999999999999964,
+      "within_2cm": 16,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm-repeat",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 17,
+      "misses": 84,
+      "adjacent_pairs": 12,
+      "jumps_over_20cm": 0,
+      "median_cm": 40.0,
+      "mae_cm": 1.4117647058823541,
+      "p95_error_cm": 3.600000000000003,
+      "within_2cm": 12,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-50cm",
+    "label_m": 0.5,
+    "metrics": {
+      "frames": 101,
+      "reported": 18,
+      "misses": 83,
+      "adjacent_pairs": 12,
+      "jumps_over_20cm": 0,
+      "median_cm": 49.5,
+      "mae_cm": 0.5833333333333339,
+      "p95_error_cm": 1.0750000000000002,
+      "within_2cm": 18,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-after",
+    "label_m": null,
+    "metrics": {
+      "frames": 101,
+      "reported": 0,
+      "misses": 101,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-before",
+    "label_m": null,
+    "metrics": {
+      "frames": 71,
+      "reported": 0,
+      "misses": 71,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-30cm",
+    "label_m": 0.3,
+    "metrics": {
+      "frames": 101,
+      "reported": 49,
+      "misses": 52,
+      "adjacent_pairs": 42,
+      "jumps_over_20cm": 0,
+      "median_cm": 30.5,
+      "mae_cm": 1.6326530612244896,
+      "p95_error_cm": 4.0999999999999925,
+      "within_2cm": 34,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 55,
+      "misses": 46,
+      "adjacent_pairs": 47,
+      "jumps_over_20cm": 0,
+      "median_cm": 41.0,
+      "mae_cm": 1.090909090909092,
+      "p95_error_cm": 2.0000000000000018,
+      "within_2cm": 46,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm-repeat",
+    "label_m": 0.4,
+    "metrics": {
+      "frames": 101,
+      "reported": 46,
+      "misses": 55,
+      "adjacent_pairs": 41,
+      "jumps_over_20cm": 0,
+      "median_cm": 40.0,
+      "mae_cm": 0.9456521739130443,
+      "p95_error_cm": 2.375000000000002,
+      "within_2cm": 38,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-50cm",
+    "label_m": 0.5,
+    "metrics": {
+      "frames": 101,
+      "reported": 57,
+      "misses": 44,
+      "adjacent_pairs": 50,
+      "jumps_over_20cm": 0,
+      "median_cm": 48.5,
+      "mae_cm": 2.0175438596491246,
+      "p95_error_cm": 5.000000000000004,
+      "within_2cm": 29,
+      "errors_over_10cm": 0
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-after",
+    "label_m": null,
+    "metrics": {
+      "frames": 101,
+      "reported": 0,
+      "misses": 101,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": null,
+      "false_detections": 0
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-003",
+    "label_m": null,
+    "metrics": {
+      "frames": 208,
+      "reported": 1,
+      "misses": 207,
+      "adjacent_pairs": 0,
+      "jumps_over_20cm": 0,
+      "median_cm": 131.5,
+      "false_detections": 1
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-004",
+    "label_m": 0.3,
+    "metrics": {
+      "frames": 207,
+      "reported": 116,
+      "misses": 91,
+      "adjacent_pairs": 95,
+      "jumps_over_20cm": 0,
+      "median_cm": 25.5,
+      "mae_cm": 5.715517241379308,
+      "p95_error_cm": 13.5,
+      "within_2cm": 22,
+      "errors_over_10cm": 16
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-005",
+    "label_m": 0.5,
+    "metrics": {
+      "frames": 206,
+      "reported": 141,
+      "misses": 65,
+      "adjacent_pairs": 124,
+      "jumps_over_20cm": 4,
+      "median_cm": 49.0,
+      "mae_cm": 3.1950354609929095,
+      "p95_error_cm": 13.5,
+      "within_2cm": 72,
+      "errors_over_10cm": 9
+    }
+  }
+]

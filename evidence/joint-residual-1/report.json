@@ -1,0 +1,317 @@
+[
+  {
+    "recording": "recordings/hpf350-a-30cm",
+    "frames": 23,
+    "median_residual_fraction": 0.42080555449549123,
+    "median_rx_residual_fraction": [
+      0.46019084176361974,
+      0.45655230561080096,
+      0.33441543646897814
+    ],
+    "median_rx_residual_peak_m": [
+      2.1289609336231883,
+      1.868271839710145,
+      2.0637886601449273
+    ],
+    "median_rx_near_power_fraction": [
+      0.09184398206305405,
+      0.2936154163467909,
+      0.2400435201473769
+    ],
+    "median_coherent_residual_fraction": 0.9926467987551557
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm",
+    "frames": 29,
+    "median_residual_fraction": 0.43575121245673093,
+    "median_rx_residual_fraction": [
+      0.4245064077156765,
+      0.4566886260276466,
+      0.4298962396699931
+    ],
+    "median_rx_residual_peak_m": [
+      2.020340477826087,
+      2.911028215362319,
+      2.1506850247826086
+    ],
+    "median_rx_near_power_fraction": [
+      0.12835088303980985,
+      0.1650807075403464,
+      0.06375487239816352
+    ],
+    "median_coherent_residual_fraction": 0.9927665136686362
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm-repeat",
+    "frames": 37,
+    "median_residual_fraction": 0.428307811637773,
+    "median_rx_residual_fraction": [
+      0.4177191016335776,
+      0.45097237161868386,
+      0.4130341663606375
+    ],
+    "median_rx_residual_peak_m": [
+      2.824131850724638,
+      2.8893041242028987,
+      2.107236842463768
+    ],
+    "median_rx_near_power_fraction": [
+      0.13575393839928684,
+      0.1657911931277529,
+      0.03233382552812111
+    ],
+    "median_coherent_residual_fraction": 0.9924294936699767
+  },
+  {
+    "recording": "recordings/hpf350-a-50cm",
+    "frames": 31,
+    "median_residual_fraction": 0.35804245229000153,
+    "median_rx_residual_fraction": [
+      0.4606823227582641,
+      0.30363723279538013,
+      0.2747363265077026
+    ],
+    "median_rx_residual_peak_m": [
+      2.107236842463768,
+      1.7813754750724637,
+      2.042064568985507
+    ],
+    "median_rx_near_power_fraction": [
+      0.17039225591349041,
+      0.2252669905418009,
+      0.26689604262318845
+    ],
+    "median_coherent_residual_fraction": 0.988900661569421
+  },
+  {
+    "recording": "recordings/hpf100-a-30cm",
+    "frames": 48,
+    "median_residual_fraction": 0.09915046308863065,
+    "median_rx_residual_fraction": [
+      0.10115308102645687,
+      0.07634214150464277,
+      0.11148259034252272
+    ],
+    "median_rx_residual_peak_m": [
+      0.977584102173913,
+      0.9341359198550725,
+      0.7820672817391304
+    ],
+    "median_rx_near_power_fraction": [
+      0.6889745837414544,
+      0.6341321568139207,
+      0.6380752273822241
+    ],
+    "median_coherent_residual_fraction": 0.9807758908925743
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm",
+    "frames": 33,
+    "median_residual_fraction": 0.1245874791880841,
+    "median_rx_residual_fraction": [
+      0.13893610382721952,
+      0.11834590152631842,
+      0.10806739803925196
+    ],
+    "median_rx_residual_peak_m": [
+      1.2165491049275363,
+      1.1079286491304348,
+      1.2599972872463767
+    ],
+    "median_rx_near_power_fraction": [
+      0.5302178709397717,
+      0.5823581245211136,
+      0.5323188250092762
+    ],
+    "median_coherent_residual_fraction": 0.9787754809028812
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm-repeat",
+    "frames": 17,
+    "median_residual_fraction": 0.15779650604724751,
+    "median_rx_residual_fraction": [
+      0.21640415425478268,
+      0.13993559770887506,
+      0.13905836785112635
+    ],
+    "median_rx_residual_peak_m": [
+      1.0862045579710145,
+      0.9993081933333333,
+      1.2165491049275363
+    ],
+    "median_rx_near_power_fraction": [
+      0.5755599372297177,
+      0.5686605767024512,
+      0.6306105091101452
+    ],
+    "median_coherent_residual_fraction": 0.9838825575176056
+  },
+  {
+    "recording": "recordings/hpf100-a-50cm",
+    "frames": 18,
+    "median_residual_fraction": 0.10126799850023888,
+    "median_rx_residual_fraction": [
+      0.15320627301888934,
+      0.07681274991963266,
+      0.08987689119777298
+    ],
+    "median_rx_residual_peak_m": [
+      1.2925834239855072,
+      0.9232738742753623,
+      1.1731009226086957
+    ],
+    "median_rx_near_power_fraction": [
+      0.5010716526145892,
+      0.5677921830042283,
+      0.4743514049104887
+    ],
+    "median_coherent_residual_fraction": 0.9690858128838977
+  },
+  {
+    "recording": "recordings/hpf350-b-30cm",
+    "frames": 49,
+    "median_residual_fraction": 0.24248947502852475,
+    "median_rx_residual_fraction": [
+      0.24750268238644565,
+      0.26875327530832016,
+      0.20752786046635155
+    ],
+    "median_rx_residual_peak_m": [
+      1.4555141076811595,
+      1.651030928115942,
+      0.9341359198550725
+    ],
+    "median_rx_near_power_fraction": [
+      0.4152799439014499,
+      0.3623188011515648,
+      0.5253795429434371
+    ],
+    "median_coherent_residual_fraction": 0.9737263041682612
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm",
+    "frames": 55,
+    "median_residual_fraction": 0.18634042838774076,
+    "median_rx_residual_fraction": [
+      0.16898994544930793,
+      0.18501469650154406,
+      0.2010755119141402
+    ],
+    "median_rx_residual_peak_m": [
+      0.9124118286956522,
+      0.8472395552173912,
+      1.3903418342028986
+    ],
+    "median_rx_near_power_fraction": [
+      0.5961995369993772,
+      0.5229595925906929,
+      0.393751652012355
+    ],
+    "median_coherent_residual_fraction": 0.9664798644580909
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm-repeat",
+    "frames": 46,
+    "median_residual_fraction": 0.2099079042303353,
+    "median_rx_residual_fraction": [
+      0.17842365144409456,
+      0.2138613705384496,
+      0.21449676021872263
+    ],
+    "median_rx_residual_peak_m": [
+      0.977584102173913,
+      0.8037913728985507,
+      1.2382731960869566
+    ],
+    "median_rx_near_power_fraction": [
+      0.6541032409036232,
+      0.6018696709556697,
+      0.5203973714343719
+    ],
+    "median_coherent_residual_fraction": 0.9698662333333394
+  },
+  {
+    "recording": "recordings/hpf350-b-50cm",
+    "frames": 57,
+    "median_residual_fraction": 0.2102304549992136,
+    "median_rx_residual_fraction": [
+      0.2550873065595101,
+      0.167176844085996,
+      0.2276954116289571
+    ],
+    "median_rx_residual_peak_m": [
+      1.2599972872463767,
+      1.7813754750724637,
+      1.2165491049275363
+    ],
+    "median_rx_near_power_fraction": [
+      0.43773270971347195,
+      0.37165630210624534,
+      0.6082958320687368
+    ],
+    "median_coherent_residual_fraction": 0.9627249288946128
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-003",
+    "frames": 1,
+    "median_residual_fraction": 0.3622913463636764,
+    "median_rx_residual_fraction": [
+      0.5553272407269766,
+      0.4069108363499702,
+      0.20511702100346962
+    ],
+    "median_rx_residual_peak_m": [
+      0.7168950082608696,
+      0.8689636463768116,
+      0.7820672817391304
+    ],
+    "median_rx_near_power_fraction": [
+      0.5388151014381276,
+      0.4986404485595093,
+      0.38605228049595053
+    ],
+    "median_coherent_residual_fraction": 0.8665801757019749
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-004",
+    "frames": 107,
+    "median_residual_fraction": 0.2779218390498687,
+    "median_rx_residual_fraction": [
+      0.2595322612122366,
+      0.3309778159737443,
+      0.2511337385579059
+    ],
+    "median_rx_residual_peak_m": [
+      1.0644804668115941,
+      1.129652740289855,
+      0.9993081933333333
+    ],
+    "median_rx_near_power_fraction": [
+      0.3677737423235301,
+      0.5263599295852777,
+      0.4448912874571492
+    ],
+    "median_coherent_residual_fraction": 0.9834703504336203
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-005",
+    "frames": 141,
+    "median_residual_fraction": 0.3766641782785634,
+    "median_rx_residual_fraction": [
+      0.3648122815495713,
+      0.4260319018519547,
+      0.32891064738258796
+    ],
+    "median_rx_residual_peak_m": [
+      1.2165491049275363,
+      0.9341359198550725,
+      1.2165491049275363
+    ],
+    "median_rx_near_power_fraction": [
+      0.584664049840558,
+      0.5976790605358027,
+      0.671764125673502
+    ],
+    "median_coherent_residual_fraction": 0.9805065615786723
+  }
+]
