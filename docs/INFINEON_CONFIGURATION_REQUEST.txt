@@ -1,0 +1,35 @@
+Subject: BGT60CUTR13AIP CSK: supported raw profile for stationary 0.15–0.55 m ranging
+
+We are using the BGT60CUTR13AIP Connected Sensor Kit for a senior design project.
+We need stationary-object range estimates at 0.15–0.55 m, with approximately
+1–2 cm accuracy if feasible, and reliable rejection of empty scenes. The target
+is a cardboard box. We can accept a low frame rate and a single target.
+
+Our starting profile is presence_detection_tracking.h, generated with
+ifx_smartar_hal v2.4.2. Source settings are 64 ADC samples at 5 MHz, three RX,
+nominal slope 33.69140625 THz/s, HPF1 350 kHz, 42 dB gain, and AAF 2 MHz.
+Our raw firmware overrides averaging to factor 1, captures 17 blocks of 64x3
+samples, then resets the sensor FSM; the host discards the first block.
+We have not independently verified full sequencer timing. We tried a 100 kHz
+HPF profile in controlled paired captures, without establishing robust accuracy.
+
+Serial CRC and sequence checks pass. Ideal synthetic tones are estimated
+correctly, but saved real captures show misses, biased fits and empty-scene drift.
+We are not assuming smoothing or an FFT interpolation change fixes the problem.
+
+Could you provide or identify:
+1. A supported generated register profile for raw ADC acquisition in this range,
+   with sufficient sampled bandwidth and a suitable analog filter/gain setup?
+   Please specify any achievable accuracy limits and target restrictions.
+2. Exact ADC timing, sample count, chirp slope, start/stop frequencies, averaging,
+   channel packing, valid chirp count, and required settling/discard behavior.
+3. Whether overriding averaging and resetting the FSM after 17 blocks is valid;
+   if not, the supported way to extract raw chirps without on-chip processing.
+4. The supported route for configuring this part, given the public moderator
+   response that the CMOS Configuration Tool is not publicly available.
+5. If this application is outside supported use, which existing profile or
+   sensor platform supports configurable raw near-range measurements?
+
+We can supply the exact register header, firmware diff, raw recordings and replay
+reports. No proprietary configuration tool or undocumented register guesses are
+required if a supported pre-generated profile and metadata are available.

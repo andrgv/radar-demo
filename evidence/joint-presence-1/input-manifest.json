@@ -1,0 +1,282 @@
+[
+  {
+    "path": "recordings/gui-20261101-144515-340260/empty-001/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/empty-001/frames.grd",
+    "bytes": 658000,
+    "sha256": "3f088e319596bbea8fd02754c33b1e9838e1113744133b31c309a73af76c0f31"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-003/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-003/frames.grd",
+    "bytes": 1368640,
+    "sha256": "03d4e11b0d861c09463bb9854d2c99d8655f3e7d8f02e633705106478a0921f5"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-004/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-004/frames.grd",
+    "bytes": 1362060,
+    "sha256": "aa7d761151946dff9422127bbc0a0a044b2d04dcdaf13d665763c016dcddd44c"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-005/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-144515-340260/live-005/frames.grd",
+    "bytes": 1355480,
+    "sha256": "e7041ebd55a55df7b9cfe8b7f3bf97405691114da47858c40e50aecbc9a17079"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/empty-001/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/empty-001/frames.grd",
+    "bytes": 664580,
+    "sha256": "8725674e54f63ee9bd9024c4492922e7aa38692c5384538f609c77934ccda5c4"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-002/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-002/frames.grd",
+    "bytes": 1375220,
+    "sha256": "86949665d8fa48a559d37d07537a6f8740e70e20c68ca1788f34fb7f1d03cd6c"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-003/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-003/frames.grd",
+    "bytes": 1408120,
+    "sha256": "a2bfce02404455049895be3115e851e137472f21712bac777e21c648723ec772"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-004/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-004/frames.grd",
+    "bytes": 1487080,
+    "sha256": "b80a0885d97d0958723333551c5e7c8f64bb840ba0adca51fe12b0d010a17b61"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-005/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-005/frames.grd",
+    "bytes": 1408120,
+    "sha256": "0e20a8f59f02abd6135a7980ab23beba10629d25e4800da334362d5b6efd98ed"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-006/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/gui-20261101-153737-539230/live-006/frames.grd",
+    "bytes": 1427860,
+    "sha256": "f800306b24faac173d3ba743c69376fbc12bcf8bf97a96ba34d0e80554666d06"
+  },
+  {
+    "path": "recordings/hpf100-a-30cm/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-30cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "5f8f382487970447f3d20018dd35d6d24f8de5fb31af955f174188edf0934853"
+  },
+  {
+    "path": "recordings/hpf100-a-40cm/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-40cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "9c101299bcc9653b76513877979fd03657d6b290d3df99d3f671fe56fce5b280"
+  },
+  {
+    "path": "recordings/hpf100-a-40cm-repeat/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-40cm-repeat/frames.grd",
+    "bytes": 664580,
+    "sha256": "dc29cfe3d52e8b8e0614fc6bc6f251c9adc68b39d899f0f5e363c5c49adb8f89"
+  },
+  {
+    "path": "recordings/hpf100-a-50cm/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-50cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "e209055d71104027788aa1287f937e4fc0233cb8f5a158547f2c92c9807cefbd"
+  },
+  {
+    "path": "recordings/hpf100-a-empty-after/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-empty-after/frames.grd",
+    "bytes": 664580,
+    "sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34"
+  },
+  {
+    "path": "recordings/hpf100-a-empty-before/config.json",
+    "bytes": 329,
+    "sha256": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14"
+  },
+  {
+    "path": "recordings/hpf100-a-empty-before/frames.grd",
+    "bytes": 664580,
+    "sha256": "7d541e9cd8f6f01cc282ae8a6faecc35b524090a453f03a00a7150a29bbd416a"
+  },
+  {
+    "path": "recordings/hpf350-a-30cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-30cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "80be81bf707264d3c7947651f75f007ad79b17f469db50b955d559385e8968b9"
+  },
+  {
+    "path": "recordings/hpf350-a-40cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-40cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "98e3665474b86f95aea915880a846558ff34f02b4274babbf09e98118356a9f6"
+  },
+  {
+    "path": "recordings/hpf350-a-40cm-repeat/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-40cm-repeat/frames.grd",
+    "bytes": 664580,
+    "sha256": "3187d01a6fe50e336fbc0d58275cf219eccf2ce8006c902f184d77b51d49388a"
+  },
+  {
+    "path": "recordings/hpf350-a-50cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-50cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "10bf03f3f435fc2215c939b9638d4fa190b54539b902d69c358c83ac6f8440f7"
+  },
+  {
+    "path": "recordings/hpf350-a-empty-after/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-empty-after/frames.grd",
+    "bytes": 664580,
+    "sha256": "a12b98fc6bee6bc413a886b06eacd584b558fb6cb9e7b73f700955b8d8ea4a13"
+  },
+  {
+    "path": "recordings/hpf350-a-empty-before/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-a-empty-before/frames.grd",
+    "bytes": 664580,
+    "sha256": "a1d314376a295ec7c0845c3278e4d3eb100524187e11d79bfd7bdd59adfbc9a5"
+  },
+  {
+    "path": "recordings/hpf350-b-30cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-30cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689"
+  },
+  {
+    "path": "recordings/hpf350-b-40cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-40cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "231db1f07daa8c85011fc2a5dbe05555a4456c33afe47997e1bfdf56e78acb99"
+  },
+  {
+    "path": "recordings/hpf350-b-40cm-repeat/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-40cm-repeat/frames.grd",
+    "bytes": 664580,
+    "sha256": "2e2a43e952fa886cf09f993d8045ec99d373caaa79f8fa2197c96351693bc1c2"
+  },
+  {
+    "path": "recordings/hpf350-b-50cm/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-50cm/frames.grd",
+    "bytes": 664580,
+    "sha256": "2c61ac6d504822c82a0976b07448432231667e09f52614201a842a429fe21324"
+  },
+  {
+    "path": "recordings/hpf350-b-empty-after/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-empty-after/frames.grd",
+    "bytes": 664580,
+    "sha256": "f0adffe3aca57151aa7ad26c81f9a2d6c03e4040a35ce73d63f73eff14929abd"
+  },
+  {
+    "path": "recordings/hpf350-b-empty-before/config.json",
+    "bytes": 329,
+    "sha256": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6"
+  },
+  {
+    "path": "recordings/hpf350-b-empty-before/frames.grd",
+    "bytes": 664580,
+    "sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0"
+  }
+]
