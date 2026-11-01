@@ -1,5 +1,15 @@
 # Built HPF pair and hardware experiment status
 
+**Latest state:** The 350-a control series is complete (empty, 30/50/40 cm,
+untouched 40 cm repeat, empty-after). Its separate empty-after has 0/101 false
+detections; earlier unused empty frames had 0/71. Individual target errors and
+misses are retained in `evidence/hpf-pair-2/target-350-a-*.json`.
+The authorized 100 kHz image has now been programmed and verified. Its startup
+check returned 30 valid frames, profile 0x33514801 / flags 7, no transport/device
+errors or ADC container rails. Evidence: `evidence/hpf-pair-2/flash-100-a/`.
+Next: fresh 100-a empty reference and target series; then the authorized return
+to 350. The startup check is not calibration or accuracy evidence.
+
 **Update November 1:** User explicitly authorized the 350 -> 100 -> 350 flash
 sequence. The reviewed HPF350 image was programmed, verified and reset on probe
 170D0E8300023400 / CY8C624AFNI-S2D43. A three-second startup check produced 30

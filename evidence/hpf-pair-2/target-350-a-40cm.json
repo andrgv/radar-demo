@@ -1,0 +1,59 @@
+{
+  "recording": "recordings/hpf350-a-40cm",
+  "measured_distance_m": 0.4,
+  "raw_sha256": "98e3665474b86f95aea915880a846558ff34f02b4274babbf09e98118356a9f6",
+  "frames": 101,
+  "native_detections": 29,
+  "reasons": {
+    "checking_persistence": 53,
+    "ambiguous_separate_peak": 19,
+    "spectral_change_uncalibrated": 29
+  },
+  "joint_fit": {
+    "valid_fits": 101,
+    "boundary_fits": 0,
+    "range_p05_median_p95_m": [
+      0.3126506591130174,
+      0.3458580301432924,
+      0.3650474208737963
+    ],
+    "all_frame_errors": {
+      "frames": 101,
+      "mae_cm": 5.694922019684263,
+      "bias_cm": -5.694922019684263,
+      "within_1cm": 0.0
+    },
+    "gated_errors": {
+      "frames": 29,
+      "mae_cm": 5.994171654652198,
+      "bias_cm": -5.994171654652198,
+      "within_1cm": 0.0
+    },
+    "residual_fraction_median": 0.7558390115562615,
+    "near_optimal_width_median_m": 0.13
+  },
+  "fft_peak": {
+    "p05_median_p95_m": [
+      0.3693095497101449,
+      0.40732670923913045,
+      0.4562059143478261
+    ],
+    "mae_cm": 2.017633958853494
+  },
+  "adc_min": 28709,
+  "adc_max": 39585,
+  "container_rails": 0,
+  "capture_summary": {
+    "frames": 101,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "limits": "Single capture; nominal range conversion, no calibration or detector changes. Both estimates include rejected frames."
+}
