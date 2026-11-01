@@ -1,0 +1,331 @@
+{
+  "cwm_revision": "a6d7a089d9a44814d4258b3593a28b9daffbd8ae",
+  "source_sha256": {
+    "config": "c157f05b661d5150e746009618cdeb11696c0cb8ca2135d1ce5250b9316a3571",
+    "processing": "0839051a95ffc88c3d7902be6a6a7d6f8c4d0bfe23c6c2ab700e3401adb453b6",
+    "tracking": "c0336d5f6b903153c384c483e1103d4bd777dfa31dc3f2964e3d5a5bcf7513f9",
+    "wavvy_range_filter": "03a5240d2b3d2fb6c70676d0302390534dc9e87e5fada0c9c11c71ed4db58f82"
+  },
+  "training_frames": 30,
+  "nominal_spacing_m": 0.34758545855072465,
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-003",
+      "label_cm": null,
+      "raw_sha256": "03d4e11b0d861c09463bb9854d2c99d8655f3e7d8f02e633705106478a0921f5",
+      "pipelines": {
+        "cwm_gui": {
+          "raw": {
+            "total": 208,
+            "reported": 1,
+            "availability": 0.004807692307692308,
+            "median_cm": 139.03418342028985,
+            "min_cm": 139.03418342028985,
+            "max_cm": 139.03418342028985,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 1
+          },
+          "smooth": {
+            "total": 208,
+            "reported": 1,
+            "availability": 0.004807692307692308,
+            "median_cm": 139.03418342028985,
+            "min_cm": 139.03418342028985,
+            "max_cm": 139.03418342028985,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 1
+          }
+        },
+        "current_gui": {
+          "raw": {
+            "total": 208,
+            "reported": 1,
+            "availability": 0.004807692307692308,
+            "median_cm": 117.01355480485608,
+            "min_cm": 117.01355480485608,
+            "max_cm": 117.01355480485608,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 1
+          }
+        },
+        "stationary_default": {
+          "raw": {
+            "total": 208,
+            "reported": 1,
+            "availability": 0.004807692307692308,
+            "median_cm": 35.4,
+            "min_cm": 35.4,
+            "max_cm": 35.4,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 1
+          },
+          "smooth": {
+            "total": 208,
+            "reported": 1,
+            "availability": 0.004807692307692308,
+            "median_cm": 35.4,
+            "min_cm": 35.4,
+            "max_cm": 35.4,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 1
+          }
+        },
+        "empty_difference": {
+          "raw": {
+            "total": 208,
+            "reported": 2,
+            "availability": 0.009615384615384616,
+            "median_cm": 57.045,
+            "min_cm": 55.15,
+            "max_cm": 58.940000000000005,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 2
+          },
+          "smooth": {
+            "total": 208,
+            "reported": 2,
+            "availability": 0.009615384615384616,
+            "median_cm": 57.045,
+            "min_cm": 55.15,
+            "max_cm": 58.940000000000005,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "false_positive_frames": 2
+          }
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-004",
+      "label_cm": 30,
+      "raw_sha256": "aa7d761151946dff9422127bbc0a0a044b2d04dcdaf13d665763c016dcddd44c",
+      "pipelines": {
+        "cwm_gui": {
+          "raw": {
+            "total": 207,
+            "reported": 169,
+            "availability": 0.8164251207729468,
+            "median_cm": 34.75854585507246,
+            "min_cm": 34.75854585507246,
+            "max_cm": 34.75854585507246,
+            "adjacent_reported_pairs": 163,
+            "jumps_over_20cm": 0,
+            "mae_cm": 4.758545855072462,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 207,
+            "reported": 169,
+            "availability": 0.8164251207729468,
+            "median_cm": 34.75854585507246,
+            "min_cm": 34.75854585507246,
+            "max_cm": 34.75854585507246,
+            "adjacent_reported_pairs": 163,
+            "jumps_over_20cm": 0,
+            "mae_cm": 4.758545855072462,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          }
+        },
+        "current_gui": {
+          "raw": {
+            "total": 207,
+            "reported": 133,
+            "availability": 0.642512077294686,
+            "median_cm": 15.799726951132943,
+            "min_cm": 15.0,
+            "max_cm": 88.32388345250736,
+            "adjacent_reported_pairs": 119,
+            "jumps_over_20cm": 1,
+            "mae_cm": 12.100223796770493,
+            "errors_over_10cm": 90,
+            "within_2cm": 2,
+            "within_2cm_over_all_frames": 0.00966183574879227
+          }
+        },
+        "stationary_default": {
+          "raw": {
+            "total": 207,
+            "reported": 2,
+            "availability": 0.00966183574879227,
+            "median_cm": 81.80000000000001,
+            "min_cm": 75.11,
+            "max_cm": 88.49000000000001,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 51.800000000000004,
+            "errors_over_10cm": 2,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 207,
+            "reported": 2,
+            "availability": 0.00966183574879227,
+            "median_cm": 81.80000000000001,
+            "min_cm": 75.11,
+            "max_cm": 88.49000000000001,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 51.800000000000004,
+            "errors_over_10cm": 2,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          }
+        },
+        "empty_difference": {
+          "raw": {
+            "total": 207,
+            "reported": 1,
+            "availability": 0.004830917874396135,
+            "median_cm": 70.67,
+            "min_cm": 70.67,
+            "max_cm": 70.67,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 40.67,
+            "errors_over_10cm": 1,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 207,
+            "reported": 1,
+            "availability": 0.004830917874396135,
+            "median_cm": 70.67,
+            "min_cm": 70.67,
+            "max_cm": 70.67,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 40.67,
+            "errors_over_10cm": 1,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          }
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-005",
+      "label_cm": 50,
+      "raw_sha256": "e7041ebd55a55df7b9cfe8b7f3bf97405691114da47858c40e50aecbc9a17079",
+      "pipelines": {
+        "cwm_gui": {
+          "raw": {
+            "total": 206,
+            "reported": 198,
+            "availability": 0.9611650485436893,
+            "median_cm": 34.75854585507246,
+            "min_cm": 34.75854585507246,
+            "max_cm": 69.51709171014492,
+            "adjacent_reported_pairs": 195,
+            "jumps_over_20cm": 10,
+            "mae_cm": 15.651742598155463,
+            "errors_over_10cm": 198,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 206,
+            "reported": 198,
+            "availability": 0.9611650485436893,
+            "median_cm": 34.758558019650835,
+            "min_cm": 34.75854585507246,
+            "max_cm": 69.45769300654287,
+            "adjacent_reported_pairs": 195,
+            "jumps_over_20cm": 0,
+            "mae_cm": 14.25266084590794,
+            "errors_over_10cm": 183,
+            "within_2cm": 1,
+            "within_2cm_over_all_frames": 0.0048543689320388345
+          }
+        },
+        "current_gui": {
+          "raw": {
+            "total": 206,
+            "reported": 141,
+            "availability": 0.6844660194174758,
+            "median_cm": 49.94516049139623,
+            "min_cm": 47.899827603796176,
+            "max_cm": 131.10054894552036,
+            "adjacent_reported_pairs": 124,
+            "jumps_over_20cm": 31,
+            "mae_cm": 16.944355175535723,
+            "errors_over_10cm": 36,
+            "within_2cm": 91,
+            "within_2cm_over_all_frames": 0.441747572815534
+          }
+        },
+        "stationary_default": {
+          "raw": {
+            "total": 206,
+            "reported": 2,
+            "availability": 0.009708737864077669,
+            "median_cm": 57.775,
+            "min_cm": 56.19,
+            "max_cm": 59.36,
+            "adjacent_reported_pairs": 1,
+            "jumps_over_20cm": 0,
+            "mae_cm": 7.774999999999999,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 206,
+            "reported": 2,
+            "availability": 0.009708737864077669,
+            "median_cm": 59.265,
+            "min_cm": 59.17,
+            "max_cm": 59.36,
+            "adjacent_reported_pairs": 1,
+            "jumps_over_20cm": 0,
+            "mae_cm": 9.265,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          }
+        },
+        "empty_difference": {
+          "raw": {
+            "total": 206,
+            "reported": 1,
+            "availability": 0.0048543689320388345,
+            "median_cm": 42.480000000000004,
+            "min_cm": 42.480000000000004,
+            "max_cm": 42.480000000000004,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 7.519999999999996,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          },
+          "smooth": {
+            "total": 206,
+            "reported": 1,
+            "availability": 0.0048543689320388345,
+            "median_cm": 42.480000000000004,
+            "min_cm": 42.480000000000004,
+            "max_cm": 42.480000000000004,
+            "adjacent_reported_pairs": 0,
+            "jumps_over_20cm": 0,
+            "mae_cm": 7.519999999999996,
+            "errors_over_10cm": 0,
+            "within_2cm": 0,
+            "within_2cm_over_all_frames": 0.0
+          }
+        }
+      }
+    }
+  ]
+}
