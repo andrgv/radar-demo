@@ -1,5 +1,13 @@
 # Built HPF pair and hardware experiment status
 
+**Experiment complete:** All 18 captures and all three authorized flashes are
+finished. Final separate empty holdout: 0/101 detections. Across all runs, the
+unchanged detector reports 0/516 unused empty frames. See
+`HPF_COMPARISON_RESULTS.md` for accuracy, misses, limitations and next work.
+The board remains on the reviewed HPF350 qualification image (profile 0x33514802).
+No additional capture or flash is requested now. Earlier entries below are the
+chronological build/experiment record, not outstanding steps.
+
 **Current hardware:** Returned to the reviewed HPF350 qualification image after
 completing the 100-a captures. The 100-a separate empty-after has 0/101 false
 detections (earlier unused empty frames: 0/71). The return flash verified and its
