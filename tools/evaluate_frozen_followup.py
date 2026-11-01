@@ -1,5 +1,6 @@
 """Evaluate four new captures without tuning the preselected fit-gate trial."""
 import hashlib
+import argparse
 import json
 from pathlib import Path
 import numpy as np
@@ -11,8 +12,14 @@ from tools.evaluate_association import measure
 
 
 def main():
-    root=Path('recordings/gui-20261101-155623-972019')
-    out=Path('evidence/frozen-fit-followup-1');out.mkdir(exist_ok=True)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--session',type=Path,default=Path('recordings/gui-20261101-155623-972019'))
+    parser.add_argument('--output',type=Path,default=Path('evidence/frozen-fit-followup-1'))
+    parser.add_argument('--sequence',choices=['repositioned-four','stationary-five'],default='repositioned-four')
+    args=parser.parse_args()
+    root=args.session
+    out=args.output;out.mkdir(exist_ok=True)
+    cases=[('live-006',.4,False),('live-007',.5,True),('live-008',.2,True),('live-009',None,False)] if args.sequence=='repositioned-four' else [('live-002',None,False),('live-003',.3,False),('live-004',.4,False),('live-005',.5,False),('live-006',None,False)]
     selection=Path('evidence/fit-gate-1/balanced-latest-tradeoff.json')
     thresholds=json.loads(selection.read_text())['thresholds']
     if thresholds != [2.,0.,999.,.1]:
@@ -26,8 +33,11 @@ def main():
         protocol='Prospective follow-up of locally selected trial; same acquisition session and background. All frames scored, no threshold tuning or trimming.',
         truth_limit='User states 40, 50, 20 cm, empty in order. Box shifted right during 50 and 20 cm; no synchronized pose or exact movement times. Their errors are relative to nominal placement, not certified instantaneous radial distance.',
         recordings=[])
+    if args.sequence=='stationary-five':
+        report['protocol']='New session with its own empty calibration; thresholds frozen from earlier trial. All frames scored without tuning or trimming.'
+        report['truth_limit']='User confirms completion of requested empty, 30 cm, 40 cm, 50 cm, empty sequence, instructed stationary. Distances are user placement labels, not synchronized instrument ground truth.'
     with (out/'frames.jsonl').open('w') as log:
-        for name,label,moved in [('live-006',.4,False),('live-007',.5,True),('live-008',.2,True),('live-009',None,False)]:
+        for name,label,moved in cases:
             p=root/name;_,fs,_=read_recording(p,c)
             saved=[json.loads(s) for s in (p/'readings.jsonl').read_text().splitlines()]
             if len(saved)!=len(fs):raise ValueError('Live log frame count mismatch')

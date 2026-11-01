@@ -1,0 +1,522 @@
+{
+  "thresholds": [
+    2.0,
+    0.0,
+    999.0,
+    0.1
+  ],
+  "median_window": 5,
+  "selection_sha256": "5c64d714342007e6e14e63d4b85727b5010e4530cbf482100f37e5ace2913afe",
+  "reference_sha256": "54e87ffb989811ca3e0e9de7fb6ebb09180aad0df69c2d3f09bf46a1d35b79d6",
+  "protocol": "New session with its own empty calibration; thresholds frozen from earlier trial. All frames scored without tuning or trimming.",
+  "truth_limit": "User confirms completion of requested empty, 30 cm, 40 cm, 50 cm, empty sequence, instructed stationary. Distances are user placement labels, not synchronized instrument ground truth.",
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-002",
+      "nominal_label_m": null,
+      "repositioned": false,
+      "raw_sha256": "30a67f869563521a14d054b4e6c0279d0c3e1320dfe2f66d17c1059769e05cb8",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 214,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1408121
+      },
+      "methods": {
+        "existing": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "trial_raw": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "trial_median5": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      },
+      "trial_percentiles_cm": null,
+      "chronological_quarters": [
+        {
+          "frames": 54,
+          "reported": 0,
+          "misses": 54,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 54,
+          "reported": 0,
+          "misses": 54,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 53,
+          "reported": 0,
+          "misses": 53,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 53,
+          "reported": 0,
+          "misses": 53,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-003",
+      "nominal_label_m": 0.3,
+      "repositioned": false,
+      "raw_sha256": "9e9d8a1f3ab1887d16bced47cf7ad46f69548b61ddefa6804aa4eb05d9a4ef59",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 295,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1941101
+      },
+      "methods": {
+        "existing": {
+          "frames": 295,
+          "reported": 0,
+          "misses": 295,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_raw": {
+          "frames": 295,
+          "reported": 0,
+          "misses": 295,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_median5": {
+          "frames": 295,
+          "reported": 0,
+          "misses": 295,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      },
+      "trial_percentiles_cm": null,
+      "chronological_quarters": [
+        {
+          "frames": 74,
+          "reported": 0,
+          "misses": 74,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 74,
+          "reported": 0,
+          "misses": 74,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 74,
+          "reported": 0,
+          "misses": 74,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 73,
+          "reported": 0,
+          "misses": 73,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-004",
+      "nominal_label_m": 0.4,
+      "repositioned": false,
+      "raw_sha256": "450d1b4b1d9e04ac8c30af0d8b60bb6db7ab95b862d7345b33160e3d9945633a",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 260,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 2592,
+        "received_bytes": 1713392
+      },
+      "methods": {
+        "existing": {
+          "frames": 260,
+          "reported": 0,
+          "misses": 260,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_raw": {
+          "frames": 260,
+          "reported": 0,
+          "misses": 260,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_median5": {
+          "frames": 260,
+          "reported": 0,
+          "misses": 260,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      },
+      "trial_percentiles_cm": null,
+      "chronological_quarters": [
+        {
+          "frames": 65,
+          "reported": 0,
+          "misses": 65,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 65,
+          "reported": 0,
+          "misses": 65,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 65,
+          "reported": 0,
+          "misses": 65,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 65,
+          "reported": 0,
+          "misses": 65,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-005",
+      "nominal_label_m": 0.5,
+      "repositioned": false,
+      "raw_sha256": "03370313bf15007f85d132977334b2a06174842ceaebc5337bdb9408d17f2f97",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 278,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 251,
+        "received_bytes": 1829491
+      },
+      "methods": {
+        "existing": {
+          "frames": 278,
+          "reported": 0,
+          "misses": 278,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_raw": {
+          "frames": 278,
+          "reported": 1,
+          "misses": 277,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": 56.43628865719935,
+          "mae_cm": 6.436288657199352,
+          "p95_error_cm": 6.436288657199352,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "trial_median5": {
+          "frames": 278,
+          "reported": 1,
+          "misses": 277,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": 58.679068211323596,
+          "mae_cm": 8.679068211323592,
+          "p95_error_cm": 8.679068211323592,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      },
+      "trial_percentiles_cm": [
+        58.679068211323596,
+        58.679068211323596,
+        58.679068211323596
+      ],
+      "chronological_quarters": [
+        {
+          "frames": 70,
+          "reported": 0,
+          "misses": 70,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 70,
+          "reported": 1,
+          "misses": 69,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": 58.679068211323596,
+          "mae_cm": 8.679068211323592,
+          "p95_error_cm": 8.679068211323592,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 69,
+          "reported": 0,
+          "misses": 69,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 69,
+          "reported": 0,
+          "misses": 69,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-006",
+      "nominal_label_m": null,
+      "repositioned": false,
+      "raw_sha256": "a8a481d7245527f8f07a070b69d1965ba29dbe8d0f79e9cd816fe7eb92028786",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 254,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 4229,
+        "received_bytes": 1675549
+      },
+      "methods": {
+        "existing": {
+          "frames": 254,
+          "reported": 0,
+          "misses": 254,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "trial_raw": {
+          "frames": 254,
+          "reported": 0,
+          "misses": 254,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "trial_median5": {
+          "frames": 254,
+          "reported": 0,
+          "misses": 254,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      },
+      "trial_percentiles_cm": null,
+      "chronological_quarters": [
+        {
+          "frames": 64,
+          "reported": 0,
+          "misses": 64,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 64,
+          "reported": 0,
+          "misses": 64,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 63,
+          "reported": 0,
+          "misses": 63,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 63,
+          "reported": 0,
+          "misses": 63,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      ]
+    }
+  ]
+}
