@@ -1,0 +1,95 @@
+[
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-003",
+    "label_cm": null,
+    "label_basis": "User followed requested order: empty, stationary 30 cm, stationary 50 cm; no per-frame external measurement",
+    "frames": 208,
+    "accepted": 1,
+    "accepted_fraction": 0.004807692307692308,
+    "accepted_range_min_median_max_cm": [
+      117.01355480485608,
+      117.01355480485608,
+      117.01355480485608
+    ],
+    "accepted_boundary_15cm": 0,
+    "accepted_over_75cm": 1,
+    "capture": {
+      "frames": 208,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "03d4e11b0d861c09463bb9854d2c99d8655f3e7d8f02e633705106478a0921f5",
+    "raw_replay_matches_live": true
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-004",
+    "label_cm": 30,
+    "label_basis": "User followed requested order: empty, stationary 30 cm, stationary 50 cm; no per-frame external measurement",
+    "frames": 207,
+    "accepted": 133,
+    "accepted_fraction": 0.642512077294686,
+    "accepted_range_min_median_max_cm": [
+      15.0,
+      15.799726951132943,
+      88.32388345250736
+    ],
+    "accepted_boundary_15cm": 58,
+    "accepted_over_75cm": 1,
+    "capture": {
+      "frames": 207,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "aa7d761151946dff9422127bbc0a0a044b2d04dcdaf13d665763c016dcddd44c",
+    "raw_replay_matches_live": true,
+    "accepted_mae_cm": 12.100223796770493,
+    "accepted_within_2cm": 2,
+    "all_frames_within_2cm": 4
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-005",
+    "label_cm": 50,
+    "label_basis": "User followed requested order: empty, stationary 30 cm, stationary 50 cm; no per-frame external measurement",
+    "frames": 206,
+    "accepted": 141,
+    "accepted_fraction": 0.6844660194174758,
+    "accepted_range_min_median_max_cm": [
+      47.899827603796176,
+      49.94516049139623,
+      131.10054894552036
+    ],
+    "accepted_boundary_15cm": 0,
+    "accepted_over_75cm": 34,
+    "capture": {
+      "frames": 206,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 6562
+    },
+    "raw_sha256": "e7041ebd55a55df7b9cfe8b7f3bf97405691114da47858c40e50aecbc9a17079",
+    "raw_replay_matches_live": true,
+    "accepted_mae_cm": 16.944355175535723,
+    "accepted_within_2cm": 91,
+    "all_frames_within_2cm": 109
+  }
+]
