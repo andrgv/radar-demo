@@ -106,6 +106,7 @@ def main(argv=None):
     fit.add_argument('recording');fit.add_argument('output');fit.add_argument('--count',type=int,default=30)
     rp=sub.add_parser('replay');rp.add_argument('recording');rp.add_argument('--baseline',required=True);rp.add_argument('--skip',type=int,default=0)
     gui=sub.add_parser('gui',help='Thin experimental range display with raw recording')
+    gui.add_argument('--estimator',choices=['fixed','associated'],default='fixed',help='Experimental distance estimator; associated ties local fits to detected bin support')
     gui.add_argument('--port',default='/dev/cu.usbmodem103');gui.add_argument('--config',required=True)
     gui.add_argument('--baseline');gui.add_argument('--replay');gui.add_argument('--snapshot')
     for command in ('capture','live'):

@@ -69,3 +69,10 @@ not proof of a physical sensor minimum/maximum range. Saved readings also includ
 fit_boundary and fit_near_optimal_width_m; the latter is not a confidence interval.
 This correction does not resolve wrong estimates away from the search limits.
 Restart an already open GUI to load code changes.
+
+Experimental associated-peak option: append `--estimator associated` to live or
+replay commands. It restricts fine-fit local maxima to the connected qualified
+spectral-bin group and rejects unresolved endpoints. It improves the saved 50 cm
+jumping capture, but 30 cm failures and an empty false detection remain. Default
+is still `fixed`; no smoothing is enabled. See evidence/associated-fit-3/README.md
+for before/after metrics and limitations. Neither mode is calibrated ranging.

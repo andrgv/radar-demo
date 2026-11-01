@@ -20,7 +20,8 @@ VALID_REASONS={'spectral_change_uncalibrated','checking_persistence','ambiguous_
 
 
 class Estimate:
-    def __init__(self,baseline):
+    def __init__(self,baseline,mode='fixed'):
+        self.mode=mode
         self.c=baseline.config
         path=Path(baseline.provenance['recording'])
         if hashlib.sha256((path/'frames.grd').read_bytes()).hexdigest()!=baseline.provenance['raw_sha256']:
@@ -28,6 +29,9 @@ class Estimate:
         _,frames,_=read_recording(path,self.c)
         self.reference=np.mean([traces(f,self.c) for f in frames[:baseline.training_frames]],axis=0)
         self.fitter=ToneFit(self.c)
+        if mode=='associated':
+            from .associated_fit import AssociatedFit
+            self.associated=AssociatedFit(self.c)
 
     def enrich(self,frame,reading):
         reading['experimental_range_m']=None
@@ -38,6 +42,12 @@ class Estimate:
             reading['fit_residual_fraction']=result['residual_fraction']
             reading['fit_boundary']=result['boundary']
             reading['fit_near_optimal_width_m']=result['near_optimal_width_m']
+            if self.mode=='associated':
+                reading['unrestricted_fit_range_m']=result['range_m']
+                associated=self.associated.fit_associated(traces(frame,self.c)-self.reference,reading['candidate_bin'],reading.get('qualified_bins'))
+                reading['experimental_range_m']=associated['range_m']
+                reading['experimental_estimator']='associated-local-tone-v3; uncalibrated'
+                reading['associated_fit']=associated
 
 
 def display_values(reading,fresh):
@@ -48,6 +58,8 @@ def display_values(reading,fresh):
     detail=(f'{candidate*100:.1f} cm · candidate only' if candidate is not None and not accepted else 'Experimental estimate · uncalibrated')
     if reading.get('fit_boundary'):
         detail += ' · fit at search limit; distance unresolved'
+    elif candidate is None and reading.get('associated_fit'):
+        detail='Distance unresolved · '+reading['associated_fit']['reason']
     strength=reading.get('excess_db')
     strength=f'{strength:+.1f} dB' if strength is not None else '—'
     return distance,detail,strength,reading.get('reason','No reading')
@@ -73,7 +85,7 @@ class Window(QtWidgets.QMainWindow):
         self.setWindowTitle('Wavvy · experimental range');self.resize(960,720)
         widget=QtWidgets.QWidget();layout=QtWidgets.QVBoxLayout(widget);self.setCentralWidget(widget)
         title=QtWidgets.QLabel('Wavvy — range experiment');title.setStyleSheet('font-size: 23px; font-weight: bold');layout.addWidget(title)
-        layout.addWidget(QtWidgets.QLabel(f'Profile {self.c.profile_id:#x} · {"REPLAY" if args.replay else args.port} · Not calibrated'))
+        layout.addWidget(QtWidgets.QLabel(f'Profile {self.c.profile_id:#x} · {"REPLAY" if args.replay else args.port} · {args.estimator} estimator · Not calibrated'))
         self.distance=QtWidgets.QLabel('—');self.distance.setStyleSheet('font-size: 48px; font-weight: bold');layout.addWidget(self.distance)
         self.detail=QtWidgets.QLabel('Capture an empty background, then start live.');layout.addWidget(self.detail)
         self.strength=QtWidgets.QLabel('Signal change vs empty: —');layout.addWidget(self.strength)
@@ -101,7 +113,7 @@ class Window(QtWidgets.QMainWindow):
         self.saved.setText('Replay: '+self.args.replay if self.args.replay else 'Recording: '+str(output.resolve()))
         def work():
             try:
-                estimator=Estimate(self.baseline) if not empty else None
+                estimator=Estimate(self.baseline,self.args.estimator) if not empty else None
                 def observe(frame,reading):
                     if estimator:estimator.enrich(frame,reading)
                     stamp=time.monotonic()
