@@ -1,0 +1,446 @@
+{
+  "thresholds": [
+    2.0,
+    0.0,
+    999.0,
+    0.1
+  ],
+  "median_window": 5,
+  "selection_sha256": "5c64d714342007e6e14e63d4b85727b5010e4530cbf482100f37e5ace2913afe",
+  "reference_sha256": "6365051e73684c4499a9352edb37cf8c58e18a791751548b4f7b33e15cbd1e21",
+  "protocol": "Prospective follow-up of locally selected trial; same acquisition session and background. All frames scored, no threshold tuning or trimming.",
+  "truth_limit": "User states 40, 50, 20 cm, empty in order. Box shifted right during 50 and 20 cm; no synchronized pose or exact movement times. Their errors are relative to nominal placement, not certified instantaneous radial distance.",
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-006",
+      "nominal_label_m": 0.4,
+      "repositioned": false,
+      "raw_sha256": "30613ecab2eaccef02a0492743c89392585669379b3d618a9e17336123389522",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 211,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1388381
+      },
+      "methods": {
+        "existing": {
+          "frames": 211,
+          "reported": 25,
+          "misses": 186,
+          "adjacent_pairs": 17,
+          "jumps_over_20cm": 0,
+          "median_cm": 43.127449717337726,
+          "mae_cm": 4.0862274857929375,
+          "p95_error_cm": 8.590582392654946,
+          "within_2cm": 7,
+          "errors_over_10cm": 0
+        },
+        "trial_raw": {
+          "frames": 211,
+          "reported": 193,
+          "misses": 18,
+          "adjacent_pairs": 190,
+          "jumps_over_20cm": 0,
+          "median_cm": 43.78910542030914,
+          "mae_cm": 4.070524078927518,
+          "p95_error_cm": 8.108839077017247,
+          "within_2cm": 50,
+          "errors_over_10cm": 2
+        },
+        "trial_median5": {
+          "frames": 211,
+          "reported": 193,
+          "misses": 18,
+          "adjacent_pairs": 190,
+          "jumps_over_20cm": 0,
+          "median_cm": 43.78910542030914,
+          "mae_cm": 3.7834480373554746,
+          "p95_error_cm": 7.777474218542302,
+          "within_2cm": 59,
+          "errors_over_10cm": 0
+        }
+      },
+      "trial_percentiles_cm": [
+        38.98705756131548,
+        43.78910542030914,
+        47.7774742185423
+      ],
+      "chronological_quarters": [
+        {
+          "frames": 53,
+          "reported": 47,
+          "misses": 6,
+          "adjacent_pairs": 46,
+          "jumps_over_20cm": 0,
+          "median_cm": 44.89249160151798,
+          "mae_cm": 3.809635712426073,
+          "p95_error_cm": 6.793718116572048,
+          "within_2cm": 14,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 53,
+          "reported": 48,
+          "misses": 5,
+          "adjacent_pairs": 46,
+          "jumps_over_20cm": 0,
+          "median_cm": 43.18581539699062,
+          "mae_cm": 3.2104043799533444,
+          "p95_error_cm": 6.277447010641818,
+          "within_2cm": 17,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 53,
+          "reported": 46,
+          "misses": 7,
+          "adjacent_pairs": 44,
+          "jumps_over_20cm": 0,
+          "median_cm": 43.17620230249758,
+          "mae_cm": 3.236267885895508,
+          "p95_error_cm": 6.184698928647898,
+          "within_2cm": 19,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 52,
+          "reported": 52,
+          "misses": 0,
+          "adjacent_pairs": 51,
+          "jumps_over_20cm": 0,
+          "median_cm": 44.64479507467568,
+          "mae_cm": 4.772785764165912,
+          "p95_error_cm": 8.809258653506719,
+          "within_2cm": 9,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-007",
+      "nominal_label_m": 0.5,
+      "repositioned": true,
+      "raw_sha256": "d7f1ffccec83d4da4a871ea0774167c1b2a36fbd9cc82d18867da518533d24d5",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 269,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 749,
+        "received_bytes": 1770769
+      },
+      "methods": {
+        "existing": {
+          "frames": 269,
+          "reported": 12,
+          "misses": 257,
+          "adjacent_pairs": 8,
+          "jumps_over_20cm": 0,
+          "median_cm": 83.2131170367616,
+          "mae_cm": 30.736948991707656,
+          "p95_error_cm": 37.9556264295362,
+          "within_2cm": 0,
+          "errors_over_10cm": 12
+        },
+        "trial_raw": {
+          "frames": 269,
+          "reported": 107,
+          "misses": 162,
+          "adjacent_pairs": 97,
+          "jumps_over_20cm": 0,
+          "median_cm": 48.26603907171917,
+          "mae_cm": 4.472859352472817,
+          "p95_error_cm": 26.77687532026124,
+          "within_2cm": 52,
+          "errors_over_10cm": 9
+        },
+        "trial_median5": {
+          "frames": 269,
+          "reported": 107,
+          "misses": 162,
+          "adjacent_pairs": 97,
+          "jumps_over_20cm": 0,
+          "median_cm": 48.26603907171917,
+          "mae_cm": 4.223143649581752,
+          "p95_error_cm": 26.374686294958945,
+          "within_2cm": 58,
+          "errors_over_10cm": 8
+        }
+      },
+      "trial_percentiles_cm": [
+        46.62240088361073,
+        48.26603907171917,
+        76.37468629495895
+      ],
+      "chronological_quarters": [
+        {
+          "frames": 68,
+          "reported": 6,
+          "misses": 62,
+          "adjacent_pairs": 4,
+          "jumps_over_20cm": 0,
+          "median_cm": 57.15019619942518,
+          "mae_cm": 5.0871439151393725,
+          "p95_error_cm": 7.42163248230521,
+          "within_2cm": 2,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 67,
+          "reported": 8,
+          "misses": 59,
+          "adjacent_pairs": 4,
+          "jumps_over_20cm": 0,
+          "median_cm": 81.49319242604693,
+          "mae_cm": 30.43872856074613,
+          "p95_error_cm": 34.730379948112706,
+          "within_2cm": 0,
+          "errors_over_10cm": 8
+        },
+        {
+          "frames": 67,
+          "reported": 33,
+          "misses": 34,
+          "adjacent_pairs": 30,
+          "jumps_over_20cm": 0,
+          "median_cm": 47.90731284591633,
+          "mae_cm": 1.9949676508515208,
+          "p95_error_cm": 3.3749951241373033,
+          "within_2cm": 15,
+          "errors_over_10cm": 0
+        },
+        {
+          "frames": 67,
+          "reported": 60,
+          "misses": 7,
+          "adjacent_pairs": 58,
+          "jumps_over_20cm": 0,
+          "median_cm": 48.22965152123908,
+          "mae_cm": 1.8668291008390328,
+          "p95_error_cm": 3.439049676939143,
+          "within_2cm": 41,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-008",
+      "nominal_label_m": 0.2,
+      "repositioned": true,
+      "raw_sha256": "cb1af2029438c31b4b27e9b35ceab2e21566de384448cc9e545fce8e281b36ec",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 211,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1388381
+      },
+      "methods": {
+        "existing": {
+          "frames": 211,
+          "reported": 11,
+          "misses": 200,
+          "adjacent_pairs": 9,
+          "jumps_over_20cm": 0,
+          "median_cm": 97.4736298477901,
+          "mae_cm": 79.29440907761098,
+          "p95_error_cm": 85.20734785328267,
+          "within_2cm": 0,
+          "errors_over_10cm": 11
+        },
+        "trial_raw": {
+          "frames": 211,
+          "reported": 49,
+          "misses": 162,
+          "adjacent_pairs": 39,
+          "jumps_over_20cm": 0,
+          "median_cm": 71.13773389591765,
+          "mae_cm": 43.61908319645973,
+          "p95_error_cm": 94.83910533108066,
+          "within_2cm": 6,
+          "errors_over_10cm": 29
+        },
+        "trial_median5": {
+          "frames": 211,
+          "reported": 49,
+          "misses": 162,
+          "adjacent_pairs": 39,
+          "jumps_over_20cm": 0,
+          "median_cm": 70.35341737691326,
+          "mae_cm": 43.652932244725065,
+          "p95_error_cm": 94.38376361023629,
+          "within_2cm": 6,
+          "errors_over_10cm": 31
+        }
+      },
+      "trial_percentiles_cm": [
+        20.813992138305895,
+        70.35341737691326,
+        114.38376361023629
+      ],
+      "chronological_quarters": [
+        {
+          "frames": 53,
+          "reported": 18,
+          "misses": 35,
+          "adjacent_pairs": 14,
+          "jumps_over_20cm": 0,
+          "median_cm": 112.27145085659438,
+          "mae_cm": 80.49227725866885,
+          "p95_error_cm": 95.0752910063169,
+          "within_2cm": 0,
+          "errors_over_10cm": 18
+        },
+        {
+          "frames": 53,
+          "reported": 8,
+          "misses": 45,
+          "adjacent_pairs": 5,
+          "jumps_over_20cm": 0,
+          "median_cm": 69.89177264432222,
+          "mae_cm": 40.33125140222166,
+          "p95_error_cm": 53.13922791015771,
+          "within_2cm": 0,
+          "errors_over_10cm": 6
+        },
+        {
+          "frames": 53,
+          "reported": 19,
+          "misses": 34,
+          "adjacent_pairs": 16,
+          "jumps_over_20cm": 0,
+          "median_cm": 28.356064016941794,
+          "mae_cm": 18.10029960466367,
+          "p95_error_cm": 81.25887885041324,
+          "within_2cm": 6,
+          "errors_over_10cm": 7
+        },
+        {
+          "frames": 52,
+          "reported": 4,
+          "misses": 48,
+          "adjacent_pairs": 3,
+          "jumps_over_20cm": 0,
+          "median_cm": 26.02249564749818,
+          "mae_cm": 5.894246407276489,
+          "p95_error_cm": 6.688867920942751,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-009",
+      "nominal_label_m": null,
+      "repositioned": false,
+      "raw_sha256": "82e0eb711facca73b4e096ec5fc42a1696006e6e1cdf6144d695a997454e95a2",
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 222,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1460761
+      },
+      "methods": {
+        "existing": {
+          "frames": 222,
+          "reported": 0,
+          "misses": 222,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "trial_raw": {
+          "frames": 222,
+          "reported": 12,
+          "misses": 210,
+          "adjacent_pairs": 10,
+          "jumps_over_20cm": 0,
+          "median_cm": 95.4553454258374,
+          "false_detections": 12
+        },
+        "trial_median5": {
+          "frames": 222,
+          "reported": 12,
+          "misses": 210,
+          "adjacent_pairs": 10,
+          "jumps_over_20cm": 0,
+          "median_cm": 96.06898731326147,
+          "false_detections": 12
+        }
+      },
+      "trial_percentiles_cm": [
+        95.34576077620252,
+        96.06898731326149,
+        123.43926902586975
+      ],
+      "chronological_quarters": [
+        {
+          "frames": 56,
+          "reported": 10,
+          "misses": 46,
+          "adjacent_pairs": 9,
+          "jumps_over_20cm": 0,
+          "median_cm": 95.37510057007087,
+          "false_detections": 10
+        },
+        {
+          "frames": 56,
+          "reported": 0,
+          "misses": 56,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 55,
+          "reported": 0,
+          "misses": 55,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        {
+          "frames": 55,
+          "reported": 2,
+          "misses": 53,
+          "adjacent_pairs": 1,
+          "jumps_over_20cm": 0,
+          "median_cm": 123.4631404309706,
+          "false_detections": 2
+        }
+      ]
+    }
+  ]
+}
