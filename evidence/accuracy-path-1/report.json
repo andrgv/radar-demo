@@ -1,0 +1,421 @@
+{
+  "elf_sha256": "e028bb762af9dcd1f7ab859455b4bab3791b693f3159d029287db73c328974be",
+  "hex_sha256": "06d8a1729f79d861a36e7c0a63997c2fffbfc7e015a60a08c1740cf98a49d123",
+  "register_pairs": 603,
+  "full_register_array_elf_offset": 43528,
+  "full_register_array_hex_addresses": [
+    "0x10009a08"
+  ],
+  "waveform": {
+    "system_clock_hz_from_profile": 80000000,
+    "adc_sr_div": 16,
+    "adc_decimation": 1,
+    "samples_from_sh_idx0": 64,
+    "sample_rate_hz_nominal": 5000000.0,
+    "slope_hz_s_nominal": 33691406250000.0,
+    "fft_bin_spacing_m_nominal": 0.34758545855072465,
+    "sample_span_resolution_m_nominal": 0.3531026880515298,
+    "independent_official_metadata_crosschecks": [
+      {
+        "ramp_step": 667,
+        "samples": 64,
+        "sample_rate_hz": 5000000,
+        "published_resolution_m": 0.36527864281192735,
+        "reproduced_resolution_m": 0.36527864281192735,
+        "absolute_difference_m": 0.0
+      },
+      {
+        "ramp_step": 770,
+        "samples": 256,
+        "sample_rate_hz": 5000000,
+        "published_resolution_m": 0.07817353628520499,
+        "reproduced_resolution_m": 0.07817353628520499,
+        "absolute_difference_m": 0.0
+      }
+    ],
+    "derivation_status": "Nominal source-derived model, corroborated by official configuration metadata; clock and sequencer timing not measured on hardware.",
+    "chirp_interval_s": null,
+    "carrier_hz": null
+  },
+  "rx_registers": {
+    "0x1010": "0xa1161",
+    "0x1014": "0xa1161",
+    "0x1018": "0xa1161"
+  },
+  "limits": "Binary array match is not device readback or proof of sequencer timing. Synthetic tones omit analog settling, multipath and noise. No changes to firmware or live processing.",
+  "synthetic_phase_sweep": [
+    {
+      "distance_m": 0.15,
+      "expected_beat_hz": 33714.73032520385,
+      "cycles_in_window": 0.43154854816260924,
+      "mean_removed": {
+        "min_median_max_m": [
+          0.15206863811594204,
+          0.32586136739130434,
+          0.34215443576086957
+        ]
+      },
+      "no_mean_removal": {
+        "min_median_max_m": [
+          0.15206863811594204,
+          0.15206863811594204,
+          0.34215443576086957
+        ]
+      }
+    },
+    {
+      "distance_m": 0.3,
+      "expected_beat_hz": 67429.4606504077,
+      "cycles_in_window": 0.8630970963252185,
+      "mean_removed": {
+        "min_median_max_m": [
+          0.15206863811594204,
+          0.3312923901811594,
+          0.3693095497101449
+        ]
+      },
+      "no_mean_removal": {
+        "min_median_max_m": [
+          0.15206863811594204,
+          0.28784420786231885,
+          0.3693095497101449
+        ]
+      }
+    },
+    {
+      "distance_m": 0.35,
+      "expected_beat_hz": 78667.7040921423,
+      "cycles_in_window": 1.0069466123794215,
+      "mean_removed": {
+        "min_median_max_m": [
+          0.2172409115942029,
+          0.34758545855072465,
+          0.38560261807971014
+        ]
+      },
+      "no_mean_removal": {
+        "min_median_max_m": [
+          0.22810295717391305,
+          0.3503009699456522,
+          0.38560261807971014
+        ]
+      }
+    },
+    {
+      "distance_m": 0.4,
+      "expected_beat_hz": 89905.94753387693,
+      "cycles_in_window": 1.1507961284336246,
+      "mean_removed": {
+        "min_median_max_m": [
+          0.28784420786231885,
+          0.3747405725,
+          0.40732670923913045
+        ]
+      },
+      "no_mean_removal": {
+        "min_median_max_m": [
+          0.38560261807971014,
+          0.40189568644927537,
+          0.40732670923913045
+        ]
+      }
+    },
+    {
+      "distance_m": 0.5,
+      "expected_beat_hz": 112382.43441734614,
+      "cycles_in_window": 1.4384951605420306,
+      "mean_removed": {
+        "min_median_max_m": [
+          0.4290508003985507,
+          0.46163693713768117,
+          0.4833610282971014
+        ]
+      },
+      "no_mean_removal": {
+        "min_median_max_m": [
+          0.4833610282971014,
+          0.49965409666666666,
+          0.5159471650362318
+        ]
+      }
+    }
+  ],
+  "recordings": [
+    {
+      "recording": "distance-sweep-1-empty-before",
+      "label_m": null,
+      "frames": 71,
+      "raw_sha256": "bc2e35cb109a941887a9926b6081cca4766c518da3289e64c74661a3307f90c4",
+      "peak_frequency_p05_median_p95_hz": [
+        34179.6875,
+        230712.89062499997,
+        324707.03125
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        1.0264633072826086,
+        1.4446520621014494
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.2253874457789855,
+        0.8418085324275363,
+        1.4012038797826087
+      ],
+      "mae_m": null,
+      "no_mean_removal_mae_m": null
+    },
+    {
+      "recording": "distance-sweep-1-30cm",
+      "label_m": 0.3,
+      "frames": 101,
+      "raw_sha256": "9b546b7141fb448d1f6d17b75401467a457a0f9d80b820d33910aaa177306184",
+      "peak_frequency_p05_median_p95_hz": [
+        56152.34375,
+        73242.1875,
+        85449.21875
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.24982704833333333,
+        0.32586136739130434,
+        0.38017159528985506
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.15206863811594204,
+        0.7712052361594203
+      ],
+      "mae_m": 0.04431094308544983,
+      "no_mean_removal_mae_m": 0.2053832100878892
+    },
+    {
+      "recording": "distance-sweep-1-40cm",
+      "label_m": 0.4,
+      "frames": 101,
+      "raw_sha256": "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699",
+      "peak_frequency_p05_median_p95_hz": [
+        73242.1875,
+        78125.0,
+        91552.734375
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.32586136739130434,
+        0.34758545855072465,
+        0.40732670923913045
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.15206863811594204,
+        0.15206863811594204
+      ],
+      "mae_m": 0.04945095969579568,
+      "no_mean_removal_mae_m": 0.24793136188405795
+    },
+    {
+      "recording": "distance-sweep-1-50cm",
+      "label_m": 0.5,
+      "frames": 101,
+      "raw_sha256": "31095462fa839c0978e969c60207a106e863a39d7e95ac1cb717b7efac868792",
+      "peak_frequency_p05_median_p95_hz": [
+        73242.1875,
+        95214.84375,
+        297851.5625
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.32586136739130434,
+        0.4236197776086956,
+        1.3251695607246377
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.7603431905797101,
+        0.8037913728985507,
+        1.3088764923550724
+      ],
+      "mae_m": 0.1969292761249821,
+      "no_mean_removal_mae_m": 0.4189183015429042
+    },
+    {
+      "recording": "distance-sweep-1-40cm-repeat",
+      "label_m": 0.4,
+      "frames": 101,
+      "raw_sha256": "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff",
+      "peak_frequency_p05_median_p95_hz": [
+        34179.6875,
+        56152.34375,
+        63476.5625
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.24982704833333333,
+        0.28241318507246377
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.15206863811594204,
+        0.15206863811594204
+      ],
+      "mae_m": 0.15974445717750035,
+      "no_mean_removal_mae_m": 0.24793136188405795
+    },
+    {
+      "recording": "distance-sweep-1-empty-after",
+      "label_m": null,
+      "frames": 101,
+      "raw_sha256": "5d4c96a88fdb258afe1784cdee7f97c1d4535bd594eec36923c59719defcad79",
+      "peak_frequency_p05_median_p95_hz": [
+        34179.6875,
+        277099.609375,
+        336914.0625
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        1.2328421732971016,
+        1.49896229
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.26068909391304346,
+        0.8526705780072463
+      ],
+      "mae_m": null,
+      "no_mean_removal_mae_m": null
+    },
+    {
+      "recording": "distance-sweep-2-empty-before",
+      "label_m": null,
+      "frames": 71,
+      "raw_sha256": "a9c152bf05a6039606d01d15ac4458b2c61be62cbcc5eafeacf3513b2760de41",
+      "peak_frequency_p05_median_p95_hz": [
+        145263.671875,
+        157470.703125,
+        321655.2734375
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.6462917119927536,
+        0.7006019398913044,
+        1.4310745051268117
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15478414951086955,
+        0.44534386876811594,
+        0.9232738742753623
+      ],
+      "mae_m": null,
+      "no_mean_removal_mae_m": null
+    },
+    {
+      "recording": "distance-sweep-2-30cm",
+      "label_m": 0.3,
+      "frames": 101,
+      "raw_sha256": "bb0be17653552ecb888b6c1475da7ff8c658ba1d7822517045d97b18d831a8be",
+      "peak_frequency_p05_median_p95_hz": [
+        36621.09375,
+        73242.1875,
+        144042.96875
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.16293068369565217,
+        0.32586136739130434,
+        0.6408606892028985
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.15206863811594204,
+        0.15206863811594204
+      ],
+      "mae_m": 0.13509187159635533,
+      "no_mean_removal_mae_m": 0.14723231934674988
+    },
+    {
+      "recording": "distance-sweep-2-40cm",
+      "label_m": 0.4,
+      "frames": 101,
+      "raw_sha256": "ae67cc5d5fd9e9aa93a4cad2a0c6ca47c9bcdabc922f5cdad87c7993daeddcdf",
+      "peak_frequency_p05_median_p95_hz": [
+        52490.234375,
+        65917.96875,
+        84228.515625
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.23353397996376812,
+        0.2932752306521739,
+        0.3747405725
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.22267193438405797,
+        0.5159471650362318
+      ],
+      "mae_m": 0.1081654627988234,
+      "no_mean_removal_mae_m": 0.1715226331424881
+    },
+    {
+      "recording": "distance-sweep-2-50cm",
+      "label_m": 0.5,
+      "frames": 101,
+      "raw_sha256": "0d320ffd8a0a95f7bd108b71e2496e485a3928c8730576144eb2fadc98f65af7",
+      "peak_frequency_p05_median_p95_hz": [
+        118408.203125,
+        131835.9375,
+        167236.328125
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.526809210615942,
+        0.5865504613043478,
+        0.7440501222101449
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.5213781878260869,
+        0.754912167789855,
+        0.7929293273188406
+      ],
+      "mae_m": 0.11377989646936437,
+      "no_mean_removal_mae_m": 0.22106288926567652
+    },
+    {
+      "recording": "distance-sweep-2-40cm-repeat",
+      "label_m": 0.4,
+      "frames": 101,
+      "raw_sha256": "ef5c05cc19125c1abeb4663ea62845bdd2db93551ef20540f1e2b02f3fddb5c5",
+      "peak_frequency_p05_median_p95_hz": [
+        43945.3125,
+        64697.265625,
+        85449.21875
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.1955168204347826,
+        0.28784420786231885,
+        0.38017159528985506
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.15206863811594204,
+        0.15206863811594204,
+        0.2118098888043478
+      ],
+      "mae_m": 0.11187069546599229,
+      "no_mean_removal_mae_m": 0.23965039644210073
+    },
+    {
+      "recording": "distance-sweep-2-empty-after",
+      "label_m": null,
+      "frames": 101,
+      "raw_sha256": "aef771bcfb26d98bf5f38dfe09fa60ac3d5d81c62c758c7c4f5c6564519fa07e",
+      "peak_frequency_p05_median_p95_hz": [
+        78125.0,
+        89111.328125,
+        312500.0
+      ],
+      "peak_range_p05_median_p95_m": [
+        0.34758545855072465,
+        0.3964646636594203,
+        1.3903418342028986
+      ],
+      "no_mean_removal_peak_range_p05_median_p95_m": [
+        0.5593953473550725,
+        0.8037913728985507,
+        1.4826692216304347
+      ],
+      "mae_m": null,
+      "no_mean_removal_mae_m": null
+    }
+  ]
+}
