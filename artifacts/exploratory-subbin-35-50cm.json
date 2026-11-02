@@ -1,0 +1,40 @@
+{
+  "warning": "Exploratory on already inspected captures. Grid density is not physical resolution. No range calibration or algorithm installed.",
+  "grid_spacing_m": 0.005431022789855073,
+  "native_spacing_m": 0.34758545855072465,
+  "captures": {
+    "target-35cm-v2-1": {
+      "reported_distance_m": 0.35,
+      "median_positive_power_change_peak_m": 0.3312923901811594,
+      "per_frame_peak_p05_median_p95_m": [
+        0.2932752306521739,
+        0.3312923901811594,
+        0.38017159528985506
+      ],
+      "max_absolute_native_vs_padded_power_difference": 5.820766091346741e-11,
+      "median_profile_peak_excess_db": 5.578426900443372
+    },
+    "target-50cm-v2-repeat-1": {
+      "reported_distance_m": 0.5,
+      "median_positive_power_change_peak_m": 0.44534386876811594,
+      "per_frame_peak_p05_median_p95_m": [
+        0.4236197776086956,
+        0.44534386876811594,
+        0.46163693713768117
+      ],
+      "max_absolute_native_vs_padded_power_difference": 1.7462298274040222e-10,
+      "median_profile_peak_excess_db": 5.765011627688301
+    },
+    "empty-after-35cm-v2-1": {
+      "reported_distance_m": null,
+      "median_positive_power_change_peak_m": 1.49896229,
+      "per_frame_peak_p05_median_p95_m": [
+        0.450774891557971,
+        1.4500830848913044,
+        1.49896229
+      ],
+      "max_absolute_native_vs_padded_power_difference": 3.4924596548080444e-10,
+      "median_profile_peak_excess_db": 1.2208619243708754
+    }
+  }
+}

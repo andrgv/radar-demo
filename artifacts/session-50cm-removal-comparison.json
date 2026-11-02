@@ -1,0 +1,49 @@
+{
+  "target-50cm-1": {
+    "frames": 302,
+    "detections": 104,
+    "bins": {
+      "1": 104
+    },
+    "reasons": {
+      "checking_persistence": 60,
+      "spectral_change_uncalibrated": 104,
+      "ambiguous_separate_peak": 3,
+      "no_candidate_above_noise": 135
+    },
+    "replay_detections": 104,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 4983
+    }
+  },
+  "empty-after-50cm-1": {
+    "frames": 302,
+    "detections": 0,
+    "bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 302
+    },
+    "replay_detections": 0,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 4785
+    }
+  }
+}

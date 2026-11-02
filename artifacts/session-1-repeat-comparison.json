@@ -1,0 +1,101 @@
+{
+  "target-1m-session-1": {
+    "frames": 302,
+    "detections": 90,
+    "bins": {
+      "4": 19,
+      "2": 71
+    },
+    "reasons": {
+      "checking_persistence": 33,
+      "no_candidate_above_noise": 164,
+      "spectral_change_uncalibrated": 90,
+      "ambiguous_separate_peak": 15
+    },
+    "replay_detections": 90,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 2309
+    },
+    "median_excess_db_bins1to4": [
+      -3.35620053614155,
+      2.5743669911091303,
+      1.3601842607863404,
+      2.224784006294662
+    ],
+    "first100_detections": 12,
+    "last100_detections": 53
+  },
+  "empty-after-1m-session-1": {
+    "frames": 302,
+    "detections": 0,
+    "bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 298,
+      "checking_persistence": 4
+    },
+    "replay_detections": 0,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 4370
+    },
+    "median_excess_db_bins1to4": [
+      -3.707866099031392,
+      -2.348487981832225,
+      -1.8556405002866185,
+      2.121589229133143
+    ],
+    "first100_detections": 0,
+    "last100_detections": 0
+  },
+  "target-1m-repeat-1": {
+    "frames": 302,
+    "detections": 59,
+    "bins": {
+      "4": 59
+    },
+    "reasons": {
+      "no_candidate_above_noise": 208,
+      "checking_persistence": 34,
+      "spectral_change_uncalibrated": 59,
+      "ambiguous_separate_peak": 1
+    },
+    "replay_detections": 59,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 5687
+    },
+    "median_excess_db_bins1to4": [
+      -3.470214370768396,
+      -0.17477300766582005,
+      2.2899345976608636,
+      3.5878569132249964
+    ],
+    "first100_detections": 14,
+    "last100_detections": 24
+  }
+}

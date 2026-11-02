@@ -1,0 +1,81 @@
+{
+  "user_reported_distance_m": 0.5,
+  "threshold_db_bins1to4": [
+    3.0,
+    11.696790132576194,
+    16.625075626912313,
+    4.807706908253465
+  ],
+  "empty-50cm-1": {
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "evaluated_frames": 71,
+    "detections": 0,
+    "detected_bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 71
+    },
+    "live_reasons": {
+      "raw_recorded": 101
+    },
+    "live_detections": 0,
+    "median_excess_db_bins1to4": [
+      0.2960376495234627,
+      -1.5591347634288155,
+      0.1829360196886327,
+      -0.575142087280696
+    ],
+    "first100_detections": 0,
+    "last100_detections": 0
+  },
+  "target-50cm-1": {
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 4983
+    },
+    "evaluated_frames": 302,
+    "detections": 104,
+    "detected_bins": {
+      "1": 104
+    },
+    "reasons": {
+      "checking_persistence": 60,
+      "spectral_change_uncalibrated": 104,
+      "ambiguous_separate_peak": 3,
+      "no_candidate_above_noise": 135
+    },
+    "live_reasons": {
+      "checking_persistence": 60,
+      "spectral_change_uncalibrated": 104,
+      "ambiguous_separate_peak": 3,
+      "no_candidate_above_noise": 135
+    },
+    "live_detections": 104,
+    "median_excess_db_bins1to4": [
+      5.017890038349421,
+      4.8768281574865355,
+      0.2959749570658943,
+      0.1331385692442879
+    ],
+    "first100_detections": 46,
+    "last100_detections": 19
+  }
+}

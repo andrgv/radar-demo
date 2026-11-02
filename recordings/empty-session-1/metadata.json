@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "created_unix_s": 1793553699.728769,
+  "label": "capture",
+  "session_id": "empty-session-1",
+  "scene_id": "unspecified",
+  "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+  "firmware_identity": "unknown; profile ID is not a firmware hash",
+  "freshness": "relative timing only; no firmware handshake",
+  "baseline_provenance": null
+}

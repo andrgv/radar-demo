@@ -1,0 +1,1 @@
+{"target_detected": false, "range_m": null, "reason": "serial_timeout", "serial": {"gaps": 0, "bad_crc": 0, "bad_headers": 0, "restarts": 0, "discarded_bytes": 0}}

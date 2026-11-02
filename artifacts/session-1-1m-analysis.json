@@ -1,0 +1,57 @@
+{
+  "reported_distance_m": 1.0,
+  "capture": {
+    "frames": 302,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 2309
+  },
+  "frames": 302,
+  "detected": 90,
+  "detected_bins": {
+    "4": 19,
+    "2": 71
+  },
+  "reasons": {
+    "checking_persistence": 33,
+    "no_candidate_above_noise": 164,
+    "spectral_change_uncalibrated": 90,
+    "ambiguous_separate_peak": 15
+  },
+  "replay_detected": 90,
+  "median_excess_db_bins1to4": [
+    -3.35620053614155,
+    2.5743669911091303,
+    1.3601842607863404,
+    2.224784006294662
+  ],
+  "threshold_db_bins1to4": [
+    3.0,
+    3.8028281763797533,
+    8.971259001455788,
+    4.194423844130161
+  ],
+  "first10_reasons": [
+    "checking_persistence",
+    "checking_persistence",
+    "no_candidate_above_noise",
+    "no_candidate_above_noise",
+    "checking_persistence",
+    "no_candidate_above_noise",
+    "no_candidate_above_noise",
+    "no_candidate_above_noise",
+    "no_candidate_above_noise",
+    "no_candidate_above_noise"
+  ],
+  "last100_bins": {
+    "null": 47,
+    "2": 53
+  },
+  "max_relative_timing_error_s": 0.23812108302963253
+}

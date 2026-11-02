@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "profile_id": 860964865,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 5000000.0,
+  "slope_hz_s": 33691406250000.0,
+  "discard_chirps": 1,
+  "frame_interval_s": 0.1,
+  "min_bin": 1,
+  "max_bin": 4,
+  "min_excess_db": 3.0,
+  "variability_multiplier": 6.0,
+  "margin_db": 2.0,
+  "confirmation_frames": 3
+}

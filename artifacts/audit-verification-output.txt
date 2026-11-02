@@ -1,0 +1,181 @@
+[
+  {
+    "path": "recordings/box_range_01/empty",
+    "frames": 61,
+    "span_s": 6.0,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161512.471793,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_01",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_01/near",
+    "frames": 60,
+    "span_s": 5.899999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161589.189135,
+      "label": "near",
+      "session_id": "near",
+      "scene_id": "box_range_01",
+      "measured_distance_m": 0.245,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_02/empty",
+    "frames": 61,
+    "span_s": 5.999999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161713.025227,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_02",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty",
+    "frames": 61,
+    "span_s": 5.999999,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161803.226336,
+      "label": "empty",
+      "session_id": "empty",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": null,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far",
+    "frames": 60,
+    "span_s": 5.900001,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161888.806496,
+      "label": "far",
+      "session_id": "far",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": 0.55,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near",
+    "frames": 61,
+    "span_s": 6.0,
+    "gaps": 0,
+    "restarts": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "tail_bytes": 0,
+    "profiles": [
+      861034497
+    ],
+    "device_errors": [
+      0
+    ],
+    "device_drops": [
+      0
+    ],
+    "metadata": {
+      "schema": 1,
+      "created_unix_s": 1793161829.493558,
+      "label": "near",
+      "session_id": "near",
+      "scene_id": "box_range_20261028_002954",
+      "measured_distance_m": 0.25,
+      "range_check": true,
+      "one_continuous_sensor_session": true
+    }
+  }
+]
+historical-report {'empty': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 20, '2': 6}, 'median_excess_db_at_dominant_bin': 4.11}, 'near': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 22}, 'median_excess_db_at_dominant_bin': 3.39}, 'far': {'dominant_confirmed_bin': 2, 'confirmed_frames_by_bin': {'1': 2, '2': 16}, 'median_excess_db_at_dominant_bin': 2.53}, 'dominant_bin_moves_outward': True}
+shafaa-replay {'empty': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 20, '2': 6}, 'median_excess_db_at_dominant_bin': 4.11}, 'near': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 22}, 'median_excess_db_at_dominant_bin': 3.39}, 'far': {'dominant_confirmed_bin': 2, 'confirmed_frames_by_bin': {'1': 2, '2': 16}, 'median_excess_db_at_dominant_bin': 2.53}, 'dominant_bin_moves_outward': True}
+cwm-replay {'empty': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 22, '2': 4}, 'median_excess_db_at_dominant_bin': 4.11}, 'near': {'dominant_confirmed_bin': 1, 'confirmed_frames_by_bin': {'1': 26}, 'median_excess_db_at_dominant_bin': 3.39}, 'far': {'dominant_confirmed_bin': 2, 'confirmed_frames_by_bin': {'1': 2, '2': 14}, 'median_excess_db_at_dominant_bin': 2.53}, 'dominant_bin_moves_outward': True}
+{'system_clock_hz_from_profile': 80000000, 'adc_sr_div': 16, 'adc_decimation': 1, 'samples_from_sh_idx0': 64, 'sample_rate_hz_nominal': 5000000.0, 'slope_hz_s_nominal': 33691406250000.0, 'fft_bin_spacing_m_nominal': 0.34758545855072465, 'sample_span_resolution_m_nominal': 0.3531026880515298, 'independent_official_metadata_crosschecks': [{'ramp_step': 667, 'samples': 64, 'sample_rate_hz': 5000000, 'published_resolution_m': 0.36527864281192735, 'reproduced_resolution_m': 0.36527864281192735, 'absolute_difference_m': 0.0}, {'ramp_step': 770, 'samples': 256, 'sample_rate_hz': 5000000, 'published_resolution_m': 0.07817353628520499, 'reproduced_resolution_m': 0.07817353628520499, 'absolute_difference_m': 0.0}], 'derivation_status': 'Nominal source-derived model, corroborated by official configuration metadata; clock and sequencer timing not measured on hardware.', 'chirp_interval_s': None, 'carrier_hz': None}
+[{'rx': 1, 'enabled': True, 'gain_db': 42, 'hpf1_hz': 350000, 'hpf2_bypass': False, 'aaf_hz': 2000000, 'hpf1_equivalent_range_m_nominal': 1.5571828543072463}, {'rx': 2, 'enabled': True, 'gain_db': 42, 'hpf1_hz': 350000, 'hpf2_bypass': False, 'aaf_hz': 2000000, 'hpf1_equivalent_range_m_nominal': 1.5571828543072463}, {'rx': 3, 'enabled': True, 'gain_db': 42, 'hpf1_hz': 350000, 'hpf2_bypass': False, 'aaf_hz': 2000000, 'hpf1_equivalent_range_m_nominal': 1.5571828543072463}]

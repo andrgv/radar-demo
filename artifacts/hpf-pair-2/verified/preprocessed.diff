@@ -1,0 +1,27 @@
+--- 350kHz preprocessed
+
++++ 100kHz preprocessed
+
+@@ -32980,7 +32980,7 @@
+
+ static int32_t qualification_set_hpf(void)
+ {
+     const uint32_t mask = 0x00000300u;
+-    const uint32_t selection = (350 == 100) ? 0u : 0x00000100u;
++    const uint32_t selection = (100 == 100) ? 0u : 0x00000100u;
+     for (uint16_t address = 0x1010;
+          address <= 0x1018; address += 4u) {
+         uint32_t original = 0, actual = 0;
+@@ -33052,9 +33052,9 @@
+
+     packet[2] = ((17u * 64u * 3u / 2u) * 4u);
+     packet[3] = sequence;
+     packet[4] = start;
+-    packet[5] = (0 ? 0x33515301u : ((350 == 100) ? 0x33514801u : 0x33514802u));
++    packet[5] = (0 ? 0x33515301u : ((100 == 100) ? 0x33514801u : 0x33514802u));
+     packet[6] = 17u | (64u << 16);
+-    packet[7] = 3u | (16u << 8) | ((3u | ((350 == 100) ? 4u : 0u)) << 16);
++    packet[7] = 3u | (16u << 8) | ((3u | ((100 == 100) ? 4u : 0u)) << 16);
+     packet[8] = dropped;
+     packet[9] = errors;
+     packet[10] = cyhal_timer_read(&timer) - start;

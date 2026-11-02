@@ -1,0 +1,61 @@
+{
+  "profile_id": 861034497,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 5000000,
+  "slope_hz_s": 33691406250000,
+  "carrier_hz": 60000000000,
+  "chirp_interval_s": 0.001,
+  "frame_interval_s": 0.1,
+  "geometry_wavelengths": [
+    [
+      0,
+      0
+    ],
+    [
+      0.5,
+      0
+    ],
+    [
+      0,
+      0.5
+    ]
+  ],
+  "geometry_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2.35
+    ],
+    [
+      -2.35,
+      0
+    ]
+  ],
+  "geometry_label": "Nominal portrait antenna-face coordinates; mounting and factory phase calibration unverified",
+  "mount_roll_deg": 0,
+  "gains_real": [
+    1,
+    1,
+    1
+  ],
+  "gains_imag": [
+    0,
+    0,
+    0
+  ],
+  "range_offset_m": 0,
+  "range_scale": 1,
+  "verified": false,
+  "calibration_id": "source-derived-range-only; carrier-and-chirp-timing-placeholder; angles-unvalidated",
+  "discard_chirps": 1,
+  "snr_db": 12,
+  "angle_matrix_real": null,
+  "angle_matrix_imag": null,
+  "probe_search_bins": 0,
+  "chirp_timing_verified": false,
+  "carrier_frequency_verified": false
+}

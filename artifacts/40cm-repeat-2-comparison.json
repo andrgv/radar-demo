@@ -1,0 +1,114 @@
+{
+  "40cm": {
+    "frames": 101,
+    "detections": 93,
+    "bins": {
+      "1": 93
+    },
+    "reasons": {
+      "checking_persistence": 5,
+      "ambiguous_separate_peak": 3,
+      "spectral_change_uncalibrated": 93
+    },
+    "ungated_peak_p05_median_p95_cm": [
+      32.58613673913043,
+      34.75854585507246,
+      40.73267092391305
+    ],
+    "median_profile_peak_cm": 35.30164813405797,
+    "accepted_peak_p05_median_p95_cm": [
+      32.58613673913043,
+      34.75854585507246,
+      40.29818910072463
+    ],
+    "lower_boundary_frames": 0,
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699"
+  },
+  "40cm-repeat": {
+    "frames": 101,
+    "detections": 92,
+    "bins": {
+      "1": 92
+    },
+    "reasons": {
+      "checking_persistence": 5,
+      "spectral_change_uncalibrated": 92,
+      "ambiguous_separate_peak": 4
+    },
+    "ungated_peak_p05_median_p95_cm": [
+      15.206863811594204,
+      24.982704833333333,
+      28.241318507246376
+    ],
+    "median_profile_peak_cm": 24.982704833333333,
+    "accepted_peak_p05_median_p95_cm": [
+      15.206863811594204,
+      24.982704833333333,
+      28.241318507246376
+    ],
+    "lower_boundary_frames": 12,
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff"
+  },
+  "40cm-repeat-2": {
+    "frames": 101,
+    "detections": 12,
+    "bins": {
+      "1": 12
+    },
+    "reasons": {
+      "ambiguous_separate_peak": 2,
+      "checking_persistence": 27,
+      "no_candidate_above_noise": 60,
+      "spectral_change_uncalibrated": 12
+    },
+    "ungated_peak_p05_median_p95_cm": [
+      35.84475041304348,
+      42.361977760869564,
+      46.70679599275363
+    ],
+    "median_profile_peak_cm": 40.73267092391305,
+    "accepted_peak_p05_median_p95_cm": [
+      41.03137717735507,
+      43.17663117934782,
+      46.4080897393116
+    ],
+    "lower_boundary_frames": 0,
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "5d5c958747dbd38153515ad279b02e85cca3fc8930c29cf65d9cc5e20683a304"
+  }
+}

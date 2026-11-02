@@ -1,0 +1,90 @@
+{
+  "reported_box_distance_m": 0.12,
+  "distance_source": "User report; measurement reference unspecified",
+  "threshold_db_bins1to4": [
+    3.0,
+    3.8028281763797533,
+    8.971259001455788,
+    4.194423844130161
+  ],
+  "empty-session-1": {
+    "evaluated_frames": 71,
+    "detections": 0,
+    "reasons": {
+      "no_candidate_above_noise": 71
+    },
+    "live_reasons": {
+      "raw_recorded": 101
+    },
+    "live_detections": 0,
+    "median_excess_db_bins1to4": [
+      -0.2438882161125946,
+      -0.5604847299025906,
+      0.2348520672407659,
+      0.22321763777875248
+    ],
+    "max_excess_db_bins1to4": [
+      1.0528301883005327,
+      1.4234482198311298,
+      1.2919639462361445,
+      1.7781869098097474
+    ]
+  },
+  "target-session-1": {
+    "evaluated_frames": 302,
+    "detections": 15,
+    "reasons": {
+      "checking_persistence": 79,
+      "spectral_change_uncalibrated": 15,
+      "no_candidate_above_noise": 186,
+      "ambiguous_separate_peak": 22
+    },
+    "live_reasons": {
+      "checking_persistence": 79,
+      "spectral_change_uncalibrated": 15,
+      "no_candidate_above_noise": 186,
+      "ambiguous_separate_peak": 22
+    },
+    "live_detections": 15,
+    "median_excess_db_bins1to4": [
+      -1.328600119979349,
+      1.7533786741566821,
+      3.641117197631484,
+      4.153618887560739
+    ],
+    "max_excess_db_bins1to4": [
+      3.6352960379106065,
+      5.155365738851586,
+      5.295892102569624,
+      5.676171575604265
+    ],
+    "detected_bins": {
+      "4": 15
+    },
+    "provisional_coordinates_m": [
+      1.3903418342028986
+    ]
+  },
+  "pasted_output_summary": {
+    "json_lines": 174,
+    "reasons": {
+      "raw_recorded": 101,
+      "null": 2,
+      "no_candidate_above_noise": 71
+    },
+    "summaries": [
+      {
+        "summary": true,
+        "frames": 71,
+        "detected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        }
+      }
+    ]
+  }
+}

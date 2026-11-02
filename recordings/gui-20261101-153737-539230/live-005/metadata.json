@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "created_unix_s": 1793565586.5237,
+  "label": "live",
+  "session_id": "live-005",
+  "scene_id": "unspecified",
+  "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+  "firmware_identity": "unknown; profile ID is not a firmware hash",
+  "freshness": "relative timing only; no firmware handshake",
+  "baseline_provenance": {
+    "recording": "/Users/chekaylimeyer/Documents/ChatGPT/SENIOR/wavvy-range-v1/recordings/gui-20261101-153737-539230/empty-001",
+    "raw_sha256": "8725674e54f63ee9bd9024c4492922e7aa38692c5384538f609c77934ccda5c4",
+    "training_count": 30
+  }
+}

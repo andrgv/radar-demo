@@ -1,0 +1,87 @@
+{
+  "40cm-repeat-2": {
+    "frames": 101,
+    "detections": 12,
+    "bins": {
+      "1": 12
+    },
+    "reasons": {
+      "ambiguous_separate_peak": 2,
+      "checking_persistence": 27,
+      "no_candidate_above_noise": 60,
+      "spectral_change_uncalibrated": 12
+    },
+    "ungated_peak_p05_median_p95_cm": [
+      35.84475041304348,
+      42.361977760869564,
+      46.70679599275363
+    ],
+    "median_profile_peak_cm": 40.73267092391305,
+    "accepted_peak_p05_median_p95_cm": [
+      41.03137717735507,
+      43.17663117934782,
+      46.4080897393116
+    ],
+    "median_excess_bins1to4": [
+      3.843046178406169,
+      3.289323207237601,
+      -2.8390853645404803,
+      -0.2664886997401297
+    ],
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "5d5c958747dbd38153515ad279b02e85cca3fc8930c29cf65d9cc5e20683a304"
+  },
+  "40cm-untouched-1": {
+    "frames": 101,
+    "detections": 1,
+    "bins": {
+      "1": 1
+    },
+    "reasons": {
+      "checking_persistence": 7,
+      "no_candidate_above_noise": 93,
+      "spectral_change_uncalibrated": 1
+    },
+    "ungated_peak_p05_median_p95_cm": [
+      37.47405725,
+      40.73267092391305,
+      43.44818231884058
+    ],
+    "median_profile_peak_cm": 40.18956864492754,
+    "accepted_peak_p05_median_p95_cm": [
+      41.275773202898556,
+      41.275773202898556,
+      41.275773202898556
+    ],
+    "median_excess_bins1to4": [
+      3.772312932645214,
+      2.2397977994923863,
+      -1.4934737134531986,
+      0.7446580715235953
+    ],
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "raw_sha256": "dae68cc1c426aa626a4fd95ae5827d79a2ef1127bfa099af8c6a2f6fbf8cc046"
+  }
+}

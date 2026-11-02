@@ -1,0 +1,265 @@
+{
+  "waveform": {
+    "system_clock_hz_from_profile": 80000000,
+    "adc_sr_div": 16,
+    "adc_decimation": 1,
+    "samples_from_sh_idx0": 64,
+    "sample_rate_hz_nominal": 5000000.0,
+    "slope_hz_s_nominal": 33691406250000.0,
+    "fft_bin_spacing_m_nominal": 0.34758545855072465,
+    "sample_span_resolution_m_nominal": 0.3531026880515298,
+    "independent_official_metadata_crosschecks": [
+      {
+        "ramp_step": 667,
+        "samples": 64,
+        "sample_rate_hz": 5000000,
+        "published_resolution_m": 0.36527864281192735,
+        "reproduced_resolution_m": 0.36527864281192735,
+        "absolute_difference_m": 0.0
+      },
+      {
+        "ramp_step": 770,
+        "samples": 256,
+        "sample_rate_hz": 5000000,
+        "published_resolution_m": 0.07817353628520499,
+        "reproduced_resolution_m": 0.07817353628520499,
+        "absolute_difference_m": 0.0
+      }
+    ],
+    "derivation_status": "Nominal source-derived model, corroborated by official configuration metadata; clock and sequencer timing not measured on hardware.",
+    "chirp_interval_s": null,
+    "carrier_hz": null
+  },
+  "rx_register_configuration": [
+    {
+      "rx": 1,
+      "enabled": true,
+      "gain_db": 42,
+      "hpf1_hz": 350000,
+      "hpf2_bypass": false,
+      "aaf_hz": 2000000,
+      "hpf1_equivalent_range_m_nominal": 1.5571828543072463
+    },
+    {
+      "rx": 2,
+      "enabled": true,
+      "gain_db": 42,
+      "hpf1_hz": 350000,
+      "hpf2_bypass": false,
+      "aaf_hz": 2000000,
+      "hpf1_equivalent_range_m_nominal": 1.5571828543072463
+    },
+    {
+      "rx": 3,
+      "enabled": true,
+      "gain_db": 42,
+      "hpf1_hz": 350000,
+      "hpf2_bypass": false,
+      "aaf_hz": 2000000,
+      "hpf1_equivalent_range_m_nominal": 1.5571828543072463
+    }
+  ],
+  "profile_averaging_factor": 16,
+  "runtime_averaging_factor_from_source": 1,
+  "runtime_truncates_after_adc_containers": 3264,
+  "adc_idx0_register": "0x100000",
+  "sh_idx0_start": "0xb4683b",
+  "sh_idx0_ramp": "0x2b2",
+  "sequence_words": [
+    {
+      "address": "0x3000",
+      "word": "0x138"
+    },
+    {
+      "address": "0x3004",
+      "word": "0x1000110"
+    },
+    {
+      "address": "0x3008",
+      "word": "0x40403"
+    },
+    {
+      "address": "0x300c",
+      "word": "0x45899"
+    },
+    {
+      "address": "0x3010",
+      "word": "0xcca103c8"
+    },
+    {
+      "address": "0x3014",
+      "word": "0x40138"
+    },
+    {
+      "address": "0x3018",
+      "word": "0x403c8"
+    },
+    {
+      "address": "0x301c",
+      "word": "0x40004"
+    },
+    {
+      "address": "0x3020",
+      "word": "0x3c80458"
+    },
+    {
+      "address": "0x3024",
+      "word": "0x1a0004"
+    },
+    {
+      "address": "0x3028",
+      "word": "0x3a0141"
+    },
+    {
+      "address": "0x302c",
+      "word": "0x7a0141"
+    },
+    {
+      "address": "0x3030",
+      "word": "0xfa0641"
+    },
+    {
+      "address": "0x3034",
+      "word": "0x2fa03c1"
+    },
+    {
+      "address": "0x3038",
+      "word": "0x6fa0141"
+    },
+    {
+      "address": "0x303c",
+      "word": "0x7fa00a1"
+    },
+    {
+      "address": "0x3040",
+      "word": "0xffa0051"
+    },
+    {
+      "address": "0x3044",
+      "word": "0x1ffa0051"
+    },
+    {
+      "address": "0x3048",
+      "word": "0x263991"
+    },
+    {
+      "address": "0x304c",
+      "word": "0x8e0a01"
+    },
+    {
+      "address": "0x3050",
+      "word": "0x662871"
+    },
+    {
+      "address": "0x3054",
+      "word": "0x1e60781"
+    },
+    {
+      "address": "0x3058",
+      "word": "0x18e0281"
+    },
+    {
+      "address": "0x305c",
+      "word": "0x1f8e00a1"
+    },
+    {
+      "address": "0x3060",
+      "word": "0x5ffa1851"
+    },
+    {
+      "address": "0x3064",
+      "word": "0x3e60141"
+    },
+    {
+      "address": "0x3068",
+      "word": "0x4ffa0141"
+    },
+    {
+      "address": "0x306c",
+      "word": "0x1fe60141"
+    },
+    {
+      "address": "0x3070",
+      "word": "0x6ffa0141"
+    },
+    {
+      "address": "0x3074",
+      "word": "0xc0141"
+    },
+    {
+      "address": "0x3078",
+      "word": "0x3e6000a"
+    },
+    {
+      "address": "0x307c",
+      "word": "0x31018e"
+    },
+    {
+      "address": "0x3080",
+      "word": "0x8e0006"
+    },
+    {
+      "address": "0x3084",
+      "word": "0xe0031"
+    },
+    {
+      "address": "0x3088",
+      "word": "0x26000c"
+    },
+    {
+      "address": "0x308c",
+      "word": "0x8e0781"
+    },
+    {
+      "address": "0x3090",
+      "word": "0x662911"
+    },
+    {
+      "address": "0x3094",
+      "word": "0x1e60781"
+    },
+    {
+      "address": "0x3098",
+      "word": "0x281018e"
+    },
+    {
+      "address": "0x309c",
+      "word": "0x1ffe03e6"
+    },
+    {
+      "address": "0x30a0",
+      "word": "0x1fe603e1"
+    },
+    {
+      "address": "0x30a4",
+      "word": "0xc4939"
+    }
+  ],
+  "sequence_instruction_decoder_available_in_this_audit": false,
+  "chirp_interval_measured_s": null,
+  "carrier_verified_hz": null,
+  "firmware_sha256": "12175f6a919a2cbd93612f80abc283df6861045d499a399564bdef391aef9f41",
+  "loaded_profile_sha256": "6764683f90cbd03943a1ddda888a345653f69b1eb2ea74028612a12d4bdf3ca7",
+  "build_artifacts": [
+    {
+      "path": "build/last_config/glass-radar-3rx.elf",
+      "sha256": "e028bb762af9dcd1f7ab859455b4bab3791b693f3159d029287db73c328974be",
+      "bytes": 1100200
+    },
+    {
+      "path": "build/last_config/glass-radar-3rx.hex",
+      "sha256": "06d8a1729f79d861a36e7c0a63997c2fffbfc7e015a60a08c1740cf98a49d123",
+      "bytes": 132292
+    },
+    {
+      "path": "build/APP_CYSBSYSKIT-DEV-01/Release/glass-radar-3rx.elf",
+      "sha256": "e028bb762af9dcd1f7ab859455b4bab3791b693f3159d029287db73c328974be",
+      "bytes": 1100200
+    },
+    {
+      "path": "build/APP_CYSBSYSKIT-DEV-01/Release/glass-radar-3rx.hex",
+      "sha256": "06d8a1729f79d861a36e7c0a63997c2fffbfc7e015a60a08c1740cf98a49d123",
+      "bytes": 132292
+    }
+  ]
+}
