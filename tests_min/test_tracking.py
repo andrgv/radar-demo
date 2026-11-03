@@ -1,7 +1,20 @@
 import unittest
 
 from radar_min.tracking import SingleRangeTracker, accepted_measurement, enrich_tracking
-from radar_min.tracking_gui import tracking_display
+from radar_min.tracking_gui import tracking_display, stability_windows
+
+
+class StabilityDisplayTests(unittest.TestCase):
+    def test_constant_distance_has_zero_spread(self):
+        self.assertEqual(stability_windows([(0,80,80),(.1,80,80),(.2,80,80)]),[(0.,0.)])
+
+    def test_spread_uses_raw_measurements_and_separate_windows(self):
+        values=[(0,1,2),(.1,2,2),(.2,3,2),(2.,8,9),(2.1,9,9),(2.2,10,9)]
+        self.assertEqual(stability_windows(values),[(0.,1.),(2.,1.)])
+
+    def test_missing_or_insufficient_measurements_do_not_create_a_bar(self):
+        values=[(0,80,80),(.1,float('nan'),80),(.2,80,80),(2.,float('inf'),80)]
+        self.assertEqual(stability_windows(values),[])
 
 
 class SingleRangeTrackerTests(unittest.TestCase):
