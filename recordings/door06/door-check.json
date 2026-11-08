@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "complete": false,
+  "repeats": 3,
+  "seconds_per_state": 30,
+  "settle_seconds": 5.0,
+  "measured_glass_distance_m": 1.524,
+  "notes": "",
+  "one_continuous_sensor_session": true,
+  "completed_sessions": []
+}

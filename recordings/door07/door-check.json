@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "complete": true,
+  "repeats": 3,
+  "seconds_per_state": 30,
+  "settle_seconds": 5.0,
+  "measured_glass_distance_m": 1.524,
+  "notes": "",
+  "one_continuous_sensor_session": true,
+  "completed_sessions": [
+    "open-01",
+    "closed-01",
+    "open-02",
+    "closed-02",
+    "open-03",
+    "closed-03"
+  ]
+}
