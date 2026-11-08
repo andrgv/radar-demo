@@ -83,6 +83,31 @@ def main(argv=None):
     range_check.add_argument('--seconds', type=float, default=6)
     range_check_analyze = commands.add_parser('range-check-analyze', help='Recheck a saved empty/near/far raw capture')
     range_check_analyze.add_argument('recordings')
+    door = commands.add_parser('door-check', help='Guided repeated open/closed raw capture; final pair held out')
+    door.add_argument('output')
+    door.add_argument('--port', required=True)
+    door.add_argument('--config', required=True)
+    door_distance = door.add_mutually_exclusive_group(required=True)
+    door_distance.add_argument('--distance', type=float, help='Measured antenna-to-closed-glass distance in meters')
+    door_distance.add_argument('--distance-inches', type=float, help='Measured antenna-to-closed-glass distance in inches')
+    door.add_argument('--seconds', type=float, default=30)
+    door.add_argument('--repeats', type=int, default=3)
+    door.add_argument('--settle', type=float, default=5)
+    door.add_argument('--notes', default='')
+    door_analysis = commands.add_parser('door-check-analyze', help='Reanalyze a saved open/closed experiment')
+    door_analysis.add_argument('recordings')
+    obstacle_fit = commands.add_parser('obstacle-fit', help='Fit fixed-scene obstacle template; reserve final pair')
+    obstacle_fit.add_argument('experiment')
+    obstacle_fit.add_argument('output')
+    obstacle_replay = commands.add_parser('obstacle-replay', help='Evaluate obstacle template on a saved recording')
+    obstacle_replay.add_argument('recording')
+    obstacle_replay.add_argument('--model', required=True)
+    obstacle_replay.add_argument('--output', required=True)
+    obstacle_live = commands.add_parser('obstacle-live', help='Fixed-scene obstacle indication and raw recording')
+    obstacle_live.add_argument('output')
+    obstacle_live.add_argument('--model', required=True)
+    obstacle_live.add_argument('--port', required=True)
+    obstacle_live.add_argument('--seconds', type=float, default=60)
     arguments = parser.parse_args(argv)
     if arguments.command == "gui":
         if not math.isfinite(arguments.start_delay) or arguments.start_delay < 0:
@@ -212,4 +237,26 @@ def main(argv=None):
     elif arguments.command == "range-check-analyze":
         from .range_check import analyze_range_check
         print(json.dumps(analyze_range_check(arguments.recordings), indent=2))
+    elif arguments.command in ('door-check', 'door-check-analyze'):
+        from .door_check import record_door_check, analyze_door_check
+        if arguments.command == 'door-check':
+            distance_m = (arguments.distance_inches * 0.0254
+                          if arguments.distance_inches is not None else arguments.distance)
+            report = record_door_check(arguments.output, Config.load(arguments.config), arguments.port,
+                                       distance_m, arguments.seconds, arguments.repeats,
+                                       arguments.settle, arguments.notes)
+        else:
+            report = analyze_door_check(arguments.recordings)
+        print(json.dumps({key: report[key] for key in ('selected_bin', 'heldout', 'limitations')}, indent=2))
+    elif arguments.command == 'obstacle-fit':
+        from .obstacle import fit_experiment
+        model = fit_experiment(arguments.experiment, arguments.output)
+        print(json.dumps({key: model[key] for key in ('selected_bins', 'training_sessions', 'assumptions')}, indent=2))
+    elif arguments.command == 'obstacle-replay':
+        from .obstacle import replay_obstacle
+        report = replay_obstacle(arguments.recording, arguments.model, arguments.output)
+        print(json.dumps({key: report[key] for key in ('counts', 'frames', 'discarded_tail_frames')}, indent=2))
+    elif arguments.command == 'obstacle-live':
+        from .obstacle import live_obstacle
+        print(json.dumps(live_obstacle(arguments.port, arguments.model, arguments.output, arguments.seconds), indent=2))
     return 0

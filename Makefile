@@ -6,6 +6,7 @@ CONFIG=Release
 CY_GETLIBS_SHARED_PATH=../
 CY_GETLIBS_SHARED_NAME=mtb_shared
 CY_IGNORE+=radar tests tools docs references recordings artifacts build
+CY_IGNORE+=XENSIV_60GHz_CMOS_Radar_Presence_Detection_and_Tracking mtb_shared .metadata
 ifeq ($(RADAR_QUALIFICATION),1)
 CY_IGNORE+=firmware/main.c
 SOURCES+=experiments/qualification/main.c

@@ -4,6 +4,15 @@
 
 # Three-RX radar and glass-feature research
 
+The [calibrated obstacle detector](docs/OBSTACLE_DETECTION.md) combines repeated
+clear/blocked range profiles, supports saved replay and live indication, and
+documents results on the door recordings. It requires a fixed-scene calibration.
+
+For repeated glass-door open/closed raw capture and held-out scene comparison,
+see [the door experiment workflow](docs/DOOR_CHECK.md). Run `python -m radar
+door-check --help` for capture options. This is door-state evidence, not a glass
+material classifier.
+
 New CYSBSYSKIT-DEV-01 / BGT60CUTR13AIP firmware and a standalone Python Qt application. The sibling working demo is untouched. No camera, RGB-D, ROS2, cloud service, or GPU is required.
 
 **Status:** firmware compiles with installed ModusToolbox 3.9 and official HAL/PDL/driver. Synthetic processing and Qt rendering run locally. No board has been flashed or measured. Three-RX ordering, raw chirp timing, RF scale, antenna coordinates, and restart behavior still require hardware verification. Material output remains **UNKNOWN**; there is no validated glass classifier.

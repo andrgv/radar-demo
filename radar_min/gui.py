@@ -50,12 +50,16 @@ class Estimate:
                 reading['associated_fit']=associated
 
 
+def format_distance(meters):
+    return f'{meters*100:.1f} cm / {meters/0.0254:.1f} in'
+
+
 def display_values(reading,fresh):
     if not fresh:return '—','No fresh reading','—','—'
     candidate=reading.get('experimental_range_m')
     accepted=range_displayable(reading)
-    distance=f'{candidate*100:.1f} cm' if accepted else '—'
-    detail=(f'{candidate*100:.1f} cm · candidate only' if candidate is not None and not accepted else 'Experimental estimate · uncalibrated')
+    distance=format_distance(candidate) if accepted else '—'
+    detail=(f'{format_distance(candidate)} · candidate only' if candidate is not None and not accepted else 'Experimental estimate · uncalibrated')
     if reading.get('fit_boundary'):
         detail += ' · fit at search limit; distance unresolved'
     elif candidate is None and reading.get('associated_fit'):

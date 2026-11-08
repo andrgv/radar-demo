@@ -18,10 +18,11 @@ import numpy as np
 from PyQt6 import QtCore,QtWidgets
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
+from matplotlib.ticker import FuncFormatter
 
 from .__main__ import read_recording,stream
 from .core import Baseline,Config,Detector
-from .gui import Estimate,display_values,range_displayable
+from .gui import Estimate,display_values,range_displayable,format_distance
 from .tracking import SingleRangeTracker,enrich_tracking
 
 
@@ -103,7 +104,7 @@ def tracking_display(reading,fresh):
     state=track.get('state','idle')
     track_id=track.get('track_id')
     value=track.get('range_m')
-    distance=f'{value*100:.1f} cm' if value is not None else '—'
+    distance=format_distance(value) if value is not None else '—'
     if state=='tracking':
         motion=track.get('motion','unknown').replace('_',' ')
         return f'Track {track_id}: {distance} · {motion}'
@@ -151,7 +152,7 @@ class TrackingWindow(QtWidgets.QMainWindow):
         overview=QtWidgets.QHBoxLayout();overview.setSpacing(24);layout.addLayout(overview)
         distance_card=QtWidgets.QFrame();distance_layout=QtWidgets.QVBoxLayout(distance_card);distance_layout.setContentsMargins(4,12,4,12)
         distance_label=QtWidgets.QLabel('Distance');distance_label.setObjectName('metricLabel');distance_layout.addWidget(distance_label)
-        self.distance=QtWidgets.QLabel('—');self.distance.setObjectName('distanceValue');distance_layout.addWidget(self.distance)
+        self.distance=QtWidgets.QLabel('—');self.distance.setObjectName('distanceValue');self.distance.setWordWrap(True);distance_layout.addWidget(self.distance)
         self.detail=QtWidgets.QLabel('Capture an empty background, then start tracking.');self.detail.setObjectName('muted');self.detail.setWordWrap(True);distance_layout.addWidget(self.detail)
         secondary=QtWidgets.QHBoxLayout();secondary.setSpacing(24);distance_layout.addLayout(secondary)
         signal_card=QtWidgets.QFrame();signal_layout=QtWidgets.QVBoxLayout(signal_card);signal_layout.setContentsMargins(0,10,0,0)
@@ -172,6 +173,8 @@ class TrackingWindow(QtWidgets.QMainWindow):
         self.stability_axis.set(title='Distance stability · 2-second windows',xlabel='Time since Start (s)',
             ylabel='Distance variation (cm)',xlim=(0,30),ylim=(0,1))
         style_axis(self.stability_axis)
+        self.stability_axis.set_ylabel('Distance variation (cm / in)')
+        self.stability_axis.yaxis.set_major_formatter(FuncFormatter(lambda cm,pos:f'{cm:g} / {cm/2.54:.1f}'))
         self.stability_bars=[]
         self.stability_note=QtWidgets.QLabel('Bars show standard deviation. Lower = steadier; target movement also raises bars.\nAt least 3 accepted readings per bar. This does not measure accuracy.')
         self.stability_note.setWordWrap(True);stability_layout.addWidget(self.stability_note)
@@ -197,6 +200,10 @@ class TrackingWindow(QtWidgets.QMainWindow):
         self.range_history,=self.range_trace.plot([],[],color='#8b5cf6',marker='.',ms=3)
         self.range_trace.set(title='Measured target distance over time',xlabel='Time since Start (s)',ylabel='Accepted distance estimate (cm)',ylim=(0,160))
         style_axis(self.profile);style_axis(self.range_trace)
+        self.profile.set_xlabel('Nominal distance from sensor (m / ft)')
+        self.profile.xaxis.set_major_formatter(FuncFormatter(lambda m,pos:f'{m:g}\n{m/0.3048:.1f}'))
+        self.range_trace.set_ylabel('Accepted distance estimate (cm / in)')
+        self.range_trace.yaxis.set_major_formatter(FuncFormatter(lambda cm,pos:f'{cm:g} / {cm/2.54:.1f}'))
         self.tabs.addTab(range_tab,'Range')
 
         tracking_tab=QtWidgets.QWidget();tracking_layout=QtWidgets.QVBoxLayout(tracking_tab)
@@ -207,8 +214,16 @@ class TrackingWindow(QtWidgets.QMainWindow):
         self.raw_track,=self.tracking_trace.plot([],[],color='#98989f',marker='.',ls='none',ms=4,label='Measured')
         self.smooth_track,=self.tracking_trace.plot([],[],color='#8b5cf6',lw=2.2,label='Tracked')
         self.tracking_trace.set(title='Single-target tracking · measured and smoothed distance',xlabel='Time since Start (s)',ylabel='Experimental target distance (cm)',ylim=(0,160));style_axis(self.tracking_trace)
+        self.tracking_trace.set_ylabel('Experimental target distance (cm / in)')
+        self.tracking_trace.yaxis.set_major_formatter(FuncFormatter(lambda cm,pos:f'{cm:g} / {cm/2.54:.1f}'))
         legend=self.tracking_trace.legend(loc='upper right',facecolor='#1b1b1e',edgecolor='#37373d',labelcolor='#ffffff');legend.get_frame().set_alpha(.95)
         self.tabs.addTab(tracking_tab,'Tracking')
+        self.range_empty=self.range_trace.text(.5,.5,'',transform=self.range_trace.transAxes,
+            ha='center',va='center',color='#ceced4',wrap=True)
+        self.tracking_empty=self.tracking_trace.text(.5,.5,'',transform=self.tracking_trace.transAxes,
+            ha='center',va='center',color='#ceced4',wrap=True)
+        self.stability_empty=self.stability_axis.text(.5,.5,'',transform=self.stability_axis.transAxes,
+            ha='center',va='center',color='#ceced4',wrap=True)
 
         self.saved=QtWidgets.QLabel('Recording: —');self.saved.setObjectName('muted');self.saved.setWordWrap(True);layout.addWidget(self.saved)
         self.timer=QtCore.QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(100);self.controls(False)
@@ -323,6 +338,17 @@ class TrackingWindow(QtWidgets.QMainWindow):
         for bar in self.stability_bars:bar.remove()
         self.stability_bars=[]
         windows=stability_windows(history)
+        has_measurements=any(np.isfinite(raw) for _,raw,_ in history)
+        if self.baseline is None:
+            empty_message='Capture an empty scene first,\nthen place the target and click Start.'
+        elif self.thread and self.thread.is_alive():
+            empty_message='No accepted target readings yet.\n'+reason.replace('_',' ')
+        else:
+            empty_message='No accepted target readings in this run.\nPlace the target and click Start.'
+        for label in (self.range_empty,self.tracking_empty):
+            label.set_text(empty_message);label.set_visible(not has_measurements)
+        self.stability_empty.set_text('Waiting for 3 accepted readings\nin a 2-second window.')
+        self.stability_empty.set_visible(not windows)
         if windows:
             starts,spreads=zip(*windows)
             self.stability_bars=list(self.stability_axis.bar(starts,spreads,width=1.4,align='edge',color='#a879ff'))

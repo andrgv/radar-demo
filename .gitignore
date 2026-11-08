@@ -1,5 +1,7 @@
 build/
 libs/
+.metadata/
+mtb_shared/
 .venv/
 __pycache__/
 *.egg-info/
