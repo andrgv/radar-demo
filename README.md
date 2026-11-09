@@ -4,6 +4,19 @@
 
 # Three-RX radar and glass-feature research
 
+For the BGT60CUTR13AIP **experimental glass-versus-drywall classifier**, see
+[the material testing guide](docs/MATERIAL_CLASSIFICATION.md). It adapts a public
+XGBoost material-classification workflow to the existing recordings and USB
+stream, with labeled capture, training, replay and live commands. The initial
+result is a repeat comparison of one window and one wall; recognition of new
+surfaces remains to be tested.
+
+The saved model is included under `artifacts/material-glass-drywall-pilot/`.
+Restore the archived session data with `python3 tools/restore_material_recordings.py`
+before replaying or retraining. See the [recording archive instructions](data/material-study-2026-11-08/README.md),
+[later live-test results](evidence/material-transfer-check/report.json), and
+[team progress log](docs/progress/Wavvy_Progress_Report_Log.docx).
+
 The [calibrated obstacle detector](docs/OBSTACLE_DETECTION.md) combines repeated
 clear/blocked range profiles, supports saved replay and live indication, and
 documents results on the door recordings. It requires a fixed-scene calibration.

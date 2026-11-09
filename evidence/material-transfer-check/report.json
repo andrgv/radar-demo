@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "model": "artifacts/material-glass-drywall-pilot",
+  "model_retrained_between_tests": false,
+  "physical_surface_novelty_independently_verified": false,
+  "interpretation": "Three user-run live tests; setup-specific exploratory evidence, not an accuracy estimate. The adjusted wall test remains included. Scores are not calibrated probabilities.",
+  "sessions": [
+    {
+      "recording": "recordings/new-window-test-01",
+      "user_reported_target": "glass",
+      "sensor_adjusted_during_recording": false,
+      "raw_sha256": "08a9e8f42f3e76208bb76c03300783628d6d8e02b68a5d0d13a2c550e73229af",
+      "frames": 302,
+      "windows": 29,
+      "decision": "glass",
+      "forced_choice": "glass",
+      "glass_score": 0.8173764376290913,
+      "counts": {
+        "glass": 23,
+        "uncertain": 4,
+        "drywall": 2
+      }
+    },
+    {
+      "recording": "recordings/new-wall-test-01",
+      "user_reported_target": "drywall",
+      "sensor_adjusted_during_recording": true,
+      "raw_sha256": "161b97bff48f8fe738b8b33d543984bac1538f5adb5e1be4e6944cc9f8ee3c9b",
+      "frames": 302,
+      "windows": 29,
+      "decision": "uncertain",
+      "forced_choice": "drywall",
+      "glass_score": 0.403293506081762,
+      "counts": {
+        "drywall": 6,
+        "uncertain": 23
+      }
+    },
+    {
+      "recording": "recordings/new-wall-test-02",
+      "user_reported_target": "drywall",
+      "sensor_adjusted_during_recording": false,
+      "raw_sha256": "59fee8f6c5a6dad6aba92fd49e82d7673ce7cea42e3cbbffa45f5103df07c29d",
+      "frames": 302,
+      "windows": 29,
+      "decision": "drywall",
+      "forced_choice": "drywall",
+      "glass_score": 0.17205122203148646,
+      "counts": {
+        "drywall": 27,
+        "uncertain": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "archive": "gzip tar; concatenate parts in listed order before extracting",
+  "directories": [
+    "recordings/glass-pane-100cm-01",
+    "recordings/new-wall-test-01",
+    "recordings/new-wall-test-02",
+    "recordings/new-window-test-01",
+    "recordings/window-100cm-closed-01",
+    "recordings/window-100cm-closed-02",
+    "recordings/window-100cm-closed-03",
+    "recordings/window-pilot-20261108-01",
+    "recordings/window-pilot-20261108-02"
+  ],
+  "files": 111,
+  "uncompressed_bytes": 879062661,
+  "parts": [
+    {
+      "name": "material-recordings.tar.gz.part-000",
+      "bytes": 50331648,
+      "sha256": "1f777ce4988b3bbaf720db63aa8576d89e663c706f2601f5e1ab88f5d2619b45"
+    },
+    {
+      "name": "material-recordings.tar.gz.part-001",
+      "bytes": 40354694,
+      "sha256": "c758f10b166d638b6244189375a6e2069e2a8a8bf1505e00624988bd43d50eac"
+    }
+  ]
+}

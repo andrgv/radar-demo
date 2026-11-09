@@ -108,6 +108,34 @@ def main(argv=None):
     obstacle_live.add_argument('--model', required=True)
     obstacle_live.add_argument('--port', required=True)
     obstacle_live.add_argument('--seconds', type=float, default=60)
+    material_record = commands.add_parser('material-record', help='Record a labeled glass or drywall surface')
+    material_record.add_argument('output')
+    material_record.add_argument('--port', required=True)
+    material_record.add_argument('--config', required=True)
+    material_record.add_argument('--label', choices=('glass', 'drywall'), required=True)
+    material_record.add_argument('--specimen', required=True, help='Physical surface ID, such as window-02')
+    material_record.add_argument('--scene', required=True, help='Room and setup ID, such as room02-day01')
+    material_record.add_argument('--distance', type=float, required=True, help='Measured antenna-to-surface meters')
+    material_record.add_argument('--seconds', type=float, default=30)
+    material_record.add_argument('--settle', type=float, default=5)
+    material_record.add_argument('--notes', default='')
+    material_train = commands.add_parser('material-train', help='Train XGBoost with whole recordings held out')
+    material_train.add_argument('manifest')
+    material_train.add_argument('output')
+    material_train.add_argument('--features', choices=('spectrum', 'waveform'), default='spectrum')
+    material_train.add_argument('--window-frames', type=int, default=10)
+    material_train.add_argument('--skip-frames', type=int, default=10)
+    material_train.add_argument('--bins', type=int, nargs='+', help='Optional fixed FFT bins; choose before evaluation')
+    material_predict = commands.add_parser('material-predict', help='Try a saved material model on a recording')
+    material_predict.add_argument('recording')
+    material_predict.add_argument('--model', required=True, help='Model directory or model.json')
+    material_predict.add_argument('--output', help='Fresh directory for detailed predictions')
+    material_live = commands.add_parser('material-live', help='Experimental live glass/drywall comparison and raw capture')
+    material_live.add_argument('output')
+    material_live.add_argument('--port', required=True)
+    material_live.add_argument('--model', required=True)
+    material_live.add_argument('--seconds', type=float, default=30)
+    material_live.add_argument('--settle', type=float, default=5)
     arguments = parser.parse_args(argv)
     if arguments.command == "gui":
         if not math.isfinite(arguments.start_delay) or arguments.start_delay < 0:
@@ -259,4 +287,29 @@ def main(argv=None):
     elif arguments.command == 'obstacle-live':
         from .obstacle import live_obstacle
         print(json.dumps(live_obstacle(arguments.port, arguments.model, arguments.output, arguments.seconds), indent=2))
+    elif arguments.command in ('material-record', 'material-train', 'material-predict', 'material-live'):
+        from .material import FeatureSpec, capture_material, load_material, predict_material, train_material
+        try:
+            if arguments.command == 'material-train':
+                report = train_material(arguments.manifest, arguments.output,
+                    FeatureSpec(arguments.features, arguments.window_frames, arguments.skip_frames, arguments.bins))
+                report = {key: report[key] for key in
+                          ('status', 'heldout_recording_metrics', 'heldout_predictions', 'limitations')}
+                report['saved_model'] = str(Path(arguments.output) / 'model.json')
+            elif arguments.command == 'material-predict':
+                report = predict_material(arguments.recording, arguments.model, arguments.output)
+                report = {key: value for key, value in report.items() if key != 'window_predictions'}
+            elif arguments.command == 'material-record':
+                metadata = dict(label=arguments.label, specimen_id=arguments.specimen,
+                                scene_id=arguments.scene, distance_m=arguments.distance, notes=arguments.notes)
+                report = capture_material(arguments.output, Config.load(arguments.config), arguments.port,
+                                          arguments.seconds, arguments.settle, metadata)
+            else:
+                model, config, _, _ = load_material(arguments.model)
+                print('\n'.join(model['limitations']), flush=True)
+                report = capture_material(arguments.output, config, arguments.port,
+                                          arguments.seconds, arguments.settle, model_path=arguments.model)
+            print(json.dumps(report, indent=2))
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
     return 0

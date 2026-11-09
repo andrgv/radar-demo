@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "evaluation": "repeat_holdout",
+  "notes": "Labels follow the user's clarification: the sensor faced drywall for OPEN and the closed window for CLOSED. The original door-check notes describing removable glass and a fixed radar are inaccurate. No glass was removed. Radar direction/background changed. The drywall distance was not recorded. Pairs 1 and 2 train; pair 3 tests repeatability of those same two views. This does not test recognition of new materials or new surfaces.",
+  "recordings": [
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/open-01",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "train"
+    },
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/closed-01",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "train"
+    },
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/open-02",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "train"
+    },
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/closed-02",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "train"
+    },
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/open-03",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "test"
+    },
+    {
+      "path": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/closed-03",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "test"
+    }
+  ]
+}
