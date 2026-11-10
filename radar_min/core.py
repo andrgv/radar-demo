@@ -61,7 +61,7 @@ class Config:
         return cls(**{k:v for k,v in data.items() if k in {f.name for f in fields(cls)}})
 
 
-def power(frame, config):
+def range_spectrum(frame, config, nfft=None):
     if frame.profile_id != config.profile_id or frame.adc.shape != (config.chirps,config.samples,3):
         raise ValueError('frame_config_mismatch')
     x=np.asarray(frame.adc,dtype=float)[config.discard_chirps:]
@@ -71,8 +71,11 @@ def power(frame, config):
         raise ValueError('adc_container_rail')
     x=x-x.mean(axis=1,keepdims=True)
     w=np.hanning(config.samples)
-    spectrum=np.fft.rfft(x*w[None,:,None],axis=1)*(2/w.sum())
-    return np.mean(abs(spectrum)**2,axis=(0,2))
+    return np.fft.rfft(x*w[None,:,None],n=nfft,axis=1)*(2/w.sum())
+
+
+def power(frame, config):
+    return np.mean(abs(range_spectrum(frame,config))**2,axis=(0,2))
 
 
 def db(p):

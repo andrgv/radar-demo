@@ -1,5 +1,13 @@
 # Live range viewer
 
+Long captures now use a bounded startup host/device clock mapping. Restart an
+already open GUI to load it; no new flags or empty capture are needed for clock
+estimation. See [clock policy and validation](docs/CFAR_RANGE.md#long-run-hostdevice-clock-handling).
+
+For the new **baseline-free CA-CFAR mode**, use `--detector cfar`; see
+[setup, commands, settings and initial results](docs/CFAR_RANGE.md). The existing
+empty-reference mode below remains the default.
+
 The board currently runs HPF350 qualification firmware. From wavvy-range-v1:
 
 ```sh

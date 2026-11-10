@@ -23,7 +23,7 @@ class GuiStreamTests(unittest.TestCase):
 
     def test_rejected_and_stale_estimate_never_main_readout(self):
         r=dict(target_detected=True,experimental_range_m=.4,excess_db=7,reason='spectral_change_uncalibrated')
-        self.assertEqual(display_values(r,True)[0],'40.0 cm')
+        self.assertEqual(display_values(r,True)[0],'40.0 cm / 15.7 in')
         self.assertEqual(display_values(r,False)[0],'—')
         r['target_detected']=False
         self.assertEqual(display_values(r,True)[0],'—')

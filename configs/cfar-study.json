@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "description": "Retrospective labeled box captures. HPF350-b already inspected; tune only there. HPF350-a validation; other profiles/sessions stress. Repeats stay in their original run.",
+  "label_sources": [
+    "HPF_COMPARISON_RESULTS.md",
+    "DISTANCE_SWEEP_1.md",
+    "DISTANCE_SWEEP_2.md"
+  ],
+  "sessions": [
+    {
+      "recording": "recordings/hpf350-b-empty-before",
+      "split": "tune",
+      "target_m": null,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-b-30cm",
+      "split": "tune",
+      "target_m": 0.3,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm",
+      "split": "tune",
+      "target_m": 0.4,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm-repeat",
+      "split": "tune",
+      "target_m": 0.4,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-b-50cm",
+      "split": "tune",
+      "target_m": 0.5,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-b-empty-after",
+      "split": "tune",
+      "target_m": null,
+      "group": "hpf350-b"
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-before",
+      "split": "validation",
+      "target_m": null,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf350-a-30cm",
+      "split": "validation",
+      "target_m": 0.3,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm",
+      "split": "validation",
+      "target_m": 0.4,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm-repeat",
+      "split": "validation",
+      "target_m": 0.4,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf350-a-50cm",
+      "split": "validation",
+      "target_m": 0.5,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-after",
+      "split": "validation",
+      "target_m": null,
+      "group": "hpf350-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "hpf100-a"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-1"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-2"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "distance-sweep-2"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-2"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-2"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "distance-sweep-2"
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-2"
+    }
+  ]
+}
