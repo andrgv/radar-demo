@@ -1,0 +1,90 @@
+{
+  "settings": {
+    "guard_cells": 2,
+    "training_cells": 8,
+    "min_training_cells": 8,
+    "factor": 6.0
+  },
+  "selection": "nearest qualifying peak group",
+  "notes": "Exploratory replay; no threshold tuning; no physical accuracy or false-alarm guarantee.",
+  "sessions": [
+    {
+      "recording": "hpf350-b-empty-before",
+      "raw_sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "recording": "hpf350-b-empty-after",
+      "raw_sha256": "f0adffe3aca57151aa7ad26c81f9a2d6c03e4040a35ce73d63f73eff14929abd",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "recording": "hpf350-b-30cm",
+      "raw_sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "recording": "hpf350-b-40cm",
+      "raw_sha256": "231db1f07daa8c85011fc2a5dbe05555a4456c33afe47997e1bfdf56e78acb99",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "recording": "hpf350-b-50cm",
+      "raw_sha256": "2c61ac6d504822c82a0976b07448432231667e09f52614201a842a429fe21324",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 99,
+        "checking_persistence": 2
+      }
+    },
+    {
+      "recording": "hpf100-a-empty-after",
+      "raw_sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "recording": "distance-sweep-1-40cm-repeat-2",
+      "raw_sha256": "5d5c958747dbd38153515ad279b02e85cca3fc8930c29cf65d9cc5e20683a304",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "frames": 101,
+      "detected_frames": 0,
+      "accepted_bins": {},
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    }
+  ]
+}

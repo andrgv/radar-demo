@@ -1,0 +1,916 @@
+{
+  "schema": 1,
+  "manifest": {
+    "schema": 1,
+    "description": "User-reported fresh validation after v2 implementation; approximate six-second alternating empty/target states, starting and ending empty. No tuning.",
+    "cases": [
+      {
+        "recording": "recordings/gui-20261109-224819-094246/live-001",
+        "target_m": 0.5,
+        "interval_seconds": 6,
+        "interval_count": 5
+      },
+      {
+        "recording": "recordings/gui-20261109-224819-094246/live-002",
+        "target_m": 0.8,
+        "interval_seconds": 6,
+        "interval_count": 7
+      }
+    ]
+  },
+  "manifest_sha256": "fb7b4353d9c1efbeaaa39b143ee0fdbd4f8984f73918b0fcf46d942f06a6a7a6",
+  "source_sha256": {
+    "radar_min/cfar.py": "20d3dc522291dd86303757956eff6965022b3321bcd181488da90aea8799ee3c",
+    "radar_min/cfar_range.py": "d6b049cc35a8833067006c793a8bfc43b4452d10ef028fa22b4e70acd206a726",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "tools/validate_cfar_captures.py": "acf6ae6d370bce488718c359a2cff7d79a8394827684113bd0527d7dcfe0cbc0"
+  },
+  "no_tuning": true,
+  "primary_trim_seconds": 2,
+  "label_uncertainty": "Approximate user timing; trimmed windows are provisional scene labels, not frame-exact truth.",
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-001",
+      "target_m": 0.5,
+      "interval_seconds": 6,
+      "interval_count": 5,
+      "frames": 276,
+      "duration_s": 27.5,
+      "metadata": {
+        "schema": 1,
+        "created_unix_s": 1794282527.120663,
+        "label": "live",
+        "session_id": "live-001",
+        "scene_id": "unspecified",
+        "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+        "firmware_identity": "unknown; profile ID is not a firmware hash",
+        "freshness": "relative timing only; no firmware handshake",
+        "baseline_provenance": null,
+        "detector": {
+          "algorithm": "range-ca-cfar-v2",
+          "cfar": {
+            "guard_cells": 1,
+            "training_cells": 4,
+            "min_training_cells": 4,
+            "factor": 2.0
+          },
+          "selection": "nearest qualifying peak group",
+          "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+          "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+          "edge_policy": "truncate; require minimum total reference count"
+        }
+      },
+      "raw_sha256": "7a6c8e4b6c385ab865c487529c237ef64c85e29d62a971f8f61fc055e90a47cd",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "transport": {
+        "frames": 276,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1816081
+      },
+      "replay_matches_saved": true,
+      "intervals": [
+        {
+          "index": 1,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 1,
+          "end_s": 5,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 40
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 2,
+          "label": "target",
+          "target_m": 0.5,
+          "trim_seconds": 1,
+          "start_s": 7,
+          "end_s": 11,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 40,
+          "range_frames": 40,
+          "range_coverage": 1.0,
+          "range_cm_p05_median_p95": [
+            46.25220606522591,
+            51.92044582952281,
+            55.207519479129985
+          ],
+          "conditional_mae_cm": 2.7314922961349772,
+          "conditional_bias_cm": 1.3504196207653734,
+          "within_5cm_frames": 37,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 14,
+            "1": 26
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 40
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 39,
+              "frames": 40,
+              "duration_s": 4.0
+            }
+          ],
+          "longest_output_s": 4.0
+        },
+        {
+          "index": 3,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 13,
+          "end_s": 17,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 40
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 4,
+          "label": "target",
+          "target_m": 0.5,
+          "trim_seconds": 1,
+          "start_s": 19,
+          "end_s": 23,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 34,
+          "range_frames": 34,
+          "range_coverage": 0.85,
+          "range_cm_p05_median_p95": [
+            52.39946279624371,
+            56.82910361466146,
+            62.808706955229916
+          ],
+          "conditional_mae_cm": 7.470097391889247,
+          "conditional_bias_cm": 7.470097391889247,
+          "within_5cm_frames": 13,
+          "errors_over_10cm": 2,
+          "accepted_bins": {
+            "2": 31,
+            "1": 2,
+            "3": 1
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 34,
+            "no_candidate_above_noise": 6
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 33,
+              "frames": 34,
+              "duration_s": 3.4
+            }
+          ],
+          "longest_output_s": 3.4
+        },
+        {
+          "index": 5,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 25,
+          "end_s": 29,
+          "truncated": true,
+          "frames": 26,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 26
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 1,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 2,
+          "end_s": 4,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 20
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 2,
+          "label": "target",
+          "target_m": 0.5,
+          "trim_seconds": 2,
+          "start_s": 8,
+          "end_s": 10,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 20,
+          "range_frames": 20,
+          "range_coverage": 1.0,
+          "range_cm_p05_median_p95": [
+            45.76055775789403,
+            51.64340026266747,
+            54.146215728886816
+          ],
+          "conditional_mae_cm": 2.6134246855368213,
+          "conditional_bias_cm": 0.7144563848387225,
+          "within_5cm_frames": 20,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "1": 14,
+            "2": 6
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 20
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 19,
+              "frames": 20,
+              "duration_s": 2.0
+            }
+          ],
+          "longest_output_s": 2.0
+        },
+        {
+          "index": 3,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 14,
+          "end_s": 16,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 20
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 4,
+          "label": "target",
+          "target_m": 0.5,
+          "trim_seconds": 2,
+          "start_s": 20,
+          "end_s": 22,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 20,
+          "range_frames": 20,
+          "range_coverage": 1.0,
+          "range_cm_p05_median_p95": [
+            53.19072521246332,
+            57.009944005823144,
+            58.58592844589892
+          ],
+          "conditional_mae_cm": 6.429267128887323,
+          "conditional_bias_cm": 6.429267128887323,
+          "within_5cm_frames": 6,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 20
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 20
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 19,
+              "frames": 20,
+              "duration_s": 2.0
+            }
+          ],
+          "longest_output_s": 2.0
+        },
+        {
+          "index": 5,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 26,
+          "end_s": 28,
+          "truncated": true,
+          "frames": 16,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 16
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-002",
+      "target_m": 0.8,
+      "interval_seconds": 6,
+      "interval_count": 7,
+      "frames": 423,
+      "duration_s": 42.199999,
+      "metadata": {
+        "schema": 1,
+        "created_unix_s": 1794282578.409151,
+        "label": "live",
+        "session_id": "live-002",
+        "scene_id": "unspecified",
+        "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+        "firmware_identity": "unknown; profile ID is not a firmware hash",
+        "freshness": "relative timing only; no firmware handshake",
+        "baseline_provenance": null,
+        "detector": {
+          "algorithm": "range-ca-cfar-v2",
+          "cfar": {
+            "guard_cells": 1,
+            "training_cells": 4,
+            "min_training_cells": 4,
+            "factor": 2.0
+          },
+          "selection": "nearest qualifying peak group",
+          "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+          "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+          "edge_policy": "truncate; require minimum total reference count"
+        }
+      },
+      "raw_sha256": "20c22e79aff32ba8704020bf5e65dbcec474060b6ff3b342c91d3ec0b8c442e4",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "transport": {
+        "frames": 423,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 2783341
+      },
+      "replay_matches_saved": true,
+      "intervals": [
+        {
+          "index": 1,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 1,
+          "end_s": 5,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 39,
+            "checking_persistence": 1
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 2,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 1,
+          "start_s": 7,
+          "end_s": 11,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 17,
+          "range_frames": 17,
+          "range_coverage": 0.425,
+          "range_cm_p05_median_p95": [
+            57.95731596895369,
+            80.48468540155416,
+            84.39468628493292
+          ],
+          "conditional_mae_cm": 6.615021649821106,
+          "conditional_bias_cm": -3.514316273007324,
+          "within_5cm_frames": 12,
+          "errors_over_10cm": 4,
+          "accepted_bins": {
+            "2": 17
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 17,
+            "no_candidate_above_noise": 12,
+            "checking_persistence": 11
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 1,
+              "frames": 2,
+              "duration_s": 0.2
+            },
+            {
+              "start_index": 15,
+              "end_index": 15,
+              "frames": 1,
+              "duration_s": 0.1
+            },
+            {
+              "start_index": 19,
+              "end_index": 25,
+              "frames": 7,
+              "duration_s": 0.7
+            },
+            {
+              "start_index": 33,
+              "end_index": 39,
+              "frames": 7,
+              "duration_s": 0.7
+            }
+          ],
+          "longest_output_s": 0.7
+        },
+        {
+          "index": 3,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 13,
+          "end_s": 17,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 40
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 4,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 1,
+          "start_s": 19,
+          "end_s": 23,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 40,
+          "range_frames": 40,
+          "range_coverage": 1.0,
+          "range_cm_p05_median_p95": [
+            78.9326788141036,
+            82.89283254092948,
+            83.59787714890001
+          ],
+          "conditional_mae_cm": 2.5406613789410395,
+          "conditional_bias_cm": 2.279638648494084,
+          "within_5cm_frames": 40,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 40
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 40
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 39,
+              "frames": 40,
+              "duration_s": 4.0
+            }
+          ],
+          "longest_output_s": 4.0
+        },
+        {
+          "index": 5,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 25,
+          "end_s": 29,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 39,
+            "checking_persistence": 1
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 6,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 1,
+          "start_s": 31,
+          "end_s": 35,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 16,
+          "range_frames": 16,
+          "range_coverage": 0.4,
+          "range_cm_p05_median_p95": [
+            73.65110194594568,
+            75.96379586942098,
+            80.86147920729162
+          ],
+          "conditional_mae_cm": 3.531528207077673,
+          "conditional_bias_cm": -3.239406689803638,
+          "within_5cm_frames": 14,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 16
+          },
+          "reasons": {
+            "no_candidate_above_noise": 18,
+            "checking_persistence": 6,
+            "cfar_peak_uncalibrated": 16
+          },
+          "range_episodes": [
+            {
+              "start_index": 24,
+              "end_index": 39,
+              "frames": 16,
+              "duration_s": 1.6
+            }
+          ],
+          "longest_output_s": 1.6
+        },
+        {
+          "index": 7,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 1,
+          "start_s": 37,
+          "end_s": 41,
+          "truncated": false,
+          "frames": 40,
+          "presence_frames": 6,
+          "range_frames": 6,
+          "range_coverage": 0.15,
+          "range_cm_p05_median_p95": [
+            118.51714262885244,
+            121.48668552054392,
+            126.54381513678439
+          ],
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {
+            "3": 3,
+            "4": 3
+          },
+          "reasons": {
+            "no_candidate_above_noise": 27,
+            "checking_persistence": 7,
+            "cfar_peak_uncalibrated": 6
+          },
+          "range_episodes": [
+            {
+              "start_index": 28,
+              "end_index": 31,
+              "frames": 4,
+              "duration_s": 0.4
+            },
+            {
+              "start_index": 36,
+              "end_index": 37,
+              "frames": 2,
+              "duration_s": 0.2
+            }
+          ],
+          "longest_output_s": 0.4
+        },
+        {
+          "index": 1,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 2,
+          "end_s": 4,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 20
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 2,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 2,
+          "start_s": 8,
+          "end_s": 10,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 8,
+          "range_frames": 8,
+          "range_coverage": 0.4,
+          "range_cm_p05_median_p95": [
+            71.09383931648523,
+            83.15655963695711,
+            84.37458093117839
+          ],
+          "conditional_mae_cm": 4.476993880271513,
+          "conditional_bias_cm": 0.5194024852351387,
+          "within_5cm_frames": 7,
+          "errors_over_10cm": 1,
+          "accepted_bins": {
+            "2": 8
+          },
+          "reasons": {
+            "checking_persistence": 6,
+            "no_candidate_above_noise": 6,
+            "cfar_peak_uncalibrated": 8
+          },
+          "range_episodes": [
+            {
+              "start_index": 5,
+              "end_index": 5,
+              "frames": 1,
+              "duration_s": 0.1
+            },
+            {
+              "start_index": 9,
+              "end_index": 15,
+              "frames": 7,
+              "duration_s": 0.7
+            }
+          ],
+          "longest_output_s": 0.7
+        },
+        {
+          "index": 3,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 14,
+          "end_s": 16,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 20
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 4,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 2,
+          "start_s": 20,
+          "end_s": 22,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 20,
+          "range_frames": 20,
+          "range_coverage": 1.0,
+          "range_cm_p05_median_p95": [
+            82.41545338008099,
+            82.92100176567436,
+            83.39532553136691
+          ],
+          "conditional_mae_cm": 2.8815064190910853,
+          "conditional_bias_cm": 2.8815064190910853,
+          "within_5cm_frames": 20,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 20
+          },
+          "reasons": {
+            "cfar_peak_uncalibrated": 20
+          },
+          "range_episodes": [
+            {
+              "start_index": 0,
+              "end_index": 19,
+              "frames": 20,
+              "duration_s": 2.0
+            }
+          ],
+          "longest_output_s": 2.0
+        },
+        {
+          "index": 5,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 26,
+          "end_s": 28,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 0,
+          "range_frames": 0,
+          "range_coverage": 0.0,
+          "range_cm_p05_median_p95": null,
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 20
+          },
+          "range_episodes": [],
+          "longest_output_s": 0
+        },
+        {
+          "index": 6,
+          "label": "target",
+          "target_m": 0.8,
+          "trim_seconds": 2,
+          "start_s": 32,
+          "end_s": 34,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 6,
+          "range_frames": 6,
+          "range_coverage": 0.3,
+          "range_cm_p05_median_p95": [
+            73.15908181327467,
+            75.15472387792066,
+            80.67796862225471
+          ],
+          "conditional_mae_cm": 4.5497488611233665,
+          "conditional_bias_cm": -3.955582263554973,
+          "within_5cm_frames": 4,
+          "errors_over_10cm": 0,
+          "accepted_bins": {
+            "2": 6
+          },
+          "reasons": {
+            "no_candidate_above_noise": 11,
+            "checking_persistence": 3,
+            "cfar_peak_uncalibrated": 6
+          },
+          "range_episodes": [
+            {
+              "start_index": 14,
+              "end_index": 19,
+              "frames": 6,
+              "duration_s": 0.6
+            }
+          ],
+          "longest_output_s": 0.6
+        },
+        {
+          "index": 7,
+          "label": "empty",
+          "target_m": null,
+          "trim_seconds": 2,
+          "start_s": 38,
+          "end_s": 40,
+          "truncated": false,
+          "frames": 20,
+          "presence_frames": 2,
+          "range_frames": 2,
+          "range_coverage": 0.1,
+          "range_cm_p05_median_p95": [
+            119.6269109639656,
+            121.41413724777154,
+            123.20136353157747
+          ],
+          "conditional_mae_cm": null,
+          "conditional_bias_cm": null,
+          "within_5cm_frames": null,
+          "errors_over_10cm": null,
+          "accepted_bins": {
+            "3": 1,
+            "4": 1
+          },
+          "reasons": {
+            "no_candidate_above_noise": 14,
+            "checking_persistence": 4,
+            "cfar_peak_uncalibrated": 2
+          },
+          "range_episodes": [
+            {
+              "start_index": 18,
+              "end_index": 19,
+              "frames": 2,
+              "duration_s": 0.2
+            }
+          ],
+          "longest_output_s": 0.2
+        }
+      ]
+    }
+  ]
+}

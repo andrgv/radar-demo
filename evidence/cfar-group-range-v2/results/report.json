@@ -1,0 +1,1622 @@
+{
+  "settings": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "source_sha256": {
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "radar_min/cfar.py": "20d3dc522291dd86303757956eff6965022b3321bcd181488da90aea8799ee3c",
+    "radar_min/cfar_range.py": "d6b049cc35a8833067006c793a8bfc43b4452d10ef028fa22b4e70acd206a726",
+    "tools/evaluate_cfar_group_range.py": "377136a3fd780a98c836b74450ac5c34c14c6d88306ff4004c4a9a767c99a07b",
+    "evidence/cfar-group-range-v2/baseline_cfar.py": "9ada47a1153247fe9102e21732bcd37361a936ba9c6746649c8778fbf6c3123c"
+  },
+  "baseline_source": "evidence/cfar-group-range-v2/baseline_cfar.py",
+  "thresholds_retuned": false,
+  "interval_labels_approximate": true,
+  "session_note": "Fresh recordings mix states; whole-recording metrics are output counts, not empty false-alarm scores. Only approximate interior windows carry state labels.",
+  "sessions": [
+    {
+      "recording": "recordings/hpf350-b-empty-before",
+      "split": "tune",
+      "target_m": null,
+      "group": "hpf350-b",
+      "raw_sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.3955001011490822,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.3976249136030674,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-30cm",
+      "split": "tune",
+      "target_m": 0.3,
+      "group": "hpf350-b",
+      "raw_sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 4.758545855072464,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4081670194864273,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 2.0368411775520285,
+        "range_cm_p05_median_p95": [
+          25.922299726418967,
+          28.358103799701436,
+          32.43726746516202
+        ],
+        "median_processing_ms": 2.055916003882885,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm",
+      "split": "tune",
+      "target_m": 0.4,
+      "group": "hpf350-b",
+      "raw_sha256": "231db1f07daa8c85011fc2a5dbe05555a4456c33afe47997e1bfdf56e78acb99",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4094173200428486,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 13.196726073230074,
+        "range_cm_p05_median_p95": [
+          24.71024793910321,
+          27.0339305934587,
+          28.379615998776845
+        ],
+        "median_processing_ms": 2.032875083386898,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm-repeat",
+      "split": "tune",
+      "target_m": 0.4,
+      "group": "hpf350-b",
+      "raw_sha256": "2e2a43e952fa886cf09f993d8045ec99d373caaa79f8fa2197c96351693bc1c2",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40466710925102234,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 15.123330515679598,
+        "range_cm_p05_median_p95": [
+          22.642306934913258,
+          24.812053409231243,
+          26.94735301602585
+        ],
+        "median_processing_ms": 2.068290952593088,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-50cm",
+      "split": "tune",
+      "target_m": 0.5,
+      "group": "hpf350-b",
+      "raw_sha256": "2c61ac6d504822c82a0976b07448432231667e09f52614201a842a429fe21324",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 59,
+        "range_frames": 59,
+        "presence_rate": 0.5841584158415841,
+        "range_coverage": 0.5841584158415841,
+        "conditional_mae_cm": 16.111075344632766,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.40508294478058815,
+        "presence_episodes": 12,
+        "longest_presence_s": 1.2
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 3.727899503609349,
+        "range_cm_p05_median_p95": [
+          44.672828557458104,
+          49.95300348878736,
+          57.87681757950113
+        ],
+        "median_processing_ms": 2.171291969716549,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-empty-after",
+      "split": "tune",
+      "target_m": null,
+      "group": "hpf350-b",
+      "raw_sha256": "f0adffe3aca57151aa7ad26c81f9a2d6c03e4040a35ce73d63f73eff14929abd",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.39354199543595314,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.3994586877524853,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-before",
+      "split": "validation",
+      "target_m": null,
+      "group": "hpf350-a",
+      "raw_sha256": "a1d314376a295ec7c0845c3278e4d3eb100524187e11d79bfd7bdd59adfbc9a5",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 3,
+        "range_frames": 3,
+        "presence_rate": 0.0297029702970297,
+        "range_coverage": 0.0297029702970297,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          139.03418342028985,
+          139.03418342028985,
+          139.03418342028985
+        ],
+        "median_processing_ms": 0.3997501917183399,
+        "presence_episodes": 2,
+        "longest_presence_s": 0.2
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 3,
+        "range_frames": 3,
+        "presence_rate": 0.0297029702970297,
+        "range_coverage": 0.0297029702970297,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          147.825052601943,
+          150.0739132620833,
+          150.90321521548705
+        ],
+        "median_processing_ms": 0.40191737934947014,
+        "presence_episodes": 2,
+        "longest_presence_s": 0.2
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-30cm",
+      "split": "validation",
+      "target_m": 0.3,
+      "group": "hpf350-a",
+      "raw_sha256": "80be81bf707264d3c7947651f75f007ad79b17f469db50b955d559385e8968b9",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 95,
+        "range_frames": 95,
+        "presence_rate": 0.9405940594059405,
+        "range_coverage": 0.9405940594059405,
+        "conditional_mae_cm": 4.758545855072462,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4037502221763134,
+        "presence_episodes": 2,
+        "longest_presence_s": 9.2
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 95,
+        "range_frames": 95,
+        "presence_rate": 0.9405940594059405,
+        "range_coverage": 0.9405940594059405,
+        "conditional_mae_cm": 0.9485304277750354,
+        "range_cm_p05_median_p95": [
+          27.910292093261145,
+          29.11881271895243,
+          30.228069523750325
+        ],
+        "median_processing_ms": 2.147749997675419,
+        "presence_episodes": 2,
+        "longest_presence_s": 9.2
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm",
+      "split": "validation",
+      "target_m": 0.4,
+      "group": "hpf350-a",
+      "raw_sha256": "98e3665474b86f95aea915880a846558ff34f02b4274babbf09e98118356a9f6",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4027090035378933,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 2.5777755907890034,
+        "range_cm_p05_median_p95": [
+          34.56510397584416,
+          37.88007378135887,
+          42.38327561560673
+        ],
+        "median_processing_ms": 2.0563751459121704,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm-repeat",
+      "split": "validation",
+      "target_m": 0.4,
+      "group": "hpf350-a",
+      "raw_sha256": "3187d01a6fe50e336fbc0d58275cf219eccf2ce8006c902f184d77b51d49388a",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.39895810186862946,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 2.325790339943703,
+        "range_cm_p05_median_p95": [
+          34.19885201213052,
+          38.37117841676388,
+          41.59202503592651
+        ],
+        "median_processing_ms": 2.0543751306831837,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-50cm",
+      "split": "validation",
+      "target_m": 0.5,
+      "group": "hpf350-a",
+      "raw_sha256": "10bf03f3f435fc2215c939b9638d4fa190b54539b902d69c358c83ac6f8440f7",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 90,
+        "range_frames": 90,
+        "presence_rate": 0.8910891089108911,
+        "range_coverage": 0.8910891089108911,
+        "conditional_mae_cm": 15.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4054578021168709,
+        "presence_episodes": 4,
+        "longest_presence_s": 7.1
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 90,
+        "range_frames": 90,
+        "presence_rate": 0.8910891089108911,
+        "range_coverage": 0.8910891089108911,
+        "conditional_mae_cm": 21.995335780458873,
+        "range_cm_p05_median_p95": [
+          24.457114492981542,
+          27.66500169745764,
+          33.32812530765008
+        ],
+        "median_processing_ms": 2.1488750353455544,
+        "presence_episodes": 4,
+        "longest_presence_s": 7.1
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-after",
+      "split": "validation",
+      "target_m": null,
+      "group": "hpf350-a",
+      "raw_sha256": "a12b98fc6bee6bc413a886b06eacd584b558fb6cb9e7b73f700955b8d8ea4a13",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.39558298885822296,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.4008747637271881,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "hpf100-a",
+      "raw_sha256": "7d541e9cd8f6f01cc282ae8a6faecc35b524090a453f03a00a7150a29bbd416a",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 84,
+        "range_frames": 84,
+        "presence_rate": 0.8316831683168316,
+        "range_coverage": 0.8316831683168316,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40562497451901436,
+        "presence_episodes": 6,
+        "longest_presence_s": 4.3
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 84,
+        "range_frames": 78,
+        "presence_rate": 0.8316831683168316,
+        "range_coverage": 0.7722772277227723,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          26.117425417869608,
+          28.82014244380485,
+          31.217977777349844
+        ],
+        "median_processing_ms": 1.9810833036899567,
+        "presence_episodes": 6,
+        "longest_presence_s": 4.3
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "hpf100-a",
+      "raw_sha256": "5f8f382487970447f3d20018dd35d6d24f8de5fb31af955f174188edf0934853",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 4.758545855072464,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.3992919810116291,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 3.106278726566501,
+        "range_cm_p05_median_p95": [
+          31.834118419115246,
+          33.08283591860082,
+          34.3683155588002
+        ],
+        "median_processing_ms": 2.01662490144372,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "hpf100-a",
+      "raw_sha256": "9c101299bcc9653b76513877979fd03657d6b290d3df99d3f671fe56fce5b280",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40066614747047424,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 12.851557592424683,
+        "range_cm_p05_median_p95": [
+          25.213606930120235,
+          27.181024231962297,
+          29.120585716066124
+        ],
+        "median_processing_ms": 2.0109587348997593,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "hpf100-a",
+      "raw_sha256": "dc29cfe3d52e8b8e0614fc6bc6f251c9adc68b39d899f0f5e363c5c49adb8f89",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40012504905462265,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 13.559732200727348,
+        "range_cm_p05_median_p95": [
+          24.21779887142928,
+          26.474748739766156,
+          28.541321016936518
+        ],
+        "median_processing_ms": 1.9896668381989002,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "hpf100-a",
+      "raw_sha256": "e209055d71104027788aa1287f937e4fc0233cb8f5a158547f2c92c9807cefbd",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 93,
+        "range_frames": 93,
+        "presence_rate": 0.9207920792079208,
+        "range_coverage": 0.9207920792079208,
+        "conditional_mae_cm": 15.241454144927536,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4014577716588974,
+        "presence_episodes": 3,
+        "longest_presence_s": 6.0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 8.01815539561382,
+        "range_cm_p05_median_p95": [
+          38.05552664156585,
+          41.65414675136015,
+          48.19794348993138
+        ],
+        "median_processing_ms": 2.0333328284323215,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "hpf100-a",
+      "raw_sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34",
+      "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+      "before": {
+        "frames": 101,
+        "presence_frames": 91,
+        "range_frames": 91,
+        "presence_rate": 0.900990099009901,
+        "range_coverage": 0.900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40070805698633194,
+        "presence_episodes": 3,
+        "longest_presence_s": 5.7
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 94,
+        "range_frames": 91,
+        "presence_rate": 0.9306930693069307,
+        "range_coverage": 0.900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          26.566473344679594,
+          28.791218809723993,
+          31.25721662097633
+        ],
+        "median_processing_ms": 2.0270422101020813,
+        "presence_episodes": 2,
+        "longest_presence_s": 5.7
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-1",
+      "raw_sha256": "bc2e35cb109a941887a9926b6081cca4766c518da3289e64c74661a3307f90c4",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.39116619154810905,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.3932500258088112,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "distance-sweep-1",
+      "raw_sha256": "9b546b7141fb448d1f6d17b75401467a457a0f9d80b820d33910aaa177306184",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 93,
+        "range_frames": 93,
+        "presence_rate": 0.9207920792079208,
+        "range_coverage": 0.9207920792079208,
+        "conditional_mae_cm": 4.758545855072463,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4035406745970249,
+        "presence_episodes": 3,
+        "longest_presence_s": 8.7
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 96,
+        "range_frames": 96,
+        "presence_rate": 0.9504950495049505,
+        "range_coverage": 0.9504950495049505,
+        "conditional_mae_cm": 3.658085634755811,
+        "range_cm_p05_median_p95": [
+          28.11829771831192,
+          32.613593267573016,
+          37.751072345158484
+        ],
+        "median_processing_ms": 2.0091659389436245,
+        "presence_episodes": 2,
+        "longest_presence_s": 9.399999
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-1",
+      "raw_sha256": "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.4053749144077301,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 4.3291067187140975,
+        "range_cm_p05_median_p95": [
+          33.303277836054235,
+          35.55818241807899,
+          39.46404762112244
+        ],
+        "median_processing_ms": 2.0840000361204147,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-1",
+      "raw_sha256": "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40354207158088684,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 11.197259625851835,
+        "range_cm_p05_median_p95": [
+          24.585744653030638,
+          28.76846967213896,
+          32.196529196223985
+        ],
+        "median_processing_ms": 2.1012923680245876,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.9
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "distance-sweep-1",
+      "raw_sha256": "31095462fa839c0978e969c60207a106e863a39d7e95ac1cb717b7efac868792",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 80,
+        "range_frames": 80,
+        "presence_rate": 0.7920792079207921,
+        "range_coverage": 0.7920792079207921,
+        "conditional_mae_cm": 30.922409115942028,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          139.03418342028985
+        ],
+        "median_processing_ms": 0.4098745994269848,
+        "presence_episodes": 7,
+        "longest_presence_s": 3.3
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 80,
+        "range_frames": 80,
+        "presence_rate": 0.7920792079207921,
+        "range_coverage": 0.7920792079207921,
+        "conditional_mae_cm": 26.14823076124952,
+        "range_cm_p05_median_p95": [
+          36.25634340294234,
+          40.40844285847385,
+          138.5395030476435
+        ],
+        "median_processing_ms": 2.0939577370882034,
+        "presence_episodes": 7,
+        "longest_presence_s": 3.3
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-1",
+      "raw_sha256": "5d4c96a88fdb258afe1784cdee7f97c1d4535bd594eec36923c59719defcad79",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.398833304643631,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.3976249136030674,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-before",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-2",
+      "raw_sha256": "a9c152bf05a6039606d01d15ac4458b2c61be62cbcc5eafeacf3513b2760de41",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 1,
+        "range_frames": 1,
+        "presence_rate": 0.009900990099009901,
+        "range_coverage": 0.009900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          139.03418342028985,
+          139.03418342028985,
+          139.03418342028985
+        ],
+        "median_processing_ms": 0.3999592736363411,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.1
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 1,
+        "range_frames": 1,
+        "presence_rate": 0.009900990099009901,
+        "range_coverage": 0.009900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          135.02949639838388,
+          135.02949639838388,
+          135.02949639838388
+        ],
+        "median_processing_ms": 0.3974158316850662,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.1
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-30cm",
+      "split": "stress",
+      "target_m": 0.3,
+      "group": "distance-sweep-2",
+      "raw_sha256": "bb0be17653552ecb888b6c1475da7ff8c658ba1d7822517045d97b18d831a8be",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 83,
+        "range_frames": 83,
+        "presence_rate": 0.8217821782178217,
+        "range_coverage": 0.8217821782178217,
+        "conditional_mae_cm": 4.758545855072466,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.41224993765354156,
+        "presence_episodes": 3,
+        "longest_presence_s": 4.299999
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 95,
+        "range_frames": 93,
+        "presence_rate": 0.9405940594059405,
+        "range_coverage": 0.9207920792079208,
+        "conditional_mae_cm": 8.31049436744024,
+        "range_cm_p05_median_p95": [
+          22.733378551421737,
+          30.327224248117425,
+          51.868917738018595
+        ],
+        "median_processing_ms": 2.059333026409149,
+        "presence_episodes": 2,
+        "longest_presence_s": 8.0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-2",
+      "raw_sha256": "ae67cc5d5fd9e9aa93a4cad2a0c6ca47c9bcdabc922f5cdad87c7993daeddcdf",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 95,
+        "range_frames": 95,
+        "presence_rate": 0.9405940594059405,
+        "range_coverage": 0.9405940594059405,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40129199624061584,
+        "presence_episodes": 2,
+        "longest_presence_s": 7.2
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 95,
+        "range_frames": 95,
+        "presence_rate": 0.9405940594059405,
+        "range_coverage": 0.9405940594059405,
+        "conditional_mae_cm": 10.771565769302182,
+        "range_cm_p05_median_p95": [
+          25.396871955669504,
+          28.73368486933613,
+          33.35927744647843
+        ],
+        "median_processing_ms": 2.1392498165369034,
+        "presence_episodes": 2,
+        "longest_presence_s": 7.2
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm-repeat",
+      "split": "stress",
+      "target_m": 0.4,
+      "group": "distance-sweep-2",
+      "raw_sha256": "ef5c05cc19125c1abeb4663ea62845bdd2db93551ef20540f1e2b02f3fddb5c5",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 5.241454144927538,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.40675001218914986,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.899999
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 99,
+        "range_frames": 99,
+        "presence_rate": 0.9801980198019802,
+        "range_coverage": 0.9801980198019802,
+        "conditional_mae_cm": 11.287020193512236,
+        "range_cm_p05_median_p95": [
+          22.6183384300725,
+          28.25269558860327,
+          34.96240332373886
+        ],
+        "median_processing_ms": 2.2359169088304043,
+        "presence_episodes": 1,
+        "longest_presence_s": 9.899999
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-50cm",
+      "split": "stress",
+      "target_m": 0.5,
+      "group": "distance-sweep-2",
+      "raw_sha256": "0d320ffd8a0a95f7bd108b71e2496e485a3928c8730576144eb2fadc98f65af7",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 34,
+        "range_frames": 34,
+        "presence_rate": 0.33663366336633666,
+        "range_coverage": 0.33663366336633666,
+        "conditional_mae_cm": 19.13982957203751,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          69.51709171014492,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.4364163614809513,
+        "presence_episodes": 16,
+        "longest_presence_s": 0.500001
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 76,
+        "range_frames": 75,
+        "presence_rate": 0.7524752475247525,
+        "range_coverage": 0.7425742574257426,
+        "conditional_mae_cm": 8.256224634637494,
+        "range_cm_p05_median_p95": [
+          43.22579224138254,
+          56.057724654162634,
+          68.9687608077146
+        ],
+        "median_processing_ms": 2.155083231627941,
+        "presence_episodes": 8,
+        "longest_presence_s": 3.3
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-after",
+      "split": "stress",
+      "target_m": null,
+      "group": "distance-sweep-2",
+      "raw_sha256": "aef771bcfb26d98bf5f38dfe09fa60ac3d5d81c62c758c7c4f5c6564519fa07e",
+      "config_fingerprint": "61e73bb01fec0114111f44aef0b2ccba43cfab623bf60bfca4a60ad9f2b7525e",
+      "before": {
+        "frames": 101,
+        "presence_frames": 1,
+        "range_frames": 1,
+        "presence_rate": 0.009900990099009901,
+        "range_coverage": 0.009900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          34.75854585507246
+        ],
+        "median_processing_ms": 0.39354199543595314,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.1
+      },
+      "after": {
+        "frames": 101,
+        "presence_frames": 1,
+        "range_frames": 1,
+        "presence_rate": 0.009900990099009901,
+        "range_coverage": 0.009900990099009901,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          32.2708665976637,
+          32.2708665976637,
+          32.2708665976637
+        ],
+        "median_processing_ms": 0.3947499208152294,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.1
+      }
+    },
+    {
+      "recording": "recordings/gui-20261109-215257-942086/live-001",
+      "split": "fresh",
+      "target_m": null,
+      "raw_sha256": "219dcb30dbb48ed851b61ef577e5f479265f4c1281d3b0e83193837b1073b7eb",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 726,
+        "presence_frames": 408,
+        "range_frames": 408,
+        "presence_rate": 0.5619834710743802,
+        "range_coverage": 0.5619834710743802,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          69.51709171014492,
+          104.27563756521741
+        ],
+        "median_processing_ms": 0.40525011718273163,
+        "presence_episodes": 59,
+        "longest_presence_s": 10.1
+      },
+      "after": {
+        "frames": 726,
+        "presence_frames": 576,
+        "range_frames": 570,
+        "presence_rate": 0.7933884297520661,
+        "range_coverage": 0.7851239669421488,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          37.17246219788959,
+          74.20784573283139,
+          101.60541419722196
+        ],
+        "median_processing_ms": 2.0271039102226496,
+        "presence_episodes": 24,
+        "longest_presence_s": 23.3
+      }
+    },
+    {
+      "recording": "recordings/gui-20261109-215257-942086/live-002",
+      "split": "fresh",
+      "target_m": null,
+      "raw_sha256": "8b82ed0ad8d1e669cf8389287016b12b40d8007c46b35e143aa24fe8be6f2912",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 290,
+        "presence_frames": 186,
+        "range_frames": 186,
+        "presence_rate": 0.6413793103448275,
+        "range_coverage": 0.6413793103448275,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          69.51709171014492,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.4028335679322481,
+        "presence_episodes": 25,
+        "longest_presence_s": 4.6
+      },
+      "after": {
+        "frames": 290,
+        "presence_frames": 261,
+        "range_frames": 260,
+        "presence_rate": 0.9,
+        "range_coverage": 0.896551724137931,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          35.487585951442576,
+          57.0031380837585,
+          76.48937969774825
+        ],
+        "median_processing_ms": 2.0524784922599792,
+        "presence_episodes": 9,
+        "longest_presence_s": 12.1
+      }
+    },
+    {
+      "recording": "recordings/gui-20261109-215257-942086/live-003",
+      "split": "fresh",
+      "target_m": null,
+      "raw_sha256": "9d94d5e47605c86506bbc3f6b80fff2ca86ae4044c252e3899611bf85bdd6a90",
+      "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+      "before": {
+        "frames": 301,
+        "presence_frames": 89,
+        "range_frames": 89,
+        "presence_rate": 0.2956810631229236,
+        "range_coverage": 0.2956810631229236,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          104.27563756521741
+        ],
+        "median_processing_ms": 0.4100422374904156,
+        "presence_episodes": 21,
+        "longest_presence_s": 1.6
+      },
+      "after": {
+        "frames": 301,
+        "presence_frames": 144,
+        "range_frames": 144,
+        "presence_rate": 0.47840531561461797,
+        "range_coverage": 0.47840531561461797,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          46.934774748007676,
+          52.52397670502347,
+          95.80191140640271
+        ],
+        "median_processing_ms": 0.4726247861981392,
+        "presence_episodes": 8,
+        "longest_presence_s": 6.5
+      }
+    }
+  ],
+  "intervals": [
+    {
+      "recording": "live-003",
+      "label": "1: empty",
+      "target_m": null,
+      "start_s": 1,
+      "end_s": 5,
+      "before": {
+        "frames": 40,
+        "presence_frames": 2,
+        "range_frames": 2,
+        "presence_rate": 0.05,
+        "range_coverage": 0.05,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          69.51709171014492,
+          69.51709171014492,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.401895958930254,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.2
+      },
+      "after": {
+        "frames": 40,
+        "presence_frames": 3,
+        "range_frames": 3,
+        "presence_rate": 0.075,
+        "range_coverage": 0.075,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          71.01622463930423,
+          81.39103038921174,
+          84.36975066239168
+        ],
+        "median_processing_ms": 0.4044375382363796,
+        "presence_episodes": 2,
+        "longest_presence_s": 0.2
+      }
+    },
+    {
+      "recording": "live-003",
+      "label": "2: 50 cm",
+      "target_m": 0.5,
+      "start_s": 7,
+      "end_s": 11,
+      "before": {
+        "frames": 40,
+        "presence_frames": 25,
+        "range_frames": 25,
+        "presence_rate": 0.625,
+        "range_coverage": 0.625,
+        "conditional_mae_cm": 15.925556155362319,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.40745874866843224,
+        "presence_episodes": 7,
+        "longest_presence_s": 1.0
+      },
+      "after": {
+        "frames": 40,
+        "presence_frames": 40,
+        "range_frames": 40,
+        "presence_rate": 1.0,
+        "range_coverage": 1.0,
+        "conditional_mae_cm": 2.248062977233487,
+        "range_cm_p05_median_p95": [
+          47.90337936215037,
+          50.7621182139254,
+          57.063369224226335
+        ],
+        "median_processing_ms": 2.0133126527071,
+        "presence_episodes": 1,
+        "longest_presence_s": 4.0
+      }
+    },
+    {
+      "recording": "live-003",
+      "label": "3: empty",
+      "target_m": null,
+      "start_s": 13,
+      "end_s": 17,
+      "before": {
+        "frames": 40,
+        "presence_frames": 0,
+        "range_frames": 0,
+        "presence_rate": 0.0,
+        "range_coverage": 0.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": null,
+        "median_processing_ms": 0.6143124774098396,
+        "presence_episodes": 0,
+        "longest_presence_s": 0
+      },
+      "after": {
+        "frames": 40,
+        "presence_frames": 1,
+        "range_frames": 1,
+        "presence_rate": 0.025,
+        "range_coverage": 0.025,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          100.14415823553531,
+          100.14415823553531,
+          100.14415823553531
+        ],
+        "median_processing_ms": 0.40624989196658134,
+        "presence_episodes": 1,
+        "longest_presence_s": 0.1
+      }
+    },
+    {
+      "recording": "live-003",
+      "label": "4: 50 cm",
+      "target_m": 0.5,
+      "start_s": 19,
+      "end_s": 23,
+      "before": {
+        "frames": 40,
+        "presence_frames": 23,
+        "range_frames": 23,
+        "presence_rate": 0.575,
+        "range_coverage": 0.575,
+        "conditional_mae_cm": 16.542735143037177,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.432104105129838,
+        "presence_episodes": 5,
+        "longest_presence_s": 1.4
+      },
+      "after": {
+        "frames": 40,
+        "presence_frames": 40,
+        "range_frames": 40,
+        "presence_rate": 1.0,
+        "range_coverage": 1.0,
+        "conditional_mae_cm": 3.461318075563824,
+        "range_cm_p05_median_p95": [
+          46.42085044119912,
+          49.955326455870946,
+          57.36664827839468
+        ],
+        "median_processing_ms": 2.0152500364929438,
+        "presence_episodes": 1,
+        "longest_presence_s": 4.0
+      }
+    },
+    {
+      "recording": "live-003",
+      "label": "5: empty",
+      "target_m": null,
+      "start_s": 25,
+      "end_s": 29,
+      "before": {
+        "frames": 40,
+        "presence_frames": 5,
+        "range_frames": 5,
+        "presence_rate": 0.125,
+        "range_coverage": 0.125,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          104.27563756521741,
+          104.27563756521741,
+          104.27563756521741
+        ],
+        "median_processing_ms": 0.40385453030467033,
+        "presence_episodes": 2,
+        "longest_presence_s": 0.4
+      },
+      "after": {
+        "frames": 40,
+        "presence_frames": 6,
+        "range_frames": 6,
+        "presence_rate": 0.15,
+        "range_coverage": 0.15,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          93.22251214799381,
+          96.39823717316077,
+          100.85544398925911
+        ],
+        "median_processing_ms": 0.40904153138399124,
+        "presence_episodes": 2,
+        "longest_presence_s": 0.5
+      }
+    },
+    {
+      "recording": "live-002",
+      "label": "initial empty",
+      "target_m": null,
+      "start_s": 1,
+      "end_s": 3,
+      "before": {
+        "frames": 19,
+        "presence_frames": 16,
+        "range_frames": 16,
+        "presence_rate": 0.8421052631578947,
+        "range_coverage": 0.8421052631578947,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          69.51709171014492,
+          69.51709171014492,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.40462473407387733,
+        "presence_episodes": 2,
+        "longest_presence_s": 1.0
+      },
+      "after": {
+        "frames": 19,
+        "presence_frames": 16,
+        "range_frames": 16,
+        "presence_rate": 0.8421052631578947,
+        "range_coverage": 0.8421052631578947,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          72.59536469251489,
+          74.51606106318997,
+          78.25638020785846
+        ],
+        "median_processing_ms": 2.170292194932699,
+        "presence_episodes": 2,
+        "longest_presence_s": 1.0
+      }
+    },
+    {
+      "recording": "live-002",
+      "label": "50 cm target",
+      "target_m": 0.5,
+      "start_s": 8,
+      "end_s": 24,
+      "before": {
+        "frames": 160,
+        "presence_frames": 83,
+        "range_frames": 83,
+        "presence_rate": 0.51875,
+        "range_coverage": 0.51875,
+        "conditional_mae_cm": 16.889892724288462,
+        "range_cm_p05_median_p95": [
+          34.75854585507246,
+          34.75854585507246,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.4018540494143963,
+        "presence_episodes": 18,
+        "longest_presence_s": 3.6
+      },
+      "after": {
+        "frames": 160,
+        "presence_frames": 141,
+        "range_frames": 141,
+        "presence_rate": 0.88125,
+        "range_coverage": 0.88125,
+        "conditional_mae_cm": 7.044228047813101,
+        "range_cm_p05_median_p95": [
+          33.25846212125846,
+          50.74561349623926,
+          62.17212874749153
+        ],
+        "median_processing_ms": 2.0285211503505707,
+        "presence_episodes": 7,
+        "longest_presence_s": 7.0
+      }
+    },
+    {
+      "recording": "live-002",
+      "label": "ending empty",
+      "target_m": null,
+      "start_s": 27,
+      "end_s": 29.1,
+      "before": {
+        "frames": 21,
+        "presence_frames": 21,
+        "range_frames": 21,
+        "presence_rate": 1.0,
+        "range_coverage": 1.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          69.51709171014492,
+          69.51709171014492,
+          69.51709171014492
+        ],
+        "median_processing_ms": 0.4266249015927315,
+        "presence_episodes": 1,
+        "longest_presence_s": 2.1
+      },
+      "after": {
+        "frames": 21,
+        "presence_frames": 21,
+        "range_frames": 21,
+        "presence_rate": 1.0,
+        "range_coverage": 1.0,
+        "conditional_mae_cm": null,
+        "range_cm_p05_median_p95": [
+          70.18495264314532,
+          73.02655569942651,
+          78.97717091055667
+        ],
+        "median_processing_ms": 2.035415731370449,
+        "presence_episodes": 1,
+        "longest_presence_s": 2.1
+      }
+    }
+  ],
+  "historical_summary": {
+    "before": {
+      "target_range_coverage": 0.8965346534653463,
+      "target_presence_rate": 0.8965346534653463,
+      "empty_presence_rate": 0.1782178217821782,
+      "empty_range_output_rate": 0.1782178217821782
+    },
+    "after": {
+      "target_range_coverage": 0.9460396039603964,
+      "target_presence_rate": 0.9475247524752477,
+      "empty_presence_rate": 0.18118811881188118,
+      "empty_range_output_rate": 0.1722772277227723
+    }
+  }
+}
