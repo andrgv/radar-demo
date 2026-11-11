@@ -114,6 +114,55 @@ def noise_threshold(power, factor):
     return threshold
 
 
+def range_doppler_peaks(power, thresholds):
+    """Thresholded 3x3 local maxima, with circular Doppler but bounded range.
+
+    Adjacent equal maxima choose the lowest flattened index, including across
+    the Doppler seam. The supplied thresholds are empirical, not a Pfa model.
+    """
+    doppler_count, range_count = power.shape
+    peaks = []
+    for doppler_bin, offset in np.argwhere(power[:, 2:-1] > thresholds[:, 2:-1]):
+        range_bin = int(offset + 2)
+        doppler_bin = int(doppler_bin)
+        rows = np.array([(doppler_bin - 1) % doppler_count, doppler_bin,
+                         (doppler_bin + 1) % doppler_count])
+        columns = np.arange(range_bin - 1, range_bin + 2)
+        local = power[rows[:, None], columns]
+        peak = power[doppler_bin, range_bin]
+        if peak <= 0 or peak < local.max():
+            continue
+        indices = rows[:, None] * range_count + columns
+        if doppler_bin * range_count + range_bin != indices[local == peak].min():
+            continue
+        peaks.append((doppler_bin, range_bin))
+    return peaks
+
+
+def moving_noise_thresholds(power, factor):
+    """Separable median gates in range and circular Doppler, in power units.
+
+    Use the larger gate so a quiet Doppler row cannot promote the sidelobes of
+    a strong return in the same range cell. Exclude the central three Doppler
+    bins from both detection and Doppler training. Two guard bins protect the
+    CUT in each direction. No available Doppler references means no detection.
+    """
+    thresholds = np.array([noise_threshold(row, factor) for row in power])
+    count = len(power)
+    indices = np.arange(count)
+    central = abs(indices - count // 2) <= 1
+    for index in indices:
+        distance = abs(indices - index)
+        circular_distance = np.minimum(distance, count - distance)
+        training = (circular_distance > 2) & ~central
+        if central[index] or not training.any():
+            thresholds[index] = np.inf
+        else:
+            doppler_noise = np.maximum(np.median(power[training], axis=0), 1e-10)
+            thresholds[index] = np.maximum(thresholds[index], doppler_noise * factor)
+    return thresholds
+
+
 class Processor:
     def __init__(self, config, phase_probe_range=None, background=None, spatial_map=False, point_cloud=False):
         self.config = config.validate()
@@ -160,10 +209,26 @@ class Processor:
         center = len(spectrum) // 2
         moving_spectrum = spectrum - spectrum.mean(axis=0, keepdims=True)
         moving_fft = np.fft.fftshift(np.fft.fft(moving_spectrum * slow_window[:, None, None], axis=0), axes=0) / slow_window.sum()
-        moving_power = np.mean(abs(moving_fft)**2, axis=2)
+        unmasked_moving_power = np.mean(abs(moving_fft)**2, axis=2)
+        moving_power = unmasked_moving_power.copy()
         moving_power[max(0, center - 1):center + 2] = 0
         thresholds = noise_threshold(power, 10**(config.snr_db / 10))
-        moving_thresholds = noise_threshold(moving_power.max(axis=0), 10**(config.snr_db / 10))
+        moving_profile = moving_power.max(axis=0)
+        if config.moving_detector == "range_doppler":
+            moving_thresholds = moving_noise_thresholds(unmasked_moving_power, 10**(config.snr_db / 10))
+            # Keep the unmasked neighbors for peak tests: zeroing the notch can
+            # turn the skirt of a central lobe into a false peak at its edge.
+            moving_peaks = range_doppler_peaks(unmasked_moving_power, moving_thresholds)
+        else:
+            profile_thresholds = noise_threshold(moving_profile, 10**(config.snr_db / 10))
+            moving_thresholds = np.broadcast_to(profile_thresholds, moving_power.shape)
+            moving_peaks = [(int(moving_power[:, r].argmax()), r)
+                for r in range(2, len(power) - 1)
+                if moving_profile[r] > profile_thresholds[r]
+                and moving_profile[r] >= max(moving_profile[r - 1], moving_profile[r + 1])]
+        moving_by_range = {}
+        for doppler_bin, range_bin in moving_peaks:
+            moving_by_range.setdefault(range_bin, []).append(doppler_bin)
         probe = None
         if self.probe_bin is not None:
             range_bin = self.probe_bin
@@ -189,29 +254,33 @@ class Processor:
                 tuple(float(value) for value in np.degrees(np.angle(
                     coherent_channels(spectrum[:, range_bin])[1:]))))
         detections = []
-        moving_profile = moving_power.max(axis=0)
         for range_bin in range(2, len(power) - 1):
             static_peak = (power[range_bin] >= thresholds[range_bin] and
                 power[range_bin] >= max(power[range_bin - 1], power[range_bin + 1]))
-            moving_peak = (moving_profile[range_bin] > moving_thresholds[range_bin] and
-                moving_profile[range_bin] >= max(moving_profile[range_bin - 1], moving_profile[range_bin + 1]))
-            if not static_peak and not moving_peak:
+            if not static_peak and range_bin not in moving_by_range:
                 continue
             static_channels = spectrum[:, range_bin].mean(axis=0)
             static_power = float(np.mean(abs(static_channels)**2))
-            moving_bin = int(moving_power[:, range_bin].argmax())
             candidates = []
-            if static_peak and static_power > max(thresholds[range_bin] * 0.5, moving_power[moving_bin, range_bin] * 0.1):
-                candidates.append((False, center, coherent_channels(angle_spectrum[:, range_bin]), static_power))
-            if moving_peak:
-                candidates.append((True, moving_bin, config.angle_matrix @ moving_fft[moving_bin, range_bin], float(moving_power[moving_bin, range_bin])))
-            for moving, doppler_bin, channels, peak_power in candidates:
+            if static_peak and static_power > max(thresholds[range_bin] * 0.5, moving_profile[range_bin] * 0.1):
+                # The coherent mean selects zero Doppler. A covariance over all
+                # chirps also includes movers and biases a co-range static AoA.
+                candidates.append((False, center, config.angle_matrix @ static_channels,
+                                   static_power, thresholds[range_bin]))
+            for moving_bin in moving_by_range.get(range_bin, []):
+                candidates.append((True, moving_bin, config.angle_matrix @ moving_fft[moving_bin, range_bin],
+                                   float(moving_power[moving_bin, range_bin]), moving_thresholds[moving_bin, range_bin]))
+            for moving, doppler_bin, channels, peak_power, threshold in candidates:
                 azimuth, elevation, direction, valid = estimate_angle(channels, config)
-                distance = interpolated_range(moving_profile if moving else power, range_bin, config)
+                range_profile = power
+                if moving:
+                    range_profile = (moving_power[doppler_bin] if config.moving_detector == "range_doppler"
+                                     else moving_profile)
+                distance = interpolated_range(range_profile, range_bin, config)
                 velocity=(float(velocities[doppler_bin]) if moving else 0.0) if config.velocity_scale_verified else None
                 detections.append(Detection(distance, velocity,
                     azimuth, elevation, tuple(distance * value for value in direction),
-                    float(10 * np.log10(max(peak_power, 1e-12) / max(thresholds[range_bin] / 10**(config.snr_db / 10), 1e-12))),
+                    float(10 * np.log10(max(peak_power, 1e-12) / max(threshold / 10**(config.snr_db / 10), 1e-12))),
                     float(10 * np.log10(max(peak_power, 1e-12))), moving, valid))
         beam = np.einsum("cra,ak->crk", angle_spectrum, self.steering.conj(), optimize=True) / 3
         heatmap = np.mean(abs(beam)**2, axis=0)

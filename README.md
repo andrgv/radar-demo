@@ -49,4 +49,12 @@ The hardware configuration file contains **illustrative, unverified** timing and
 
 Read [wire format and processing limitations](docs/DESIGN.md), [material collection and GlassFormer investigation](docs/GLASS_RESEARCH.md), and [local validation evidence](docs/VALIDATION.md).
 
+See [detection research and the carly implementation](docs/DETECTION_RESEARCH.md)
+for the sensor/configuration audit, algorithm recommendations and synthetic
+comparison. Try the experimental main detector with
+`python -m radar gui --synthetic --moving-detector range_doppler` or add
+`--moving-detector range_doppler` to a replay command. It preserves separate
+moving peaks at the same range; the existing `range_profile` mode remains the
+default pending measured-scene evaluation.
+
 For the current hardware investigation, use the documented [physical antenna geometry](docs/ANTENNA_GEOMETRY.md), [experimental static background subtraction](docs/STATIC_BACKGROUND.md), and [guided angular sweep](docs/ANGULAR_SWEEP.md). The sweep checks measured left/right/up positions and independent validation poses before generating any angle calibration; it is not a moving-sensor point-cloud mapper.

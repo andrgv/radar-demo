@@ -34,12 +34,15 @@ class Config:
     probe_search_bins: int = 0
     chirp_timing_verified: bool = False
     carrier_frequency_verified: bool = False
+    moving_detector: str = "range_profile"
 
     @property
     def velocity_scale_verified(self):
         return self.chirp_timing_verified and self.carrier_frequency_verified
 
     def validate(self):
+        if self.moving_detector not in ("range_profile", "range_doppler"):
+            raise ValueError("Moving detector must be range_profile or range_doppler")
         if type(self.chirp_timing_verified) is not bool or type(self.carrier_frequency_verified) is not bool:
             raise ValueError('Timing and carrier verification flags must be booleans')
         if type(self.probe_search_bins) is not int or not 0 <= self.probe_search_bins <= 3:

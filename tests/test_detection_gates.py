@@ -46,4 +46,5 @@ class DetectionGateTests(unittest.TestCase):
             result = Processor(config).process(frame)
         moving = [item for item in result.detections if item.moving]
         self.assertTrue(any(abs(item.range_m - config.ranges[12]) < 0.03 for item in moving))
+        self.assertTrue(all(item.snr_db >= config.snr_db for item in moving))
         self.assertFalse(any(not item.moving for item in result.detections))

@@ -43,6 +43,9 @@ def main(argv=None):
     record.add_argument("--background", metavar="RECORDING_OR_NPZ")
     analyze = commands.add_parser("analyze")
     analyze.add_argument("recording")
+    for command in (gui, record, analyze):
+        command.add_argument("--moving-detector", choices=("range_profile", "range_doppler"),
+                             help="Override moving detection; range_doppler is experimental")
     diagnostic = commands.add_parser("diagnose", help="Inspect raw ADC health and per-RX spectral bins")
     diagnostic.add_argument("recording")
     calibration = commands.add_parser("calibrate")
@@ -87,6 +90,8 @@ def main(argv=None):
         config = Config.load(arguments.config) if arguments.config else (
             Config.load(Path(arguments.replay) / "config.json") if arguments.replay else
             Config(chirp_timing_verified=True,carrier_frequency_verified=True))
+        if arguments.moving_detector is not None:
+            config = replace(config, moving_detector=arguments.moving_detector).validate()
         if arguments.mount_roll is not None:
             config = replace(config, mount_roll_deg=arguments.mount_roll).validate()
         metadata = json.loads(Path(arguments.metadata).read_text()) if arguments.metadata else None
@@ -112,6 +117,8 @@ def main(argv=None):
     elif arguments.command == "record":
         from .acquisition import Source, paced_frames
         config = Config.load(arguments.config)
+        if arguments.moving_detector is not None:
+            config = replace(config, moving_detector=arguments.moving_detector).validate()
         metadata = json.loads(Path(arguments.metadata).read_text(encoding="utf-8"))
         from .background import SpectralBackground
         background = SpectralBackground.from_path(arguments.background, config) if arguments.background else None
@@ -140,6 +147,8 @@ def main(argv=None):
         print(json.dumps(diagnose(arguments.recording), indent=2))
     elif arguments.command == "analyze":
         config = Config.load(Path(arguments.recording) / "config.json")
+        if arguments.moving_detector is not None:
+            config = replace(config, moving_detector=arguments.moving_detector).validate()
         snapshot = Path(arguments.recording) / "spectral-background.npz"
         from .background import SpectralBackground
         background = SpectralBackground.from_path(snapshot, config) if snapshot.exists() else None
@@ -149,7 +158,8 @@ def main(argv=None):
         for frame in replay(arguments.recording):
             result = processor.process(frame)
             count += 1
-        print(json.dumps({"frames": count, "last_features": result.features if result else {},
+        print(json.dumps({"frames": count, "moving_detector": config.moving_detector,
+            "last_features": result.features if result else {},
             "last_detections": [asdict(item) for item in result.detections] if result else []}, indent=2))
     elif arguments.command == "calibrate":
         from .calibration import calibrate_channels

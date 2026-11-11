@@ -49,6 +49,15 @@ ADC shape is `(chirps, samples, 3)`. Per-chirp fast-time mean removal suppresses
 
 A second Hann window precedes the slow-time complex FFT. Radial velocity is `doppler_frequency*c/(2*carrier)`. The full range–Doppler image retains zero Doppler. Detection also uses a slow-time mean-subtracted path for moving objects. The stationary path uses coherent mean channel amplitudes and the moving path uses the strongest noncentral Doppler return at each range peak. A local median reference with two guard bins and up to ten reference bins per side supplies an adjustable SNR threshold; it is **not a statistically calibrated CFAR false-alarm probability**. A stationary candidate must exceed 10% of the moving peak power to suppress finite-burst leakage. Very slow movers within ±1 Doppler bin, weak stationary returns beside strong movers, and multiple movers at one range are limitations of this baseline.
 
+The opt-in `moving_detector="range_doppler"` mode retains separate local peaks
+using range and circular-Doppler median gates. It interpolates each mover's range
+within that Doppler row. Both modes now report moving SNR against the accepting
+moving gate, and use the coherent zero-Doppler mean for stationary angle
+estimation. Physical velocity is emitted only when timing and carrier are
+verified. See [detection research](DETECTION_RESEARCH.md) for the algorithm,
+empirical validation and remaining limits; the separate point-cloud extractor
+is unchanged.
+
 `geometry_wavelengths` gives each RX's right/up phase-center coordinate in carrier wavelengths, in actual FIFO order. The two relative phases to RX1 solve `phase=2*pi*baseline*direction` for right/up direction cosines; forward is the positive square root. Azimuth is `atan2(right,forward)` and elevation is `asin(up)`. Points outside the unit direction disk are marked invalid. There is no two-way factor in receive-baseline AoA. This convention assumes incoming FFT phase matches the positive simulated steering convention; confirm polarity experimentally. Configure half-wavelength-or-shorter independent baselines for unambiguous principal-phase operation. Longer baselines require a phase-unwrapping/array-search method not implemented here. Rear-hemisphere ambiguity is resolved by assuming targets in front of the board.
 
 Three receivers provide two phase baselines, not a dense imaging array. Unresolved coherent reflectors/multipath bias phase estimates, and many objects cannot be resolved in one range–Doppler cell. The heatmap is conventional beam power on the elevation-zero slice, not an independent high-resolution image or an elevation marginal. The 3D viewer shows only angle-valid detections; unverified axes are prominently marked. Calibration does not fix insufficient aperture.

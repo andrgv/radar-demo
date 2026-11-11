@@ -20,3 +20,8 @@ class SourceSelectionTests(unittest.TestCase):
     def test_live_and_simulation_are_mutually_exclusive(self):
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
             main(["gui", "--synthetic", "--port", "COM7"])
+
+    @patch("radar.gui.run", return_value=0)
+    def test_experimental_detector_override_reaches_processor_configuration(self, run):
+        self.assertEqual(main(["gui", "--synthetic", "--moving-detector", "range_doppler"]), 0)
+        self.assertEqual(run.call_args.args[0].moving_detector, "range_doppler")
