@@ -1,0 +1,9 @@
+{
+  "serial_port": "/dev/cu.usbmodem2103",
+  "config_path": "configs/exploratory-roll90-phase.json",
+  "min_range_m": 0.5,
+  "max_range_m": 3.0,
+  "enable_angles": true,
+  "stale_after_s": 1.0,
+  "reconnect_delay_s": 1.0
+}

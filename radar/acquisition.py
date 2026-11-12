@@ -16,8 +16,12 @@ class Source:
         self.transport_recorder = None
         if port:
             self.serial = serial.Serial(port, 2000000, timeout=0.1, write_timeout=1)
-            self.serial.reset_input_buffer()
-            self.serial.write(b"B")
+            try:
+                self.serial.reset_input_buffer()
+                self.serial.write(b"B")
+            except Exception:
+                self.serial.close()
+                raise
 
     def read(self):
         if self.serial:

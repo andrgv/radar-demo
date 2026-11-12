@@ -1,3 +1,5 @@
+> **Viam integration (`demo-viam`):** See [the UPenn mmWave setup guide](docs/VIAM.md) for registration, builds, radar echoes, angle configuration and USB recovery.
+
 > **Baseline-free range detection:** [CA-CFAR mode](docs/CFAR_RANGE.md) adds live/replay operation without an empty capture. It now uses group confirmation and fine peak estimates; empty-scene false detections remain unresolved.
 
 > **Short-range diagnosis:** [SHORT_RANGE_FINDINGS.md](SHORT_RANGE_FINDINGS.md) documents a fixed candidate-selection defect, improved 50 cm replay, and the remaining physical range limits.

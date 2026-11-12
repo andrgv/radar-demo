@@ -10,3 +10,9 @@ artifacts/
 .mtbqueryapi
 .ninja_log
 *.log
+
+# Viam build output
+.venv-viam
+dist/
+*.spec
+viam_module/source_revision.txt

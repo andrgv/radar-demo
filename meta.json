@@ -1,0 +1,16 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "carlyworkspace:upenn-mmwave",
+  "visibility": "private",
+  "url": "https://github.com/andrgv/radar-demo",
+  "description": "Headless Infineon radar echoes: range-first distance, optional azimuth/elevation, Doppler and diagnostics.",
+  "markdown_link": "docs/VIAM.md",
+  "entrypoint": "dist/upenn-mmwave",
+  "models": [{"api": "rdk:component:sensor", "model": "carlyworkspace:upenn-mmwave:infineon-mmwave"}],
+  "build": {
+    "setup": "bash setup.sh",
+    "build": "bash build.sh",
+    "path": "dist/upenn-mmwave.tar.gz",
+    "arch": ["darwin/arm64", "linux/arm64", "linux/amd64"]
+  }
+}
