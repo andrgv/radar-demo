@@ -1,0 +1,303 @@
+{
+  "saved_live_replay_matches": true,
+  "compared_frames": 757,
+  "source_sha256": "d09ea1c6d5854606b6c791ab884226e93367b313ab3daa507e56c1917b6414fd",
+  "qualification_report_sha256": "3dfb8eca190f7ceaf51524cc6c7c8711252cbb83dbfe39f6ae476b643d81c670",
+  "interpretation": "Selected return versus labeled placement only; no verified reflector identity. Windows are two-second-trimmed host intervals. Thresholds and search mask unchanged. Candidate failures separate below-threshold/peak-shape effects from persistence.",
+  "windows": [
+    {
+      "label": "120 cm A (trim 2s)",
+      "frames": 73,
+      "above_threshold_frames": 73,
+      "candidate_frames": 73,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "4": 73
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -8.97071216154717,
+          -12.715070935722123,
+          4.753639754851459,
+          5.485513406792121,
+          -10.396569617388641,
+          -8.966757486486951,
+          -9.918524414021263,
+          -8.717217114971016
+        ],
+        [
+          -8.453163954152412,
+          -11.408797109581867,
+          6.185712270025794,
+          6.680323921834486,
+          -8.750932279416094,
+          -8.029962287105409,
+          -8.96468943165244,
+          -7.290568889131653
+        ],
+        [
+          -7.712548536051101,
+          -10.152357231688386,
+          6.863997425471822,
+          7.219387375304375,
+          -7.768926864177382,
+          -5.404688063072417,
+          -6.137773147936249,
+          -6.305047750499707
+        ]
+      ],
+      "numeric_gap_episodes": [],
+      "longest_numeric_gap_s": 0
+    },
+    {
+      "label": "50 cm A (trim 2s)",
+      "frames": 97,
+      "above_threshold_frames": 42,
+      "candidate_frames": 42,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "1": 42
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -0.4870513918174138,
+          -4.101502924488017,
+          -9.181361608659744,
+          -13.406601433842418,
+          -6.133580398939217,
+          1.8805491800679806,
+          2.760181171996792,
+          -4.358076260332797
+        ],
+        [
+          -0.061172177965649846,
+          -3.367874400615775,
+          -7.293068664399697,
+          -11.306749335194802,
+          -5.108819039042391,
+          2.404281236472797,
+          3.3471945431694987,
+          -3.6512460166511325
+        ],
+        [
+          0.5029217596635664,
+          -2.011370400594899,
+          -5.731883963343837,
+          -9.5152956244723,
+          -4.380442377721715,
+          3.1116128435006445,
+          4.35755010494254,
+          -3.0878684272093944
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 2,
+          "end_index": 5,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 7,
+          "end_index": 21,
+          "frames": 15,
+          "duration_s": 1.5
+        },
+        {
+          "start_index": 27,
+          "end_index": 49,
+          "frames": 23,
+          "duration_s": 2.3
+        },
+        {
+          "start_index": 51,
+          "end_index": 61,
+          "frames": 11,
+          "duration_s": 1.1
+        },
+        {
+          "start_index": 72,
+          "end_index": 84,
+          "frames": 13,
+          "duration_s": 1.3
+        },
+        {
+          "start_index": 91,
+          "end_index": 96,
+          "frames": 6,
+          "duration_s": 0.6
+        }
+      ],
+      "longest_numeric_gap_s": 2.3
+    },
+    {
+      "label": "120 cm B (trim 2s)",
+      "frames": 105,
+      "above_threshold_frames": 24,
+      "candidate_frames": 24,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "4": 24
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -5.671192438819107,
+          -17.06481658627274,
+          -5.1396158538654895,
+          -1.375138423976252,
+          -6.419261107814666,
+          -3.7460386854786725,
+          -0.6697410453307977,
+          -2.07968745373797
+        ],
+        [
+          -4.496707952461175,
+          -13.712026821842645,
+          -3.239628807868074,
+          -0.45738838832881534,
+          -5.436317776452944,
+          -2.386898718040749,
+          0.7112101714080127,
+          -0.6076465990519015
+        ],
+        [
+          -3.633475897503448,
+          -8.97761727945257,
+          -0.7712678123027039,
+          0.7145067096032458,
+          -4.520708067434899,
+          -1.000938510895995,
+          1.965559441898805,
+          0.18708357572600695
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 3,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 5,
+          "end_index": 8,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 11,
+          "end_index": 19,
+          "frames": 9,
+          "duration_s": 0.9
+        },
+        {
+          "start_index": 23,
+          "end_index": 36,
+          "frames": 14,
+          "duration_s": 1.4
+        },
+        {
+          "start_index": 38,
+          "end_index": 102,
+          "frames": 65,
+          "duration_s": 6.5
+        },
+        {
+          "start_index": 104,
+          "end_index": 104,
+          "frames": 1,
+          "duration_s": 0.1
+        }
+      ],
+      "longest_numeric_gap_s": 6.5
+    },
+    {
+      "label": "50 cm B (trim 2s)",
+      "frames": 100,
+      "above_threshold_frames": 100,
+      "candidate_frames": 100,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "2": 100
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          4.0561732041889815,
+          8.314862655725541,
+          -2.8860466507562297,
+          -15.377268951560204,
+          -9.32860193608167,
+          -8.37960372677767,
+          -10.509208439320552,
+          -6.4214534240333
+        ],
+        [
+          4.596940949252643,
+          9.272807154678997,
+          -1.7531974218111115,
+          -13.526514827185883,
+          -8.646372085198719,
+          -7.580806831967465,
+          -9.054803476713616,
+          -4.610692584441999
+        ],
+        [
+          5.208926194970855,
+          9.718847348778095,
+          -0.9085346816461356,
+          -11.209953852472394,
+          -8.100699090905476,
+          -6.671023793834705,
+          -7.573722999549762,
+          -3.502226512730186
+        ]
+      ],
+      "numeric_gap_episodes": [],
+      "longest_numeric_gap_s": 0
+    },
+    {
+      "label": "120 cm C (trim 2s)",
+      "frames": 94,
+      "above_threshold_frames": 94,
+      "candidate_frames": 94,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "4": 94
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -6.581456041147967,
+          -16.983292542934986,
+          -1.324474763082817,
+          2.2418966613034312,
+          -5.018952249437847,
+          -5.907596044549714,
+          -5.017983799573692,
+          -7.043925206605487
+        ],
+        [
+          -5.777989640090743,
+          -13.232247929000138,
+          0.1918505147538027,
+          3.005267928275091,
+          -3.810461881014011,
+          -3.9389818873509697,
+          -2.9779932012093067,
+          -5.352338474133431
+        ],
+        [
+          -4.580599102998961,
+          -9.252186966141736,
+          1.769500346092809,
+          4.319652738722115,
+          -2.7176110170764254,
+          -2.6184356210206823,
+          -1.4225046821984573,
+          -3.8915287334690176
+        ]
+      ],
+      "numeric_gap_episodes": [],
+      "longest_numeric_gap_s": 0
+    }
+  ]
+}

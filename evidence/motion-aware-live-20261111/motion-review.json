@@ -1,0 +1,394 @@
+{
+  "source_sha256": {
+    "tools/review_motion_range.py": "47d6a6101340646bae94fc234008b0061b3e1d95b86fea090446065b141dfd06",
+    "radar_min/motion_range.py": "759c82b652ac746f56cfff86261fd911a87240450dfbe1ed64c980d206df6fd7",
+    "radar_min/joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812"
+  },
+  "regression_report_sha256": "18ba57a4dec68596dc9513b238ba77b750718733824132a454789e2ebce38795",
+  "manifests": {
+    "configs/motion-aware-live-20261111.json": "dee84905f2aaf742fe337f213f0805e14d504875583257ef89f3fb7dbcc8a535"
+  },
+  "sessions": [
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "windows": [
+        {
+          "label": "120 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 76,
+          "window_host_s": [
+            2,
+            9.56
+          ],
+          "baseline_frames": 0,
+          "motion_policy_frames": 0,
+          "motion_policy_cm_p05_p50_p95": null,
+          "baseline_cm_p05_p50_p95": null,
+          "selected_feature_counts": {
+            "None": 76
+          },
+          "source_counts": {
+            "None": 76
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 76
+          },
+          "baseline_reasons": {
+            "no_candidate_above_noise": 76
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 76,
+          "window_host_s": [
+            15.58,
+            23.06
+          ],
+          "baseline_frames": 76,
+          "motion_policy_frames": 76,
+          "motion_policy_cm_p05_p50_p95": [
+            61.4981258365471,
+            63.986339377533,
+            67.46622142980664
+          ],
+          "baseline_cm_p05_p50_p95": [
+            61.503236358080706,
+            63.98381770558872,
+            67.47837182356393
+          ],
+          "selected_feature_counts": {
+            "13": 76
+          },
+          "source_counts": {
+            "RD stopped": 76
+          },
+          "selection_reasons": {
+            "same_feature_current_zero_doppler": 76
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 76
+          }
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 75,
+          "window_host_s": [
+            29.02,
+            36.47
+          ],
+          "baseline_frames": 46,
+          "motion_policy_frames": 46,
+          "motion_policy_cm_p05_p50_p95": [
+            120.81509604470935,
+            123.80020701792961,
+            126.96390555991763
+          ],
+          "baseline_cm_p05_p50_p95": [
+            120.81509604470935,
+            123.80020701792961,
+            126.96390555991763
+          ],
+          "selected_feature_counts": {
+            "None": 75
+          },
+          "source_counts": {
+            "None": 29,
+            "frozen 1D baseline": 46
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 29,
+            "no_motion_episode_baseline": 46
+          },
+          "baseline_reasons": {
+            "checking_persistence": 10,
+            "no_candidate_above_noise": 7,
+            "cfar_peak_uncalibrated": 58
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 72,
+          "window_host_s": [
+            44.15,
+            51.3
+          ],
+          "baseline_frames": 61,
+          "motion_policy_frames": 72,
+          "motion_policy_cm_p05_p50_p95": [
+            35.53987508936346,
+            36.74893458729649,
+            38.72656262032888
+          ],
+          "baseline_cm_p05_p50_p95": [
+            35.72881729028276,
+            36.78590042768688,
+            38.85752998650358
+          ],
+          "selected_feature_counts": {
+            "31": 72
+          },
+          "source_counts": {
+            "RD stopped": 72
+          },
+          "selection_reasons": {
+            "same_feature_current_zero_doppler": 72
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 61,
+            "no_candidate_above_noise": 4,
+            "checking_persistence": 7
+          }
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "state": "hold",
+          "frames": 71,
+          "window_host_s": [
+            58.61,
+            65.658682
+          ],
+          "baseline_frames": 71,
+          "motion_policy_frames": 71,
+          "motion_policy_cm_p05_p50_p95": [
+            144.54626464935194,
+            147.30484498260003,
+            149.71027077759845
+          ],
+          "baseline_cm_p05_p50_p95": [
+            144.54626464935194,
+            147.30484498260003,
+            149.71027077759845
+          ],
+          "selected_feature_counts": {
+            "None": 71
+          },
+          "source_counts": {
+            "frozen 1D baseline": 71
+          },
+          "selection_reasons": {
+            "no_motion_episode_baseline": 71
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 71
+          }
+        },
+        {
+          "label": "approach 1",
+          "state": "motion",
+          "frames": 16,
+          "window_host_s": [
+            11.76,
+            13.38
+          ],
+          "baseline_frames": 5,
+          "motion_policy_frames": 15,
+          "motion_policy_cm_p05_p50_p95": [
+            41.28319114043471,
+            89.28766714864462,
+            110.6337729363608
+          ],
+          "baseline_cm_p05_p50_p95": [
+            48.755943502602555,
+            88.49256332175794,
+            98.73691360694465
+          ],
+          "selected_feature_counts": {
+            "13": 16
+          },
+          "source_counts": {
+            "RD motion": 15,
+            "None": 1
+          },
+          "selection_reasons": {
+            "unique_current_motion_measurement": 15,
+            "motion_feature_ambiguous": 1
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 6,
+            "no_candidate_above_noise": 3,
+            "checking_persistence": 7
+          },
+          "expected_phase_sign": -1,
+          "raw_expected_sign_peak_frames": 15,
+          "confirmed_expected_sign_frames": 15,
+          "refined_expected_sign_frames": 15
+        },
+        {
+          "label": "retreat 1",
+          "state": "motion",
+          "frames": 15,
+          "window_host_s": [
+            25.259999999999998,
+            26.82
+          ],
+          "baseline_frames": 8,
+          "motion_policy_frames": 8,
+          "motion_policy_cm_p05_p50_p95": [
+            53.52285110668026,
+            103.64973759845776,
+            114.5682666287027
+          ],
+          "baseline_cm_p05_p50_p95": [
+            77.89995656582177,
+            101.79860883569432,
+            118.94515849587687
+          ],
+          "selected_feature_counts": {
+            "13": 8,
+            "None": 1,
+            "23": 6
+          },
+          "source_counts": {
+            "RD motion": 6,
+            "RD stopped": 2,
+            "None": 7
+          },
+          "selection_reasons": {
+            "unique_current_motion_measurement": 6,
+            "same_feature_current_zero_doppler": 2,
+            "motion_feature_ambiguous": 2,
+            "competing_current_moving_feature": 2,
+            "motion_feature_lost_no_substitution": 1,
+            "confirming_same_feature_nonzero_doppler": 1,
+            "fine_peak_at_group_boundary": 1
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 8,
+            "no_candidate_above_noise": 3,
+            "checking_persistence": 4
+          },
+          "expected_phase_sign": 1,
+          "raw_expected_sign_peak_frames": 13,
+          "confirmed_expected_sign_frames": 11,
+          "refined_expected_sign_frames": 10
+        },
+        {
+          "label": "approach 2",
+          "state": "motion",
+          "frames": 33,
+          "window_host_s": [
+            38.67,
+            41.949999999999996
+          ],
+          "baseline_frames": 7,
+          "motion_policy_frames": 21,
+          "motion_policy_cm_p05_p50_p95": [
+            48.87817277218628,
+            78.47451147733993,
+            94.09575800835107
+          ],
+          "baseline_cm_p05_p50_p95": [
+            75.08712039498084,
+            92.80439292614716,
+            101.00935456123278
+          ],
+          "selected_feature_counts": {
+            "None": 14,
+            "31": 19
+          },
+          "source_counts": {
+            "None": 12,
+            "frozen 1D baseline": 3,
+            "RD motion": 15,
+            "RD stopped": 3
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 9,
+            "no_motion_episode_baseline": 3,
+            "confirming_same_feature_nonzero_doppler": 2,
+            "unique_current_motion_measurement": 15,
+            "same_feature_current_zero_doppler": 3,
+            "motion_feature_missed": 1
+          },
+          "baseline_reasons": {
+            "checking_persistence": 13,
+            "no_candidate_above_noise": 13,
+            "cfar_peak_uncalibrated": 7
+          },
+          "expected_phase_sign": -1,
+          "raw_expected_sign_peak_frames": 17,
+          "confirmed_expected_sign_frames": 17,
+          "refined_expected_sign_frames": 17
+        },
+        {
+          "label": "retreat 2",
+          "state": "motion",
+          "frames": 29,
+          "window_host_s": [
+            53.5,
+            56.41
+          ],
+          "baseline_frames": 12,
+          "motion_policy_frames": 19,
+          "motion_policy_cm_p05_p50_p95": [
+            68.48675296025795,
+            93.59772111510397,
+            109.34938463845008
+          ],
+          "baseline_cm_p05_p50_p95": [
+            65.5463329828244,
+            96.6583281128151,
+            135.5884492458032
+          ],
+          "selected_feature_counts": {
+            "31": 29
+          },
+          "source_counts": {
+            "RD motion": 14,
+            "RD stopped": 5,
+            "None": 10
+          },
+          "selection_reasons": {
+            "unique_current_motion_measurement": 14,
+            "same_feature_current_zero_doppler": 5,
+            "motion_feature_ambiguous": 8,
+            "motion_feature_missed": 1,
+            "motion_feature_lost_no_substitution": 1
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 13,
+            "no_candidate_above_noise": 8,
+            "checking_persistence": 8
+          },
+          "expected_phase_sign": 1,
+          "raw_expected_sign_peak_frames": 14,
+          "confirmed_expected_sign_frames": 14,
+          "refined_expected_sign_frames": 14
+        }
+      ],
+      "capture_summary": {
+        "frames": 682,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 5365977
+      },
+      "saved_clock_states": {
+        "collecting": 200,
+        "frozen": 482
+      },
+      "fit_diagnostics": {
+        "candidate_rate": 0.9934965407755088,
+        "candidate_offset_s": 0.0007853449417520864,
+        "max_residual_s": 0.014301218442493102,
+        "p95_residual_s": 0.002184386251549597,
+        "max_limit_s": 0.1,
+        "p95_limit_s": 0.05
+      },
+      "frozen_error_ms_p95_max": [
+        2.4020522096670045,
+        11.978971657384818
+      ]
+    }
+  ],
+  "interpretation": "Current-frame numeric coverage, not verified target-identity accuracy. Manual rolling/operator motion can seed feature episodes. Same-ID zero-Doppler continuation can follow clutter after removal. No predictions or smoothing. Frozen baseline and stationary-nuisance controls retained."
+}

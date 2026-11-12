@@ -1,0 +1,452 @@
+{
+  "source_sha256": "117dbb5742cd264db7bd0160832ae770cbc0a3a27aa982c24ec81096b4d8473c",
+  "one_d_report_sha256": "3dfb8eca190f7ceaf51524cc6c7c8711252cbb83dbfe39f6ae476b643d81c670",
+  "rd_metadata": {
+    "algorithm": "range-doppler-associated-cfar-replay-v1",
+    "config": {
+      "schema": 1,
+      "profile_id": 860967939,
+      "samples": 64,
+      "chirps": 17,
+      "sample_rate_hz": 5000000,
+      "slope_hz_s": 33691406250000,
+      "discard_chirps": 1,
+      "frame_interval_s": 0.1,
+      "min_bin": 1,
+      "max_bin": 4,
+      "min_excess_db": 3.0,
+      "variability_multiplier": 6.0,
+      "margin_db": 2.0,
+      "confirmation_frames": 3
+    },
+    "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+    "source_sha256": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+    "range_source_sha256": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "recording": "/Users/amanda/Desktop/school/ese4500/radar-demo/recordings/gui-20261111-093723-246315/live-006",
+    "raw_sha256": "6451b9b1e4ba9234e8a80a3925fc758bb87b24fac7402a28b2de8bc9dc75ab7a",
+    "frames": 757,
+    "valid_frames": 757,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "axes": [
+      "frame",
+      "shifted_doppler",
+      "range"
+    ],
+    "power_units": "ADC units squared",
+    "normalization": "fast-time 2/sum(Hann); slow-time 1/sum(Hann); mean RX power",
+    "timing_verified": false,
+    "carrier_verified": false,
+    "calibrated": false,
+    "doppler_units": "cycles/saved block (physical timing unverified)",
+    "legacy_axis_alias": "maps.npz cycles_per_chirp is an alias of cycles_per_saved_block for existing replay tools; it does not certify chirp correspondence",
+    "motion_sign": "positive means positive phase progression, physical approach sign unverified",
+    "validity": "frame ADC/flags and device continuity only; no host freshness or RF coherence certification",
+    "moving_view": "unweighted slow-time mean removed before Hann; no central-bin notch",
+    "phase_probe": "strongest usable range bin each frame; may switch reflectors; not proof of timing/coherence",
+    "limitations": "Conservative radar feature tracks only. Static clutter can confirm; merges/crossings can fragment IDs. Ambiguous/missed/lost tracks have no measurement. No calibrated range/velocity or intended-object identity.",
+    "cfar": {
+      "guard_range": 1,
+      "guard_doppler": 1,
+      "training_range": 3,
+      "training_doppler": 2,
+      "min_training": 16,
+      "factor": 4.0,
+      "doppler_edge": "wrap"
+    },
+    "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+    "cfar_input": "Full linear-power map; zero Doppler retained; no mean or background subtraction",
+    "cfar_range_policy": "DC/Nyquist excluded from tests and references; all other bins tested; range truncated, never wrapped",
+    "cfar_doppler_policy": "wrap",
+    "clustering": "Eight-connected accepted cells with the same Doppler edge policy; all local maxima exported inside each component",
+    "threshold_interpretation": "Empirical multiplier; no calibrated Pfa or measured false-output rate",
+    "association": {
+      "confirmation_frames": 3,
+      "birth_margin_db": 3.0,
+      "range_gate": 1,
+      "doppler_gate": 2,
+      "max_missed_frames": 2,
+      "max_ambiguous_frames": 5,
+      "ambiguity_gap": 0.25
+    },
+    "association_source_sha256": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+    "association_policy": "Reciprocal unique best native-bin gating; ambiguous competition withheld; IDs are radar features, not semantic objects",
+    "association_measurements": "Confirmed unique current local maxima only; no extrapolated/held distance. Accepted-cell-only support is bounded ambiguity and never moves the anchor or confirms a track.",
+    "association_validity": "Device continuity and map validity; reset on gaps/invalid frames. No original host freshness certification.",
+    "association_valid_frames": 757
+  },
+  "saved_live_replay_matches": true,
+  "compared_frames": 757,
+  "windows": [
+    {
+      "label": "120 cm A (trim 2s)",
+      "state": "hold",
+      "frames": 73,
+      "window_host_s": [
+        2,
+        9.27
+      ],
+      "one_d_numeric_frames": 73,
+      "raw_zero_peak_frames_bins1_4": 73,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 73,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "4": 73
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_accepted_frames": 73,
+      "nominal_endpoint_raw_zero_peak_frames": 73,
+      "nominal_endpoint_confirmed_zero_peak_frames": 73
+    },
+    {
+      "label": "50 cm A (trim 2s)",
+      "state": "hold",
+      "frames": 97,
+      "window_host_s": [
+        15,
+        24.62
+      ],
+      "one_d_numeric_frames": 25,
+      "raw_zero_peak_frames_bins1_4": 97,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 97,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "1": 97
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "nominal_endpoint_bins": [
+        1,
+        2
+      ],
+      "nominal_endpoint_zero_accepted_frames": 97,
+      "nominal_endpoint_raw_zero_peak_frames": 97,
+      "nominal_endpoint_confirmed_zero_peak_frames": 97
+    },
+    {
+      "label": "120 cm B (trim 2s)",
+      "state": "hold",
+      "frames": 105,
+      "window_host_s": [
+        30.05,
+        40.57
+      ],
+      "one_d_numeric_frames": 8,
+      "raw_zero_peak_frames_bins1_4": 105,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 105,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "4": 105
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_accepted_frames": 105,
+      "nominal_endpoint_raw_zero_peak_frames": 105,
+      "nominal_endpoint_confirmed_zero_peak_frames": 105
+    },
+    {
+      "label": "50 cm B (trim 2s)",
+      "state": "hold",
+      "frames": 100,
+      "window_host_s": [
+        47.15,
+        57.09
+      ],
+      "one_d_numeric_frames": 100,
+      "raw_zero_peak_frames_bins1_4": 100,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 100,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "2": 100
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "nominal_endpoint_bins": [
+        1,
+        2
+      ],
+      "nominal_endpoint_zero_accepted_frames": 100,
+      "nominal_endpoint_raw_zero_peak_frames": 100,
+      "nominal_endpoint_confirmed_zero_peak_frames": 100
+    },
+    {
+      "label": "120 cm C (trim 2s)",
+      "state": "hold",
+      "frames": 94,
+      "window_host_s": [
+        63.76,
+        73.174039
+      ],
+      "one_d_numeric_frames": 94,
+      "raw_zero_peak_frames_bins1_4": 94,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 94,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "4": 94
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_accepted_frames": 94,
+      "nominal_endpoint_raw_zero_peak_frames": 94,
+      "nominal_endpoint_confirmed_zero_peak_frames": 94
+    },
+    {
+      "label": "faster approach",
+      "state": "motion",
+      "frames": 11,
+      "window_host_s": [
+        11.66,
+        12.8
+      ],
+      "one_d_numeric_frames": 0,
+      "raw_zero_peak_frames_bins1_4": 2,
+      "raw_negative_peak_frames_bins1_4": 10,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 0,
+      "confirmed_negative_peak_frames_bins1_4": 10,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "3": 4,
+        "2": 4,
+        "1": 2
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "expected_phase_sign": -1,
+      "raw_expected_sign_frames": 10,
+      "confirmed_expected_sign_frames": 10,
+      "raw_opposite_sign_frames": 0,
+      "confirmed_opposite_sign_frames": 0
+    },
+    {
+      "label": "faster retreat",
+      "state": "motion",
+      "frames": 11,
+      "window_host_s": [
+        26.82,
+        27.85
+      ],
+      "one_d_numeric_frames": 5,
+      "raw_zero_peak_frames_bins1_4": 2,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 9,
+      "confirmed_zero_peak_frames_bins1_4": 1,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 9,
+      "confirmed_peak_bin_counts": {
+        "3": 8,
+        "2": 2
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "expected_phase_sign": 1,
+      "raw_expected_sign_frames": 9,
+      "confirmed_expected_sign_frames": 9,
+      "raw_opposite_sign_frames": 0,
+      "confirmed_opposite_sign_frames": 0
+    },
+    {
+      "label": "slower approach",
+      "state": "motion",
+      "frames": 22,
+      "window_host_s": [
+        42.77,
+        44.949999999999996
+      ],
+      "one_d_numeric_frames": 11,
+      "raw_zero_peak_frames_bins1_4": 5,
+      "raw_negative_peak_frames_bins1_4": 18,
+      "raw_positive_peak_frames_bins1_4": 0,
+      "confirmed_zero_peak_frames_bins1_4": 4,
+      "confirmed_negative_peak_frames_bins1_4": 18,
+      "confirmed_positive_peak_frames_bins1_4": 0,
+      "confirmed_peak_bin_counts": {
+        "4": 1,
+        "3": 3,
+        "2": 16,
+        "1": 2
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "expected_phase_sign": -1,
+      "raw_expected_sign_frames": 18,
+      "confirmed_expected_sign_frames": 18,
+      "raw_opposite_sign_frames": 0,
+      "confirmed_opposite_sign_frames": 0
+    },
+    {
+      "label": "slower retreat",
+      "state": "motion",
+      "frames": 23,
+      "window_host_s": [
+        59.290000000000006,
+        61.559999999999995
+      ],
+      "one_d_numeric_frames": 13,
+      "raw_zero_peak_frames_bins1_4": 6,
+      "raw_negative_peak_frames_bins1_4": 0,
+      "raw_positive_peak_frames_bins1_4": 17,
+      "confirmed_zero_peak_frames_bins1_4": 6,
+      "confirmed_negative_peak_frames_bins1_4": 0,
+      "confirmed_positive_peak_frames_bins1_4": 17,
+      "confirmed_peak_bin_counts": {
+        "2": 4,
+        "1": 2,
+        "3": 13,
+        "4": 4
+      },
+      "ambiguous_frames_bins1_4": 0,
+      "expected_phase_sign": 1,
+      "raw_expected_sign_frames": 17,
+      "confirmed_expected_sign_frames": 17,
+      "raw_opposite_sign_frames": 0,
+      "confirmed_opposite_sign_frames": 0
+    }
+  ],
+  "target_absent_control": {
+    "metadata": {
+      "algorithm": "range-doppler-associated-cfar-replay-v1",
+      "config": {
+        "schema": 1,
+        "profile_id": 860967939,
+        "samples": 64,
+        "chirps": 17,
+        "sample_rate_hz": 5000000,
+        "slope_hz_s": 33691406250000,
+        "discard_chirps": 1,
+        "frame_interval_s": 0.1,
+        "min_bin": 1,
+        "max_bin": 4,
+        "min_excess_db": 3.0,
+        "variability_multiplier": 6.0,
+        "margin_db": 2.0,
+        "confirmation_frames": 3
+      },
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "source_sha256": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+      "range_source_sha256": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+      "recording": "/Users/amanda/Desktop/school/ese4500/radar-demo/recordings/gui-20261111-093723-246315/live-005",
+      "raw_sha256": "6e03eda770515055d82f44fefbf6758c8610d8e2a3ac091754fa0045feb41dd8",
+      "frames": 867,
+      "valid_frames": 867,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "axes": [
+        "frame",
+        "shifted_doppler",
+        "range"
+      ],
+      "power_units": "ADC units squared",
+      "normalization": "fast-time 2/sum(Hann); slow-time 1/sum(Hann); mean RX power",
+      "timing_verified": false,
+      "carrier_verified": false,
+      "calibrated": false,
+      "doppler_units": "cycles/saved block (physical timing unverified)",
+      "legacy_axis_alias": "maps.npz cycles_per_chirp is an alias of cycles_per_saved_block for existing replay tools; it does not certify chirp correspondence",
+      "motion_sign": "positive means positive phase progression, physical approach sign unverified",
+      "validity": "frame ADC/flags and device continuity only; no host freshness or RF coherence certification",
+      "moving_view": "unweighted slow-time mean removed before Hann; no central-bin notch",
+      "phase_probe": "strongest usable range bin each frame; may switch reflectors; not proof of timing/coherence",
+      "limitations": "Conservative radar feature tracks only. Static clutter can confirm; merges/crossings can fragment IDs. Ambiguous/missed/lost tracks have no measurement. No calibrated range/velocity or intended-object identity.",
+      "cfar": {
+        "guard_range": 1,
+        "guard_doppler": 1,
+        "training_range": 3,
+        "training_doppler": 2,
+        "min_training": 16,
+        "factor": 4.0,
+        "doppler_edge": "wrap"
+      },
+      "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+      "cfar_input": "Full linear-power map; zero Doppler retained; no mean or background subtraction",
+      "cfar_range_policy": "DC/Nyquist excluded from tests and references; all other bins tested; range truncated, never wrapped",
+      "cfar_doppler_policy": "wrap",
+      "clustering": "Eight-connected accepted cells with the same Doppler edge policy; all local maxima exported inside each component",
+      "threshold_interpretation": "Empirical multiplier; no calibrated Pfa or measured false-output rate",
+      "association": {
+        "confirmation_frames": 3,
+        "birth_margin_db": 3.0,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "max_missed_frames": 2,
+        "max_ambiguous_frames": 5,
+        "ambiguity_gap": 0.25
+      },
+      "association_source_sha256": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+      "association_policy": "Reciprocal unique best native-bin gating; ambiguous competition withheld; IDs are radar features, not semantic objects",
+      "association_measurements": "Confirmed unique current local maxima only; no extrapolated/held distance. Accepted-cell-only support is bounded ambiguity and never moves the anchor or confirms a track.",
+      "association_validity": "Device continuity and map validity; reset on gaps/invalid frames. No original host freshness certification.",
+      "association_valid_frames": 867
+    },
+    "windows": [
+      {
+        "label": "A1 (trim 2s)",
+        "frames": 122,
+        "confirmed_roi_feature_frames": 122,
+        "confirmed_peak_bin_counts": {
+          "1": 122
+        },
+        "confirmed_nonzero_frames": 0
+      },
+      {
+        "label": "B1 (trim 2s)",
+        "frames": 128,
+        "confirmed_roi_feature_frames": 128,
+        "confirmed_peak_bin_counts": {
+          "1": 128
+        },
+        "confirmed_nonzero_frames": 0
+      },
+      {
+        "label": "A2 (trim 2s)",
+        "frames": 126,
+        "confirmed_roi_feature_frames": 126,
+        "confirmed_peak_bin_counts": {
+          "1": 126
+        },
+        "confirmed_nonzero_frames": 0
+      },
+      {
+        "label": "B2 (trim 2s)",
+        "frames": 122,
+        "confirmed_roi_feature_frames": 122,
+        "confirmed_peak_bin_counts": {
+          "1": 122
+        },
+        "confirmed_nonzero_frames": 0
+      }
+    ],
+    "interpretation": "All four quiet interiors retain a bin-1 zero-Doppler feature despite no added target. This is scene-feature evidence, not verified target detection; naive union/nearest-feature fusion would promote this nuisance."
+  },
+  "interpretation": "Same frames, unchanged settings. ROI bins1\u20134 is a declared 50\u2013120cm diagnostic path, not a detector filter or physical identity match. Counts are feature/cell evidence, not object-detection accuracy; nonzero signed peaks may come from manual operator/hand motion. Native RD points are not fine ranges or m/s. No timing-offset fitting."
+}

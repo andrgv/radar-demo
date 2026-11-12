@@ -1,0 +1,1853 @@
+{
+  "manifest": {
+    "schema": 1,
+    "labels": "Consecutive user durations from first saved frame; handling excluded; primary 2s trims and 1s sensitivity. No fitted offset. Labels end 243.71s; any later tail unscored.",
+    "scene": {
+      "target": "cardboard box, bare then foil-front then bare at nominal 50 cm",
+      "operator": "B during all quiet captures; explicitly reported",
+      "fixed_geometry": "User explicitly confirmed box footprint and orientation unchanged while only foil added/removed.",
+      "dimensions": "Earlier box front about 45 x 24 cm; current dimensions not remeasured in latest message",
+      "distance_reference": "Established antenna-face to front-face protocol; current user supplies nominal 50 cm",
+      "background": "Prior setup wall a little over 2 m; current message does not remeasure"
+    },
+    "segments": [
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 0.0,
+        "end_s": 6.66,
+        "duration_s": 6.66
+      },
+      {
+        "label": "empty A",
+        "state": "target_absent",
+        "start_s": 6.66,
+        "end_s": 24.12,
+        "duration_s": 17.46
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 24.12,
+        "end_s": 50.36,
+        "duration_s": 26.24
+      },
+      {
+        "label": "bare A 50 cm",
+        "state": "hold",
+        "start_s": 50.36,
+        "end_s": 85.1,
+        "duration_s": 34.74,
+        "nominal_target_m": 0.5,
+        "material": "bare cardboard"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 85.1,
+        "end_s": 115.66,
+        "duration_s": 30.56
+      },
+      {
+        "label": "foil 50 cm",
+        "state": "hold",
+        "start_s": 115.66,
+        "end_s": 147.49,
+        "duration_s": 31.83,
+        "nominal_target_m": 0.5,
+        "material": "foil-covered front"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 147.49,
+        "end_s": 179.2,
+        "duration_s": 31.71
+      },
+      {
+        "label": "bare B 50 cm",
+        "state": "hold",
+        "start_s": 179.2,
+        "end_s": 210.38,
+        "duration_s": 31.18,
+        "nominal_target_m": 0.5,
+        "material": "bare cardboard"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 210.38,
+        "end_s": 226.29,
+        "duration_s": 15.91
+      },
+      {
+        "label": "final empty",
+        "state": "target_absent",
+        "start_s": 226.29,
+        "end_s": 243.71,
+        "duration_s": 17.42
+      }
+    ],
+    "cases": [
+      {
+        "recording": "recordings/rd-gui-20261112-094114-038104/live-001",
+        "windows": [
+          {
+            "label": "empty A (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              7.66,
+              23.12
+            ],
+            "original_window_host_s": [
+              6.66,
+              24.12
+            ]
+          },
+          {
+            "label": "empty A (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              8.66,
+              22.12
+            ],
+            "original_window_host_s": [
+              6.66,
+              24.12
+            ]
+          },
+          {
+            "label": "bare A 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              51.36,
+              84.1
+            ],
+            "original_window_host_s": [
+              50.36,
+              85.1
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "bare A 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              52.36,
+              83.1
+            ],
+            "original_window_host_s": [
+              50.36,
+              85.1
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "foil 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              116.66,
+              146.49
+            ],
+            "original_window_host_s": [
+              115.66,
+              147.49
+            ],
+            "nominal_target_m": 0.5,
+            "material": "foil-covered front"
+          },
+          {
+            "label": "foil 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              117.66,
+              145.49
+            ],
+            "original_window_host_s": [
+              115.66,
+              147.49
+            ],
+            "nominal_target_m": 0.5,
+            "material": "foil-covered front"
+          },
+          {
+            "label": "bare B 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              180.2,
+              209.38
+            ],
+            "original_window_host_s": [
+              179.2,
+              210.38
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "bare B 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              181.2,
+              208.38
+            ],
+            "original_window_host_s": [
+              179.2,
+              210.38
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "final empty (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              227.29,
+              242.71
+            ],
+            "original_window_host_s": [
+              226.29,
+              243.71
+            ]
+          },
+          {
+            "label": "final empty (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              228.29,
+              241.71
+            ],
+            "original_window_host_s": [
+              226.29,
+              243.71
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "manifest_sha256": "04d345073109b338fde6e283e5c68265cba5a3917e5194fd5771283ee8b11220",
+  "source_sha256": {
+    "tools/review_weak_capture.py": "b91e9f1bf5ca48fc420cb65c3d598c60a92a300df91be34962cf4537d7a05ba9",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "radar_min/cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e"
+  },
+  "upstream_report_sha256": "dec198de1ad642011368a55ad034896f141c3d01a9ef4f4e10488c5c5008dd12",
+  "raw_sha256": "bc26afae519f8691ecac281f909394bb29439632bf6c34b776acc26c8b3e77d9",
+  "arrivals_sha256": "979cf33abccb471a172744b4ac6d9fab48b085655e2ad7c116f71e040bebcf38",
+  "capture_metadata": {
+    "schema": 1,
+    "created_unix_s": 1794494478.297555,
+    "label": "live",
+    "session_id": "live-001",
+    "scene_id": "unspecified",
+    "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+    "firmware_identity": "unknown; profile ID is not a firmware hash",
+    "freshness": "relative timing only; no firmware handshake",
+    "clock_sync": {
+      "algorithm": "bounded-startup-clock-v1",
+      "policy": {
+        "fit_span_s": 20.0,
+        "max_fit_span_s": 30.0,
+        "min_samples": 100,
+        "max_rate_error": 0.02,
+        "max_fit_residual_s": 0.1,
+        "p95_fit_residual_s": 0.05,
+        "max_progress_error_s": 0.5
+      },
+      "limitation": "Relative progress only; no absolute age handshake; startup latency ramps can resemble clock skew"
+    },
+    "baseline_provenance": null,
+    "detector": {
+      "algorithm": "joint-range-cfar-rd-v1",
+      "cfar": {
+        "guard_range": 1,
+        "guard_doppler": 1,
+        "training_range": 3,
+        "training_doppler": 2,
+        "min_training": 16,
+        "factor": 4.0,
+        "doppler_edge": "wrap"
+      },
+      "association": {
+        "confirmation_frames": 3,
+        "birth_margin_db": 3.0,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "max_missed_frames": 2,
+        "max_ambiguous_frames": 5,
+        "ambiguity_gap": 0.25,
+        "range_metric": "native"
+      },
+      "one_d_cfar": {
+        "guard_cells": 1,
+        "training_cells": 4,
+        "min_training_cells": 4,
+        "factor": 2.0
+      },
+      "source_sha256": {
+        "rd_live.py": "75304c3149caa1044391ca6a1aa06c04f3397a188207bcd72f48c707110d619b",
+        "range_doppler.py": "1fc286fc5cde9353878c47b0db9eecc2579e1fc0b51425a9d2e4629fd67cb38b",
+        "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+        "rd_association.py": "49f70a938046b99f302bd7dd56fdd770ce00316e67fbfe8e8c741335f625d057",
+        "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+        "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+        "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+        "joint_results.py": "509585b91faa72c5346c7c2a44a6591baa52e3a55c411e17c4eb5f90ddaaed17",
+        "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+        "motion_range.py": "283c5066c7255eeab3eb4c0d989bf7ed42f8731408a9b386cf30eb1e42a679d1",
+        "rx_diagnostics.py": "4325576e9f168be0e0fc9d1b6ed6c019f1fcc72fa77ff244b5490f20c5781643",
+        "phase_range.py": "398a1d6e9161c6f933010a1db2a092602842869ad433d347fd03a93b39535eb9",
+        "weak_candidate.py": "e82e44849587968c58e5ac3e56f47a5de6257f69f1e00af8b0fe19e97705ae76",
+        "weak_motion.py": "a150b8fd6252ec710b1ad8a777169691880645efc60e8599d3d4f0b20dba38fe",
+        "weak_features.py": "965ce3bc6cb25d5bae586fd176d8e98946b2191ac367e18083b8111d27dd3d88"
+      },
+      "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+      "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+      "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+      "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+      "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+      "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+      "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+      "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+      "experimental_os": {
+        "algorithm": "range-os-cfar-experimental-v1",
+        "cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2.0
+        },
+        "selection": "nearest qualifying peak group",
+        "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+        "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+        "edge_policy": "truncate; require minimum total reference count",
+        "os": {
+          "rank_fraction": 0.5
+        },
+        "reference": "kth smallest; k=ceil(rank_fraction*actual reference count)",
+        "threshold_interpretation": "Empirical multiplier; no calibrated Pfa; not interchangeable with CA statistics"
+      },
+      "motion_policy": "v2: two consecutive same-sign confirmed RD motion measurements; stopped continuation requires current CA threshold and local-peak support; no held/predicted range",
+      "motion_policy_settings": {
+        "motion_confirmation_frames": 2,
+        "stationary_support_required": true
+      },
+      "receiver_diagnostics": {
+        "method": "rx-Hann-support-and-tone-residual-v1",
+        "spread_note_bins": 0.25,
+        "residual_note_fraction": 0.5,
+        "scope": "Confirmed current 1D group, raw chirps across Doppler; inspection only",
+        "interpretation": "RX peaks share scene/data; agreement is not accuracy or identity. Residual at pooled FFT range includes other returns and peak bias, not a fitted confidence."
+      },
+      "experimental_weak_candidate": {
+        "method": "os-rd-raw-peak-support-v1",
+        "min_interior_rx": 2,
+        "rx_gate_bins": 0.25,
+        "max_width_bins": 0.5,
+        "scope": "One confirmed OS group, resolved OS fine peak, unique current raw RD maximum, interior raw-tone optimum and two RX frequency optima nearby",
+        "interpretation": "Inspection only; geometry checks do not accept the phase range model. Global residual/model rejection stays visible. Existing OS FFT estimate is not calibrated target identity.",
+        "phase_estimator": {
+          "method": "candidate-real-tone-dc-v1",
+          "settings": {
+            "max_residual_fraction": 0.5,
+            "near_energy_fraction": 0.01,
+            "max_width_bins": 0.5,
+            "rx_gate_bins": 0.25,
+            "min_supported_rx": 2
+          },
+          "model": "Independent DC/cos/sin per chirp/RX; shared fast-time frequency; no window, baseline or label fit",
+          "support": "Current accepted group half-bin boundaries only; no expansion across a boundary optimum",
+          "interpretation": "Experimental estimator, empirical quality gates; not a detector or calibrated uncertainty"
+        }
+      },
+      "experimental_weak_motion_link": {
+        "method": "motion-seeded-weak-stop-link-v1",
+        "motion_confirmation_frames": 2,
+        "max_range_difference_bins": 0.5,
+        "scope": "Supplement only: same current confirmed RD feature after two same-sign measured motion frames; stopped OS/raw-peak support must identify its current peak",
+        "clearing": "Invalid input, sequence gaps, missing/ambiguous/lost measurements, competitors or unsupported stops revoke the seed; stationary support cannot reseed",
+        "interpretation": "Current RD fine inspection, no held/predicted range, primary eligibility or certified physical identity"
+      },
+      "experimental_weak_feature_confirmation": {
+        "method": "consecutive-weak-scene-feature-v1",
+        "confirmation_frames": 3,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "doppler_edge": "wrap",
+        "original_association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25,
+          "range_metric": "native"
+        },
+        "isolation_range_bins": 1,
+        "isolation_doppler_bins": 2,
+        "missed_or_ambiguous_retention_frames": 0,
+        "evidence": "Confirmed OS + unique current RD maximum + original raw-peak geometry, then consecutive native-gated current observations; original RD birth margin is unchanged",
+        "range_method": "Existing current OS Hann FFT fine range, not a rejected phase estimate or Doppler-conditioned range",
+        "interpretation": "Separate weak: IDs denote scene-feature hypotheses, not objects; no primary eligibility, holding or prediction; shared ADC evidence is not independent confirmation"
+      },
+      "gui_distance_policy": "frozen 1D baseline"
+    }
+  },
+  "capture_summary": {
+    "frames": 2532,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1,
+    "received_bytes": 19921777
+  },
+  "frames": 2532,
+  "host_span_s": 251.57672,
+  "labeled_end_s": 243.71,
+  "unscored_tail_s": 7.866719999999987,
+  "clock_states": {
+    "collecting": 200,
+    "frozen": 2332
+  },
+  "fit_diagnostics": {
+    "candidate_rate": 0.9943561929968013,
+    "candidate_offset_s": 4.421029135359689e-05,
+    "max_residual_s": 0.022553871757598043,
+    "p95_residual_s": 0.0015941969815793655,
+    "max_limit_s": 0.1,
+    "p95_limit_s": 0.05
+  },
+  "frozen_error_ms_p95_max": [
+    87.68636400881742,
+    96.06583050518225
+  ],
+  "saved_replay_results_association_motion_rx_os_phase_weak_link_and_feature_match": true,
+  "windows": [
+    {
+      "label": "empty A (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        7.66,
+        23.12
+      ],
+      "original_window_host_s": [
+        6.66,
+        24.12
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 155
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 155
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.13242410437792,
+        45.68570505703711,
+        52.30873381187828,
+        57.38013882233854,
+        58.96727290775503,
+        63.67396305967688,
+        63.037323012646134,
+        58.623142427557575,
+        52.65501339232781
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -7.692357262325632,
+        -18.84112400370956,
+        -11.623623902336234,
+        -5.350032065145887,
+        -1.0775283160944273,
+        6.497078896213077,
+        6.408821343943649,
+        -1.331815885025604,
+        -8.917748909559752
+      ],
+      "current_rd_measured_bins": {
+        "6": 155,
+        "22": 28
+      }
+    },
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        8.66,
+        22.12
+      ],
+      "original_window_host_s": [
+        6.66,
+        24.12
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 135
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 135
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.13249745175487,
+        45.68436258481269,
+        52.30916789164559,
+        57.3778259836022,
+        58.96455910738833,
+        63.670620360213015,
+        63.0365869933566,
+        58.623142427557575,
+        52.64594317964645
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -7.691832630753163,
+        -18.840019715237027,
+        -11.622049677057479,
+        -5.351776573907573,
+        -1.0780781329852434,
+        6.4962136216590824,
+        6.411213143761412,
+        -1.3277006367850583,
+        -8.905380357663422
+      ],
+      "current_rd_measured_bins": {
+        "6": 135,
+        "22": 20
+      }
+    },
+    {
+      "label": "bare A 50 cm (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        51.36,
+        84.1
+      ],
+      "original_window_host_s": [
+        50.36,
+        85.1
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 329,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 329
+          }
+        },
+        "os": {
+          "numeric_frames": 329,
+          "frames": 329,
+          "presence_frames": 329,
+          "cm_p05_p50_p95": [
+            127.45226745718917,
+            127.79687301370713,
+            128.24919531378148
+          ],
+          "episodes": 1,
+          "longest_s": 32.9,
+          "reasons": {
+            "cfar_peak_uncalibrated": 329
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 329,
+          "frames": 329,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            127.45226745718917,
+            127.79687301370713,
+            128.24919531378148
+          ],
+          "episodes": 1,
+          "longest_s": 32.9,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 329
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 329,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "raw_peak_at_support_boundary": 329
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 329,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 329
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 329,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 329
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.86345612724151,
+        50.4980682480078,
+        57.28034251582165,
+        58.262391082946294,
+        52.12841087398907,
+        61.25347019762589,
+        60.3686312797402,
+        48.99071906023006,
+        43.99374611707927
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.449362167139784,
+        -11.621651832371523,
+        -3.5878445095259885,
+        -1.763914254572845,
+        -5.9431311090446926,
+        4.557933971435252,
+        4.375644935814111,
+        -9.447217729683391,
+        -15.20330172795289
+      ],
+      "current_rd_measured_bins": {
+        "6": 329,
+        "4": 329
+      }
+    },
+    {
+      "label": "bare A 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        52.36,
+        83.1
+      ],
+      "original_window_host_s": [
+        50.36,
+        85.1
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 309,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 309
+          }
+        },
+        "os": {
+          "numeric_frames": 309,
+          "frames": 309,
+          "presence_frames": 309,
+          "cm_p05_p50_p95": [
+            127.45402104528019,
+            127.79687301370713,
+            128.23925875200084
+          ],
+          "episodes": 1,
+          "longest_s": 30.9,
+          "reasons": {
+            "cfar_peak_uncalibrated": 309
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 309,
+          "frames": 309,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            127.45402104528019,
+            127.79687301370713,
+            128.23925875200084
+          ],
+          "episodes": 1,
+          "longest_s": 30.9,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 309
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 309,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "raw_peak_at_support_boundary": 309
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 309,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 309
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 309,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 309
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.86345612724151,
+        50.4980682480078,
+        57.278647629529615,
+        58.262391082946294,
+        52.12841087398907,
+        61.25398994066535,
+        60.3686312797402,
+        48.99071906023006,
+        43.99779864927764
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.448945655030567,
+        -11.621651832371523,
+        -3.588735643116041,
+        -1.763914254572845,
+        -5.9431311090446926,
+        4.559405043644279,
+        4.375644935814111,
+        -9.447217729683391,
+        -15.202904108522059
+      ],
+      "current_rd_measured_bins": {
+        "6": 309,
+        "4": 309
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {},
+        "locations_cm": []
+      }
+    },
+    {
+      "label": "foil 50 cm (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        116.66,
+        146.49
+      ],
+      "original_window_host_s": [
+        115.66,
+        147.49
+      ],
+      "nominal_target_m": 0.5,
+      "material": "foil-covered front",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": 300,
+          "cm_p05_p50_p95": [
+            45.94539955801875,
+            46.136040761665214,
+            46.71244647212819
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 300
+          }
+        },
+        "os": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": 300,
+          "cm_p05_p50_p95": [
+            45.94539955801875,
+            46.136040761665214,
+            46.71244647212819
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 300
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.94539955801875,
+            46.136040761665214,
+            46.71244647212819
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 300
+          }
+        },
+        "weak": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.94539955801875,
+            46.136040761665214,
+            46.71244647212819
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "experimental_weak_candidate_shape_support": 300
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.94539955801875,
+            46.136040761665214,
+            46.71244647212819
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "consecutive_current_weak_scene_feature": 300
+          }
+        },
+        "motion": {
+          "numeric_frames": 300,
+          "frames": 300,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.94522721118504,
+            46.13574486631272,
+            46.714894887628674
+          ],
+          "episodes": 1,
+          "longest_s": 30.0,
+          "reasons": {
+            "same_feature_current_zero_doppler": 300
+          }
+        }
+      },
+      "ca_fine_reasons": {
+        "fine_peak_uncalibrated": 300
+      },
+      "median_power_db_bins1_9": [
+        76.42071510706822,
+        74.36564762448452,
+        60.58909576753567,
+        62.6211263769297,
+        55.41130231271557,
+        54.991497093384595,
+        53.33530616487619,
+        54.62892451061309,
+        50.252020555270974
+      ],
+      "median_ca_margin_db_bins1_9": [
+        13.83781937761842,
+        13.046525831408971,
+        -11.984122411576914,
+        -11.181584871994929,
+        -17.788380273384877,
+        -17.758856934404587,
+        -15.543409175401814,
+        -5.079167760137659,
+        -8.16538332325792
+      ],
+      "current_rd_measured_bins": {
+        "1": 300,
+        "19": 29,
+        "20": 173
+      }
+    },
+    {
+      "label": "foil 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        117.66,
+        145.49
+      ],
+      "original_window_host_s": [
+        115.66,
+        147.49
+      ],
+      "nominal_target_m": 0.5,
+      "material": "foil-covered front",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": 280,
+          "cm_p05_p50_p95": [
+            45.941280034899094,
+            46.136040761665214,
+            46.650315196697996
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 280
+          }
+        },
+        "os": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": 280,
+          "cm_p05_p50_p95": [
+            45.941280034899094,
+            46.136040761665214,
+            46.650315196697996
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 280
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.941280034899094,
+            46.136040761665214,
+            46.650315196697996
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 280
+          }
+        },
+        "weak": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.941280034899094,
+            46.136040761665214,
+            46.650315196697996
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "experimental_weak_candidate_shape_support": 280
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.941280034899094,
+            46.136040761665214,
+            46.650315196697996
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "consecutive_current_weak_scene_feature": 280
+          }
+        },
+        "motion": {
+          "numeric_frames": 280,
+          "frames": 280,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            45.94165682411326,
+            46.13574486631272,
+            46.65068954376091
+          ],
+          "episodes": 1,
+          "longest_s": 28.0,
+          "reasons": {
+            "same_feature_current_zero_doppler": 280
+          }
+        }
+      },
+      "ca_fine_reasons": {
+        "fine_peak_uncalibrated": 280
+      },
+      "median_power_db_bins1_9": [
+        76.42071510706822,
+        74.36564762448452,
+        60.58909576753567,
+        62.6211263769297,
+        55.4083060410553,
+        54.985376633778245,
+        53.34091972800999,
+        54.6299820458706,
+        50.25000091704477
+      ],
+      "median_ca_margin_db_bins1_9": [
+        13.83781937761842,
+        13.046525831408971,
+        -11.984122411576914,
+        -11.181584871994929,
+        -17.788380273384877,
+        -17.750783937572944,
+        -15.534814737174779,
+        -5.079167760137659,
+        -8.166030882459326
+      ],
+      "current_rd_measured_bins": {
+        "1": 280,
+        "19": 22,
+        "20": 166
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {
+          "1": 56
+        },
+        "locations_cm": [
+          [
+            46.70679599275363
+          ],
+          [
+            46.70679599275363
+          ],
+          [
+            47.249898271739134
+          ],
+          [
+            46.70679599275363
+          ],
+          [
+            46.70679599275363
+          ],
+          [
+            46.70679599275363
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.70679599275363
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ],
+          [
+            46.16369371376812
+          ]
+        ]
+      }
+    },
+    {
+      "label": "bare B 50 cm (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        180.2,
+        209.38
+      ],
+      "original_window_host_s": [
+        179.2,
+        210.38
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 294
+          }
+        },
+        "os": {
+          "numeric_frames": 294,
+          "frames": 294,
+          "presence_frames": 294,
+          "cm_p05_p50_p95": [
+            28.993382173328918,
+            29.066460750026636,
+            29.143848704718426
+          ],
+          "episodes": 1,
+          "longest_s": 29.4,
+          "reasons": {
+            "cfar_peak_uncalibrated": 294
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 287,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            28.995664847331323,
+            29.066710071314773,
+            29.144081198988697
+          ],
+          "episodes": 7,
+          "longest_s": 12.9,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 287,
+            "multiple_os_groups": 7
+          }
+        },
+        "weak": {
+          "numeric_frames": 287,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            28.995664847331323,
+            29.066710071314773,
+            29.144081198988697
+          ],
+          "episodes": 7,
+          "longest_s": 12.9,
+          "reasons": {
+            "experimental_weak_candidate_shape_support": 287,
+            "multiple_os_groups": 7
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 277,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            28.99829883042422,
+            29.067253685981054,
+            29.144437181038672
+          ],
+          "episodes": 5,
+          "longest_s": 12.7,
+          "reasons": {
+            "consecutive_current_weak_scene_feature": 277,
+            "no_current_weak_support": 7,
+            "confirming_current_weak_scene_feature": 10
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "stopped_rd_without_current_range_support": 294
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        59.355796709309026,
+        51.38939821646695,
+        52.25352769379471,
+        58.185345607946914,
+        53.998050861333255,
+        60.894701853952384,
+        58.91566706723037,
+        55.27673776134623,
+        52.92858480804134
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -1.2666917906359423,
+        -10.232540245541095,
+        -9.135430626603418,
+        -2.534763333506384,
+        -4.591087992856975,
+        3.014813247691577,
+        3.127853346179049,
+        -2.5302314240604944,
+        -5.787811865425156
+      ],
+      "current_rd_measured_bins": {
+        "1": 294,
+        "6": 294
+      }
+    },
+    {
+      "label": "bare B 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        181.2,
+        208.38
+      ],
+      "original_window_host_s": [
+        179.2,
+        210.38
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 274
+          }
+        },
+        "os": {
+          "numeric_frames": 274,
+          "frames": 274,
+          "presence_frames": 274,
+          "cm_p05_p50_p95": [
+            28.994695800137443,
+            29.066460750026636,
+            29.13804281762546
+          ],
+          "episodes": 1,
+          "longest_s": 27.4,
+          "reasons": {
+            "cfar_peak_uncalibrated": 274
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 267,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            28.997606594106536,
+            29.066710071314773,
+            29.138251793547326
+          ],
+          "episodes": 7,
+          "longest_s": 12.9,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 267,
+            "multiple_os_groups": 7
+          }
+        },
+        "weak": {
+          "numeric_frames": 267,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            28.997606594106536,
+            29.066710071314773,
+            29.138251793547326
+          ],
+          "episodes": 7,
+          "longest_s": 12.9,
+          "reasons": {
+            "experimental_weak_candidate_shape_support": 267,
+            "multiple_os_groups": 7
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 257,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            29.00179261540555,
+            29.067253685981054,
+            29.13856156498681
+          ],
+          "episodes": 5,
+          "longest_s": 12.7,
+          "reasons": {
+            "consecutive_current_weak_scene_feature": 257,
+            "no_current_weak_support": 7,
+            "confirming_current_weak_scene_feature": 10
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "stopped_rd_without_current_range_support": 274
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        59.35613448088716,
+        51.38939821646695,
+        52.25352769379471,
+        58.18632418784991,
+        53.998316226339014,
+        60.895547154859734,
+        58.917051733836374,
+        55.27565147578325,
+        52.9239479662742
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -1.2667552640438802,
+        -10.232540245541095,
+        -9.135430626603418,
+        -2.533196374692439,
+        -4.591173279769212,
+        3.0133718600948667,
+        3.129063007413341,
+        -2.5325448719389376,
+        -5.794332756505067
+      ],
+      "current_rd_measured_bins": {
+        "1": 274,
+        "6": 274
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {},
+        "locations_cm": []
+      }
+    },
+    {
+      "label": "final empty (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        227.29,
+        242.71
+      ],
+      "original_window_host_s": [
+        226.29,
+        243.71
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 155
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 155
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 155,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 155
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.212782525469976,
+        45.941071956148946,
+        52.369288595574446,
+        57.260938598948854,
+        58.89969709203015,
+        63.62742474523715,
+        63.02632897049137,
+        58.57829399773253,
+        52.3605349714808
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -7.555453852884938,
+        -18.550135995385403,
+        -11.540036070683932,
+        -5.421951247851531,
+        -1.1055377180654375,
+        6.509291067603785,
+        6.500126098734672,
+        -1.3165842598560769,
+        -9.16788522724149
+      ],
+      "current_rd_measured_bins": {
+        "6": 155
+      }
+    },
+    {
+      "label": "final empty (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        228.29,
+        241.71
+      ],
+      "original_window_host_s": [
+        226.29,
+        243.71
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 135
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 135
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 135,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 135
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        55.212782525469976,
+        45.94082665389722,
+        52.368163700202345,
+        57.2646690956115,
+        58.8961591396469,
+        63.630286477656185,
+        63.02845541129816,
+        58.57853364887164,
+        52.37503142592303
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -7.556466349050254,
+        -18.550574173176216,
+        -11.541063232341738,
+        -5.423253446064603,
+        -1.106562923238031,
+        6.505681656122778,
+        6.498863370071126,
+        -1.313995936940676,
+        -9.15231690352756
+      ],
+      "current_rd_measured_bins": {
+        "6": 135
+      }
+    }
+  ],
+  "interpretation": "New capture evaluated with unchanged settings; labels used only for scoring. Empty silence is inherited through gated stages and does not compensate for missing target ranges. Peak locations and spectral contrasts are diagnostics, not accepted physical target distances."
+}

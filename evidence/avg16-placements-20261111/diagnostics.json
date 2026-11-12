@@ -1,0 +1,465 @@
+{
+  "saved_live_replay_matches": true,
+  "compared_frames": 1747,
+  "source_sha256": "d09ea1c6d5854606b6c791ab884226e93367b313ab3daa507e56c1917b6414fd",
+  "qualification_report_sha256": "8b95c573b5f8a304f2400f3277ad34ea339673aaa27d162da678176308d8de5c",
+  "interpretation": "Selected return versus labeled placement only; no verified reflector identity. Windows are two-second-trimmed host intervals. Thresholds and search mask unchanged. Candidate failures separate below-threshold/peak-shape effects from persistence.",
+  "windows": [
+    {
+      "label": "initial empty (trim 2s)",
+      "frames": 144,
+      "above_threshold_frames": 0,
+      "candidate_frames": 0,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {},
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -6.871047091286628,
+          -10.356932187850752,
+          -9.021094049206848,
+          -8.941765891758697,
+          -4.024618718421964,
+          6.109955310976511,
+          6.520514383012935,
+          -5.97778073938871
+        ],
+        [
+          -5.882982700990068,
+          -9.16196017924103,
+          -7.205222020591595,
+          -8.433655906511472,
+          -3.376052478443367,
+          6.997491018600394,
+          7.5448197395614125,
+          -5.303369217544259
+        ],
+        [
+          -4.039883275876085,
+          -8.147311736719812,
+          -5.754825202417413,
+          -8.078258887700736,
+          -3.003993375516549,
+          7.3767595145262765,
+          7.854441925890318,
+          -4.637789801397072
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 143,
+          "frames": 144,
+          "duration_s": 14.4
+        }
+      ],
+      "longest_numeric_gap_s": 14.4
+    },
+    {
+      "label": "50 cm (trim 2s)",
+      "frames": 176,
+      "above_threshold_frames": 176,
+      "candidate_frames": 176,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "2": 176
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -1.5855902719826478,
+          2.3853949670434345,
+          -1.8839093687912203,
+          -9.041870080602573,
+          -8.368207724301593,
+          -5.882292148379029,
+          -5.49732806938907,
+          -6.880784693630176
+        ],
+        [
+          -0.8117954728165567,
+          4.114580262428316,
+          0.0035913695821666626,
+          -6.8311321213302065,
+          -6.730694799696081,
+          -3.4722213859768973,
+          -2.7428214961716724,
+          -4.430367637585574
+        ],
+        [
+          0.17670443338487757,
+          6.767676411199798,
+          2.4646740757520167,
+          -4.975274354306814,
+          -5.084510319782231,
+          -1.9420132830752923,
+          -1.3171993974785536,
+          -3.029049245376491
+        ]
+      ],
+      "numeric_gap_episodes": [],
+      "longest_numeric_gap_s": 0
+    },
+    {
+      "label": "empty after 50 cm (trim 2s)",
+      "frames": 118,
+      "above_threshold_frames": 0,
+      "candidate_frames": 0,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {},
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -8.178788737641344,
+          -14.60072401718403,
+          -11.316589765955316,
+          -6.2786972996769945,
+          -3.488200351867297,
+          6.356923113971975,
+          6.2158193206237815,
+          -5.208547880356201
+        ],
+        [
+          -7.745486134722263,
+          -12.610472852355317,
+          -9.26456609921938,
+          -5.595400493349938,
+          -2.8130456362051968,
+          7.463269175554949,
+          7.369119041079641,
+          -4.44275564327459
+        ],
+        [
+          -7.593245773344207,
+          -10.837587138163983,
+          -6.562573070097621,
+          -4.720196975924887,
+          -2.47150193050868,
+          8.232547556761867,
+          7.982460330193482,
+          -3.528593851589034
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 117,
+          "frames": 118,
+          "duration_s": 11.8
+        }
+      ],
+      "longest_numeric_gap_s": 11.8
+    },
+    {
+      "label": "80 cm (trim 2s)",
+      "frames": 199,
+      "above_threshold_frames": 110,
+      "candidate_frames": 110,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "3": 110
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -7.206958869478022,
+          -8.61530561664245,
+          -2.6377738625965637,
+          -2.5760697086777107,
+          0.15973409837246894,
+          -1.8295567725378934,
+          -7.908188367098161,
+          -4.672990782201348
+        ],
+        [
+          -6.224729908881016,
+          -6.129777910808255,
+          0.20944525489857524,
+          -1.794819804790765,
+          1.3976171140552764,
+          -0.760904785477243,
+          -6.599001436626956,
+          -3.609729889941194
+        ],
+        [
+          -5.185210537548519,
+          -4.202582831953818,
+          1.8767911584654777,
+          -0.3837287218840326,
+          2.5438733937178557,
+          0.6002712271914038,
+          -4.113538419318962,
+          -1.4637352224525404
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 40,
+          "frames": 41,
+          "duration_s": 4.1
+        },
+        {
+          "start_index": 48,
+          "end_index": 51,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 71,
+          "end_index": 100,
+          "frames": 30,
+          "duration_s": 3.0
+        },
+        {
+          "start_index": 103,
+          "end_index": 108,
+          "frames": 6,
+          "duration_s": 0.6
+        },
+        {
+          "start_index": 111,
+          "end_index": 122,
+          "frames": 12,
+          "duration_s": 1.2
+        },
+        {
+          "start_index": 128,
+          "end_index": 134,
+          "frames": 7,
+          "duration_s": 0.7
+        },
+        {
+          "start_index": 153,
+          "end_index": 155,
+          "frames": 3,
+          "duration_s": 0.3
+        },
+        {
+          "start_index": 161,
+          "end_index": 164,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 174,
+          "end_index": 180,
+          "frames": 7,
+          "duration_s": 0.7
+        }
+      ],
+      "longest_numeric_gap_s": 4.1
+    },
+    {
+      "label": "empty after 80 cm (trim 2s)",
+      "frames": 118,
+      "above_threshold_frames": 0,
+      "candidate_frames": 0,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {},
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -7.199036921798304,
+          -13.66399430172857,
+          -9.840261269920346,
+          -6.683042278922556,
+          -5.727437114924016,
+          4.782601396127589,
+          5.79047571523412,
+          -5.618845916264751
+        ],
+        [
+          -6.013659308126289,
+          -10.99868243781302,
+          -7.806636595403864,
+          -5.4449902135546795,
+          -4.788237025510991,
+          6.328275339567295,
+          7.1823790310092175,
+          -4.036841139357115
+        ],
+        [
+          -5.520086450735692,
+          -7.226114736749055,
+          -5.078048262374492,
+          -4.285039443091782,
+          -4.115816502829188,
+          7.33092358824127,
+          8.525408434680003,
+          -2.951043756934467
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 117,
+          "frames": 118,
+          "duration_s": 11.8
+        }
+      ],
+      "longest_numeric_gap_s": 11.8
+    },
+    {
+      "label": "120 cm (trim 2s)",
+      "frames": 183,
+      "above_threshold_frames": 149,
+      "candidate_frames": 149,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {
+        "4": 149
+      },
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -5.609811132624185,
+          -13.30014441490863,
+          -6.6313490005933655,
+          -0.1915649851891849,
+          -0.4198311332911416,
+          -0.8376381698773598,
+          0.2943016225594221,
+          -3.9812002144792933
+        ],
+        [
+          -5.302990266974616,
+          -10.430972813057362,
+          -5.208818725459363,
+          0.43877039415539265,
+          0.037197221552021556,
+          0.4997498005291937,
+          1.9600943940479603,
+          -3.422969054768446
+        ],
+        [
+          -4.466840204140066,
+          -7.386847044628911,
+          -3.1902160783309705,
+          1.454470016750779,
+          1.3772168000018228,
+          1.3812107967091458,
+          2.7539233813322084,
+          -1.8925187207394019
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 15,
+          "end_index": 21,
+          "frames": 7,
+          "duration_s": 0.7
+        },
+        {
+          "start_index": 59,
+          "end_index": 61,
+          "frames": 3,
+          "duration_s": 0.3
+        },
+        {
+          "start_index": 67,
+          "end_index": 70,
+          "frames": 4,
+          "duration_s": 0.4
+        },
+        {
+          "start_index": 74,
+          "end_index": 78,
+          "frames": 5,
+          "duration_s": 0.5
+        },
+        {
+          "start_index": 82,
+          "end_index": 86,
+          "frames": 5,
+          "duration_s": 0.5
+        },
+        {
+          "start_index": 90,
+          "end_index": 94,
+          "frames": 5,
+          "duration_s": 0.5
+        },
+        {
+          "start_index": 97,
+          "end_index": 102,
+          "frames": 6,
+          "duration_s": 0.6
+        },
+        {
+          "start_index": 105,
+          "end_index": 109,
+          "frames": 5,
+          "duration_s": 0.5
+        },
+        {
+          "start_index": 113,
+          "end_index": 118,
+          "frames": 6,
+          "duration_s": 0.6
+        },
+        {
+          "start_index": 120,
+          "end_index": 126,
+          "frames": 7,
+          "duration_s": 0.7
+        },
+        {
+          "start_index": 128,
+          "end_index": 130,
+          "frames": 3,
+          "duration_s": 0.3
+        },
+        {
+          "start_index": 132,
+          "end_index": 135,
+          "frames": 4,
+          "duration_s": 0.4
+        }
+      ],
+      "longest_numeric_gap_s": 0.7
+    },
+    {
+      "label": "final empty (trim 2s)",
+      "frames": 132,
+      "above_threshold_frames": 0,
+      "candidate_frames": 0,
+      "qualified_but_no_local_candidate_frames": 0,
+      "candidate_bin_counts": {},
+      "threshold_margin_db_p05_p50_p95_bins1_8": [
+        [
+          -6.6285408767884455,
+          -16.374943693048806,
+          -12.786064402955818,
+          -6.4609973296400485,
+          -5.077243642359512,
+          6.657090373048671,
+          7.928960823316107,
+          -4.306760111320147
+        ],
+        [
+          -6.277400722550112,
+          -14.539665858043792,
+          -11.331463499627537,
+          -5.86061492459459,
+          -4.324548144459209,
+          7.300880892282222,
+          8.683150664018106,
+          -3.6770871691383498
+        ],
+        [
+          -5.940225701878853,
+          -12.383035467093638,
+          -8.941636651327903,
+          -5.175639353035119,
+          -3.7886444993241466,
+          7.752531236987206,
+          9.22708011450353,
+          -3.2225762473390436
+        ]
+      ],
+      "numeric_gap_episodes": [
+        {
+          "start_index": 0,
+          "end_index": 131,
+          "frames": 132,
+          "duration_s": 13.2
+        }
+      ],
+      "longest_numeric_gap_s": 13.2
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+  "source_sha256": "0a7fdbd8f35628822dcc17a1a4ad15c177a17e4471736ff6c196088e7d4408e0",
+  "raw_sha256": "2ecf66a53e1b256a7044934b7c61c4c4721bdb05429669f1d61b73f913b9d1de",
+  "nominal_target_m": 0.8,
+  "endpoint_region_bins": [
+    2,
+    3
+  ],
+  "interpretation": "Approximate user target placement; endpoint-bin feature counts do not establish reflector identity. Strong farther returns contribute to current 1D training references; their physical origin is unverified.",
+  "frames": 758,
+  "host_span_s": 75.22455366700888,
+  "clock_states": {
+    "collecting": 200,
+    "frozen": 558
+  },
+  "frozen_residual_ms_p50_p95_max": [
+    1.6967810793637739,
+    4.303290971213158,
+    6.553881272061801
+  ],
+  "fit_diagnostics": {
+    "candidate_rate": 0.9937737743899768,
+    "candidate_offset_s": 0.00015903786015236676,
+    "max_residual_s": 0.015869042726484234,
+    "p95_residual_s": 0.0010812349671907029,
+    "max_limit_s": 0.1,
+    "p95_limit_s": 0.05
+  },
+  "primary_frames": 0,
+  "one_d_reasons": {
+    "no_candidate_above_noise": 758
+  },
+  "one_d_qualified_frames": 0,
+  "rd_confirmed_endpoint_region_frames": 16,
+  "rd_confirmed_bin_counts": {
+    "1": 11,
+    "6": 756,
+    "2": 14,
+    "3": 2,
+    "17": 23,
+    "16": 15
+  },
+  "native_margin_db_p05_p50_p95_bins1_9": [
+    [
+      -11.699719480855233,
+      -7.711286600266907,
+      -5.157645627023273,
+      -12.392881509346406,
+      -8.049581338719147,
+      5.3388461600567725,
+      4.64198826389732,
+      -5.984705199983297,
+      -6.64223723394205
+    ],
+    [
+      -9.71194539726735,
+      -6.090188853013416,
+      -4.312273885824956,
+      -10.90079223963181,
+      -7.261163809404534,
+      5.762871765744303,
+      5.290413817694876,
+      -5.194331958086578,
+      -6.046739414659433
+    ],
+    [
+      -6.119498384109224,
+      -4.446378341026269,
+      -3.6514974289664632,
+      -9.492562074750651,
+      -6.027463859183767,
+      6.689517553055175,
+      6.167210788404204,
+      -4.593162877890813,
+      -5.244250194664019
+    ]
+  ],
+  "endpoint_reference_diagnostics": [
+    {
+      "tested_bin": 2,
+      "reference_bins": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "median_reference_power_fraction_from_bins6_7": 0.9181049055270176
+    },
+    {
+      "tested_bin": 3,
+      "reference_bins": [
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "median_reference_power_fraction_from_bins6_7": 0.8605239986314204
+    }
+  ],
+  "rd_fine_range_cm_by_bin": {
+    "1": {
+      "frames": 11,
+      "p05_p50_p95": [
+        30.68306084157614,
+        33.42506271674054,
+        36.2417698940466
+      ]
+    },
+    "2": {
+      "frames": 14,
+      "p05_p50_p95": [
+        81.50760588850109,
+        84.02763699572938,
+        85.46411972302268
+      ]
+    },
+    "3": {
+      "frames": 1,
+      "p05_p50_p95": [
+        88.85370921518557,
+        88.85370921518557,
+        88.85370921518557
+      ]
+    },
+    "6": {
+      "frames": 756,
+      "p05_p50_p95": [
+        221.84584500457595,
+        222.44367255956524,
+        222.97008429841117
+      ]
+    },
+    "16": {
+      "frames": 11,
+      "p05_p50_p95": [
+        568.392646142581,
+        572.0935421428414,
+        572.8931034498432
+      ]
+    },
+    "17": {
+      "frames": 23,
+      "p05_p50_p95": [
+        574.369426731955,
+        576.4691687956346,
+        579.126400662099
+      ]
+    }
+  }
+}

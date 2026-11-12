@@ -1,0 +1,63 @@
+{
+  "recording": "recordings/rd-gui-20261111-132433-610820/live-001",
+  "frames": 358,
+  "first_rejection_index": 200,
+  "first_rejection_sequence": 2774,
+  "first_rejection_device_elapsed_s": 20.000000000000014,
+  "reasons": {
+    "radar_feature_association_only": 200,
+    "clock_fit_unstable": 158
+  },
+  "fit": {
+    "candidate_rate": 0.993877453642786,
+    "candidate_offset_s": -0.028909939847618915,
+    "max_residual_s": 0.0753797730864596,
+    "p95_residual_s": 0.0506196488909163,
+    "max_limit_s": 0.1,
+    "p95_limit_s": 0.05
+  },
+  "clock_decisions_reproduced": true,
+  "clock_policy": {
+    "algorithm": "bounded-startup-clock-v1",
+    "policy": {
+      "fit_span_s": 20.0,
+      "max_fit_span_s": 30.0,
+      "min_samples": 100,
+      "max_rate_error": 0.02,
+      "max_fit_residual_s": 0.1,
+      "p95_fit_residual_s": 0.05,
+      "max_progress_error_s": 0.5
+    },
+    "limitation": "Relative progress only; no absolute age handshake; startup latency ramps can resemble clock skew"
+  },
+  "capture_summary": {
+    "frames": 358,
+    "rejected_frames": 158,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 4989,
+    "received_bytes": 2821733
+  },
+  "startup_processing_ms_p50_p95_max": [
+    13.27618770301342,
+    52.13785162195563,
+    86.94329112768173
+  ],
+  "source_sha256": {
+    "radar_min/rd_gui.py": "2d62a7677943057ce5f8df798d306df05b6087079581c8a6a7d275c9a243a686",
+    "radar_min/clock_sync.py": "8ed9105cfafaf1c78a6536add3d9f3fca504b75a9c9094ed471f9ff74a1a5cfc",
+    "tools/diagnose_joint_timing.py": "8986abf5c130ec92e4d81349fd3aaf2bf081ab80476b1568287a4c0d351c466f"
+  },
+  "raw_sha256": "9c1e3c2315637474a9ac0b2cc82f24279873ab5051fb66ff373de5df3e889deb",
+  "interpretation": "Original startup jitter rejection reproduces with unchanged policy. GUI contention is a plausible contributor, not a proven exclusive cause. Lower display workload cannot retrospectively validate the rejected capture; physical live retry remains necessary.",
+  "current_gui_render_ms_p50_p95_max": [
+    77.73981243371964,
+    93.83364720270038,
+    94.19108321890235
+  ]
+}

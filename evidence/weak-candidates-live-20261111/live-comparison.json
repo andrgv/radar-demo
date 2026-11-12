@@ -1,0 +1,119 @@
+{
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "counts": {
+        "frames": 1747,
+        "weak_frames": 285,
+        "recovery_inspection_frames": 46,
+        "weak_model_withheld_frames": 269
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "counts": {
+        "frames": 2194,
+        "weak_frames": 738,
+        "recovery_inspection_frames": 36,
+        "weak_model_withheld_frames": 153
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "counts": {
+        "frames": 946,
+        "weak_frames": 7,
+        "recovery_inspection_frames": 0,
+        "weak_model_withheld_frames": 7
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "counts": {
+        "frames": 867,
+        "weak_frames": 0,
+        "recovery_inspection_frames": 0,
+        "weak_model_withheld_frames": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "counts": {
+        "frames": 757,
+        "weak_frames": 361,
+        "recovery_inspection_frames": 35,
+        "weak_model_withheld_frames": 122
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "counts": {
+        "frames": 682,
+        "weak_frames": 212,
+        "recovery_inspection_frames": 26,
+        "weak_model_withheld_frames": 204
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-143819-360020/live-003",
+      "counts": {
+        "frames": 1735,
+        "weak_frames": 224,
+        "recovery_inspection_frames": 60,
+        "weak_model_withheld_frames": 214
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "counts": {
+        "frames": 1937,
+        "weak_frames": 879,
+        "recovery_inspection_frames": 4,
+        "weak_model_withheld_frames": 19
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "counts": {
+        "frames": 2366,
+        "weak_frames": 1085,
+        "recovery_inspection_frames": 6,
+        "weak_model_withheld_frames": 23
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-135229-775366/live-001",
+      "counts": {
+        "frames": 1545,
+        "weak_frames": 861,
+        "recovery_inspection_frames": 58,
+        "weak_model_withheld_frames": 844
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+      "counts": {
+        "frames": 758,
+        "weak_frames": 319,
+        "recovery_inspection_frames": 319,
+        "weak_model_withheld_frames": 319
+      }
+    }
+  ],
+  "framewise_live_offline_selection_equal": true,
+  "primary_unchanged": true,
+  "inputs": {
+    "evidence/weak-candidates-20261111/report.json": "1309b825e3fb63f202e601ce052d802beaf0ea6534d16c6612c2d06fd38e34a7",
+    "evidence/weak-candidates-20261111/frames.jsonl.gz": "9ae356ed694d0beb637724f1500e84312648cfe28f82808fca180e4c167450c8",
+    "evidence/weak-candidates-live-20261111/report.json": "b3df60b8548541bd10042b519204de133ee6d7257bb34b14040410c7774d1659",
+    "evidence/weak-candidates-live-20261111/results.jsonl.gz": "85501097c5e7fa3caa7469b8cd80fc1ec4ff3141f2bca9a66323e212cae10920"
+  },
+  "sources": {
+    "tools/review_weak_live.py": "02c232661fd90b273eab469dcf8a5278b7e17fe2b884d18fc21b9f72fc964562",
+    "radar_min/rd_live.py": "b13a19af1f62c52da87fca2ee9f5b19ed1ef55ae8c9c6197e3b526a59925b2c1",
+    "radar_min/rd_gui.py": "340600cd1cefa572c446d52042765844b966f2975c2f2ccc6128fd0ad3653ee8",
+    "radar_min/weak_candidate.py": "e82e44849587968c58e5ac3e56f47a5de6257f69f1e00af8b0fe19e97705ae76",
+    "radar_min/__main__.py": "d13c4ccdba7efb4377416ace609971781c79d7be4f8d52298c513e554478c62c"
+  },
+  "interpretation": "Live processing adapter tested on saved frames, not a new serial/hardware timing qualification. Inspection does not identify the labeled target or accept a rejected range model. Motion policy and RD masks/association are independently checked by evaluate_joint_results."
+}

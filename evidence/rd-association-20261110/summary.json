@@ -1,0 +1,720 @@
+{
+  "review_source_sha256": "843faf98a563063c4c3e51bb32dd285615cca20c09e6f2a731b90fb4fa7d29ed",
+  "datasets": {
+    "first": {
+      "recording": "recordings/avg16-motion-01",
+      "frames": 605,
+      "valid_frames": 605,
+      "roi_bins": [
+        2,
+        3,
+        4
+      ],
+      "raw_sha256": "116ef0af4c4a2609d803bec7d5192985d7e521b9101622938702ba034c9893a1",
+      "cfar": {
+        "guard_range": 1,
+        "guard_doppler": 1,
+        "training_range": 3,
+        "training_doppler": 2,
+        "min_training": 16,
+        "factor": 4.0,
+        "doppler_edge": "wrap"
+      },
+      "association": {
+        "confirmation_frames": 3,
+        "birth_margin_db": 3.0,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "max_missed_frames": 2,
+        "max_ambiguous_frames": 5,
+        "ambiguity_gap": 0.25
+      },
+      "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+      "association_source_sha256": "9eecded2be09edc3473f6a2f41defb577f3cbc8eb54f827e730206e137662bb1",
+      "frozen_cfar_arrays_identical": true,
+      "current_measurement_invariant_violations": 0,
+      "states": {
+        "tentative": 109,
+        "measured": 1839,
+        "ambiguous": 49,
+        "missed": 49
+      },
+      "ended_reasons": {
+        "confirmation_quality_interrupted": 45,
+        "confirmation_interrupted": 24,
+        "no_support_expired": 7,
+        "ambiguous_support_expired": 2
+      },
+      "observation_dispositions": {
+        "new_peak_hypothesis": 81,
+        "below_birth_margin": 699,
+        "associated_peak": 1867,
+        "confirmation_quality_interrupted": 45,
+        "unresolved_track_gate": 11
+      },
+      "feature_hypotheses": 81,
+      "confirmed_feature_ids": 12,
+      "association_ms_p05_p50_p95_max": [
+        0.07980018854141235,
+        0.10070810094475746,
+        0.1522574573755264,
+        2.0389161072671413
+      ],
+      "motions": [
+        {
+          "label": "approach 1",
+          "window_host_s": [
+            11.549999999999999,
+            12.600000000000001
+          ],
+          "frames": 11,
+          "raw_roi_zero_frames": 5,
+          "raw_roi_nonzero_frames": 6,
+          "measured_roi_zero_frames": 5,
+          "measured_roi_nonzero_frames": 6,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 7,
+          "measured_all_range_nonzero_frames": 6,
+          "measured_roi_feature_ids": [
+            6
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            6
+          ]
+        },
+        {
+          "label": "retreat 1",
+          "window_host_s": [
+            23.47,
+            24.44
+          ],
+          "frames": 10,
+          "raw_roi_zero_frames": 0,
+          "raw_roi_nonzero_frames": 10,
+          "measured_roi_zero_frames": 0,
+          "measured_roi_nonzero_frames": 10,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 10,
+          "measured_all_range_nonzero_frames": 10,
+          "measured_roi_feature_ids": [
+            6
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            6
+          ]
+        },
+        {
+          "label": "approach 2",
+          "window_host_s": [
+            36.84,
+            37.73
+          ],
+          "frames": 9,
+          "raw_roi_zero_frames": 3,
+          "raw_roi_nonzero_frames": 6,
+          "measured_roi_zero_frames": 2,
+          "measured_roi_nonzero_frames": 5,
+          "ambiguous_roi_support_frames": 4,
+          "raw_all_range_nonzero_frames": 6,
+          "measured_all_range_nonzero_frames": 5,
+          "measured_roi_feature_ids": [
+            52
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            52
+          ]
+        },
+        {
+          "label": "retreat 2",
+          "window_host_s": [
+            47.31,
+            48.279999999999994
+          ],
+          "frames": 10,
+          "raw_roi_zero_frames": 3,
+          "raw_roi_nonzero_frames": 8,
+          "measured_roi_zero_frames": 3,
+          "measured_roi_nonzero_frames": 7,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 9,
+          "measured_all_range_nonzero_frames": 7,
+          "measured_roi_feature_ids": [
+            54
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            54
+          ]
+        }
+      ],
+      "holds": [
+        {
+          "label": "120 cm A",
+          "window_host_s": [
+            2,
+            9.35
+          ],
+          "frames": 74,
+          "raw_roi_zero_frames": 74,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 74,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 22,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            6
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "60 cm A",
+          "window_host_s": [
+            14.8,
+            21.27
+          ],
+          "frames": 65,
+          "raw_roi_zero_frames": 65,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 65,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 13,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            6
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "120 cm B",
+          "window_host_s": [
+            26.64,
+            34.64
+          ],
+          "frames": 81,
+          "raw_roi_zero_frames": 81,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 73,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 3,
+          "raw_all_range_nonzero_frames": 18,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            6,
+            52
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "60 cm B",
+          "window_host_s": [
+            39.93,
+            45.11
+          ],
+          "frames": 53,
+          "raw_roi_zero_frames": 9,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 9,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 17,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            54
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "120 cm C",
+          "window_host_s": [
+            50.48,
+            57.855707
+          ],
+          "frames": 74,
+          "raw_roi_zero_frames": 74,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 74,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 16,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            62
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        }
+      ],
+      "controls": [],
+      "same_id_nonzero_to_zero_transitions": [
+        {
+          "track_id": 6,
+          "from_host_s": 11.992373,
+          "to_host_s": 12.091467,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 6,
+          "from_host_s": 12.487793,
+          "to_host_s": 12.586985,
+          "from_range_bin": 2,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 6,
+          "from_host_s": 12.983382,
+          "to_host_s": 13.082463,
+          "from_range_bin": 2,
+          "to_range_bin": 2,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 6,
+          "from_host_s": 25.173886,
+          "to_host_s": 25.372254,
+          "from_range_bin": 4,
+          "to_range_bin": 4,
+          "intervening_frames": 1
+        },
+        {
+          "track_id": 52,
+          "from_host_s": 36.768585,
+          "to_host_s": 36.86752,
+          "from_range_bin": 4,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 52,
+          "from_host_s": 38.056669,
+          "to_host_s": 38.155793,
+          "from_range_bin": 2,
+          "to_range_bin": 2,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 54,
+          "from_host_s": 47.668513,
+          "to_host_s": 47.76769,
+          "from_range_bin": 3,
+          "to_range_bin": 2,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 54,
+          "from_host_s": 48.064948,
+          "to_host_s": 48.164017,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 54,
+          "from_host_s": 48.362208,
+          "to_host_s": 48.461314,
+          "from_range_bin": 3,
+          "to_range_bin": 2,
+          "intervening_frames": 0
+        }
+      ],
+      "note": "Feature IDs, not object identity. Label windows/ROI inherited unchanged from prior reviews. Ambiguous support has no point measurement. Candidate filtering trades short/weak motion coverage for persistence; no ground-truth accuracy claim."
+    },
+    "followup": {
+      "recording": "recordings/gui-20261110-221227-169414/live-001",
+      "frames": 1149,
+      "valid_frames": 1149,
+      "roi_bins": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_sha256": "f48351505649078ca4aea7b1eb09d1dc2953dd1700e89fd55e428e228fa56084",
+      "cfar": {
+        "guard_range": 1,
+        "guard_doppler": 1,
+        "training_range": 3,
+        "training_doppler": 2,
+        "min_training": 16,
+        "factor": 4.0,
+        "doppler_edge": "wrap"
+      },
+      "association": {
+        "confirmation_frames": 3,
+        "birth_margin_db": 3.0,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "max_missed_frames": 2,
+        "max_ambiguous_frames": 5,
+        "ambiguity_gap": 0.25
+      },
+      "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+      "association_source_sha256": "9eecded2be09edc3473f6a2f41defb577f3cbc8eb54f827e730206e137662bb1",
+      "frozen_cfar_arrays_identical": true,
+      "current_measurement_invariant_violations": 0,
+      "states": {
+        "tentative": 234,
+        "measured": 2802,
+        "missed": 80,
+        "ambiguous": 200
+      },
+      "ended_reasons": {
+        "confirmation_quality_interrupted": 83,
+        "confirmation_interrupted": 64,
+        "no_support_expired": 21,
+        "ambiguous_support_expired": 6
+      },
+      "observation_dispositions": {
+        "new_peak_hypothesis": 178,
+        "below_birth_margin": 1294,
+        "associated_peak": 2858,
+        "confirmation_quality_interrupted": 83,
+        "unresolved_track_gate": 21
+      },
+      "feature_hypotheses": 178,
+      "confirmed_feature_ids": 31,
+      "association_ms_p05_p50_p95_max": [
+        0.07218336686491966,
+        0.09533390402793884,
+        0.13954145833849904,
+        1.3111252337694168
+      ],
+      "motions": [
+        {
+          "label": "fast approach",
+          "window_host_s": [
+            31.31,
+            32.62
+          ],
+          "frames": 13,
+          "raw_roi_zero_frames": 5,
+          "raw_roi_nonzero_frames": 9,
+          "measured_roi_zero_frames": 3,
+          "measured_roi_nonzero_frames": 8,
+          "ambiguous_roi_support_frames": 2,
+          "raw_all_range_nonzero_frames": 9,
+          "measured_all_range_nonzero_frames": 8,
+          "measured_roi_feature_ids": [
+            47
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            47
+          ]
+        },
+        {
+          "label": "fast retreat",
+          "window_host_s": [
+            48.980000000000004,
+            50.43
+          ],
+          "frames": 15,
+          "raw_roi_zero_frames": 2,
+          "raw_roi_nonzero_frames": 11,
+          "measured_roi_zero_frames": 2,
+          "measured_roi_nonzero_frames": 11,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 12,
+          "measured_all_range_nonzero_frames": 11,
+          "measured_roi_feature_ids": [
+            47
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            47
+          ]
+        },
+        {
+          "label": "slow approach",
+          "window_host_s": [
+            64.38000000000001,
+            67.25
+          ],
+          "frames": 29,
+          "raw_roi_zero_frames": 16,
+          "raw_roi_nonzero_frames": 13,
+          "measured_roi_zero_frames": 9,
+          "measured_roi_nonzero_frames": 6,
+          "ambiguous_roi_support_frames": 14,
+          "raw_all_range_nonzero_frames": 20,
+          "measured_all_range_nonzero_frames": 6,
+          "measured_roi_feature_ids": [
+            102,
+            105
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            105
+          ]
+        },
+        {
+          "label": "slow retreat",
+          "window_host_s": [
+            81.34,
+            84.5
+          ],
+          "frames": 32,
+          "raw_roi_zero_frames": 14,
+          "raw_roi_nonzero_frames": 19,
+          "measured_roi_zero_frames": 11,
+          "measured_roi_nonzero_frames": 19,
+          "ambiguous_roi_support_frames": 1,
+          "raw_all_range_nonzero_frames": 22,
+          "measured_all_range_nonzero_frames": 19,
+          "measured_roi_feature_ids": [
+            109
+          ],
+          "measured_nonzero_roi_feature_ids": [
+            109
+          ]
+        }
+      ],
+      "holds": [
+        {
+          "label": "120 cm A",
+          "window_host_s": [
+            20.99,
+            29.11
+          ],
+          "frames": 82,
+          "raw_roi_zero_frames": 78,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 57,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 5,
+          "raw_all_range_nonzero_frames": 24,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            47
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "30 cm A",
+          "window_host_s": [
+            34.82,
+            46.78
+          ],
+          "frames": 120,
+          "raw_roi_zero_frames": 120,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 120,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 31,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            47
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "120 cm B",
+          "window_host_s": [
+            52.63,
+            62.18000000000001
+          ],
+          "frames": 97,
+          "raw_roi_zero_frames": 70,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 42,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 10,
+          "raw_all_range_nonzero_frames": 29,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            47,
+            95
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "30 cm B",
+          "window_host_s": [
+            69.45,
+            79.14
+          ],
+          "frames": 98,
+          "raw_roi_zero_frames": 98,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 98,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 24,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            109
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "120 cm C",
+          "window_host_s": [
+            86.7,
+            93.39
+          ],
+          "frames": 67,
+          "raw_roi_zero_frames": 12,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 7,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 4,
+          "raw_all_range_nonzero_frames": 12,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            109
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        }
+      ],
+      "controls": [
+        {
+          "label": "initial target absent",
+          "window_host_s": [
+            2,
+            13.99
+          ],
+          "frames": 121,
+          "raw_roi_zero_frames": 28,
+          "raw_roi_nonzero_frames": 2,
+          "measured_roi_zero_frames": 8,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 1,
+          "raw_all_range_nonzero_frames": 35,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            18,
+            22
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "post-removal quiet",
+          "window_host_s": [
+            102.39,
+            106.12
+          ],
+          "frames": 38,
+          "raw_roi_zero_frames": 0,
+          "raw_roi_nonzero_frames": 0,
+          "measured_roi_zero_frames": 0,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 0,
+          "raw_all_range_nonzero_frames": 12,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [],
+          "measured_nonzero_roi_feature_ids": []
+        },
+        {
+          "label": "target absent, possible operator motion",
+          "window_host_s": [
+            106.62,
+            113.814919
+          ],
+          "frames": 73,
+          "raw_roi_zero_frames": 40,
+          "raw_roi_nonzero_frames": 3,
+          "measured_roi_zero_frames": 34,
+          "measured_roi_nonzero_frames": 0,
+          "ambiguous_roi_support_frames": 1,
+          "raw_all_range_nonzero_frames": 24,
+          "measured_all_range_nonzero_frames": 0,
+          "measured_roi_feature_ids": [
+            163
+          ],
+          "measured_nonzero_roi_feature_ids": []
+        }
+      ],
+      "same_id_nonzero_to_zero_transitions": [
+        {
+          "track_id": 47,
+          "from_host_s": 31.631506,
+          "to_host_s": 31.730453,
+          "from_range_bin": 4,
+          "to_range_bin": 4,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 47,
+          "from_host_s": 32.921265,
+          "to_host_s": 33.020126,
+          "from_range_bin": 1,
+          "to_range_bin": 1,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 47,
+          "from_host_s": 50.272596,
+          "to_host_s": 50.371737,
+          "from_range_bin": 3,
+          "to_range_bin": 4,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 47,
+          "from_host_s": 50.669107,
+          "to_host_s": 50.768275,
+          "from_range_bin": 4,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 105,
+          "from_host_s": 65.342937,
+          "to_host_s": 65.442541,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 105,
+          "from_host_s": 65.641169,
+          "to_host_s": 65.83887,
+          "from_range_bin": 3,
+          "to_range_bin": 2,
+          "intervening_frames": 1
+        },
+        {
+          "track_id": 105,
+          "from_host_s": 66.632606,
+          "to_host_s": 66.730863,
+          "from_range_bin": 2,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 109,
+          "from_host_s": 67.821399,
+          "to_host_s": 67.921384,
+          "from_range_bin": 1,
+          "to_range_bin": 1,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 109,
+          "from_host_s": 83.104314,
+          "to_host_s": 83.204915,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 109,
+          "from_host_s": 83.505513,
+          "to_host_s": 83.602908,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 0
+        },
+        {
+          "track_id": 109,
+          "from_host_s": 84.002533,
+          "to_host_s": 84.200361,
+          "from_range_bin": 3,
+          "to_range_bin": 3,
+          "intervening_frames": 1
+        }
+      ],
+      "note": "Feature IDs, not object identity. Label windows/ROI inherited unchanged from prior reviews. Ambiguous support has no point measurement. Candidate filtering trades short/weak motion coverage for persistence; no ground-truth accuracy claim."
+    }
+  }
+}

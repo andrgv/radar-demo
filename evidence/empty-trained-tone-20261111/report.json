@@ -1,0 +1,1349 @@
+{
+  "protocol": "First half of first trim-2 empty fits exactly one nuisance tone/RX from empty covariance, fixed 0.05\u20135m grid at 5mm. No target-label fit or nuisance-rank sweep; nuisance frequency frozen afterward. Current independent sin/cos coefficients per chirp/RX permit background phase/amplitude changes. Raw DC-centered data; no fixed waveform subtraction. Conditional candidate grid is saved acquisition half-bin bounds at 1/64 native bin. Every quiet frame used. A probe exists even without CFAR; never a primary or confirmed object.",
+  "quality_rules": {
+    "conditional_max_residual": 0.5,
+    "max_width_native_bins": 0.5,
+    "rx_gate_native_bins": 0.25,
+    "min_supported_rx": 2,
+    "near_energy_fraction": 0.01,
+    "min_basis_singular": 1e-06,
+    "scan_boundary_rejected": true,
+    "competing_optima_rejected": true,
+    "note": "Borrowed fixed geometry/residual conventions from prior phase diagnostics, applied to post-nuisance energy. New diagnostic policy, not calibrated detection or independent validation."
+  },
+  "candidate_energy_threshold": 29545305.486378983,
+  "energy_gate": "Training-99th-percentile conditional explained energy per retained chirp/RX; empirical, no false-alarm calibration.",
+  "background_nominal_tone_m_rx": [
+    [
+      2.2399999999999998
+    ],
+    [
+      2.195
+    ],
+    [
+      2.2199999999999998
+    ]
+  ],
+  "background_search_bounds_m": [
+    0.05,
+    5.0
+  ],
+  "background_search_boundary_rx": [
+    false,
+    false,
+    false
+  ],
+  "background_boundary_policy": "Retained as an explicit diagnostic warning; not hidden or used to retune the model. Quality-only outputs do not certify nuisance-frequency identification.",
+  "training_sequences": [
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+  ],
+  "candidate_grid_m": [
+    0.17379272927536232,
+    0.1792237520652174,
+    0.18465477485507248,
+    0.19008579764492753,
+    0.1955168204347826,
+    0.20094784322463768,
+    0.20637886601449276,
+    0.21180988880434784,
+    0.2172409115942029,
+    0.22267193438405797,
+    0.22810295717391305,
+    0.23353397996376812,
+    0.2389650027536232,
+    0.24439602554347828,
+    0.24982704833333333,
+    0.25525807112318843,
+    0.2606890939130435,
+    0.26612011670289853,
+    0.2715511394927536,
+    0.2769821622826087,
+    0.28241318507246377,
+    0.28784420786231885,
+    0.2932752306521739,
+    0.298706253442029,
+    0.3041372762318841,
+    0.30956829902173916,
+    0.31499932181159424,
+    0.32043034460144926,
+    0.32586136739130434,
+    0.3312923901811594,
+    0.3367234129710145,
+    0.34215443576086957,
+    0.34758545855072465,
+    0.3530164813405797,
+    0.3584475041304348,
+    0.3638785269202899,
+    0.36930954971014496,
+    0.37474057250000004,
+    0.38017159528985506,
+    0.38560261807971014,
+    0.3910336408695652,
+    0.3964646636594203,
+    0.40189568644927537,
+    0.40732670923913045,
+    0.4127577320289855,
+    0.4181887548188406,
+    0.4236197776086957,
+    0.42905080039855076,
+    0.4344818231884058,
+    0.43991284597826086,
+    0.44534386876811594,
+    0.450774891557971,
+    0.4562059143478261,
+    0.46163693713768117,
+    0.46706795992753625,
+    0.4724989827173913,
+    0.4779300055072464,
+    0.4833610282971015,
+    0.48879205108695656,
+    0.4942230738768116,
+    0.49965409666666666,
+    0.5050851194565218,
+    0.5105161422463769,
+    0.515947165036232,
+    0.521378187826087,
+    0.526809210615942,
+    0.5322402334057971,
+    0.5376712561956521,
+    0.5431022789855072,
+    0.5485333017753623,
+    0.5539643245652174,
+    0.5593953473550725,
+    0.5648263701449275,
+    0.5702573929347826,
+    0.5756884157246377,
+    0.5811194385144928,
+    0.5865504613043478,
+    0.5919814840942029,
+    0.597412506884058,
+    0.6028435296739131,
+    0.6082745524637682,
+    0.6137055752536232,
+    0.6191365980434783,
+    0.6245676208333334,
+    0.6299986436231885,
+    0.6354296664130435,
+    0.6408606892028985,
+    0.6462917119927536,
+    0.6517227347826087,
+    0.6571537575724637,
+    0.6625847803623188,
+    0.6680158031521739,
+    0.673446825942029,
+    0.6788778487318841,
+    0.6843088715217391,
+    0.6897398943115942,
+    0.6951709171014493,
+    0.7006019398913044,
+    0.7060329626811594,
+    0.7114639854710145,
+    0.7168950082608696,
+    0.7223260310507247,
+    0.7277570538405798,
+    0.7331880766304348,
+    0.7386190994202899,
+    0.744050122210145,
+    0.7494811450000001,
+    0.754912167789855,
+    0.7603431905797101,
+    0.7657742133695652,
+    0.7712052361594203,
+    0.7766362589492753,
+    0.7820672817391304,
+    0.7874983045289855,
+    0.7929293273188406,
+    0.7983603501086957,
+    0.8037913728985507,
+    0.8092223956884058,
+    0.8146534184782609,
+    0.820084441268116,
+    0.825515464057971,
+    0.8309464868478261,
+    0.8363775096376812,
+    0.8418085324275363,
+    0.8472395552173914,
+    0.8526705780072464,
+    0.8581016007971015,
+    0.8635326235869566,
+    0.8689636463768116,
+    0.8743946691666666,
+    0.8798256919565217,
+    0.8852567147463768,
+    0.8906877375362319,
+    0.896118760326087,
+    0.901549783115942,
+    0.9069808059057971,
+    0.9124118286956522,
+    0.9178428514855073,
+    0.9232738742753623,
+    0.9287048970652174,
+    0.9341359198550725,
+    0.9395669426449276,
+    0.9449979654347826,
+    0.9504289882246377,
+    0.9558600110144928,
+    0.9612910338043479,
+    0.966722056594203,
+    0.972153079384058,
+    0.9775841021739131,
+    0.9830151249637682,
+    0.9884461477536232,
+    0.9938771705434782,
+    0.9993081933333333,
+    1.0047392161231885,
+    1.0101702389130436,
+    1.0156012617028987,
+    1.0210322844927537,
+    1.0264633072826088,
+    1.031894330072464,
+    1.037325352862319,
+    1.042756375652174,
+    1.048187398442029,
+    1.053618421231884,
+    1.059049444021739,
+    1.0644804668115941,
+    1.0699114896014492,
+    1.0753425123913043,
+    1.0807735351811594,
+    1.0862045579710145,
+    1.0916355807608695,
+    1.0970666035507246,
+    1.1024976263405797,
+    1.1079286491304348,
+    1.1133596719202898,
+    1.118790694710145,
+    1.1242217175,
+    1.129652740289855,
+    1.1350837630797102,
+    1.1405147858695652,
+    1.1459458086594203,
+    1.1513768314492754,
+    1.1568078542391305,
+    1.1622388770289855,
+    1.1676698998188406,
+    1.1731009226086957,
+    1.1785319453985508,
+    1.1839629681884059,
+    1.189393990978261,
+    1.194825013768116,
+    1.200256036557971,
+    1.2056870593478262,
+    1.2111180821376812,
+    1.2165491049275363,
+    1.2219801277173914,
+    1.2274111505072465,
+    1.2328421732971016,
+    1.2382731960869566,
+    1.2437042188768117,
+    1.2491352416666668,
+    1.2545662644565219,
+    1.259997287246377,
+    1.265428310036232,
+    1.270859332826087,
+    1.276290355615942,
+    1.281721378405797,
+    1.287152401195652,
+    1.2925834239855072,
+    1.2980144467753623,
+    1.3034454695652173,
+    1.3088764923550724,
+    1.3143075151449275,
+    1.3197385379347826,
+    1.3251695607246377,
+    1.3306005835144927,
+    1.3360316063043478,
+    1.3414626290942029,
+    1.346893651884058,
+    1.352324674673913,
+    1.3577556974637681,
+    1.3631867202536232,
+    1.3686177430434783,
+    1.3740487658333334,
+    1.3794797886231884,
+    1.3849108114130435,
+    1.3903418342028986,
+    1.3957728569927537,
+    1.4012038797826087,
+    1.4066349025724638,
+    1.412065925362319,
+    1.417496948152174,
+    1.422927970942029,
+    1.4283589937318841,
+    1.4337900165217392,
+    1.4392210393115943,
+    1.4446520621014494,
+    1.4500830848913044,
+    1.4555141076811595,
+    1.4609451304710146,
+    1.4663761532608697,
+    1.4718071760507248,
+    1.4772381988405798,
+    1.482669221630435,
+    1.48810024442029,
+    1.493531267210145,
+    1.4989622900000001,
+    1.5043933127898552,
+    1.50982433557971,
+    1.5152553583695652,
+    1.5206863811594202,
+    1.5261174039492753,
+    1.5315484267391304,
+    1.5369794495289855,
+    1.5424104723188405,
+    1.5478414951086956,
+    1.5532725178985507,
+    1.5587035406884058,
+    1.5641345634782609
+  ],
+  "spacing_m": 0.34758545855072465,
+  "manifest": {
+    "schema": 1,
+    "labels": "Consecutive user durations from first saved frame; transitions excluded; primary 2s trims with 1s sensitivity. No fitted offset. Labeled end 261.83s; later tail unlabeled.",
+    "scene": {
+      "target": "bare cardboard box",
+      "operator": "stationary at B, described as away from sensor range, during every quiet hold; user explicitly confirmed",
+      "front_face_dimensions_cm": [
+        45,
+        24
+      ],
+      "dimensions_provenance": "Inherited prior same-box setup; not remeasured in this message",
+      "distance_reference": "Antenna face to box front surface from established protocol; latest message gives nominal placements",
+      "background_wall": "Prior setup a little over 2 m; latest message did not remeasure"
+    },
+    "segments": [
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 0,
+        "end_s": 10.18,
+        "duration_s": 10.18
+      },
+      {
+        "label": "empty A",
+        "state": "target_absent",
+        "start_s": 10.18,
+        "end_s": 25.66,
+        "duration_s": 15.48
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 25.66,
+        "end_s": 46.3,
+        "duration_s": 20.64
+      },
+      {
+        "label": "50 cm A",
+        "state": "hold",
+        "start_s": 46.3,
+        "end_s": 76.96,
+        "duration_s": 30.66,
+        "nominal_target_m": 0.5
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 76.96,
+        "end_s": 89.75,
+        "duration_s": 12.79
+      },
+      {
+        "label": "empty B",
+        "state": "target_absent",
+        "start_s": 89.75,
+        "end_s": 105.71,
+        "duration_s": 15.96
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 105.71,
+        "end_s": 126.37,
+        "duration_s": 20.66
+      },
+      {
+        "label": "50 cm B",
+        "state": "hold",
+        "start_s": 126.37,
+        "end_s": 157.46,
+        "duration_s": 31.09,
+        "nominal_target_m": 0.5
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 157.46,
+        "end_s": 169.77,
+        "duration_s": 12.31
+      },
+      {
+        "label": "empty C",
+        "state": "target_absent",
+        "start_s": 169.77,
+        "end_s": 185.75,
+        "duration_s": 15.98
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 185.75,
+        "end_s": 203.93,
+        "duration_s": 18.18
+      },
+      {
+        "label": "120 cm",
+        "state": "hold",
+        "start_s": 203.93,
+        "end_s": 235.59,
+        "duration_s": 31.66,
+        "nominal_target_m": 1.2
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 235.59,
+        "end_s": 245.85,
+        "duration_s": 10.26
+      },
+      {
+        "label": "final empty",
+        "state": "target_absent",
+        "start_s": 245.85,
+        "end_s": 261.83,
+        "duration_s": 15.98
+      }
+    ],
+    "cases": [
+      {
+        "recording": "recordings/rd-gui-20261111-223730-634059/live-001",
+        "windows": [
+          {
+            "label": "empty A (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              11.18,
+              24.66
+            ],
+            "original_window_host_s": [
+              10.18,
+              25.66
+            ]
+          },
+          {
+            "label": "empty A (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              12.18,
+              23.66
+            ],
+            "original_window_host_s": [
+              10.18,
+              25.66
+            ]
+          },
+          {
+            "label": "50 cm A (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              47.3,
+              75.96
+            ],
+            "original_window_host_s": [
+              46.3,
+              76.96
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm A (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              48.3,
+              74.96
+            ],
+            "original_window_host_s": [
+              46.3,
+              76.96
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty B (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              90.75,
+              104.71
+            ],
+            "original_window_host_s": [
+              89.75,
+              105.71
+            ]
+          },
+          {
+            "label": "empty B (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              91.75,
+              103.71
+            ],
+            "original_window_host_s": [
+              89.75,
+              105.71
+            ]
+          },
+          {
+            "label": "50 cm B (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              127.37,
+              156.46
+            ],
+            "original_window_host_s": [
+              126.37,
+              157.46
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm B (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              128.37,
+              155.46
+            ],
+            "original_window_host_s": [
+              126.37,
+              157.46
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty C (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              170.77,
+              184.75
+            ],
+            "original_window_host_s": [
+              169.77,
+              185.75
+            ]
+          },
+          {
+            "label": "empty C (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              171.77,
+              183.75
+            ],
+            "original_window_host_s": [
+              169.77,
+              185.75
+            ]
+          },
+          {
+            "label": "120 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              204.93,
+              234.59
+            ],
+            "original_window_host_s": [
+              203.93,
+              235.59
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "120 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              205.93,
+              233.59
+            ],
+            "original_window_host_s": [
+              203.93,
+              235.59
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "final empty (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              246.85,
+              260.83
+            ],
+            "original_window_host_s": [
+              245.85,
+              261.83
+            ]
+          },
+          {
+            "label": "final empty (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              247.85,
+              259.83
+            ],
+            "original_window_host_s": [
+              245.85,
+              261.83
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "windows": [
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        12.18,
+        23.66
+      ],
+      "original_window_host_s": [
+        10.18,
+        25.66
+      ],
+      "role": "training only",
+      "frames": 58,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 58
+      },
+      "failure_counts": {
+        "scan_boundary": 58,
+        "poor_conditional_tone_model": 58,
+        "insufficient_consistent_rx": 58
+      },
+      "energy_changed_frames": 1,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 58,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.4914421399563181,
+        0.5010214707619884,
+        0.5084230811088635
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2629883155985206,
+        0.2700619966657458,
+        0.27964815462342074
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5292889861384356,
+        0.5388505888458509,
+        0.5509395784777384
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        28446091.89371929,
+        28993269.07353045,
+        29447160.360276707
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.02715511394927536
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        12.18,
+        23.66
+      ],
+      "original_window_host_s": [
+        10.18,
+        25.66
+      ],
+      "role": "held-out same-empty half",
+      "frames": 58,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 58
+      },
+      "failure_counts": {
+        "scan_boundary": 58,
+        "poor_conditional_tone_model": 58,
+        "insufficient_consistent_rx": 58
+      },
+      "energy_changed_frames": 8,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 58,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.4966056077815623,
+        0.5044177410442732,
+        0.5101505166292449
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2638785617506138,
+        0.27113337793474035,
+        0.2772123243122464
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5277007947208137,
+        0.5381906648149456,
+        0.5434730086391848
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        28566660.18106805,
+        29142591.55176702,
+        29681171.06734941
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.02715511394927536
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "50 cm A (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        48.3,
+        74.96
+      ],
+      "original_window_host_s": [
+        46.3,
+        76.96
+      ],
+      "nominal_target_m": 0.5,
+      "role": "held-out interval",
+      "frames": 268,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 268
+      },
+      "failure_counts": {
+        "scan_boundary": 268,
+        "poor_conditional_tone_model": 268,
+        "insufficient_consistent_rx": 268
+      },
+      "energy_changed_frames": 268,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 268,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ],
+          "nominal_difference_mae_cm": 32.620727072463765,
+          "within_half_native_bin": 0
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.41720619795407643,
+        0.42492172843134024,
+        0.4387255301129256
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2440350062485949,
+        0.25213371238347854,
+        0.2668415136112048
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5841679378173198,
+        0.5924435705079181,
+        0.6094534841817816
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        49448129.9704641,
+        50789559.58323455,
+        51433086.26582762
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.4581067723242753,
+        0.4670679599275362,
+        0.47793000550724635
+      ],
+      "width_m_p05_p50_p95": [
+        0.016293068369565206,
+        0.016293068369565206,
+        0.016293068369565206
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "empty B (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        91.75,
+        103.71
+      ],
+      "original_window_host_s": [
+        89.75,
+        105.71
+      ],
+      "role": "held-out interval",
+      "frames": 120,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 114,
+        "scan_boundary;insufficient_consistent_rx": 6
+      },
+      "failure_counts": {
+        "scan_boundary": 120,
+        "poor_conditional_tone_model": 114,
+        "insufficient_consistent_rx": 120
+      },
+      "energy_changed_frames": 93,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 120,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.48127575772528736,
+        0.49692945225426927,
+        0.5084580829910882
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.24338702806056453,
+        0.2592132532364058,
+        0.27417878152192954
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5010850869159579,
+        0.5188906360221028,
+        0.5455728921630167
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        29167610.76483426,
+        29901751.079770546,
+        30957720.80140913
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.021724091159420283
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "50 cm B (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        128.37,
+        155.46
+      ],
+      "original_window_host_s": [
+        126.37,
+        157.46
+      ],
+      "nominal_target_m": 0.5,
+      "role": "held-out interval",
+      "frames": 274,
+      "reasons": {
+        "poor_conditional_tone_model;insufficient_consistent_rx": 273,
+        "competing_optima;broad_fit;poor_conditional_tone_model;insufficient_consistent_rx": 1
+      },
+      "failure_counts": {
+        "poor_conditional_tone_model": 274,
+        "insufficient_consistent_rx": 274,
+        "competing_optima": 1,
+        "broad_fit": 1
+      },
+      "energy_changed_frames": 274,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 274,
+          "cm_p05_p50_p95": [
+            27.15511394927536,
+            27.69821622826087,
+            27.69821622826087
+          ],
+          "nominal_difference_mae_cm": 22.573334911231882,
+          "within_half_native_bin": 0
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.8737313685755536,
+        0.8777757794797583,
+        0.8816507081877395
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.5313452881714114,
+        0.5405799183362905,
+        0.5525581403149475
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.6069501055175457,
+        0.6153338209989896,
+        0.6284411067803698
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        45530908.12989183,
+        46174697.06881044,
+        46905075.696954474
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.602843529673913,
+        0.6137055752536231,
+        0.6210374560199273
+      ],
+      "width_m_p05_p50_p95": [
+        0.10862045579710142,
+        0.1140514785869565,
+        0.11948250137681163
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "empty C (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        171.77,
+        183.75
+      ],
+      "original_window_host_s": [
+        169.77,
+        185.75
+      ],
+      "role": "held-out interval",
+      "frames": 121,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 121
+      },
+      "failure_counts": {
+        "scan_boundary": 121,
+        "poor_conditional_tone_model": 121,
+        "insufficient_consistent_rx": 121
+      },
+      "energy_changed_frames": 119,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 121,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.4887311768164292,
+        0.4986861588068896,
+        0.5130745906260844
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.25011682718796263,
+        0.26101437883239625,
+        0.28465883085827154
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5110378508423092,
+        0.5239382539614347,
+        0.5535234250479415
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        29677553.807229906,
+        30428911.031083617,
+        31042200.44350667
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.021724091159420283
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "120 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        205.93,
+        233.59
+      ],
+      "original_window_host_s": [
+        203.93,
+        235.59
+      ],
+      "nominal_target_m": 1.2,
+      "role": "held-out interval",
+      "frames": 279,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 279
+      },
+      "failure_counts": {
+        "scan_boundary": 279,
+        "poor_conditional_tone_model": 279,
+        "insufficient_consistent_rx": 279
+      },
+      "energy_changed_frames": 279,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 279,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ],
+          "nominal_difference_mae_cm": 102.62072707246375,
+          "within_half_native_bin": 0
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.41281727283950714,
+        0.4226326195087157,
+        0.44240540658541444
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2125144000407011,
+        0.22196577851914046,
+        0.2423338329273729
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.513220913715638,
+        0.5258041971138164,
+        0.5499685016462638
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        31691796.182045706,
+        32246876.124953475,
+        32913705.8115817
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.016293068369565206,
+        0.016293068369565206,
+        0.016293068369565206
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "final empty (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        247.85,
+        259.83
+      ],
+      "original_window_host_s": [
+        245.85,
+        261.83
+      ],
+      "role": "held-out interval",
+      "frames": 120,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 120
+      },
+      "failure_counts": {
+        "scan_boundary": 120,
+        "poor_conditional_tone_model": 120,
+        "insufficient_consistent_rx": 120
+      },
+      "energy_changed_frames": 120,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 120,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.5068885881989389,
+        0.5128276371121957,
+        0.5178380763899695
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2658433449882882,
+        0.2740825065583315,
+        0.28368927801216703
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5241574635555852,
+        0.5354981277117135,
+        0.549718585096289
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        30062931.787850976,
+        30553861.100646622,
+        31000056.878345497
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.021724091159420283
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "hashes": {
+    "configs/bare-box-b-20261111.json": "cea19702fffba795315756a23dadde1ecfa9fe360c9f3586cf0480fbe587c5fc",
+    "recordings/rd-gui-20261111-223730-634059/live-001/frames.grd": "b7e86311ef494952f6ecf23792dff17b6f00f91e4be33f08f022f5682c0bcca0",
+    "recordings/rd-gui-20261111-223730-634059/live-001/arrivals.jsonl": "12bb8c5dfcf2571a954ea2c6d7ee22f172bc7d1a0bfa8ac73fad482941a66b82",
+    "recordings/rd-gui-20261111-223730-634059/live-001/config.json": "e23fa6761882efb7f7858a72622298f0be7e2807b09c15cadea08bcd9b1a7486",
+    "tools/investigate_empty_trained_tone.py": "566fd5fa71b8d8df9d1ebb2ed1b9197e8b3b314159245230e49e1c7decf66a79",
+    "tools/evaluate_tone_background.py": "2d03104b640969f9167401c1fbb5a931a15e182db538074871a46890d220fc46",
+    "tools/fit_range_signal.py": "2285519566d8f971a0b5fa16caa7c0a63954826aebe5425708f6aa9c8d4b5a3e",
+    "tools/evaluate_power_fit.py": "56fd0df89786da59232ba920b348a6456ff82d92454a131036532e7bd6835c8a",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14"
+  }
+}

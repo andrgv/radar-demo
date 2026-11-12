@@ -1,0 +1,339 @@
+{
+  "source_sha256": {
+    "tools/review_motion_range.py": "347d8216ccfa2a2b1a4505b2362d59115d1727352d780c72b09e213eee529f63",
+    "radar_min/motion_range.py": "283c5066c7255eeab3eb4c0d989bf7ed42f8731408a9b386cf30eb1e42a679d1",
+    "radar_min/joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812"
+  },
+  "regression_report_sha256": "26617c25a702ffa2cbe1cc896e8368ceeac8bb8e0cc07a53c3efdb0926add051",
+  "manifests": {
+    "configs/foil-box-live-20261111.json": "33d483b4b7a149ca6219c35a99886388486d9bf91c8232797d53b589c2f8a984"
+  },
+  "sessions": [
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "frames": 116,
+          "window_host_s": [
+            2,
+            13.54
+          ],
+          "baseline_frames": 0,
+          "motion_policy_frames": 0,
+          "motion_policy_cm_p05_p50_p95": null,
+          "baseline_cm_p05_p50_p95": null,
+          "selected_feature_counts": {
+            "None": 116
+          },
+          "source_counts": {
+            "None": 116
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 116
+          },
+          "baseline_reasons": {
+            "no_candidate_above_noise": 116
+          },
+          "recorded_motion_frames": 0,
+          "recorded_motion_cm_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 173,
+          "window_host_s": [
+            34.95,
+            52.11
+          ],
+          "baseline_frames": 173,
+          "motion_policy_frames": 173,
+          "motion_policy_cm_p05_p50_p95": [
+            50.63225871157411,
+            51.38339075695259,
+            51.60792135432705
+          ],
+          "baseline_cm_p05_p50_p95": [
+            50.63225871157411,
+            51.38339075695259,
+            51.60792135432705
+          ],
+          "selected_feature_counts": {
+            "None": 173
+          },
+          "source_counts": {
+            "frozen 1D baseline": 173
+          },
+          "selection_reasons": {
+            "no_motion_episode_baseline": 173
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 173
+          },
+          "recorded_motion_frames": 173,
+          "recorded_motion_cm_p05_p50_p95": [
+            50.63225871157411,
+            51.38339075695259,
+            51.60792135432705
+          ],
+          "raw_spectrum": {
+            "sample_stride": 5,
+            "frames_used": 35,
+            "diagnostic_band_m": [
+              0.15,
+              1.7
+            ],
+            "raw_near_peak_m": 0.515947165036232,
+            "per_rx_near_peak_m": [
+              0.49965409666666666,
+              0.597412506884058,
+              0.4779300055072464
+            ],
+            "median_ca_margin_db_bins1_6": [
+              7.248727020730671,
+              9.482693157735225,
+              -3.296051996563014,
+              -9.737603272207709,
+              -17.439453862121606,
+              -8.792414836183081
+            ]
+          }
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "frames": 73,
+          "window_host_s": [
+            68.99,
+            76.23
+          ],
+          "baseline_frames": 0,
+          "motion_policy_frames": 0,
+          "motion_policy_cm_p05_p50_p95": null,
+          "baseline_cm_p05_p50_p95": null,
+          "selected_feature_counts": {
+            "None": 73
+          },
+          "source_counts": {
+            "None": 73
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 73
+          },
+          "baseline_reasons": {
+            "no_candidate_above_noise": 73
+          },
+          "recorded_motion_frames": 0,
+          "recorded_motion_cm_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 168,
+          "window_host_s": [
+            90.07,
+            106.78
+          ],
+          "baseline_frames": 168,
+          "motion_policy_frames": 168,
+          "motion_policy_cm_p05_p50_p95": [
+            36.422210815369716,
+            38.05167462887716,
+            39.62997809083276
+          ],
+          "baseline_cm_p05_p50_p95": [
+            36.422210815369716,
+            38.05167462887716,
+            39.62997809083276
+          ],
+          "selected_feature_counts": {
+            "None": 168
+          },
+          "source_counts": {
+            "frozen 1D baseline": 168
+          },
+          "selection_reasons": {
+            "no_motion_episode_baseline": 168
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 168
+          },
+          "recorded_motion_frames": 168,
+          "recorded_motion_cm_p05_p50_p95": [
+            36.422210815369716,
+            38.05167462887716,
+            39.62997809083276
+          ],
+          "raw_spectrum": {
+            "sample_stride": 5,
+            "frames_used": 34,
+            "diagnostic_band_m": [
+              0.15,
+              1.7
+            ],
+            "raw_near_peak_m": 0.38017159528985506,
+            "per_rx_near_peak_m": [
+              0.43991284597826086,
+              0.3638785269202899,
+              0.31499932181159424
+            ],
+            "median_ca_margin_db_bins1_6": [
+              8.098746123992292,
+              3.497963989516429,
+              -4.667904485423772,
+              -8.109219338432128,
+              -13.05335507451991,
+              -9.374909211751199
+            ]
+          }
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "frames": 69,
+          "window_host_s": [
+            118.49,
+            125.38
+          ],
+          "baseline_frames": 0,
+          "motion_policy_frames": 0,
+          "motion_policy_cm_p05_p50_p95": null,
+          "baseline_cm_p05_p50_p95": null,
+          "selected_feature_counts": {
+            "78": 69
+          },
+          "source_counts": {
+            "None": 69
+          },
+          "selection_reasons": {
+            "stopped_rd_without_current_range_support": 69
+          },
+          "baseline_reasons": {
+            "no_candidate_above_noise": 69
+          },
+          "recorded_motion_frames": 0,
+          "recorded_motion_cm_p05_p50_p95": null
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "frames": 170,
+          "window_host_s": [
+            141.96,
+            158.84
+          ],
+          "baseline_frames": 170,
+          "motion_policy_frames": 170,
+          "motion_policy_cm_p05_p50_p95": [
+            121.86301313188838,
+            122.66078134875164,
+            123.48866953187368
+          ],
+          "baseline_cm_p05_p50_p95": [
+            121.86301313188838,
+            122.66078134875164,
+            123.48866953187368
+          ],
+          "selected_feature_counts": {
+            "None": 170
+          },
+          "source_counts": {
+            "frozen 1D baseline": 170
+          },
+          "selection_reasons": {
+            "no_motion_episode_baseline": 170
+          },
+          "baseline_reasons": {
+            "cfar_peak_uncalibrated": 170
+          },
+          "recorded_motion_frames": 170,
+          "recorded_motion_cm_p05_p50_p95": [
+            121.86301313188838,
+            122.66078134875164,
+            123.48866953187368
+          ],
+          "raw_spectrum": {
+            "sample_stride": 5,
+            "frames_used": 34,
+            "diagnostic_band_m": [
+              0.15,
+              1.7
+            ],
+            "raw_near_peak_m": 1.2274111505072465,
+            "per_rx_near_peak_m": [
+              1.2165491049275363,
+              1.2328421732971016,
+              1.2382731960869566
+            ],
+            "median_ca_margin_db_bins1_6": [
+              -13.8729929089593,
+              -13.894597318541923,
+              7.0934552846242225,
+              9.16945994457139,
+              -4.375733837480138,
+              -5.688183273263161
+            ]
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 116,
+          "window_host_s": [
+            171.58,
+            183.14
+          ],
+          "baseline_frames": 0,
+          "motion_policy_frames": 0,
+          "motion_policy_cm_p05_p50_p95": null,
+          "baseline_cm_p05_p50_p95": null,
+          "selected_feature_counts": {
+            "None": 116
+          },
+          "source_counts": {
+            "None": 116
+          },
+          "selection_reasons": {
+            "no_motion_episode_no_baseline": 116
+          },
+          "baseline_reasons": {
+            "no_candidate_above_noise": 116
+          },
+          "recorded_motion_frames": 0,
+          "recorded_motion_cm_p05_p50_p95": null
+        }
+      ],
+      "capture_summary": {
+        "frames": 1937,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 15240317
+      },
+      "saved_clock_states": {
+        "collecting": 200,
+        "frozen": 1737
+      },
+      "fit_diagnostics": {
+        "candidate_rate": 0.9945911403406656,
+        "candidate_offset_s": -0.0025962660155922634,
+        "max_residual_s": 0.03211418676961131,
+        "p95_residual_s": 0.002107552652418576,
+        "max_limit_s": 0.1,
+        "p95_limit_s": 0.05
+      },
+      "frozen_error_ms_p95_max": [
+        59.31459427727077,
+        65.27614011184824
+      ]
+    }
+  ],
+  "interpretation": "Current-frame numeric coverage, not verified target-identity accuracy. Recorded motion output and current-policy replay can differ; policy settings are in the regression metadata. Manual/operator motion can seed episodes. No predictions or smoothing. Frozen baseline retained."
+}

@@ -1,0 +1,174 @@
+{
+  "source_sha256": "c53ab7a3b376176023a6419fc4eb0397ade1bce7717e284140970fedf8e925b6",
+  "sessions": [
+    {
+      "recording": "recordings/rd-gui-20261112-094114-038104/live-001",
+      "raw_sha256": "bc26afae519f8691ecac281f909394bb29439632bf6c34b776acc26c8b3e77d9",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "algorithm": "joint-range-cfar-rd-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25,
+          "range_metric": "native"
+        },
+        "one_d_cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2.0
+        },
+        "source_sha256": {
+          "rd_live.py": "75304c3149caa1044391ca6a1aa06c04f3397a188207bcd72f48c707110d619b",
+          "range_doppler.py": "1fc286fc5cde9353878c47b0db9eecc2579e1fc0b51425a9d2e4629fd67cb38b",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "49f70a938046b99f302bd7dd56fdd770ce00316e67fbfe8e8c741335f625d057",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+          "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+          "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+          "joint_results.py": "509585b91faa72c5346c7c2a44a6591baa52e3a55c411e17c4eb5f90ddaaed17",
+          "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+          "motion_range.py": "283c5066c7255eeab3eb4c0d989bf7ed42f8731408a9b386cf30eb1e42a679d1",
+          "rx_diagnostics.py": "4325576e9f168be0e0fc9d1b6ed6c019f1fcc72fa77ff244b5490f20c5781643",
+          "phase_range.py": "398a1d6e9161c6f933010a1db2a092602842869ad433d347fd03a93b39535eb9",
+          "weak_candidate.py": "e82e44849587968c58e5ac3e56f47a5de6257f69f1e00af8b0fe19e97705ae76",
+          "weak_motion.py": "a150b8fd6252ec710b1ad8a777169691880645efc60e8599d3d4f0b20dba38fe",
+          "weak_features.py": "965ce3bc6cb25d5bae586fd176d8e98946b2191ac367e18083b8111d27dd3d88"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+        "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+        "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+        "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+        "experimental_os": {
+          "algorithm": "range-os-cfar-experimental-v1",
+          "cfar": {
+            "guard_cells": 1,
+            "training_cells": 4,
+            "min_training_cells": 4,
+            "factor": 2.0
+          },
+          "selection": "nearest qualifying peak group",
+          "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+          "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+          "edge_policy": "truncate; require minimum total reference count",
+          "os": {
+            "rank_fraction": 0.5
+          },
+          "reference": "kth smallest; k=ceil(rank_fraction*actual reference count)",
+          "threshold_interpretation": "Empirical multiplier; no calibrated Pfa; not interchangeable with CA statistics"
+        },
+        "motion_policy": "v2: two consecutive same-sign confirmed RD motion measurements; stopped continuation requires current CA threshold and local-peak support; no held/predicted range",
+        "motion_policy_settings": {
+          "motion_confirmation_frames": 2,
+          "stationary_support_required": true
+        },
+        "receiver_diagnostics": {
+          "method": "rx-Hann-support-and-tone-residual-v1",
+          "spread_note_bins": 0.25,
+          "residual_note_fraction": 0.5,
+          "scope": "Confirmed current 1D group, raw chirps across Doppler; inspection only",
+          "interpretation": "RX peaks share scene/data; agreement is not accuracy or identity. Residual at pooled FFT range includes other returns and peak bias, not a fitted confidence."
+        },
+        "experimental_weak_candidate": {
+          "method": "os-rd-raw-peak-support-v1",
+          "min_interior_rx": 2,
+          "rx_gate_bins": 0.25,
+          "max_width_bins": 0.5,
+          "scope": "One confirmed OS group, resolved OS fine peak, unique current raw RD maximum, interior raw-tone optimum and two RX frequency optima nearby",
+          "interpretation": "Inspection only; geometry checks do not accept the phase range model. Global residual/model rejection stays visible. Existing OS FFT estimate is not calibrated target identity.",
+          "phase_estimator": {
+            "method": "candidate-real-tone-dc-v1",
+            "settings": {
+              "max_residual_fraction": 0.5,
+              "near_energy_fraction": 0.01,
+              "max_width_bins": 0.5,
+              "rx_gate_bins": 0.25,
+              "min_supported_rx": 2
+            },
+            "model": "Independent DC/cos/sin per chirp/RX; shared fast-time frequency; no window, baseline or label fit",
+            "support": "Current accepted group half-bin boundaries only; no expansion across a boundary optimum",
+            "interpretation": "Experimental estimator, empirical quality gates; not a detector or calibrated uncertainty"
+          }
+        },
+        "experimental_weak_motion_link": {
+          "method": "motion-seeded-weak-stop-link-v1",
+          "motion_confirmation_frames": 2,
+          "max_range_difference_bins": 0.5,
+          "scope": "Supplement only: same current confirmed RD feature after two same-sign measured motion frames; stopped OS/raw-peak support must identify its current peak",
+          "clearing": "Invalid input, sequence gaps, missing/ambiguous/lost measurements, competitors or unsupported stops revoke the seed; stationary support cannot reseed",
+          "interpretation": "Current RD fine inspection, no held/predicted range, primary eligibility or certified physical identity"
+        },
+        "experimental_weak_feature_confirmation": {
+          "method": "consecutive-weak-scene-feature-v1",
+          "confirmation_frames": 3,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "doppler_edge": "wrap",
+          "original_association": {
+            "confirmation_frames": 3,
+            "birth_margin_db": 3.0,
+            "range_gate": 1,
+            "doppler_gate": 2,
+            "max_missed_frames": 2,
+            "max_ambiguous_frames": 5,
+            "ambiguity_gap": 0.25,
+            "range_metric": "native"
+          },
+          "isolation_range_bins": 1,
+          "isolation_doppler_bins": 2,
+          "missed_or_ambiguous_retention_frames": 0,
+          "evidence": "Confirmed OS + unique current RD maximum + original raw-peak geometry, then consecutive native-gated current observations; original RD birth margin is unchanged",
+          "range_method": "Existing current OS Hann FFT fine range, not a rejected phase estimate or Doppler-conditioned range",
+          "interpretation": "Separate weak: IDs denote scene-feature hypotheses, not objects; no primary eligibility, holding or prediction; shared ADC evidence is not independent confirmation"
+        }
+      },
+      "counts": {
+        "frames": 2532,
+        "primary_frames": 699,
+        "weak_candidate_frames": 1086,
+        "weak_candidate_rejected_model_frames": 478,
+        "motion_policy_changed_frames": 0,
+        "motion_policy_range_frames": 737,
+        "rd_motion_range_frames": 7,
+        "rd_stopped_range_frames": 726,
+        "rd_only_feature_frames": 2501,
+        "rd_only_fine_frames": 2160,
+        "merged_source_frames": 834,
+        "rd_fine_frames": 2510,
+        "range_disagreement_frames": 1
+      },
+      "rd_fine_reasons": {
+        "unconfirmed_rd_peak": 3850,
+        "fine_peak_uncalibrated": 4146,
+        "fine_peak_at_group_boundary": 63,
+        "multiple_fine_peaks": 1
+      },
+      "processing_ms_p50_p95_max": [
+        7.800542050972581,
+        11.68465877417475,
+        78.66904232650995
+      ],
+      "baseline_matches_saved_and_independent": true,
+      "rd_masks_and_association_unchanged": true
+    }
+  ],
+  "interpretation": "Development regression; no independent physical accuracy acceptance. Every primary exactly reproduces the frozen 1D distance, every RD mask and association matches the standalone algorithms. RD-only refinements are inspection values, not target identities or automatic primary measurements. Saved host freshness is not re-certified."
+}

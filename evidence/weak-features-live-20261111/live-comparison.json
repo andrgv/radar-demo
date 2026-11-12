@@ -1,0 +1,119 @@
+{
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "counts": {
+        "frames": 1747,
+        "confirmed_weak_frames": 171,
+        "confirmed_with_blank_baseline": 22,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "counts": {
+        "frames": 2194,
+        "confirmed_weak_frames": 654,
+        "confirmed_with_blank_baseline": 5,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "counts": {
+        "frames": 946,
+        "confirmed_weak_frames": 1,
+        "confirmed_with_blank_baseline": 0,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "counts": {
+        "frames": 867,
+        "confirmed_weak_frames": 0,
+        "confirmed_with_blank_baseline": 0,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "counts": {
+        "frames": 757,
+        "confirmed_weak_frames": 288,
+        "confirmed_with_blank_baseline": 17,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "counts": {
+        "frames": 682,
+        "confirmed_weak_frames": 141,
+        "confirmed_with_blank_baseline": 8,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-143819-360020/live-003",
+      "counts": {
+        "frames": 1735,
+        "confirmed_weak_frames": 126,
+        "confirmed_with_blank_baseline": 25,
+        "confirmed_without_original_rd_track": 16
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "counts": {
+        "frames": 1937,
+        "confirmed_weak_frames": 812,
+        "confirmed_with_blank_baseline": 0,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "counts": {
+        "frames": 2366,
+        "confirmed_weak_frames": 1036,
+        "confirmed_with_blank_baseline": 1,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-135229-775366/live-001",
+      "counts": {
+        "frames": 1545,
+        "confirmed_weak_frames": 820,
+        "confirmed_with_blank_baseline": 37,
+        "confirmed_without_original_rd_track": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+      "counts": {
+        "frames": 758,
+        "confirmed_weak_frames": 284,
+        "confirmed_with_blank_baseline": 284,
+        "confirmed_without_original_rd_track": 284
+      }
+    }
+  ],
+  "previous_primary_association_motion_rx_and_weak_selection_unchanged": true,
+  "framewise_feature_parity": true,
+  "inputs": {
+    "evidence/weak-motion-live-20261111/results.jsonl.gz": "3e1e0ba33bc49ebbe7ada0a9fd478625d64424fb92b7c52281eb1f38e27fd87a",
+    "evidence/weak-features-20261111/report.json": "5c00d4aa3e4424683006fc7cf2c9349d01803c86729f28f5718cb92ae131da3c",
+    "evidence/weak-features-20261111/frames.jsonl.gz": "32b94a83bd62082debab0896e4b262077439ea9a390415409452233394221a2b",
+    "evidence/weak-features-live-20261111/report.json": "a28187eefc3c20ce3d5dc87085e8c4e3cec77159ff7affe273c26f2df3eff115",
+    "evidence/weak-features-live-20261111/results.jsonl.gz": "881f278da5f79b53df46491de86b68898e83de4a8c0bd84ac047d4a357619482"
+  },
+  "sources": {
+    "tools/review_weak_features_live.py": "6e7fd952985bfd30e65fbcc2a69fd32751647fcbe3efe4eca825cac2172a75ca",
+    "radar_min/weak_features.py": "965ce3bc6cb25d5bae586fd176d8e98946b2191ac367e18083b8111d27dd3d88",
+    "radar_min/rd_live.py": "75304c3149caa1044391ca6a1aa06c04f3397a188207bcd72f48c707110d619b",
+    "radar_min/rd_gui.py": "7e308d37c449749f7fd722a03b9f477eae15cec49a78549c50e619ca40567b78"
+  },
+  "interpretation": "Live adapter on saved frames, not live serial timing or independent object/distance acceptance. Confirmed weak scene features remain inspection-only and preserve the known wrong-range case."
+}

@@ -1,0 +1,447 @@
+{
+  "schema": 1,
+  "manifest": {
+    "schema": 1,
+    "purpose": "Target-absent A-B-A-B control matched to live-004; frozen CFAR.",
+    "labels": "User supplied consecutive durations from first saved frame. No target. A beside sensor described as in range; B described as out of range, not independently verified. Exclude transitions, trim 1 or 2 s per side, no fitted offset.",
+    "cfar": {
+      "guard_cells": 1,
+      "training_cells": 4,
+      "min_training_cells": 4,
+      "factor": 2
+    },
+    "cases": [
+      {
+        "recording": "recordings/gui-20261111-093723-246315/live-005",
+        "windows": [
+          {
+            "label": "A1 (trim 1s)",
+            "window_host_s": [
+              1,
+              15.23
+            ],
+            "state": "target_absent",
+            "operator_position": "A",
+            "trim_s": 1,
+            "original_window_host_s": [
+              0,
+              16.23
+            ]
+          },
+          {
+            "label": "A1 (trim 2s)",
+            "window_host_s": [
+              2,
+              14.23
+            ],
+            "state": "target_absent",
+            "operator_position": "A",
+            "trim_s": 2,
+            "original_window_host_s": [
+              0,
+              16.23
+            ]
+          },
+          {
+            "label": "B1 (trim 1s)",
+            "window_host_s": [
+              21.77,
+              36.48
+            ],
+            "state": "target_absent",
+            "operator_position": "B",
+            "trim_s": 1,
+            "original_window_host_s": [
+              20.77,
+              37.48
+            ]
+          },
+          {
+            "label": "B1 (trim 2s)",
+            "window_host_s": [
+              22.77,
+              35.48
+            ],
+            "state": "target_absent",
+            "operator_position": "B",
+            "trim_s": 2,
+            "original_window_host_s": [
+              20.77,
+              37.48
+            ]
+          },
+          {
+            "label": "A2 (trim 1s)",
+            "window_host_s": [
+              44.41,
+              58.94
+            ],
+            "state": "target_absent",
+            "operator_position": "A",
+            "trim_s": 1,
+            "original_window_host_s": [
+              43.41,
+              59.94
+            ]
+          },
+          {
+            "label": "A2 (trim 2s)",
+            "window_host_s": [
+              45.41,
+              57.94
+            ],
+            "state": "target_absent",
+            "operator_position": "A",
+            "trim_s": 2,
+            "original_window_host_s": [
+              43.41,
+              59.94
+            ]
+          },
+          {
+            "label": "B2 (trim 1s)",
+            "window_host_s": [
+              64.78,
+              78.94
+            ],
+            "state": "target_absent",
+            "operator_position": "B",
+            "trim_s": 1,
+            "original_window_host_s": [
+              63.78,
+              79.94
+            ]
+          },
+          {
+            "label": "B2 (trim 2s)",
+            "window_host_s": [
+              65.78,
+              77.94
+            ],
+            "state": "target_absent",
+            "operator_position": "B",
+            "trim_s": 2,
+            "original_window_host_s": [
+              63.78,
+              79.94
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "manifest_sha256": "990015a66db5b8b7ee9ddbe0325d4af1928586e443ec8145b93282fdcb114e27",
+  "source_sha256": {
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "radar_min/cfar.py": "20d3dc522291dd86303757956eff6965022b3321bcd181488da90aea8799ee3c",
+    "radar_min/cfar_range.py": "d6b049cc35a8833067006c793a8bfc43b4452d10ef028fa22b4e70acd206a726",
+    "radar/protocol.py": "2060c0724f045acfc6d0a95c6f05219b3c0c3a3fd741bbe369610338b70660aa",
+    "tools/qualify_avg16_cfar.py": "1cc88c2328fde8d7a78fd49f87594bbac93c8ad16fa9a45c10426ea408081176",
+    "tools/sweep_cfar.py": "7c16fa634ae82c983f95f35ba382211be01022036032e845daf67baae1f71bea"
+  },
+  "settings": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "thresholds_retuned": false,
+  "interpretation": "Development replay only. Saved ADC/device continuity checks apply; original host freshness gates are NOT replayed. Saved host states/reasons are reported separately. Placement errors do not certify reflector identity. Target-absent outputs may be legitimate scene reflectors. No matched AVG1/AVG16 comparison or physical accuracy acceptance.",
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "config": {
+        "schema": 1,
+        "profile_id": 860967939,
+        "samples": 64,
+        "chirps": 17,
+        "sample_rate_hz": 5000000,
+        "slope_hz_s": 33691406250000,
+        "discard_chirps": 1,
+        "frame_interval_s": 0.1,
+        "min_bin": 1,
+        "max_bin": 4,
+        "min_excess_db": 3.0,
+        "variability_multiplier": 6.0,
+        "margin_db": 2.0,
+        "confirmation_frames": 3
+      },
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "raw_sha256": "6e03eda770515055d82f44fefbf6758c8610d8e2a3ac091754fa0045feb41dd8",
+      "sidecar_sha256": {
+        "config.json": "e23fa6761882efb7f7858a72622298f0be7e2807b09c15cadea08bcd9b1a7486",
+        "arrivals.jsonl": "82d883dc27c9bd5055a6274d5660859978812b33c5e254a74abfcc5c5d223a36",
+        "readings.jsonl": "0d803a2397f874c6d81b1bdd50db0042e94513723ec50bd5df1fef5a9cdd4732"
+      },
+      "saved_transport": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "frames": 867,
+      "host_span_s": 86.12144,
+      "saved_host_clock_states": {
+        "collecting": 200,
+        "frozen": 667
+      },
+      "saved_reading_reasons": {
+        "no_candidate_above_noise": 867
+      },
+      "invalid_flag_frames": 0,
+      "edge_counts": {
+        "272": 867
+      },
+      "edge_overflow_frames": 0,
+      "device_errors": [
+        0
+      ],
+      "device_drops": [
+        0
+      ],
+      "windows": [
+        {
+          "label": "A1 (trim 1s)",
+          "window_host_s": [
+            1,
+            15.23
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 1,
+          "original_window_host_s": [
+            0,
+            16.23
+          ],
+          "frames": 142,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 142
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "A1 (trim 2s)",
+          "window_host_s": [
+            2,
+            14.23
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            16.23
+          ],
+          "frames": 122,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 122
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "B1 (trim 1s)",
+          "window_host_s": [
+            21.77,
+            36.48
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 1,
+          "original_window_host_s": [
+            20.77,
+            37.48
+          ],
+          "frames": 148,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 148
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "window_host_s": [
+            22.77,
+            35.48
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            20.77,
+            37.48
+          ],
+          "frames": 128,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 128
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "A2 (trim 1s)",
+          "window_host_s": [
+            44.41,
+            58.94
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 1,
+          "original_window_host_s": [
+            43.41,
+            59.94
+          ],
+          "frames": 146,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 146
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "window_host_s": [
+            45.41,
+            57.94
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            43.41,
+            59.94
+          ],
+          "frames": 126,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 126
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "B2 (trim 1s)",
+          "window_host_s": [
+            64.78,
+            78.94
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 1,
+          "original_window_host_s": [
+            63.78,
+            79.94
+          ],
+          "frames": 142,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 142
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "window_host_s": [
+            65.78,
+            77.94
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            63.78,
+            79.94
+          ],
+          "frames": 122,
+          "truncated": false,
+          "presence_frames": 0,
+          "numeric_frames": 0,
+          "numeric_coverage": 0.0,
+          "unresolved_presence_frames": 0,
+          "range_cm_p05_p50_p95": null,
+          "conditional_placement_bias_cm": null,
+          "conditional_placement_mae_cm": null,
+          "selected_bins": {},
+          "reasons": {
+            "no_candidate_above_noise": 122
+          },
+          "fine_reasons": {},
+          "numeric_episodes": [],
+          "longest_numeric_episode_s": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "hardware_serial_access": false,
+  "clock_backlog_timeout_gates": "Covered by simulated serial tests; original replay host timing is not applied in parity check",
+  "source_sha256": {
+    "rd_live.py": "2118a0db45057ae69330c7ff0d7466b5e4606a9b1018593de3a72238fc992372",
+    "rd_gui.py": "2be4c33e842884a91a45893bb60a24f01076d149088cc7e57437656e5cc88877",
+    "__main__.py": "59d54e78f3bf531cd171cb4522e12d2c0b2625120b549889856a51f22403210a",
+    "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2"
+  },
+  "datasets": {
+    "first": {
+      "recording": "recordings/avg16-motion-01",
+      "frames": 605,
+      "association_reports_equal": true,
+      "full_power_threshold_and_accepted_arrays_equal": true,
+      "table_freshness_invariant_violations": 0,
+      "processing_ms_p05_p50_p95_max": [
+        0.4933496005833149,
+        0.5427496507763863,
+        0.6993247196078299,
+        2.2630002349615097
+      ],
+      "metadata": {
+        "algorithm": "range-doppler-associated-cfar-live-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "source_sha256": {
+          "rd_live.py": "2118a0db45057ae69330c7ff0d7466b5e4606a9b1018593de3a72238fc992372",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native range bin \u00d7 nominal spacing; no fine interpolation or distance calibration",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses"
+      }
+    },
+    "followup": {
+      "recording": "recordings/gui-20261110-221227-169414/live-001",
+      "frames": 1149,
+      "association_reports_equal": true,
+      "full_power_threshold_and_accepted_arrays_equal": true,
+      "table_freshness_invariant_violations": 0,
+      "processing_ms_p05_p50_p95_max": [
+        0.4886168986558914,
+        0.5446253344416618,
+        0.822200533002615,
+        16.818791162222624
+      ],
+      "metadata": {
+        "algorithm": "range-doppler-associated-cfar-live-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "source_sha256": {
+          "rd_live.py": "2118a0db45057ae69330c7ff0d7466b5e4606a9b1018593de3a72238fc992372",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native range bin \u00d7 nominal spacing; no fine interpolation or distance calibration",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses"
+      },
+      "measured_snapshot_frame": 502,
+      "measured_snapshot_host_s": 49.800121
+    }
+  },
+  "review_source_sha256": "33115c7ed3b55d777f328977d2074b355a34c8f95108b0c8044cb116d0d5eec7"
+}

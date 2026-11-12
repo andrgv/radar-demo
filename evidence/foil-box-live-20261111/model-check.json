@@ -1,0 +1,317 @@
+{
+  "manifest": {
+    "schema": 1,
+    "labels": "Consecutive user durations from first saved frame; transitions excluded; 1/2-second quiet trims, no fitted offset; final tail after 185.14 s unlabeled.",
+    "scene": {
+      "target": "same cardboard box, front face covered with tin foil",
+      "front_face_dimensions_cm": [
+        45,
+        24
+      ],
+      "distance_reference": "antenna face to box front surface, from prior user clarification",
+      "background_wall": "a little over 2 m, from prior clarification"
+    },
+    "cases": [
+      {
+        "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+        "windows": [
+          {
+            "label": "empty A (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "window_host_s": [
+              1,
+              14.54
+            ],
+            "original_window_host_s": [
+              0,
+              15.54
+            ]
+          },
+          {
+            "label": "empty A (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "window_host_s": [
+              2,
+              13.54
+            ],
+            "original_window_host_s": [
+              0,
+              15.54
+            ]
+          },
+          {
+            "label": "50 cm A (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "window_host_s": [
+              33.95,
+              53.11
+            ],
+            "original_window_host_s": [
+              32.95,
+              54.11
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm A (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "window_host_s": [
+              34.95,
+              52.11
+            ],
+            "original_window_host_s": [
+              32.95,
+              54.11
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty B (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "window_host_s": [
+              67.99,
+              77.23
+            ],
+            "original_window_host_s": [
+              66.99,
+              78.23
+            ]
+          },
+          {
+            "label": "empty B (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "window_host_s": [
+              68.99,
+              76.23
+            ],
+            "original_window_host_s": [
+              66.99,
+              78.23
+            ]
+          },
+          {
+            "label": "50 cm B (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "window_host_s": [
+              89.07,
+              107.78
+            ],
+            "original_window_host_s": [
+              88.07,
+              108.78
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm B (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "window_host_s": [
+              90.07,
+              106.78
+            ],
+            "original_window_host_s": [
+              88.07,
+              108.78
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty C (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "window_host_s": [
+              117.49,
+              126.38
+            ],
+            "original_window_host_s": [
+              116.49,
+              127.38
+            ]
+          },
+          {
+            "label": "empty C (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "window_host_s": [
+              118.49,
+              125.38
+            ],
+            "original_window_host_s": [
+              116.49,
+              127.38
+            ]
+          },
+          {
+            "label": "120 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "window_host_s": [
+              140.96,
+              159.84
+            ],
+            "original_window_host_s": [
+              139.96,
+              160.84
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "120 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "window_host_s": [
+              141.96,
+              158.84
+            ],
+            "original_window_host_s": [
+              139.96,
+              160.84
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "final empty (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "window_host_s": [
+              170.58,
+              184.14
+            ],
+            "original_window_host_s": [
+              169.58,
+              185.14
+            ]
+          },
+          {
+            "label": "final empty (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "window_host_s": [
+              171.58,
+              183.14
+            ],
+            "original_window_host_s": [
+              169.58,
+              185.14
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "raw_sha256": "8dc541c1714d3d3e9a7f4d74c61e185b32700fdbb4315cf71c3ee96c709bd1d3",
+  "sources": {
+    "tools/diagnose_foil_range.py": "45581c43dcfab4a31045a2e2fc0a07531fb37318feb4ad6acf41f8af7a02a635",
+    "tools/fit_range_signal.py": "2285519566d8f971a0b5fa16caa7c0a63954826aebe5425708f6aa9c8d4b5a3e",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14"
+  },
+  "diagnostic_model": "Raw shared-frequency real sinusoid plus separate DC/sine/cosine amplitudes per chirp/RX; no empty subtraction, no window, fixed 0.15\u20131.5m pre-existing grid",
+  "interpretation": "Diagnostic only. Large residuals mean the single-tone model does not explain all the waveform. Fitted frequency is not verified target identity or calibrated range, and no distance labels were fitted. Synthetic isolated-tone phase sweeps show a possible estimator contribution but do not model the full hardware scene.",
+  "windows": [
+    {
+      "label": "50 cm A (trim 2s)",
+      "fixed_frame_stride": 5,
+      "samples": 35,
+      "recorded_peak_cm_p05_p50_p95": [
+        50.651723366901216,
+        51.381138860895746,
+        51.594190092283846
+      ],
+      "diagnostic_fit_cm_p05_p50_p95": [
+        50.6571956440763,
+        50.75218616141871,
+        50.87727259446521
+      ],
+      "residual_fraction_p05_p50_p95": [
+        0.34128715076410926,
+        0.35575795559119894,
+        0.36908437517580006
+      ],
+      "boundary_fits": 0
+    },
+    {
+      "label": "50 cm B (trim 2s)",
+      "fixed_frame_stride": 5,
+      "samples": 34,
+      "recorded_peak_cm_p05_p50_p95": [
+        36.43764063584049,
+        37.99841912469351,
+        39.28464360054529
+      ],
+      "diagnostic_fit_cm_p05_p50_p95": [
+        46.28064664158695,
+        46.79780427830172,
+        47.33084862658888
+      ],
+      "residual_fraction_p05_p50_p95": [
+        0.38935272901272455,
+        0.4032197252382324,
+        0.42823039633391236
+      ],
+      "boundary_fits": 0
+    },
+    {
+      "label": "120 cm (trim 2s)",
+      "fixed_frame_stride": 5,
+      "samples": 34,
+      "recorded_peak_cm_p05_p50_p95": [
+        121.83421803352233,
+        122.61412374546875,
+        123.50528094451336
+      ],
+      "diagnostic_fit_cm_p05_p50_p95": [
+        122.35062858142345,
+        122.91752411000923,
+        123.4898594286642
+      ],
+      "residual_fraction_p05_p50_p95": [
+        0.21319856713900434,
+        0.22158905940112522,
+        0.23147230278789369
+      ],
+      "boundary_fits": 0
+    }
+  ],
+  "synthetic_phase_test": [
+    {
+      "true_distance_m": 0.47,
+      "phases": 361,
+      "raw_hann_peak_m_min_max": [
+        0.3910336408695652,
+        0.4562059143478261
+      ]
+    },
+    {
+      "true_distance_m": 0.5,
+      "phases": 361,
+      "raw_hann_peak_m_min_max": [
+        0.42905080039855076,
+        0.4833610282971015
+      ]
+    },
+    {
+      "true_distance_m": 0.53,
+      "phases": 361,
+      "raw_hann_peak_m_min_max": [
+        0.4724989827173913,
+        0.515947165036232
+      ]
+    },
+    {
+      "true_distance_m": 1.2,
+      "phases": 361,
+      "raw_hann_peak_m_min_max": [
+        1.200256036557971,
+        1.200256036557971
+      ]
+    }
+  ]
+}

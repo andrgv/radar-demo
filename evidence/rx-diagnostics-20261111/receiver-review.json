@@ -1,0 +1,1092 @@
+{
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "frames": 1747,
+      "saved_joint_results_compared_frames": 0,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "initial empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 144,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm (trim 2s)",
+          "state": "hold",
+          "frames": 176,
+          "diagnostic_frames": 176,
+          "numeric_baseline_frames": 176,
+          "flags": {
+            "single_tone_mismatch_at_fft_range": 175,
+            "rx_peak_unresolved": 35,
+            "rx_peak_disagreement": 146
+          },
+          "no_flag_frames": 1,
+          "resolved_rx_counts": {
+            "3": 141,
+            "2": 35
+          },
+          "residual_p05_p50_p95": [
+            0.5919567154794707,
+            0.6842188393607334,
+            0.7682208263845812
+          ],
+          "spread_m_p05_p50_p95": [
+            0.058468844874047854,
+            0.14549612397773654,
+            0.27805721084446455
+          ]
+        },
+        {
+          "label": "empty after 50 cm (trim 2s)",
+          "state": "target_absent",
+          "frames": 118,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "80 cm (trim 2s)",
+          "state": "hold",
+          "frames": 199,
+          "diagnostic_frames": 85,
+          "numeric_baseline_frames": 85,
+          "flags": {
+            "rx_peak_disagreement": 76,
+            "single_tone_mismatch_at_fft_range": 85,
+            "rx_peak_unresolved": 11
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 74,
+            "2": 11
+          },
+          "residual_p05_p50_p95": [
+            0.702847658423798,
+            0.7480090331869407,
+            0.7925910596303839
+          ],
+          "spread_m_p05_p50_p95": [
+            0.04787051513191074,
+            0.14814431652883853,
+            0.2166189152214821
+          ]
+        },
+        {
+          "label": "empty after 80 cm (trim 2s)",
+          "state": "target_absent",
+          "frames": 118,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "frames": 183,
+          "diagnostic_frames": 123,
+          "numeric_baseline_frames": 123,
+          "flags": {
+            "rx_peak_disagreement": 24,
+            "single_tone_mismatch_at_fft_range": 123,
+            "rx_peak_unresolved": 14
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 109,
+            "2": 13,
+            "1": 1
+          },
+          "residual_p05_p50_p95": [
+            0.8240003739997868,
+            0.859347977372931,
+            0.8832693080451312
+          ],
+          "spread_m_p05_p50_p95": [
+            0.010585518141825047,
+            0.05303120423676766,
+            0.14744750011686664
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 132,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "frames": 2194,
+      "saved_joint_results_compared_frames": 0,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "initial empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 118,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 270,
+          "diagnostic_frames": 270,
+          "numeric_baseline_frames": 270,
+          "flags": {
+            "rx_peak_disagreement": 270
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 270
+          },
+          "residual_p05_p50_p95": [
+            0.29698666139225627,
+            0.3040461169000021,
+            0.3115283952431466
+          ],
+          "spread_m_p05_p50_p95": [
+            0.2017233729331366,
+            0.20822814449684676,
+            0.21279956572300632
+          ]
+        },
+        {
+          "label": "empty after A (trim 2s)",
+          "state": "target_absent",
+          "frames": 115,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 218,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "empty after B (trim 2s)",
+          "state": "target_absent",
+          "frames": 69,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm C (trim 2s)",
+          "state": "hold",
+          "frames": 214,
+          "diagnostic_frames": 132,
+          "numeric_baseline_frames": 132,
+          "flags": {
+            "rx_peak_disagreement": 89,
+            "single_tone_mismatch_at_fft_range": 132,
+            "rx_peak_unresolved": 125
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 7,
+            "2": 121,
+            "1": 4
+          },
+          "residual_p05_p50_p95": [
+            0.8084331199338342,
+            0.8308432112340969,
+            0.8556705503291092
+          ],
+          "spread_m_p05_p50_p95": [
+            0.007281477823358848,
+            0.12537759876775031,
+            0.30659533394813865
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 70,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "frames": 946,
+      "saved_joint_results_compared_frames": 0,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "A1 (trim 2s)",
+          "state": "hold",
+          "frames": 131,
+          "diagnostic_frames": 131,
+          "numeric_baseline_frames": 131,
+          "flags": {
+            "rx_peak_unresolved": 131,
+            "rx_peak_disagreement": 104,
+            "single_tone_mismatch_at_fft_range": 131
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 131
+          },
+          "residual_p05_p50_p95": [
+            0.6947327271390744,
+            0.7120850862418973,
+            0.730479046696673
+          ],
+          "spread_m_p05_p50_p95": [
+            0.021178044138030788,
+            0.14632953033600915,
+            0.19478763728362866
+          ]
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "state": "hold",
+          "frames": 129,
+          "diagnostic_frames": 129,
+          "numeric_baseline_frames": 129,
+          "flags": {
+            "rx_peak_unresolved": 129,
+            "rx_peak_disagreement": 129,
+            "single_tone_mismatch_at_fft_range": 129
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 129
+          },
+          "residual_p05_p50_p95": [
+            0.6756755213856617,
+            0.6783001581820893,
+            0.6818730024127609
+          ],
+          "spread_m_p05_p50_p95": [
+            0.11501774891771008,
+            0.12626756070131123,
+            0.1329048015159474
+          ]
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "state": "hold",
+          "frames": 126,
+          "diagnostic_frames": 126,
+          "numeric_baseline_frames": 126,
+          "flags": {
+            "rx_peak_unresolved": 107,
+            "rx_peak_disagreement": 122,
+            "single_tone_mismatch_at_fft_range": 126
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 107,
+            "3": 19
+          },
+          "residual_p05_p50_p95": [
+            0.6696830143881746,
+            0.6926880344242764,
+            0.7081664508263585
+          ],
+          "spread_m_p05_p50_p95": [
+            0.09820646235658376,
+            0.1539660457513896,
+            0.308381824023079
+          ]
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "state": "hold",
+          "frames": 127,
+          "diagnostic_frames": 127,
+          "numeric_baseline_frames": 127,
+          "flags": {
+            "rx_peak_unresolved": 127,
+            "rx_peak_disagreement": 127,
+            "single_tone_mismatch_at_fft_range": 127
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 127
+          },
+          "residual_p05_p50_p95": [
+            0.6786794958777809,
+            0.6807268251050056,
+            0.6827393993696848
+          ],
+          "spread_m_p05_p50_p95": [
+            0.12234959389529967,
+            0.12651344526045438,
+            0.12932418600327536
+          ]
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "frames": 867,
+      "saved_joint_results_compared_frames": 0,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "A1 (trim 2s)",
+          "state": "target_absent",
+          "frames": 122,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "state": "target_absent",
+          "frames": 128,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "state": "target_absent",
+          "frames": 126,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "state": "target_absent",
+          "frames": 122,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "frames": 757,
+      "saved_joint_results_compared_frames": 0,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "120 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 73,
+          "diagnostic_frames": 73,
+          "numeric_baseline_frames": 73,
+          "flags": {
+            "rx_peak_disagreement": 12,
+            "single_tone_mismatch_at_fft_range": 2
+          },
+          "no_flag_frames": 59,
+          "resolved_rx_counts": {
+            "3": 73
+          },
+          "residual_p05_p50_p95": [
+            0.4045794365793156,
+            0.42682512178503373,
+            0.49267687117532577
+          ],
+          "spread_m_p05_p50_p95": [
+            0.0393842299773818,
+            0.057667115769588495,
+            0.09995665411171786
+          ]
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 97,
+          "diagnostic_frames": 25,
+          "numeric_baseline_frames": 25,
+          "flags": {
+            "rx_peak_unresolved": 6,
+            "single_tone_mismatch_at_fft_range": 25,
+            "rx_peak_disagreement": 24
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 6,
+            "3": 19
+          },
+          "residual_p05_p50_p95": [
+            0.6767762007118927,
+            0.6873867700685616,
+            0.7347769631663444
+          ],
+          "spread_m_p05_p50_p95": [
+            0.10897836713960793,
+            0.176784207354072,
+            0.22297709782162825
+          ]
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 105,
+          "diagnostic_frames": 8,
+          "numeric_baseline_frames": 8,
+          "flags": {
+            "rx_peak_disagreement": 8,
+            "single_tone_mismatch_at_fft_range": 8,
+            "rx_peak_unresolved": 3
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 5,
+            "2": 3
+          },
+          "residual_p05_p50_p95": [
+            0.7912391776582005,
+            0.8430140737312328,
+            0.8554505135055128
+          ],
+          "spread_m_p05_p50_p95": [
+            0.10233702023352513,
+            0.16050114218174893,
+            0.2536098835210639
+          ]
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 100,
+          "diagnostic_frames": 100,
+          "numeric_baseline_frames": 100,
+          "flags": {
+            "rx_peak_disagreement": 99
+          },
+          "no_flag_frames": 1,
+          "resolved_rx_counts": {
+            "3": 100
+          },
+          "residual_p05_p50_p95": [
+            0.36715100145481033,
+            0.38997820101156433,
+            0.4383197960787393
+          ],
+          "spread_m_p05_p50_p95": [
+            0.09588135122032945,
+            0.11789237547287784,
+            0.15100858936566716
+          ]
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "state": "hold",
+          "frames": 94,
+          "diagnostic_frames": 94,
+          "numeric_baseline_frames": 94,
+          "flags": {
+            "rx_peak_disagreement": 89,
+            "single_tone_mismatch_at_fft_range": 94
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 94
+          },
+          "residual_p05_p50_p95": [
+            0.6875623565151523,
+            0.7417113617338169,
+            0.77023407822304
+          ],
+          "spread_m_p05_p50_p95": [
+            0.08490168486712105,
+            0.17085370163779712,
+            0.21112394558273478
+          ]
+        }
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "frames": 682,
+      "saved_joint_results_compared_frames": 682,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "120 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 76,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 76,
+          "diagnostic_frames": 76,
+          "numeric_baseline_frames": 76,
+          "flags": {
+            "rx_peak_disagreement": 76,
+            "single_tone_mismatch_at_fft_range": 76
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 76
+          },
+          "residual_p05_p50_p95": [
+            0.6276847917472472,
+            0.660283333809284,
+            0.6921246107279646
+          ],
+          "spread_m_p05_p50_p95": [
+            0.1286795719099396,
+            0.1558483430033793,
+            0.1833440627722549
+          ]
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 75,
+          "diagnostic_frames": 58,
+          "numeric_baseline_frames": 46,
+          "flags": {
+            "rx_peak_unresolved": 49,
+            "single_tone_mismatch_at_fft_range": 46,
+            "rx_peak_disagreement": 19
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 25,
+            "1": 24,
+            "3": 9
+          },
+          "residual_p05_p50_p95": [
+            0.7425231115055273,
+            0.7774208855349292,
+            0.8020340436561906
+          ],
+          "spread_m_p05_p50_p95": [
+            0.03998033490220977,
+            0.09699897526817425,
+            0.29820596042287306
+          ]
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 72,
+          "diagnostic_frames": 61,
+          "numeric_baseline_frames": 61,
+          "flags": {
+            "single_tone_mismatch_at_fft_range": 61,
+            "rx_peak_disagreement": 10
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 61
+          },
+          "residual_p05_p50_p95": [
+            0.7335097069647656,
+            0.7581570196694433,
+            0.7884774555323969
+          ],
+          "spread_m_p05_p50_p95": [
+            0.02699327281435504,
+            0.062325776214764594,
+            0.11354200604629944
+          ]
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "state": "hold",
+          "frames": 71,
+          "diagnostic_frames": 71,
+          "numeric_baseline_frames": 71,
+          "flags": {
+            "rx_peak_unresolved": 70,
+            "single_tone_mismatch_at_fft_range": 71,
+            "rx_peak_disagreement": 5
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 70,
+            "3": 1
+          },
+          "residual_p05_p50_p95": [
+            0.8748631972540535,
+            0.9036144562719076,
+            0.9230313941007189
+          ],
+          "spread_m_p05_p50_p95": [
+            0.006617185342862153,
+            0.049912297984161524,
+            0.0897800528804289
+          ]
+        }
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-143819-360020/live-003",
+      "frames": 1735,
+      "saved_joint_results_compared_frames": 1735,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "frames": 119,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 184,
+          "diagnostic_frames": 184,
+          "numeric_baseline_frames": 184,
+          "flags": {
+            "rx_peak_disagreement": 184,
+            "single_tone_mismatch_at_fft_range": 184
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 184
+          },
+          "residual_p05_p50_p95": [
+            0.5684018846363137,
+            0.5892627864468694,
+            0.6194067383694016
+          ],
+          "spread_m_p05_p50_p95": [
+            0.1274261746576599,
+            0.17823137485000878,
+            0.21432162263368967
+          ]
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "frames": 82,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 177,
+          "diagnostic_frames": 126,
+          "numeric_baseline_frames": 126,
+          "flags": {
+            "rx_peak_unresolved": 23,
+            "single_tone_mismatch_at_fft_range": 126,
+            "rx_peak_disagreement": 103
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "2": 15,
+            "3": 103,
+            "1": 8
+          },
+          "residual_p05_p50_p95": [
+            0.796530666090291,
+            0.806990744440224,
+            0.8198023436858078
+          ],
+          "spread_m_p05_p50_p95": [
+            0.0266005686243749,
+            0.2819495836017767,
+            0.305815855069883
+          ]
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "frames": 82,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "frames": 178,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 148,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "frames": 1937,
+      "saved_joint_results_compared_frames": 1937,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "frames": 116,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 173,
+          "diagnostic_frames": 173,
+          "numeric_baseline_frames": 173,
+          "flags": {
+            "rx_peak_disagreement": 173
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 173
+          },
+          "residual_p05_p50_p95": [
+            0.3407660564370988,
+            0.3555901612649619,
+            0.3686871540161735
+          ],
+          "spread_m_p05_p50_p95": [
+            0.11274529514620099,
+            0.11971169728564457,
+            0.12718068099715762
+          ]
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "frames": 73,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 168,
+          "diagnostic_frames": 168,
+          "numeric_baseline_frames": 168,
+          "flags": {
+            "rx_peak_disagreement": 167,
+            "single_tone_mismatch_at_fft_range": 98
+          },
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {
+            "3": 168
+          },
+          "residual_p05_p50_p95": [
+            0.4626083219607205,
+            0.5070133398724126,
+            0.5541830947897837
+          ],
+          "spread_m_p05_p50_p95": [
+            0.10065168044757886,
+            0.12185279355562526,
+            0.1496300680268138
+          ]
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "frames": 69,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "frames": 170,
+          "diagnostic_frames": 170,
+          "numeric_baseline_frames": 170,
+          "flags": {},
+          "no_flag_frames": 170,
+          "resolved_rx_counts": {
+            "3": 170
+          },
+          "residual_p05_p50_p95": [
+            0.21265050167429095,
+            0.2219899880171219,
+            0.23456276226637796
+          ],
+          "spread_m_p05_p50_p95": [
+            0.02116834934126697,
+            0.029621870109715842,
+            0.038969018812714154
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 116,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "frames": 2366,
+      "saved_joint_results_compared_frames": 2366,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "frames": 117,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "frames": 219,
+          "diagnostic_frames": 219,
+          "numeric_baseline_frames": 219,
+          "flags": {},
+          "no_flag_frames": 219,
+          "resolved_rx_counts": {
+            "3": 219
+          },
+          "residual_p05_p50_p95": [
+            0.17799030454602183,
+            0.1821371096815968,
+            0.186907344753677
+          ],
+          "spread_m_p05_p50_p95": [
+            0.02934168238045761,
+            0.04291400072283269,
+            0.054399722695623286
+          ]
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "frames": 158,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "frames": 217,
+          "diagnostic_frames": 217,
+          "numeric_baseline_frames": 217,
+          "flags": {
+            "rx_peak_unresolved": 1
+          },
+          "no_flag_frames": 216,
+          "resolved_rx_counts": {
+            "3": 216,
+            "2": 1
+          },
+          "residual_p05_p50_p95": [
+            0.40041111210000296,
+            0.41203388036269006,
+            0.4262358410580108
+          ],
+          "spread_m_p05_p50_p95": [
+            0.009910418660469489,
+            0.04063164447704021,
+            0.07044229869641237
+          ]
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "frames": 126,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "frames": 221,
+          "diagnostic_frames": 221,
+          "numeric_baseline_frames": 221,
+          "flags": {},
+          "no_flag_frames": 221,
+          "resolved_rx_counts": {
+            "3": 221
+          },
+          "residual_p05_p50_p95": [
+            0.15214876144796896,
+            0.16509735491911748,
+            0.17093615656663463
+          ],
+          "spread_m_p05_p50_p95": [
+            0.002233141470629141,
+            0.012785162498118119,
+            0.03314547333688367
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "frames": 119,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+      "frames": 758,
+      "saved_joint_results_compared_frames": 758,
+      "existing_saved_joint_results_unchanged": true,
+      "windows": [
+        {
+          "label": "80 cm stationary (approximate)",
+          "state": "hold",
+          "frames": 714,
+          "diagnostic_frames": 0,
+          "numeric_baseline_frames": 0,
+          "flags": {},
+          "no_flag_frames": 0,
+          "resolved_rx_counts": {},
+          "residual_p05_p50_p95": null,
+          "spread_m_p05_p50_p95": null
+        }
+      ]
+    }
+  ],
+  "regression_sha256": "385c0875dfcf3af040b1ae17ea962bce8dcbceb51c0779bb9d554247d7128867",
+  "source_sha256": {
+    "tools/review_rx_diagnostics.py": "d7a5624fb93a4af0e32b350b4a80c446c0c27846bfd1dce7fa3ec85b4b751e92",
+    "radar_min/rx_diagnostics.py": "4325576e9f168be0e0fc9d1b6ed6c019f1fcc72fa77ff244b5490f20c5781643",
+    "radar_min/rd_gui.py": "778ead6169e262dc758db888856ac2771742a27bed608f5517a5fb0da791fe97"
+  },
+  "interpretation": "Inspection flags, not new detector/accuracy performance. Unresolved RX omitted from spread, so read resolved_rx_counts too. A quiet diagnostic is not verified reflector identity; pooled-FFT residual is not the optimized phase fit."
+}

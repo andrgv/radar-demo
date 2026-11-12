@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "frame_sequence": 91,
+      "bins": [
+        1
+      ],
+      "iterations": 200,
+      "ms_p50_p95_max": [
+        0.20793825387954712,
+        0.4247166449204081,
+        1.2610419653356075
+      ]
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "frame_sequence": 2389,
+      "bins": [
+        1,
+        2
+      ],
+      "iterations": 200,
+      "ms_p50_p95_max": [
+        0.2792084123939276,
+        0.4377309698611497,
+        0.7341247983276844
+      ]
+    }
+  ],
+  "interpretation": "Isolated per-group diagnostic timing on this machine, excluding the existing dense FFT and UI. Not live acquisition timing qualification."
+}

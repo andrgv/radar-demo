@@ -1,0 +1,319 @@
+{
+  "source_sha256": "2425329d1201d5d16c1ce290efc251bdf0255d280cb3221d7ac1dc94d2739edf",
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "raw_sha256": "253fcf606c2b51ef7c22bcd4089e137ad13f63af6594c6665808721cb3d3f395",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "algorithm": "joint-range-cfar-rd-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "one_d_cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2
+        },
+        "source_sha256": {
+          "rd_live.py": "b40ce050ff03b39fa9abf0bdd0f39157304871e621c0bc85673dacba14d6a662",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+          "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+          "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+          "joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812",
+          "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+          "motion_range.py": "759c82b652ac746f56cfff86261fd911a87240450dfbe1ed64c980d206df6fd7"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+        "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+        "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+        "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+        "experimental_os": null,
+        "motion_policy": "Experimental unique confirmed RD feature with two consecutive same-sign nonzero measurements; same-ID zero-Doppler continuation; no held/predicted range; baseline fallback only outside an active episode"
+      },
+      "counts": {
+        "frames": 2194,
+        "primary_frames": 895,
+        "motion_policy_range_frames": 1087,
+        "rd_motion_range_frames": 16,
+        "rd_stopped_range_frames": 968,
+        "rd_only_feature_frames": 2194,
+        "rd_only_fine_frames": 2113,
+        "merged_source_frames": 996,
+        "rd_fine_frames": 2173,
+        "range_disagreement_frames": 0
+      },
+      "rd_fine_reasons": {
+        "unconfirmed_rd_peak": 1902,
+        "fine_peak_uncalibrated": 6621,
+        "fine_peak_at_group_boundary": 201
+      },
+      "processing_ms_p50_p95_max": [
+        5.774166435003281,
+        8.587739639915526,
+        56.42575025558472
+      ],
+      "baseline_matches_saved_and_independent": true,
+      "rd_masks_and_association_unchanged": true
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "raw_sha256": "25303b5a75390b34d4c651a6fd7533dedb93bed005b4508c7a4608edcdb06246",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "algorithm": "joint-range-cfar-rd-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "one_d_cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2
+        },
+        "source_sha256": {
+          "rd_live.py": "b40ce050ff03b39fa9abf0bdd0f39157304871e621c0bc85673dacba14d6a662",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+          "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+          "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+          "joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812",
+          "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+          "motion_range.py": "759c82b652ac746f56cfff86261fd911a87240450dfbe1ed64c980d206df6fd7"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+        "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+        "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+        "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+        "experimental_os": null,
+        "motion_policy": "Experimental unique confirmed RD feature with two consecutive same-sign nonzero measurements; same-ID zero-Doppler continuation; no held/predicted range; baseline fallback only outside an active episode"
+      },
+      "counts": {
+        "frames": 946,
+        "primary_frames": 944,
+        "motion_policy_range_frames": 944,
+        "rd_motion_range_frames": 0,
+        "rd_stopped_range_frames": 0,
+        "rd_only_feature_frames": 946,
+        "rd_only_fine_frames": 874,
+        "merged_source_frames": 945,
+        "rd_fine_frames": 944,
+        "range_disagreement_frames": 0
+      },
+      "rd_fine_reasons": {
+        "unconfirmed_rd_peak": 1355,
+        "fine_peak_uncalibrated": 2271,
+        "fine_peak_at_group_boundary": 445
+      },
+      "processing_ms_p50_p95_max": [
+        6.906478898599744,
+        8.172155590727925,
+        15.79954195767641
+      ],
+      "baseline_matches_saved_and_independent": true,
+      "rd_masks_and_association_unchanged": true
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "raw_sha256": "6e03eda770515055d82f44fefbf6758c8610d8e2a3ac091754fa0045feb41dd8",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "algorithm": "joint-range-cfar-rd-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "one_d_cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2
+        },
+        "source_sha256": {
+          "rd_live.py": "b40ce050ff03b39fa9abf0bdd0f39157304871e621c0bc85673dacba14d6a662",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+          "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+          "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+          "joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812",
+          "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+          "motion_range.py": "759c82b652ac746f56cfff86261fd911a87240450dfbe1ed64c980d206df6fd7"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+        "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+        "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+        "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+        "experimental_os": null,
+        "motion_policy": "Experimental unique confirmed RD feature with two consecutive same-sign nonzero measurements; same-ID zero-Doppler continuation; no held/predicted range; baseline fallback only outside an active episode"
+      },
+      "counts": {
+        "frames": 867,
+        "primary_frames": 0,
+        "motion_policy_range_frames": 0,
+        "rd_motion_range_frames": 0,
+        "rd_stopped_range_frames": 0,
+        "rd_only_feature_frames": 867,
+        "rd_only_fine_frames": 865,
+        "merged_source_frames": 0,
+        "rd_fine_frames": 865,
+        "range_disagreement_frames": 0
+      },
+      "rd_fine_reasons": {
+        "unconfirmed_rd_peak": 440,
+        "fine_peak_uncalibrated": 3827,
+        "fine_peak_at_group_boundary": 114,
+        "multiple_fine_peaks": 3
+      },
+      "processing_ms_p50_p95_max": [
+        5.211208947002888,
+        6.313578598201275,
+        19.744709134101868
+      ],
+      "baseline_matches_saved_and_independent": true,
+      "rd_masks_and_association_unchanged": true
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "raw_sha256": "6451b9b1e4ba9234e8a80a3925fc758bb87b24fac7402a28b2de8bc9dc75ab7a",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "algorithm": "joint-range-cfar-rd-v1",
+        "cfar": {
+          "guard_range": 1,
+          "guard_doppler": 1,
+          "training_range": 3,
+          "training_doppler": 2,
+          "min_training": 16,
+          "factor": 4.0,
+          "doppler_edge": "wrap"
+        },
+        "association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25
+        },
+        "one_d_cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2
+        },
+        "source_sha256": {
+          "rd_live.py": "b40ce050ff03b39fa9abf0bdd0f39157304871e621c0bc85673dacba14d6a662",
+          "range_doppler.py": "b35a9680b294f926b62013a1bed18e87135b0e79e3d389fd2813a8252f447cb8",
+          "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+          "rd_association.py": "5afdead2f73a5d8aca694da25b5e8912a706d09bcf28cea7404a7b69d68fa7f2",
+          "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+          "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+          "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+          "joint_results.py": "c6e570d87a8a39521baac2c20d350f132ea4b735a7d1057fb03701ae6e317812",
+          "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+          "motion_range.py": "759c82b652ac746f56cfff86261fd911a87240450dfbe1ed64c980d206df6fd7"
+        },
+        "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+        "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+        "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+        "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+        "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+        "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+        "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+        "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+        "experimental_os": null,
+        "motion_policy": "Experimental unique confirmed RD feature with two consecutive same-sign nonzero measurements; same-ID zero-Doppler continuation; no held/predicted range; baseline fallback only outside an active episode"
+      },
+      "counts": {
+        "frames": 757,
+        "primary_frames": 468,
+        "motion_policy_range_frames": 742,
+        "rd_motion_range_frames": 62,
+        "rd_stopped_range_frames": 567,
+        "rd_only_feature_frames": 757,
+        "rd_only_fine_frames": 745,
+        "merged_source_frames": 557,
+        "rd_fine_frames": 754,
+        "range_disagreement_frames": 0
+      },
+      "rd_fine_reasons": {
+        "unconfirmed_rd_peak": 1010,
+        "fine_peak_uncalibrated": 1985,
+        "fine_peak_at_group_boundary": 11
+      },
+      "processing_ms_p50_p95_max": [
+        6.574790924787521,
+        7.713791355490684,
+        11.346292216330767
+      ],
+      "baseline_matches_saved_and_independent": true,
+      "rd_masks_and_association_unchanged": true
+    }
+  ],
+  "interpretation": "Development regression; no independent physical accuracy acceptance. Every primary exactly reproduces the frozen 1D distance, every RD mask and association matches the standalone algorithms. RD-only refinements are inspection values, not target identities or automatic primary measurements. Saved host freshness is not re-certified."
+}

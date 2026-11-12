@@ -1,0 +1,5139 @@
+{
+  "method": {
+    "method": "motion-seeded-weak-stop-link-v1",
+    "motion_confirmation_frames": 2,
+    "max_range_difference_bins": 0.5,
+    "scope": "Supplement only: same current confirmed RD feature after two same-sign measured motion frames; stopped OS/raw-peak support must identify its current peak",
+    "clearing": "Invalid input, sequence gaps, missing/ambiguous/lost measurements, competitors or unsupported stops revoke the seed; stationary support cannot reseed",
+    "interpretation": "Current RD fine inspection, no held/predicted range, primary eligibility or certified physical identity"
+  },
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "frames": 1747,
+      "windows": [
+        {
+          "label": "initial empty (trim 2s)",
+          "window_host_s": [
+            2,
+            16.36
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            18.36
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 144,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 144,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 144,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 144,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 144,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 144
+          },
+          "link_states": {
+            "unseeded": 144
+          }
+        },
+        {
+          "label": "50 cm (trim 2s)",
+          "window_host_s": [
+            24.74,
+            42.2
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            22.74,
+            44.2
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 176,
+              "numeric_frames": 176,
+              "episodes": 1,
+              "longest_s": 17.6,
+              "cm_p05_p50_p95": [
+                66.76947245017888,
+                71.92684579013168,
+                76.3858380412158
+              ],
+              "conditional_placement_mae_cm": 22.156101051801542
+            },
+            "reference_motion_m": {
+              "frames": 176,
+              "numeric_frames": 176,
+              "episodes": 1,
+              "longest_s": 17.6,
+              "cm_p05_p50_p95": [
+                66.7636963192238,
+                71.92811112729376,
+                76.37975787523246
+              ],
+              "conditional_placement_mae_cm": 22.156822910306868
+            },
+            "weak_candidate_m": {
+              "frames": 176,
+              "numeric_frames": 64,
+              "episodes": 21,
+              "longest_s": 2.1,
+              "cm_p05_p50_p95": [
+                67.73177981955793,
+                71.712451915482,
+                76.65574619817689
+              ],
+              "conditional_placement_mae_cm": 22.12978306310202
+            },
+            "linked_m": {
+              "frames": 176,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 176,
+              "numeric_frames": 176,
+              "episodes": 1,
+              "longest_s": 17.6,
+              "cm_p05_p50_p95": [
+                66.7636963192238,
+                71.92811112729376,
+                76.37975787523246
+              ],
+              "conditional_placement_mae_cm": 22.156822910306868
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 64
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 176
+          },
+          "link_states": {
+            "unseeded": 176
+          }
+        },
+        {
+          "label": "empty after 50 cm (trim 2s)",
+          "window_host_s": [
+            51.39,
+            63.08
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            49.39,
+            65.08
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 118
+          },
+          "link_states": {
+            "unseeded": 118
+          }
+        },
+        {
+          "label": "80 cm (trim 2s)",
+          "window_host_s": [
+            81.57,
+            101.28
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            79.57,
+            103.28
+          ],
+          "nominal_target_m": 0.8,
+          "channels": {
+            "baseline_m": {
+              "frames": 199,
+              "numeric_frames": 85,
+              "episodes": 9,
+              "longest_s": 1.9,
+              "cm_p05_p50_p95": [
+                100.37667489563209,
+                103.09982231122596,
+                106.80342265549781
+              ],
+              "conditional_placement_mae_cm": 23.14120101813532
+            },
+            "reference_motion_m": {
+              "frames": 199,
+              "numeric_frames": 85,
+              "episodes": 9,
+              "longest_s": 1.9,
+              "cm_p05_p50_p95": [
+                100.37667489563209,
+                103.09982231122596,
+                106.80342265549781
+              ],
+              "conditional_placement_mae_cm": 23.14120101813532
+            },
+            "weak_candidate_m": {
+              "frames": 199,
+              "numeric_frames": 89,
+              "episodes": 12,
+              "longest_s": 3.0,
+              "cm_p05_p50_p95": [
+                101.46541907219061,
+                103.96263524375738,
+                107.82532017211503
+              ],
+              "conditional_placement_mae_cm": 24.17003633591405
+            },
+            "linked_m": {
+              "frames": 199,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 199,
+              "numeric_frames": 85,
+              "episodes": 9,
+              "longest_s": 1.9,
+              "cm_p05_p50_p95": [
+                100.37667489563209,
+                103.09982231122596,
+                106.80342265549781
+              ],
+              "conditional_placement_mae_cm": 23.14120101813532
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 89
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 199
+          },
+          "link_states": {
+            "unseeded": 199
+          }
+        },
+        {
+          "label": "empty after 80 cm (trim 2s)",
+          "window_host_s": [
+            108.51,
+            120.27
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            106.51,
+            122.27
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 118
+          },
+          "link_states": {
+            "unseeded": 118
+          }
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "window_host_s": [
+            130.86,
+            148.97
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            128.86,
+            150.97
+          ],
+          "nominal_target_m": 1.2,
+          "channels": {
+            "baseline_m": {
+              "frames": 183,
+              "numeric_frames": 123,
+              "episodes": 13,
+              "longest_s": 4.7,
+              "cm_p05_p50_p95": [
+                146.90297894756944,
+                149.59162060933835,
+                152.18973100851358
+              ],
+              "conditional_placement_mae_cm": 29.656224138800212
+            },
+            "reference_motion_m": {
+              "frames": 183,
+              "numeric_frames": 123,
+              "episodes": 13,
+              "longest_s": 4.7,
+              "cm_p05_p50_p95": [
+                146.90297894756944,
+                149.59162060933835,
+                152.18973100851358
+              ],
+              "conditional_placement_mae_cm": 29.656224138800212
+            },
+            "weak_candidate_m": {
+              "frames": 183,
+              "numeric_frames": 1,
+              "episodes": 1,
+              "longest_s": 0.1,
+              "cm_p05_p50_p95": [
+                144.1081772519448,
+                144.1081772519448,
+                144.1081772519448
+              ],
+              "conditional_placement_mae_cm": 24.108177251944806
+            },
+            "linked_m": {
+              "frames": 183,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 183,
+              "numeric_frames": 123,
+              "episodes": 13,
+              "longest_s": 4.7,
+              "cm_p05_p50_p95": [
+                146.90297894756944,
+                149.59162060933835,
+                152.18973100851358
+              ],
+              "conditional_placement_mae_cm": 29.656224138800212
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 1
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 183
+          },
+          "link_states": {
+            "unseeded": 183
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "window_host_s": [
+            158.03,
+            171.138418
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            156.03,
+            173.138418
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 132,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 132,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 132,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 132,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 132,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 132
+          },
+          "link_states": {
+            "unseeded": 132
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "c1254de4f3e52a68e8696940d9600fcefcdc51731f8c7f529d2adf88ad075968",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "refined_feature_with_nonzero_peak_history": 268,
+        "rd_refinement_fine_peak_at_group_boundary": 6,
+        "no_confirmed_current_track": 2,
+        "below_rd_birth_margin": 1,
+        "refined_static_feature_without_motion_history": 8
+      },
+      "reasons": {
+        "no_current_motion_seed": 1719,
+        "confirming_current_motion_and_reference_episode": 12,
+        "same_feature_current_motion_already_supported": 9,
+        "same_feature_stop_already_supported": 2,
+        "motion_identity_lost_missing_or_ambiguous": 2,
+        "weak_stop_has_no_current_shape_support": 1,
+        "motion_seed_has_no_current_refinement": 2
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "frames": 2194,
+      "windows": [
+        {
+          "label": "initial empty (trim 2s)",
+          "window_host_s": [
+            2,
+            13.73
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            15.73
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 118,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 118
+          },
+          "link_states": {
+            "unseeded": 118
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "window_host_s": [
+            50.68,
+            77.44
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            48.68,
+            79.44
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                58.12594760784526,
+                58.36406030957844,
+                58.66062230044966
+              ],
+              "conditional_placement_mae_cm": 8.388993886936191
+            },
+            "reference_motion_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                58.11076140458795,
+                58.36138079764559,
+                58.65791471858831
+              ],
+              "conditional_placement_mae_cm": 8.387669925894562
+            },
+            "weak_candidate_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                58.12594760784526,
+                58.36406030957844,
+                58.66062230044966
+              ],
+              "conditional_placement_mae_cm": 8.388993886936191
+            },
+            "linked_m": {
+              "frames": 270,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                58.11076140458795,
+                58.36138079764559,
+                58.65791471858831
+              ],
+              "conditional_placement_mae_cm": 8.387669925894562
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 270
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 270
+          },
+          "link_states": {
+            "unseeded": 270
+          }
+        },
+        {
+          "label": "empty after A (trim 2s)",
+          "window_host_s": [
+            84.3,
+            95.63
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            82.3,
+            97.63
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 115,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 115,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 115,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 115,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 115,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 115
+          },
+          "link_states": {
+            "unseeded": 115
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "window_host_s": [
+            109.86,
+            131.45
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            107.86,
+            133.45
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 218,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 218,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 218,
+              "numeric_frames": 4,
+              "episodes": 4,
+              "longest_s": 0.1,
+              "cm_p05_p50_p95": [
+                54.41825627693114,
+                54.76117597673304,
+                55.547513939623094
+              ],
+              "conditional_placement_mae_cm": 4.891593112935438
+            },
+            "linked_m": {
+              "frames": 218,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 218,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 4
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 218
+          },
+          "link_states": {
+            "unseeded": 218
+          }
+        },
+        {
+          "label": "empty after B (trim 2s)",
+          "window_host_s": [
+            149.91,
+            156.67
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            147.91,
+            158.67
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 69
+          },
+          "link_states": {
+            "unseeded": 69
+          }
+        },
+        {
+          "label": "50 cm C (trim 2s)",
+          "window_host_s": [
+            168.98,
+            190.21
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            166.98,
+            192.21
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 214,
+              "numeric_frames": 132,
+              "episodes": 3,
+              "longest_s": 12.9,
+              "cm_p05_p50_p95": [
+                42.28671607005617,
+                47.01592697089317,
+                50.472170732357704
+              ],
+              "conditional_placement_mae_cm": 3.2413630751049625
+            },
+            "reference_motion_m": {
+              "frames": 214,
+              "numeric_frames": 132,
+              "episodes": 9,
+              "longest_s": 4.9,
+              "cm_p05_p50_p95": [
+                42.298104644431795,
+                46.77329335785474,
+                49.94779223250699
+              ],
+              "conditional_placement_mae_cm": 3.307564528638797
+            },
+            "weak_candidate_m": {
+              "frames": 214,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 214,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 214,
+              "numeric_frames": 132,
+              "episodes": 9,
+              "longest_s": 4.9,
+              "cm_p05_p50_p95": [
+                42.298104644431795,
+                46.77329335785474,
+                49.94779223250699
+              ],
+              "conditional_placement_mae_cm": 3.307564528638797
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 214
+          },
+          "link_states": {
+            "unseeded": 214
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "window_host_s": [
+            202.7,
+            209.64
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            200.7,
+            211.64
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 70,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 70,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 70,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 70,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 70,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 70
+          },
+          "link_states": {
+            "unseeded": 70
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "6c1cb7dbb59b66fdbe0192d804dcc4aa6ed6c48de011adc17aeb2d4ecbd16237",
+      "linked_frames": 1,
+      "linked_events": [
+        {
+          "frame_sequence": 2741,
+          "host_time_s": 19.820146,
+          "range_m": 0.5287664429047272,
+          "baseline_m": 0.5182358733478951,
+          "track_id": 13,
+          "scored_labels": []
+        }
+      ],
+      "weak_stages": {
+        "no_confirmed_current_track": 10,
+        "refined_feature_with_nonzero_peak_history": 661,
+        "below_rd_birth_margin": 1,
+        "refined_static_feature_without_motion_history": 56,
+        "rd_refinement_fine_peak_at_group_boundary": 10
+      },
+      "reasons": {
+        "no_current_motion_seed": 2159,
+        "confirming_current_motion_and_reference_episode": 9,
+        "same_feature_current_motion_already_supported": 12,
+        "weak_stop_has_no_current_shape_support": 3,
+        "same_feature_stop_already_supported": 7,
+        "same_motion_seeded_feature_with_current_weak_stop_support": 1,
+        "motion_identity_lost_missing_or_ambiguous": 1,
+        "motion_seed_has_no_current_refinement": 1,
+        "current_rd_refinement_unresolved": 1
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "frames": 946,
+      "windows": [
+        {
+          "label": "A1 (trim 2s)",
+          "window_host_s": [
+            2,
+            15.01
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            17.01
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 131,
+              "numeric_frames": 131,
+              "episodes": 1,
+              "longest_s": 13.1,
+              "cm_p05_p50_p95": [
+                46.042195016271066,
+                47.22054273650236,
+                49.21447071298995
+              ],
+              "conditional_placement_mae_cm": 2.6186200665220296
+            },
+            "reference_motion_m": {
+              "frames": 131,
+              "numeric_frames": 131,
+              "episodes": 1,
+              "longest_s": 13.1,
+              "cm_p05_p50_p95": [
+                46.042195016271066,
+                47.22054273650236,
+                49.21447071298995
+              ],
+              "conditional_placement_mae_cm": 2.6186200665220296
+            },
+            "weak_candidate_m": {
+              "frames": 131,
+              "numeric_frames": 3,
+              "episodes": 1,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                46.16102839321325,
+                46.90134598858378,
+                47.00594161985272
+              ],
+              "conditional_placement_mae_cm": 3.3341065907131076
+            },
+            "linked_m": {
+              "frames": 131,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 131,
+              "numeric_frames": 131,
+              "episodes": 1,
+              "longest_s": 13.1,
+              "cm_p05_p50_p95": [
+                46.042195016271066,
+                47.22054273650236,
+                49.21447071298995
+              ],
+              "conditional_placement_mae_cm": 2.6186200665220296
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 3
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 131
+          },
+          "link_states": {
+            "unseeded": 131
+          }
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "window_host_s": [
+            23.85,
+            36.69
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            21.85,
+            38.69
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 129,
+              "numeric_frames": 129,
+              "episodes": 1,
+              "longest_s": 12.9,
+              "cm_p05_p50_p95": [
+                46.462014237055136,
+                46.92464668364855,
+                47.08641036488745
+              ],
+              "conditional_placement_mae_cm": 3.1743567795511596
+            },
+            "reference_motion_m": {
+              "frames": 129,
+              "numeric_frames": 129,
+              "episodes": 1,
+              "longest_s": 12.9,
+              "cm_p05_p50_p95": [
+                46.462014237055136,
+                46.92464668364855,
+                47.08641036488745
+              ],
+              "conditional_placement_mae_cm": 3.1743567795511596
+            },
+            "weak_candidate_m": {
+              "frames": 129,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 129,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 129,
+              "numeric_frames": 129,
+              "episodes": 1,
+              "longest_s": 12.9,
+              "cm_p05_p50_p95": [
+                46.462014237055136,
+                46.92464668364855,
+                47.08641036488745
+              ],
+              "conditional_placement_mae_cm": 3.1743567795511596
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 129
+          },
+          "link_states": {
+            "unseeded": 129
+          }
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "window_host_s": [
+            47.85,
+            60.36
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            45.85,
+            62.36
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 126,
+              "numeric_frames": 126,
+              "episodes": 1,
+              "longest_s": 12.6,
+              "cm_p05_p50_p95": [
+                45.42429398548573,
+                46.7909991845722,
+                48.52829420628098
+              ],
+              "conditional_placement_mae_cm": 3.153440952535141
+            },
+            "reference_motion_m": {
+              "frames": 126,
+              "numeric_frames": 126,
+              "episodes": 1,
+              "longest_s": 12.6,
+              "cm_p05_p50_p95": [
+                45.42429398548573,
+                46.7909991845722,
+                48.52829420628098
+              ],
+              "conditional_placement_mae_cm": 3.153440952535141
+            },
+            "weak_candidate_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 126,
+              "numeric_frames": 126,
+              "episodes": 1,
+              "longest_s": 12.6,
+              "cm_p05_p50_p95": [
+                45.42429398548573,
+                46.7909991845722,
+                48.52829420628098
+              ],
+              "conditional_placement_mae_cm": 3.153440952535141
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 126
+          },
+          "link_states": {
+            "unseeded": 126
+          }
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "window_host_s": [
+            69.27,
+            81.91
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            67.27,
+            83.91
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 127,
+              "numeric_frames": 127,
+              "episodes": 1,
+              "longest_s": 12.7,
+              "cm_p05_p50_p95": [
+                46.62903964437316,
+                46.75234394857378,
+                46.85587363866674
+              ],
+              "conditional_placement_mae_cm": 3.2521708336672823
+            },
+            "reference_motion_m": {
+              "frames": 127,
+              "numeric_frames": 127,
+              "episodes": 1,
+              "longest_s": 12.7,
+              "cm_p05_p50_p95": [
+                46.62903964437316,
+                46.75234394857378,
+                46.85587363866674
+              ],
+              "conditional_placement_mae_cm": 3.2521708336672823
+            },
+            "weak_candidate_m": {
+              "frames": 127,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 127,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 127,
+              "numeric_frames": 127,
+              "episodes": 1,
+              "longest_s": 12.7,
+              "cm_p05_p50_p95": [
+                46.62903964437316,
+                46.75234394857378,
+                46.85587363866674
+              ],
+              "conditional_placement_mae_cm": 3.2521708336672823
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 127
+          },
+          "link_states": {
+            "unseeded": 127
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "872d694f063e36572c42a6c58c9363a69549ff82784ac986abdfe634f077ca8c",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "refined_static_feature_without_motion_history": 5,
+        "rd_refinement_fine_peak_at_group_boundary": 2
+      },
+      "reasons": {
+        "no_current_motion_seed": 946
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "frames": 867,
+      "windows": [
+        {
+          "label": "A1 (trim 2s)",
+          "window_host_s": [
+            2,
+            14.23
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            16.23
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 122
+          },
+          "link_states": {
+            "unseeded": 122
+          }
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "window_host_s": [
+            22.77,
+            35.48
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            20.77,
+            37.48
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 128,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 128,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 128,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 128,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 128,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 128
+          },
+          "link_states": {
+            "unseeded": 128
+          }
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "window_host_s": [
+            45.41,
+            57.94
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            43.41,
+            59.94
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 126
+          },
+          "link_states": {
+            "unseeded": 126
+          }
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "window_host_s": [
+            65.78,
+            77.94
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            63.78,
+            79.94
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 122,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 122
+          },
+          "link_states": {
+            "unseeded": 122
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "82d883dc27c9bd5055a6274d5660859978812b33c5e254a74abfcc5c5d223a36",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {},
+      "reasons": {
+        "no_current_motion_seed": 867
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "frames": 757,
+      "windows": [
+        {
+          "label": "120 cm A (trim 2s)",
+          "window_host_s": [
+            2,
+            9.27
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            11.27
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 73,
+              "numeric_frames": 73,
+              "episodes": 1,
+              "longest_s": 7.3,
+              "cm_p05_p50_p95": [
+                124.5849306852772,
+                125.80040132622605,
+                126.82242232994831
+              ],
+              "conditional_placement_mae_cm": 5.7558003306656245
+            },
+            "reference_motion_m": {
+              "frames": 73,
+              "numeric_frames": 73,
+              "episodes": 1,
+              "longest_s": 7.3,
+              "cm_p05_p50_p95": [
+                124.5849306852772,
+                125.80040132622605,
+                126.82242232994831
+              ],
+              "conditional_placement_mae_cm": 5.7558003306656245
+            },
+            "weak_candidate_m": {
+              "frames": 73,
+              "numeric_frames": 67,
+              "episodes": 2,
+              "longest_s": 5.5,
+              "cm_p05_p50_p95": [
+                124.61455649884856,
+                125.87879667291315,
+                126.83088867908245
+              ],
+              "conditional_placement_mae_cm": 5.834693490770405
+            },
+            "linked_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 73,
+              "numeric_frames": 73,
+              "episodes": 1,
+              "longest_s": 7.3,
+              "cm_p05_p50_p95": [
+                124.5849306852772,
+                125.80040132622605,
+                126.82242232994831
+              ],
+              "conditional_placement_mae_cm": 5.7558003306656245
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 67
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 73
+          },
+          "link_states": {
+            "unseeded": 73
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "window_host_s": [
+            15,
+            24.62
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            13,
+            26.62
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 97,
+              "numeric_frames": 25,
+              "episodes": 6,
+              "longest_s": 1.0,
+              "cm_p05_p50_p95": [
+                33.98141166244126,
+                35.40206384237814,
+                39.709733318398655
+              ],
+              "conditional_placement_mae_cm": 14.236308750211135
+            },
+            "reference_motion_m": {
+              "frames": 97,
+              "numeric_frames": 42,
+              "episodes": 11,
+              "longest_s": 1.2,
+              "cm_p05_p50_p95": [
+                33.9053010904082,
+                35.55666681455001,
+                40.14226008493686
+              ],
+              "conditional_placement_mae_cm": 14.084753414271036
+            },
+            "weak_candidate_m": {
+              "frames": 97,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 97,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 97,
+              "numeric_frames": 42,
+              "episodes": 11,
+              "longest_s": 1.2,
+              "cm_p05_p50_p95": [
+                33.9053010904082,
+                35.55666681455001,
+                40.14226008493686
+              ],
+              "conditional_placement_mae_cm": 14.084753414271036
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 97
+          },
+          "link_states": {
+            "unseeded": 97
+          }
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "window_host_s": [
+            30.05,
+            40.57
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            28.05,
+            42.57
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 105,
+              "numeric_frames": 8,
+              "episodes": 5,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                128.43456995573052,
+                130.7217901536174,
+                133.15699770016533
+              ],
+              "conditional_placement_mae_cm": 10.767046197627138
+            },
+            "reference_motion_m": {
+              "frames": 105,
+              "numeric_frames": 24,
+              "episodes": 11,
+              "longest_s": 0.5,
+              "cm_p05_p50_p95": [
+                125.26552837010657,
+                130.1426297357871,
+                133.2289764203386
+              ],
+              "conditional_placement_mae_cm": 9.518942843594447
+            },
+            "weak_candidate_m": {
+              "frames": 105,
+              "numeric_frames": 5,
+              "episodes": 3,
+              "longest_s": 0.2,
+              "cm_p05_p50_p95": [
+                129.60139478431307,
+                131.2327342217769,
+                137.09329204262838
+              ],
+              "conditional_placement_mae_cm": 12.66781560200172
+            },
+            "linked_m": {
+              "frames": 105,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 105,
+              "numeric_frames": 24,
+              "episodes": 11,
+              "longest_s": 0.5,
+              "cm_p05_p50_p95": [
+                125.26552837010657,
+                130.1426297357871,
+                133.2289764203386
+              ],
+              "conditional_placement_mae_cm": 9.518942843594447
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 5
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 105
+          },
+          "link_states": {
+            "unseeded": 105
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "window_host_s": [
+            47.15,
+            57.09
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            45.15,
+            59.09
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 100,
+              "numeric_frames": 100,
+              "episodes": 1,
+              "longest_s": 10.0,
+              "cm_p05_p50_p95": [
+                59.19284502708684,
+                60.91506208544058,
+                62.293466676155546
+              ],
+              "conditional_placement_mae_cm": 10.87385223799836
+            },
+            "reference_motion_m": {
+              "frames": 100,
+              "numeric_frames": 100,
+              "episodes": 1,
+              "longest_s": 10.0,
+              "cm_p05_p50_p95": [
+                59.182964676595354,
+                60.91249966958512,
+                62.29586937746217
+              ],
+              "conditional_placement_mae_cm": 10.876553744484827
+            },
+            "weak_candidate_m": {
+              "frames": 100,
+              "numeric_frames": 100,
+              "episodes": 1,
+              "longest_s": 10.0,
+              "cm_p05_p50_p95": [
+                59.19284502708684,
+                60.91506208544058,
+                62.293466676155546
+              ],
+              "conditional_placement_mae_cm": 10.87385223799836
+            },
+            "linked_m": {
+              "frames": 100,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 100,
+              "numeric_frames": 100,
+              "episodes": 1,
+              "longest_s": 10.0,
+              "cm_p05_p50_p95": [
+                59.182964676595354,
+                60.91249966958512,
+                62.29586937746217
+              ],
+              "conditional_placement_mae_cm": 10.876553744484827
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 100
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 100
+          },
+          "link_states": {
+            "unseeded": 100
+          }
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "window_host_s": [
+            63.76,
+            73.174039
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            61.76,
+            75.174039
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 94,
+              "numeric_frames": 94,
+              "episodes": 1,
+              "longest_s": 9.4,
+              "cm_p05_p50_p95": [
+                128.2489976527925,
+                131.24384608680836,
+                134.48037134288862
+              ],
+              "conditional_placement_mae_cm": 11.276178814155589
+            },
+            "reference_motion_m": {
+              "frames": 94,
+              "numeric_frames": 94,
+              "episodes": 1,
+              "longest_s": 9.4,
+              "cm_p05_p50_p95": [
+                128.21912702986145,
+                131.21660299663813,
+                134.9910834456684
+              ],
+              "conditional_placement_mae_cm": 11.321504836813254
+            },
+            "weak_candidate_m": {
+              "frames": 94,
+              "numeric_frames": 27,
+              "episodes": 18,
+              "longest_s": 0.4,
+              "cm_p05_p50_p95": [
+                127.91457290168859,
+                129.8726540534401,
+                134.38724042589024
+              ],
+              "conditional_placement_mae_cm": 10.150469219415088
+            },
+            "linked_m": {
+              "frames": 94,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 94,
+              "numeric_frames": 94,
+              "episodes": 1,
+              "longest_s": 9.4,
+              "cm_p05_p50_p95": [
+                128.21912702986145,
+                131.21660299663813,
+                134.9910834456684
+              ],
+              "conditional_placement_mae_cm": 11.321504836813254
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 27
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 94
+          },
+          "link_states": {
+            "unseeded": 94
+          }
+        },
+        {
+          "label": "faster approach",
+          "window_host_s": [
+            11.66,
+            12.8
+          ],
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            11.46,
+            13
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 11,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 11,
+              "numeric_frames": 10,
+              "episodes": 2,
+              "longest_s": 0.9,
+              "cm_p05_p50_p95": [
+                43.628724512172155,
+                73.82923164589945,
+                110.72403032904049
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 11,
+              "numeric_frames": 6,
+              "episodes": 3,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                48.45665765525665,
+                67.02253134686765,
+                105.46856835259612
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 11,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 11,
+              "numeric_frames": 10,
+              "episodes": 2,
+              "longest_s": 0.9,
+              "cm_p05_p50_p95": [
+                43.628724512172155,
+                73.82923164589945,
+                110.72403032904049
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 6
+          },
+          "link_reasons": {
+            "confirming_current_motion_and_reference_episode": 2,
+            "no_current_motion_seed": 1,
+            "same_feature_current_motion_already_supported": 8
+          },
+          "link_states": {
+            "confirming": 2,
+            "unseeded": 1,
+            "armed": 8
+          }
+        },
+        {
+          "label": "faster retreat",
+          "window_host_s": [
+            26.82,
+            27.85
+          ],
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            26.62,
+            28.05
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 11,
+              "numeric_frames": 5,
+              "episodes": 1,
+              "longest_s": 0.5,
+              "cm_p05_p50_p95": [
+                76.35380534628959,
+                100.65832818712406,
+                111.05213685207461
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 11,
+              "numeric_frames": 9,
+              "episodes": 1,
+              "longest_s": 0.9,
+              "cm_p05_p50_p95": [
+                73.07848992790646,
+                99.36301244254818,
+                112.1008294392561
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 11,
+              "numeric_frames": 9,
+              "episodes": 1,
+              "longest_s": 0.9,
+              "cm_p05_p50_p95": [
+                73.49342985653733,
+                100.36691194984914,
+                113.6137916354753
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 11,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 11,
+              "numeric_frames": 9,
+              "episodes": 1,
+              "longest_s": 0.9,
+              "cm_p05_p50_p95": [
+                73.07848992790646,
+                99.36301244254818,
+                112.1008294392561
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 9
+          },
+          "link_reasons": {
+            "same_feature_current_motion_already_supported": 9,
+            "motion_identity_lost_missing_or_ambiguous": 1,
+            "no_current_motion_seed": 1
+          },
+          "link_states": {
+            "armed": 9,
+            "cleared": 1,
+            "unseeded": 1
+          }
+        },
+        {
+          "label": "slower approach",
+          "window_host_s": [
+            42.77,
+            44.949999999999996
+          ],
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            42.57,
+            45.15
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 22,
+              "numeric_frames": 11,
+              "episodes": 3,
+              "longest_s": 0.7,
+              "cm_p05_p50_p95": [
+                69.8060676050049,
+                85.33240080021915,
+                108.44519024019043
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 22,
+              "numeric_frames": 20,
+              "episodes": 2,
+              "longest_s": 1.8,
+              "cm_p05_p50_p95": [
+                36.199406756951845,
+                76.53551399825437,
+                97.2049397784977
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 22,
+              "numeric_frames": 18,
+              "episodes": 4,
+              "longest_s": 0.8,
+              "cm_p05_p50_p95": [
+                58.8794327517611,
+                78.93366826549921,
+                99.6974112356022
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 22,
+              "numeric_frames": 1,
+              "episodes": 1,
+              "longest_s": 0.1,
+              "cm_p05_p50_p95": [
+                80.7686564954755,
+                80.7686564954755,
+                80.7686564954755
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 22,
+              "numeric_frames": 21,
+              "episodes": 2,
+              "longest_s": 1.9,
+              "cm_p05_p50_p95": [
+                36.48573567623906,
+                77.94044420964377,
+                95.84836159517134
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 17,
+            "rd_refinement_fine_peak_at_group_boundary": 1
+          },
+          "link_reasons": {
+            "same_feature_current_motion_already_supported": 17,
+            "current_rd_refinement_unresolved": 1,
+            "no_current_motion_seed": 1,
+            "confirming_current_motion_and_reference_episode": 1,
+            "same_feature_stop_already_supported": 1,
+            "same_motion_seeded_feature_with_current_weak_stop_support": 1
+          },
+          "link_states": {
+            "armed": 17,
+            "cleared": 1,
+            "unseeded": 1,
+            "confirming": 1,
+            "strong_stop": 1,
+            "weak_stopped": 1
+          }
+        },
+        {
+          "label": "slower retreat",
+          "window_host_s": [
+            59.290000000000006,
+            61.559999999999995
+          ],
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            59.09,
+            61.76
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 23,
+              "numeric_frames": 13,
+              "episodes": 4,
+              "longest_s": 0.6,
+              "cm_p05_p50_p95": [
+                61.80567481659364,
+                95.88942324118075,
+                117.76564962362293
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 23,
+              "numeric_frames": 22,
+              "episodes": 1,
+              "longest_s": 2.2,
+              "cm_p05_p50_p95": [
+                51.23028117263954,
+                97.19184025046661,
+                127.11999231083813
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 23,
+              "numeric_frames": 19,
+              "episodes": 2,
+              "longest_s": 1.6,
+              "cm_p05_p50_p95": [
+                78.5384999680407,
+                103.11697929981933,
+                127.67275535006092
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 23,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 23,
+              "numeric_frames": 22,
+              "episodes": 1,
+              "longest_s": 2.2,
+              "cm_p05_p50_p95": [
+                51.23028117263954,
+                97.19184025046661,
+                127.11999231083813
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 19
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 4,
+            "confirming_current_motion_and_reference_episode": 2,
+            "same_feature_current_motion_already_supported": 15,
+            "same_feature_stop_already_supported": 1,
+            "weak_stop_has_no_current_shape_support": 1
+          },
+          "link_states": {
+            "unseeded": 4,
+            "confirming": 2,
+            "armed": 15,
+            "strong_stop": 1,
+            "cleared": 1
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "9158e0fd3aa1ffe633a32e35da0c5d5804d9357273648b27d3d799d30c7de54b",
+      "linked_frames": 1,
+      "linked_events": [
+        {
+          "frame_sequence": 2268,
+          "host_time_s": 44.934585,
+          "range_m": 0.807686564954755,
+          "baseline_m": null,
+          "track_id": 1,
+          "scored_labels": [
+            "slower approach"
+          ]
+        }
+      ],
+      "weak_stages": {
+        "refined_static_feature_without_motion_history": 107,
+        "refined_feature_with_nonzero_peak_history": 252,
+        "rd_refinement_fine_peak_at_group_boundary": 2
+      },
+      "reasons": {
+        "no_current_motion_seed": 676,
+        "confirming_current_motion_and_reference_episode": 9,
+        "same_feature_current_motion_already_supported": 54,
+        "motion_identity_lost_missing_or_ambiguous": 2,
+        "same_feature_stop_already_supported": 11,
+        "weak_stop_has_no_current_shape_support": 2,
+        "current_rd_refinement_unresolved": 2,
+        "same_motion_seeded_feature_with_current_weak_stop_support": 1
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "frames": 682,
+      "windows": [
+        {
+          "label": "120 cm A (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            9.56
+          ],
+          "original_window_host_s": [
+            0,
+            11.56
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 76
+          },
+          "link_states": {
+            "unseeded": 76
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "window_host_s": [
+            15.58,
+            23.06
+          ],
+          "original_window_host_s": [
+            13.58,
+            25.06
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 76,
+              "numeric_frames": 76,
+              "episodes": 1,
+              "longest_s": 7.6,
+              "cm_p05_p50_p95": [
+                61.503236358080706,
+                63.98381770558872,
+                67.47837182356393
+              ],
+              "conditional_placement_mae_cm": 14.03698180820932
+            },
+            "reference_motion_m": {
+              "frames": 76,
+              "numeric_frames": 76,
+              "episodes": 1,
+              "longest_s": 7.6,
+              "cm_p05_p50_p95": [
+                61.4981258365471,
+                63.986339377533,
+                67.46622142980664
+              ],
+              "conditional_placement_mae_cm": 14.036947555615917
+            },
+            "weak_candidate_m": {
+              "frames": 76,
+              "numeric_frames": 74,
+              "episodes": 3,
+              "longest_s": 5.0,
+              "cm_p05_p50_p95": [
+                61.528819430068786,
+                64.03697855087572,
+                67.513767403025
+              ],
+              "conditional_placement_mae_cm": 14.088221695893926
+            },
+            "linked_m": {
+              "frames": 76,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 76,
+              "numeric_frames": 76,
+              "episodes": 1,
+              "longest_s": 7.6,
+              "cm_p05_p50_p95": [
+                61.4981258365471,
+                63.986339377533,
+                67.46622142980664
+              ],
+              "conditional_placement_mae_cm": 14.036947555615917
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 74
+          },
+          "link_reasons": {
+            "same_feature_stop_already_supported": 76
+          },
+          "link_states": {
+            "strong_stop": 76
+          }
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            29.02,
+            36.47
+          ],
+          "original_window_host_s": [
+            27.02,
+            38.47
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 75,
+              "numeric_frames": 46,
+              "episodes": 8,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                120.81509604470935,
+                123.80020701792961,
+                126.96390555991763
+              ],
+              "conditional_placement_mae_cm": 4.019678475757157
+            },
+            "reference_motion_m": {
+              "frames": 75,
+              "numeric_frames": 46,
+              "episodes": 8,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                120.81509604470935,
+                123.80020701792961,
+                126.96390555991763
+              ],
+              "conditional_placement_mae_cm": 4.019678475757157
+            },
+            "weak_candidate_m": {
+              "frames": 75,
+              "numeric_frames": 55,
+              "episodes": 10,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                120.68630447757349,
+                123.65499178067572,
+                127.30051812265415
+              ],
+              "conditional_placement_mae_cm": 4.108110085183778
+            },
+            "linked_m": {
+              "frames": 75,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 75,
+              "numeric_frames": 46,
+              "episodes": 8,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                120.81509604470935,
+                123.80020701792961,
+                126.96390555991763
+              ],
+              "conditional_placement_mae_cm": 4.019678475757157
+            }
+          },
+          "weak_stages": {
+            "rd_refinement_fine_peak_at_group_boundary": 7,
+            "refined_static_feature_without_motion_history": 47,
+            "rd_refinement_multiple_fine_peaks": 1
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 75
+          },
+          "link_states": {
+            "unseeded": 75
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "window_host_s": [
+            44.15,
+            51.3
+          ],
+          "original_window_host_s": [
+            42.15,
+            53.3
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 72,
+              "numeric_frames": 61,
+              "episodes": 3,
+              "longest_s": 5.3,
+              "cm_p05_p50_p95": [
+                35.72881729028276,
+                36.78590042768688,
+                38.85752998650358
+              ],
+              "conditional_placement_mae_cm": 13.032592862150096
+            },
+            "reference_motion_m": {
+              "frames": 72,
+              "numeric_frames": 68,
+              "episodes": 5,
+              "longest_s": 5.5,
+              "cm_p05_p50_p95": [
+                35.55094658094789,
+                36.77259668818205,
+                38.7834691953989
+              ],
+              "conditional_placement_mae_cm": 13.094497401830777
+            },
+            "weak_candidate_m": {
+              "frames": 72,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 72,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 72,
+              "numeric_frames": 68,
+              "episodes": 5,
+              "longest_s": 5.5,
+              "cm_p05_p50_p95": [
+                35.55094658094789,
+                36.77259668818205,
+                38.7834691953989
+              ],
+              "conditional_placement_mae_cm": 13.094497401830777
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 72
+          },
+          "link_states": {
+            "unseeded": 72
+          }
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            58.61,
+            65.658682
+          ],
+          "original_window_host_s": [
+            56.61,
+            67.658682
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 71,
+              "numeric_frames": 71,
+              "episodes": 1,
+              "longest_s": 7.1,
+              "cm_p05_p50_p95": [
+                144.54626464935194,
+                147.30484498260003,
+                149.71027077759845
+              ],
+              "conditional_placement_mae_cm": 27.294976832879374
+            },
+            "reference_motion_m": {
+              "frames": 71,
+              "numeric_frames": 71,
+              "episodes": 1,
+              "longest_s": 7.1,
+              "cm_p05_p50_p95": [
+                144.54626464935194,
+                147.30484498260003,
+                149.71027077759845
+              ],
+              "conditional_placement_mae_cm": 27.294976832879374
+            },
+            "weak_candidate_m": {
+              "frames": 71,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 71,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 71,
+              "numeric_frames": 71,
+              "episodes": 1,
+              "longest_s": 7.1,
+              "cm_p05_p50_p95": [
+                144.54626464935194,
+                147.30484498260003,
+                149.71027077759845
+              ],
+              "conditional_placement_mae_cm": 27.294976832879374
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 71
+          },
+          "link_states": {
+            "unseeded": 71
+          }
+        },
+        {
+          "label": "approach 1",
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            11.76,
+            13.38
+          ],
+          "original_window_host_s": [
+            11.56,
+            13.58
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 16,
+              "numeric_frames": 5,
+              "episodes": 3,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                48.755943502602555,
+                88.49256332175794,
+                98.73691360694465
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 16,
+              "numeric_frames": 15,
+              "episodes": 2,
+              "longest_s": 1.0,
+              "cm_p05_p50_p95": [
+                41.28319114043471,
+                89.28766714864462,
+                110.6337729363608
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 16,
+              "numeric_frames": 8,
+              "episodes": 2,
+              "longest_s": 0.6,
+              "cm_p05_p50_p95": [
+                54.818008604450874,
+                79.82394712578133,
+                94.56295285441468
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 16,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 16,
+              "numeric_frames": 15,
+              "episodes": 2,
+              "longest_s": 1.0,
+              "cm_p05_p50_p95": [
+                41.28319114043471,
+                89.28766714864462,
+                110.6337729363608
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 8
+          },
+          "link_reasons": {
+            "same_feature_current_motion_already_supported": 14,
+            "motion_identity_lost_missing_or_ambiguous": 1,
+            "confirming_current_motion_and_reference_episode": 1
+          },
+          "link_states": {
+            "armed": 14,
+            "cleared": 1,
+            "confirming": 1
+          }
+        },
+        {
+          "label": "retreat 1",
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            25.259999999999998,
+            26.82
+          ],
+          "original_window_host_s": [
+            25.06,
+            27.02
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 15,
+              "numeric_frames": 8,
+              "episodes": 3,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                77.89995656582177,
+                101.79860883569432,
+                118.94515849587687
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 15,
+              "numeric_frames": 6,
+              "episodes": 2,
+              "longest_s": 0.4,
+              "cm_p05_p50_p95": [
+                78.40151303500477,
+                103.64973759845776,
+                113.90911167636195
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 15,
+              "numeric_frames": 6,
+              "episodes": 2,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                96.74049916655339,
+                107.56155261687354,
+                119.06992656516178
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 15,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 15,
+              "numeric_frames": 6,
+              "episodes": 2,
+              "longest_s": 0.4,
+              "cm_p05_p50_p95": [
+                78.40151303500477,
+                103.64973759845776,
+                113.90911167636195
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 5,
+            "rd_refinement_fine_peak_at_group_boundary": 1
+          },
+          "link_reasons": {
+            "same_feature_current_motion_already_supported": 6,
+            "weak_stop_has_no_current_shape_support": 1,
+            "no_current_motion_seed": 3,
+            "confirming_current_motion_and_reference_episode": 4,
+            "current_rd_refinement_unresolved": 1
+          },
+          "link_states": {
+            "armed": 6,
+            "cleared": 2,
+            "unseeded": 3,
+            "confirming": 4
+          }
+        },
+        {
+          "label": "approach 2",
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            38.67,
+            41.949999999999996
+          ],
+          "original_window_host_s": [
+            38.47,
+            42.15
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 33,
+              "numeric_frames": 7,
+              "episodes": 2,
+              "longest_s": 0.5,
+              "cm_p05_p50_p95": [
+                75.08712039498084,
+                92.80439292614716,
+                101.00935456123278
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 33,
+              "numeric_frames": 19,
+              "episodes": 6,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                52.91649899281895,
+                78.47451147733993,
+                94.95874816979132
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 33,
+              "numeric_frames": 10,
+              "episodes": 5,
+              "longest_s": 0.3,
+              "cm_p05_p50_p95": [
+                74.72058501176711,
+                91.25080972048562,
+                116.00537599996596
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 33,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 33,
+              "numeric_frames": 19,
+              "episodes": 6,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                52.91649899281895,
+                78.47451147733993,
+                94.95874816979132
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 3,
+            "rd_refinement_fine_peak_at_group_boundary": 1,
+            "refined_feature_with_nonzero_peak_history": 6
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 13,
+            "confirming_current_motion_and_reference_episode": 5,
+            "same_feature_current_motion_already_supported": 12,
+            "weak_stop_has_no_current_shape_support": 1,
+            "same_feature_stop_already_supported": 1,
+            "motion_identity_lost_missing_or_ambiguous": 1
+          },
+          "link_states": {
+            "unseeded": 13,
+            "confirming": 5,
+            "armed": 12,
+            "cleared": 2,
+            "strong_stop": 1
+          }
+        },
+        {
+          "label": "retreat 2",
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            53.5,
+            56.41
+          ],
+          "original_window_host_s": [
+            53.3,
+            56.61
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 29,
+              "numeric_frames": 12,
+              "episodes": 3,
+              "longest_s": 0.5,
+              "cm_p05_p50_p95": [
+                65.5463329828244,
+                96.6583281128151,
+                135.5884492458032
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 29,
+              "numeric_frames": 19,
+              "episodes": 4,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                68.48675296025795,
+                93.59772111510397,
+                109.34938463845008
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 29,
+              "numeric_frames": 12,
+              "episodes": 5,
+              "longest_s": 0.6,
+              "cm_p05_p50_p95": [
+                71.91658042361874,
+                96.6583281128151,
+                129.6353829783627
+              ],
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 29,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 29,
+              "numeric_frames": 19,
+              "episodes": 4,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                68.48675296025795,
+                93.59772111510397,
+                109.34938463845008
+              ],
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 10,
+            "no_confirmed_current_track": 2
+          },
+          "link_reasons": {
+            "confirming_current_motion_and_reference_episode": 2,
+            "same_feature_current_motion_already_supported": 12,
+            "same_feature_stop_already_supported": 2,
+            "motion_identity_lost_missing_or_ambiguous": 2,
+            "no_current_motion_seed": 11
+          },
+          "link_states": {
+            "confirming": 2,
+            "armed": 12,
+            "strong_stop": 2,
+            "cleared": 2,
+            "unseeded": 11
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "52e59b3a1f6194cb9c6c3574b7cbd9112ce1a08f03002ee1875ac51941e50fac",
+      "linked_frames": 1,
+      "linked_events": [
+        {
+          "frame_sequence": 6569,
+          "host_time_s": 14.40623,
+          "range_m": 0.513854901859881,
+          "baseline_m": 0.526434609898993,
+          "track_id": 13,
+          "scored_labels": []
+        }
+      ],
+      "weak_stages": {
+        "refined_feature_with_nonzero_peak_history": 139,
+        "rd_refinement_fine_peak_at_group_boundary": 12,
+        "refined_static_feature_without_motion_history": 58,
+        "rd_refinement_multiple_fine_peaks": 1,
+        "no_confirmed_current_track": 2
+      },
+      "reasons": {
+        "no_current_motion_seed": 496,
+        "confirming_current_motion_and_reference_episode": 16,
+        "same_feature_current_motion_already_supported": 50,
+        "motion_identity_lost_missing_or_ambiguous": 4,
+        "same_feature_stop_already_supported": 109,
+        "same_motion_seeded_feature_with_current_weak_stop_support": 1,
+        "weak_stop_has_no_current_shape_support": 3,
+        "current_rd_refinement_unresolved": 3
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-143819-360020/live-003",
+      "frames": 1735,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            13.83
+          ],
+          "original_window_host_s": [
+            0,
+            15.83
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 119
+          },
+          "link_states": {
+            "unseeded": 119
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            31.36,
+            49.6
+          ],
+          "original_window_host_s": [
+            29.36,
+            51.6
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 184,
+              "numeric_frames": 184,
+              "episodes": 1,
+              "longest_s": 18.4,
+              "cm_p05_p50_p95": [
+                57.0706467425576,
+                58.74669094387578,
+                60.44003707677972
+              ],
+              "conditional_placement_mae_cm": 8.695054014541174
+            },
+            "reference_motion_m": {
+              "frames": 184,
+              "numeric_frames": 184,
+              "episodes": 1,
+              "longest_s": 18.4,
+              "cm_p05_p50_p95": [
+                57.08341274861709,
+                58.74906420129743,
+                60.448430501807536
+              ],
+              "conditional_placement_mae_cm": 8.691217444894283
+            },
+            "weak_candidate_m": {
+              "frames": 184,
+              "numeric_frames": 35,
+              "episodes": 5,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                58.503839133327666,
+                59.95709141505298,
+                61.74134315014086
+              ],
+              "conditional_placement_mae_cm": 10.042819270286744
+            },
+            "linked_m": {
+              "frames": 184,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 184,
+              "numeric_frames": 184,
+              "episodes": 1,
+              "longest_s": 18.4,
+              "cm_p05_p50_p95": [
+                57.08341274861709,
+                58.74906420129743,
+                60.448430501807536
+              ],
+              "conditional_placement_mae_cm": 8.691217444894283
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 35
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 184
+          },
+          "link_states": {
+            "unseeded": 184
+          }
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            59.79,
+            67.94
+          ],
+          "original_window_host_s": [
+            57.79,
+            69.94
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 82
+          },
+          "link_states": {
+            "unseeded": 82
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            79.41,
+            97.04
+          ],
+          "original_window_host_s": [
+            77.41,
+            99.04
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 177,
+              "numeric_frames": 126,
+              "episodes": 7,
+              "longest_s": 4.8,
+              "cm_p05_p50_p95": [
+                50.21768790004003,
+                52.30649708621042,
+                54.14535879728865
+              ],
+              "conditional_placement_mae_cm": 2.2054358100438716
+            },
+            "reference_motion_m": {
+              "frames": 177,
+              "numeric_frames": 110,
+              "episodes": 22,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                50.165381542254515,
+                52.54481314691657,
+                54.18364636398692
+              ],
+              "conditional_placement_mae_cm": 2.1706803843799936
+            },
+            "weak_candidate_m": {
+              "frames": 177,
+              "numeric_frames": 63,
+              "episodes": 6,
+              "longest_s": 2.5,
+              "cm_p05_p50_p95": [
+                50.823393806422544,
+                52.10711855494835,
+                53.79971150735893
+              ],
+              "conditional_placement_mae_cm": 2.1899117411752296
+            },
+            "linked_m": {
+              "frames": 177,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 177,
+              "numeric_frames": 110,
+              "episodes": 22,
+              "longest_s": 2.3,
+              "cm_p05_p50_p95": [
+                50.165381542254515,
+                52.54481314691657,
+                54.18364636398692
+              ],
+              "conditional_placement_mae_cm": 2.1706803843799936
+            }
+          },
+          "weak_stages": {
+            "rd_refinement_fine_peak_at_group_boundary": 24,
+            "refined_feature_with_nonzero_peak_history": 39
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 177
+          },
+          "link_states": {
+            "unseeded": 177
+          }
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            106.58,
+            114.75
+          ],
+          "original_window_host_s": [
+            104.58,
+            116.75
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 82,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 82
+          },
+          "link_states": {
+            "unseeded": 82
+          }
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            128.57,
+            146.26
+          ],
+          "original_window_host_s": [
+            126.57,
+            148.26
+          ],
+          "nominal_target_m": 1.2,
+          "channels": {
+            "baseline_m": {
+              "frames": 178,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 178,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 178,
+              "numeric_frames": 19,
+              "episodes": 2,
+              "longest_s": 1.3,
+              "cm_p05_p50_p95": [
+                31.12422966816802,
+                32.056809552679624,
+                34.93430357193813
+              ],
+              "conditional_placement_mae_cm": 87.4278315769075
+            },
+            "linked_m": {
+              "frames": 178,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 178,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "below_rd_birth_margin": 19
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 178
+          },
+          "link_states": {
+            "unseeded": 178
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            155.59,
+            170.299646
+          ],
+          "original_window_host_s": [
+            153.59,
+            172.299646
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 148,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 148,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 148,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 148,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 148,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 148
+          },
+          "link_states": {
+            "unseeded": 148
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "4a472713c0df090d95cc4ca1bada45b00247537cc4473cc3acb3b920b17c2a74",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "no_confirmed_current_track": 2,
+        "refined_static_feature_without_motion_history": 3,
+        "refined_feature_with_nonzero_peak_history": 168,
+        "rd_refinement_fine_peak_at_group_boundary": 29,
+        "below_rd_birth_margin": 22
+      },
+      "reasons": {
+        "no_current_motion_seed": 1719,
+        "confirming_current_motion_and_reference_episode": 7,
+        "same_feature_current_motion_already_supported": 2,
+        "same_feature_stop_already_supported": 5,
+        "weak_stop_has_no_current_shape_support": 2
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "frames": 1937,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            13.54
+          ],
+          "original_window_host_s": [
+            0,
+            15.54
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 116
+          },
+          "link_states": {
+            "unseeded": 116
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            34.95,
+            52.11
+          ],
+          "original_window_host_s": [
+            32.95,
+            54.11
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 173,
+              "numeric_frames": 173,
+              "episodes": 1,
+              "longest_s": 17.3,
+              "cm_p05_p50_p95": [
+                50.63225871157411,
+                51.38339075695259,
+                51.60792135432705
+              ],
+              "conditional_placement_mae_cm": 1.2239328619076741
+            },
+            "reference_motion_m": {
+              "frames": 173,
+              "numeric_frames": 173,
+              "episodes": 1,
+              "longest_s": 17.3,
+              "cm_p05_p50_p95": [
+                50.63225871157411,
+                51.38339075695259,
+                51.60792135432705
+              ],
+              "conditional_placement_mae_cm": 1.2239328619076741
+            },
+            "weak_candidate_m": {
+              "frames": 173,
+              "numeric_frames": 173,
+              "episodes": 1,
+              "longest_s": 17.3,
+              "cm_p05_p50_p95": [
+                50.63225871157411,
+                51.38339075695259,
+                51.60792135432705
+              ],
+              "conditional_placement_mae_cm": 1.2239328619076741
+            },
+            "linked_m": {
+              "frames": 173,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 173,
+              "numeric_frames": 173,
+              "episodes": 1,
+              "longest_s": 17.3,
+              "cm_p05_p50_p95": [
+                50.63225871157411,
+                51.38339075695259,
+                51.60792135432705
+              ],
+              "conditional_placement_mae_cm": 1.2239328619076741
+            }
+          },
+          "weak_stages": {
+            "rd_refinement_fine_peak_at_group_boundary": 86,
+            "refined_static_feature_without_motion_history": 87
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 173
+          },
+          "link_states": {
+            "unseeded": 173
+          }
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            68.99,
+            76.23
+          ],
+          "original_window_host_s": [
+            66.99,
+            78.23
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 73,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 73
+          },
+          "link_states": {
+            "unseeded": 73
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            90.07,
+            106.78
+          ],
+          "original_window_host_s": [
+            88.07,
+            108.78
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 168,
+              "numeric_frames": 168,
+              "episodes": 1,
+              "longest_s": 16.8,
+              "cm_p05_p50_p95": [
+                36.422210815369716,
+                38.05167462887716,
+                39.62997809083276
+              ],
+              "conditional_placement_mae_cm": 12.00166777768081
+            },
+            "reference_motion_m": {
+              "frames": 168,
+              "numeric_frames": 168,
+              "episodes": 1,
+              "longest_s": 16.8,
+              "cm_p05_p50_p95": [
+                36.422210815369716,
+                38.05167462887716,
+                39.62997809083276
+              ],
+              "conditional_placement_mae_cm": 12.00166777768081
+            },
+            "weak_candidate_m": {
+              "frames": 168,
+              "numeric_frames": 129,
+              "episodes": 9,
+              "longest_s": 5.6,
+              "cm_p05_p50_p95": [
+                37.45129804214913,
+                38.276608882289544,
+                39.733425668889694
+              ],
+              "conditional_placement_mae_cm": 11.606088667217458
+            },
+            "linked_m": {
+              "frames": 168,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 168,
+              "numeric_frames": 168,
+              "episodes": 1,
+              "longest_s": 16.8,
+              "cm_p05_p50_p95": [
+                36.422210815369716,
+                38.05167462887716,
+                39.62997809083276
+              ],
+              "conditional_placement_mae_cm": 12.00166777768081
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 129
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 168
+          },
+          "link_states": {
+            "unseeded": 168
+          }
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            118.49,
+            125.38
+          ],
+          "original_window_host_s": [
+            116.49,
+            127.38
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 69,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 69
+          },
+          "link_states": {
+            "unseeded": 69
+          }
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            141.96,
+            158.84
+          ],
+          "original_window_host_s": [
+            139.96,
+            160.84
+          ],
+          "nominal_target_m": 1.2,
+          "channels": {
+            "baseline_m": {
+              "frames": 170,
+              "numeric_frames": 170,
+              "episodes": 1,
+              "longest_s": 17.0,
+              "cm_p05_p50_p95": [
+                121.86301313188838,
+                122.66078134875164,
+                123.48866953187368
+              ],
+              "conditional_placement_mae_cm": 2.6813149452996328
+            },
+            "reference_motion_m": {
+              "frames": 170,
+              "numeric_frames": 170,
+              "episodes": 1,
+              "longest_s": 17.0,
+              "cm_p05_p50_p95": [
+                121.86301313188838,
+                122.66078134875164,
+                123.48866953187368
+              ],
+              "conditional_placement_mae_cm": 2.6813149452996328
+            },
+            "weak_candidate_m": {
+              "frames": 170,
+              "numeric_frames": 170,
+              "episodes": 1,
+              "longest_s": 17.0,
+              "cm_p05_p50_p95": [
+                121.86301313188838,
+                122.66078134875164,
+                123.48866953187368
+              ],
+              "conditional_placement_mae_cm": 2.6813149452996328
+            },
+            "linked_m": {
+              "frames": 170,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 170,
+              "numeric_frames": 170,
+              "episodes": 1,
+              "longest_s": 17.0,
+              "cm_p05_p50_p95": [
+                121.86301313188838,
+                122.66078134875164,
+                123.48866953187368
+              ],
+              "conditional_placement_mae_cm": 2.6813149452996328
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 159,
+            "rd_refinement_fine_peak_at_group_boundary": 11
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 170
+          },
+          "link_states": {
+            "unseeded": 170
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            171.58,
+            183.14
+          ],
+          "original_window_host_s": [
+            169.58,
+            185.14
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 116,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 116
+          },
+          "link_states": {
+            "unseeded": 116
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "cb591e7d879fe834135ef4d6d3f115981ef7f58334596c1bc3a4467a80628fc6",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "refined_feature_with_nonzero_peak_history": 318,
+        "rd_refinement_fine_peak_at_group_boundary": 127,
+        "refined_static_feature_without_motion_history": 432,
+        "below_rd_birth_margin": 1,
+        "no_confirmed_current_track": 1
+      },
+      "reasons": {
+        "no_current_motion_seed": 1923,
+        "confirming_current_motion_and_reference_episode": 7,
+        "same_feature_current_motion_already_supported": 4,
+        "motion_identity_lost_missing_or_ambiguous": 2,
+        "weak_stop_has_no_current_shape_support": 1
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "frames": 2366,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            13.69
+          ],
+          "original_window_host_s": [
+            0,
+            15.69
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 117,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 117,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 117,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 117,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 117,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 117
+          },
+          "link_states": {
+            "unseeded": 117
+          }
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            36.59,
+            58.33
+          ],
+          "original_window_host_s": [
+            34.59,
+            60.33
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 219,
+              "numeric_frames": 219,
+              "episodes": 1,
+              "longest_s": 21.9,
+              "cm_p05_p50_p95": [
+                47.540421943847655,
+                47.96826971866848,
+                48.36434826708491
+              ],
+              "conditional_placement_mae_cm": 2.031281224845962
+            },
+            "reference_motion_m": {
+              "frames": 219,
+              "numeric_frames": 219,
+              "episodes": 1,
+              "longest_s": 21.9,
+              "cm_p05_p50_p95": [
+                47.540421943847655,
+                47.96826971866848,
+                48.36434826708491
+              ],
+              "conditional_placement_mae_cm": 2.031281224845962
+            },
+            "weak_candidate_m": {
+              "frames": 219,
+              "numeric_frames": 219,
+              "episodes": 1,
+              "longest_s": 21.9,
+              "cm_p05_p50_p95": [
+                47.540421943847655,
+                47.96826971866848,
+                48.36434826708491
+              ],
+              "conditional_placement_mae_cm": 2.031281224845962
+            },
+            "linked_m": {
+              "frames": 219,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 219,
+              "numeric_frames": 219,
+              "episodes": 1,
+              "longest_s": 21.9,
+              "cm_p05_p50_p95": [
+                47.540421943847655,
+                47.96826971866848,
+                48.36434826708491
+              ],
+              "conditional_placement_mae_cm": 2.031281224845962
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 219
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 219
+          },
+          "link_states": {
+            "unseeded": 219
+          }
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            73.92,
+            89.6
+          ],
+          "original_window_host_s": [
+            71.92,
+            91.6
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 158,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 158,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 158,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 158,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 158,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 158
+          },
+          "link_states": {
+            "unseeded": 158
+          }
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            112.33,
+            133.91
+          ],
+          "original_window_host_s": [
+            110.33,
+            135.91
+          ],
+          "nominal_target_m": 0.5,
+          "channels": {
+            "baseline_m": {
+              "frames": 217,
+              "numeric_frames": 217,
+              "episodes": 1,
+              "longest_s": 21.7,
+              "cm_p05_p50_p95": [
+                48.39317477478815,
+                49.23608577764669,
+                50.599600876022706
+              ],
+              "conditional_placement_mae_cm": 0.7894127292143878
+            },
+            "reference_motion_m": {
+              "frames": 217,
+              "numeric_frames": 217,
+              "episodes": 1,
+              "longest_s": 21.7,
+              "cm_p05_p50_p95": [
+                48.39317477478815,
+                49.23608577764669,
+                50.599600876022706
+              ],
+              "conditional_placement_mae_cm": 0.7894127292143878
+            },
+            "weak_candidate_m": {
+              "frames": 217,
+              "numeric_frames": 217,
+              "episodes": 1,
+              "longest_s": 21.7,
+              "cm_p05_p50_p95": [
+                48.39317477478815,
+                49.23608577764669,
+                50.599600876022706
+              ],
+              "conditional_placement_mae_cm": 0.7894127292143878
+            },
+            "linked_m": {
+              "frames": 217,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 217,
+              "numeric_frames": 217,
+              "episodes": 1,
+              "longest_s": 21.7,
+              "cm_p05_p50_p95": [
+                48.39317477478815,
+                49.23608577764669,
+                50.599600876022706
+              ],
+              "conditional_placement_mae_cm": 0.7894127292143878
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 217
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 217
+          },
+          "link_states": {
+            "unseeded": 217
+          }
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            150.99,
+            163.47
+          ],
+          "original_window_host_s": [
+            148.99,
+            165.47
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 126,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 126
+          },
+          "link_states": {
+            "unseeded": 126
+          }
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            180.11,
+            202.04
+          ],
+          "original_window_host_s": [
+            178.11,
+            204.04
+          ],
+          "nominal_target_m": 1.2,
+          "channels": {
+            "baseline_m": {
+              "frames": 221,
+              "numeric_frames": 221,
+              "episodes": 1,
+              "longest_s": 22.1,
+              "cm_p05_p50_p95": [
+                123.86783354838798,
+                124.22899346897465,
+                124.77684998529885
+              ],
+              "conditional_placement_mae_cm": 4.255360268166396
+            },
+            "reference_motion_m": {
+              "frames": 221,
+              "numeric_frames": 221,
+              "episodes": 1,
+              "longest_s": 22.1,
+              "cm_p05_p50_p95": [
+                123.86783354838798,
+                124.22899346897465,
+                124.77684998529885
+              ],
+              "conditional_placement_mae_cm": 4.255360268166396
+            },
+            "weak_candidate_m": {
+              "frames": 221,
+              "numeric_frames": 221,
+              "episodes": 1,
+              "longest_s": 22.1,
+              "cm_p05_p50_p95": [
+                123.86783354838798,
+                124.22899346897465,
+                124.77684998529885
+              ],
+              "conditional_placement_mae_cm": 4.255360268166396
+            },
+            "linked_m": {
+              "frames": 221,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 221,
+              "numeric_frames": 221,
+              "episodes": 1,
+              "longest_s": 22.1,
+              "cm_p05_p50_p95": [
+                123.86783354838798,
+                124.22899346897465,
+                124.77684998529885
+              ],
+              "conditional_placement_mae_cm": 4.255360268166396
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 221
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 221
+          },
+          "link_states": {
+            "unseeded": 221
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            216.83,
+            228.62
+          ],
+          "original_window_host_s": [
+            214.83,
+            230.62
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 119,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 119
+          },
+          "link_states": {
+            "unseeded": 119
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "b35157e5493a4440de190adab8c73d75c0e821c5c3c743fbd833e0405df47e2f",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "below_rd_birth_margin": 2,
+        "no_confirmed_current_track": 4,
+        "refined_static_feature_without_motion_history": 1027,
+        "rd_refinement_fine_peak_at_group_boundary": 10,
+        "refined_feature_with_nonzero_peak_history": 42
+      },
+      "reasons": {
+        "no_current_motion_seed": 2354,
+        "confirming_current_motion_and_reference_episode": 2,
+        "same_feature_current_motion_already_supported": 8,
+        "motion_identity_lost_missing_or_ambiguous": 1,
+        "weak_stop_has_no_current_shape_support": 1
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-135229-775366/live-001",
+      "frames": 1545,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "window_host_s": [
+            7.53,
+            24.49
+          ],
+          "original_window_host_s": [
+            5.53,
+            26.49
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 171,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 171,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 171,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 171,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 171,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 171
+          },
+          "link_states": {
+            "unseeded": 171
+          }
+        },
+        {
+          "label": "80 cm A (trim 2s)",
+          "state": "hold",
+          "operator_position": "B",
+          "trim_s": 2,
+          "window_host_s": [
+            46.38,
+            73.11
+          ],
+          "original_window_host_s": [
+            44.38,
+            75.11
+          ],
+          "nominal_target_m": 0.8,
+          "channels": {
+            "baseline_m": {
+              "frames": 269,
+              "numeric_frames": 269,
+              "episodes": 1,
+              "longest_s": 26.9,
+              "cm_p05_p50_p95": [
+                81.26112563956751,
+                81.53234107442957,
+                81.77068753802797
+              ],
+              "conditional_placement_mae_cm": 1.4995633715131231
+            },
+            "reference_motion_m": {
+              "frames": 269,
+              "numeric_frames": 269,
+              "episodes": 1,
+              "longest_s": 26.9,
+              "cm_p05_p50_p95": [
+                81.26112563956751,
+                81.53234107442957,
+                81.77068753802797
+              ],
+              "conditional_placement_mae_cm": 1.4995633715131231
+            },
+            "weak_candidate_m": {
+              "frames": 269,
+              "numeric_frames": 269,
+              "episodes": 1,
+              "longest_s": 26.9,
+              "cm_p05_p50_p95": [
+                81.26112563956751,
+                81.53234107442957,
+                81.77068753802797
+              ],
+              "conditional_placement_mae_cm": 1.4995633715131231
+            },
+            "linked_m": {
+              "frames": 269,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 269,
+              "numeric_frames": 269,
+              "episodes": 1,
+              "longest_s": 26.9,
+              "cm_p05_p50_p95": [
+                81.26112563956751,
+                81.53234107442957,
+                81.77068753802797
+              ],
+              "conditional_placement_mae_cm": 1.4995633715131231
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 269
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 269
+          },
+          "link_states": {
+            "unseeded": 269
+          }
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "window_host_s": [
+            86.05,
+            102.64
+          ],
+          "original_window_host_s": [
+            84.05,
+            104.64
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 167,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 167,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 167,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "linked_m": {
+              "frames": 167,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 167,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {},
+          "link_reasons": {
+            "no_current_motion_seed": 167
+          },
+          "link_states": {
+            "unseeded": 167
+          }
+        },
+        {
+          "label": "80 cm B (trim 2s)",
+          "state": "hold",
+          "operator_position": "B",
+          "trim_s": 2,
+          "window_host_s": [
+            118.8,
+            145.61
+          ],
+          "original_window_host_s": [
+            116.8,
+            147.61
+          ],
+          "nominal_target_m": 0.8,
+          "channels": {
+            "baseline_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                82.34648682164796,
+                82.8352704630754,
+                82.9611656120858
+              ],
+              "conditional_placement_mae_cm": 2.785866144181546
+            },
+            "reference_motion_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                82.34648682164796,
+                82.8352704630754,
+                82.9611656120858
+              ],
+              "conditional_placement_mae_cm": 2.785866144181546
+            },
+            "weak_candidate_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                82.34648682164796,
+                82.8352704630754,
+                82.9611656120858
+              ],
+              "conditional_placement_mae_cm": 2.785866144181546
+            },
+            "linked_m": {
+              "frames": 270,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 270,
+              "numeric_frames": 270,
+              "episodes": 1,
+              "longest_s": 27.0,
+              "cm_p05_p50_p95": [
+                82.34648682164796,
+                82.8352704630754,
+                82.9611656120858
+              ],
+              "conditional_placement_mae_cm": 2.785866144181546
+            }
+          },
+          "weak_stages": {
+            "refined_feature_with_nonzero_peak_history": 270
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 270
+          },
+          "link_states": {
+            "unseeded": 270
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "dda8bbed4889f4dc023697f5d062402ef2689ba0712576c0300a7e223052af22",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "no_confirmed_current_track": 4,
+        "refined_static_feature_without_motion_history": 438,
+        "refined_feature_with_nonzero_peak_history": 418,
+        "rd_refinement_fine_peak_at_group_boundary": 1
+      },
+      "reasons": {
+        "no_current_motion_seed": 1535,
+        "confirming_current_motion_and_reference_episode": 4,
+        "same_feature_current_motion_already_supported": 4,
+        "same_feature_stop_already_supported": 1,
+        "current_rd_refinement_unresolved": 1
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+      "frames": 758,
+      "windows": [
+        {
+          "label": "80 cm stationary (approximate)",
+          "state": "hold",
+          "nominal_target_m": 0.8,
+          "window_host_s": [
+            2,
+            73
+          ],
+          "channels": {
+            "baseline_m": {
+              "frames": 714,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "reference_motion_m": {
+              "frames": 714,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "weak_candidate_m": {
+              "frames": 714,
+              "numeric_frames": 297,
+              "episodes": 20,
+              "longest_s": 16.4,
+              "cm_p05_p50_p95": [
+                84.63510478401659,
+                87.67294158050215,
+                91.8639581615112
+              ],
+              "conditional_placement_mae_cm": 8.162920955001239
+            },
+            "linked_m": {
+              "frames": 714,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            },
+            "hypothetical_supplement_m": {
+              "frames": 714,
+              "numeric_frames": 0,
+              "episodes": 0,
+              "longest_s": 0,
+              "cm_p05_p50_p95": null,
+              "conditional_placement_mae_cm": null
+            }
+          },
+          "weak_stages": {
+            "refined_static_feature_without_motion_history": 7,
+            "below_rd_birth_margin": 290
+          },
+          "link_reasons": {
+            "no_current_motion_seed": 714
+          },
+          "link_states": {
+            "unseeded": 714
+          }
+        }
+      ],
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "arrivals_sha256": "9128e3fe9653ec1708124ae29c672ab17a57b662c37ef62ccd62b5bca921c457",
+      "linked_frames": 0,
+      "linked_events": [],
+      "weak_stages": {
+        "refined_static_feature_without_motion_history": 9,
+        "rd_refinement_fine_peak_at_group_boundary": 1,
+        "below_rd_birth_margin": 309
+      },
+      "reasons": {
+        "no_current_motion_seed": 758
+      }
+    }
+  ],
+  "input": "evidence/weak-candidates-live-20261111/results.jsonl.gz",
+  "input_sha256": "85501097c5e7fa3caa7469b8cd80fc1ec4ff3141f2bca9a66323e212cae10920",
+  "sources": {
+    "tools/evaluate_weak_motion.py": "d63c65c233c17463c81fbe332a7bf039c915a819f5cd3f4047663a809ad29d43",
+    "radar_min/weak_motion.py": "a150b8fd6252ec710b1ad8a777169691880645efc60e8599d3d4f0b20dba38fe",
+    "radar_min/motion_range.py": "283c5066c7255eeab3eb4c0d989bf7ed42f8731408a9b386cf30eb1e42a679d1"
+  },
+  "manifests": {
+    "avg16-placements-20261111.json": "411a048e4f164a0ed486571072d3abe9a85c53e356ebd3772bbaa46ba4e4a517",
+    "avg16-repeat50-20261111.json": "4ceb52618fb9cba27cf20960ad5acc29074a600c611e573295153328464d12da",
+    "avg16-operator-abab-20261111.json": "9eb1d7f578f684b5da8d748302d95d81362fe453c97909d37f417fa34d213dcb",
+    "avg16-operator-empty-abab-20261111.json": "990015a66db5b8b7ee9ddbe0325d4af1928586e443ec8145b93282fdcb114e27",
+    "avg16-motion-20261111.json": "987959661d57ae390759dea8d04ee8977cf68977c4a7383dd5511bbad7f739d4",
+    "motion-aware-live-20261111.json": "dee84905f2aaf742fe337f213f0805e14d504875583257ef89f3fb7dbcc8a535",
+    "reflector-live-20261111.json": "c0afb73de45f38d89e34a1d7ba41d684b2bc5d6a89ed835d19dd55c0733189fc",
+    "foil-box-live-20261111.json": "33d483b4b7a149ca6219c35a99886388486d9bf91c8232797d53b589c2f8a984",
+    "foil-box-repeat-20261111.json": "151ca912d1cd0e938d28629dd2e7312503f674492cd8c84f6387960be38e8c4e",
+    "live-os-paired80-20261111.json": "4acb15c1af2b7815e34836d4ae97430191a865bce91e3144bfaafd83f5d3037c"
+  },
+  "interpretation": "One fixed rule specified before this replay; development recordings, no label fitting or parameter sweep. New link only supplements blank current motion output with a measured RD fine point, never a held or predicted point. No live primary change or verified target identity/accuracy claim."
+}

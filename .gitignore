@@ -10,3 +10,8 @@ artifacts/
 .mtbqueryapi
 .ninja_log
 *.log
+
+# Regenerable bulk evidence; exact originals are cataloged in evidence/archive-manifest.json.
+/evidence/**/*.jsonl
+/evidence/**/*.jsonl.gz
+/evidence/**/*.npz

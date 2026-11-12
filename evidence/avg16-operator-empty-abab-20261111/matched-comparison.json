@@ -1,0 +1,118 @@
+{
+  "source_sha256": "1dc0f52ed89ca3af69e3449ae1e08b67d56f8dda82d6298597427b5e59de9ed7",
+  "inputs": {
+    "target_present": {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "guard_cells": 1,
+        "training_cells": 4,
+        "min_training_cells": 4,
+        "factor": 2
+      },
+      "raw_sha256": "25303b5a75390b34d4c651a6fd7533dedb93bed005b4508c7a4608edcdb06246",
+      "report_sha256": "b1619e83ceb42caa923cdb293916cd3f5d60ba3c3c785ac3d87d0621a87fe5af"
+    },
+    "target_absent": {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "settings": {
+        "guard_cells": 1,
+        "training_cells": 4,
+        "min_training_cells": 4,
+        "factor": 2
+      },
+      "raw_sha256": "6e03eda770515055d82f44fefbf6758c8610d8e2a3ac091754fa0045feb41dd8",
+      "report_sha256": "c1ca43da6ee034568da3229764454b22cbb0eb885a199d13fd8d3f0f7884b40f"
+    }
+  },
+  "windows": {
+    "target_present": [
+      {
+        "label": "A1 (trim 2s)",
+        "frames": 131,
+        "numeric_frames": 131,
+        "bin1_median_power_db": 62.34142224688228,
+        "bin1_median_threshold_db": 61.06655875877593,
+        "bin1_median_margin_db": 1.3073549284648034
+      },
+      {
+        "label": "B1 (trim 2s)",
+        "frames": 129,
+        "numeric_frames": 129,
+        "bin1_median_power_db": 62.3067645609748,
+        "bin1_median_threshold_db": 59.36994763119372,
+        "bin1_median_margin_db": 2.9305224143625654
+      },
+      {
+        "label": "A2 (trim 2s)",
+        "frames": 126,
+        "numeric_frames": 126,
+        "bin1_median_power_db": 62.33490731697546,
+        "bin1_median_threshold_db": 60.5202550363409,
+        "bin1_median_margin_db": 1.830216335311086
+      },
+      {
+        "label": "B2 (trim 2s)",
+        "frames": 127,
+        "numeric_frames": 127,
+        "bin1_median_power_db": 62.30091217818824,
+        "bin1_median_threshold_db": 59.31425356924649,
+        "bin1_median_margin_db": 2.9836862020301784
+      }
+    ],
+    "target_absent": [
+      {
+        "label": "A1 (trim 2s)",
+        "frames": 122,
+        "numeric_frames": 0,
+        "bin1_median_power_db": 55.456265373885536,
+        "bin1_median_threshold_db": 59.22191307662875,
+        "bin1_median_margin_db": -3.9819367483123256
+      },
+      {
+        "label": "B1 (trim 2s)",
+        "frames": 128,
+        "numeric_frames": 0,
+        "bin1_median_power_db": 55.21133933491194,
+        "bin1_median_threshold_db": 57.10887154734253,
+        "bin1_median_margin_db": -1.8957774882122662
+      },
+      {
+        "label": "A2 (trim 2s)",
+        "frames": 126,
+        "numeric_frames": 0,
+        "bin1_median_power_db": 55.40466708479879,
+        "bin1_median_threshold_db": 58.546712478368214,
+        "bin1_median_margin_db": -2.7919603920550604
+      },
+      {
+        "label": "B2 (trim 2s)",
+        "frames": 122,
+        "numeric_frames": 0,
+        "bin1_median_power_db": 55.23334859746042,
+        "bin1_median_threshold_db": 57.03497754120535,
+        "bin1_median_margin_db": -1.7997649024681852
+      }
+    ]
+  },
+  "comparison": [
+    {
+      "label": "A1 (trim 2s)",
+      "present_minus_absent_bin1_median_power_db": 6.885156872996745
+    },
+    {
+      "label": "B1 (trim 2s)",
+      "present_minus_absent_bin1_median_power_db": 7.095425226062858
+    },
+    {
+      "label": "A2 (trim 2s)",
+      "present_minus_absent_bin1_median_power_db": 6.930240232176672
+    },
+    {
+      "label": "B2 (trim 2s)",
+      "present_minus_absent_bin1_median_power_db": 7.067563580727821
+    }
+  ],
+  "interpretation": "Sequential captures with described matching operator positions, not simultaneous paired measurements. No target-alone physical identity certification; results support a target-presence-linked close return in this placement. Two-second trims, no tuning."
+}

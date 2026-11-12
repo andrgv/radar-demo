@@ -1,0 +1,297 @@
+{
+  "algorithm": "range-doppler-ca-cfar-replay-v1",
+  "settings": {
+    "guard_range": 1,
+    "guard_doppler": 1,
+    "training_range": 3,
+    "training_doppler": 2,
+    "min_training": 16,
+    "factor": 4.0,
+    "doppler_edge": "wrap"
+  },
+  "raw_sha256": "116ef0af4c4a2609d803bec7d5192985d7e521b9101622938702ba034c9893a1",
+  "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+  "review_source_sha256": "58b1ec4e974f92891900e6384948233bcadfc63bf882b32bb6689d61ce6f308f",
+  "legacy_source_sha256": "0839051a95ffc88c3d7902be6a6a7d6f8c4d0bfe23c6c2ab700e3401adb453b6",
+  "range_1d_settings": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "range_1d_search_bins": [
+    1,
+    4
+  ],
+  "legacy_settings": "Unmodified radar.processing.Processor, no background, 12 dB local median multiplier; moving path removes slow-time mean and notches zero \u00b11 before max-over-Doppler range tests. Angles/velocity are not scored.",
+  "frames": 605,
+  "valid_frames": 605,
+  "training_reference_count_min_max": [
+    29,
+    54
+  ],
+  "cluster_count_distribution": {
+    "3": 109,
+    "5": 194,
+    "4": 241,
+    "6": 40,
+    "2": 17,
+    "7": 4
+  },
+  "cfar_processing_ms_p05_p50_p95_max": [
+    0.17905030399560928,
+    0.21612504497170448,
+    0.3699253313243386,
+    2.1476252004504204
+  ],
+  "motions": [
+    {
+      "label": "approach 1",
+      "window_host_s": [
+        11.549999999999999,
+        12.600000000000001
+      ],
+      "frames": 11,
+      "roi_nonzero_local_maximum_frames": 6,
+      "roi_zero_local_maximum_frames": 5,
+      "roi_negative_local_maximum_frames": 6,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 11,
+      "all_range_nonzero_local_maximum_frames": 7,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 5,
+        "1": 3
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 4,
+      "cluster_count_p05_p50_p95": [
+        3.0,
+        4.0,
+        5.0
+      ],
+      "range_1d_confirmed_output_frames": 6,
+      "legacy_median_static_roi_output_frames": 0,
+      "legacy_median_moving_roi_output_frames": 11
+    },
+    {
+      "label": "retreat 1",
+      "window_host_s": [
+        23.47,
+        24.44
+      ],
+      "frames": 10,
+      "roi_nonzero_local_maximum_frames": 10,
+      "roi_zero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 10,
+      "all_range_zero_local_maximum_frames": 10,
+      "all_range_nonzero_local_maximum_frames": 10,
+      "zero_peak_range_bins1_4_counts": {},
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 10,
+      "cluster_count_p05_p50_p95": [
+        3.0,
+        4.0,
+        4.549999999999999
+      ],
+      "range_1d_confirmed_output_frames": 10,
+      "legacy_median_static_roi_output_frames": 1,
+      "legacy_median_moving_roi_output_frames": 10
+    },
+    {
+      "label": "approach 2",
+      "window_host_s": [
+        36.84,
+        37.73
+      ],
+      "frames": 9,
+      "roi_nonzero_local_maximum_frames": 6,
+      "roi_zero_local_maximum_frames": 3,
+      "roi_negative_local_maximum_frames": 6,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 9,
+      "all_range_nonzero_local_maximum_frames": 6,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 5,
+        "3": 3
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 5,
+      "cluster_count_p05_p50_p95": [
+        3.0,
+        4.0,
+        5.0
+      ],
+      "range_1d_confirmed_output_frames": 5,
+      "legacy_median_static_roi_output_frames": 0,
+      "legacy_median_moving_roi_output_frames": 9
+    },
+    {
+      "label": "retreat 2",
+      "window_host_s": [
+        47.31,
+        48.279999999999994
+      ],
+      "frames": 10,
+      "roi_nonzero_local_maximum_frames": 8,
+      "roi_zero_local_maximum_frames": 3,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 8,
+      "all_range_zero_local_maximum_frames": 10,
+      "all_range_nonzero_local_maximum_frames": 9,
+      "zero_peak_range_bins1_4_counts": {
+        "2": 2,
+        "1": 1,
+        "3": 1
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 6,
+      "cluster_count_p05_p50_p95": [
+        2.0,
+        3.0,
+        5.0
+      ],
+      "range_1d_confirmed_output_frames": 10,
+      "legacy_median_static_roi_output_frames": 1,
+      "legacy_median_moving_roi_output_frames": 10
+    }
+  ],
+  "holds": [
+    {
+      "label": "120 cm A",
+      "window_host_s": [
+        2,
+        9.35
+      ],
+      "frames": 74,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_zero_local_maximum_frames": 74,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 74,
+      "all_range_nonzero_local_maximum_frames": 22,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 32,
+        "3": 70,
+        "4": 4
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 0,
+      "cluster_count_p05_p50_p95": [
+        2.6500000000000004,
+        4.0,
+        5.0
+      ],
+      "range_1d_confirmed_output_frames": 2,
+      "legacy_median_static_roi_output_frames": 0,
+      "legacy_median_moving_roi_output_frames": 9
+    },
+    {
+      "label": "60 cm A",
+      "window_host_s": [
+        14.8,
+        21.27
+      ],
+      "frames": 65,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_zero_local_maximum_frames": 65,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 65,
+      "all_range_nonzero_local_maximum_frames": 13,
+      "zero_peak_range_bins1_4_counts": {
+        "2": 41,
+        "3": 24
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 0,
+      "cluster_count_p05_p50_p95": [
+        3.0,
+        4.0,
+        6.0
+      ],
+      "range_1d_confirmed_output_frames": 65,
+      "legacy_median_static_roi_output_frames": 12,
+      "legacy_median_moving_roi_output_frames": 3
+    },
+    {
+      "label": "120 cm B",
+      "window_host_s": [
+        26.64,
+        34.64
+      ],
+      "frames": 81,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_zero_local_maximum_frames": 81,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 81,
+      "all_range_nonzero_local_maximum_frames": 18,
+      "zero_peak_range_bins1_4_counts": {
+        "4": 74,
+        "1": 53,
+        "3": 5,
+        "2": 4
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 0,
+      "cluster_count_p05_p50_p95": [
+        4.0,
+        5.0,
+        6.0
+      ],
+      "range_1d_confirmed_output_frames": 35,
+      "legacy_median_static_roi_output_frames": 1,
+      "legacy_median_moving_roi_output_frames": 3
+    },
+    {
+      "label": "60 cm B",
+      "window_host_s": [
+        39.93,
+        45.11
+      ],
+      "frames": 53,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_zero_local_maximum_frames": 9,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 53,
+      "all_range_nonzero_local_maximum_frames": 17,
+      "zero_peak_range_bins1_4_counts": {
+        "2": 9,
+        "1": 44
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 0,
+      "cluster_count_p05_p50_p95": [
+        4.0,
+        5.0,
+        6.0
+      ],
+      "range_1d_confirmed_output_frames": 53,
+      "legacy_median_static_roi_output_frames": 5,
+      "legacy_median_moving_roi_output_frames": 1
+    },
+    {
+      "label": "120 cm C",
+      "window_host_s": [
+        50.48,
+        57.855707
+      ],
+      "frames": 74,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_zero_local_maximum_frames": 74,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "all_range_zero_local_maximum_frames": 74,
+      "all_range_nonzero_local_maximum_frames": 16,
+      "zero_peak_range_bins1_4_counts": {
+        "4": 50,
+        "1": 18,
+        "3": 24
+      },
+      "zero_touching_cluster_with_nonzero_local_peak_frames": 0,
+      "cluster_count_p05_p50_p95": [
+        3.0,
+        4.0,
+        6.0
+      ],
+      "range_1d_confirmed_output_frames": 74,
+      "legacy_median_static_roi_output_frames": 0,
+      "legacy_median_moving_roi_output_frames": 1
+    }
+  ],
+  "note": "Default factor/windows were selected as an empirical starting point, not optimized on labels. Counts are development candidate outputs, not object detection or false-alarm rates. ROI bins 2\u20134 are analysis probes only; CFAR tests all usable range bins."
+}

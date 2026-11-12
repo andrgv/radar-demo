@@ -1,0 +1,49 @@
+{
+  "algorithm": "range-doppler-diagnostic-v1",
+  "config": {
+    "schema": 1,
+    "profile_id": 860964866,
+    "samples": 64,
+    "chirps": 17,
+    "sample_rate_hz": 5000000.0,
+    "slope_hz_s": 33691406250000.0,
+    "discard_chirps": 1,
+    "frame_interval_s": 0.1,
+    "min_bin": 1,
+    "max_bin": 4,
+    "min_excess_db": 3.0,
+    "variability_multiplier": 6.0,
+    "margin_db": 2.0,
+    "confirmation_frames": 3
+  },
+  "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+  "source_sha256": "30048ffb8aa2f2beecf2e6821ddaf2db38f7994c51164f57d59d39e96598c4d2",
+  "range_source_sha256": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+  "recording": "/Users/amanda/Desktop/school/ese4500/radar-demo/recordings/gui-20261110-162410-575208/live-001",
+  "raw_sha256": "da05e150921e1a555284674aa4222737104963a49401175cfa9f1a971904b439",
+  "frames": 1670,
+  "valid_frames": 1670,
+  "serial": {
+    "gaps": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "restarts": 0,
+    "discarded_bytes": 0
+  },
+  "axes": [
+    "frame",
+    "shifted_doppler",
+    "range"
+  ],
+  "power_units": "ADC units squared",
+  "normalization": "fast-time 2/sum(Hann); slow-time 1/sum(Hann); mean RX power",
+  "timing_verified": false,
+  "carrier_verified": false,
+  "calibrated": false,
+  "doppler_units": "cycles/chirp (uniform spacing unverified)",
+  "motion_sign": "positive means positive phase progression, physical approach sign unverified",
+  "validity": "frame ADC/flags and device continuity only; no host freshness or RF coherence certification",
+  "moving_view": "unweighted slow-time mean removed before Hann; no central-bin notch",
+  "phase_probe": "strongest usable range bin each frame; may switch reflectors; not proof of timing/coherence",
+  "limitations": "No CFAR or target identity. DC/Nyquist retained in maps, excluded from peak search. Independent bursts never stitched. Nominal range scale only."
+}

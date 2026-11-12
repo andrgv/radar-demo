@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "captures": [
+    {
+      "recording": "recordings/gui-20261110-162410-575208/live-001",
+      "raw_sha256": "da05e150921e1a555284674aa4222737104963a49401175cfa9f1a971904b439",
+      "frames": 1670,
+      "acquired_chirps": 17,
+      "retained_chirps": 16,
+      "acquisition_path_elapsed_us": {
+        "min": 3461,
+        "p05": 3461.0,
+        "median": 3461.0,
+        "p95": 3462.0,
+        "max": 3472
+      }
+    },
+    {
+      "recording": "recordings/gui-20261110-162410-575208/live-002",
+      "raw_sha256": "5024bb94def957065da2264374b83e04641d3d6c04b984456ae7103461d6feb2",
+      "frames": 1603,
+      "acquired_chirps": 17,
+      "retained_chirps": 16,
+      "acquisition_path_elapsed_us": {
+        "min": 3461,
+        "p05": 3461.0,
+        "median": 3462.0,
+        "p95": 3467.0,
+        "max": 3467
+      }
+    }
+  ],
+  "scope_image": {
+    "path": "build/scope-timing/APP_CYSBSYSKIT-DEV-01/Release/glass-radar-3rx.hex",
+    "exists": true,
+    "sha256": "a48ed6f40e42b627c037c10321baab1c89ef53d96ed4ca0e5649399847b3a5d5",
+    "profile_id": "0x33515301",
+    "flashed": false,
+    "measured": false
+  },
+  "source_sha256": "ef0d6fccf87a6eb9a55831bba0e03399f3dceaefdec6368fcdd0902b3b4da637",
+  "condition": "All 16 retained blocks are sequential coherent chirps, uniformly spaced, fully contained between the MCU trigger and completion timestamps.",
+  "inference": "If the condition holds, 15 chirp-start intervals fit within the maximum acquisition-path elapsed time. This is an upper bound, not a measured interval.",
+  "chirp_interval_upper_bound_us_if_uniform": 231.46666666666667,
+  "assumed_carrier_hz_for_illustration": 60000000000.0,
+  "actual_carrier_verified": false,
+  "native_doppler_bin_cycles_per_chirp": 0.0625,
+  "velocity_bin_spacing_lower_bound_mps_if_uniform_and_60ghz": 0.6745762033770162,
+  "illustrative_spacing_mps_for_T_us": {
+    "25": 6.245676208333334,
+    "50": 3.122838104166667,
+    "100": 1.5614190520833335,
+    "200": 0.7807095260416668
+  },
+  "unresolved": "Actual chirp spacing, uniformity, raw-block/edge correspondence, carrier and physical Doppler sign. The scope marker and matching raw capture must be measured."
+}

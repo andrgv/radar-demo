@@ -1,0 +1,2471 @@
+{
+  "recording": "recordings/gui-20261110-221227-169414/live-001",
+  "raw_sha256": "f48351505649078ca4aea7b1eb09d1dc2953dd1700e89fd55e428e228fa56084",
+  "review_source_sha256": "d5b91f3ed1457540a4c7b9b1801f70dff72374b2ca87cd546e2464e9c001b41b",
+  "cfar_source_sha256": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+  "settings": {
+    "guard_range": 1,
+    "guard_doppler": 1,
+    "training_range": 3,
+    "training_doppler": 2,
+    "min_training": 16,
+    "factor": 4.0,
+    "doppler_edge": "wrap"
+  },
+  "settings_and_source_unchanged": true,
+  "frames": 1149,
+  "valid_frames": 1149,
+  "first_last_sequence": [
+    2,
+    1150
+  ],
+  "host_span_s": 113.814919,
+  "wire_integrity": {
+    "bytes": 9047841,
+    "accepted_frames": 1149,
+    "crc_failures": 1,
+    "bad_headers": 0,
+    "missing_sequences": 0,
+    "restarts": 0,
+    "discarded_bytes": 7508,
+    "tail_bytes": 1,
+    "rejected_packet_boundaries": [
+      {
+        "wire_offset": 0,
+        "sequence": 1,
+        "expected_packet_bytes": 7868,
+        "bytes_to_next_valid_header": 7508,
+        "boundary_shortfall_bytes": 360
+      }
+    ]
+  },
+  "saved_integrity": {
+    "gaps": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "restarts": 0,
+    "discarded_bytes": 0
+  },
+  "edge_counts": {
+    "272": 1149
+  },
+  "edge_overflow_frames": 0,
+  "endpoint_group_period_us_p05_p50_p95": [
+    504.5,
+    504.75,
+    504.9375
+  ],
+  "device_errors": [
+    0
+  ],
+  "device_drops": [
+    0
+  ],
+  "recorded_detector": {
+    "algorithm": "range-ca-cfar-v2",
+    "cfar": {
+      "guard_cells": 1,
+      "training_cells": 4,
+      "min_training_cells": 4,
+      "factor": 2.0
+    },
+    "selection": "nearest qualifying peak group",
+    "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+    "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+    "edge_policy": "truncate; require minimum total reference count"
+  },
+  "motions": [
+    {
+      "label": "fast approach",
+      "window_host_s": [
+        31.31,
+        32.62
+      ],
+      "frames": 13,
+      "roi_zero_local_maximum_frames": 5,
+      "roi_nonzero_local_maximum_frames": 9,
+      "roi_negative_local_maximum_frames": 9,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 3,
+        "4": 1,
+        "2": 1
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 5,
+        "-1": 3,
+        "-2": 6
+      },
+      "all_range_zero_local_maximum_frames": 13,
+      "all_range_nonzero_local_maximum_frames": 9,
+      "recorded_1d_output_frames": 8,
+      "recorded_1d_numeric_distance_frames": 8,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        75.57942209740752,
+        94.95425890551932,
+        140.0674739944717
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 31.536472,
+          "end_host_s": 31.730453,
+          "approximate_duration_s": 0.29314600000000013
+        },
+        {
+          "start_host_s": 32.029572,
+          "end_host_s": 32.424905,
+          "approximate_duration_s": 0.4944980000000001
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -0.004769865440527846,
+        -0.050381882239302435,
+        -0.060771538452986995,
+        -0.015240800713866449,
+        0.0006081449635369145,
+        -0.0013331359444939974,
+        -0.0016642218570215438,
+        -0.0010678880234933955
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -5.767019480591568,
+        -2.9873218435076385,
+        1.3662048579925503,
+        2.6177388850444396,
+        -0.054893733539207346,
+        -3.391442367685262,
+        1.5531733559490468,
+        -0.3926796864388574
+      ],
+      "native_range_power_median_db_bins1_8": [
+        54.22990941001394,
+        58.72846437844508,
+        60.41490924478392,
+        57.72853767676543,
+        55.5206627210232,
+        53.11888741711657,
+        56.27905512891628,
+        51.666076681876085
+      ],
+      "video_window_s": [
+        31.11,
+        32.82
+      ],
+      "expected_sign": -1,
+      "nominal_travel_average_m_s": 0.526315789473684,
+      "offset_sensitivity": [
+        {
+          "offset_s": -0.5,
+          "label": "fast approach",
+          "window_host_s": [
+            30.81,
+            32.12
+          ],
+          "frames": 13,
+          "roi_zero_local_maximum_frames": 8,
+          "roi_nonzero_local_maximum_frames": 4,
+          "roi_negative_local_maximum_frames": 4,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 5,
+            "4": 2,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 8,
+            "-1": 3,
+            "-2": 1
+          },
+          "all_range_zero_local_maximum_frames": 13,
+          "all_range_nonzero_local_maximum_frames": 5,
+          "recorded_1d_output_frames": 5,
+          "recorded_1d_numeric_distance_frames": 5,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            89.41923414290932,
+            116.08820174226102,
+            140.46173394189626
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 31.13673,
+              "end_host_s": 31.13673,
+              "approximate_duration_s": 0.09916499999999928
+            },
+            {
+              "start_host_s": 31.536472,
+              "end_host_s": 31.730453,
+              "approximate_duration_s": 0.29314600000000013
+            },
+            {
+              "start_host_s": 32.029572,
+              "end_host_s": 32.029572,
+              "approximate_duration_s": 0.09916499999999928
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            3.528701253328435e-05,
+            -0.02458033580327696,
+            -0.030452160806159454,
+            -0.012793503224001489,
+            3.160432474715134e-05,
+            -0.0013331359444939974,
+            -0.0013679829164609187,
+            -0.0010678880234933955
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -3.9858702778495263,
+            -0.8396811180775676,
+            3.243966227808734,
+            2.704410407066474,
+            1.0222302720595253,
+            0.03107172624537654,
+            2.6430649269468454,
+            0.25332401669162385
+          ],
+          "native_range_power_median_db_bins1_8": [
+            52.84956452087806,
+            56.12068640151956,
+            60.20206920228527,
+            59.47246724015412,
+            56.69598860250904,
+            55.528292705411815,
+            57.44296766604354,
+            52.75085834456056
+          ]
+        },
+        {
+          "offset_s": -0.25,
+          "label": "fast approach",
+          "window_host_s": [
+            31.06,
+            32.37
+          ],
+          "frames": 13,
+          "roi_zero_local_maximum_frames": 5,
+          "roi_nonzero_local_maximum_frames": 7,
+          "roi_negative_local_maximum_frames": 7,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 3,
+            "4": 1,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 5,
+            "-1": 3,
+            "-2": 4
+          },
+          "all_range_zero_local_maximum_frames": 13,
+          "all_range_nonzero_local_maximum_frames": 8,
+          "recorded_1d_output_frames": 8,
+          "recorded_1d_numeric_distance_frames": 8,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            75.57942209740752,
+            93.24796751236764,
+            140.0674739944717
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 31.13673,
+              "end_host_s": 31.13673,
+              "approximate_duration_s": 0.09916499999999928
+            },
+            {
+              "start_host_s": 31.536472,
+              "end_host_s": 31.730453,
+              "approximate_duration_s": 0.29314600000000013
+            },
+            {
+              "start_host_s": 32.029572,
+              "end_host_s": 32.325486,
+              "approximate_duration_s": 0.3950789999999955
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.0007029161503456784,
+            -0.034128078762698494,
+            -0.060771538452986995,
+            -0.015240800713866449,
+            0.0007785010919912835,
+            -0.0016612733543790233,
+            -0.0016642218570215438,
+            -0.0023706008995782657
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -5.379736224728276,
+            -2.8335382448598705,
+            1.3662048579925503,
+            2.6177388850444396,
+            0.05869544424775191,
+            -3.0705799892963217,
+            1.6128125983793167,
+            0.3133206721223062
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.039366941450666,
+            57.60011883374413,
+            60.9292274796794,
+            57.85232808107688,
+            55.95141137837112,
+            53.64941066792718,
+            56.66907544437139,
+            51.86224006533784
+          ]
+        },
+        {
+          "offset_s": 0,
+          "label": "fast approach",
+          "window_host_s": [
+            31.31,
+            32.62
+          ],
+          "frames": 13,
+          "roi_zero_local_maximum_frames": 5,
+          "roi_nonzero_local_maximum_frames": 9,
+          "roi_negative_local_maximum_frames": 9,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 3,
+            "4": 1,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 5,
+            "-1": 3,
+            "-2": 6
+          },
+          "all_range_zero_local_maximum_frames": 13,
+          "all_range_nonzero_local_maximum_frames": 9,
+          "recorded_1d_output_frames": 8,
+          "recorded_1d_numeric_distance_frames": 8,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            75.57942209740752,
+            94.95425890551932,
+            140.0674739944717
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 31.536472,
+              "end_host_s": 31.730453,
+              "approximate_duration_s": 0.29314600000000013
+            },
+            {
+              "start_host_s": 32.029572,
+              "end_host_s": 32.424905,
+              "approximate_duration_s": 0.4944980000000001
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.004769865440527846,
+            -0.050381882239302435,
+            -0.060771538452986995,
+            -0.015240800713866449,
+            0.0006081449635369145,
+            -0.0013331359444939974,
+            -0.0016642218570215438,
+            -0.0010678880234933955
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -5.767019480591568,
+            -2.9873218435076385,
+            1.3662048579925503,
+            2.6177388850444396,
+            -0.054893733539207346,
+            -3.391442367685262,
+            1.5531733559490468,
+            -0.3926796864388574
+          ],
+          "native_range_power_median_db_bins1_8": [
+            54.22990941001394,
+            58.72846437844508,
+            60.41490924478392,
+            57.72853767676543,
+            55.5206627210232,
+            53.11888741711657,
+            56.27905512891628,
+            51.666076681876085
+          ]
+        },
+        {
+          "offset_s": 0.25,
+          "label": "fast approach",
+          "window_host_s": [
+            31.56,
+            32.87
+          ],
+          "frames": 13,
+          "roi_zero_local_maximum_frames": 4,
+          "roi_nonzero_local_maximum_frames": 11,
+          "roi_negative_local_maximum_frames": 11,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "4": 1,
+            "3": 2,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "-1": 5,
+            "0": 4,
+            "-2": 6
+          },
+          "all_range_zero_local_maximum_frames": 13,
+          "all_range_nonzero_local_maximum_frames": 11,
+          "recorded_1d_output_frames": 9,
+          "recorded_1d_numeric_distance_frames": 9,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            57.84184266538399,
+            84.78526490039361,
+            131.0277290199818
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 31.631506,
+              "end_host_s": 31.730453,
+              "approximate_duration_s": 0.1981119999999983
+            },
+            {
+              "start_host_s": 32.029572,
+              "end_host_s": 32.424905,
+              "approximate_duration_s": 0.4944980000000001
+            },
+            {
+              "start_host_s": 32.722632,
+              "end_host_s": 32.821516,
+              "approximate_duration_s": 0.19804900000000458
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.04147267214503738,
+            -0.07856385615975327,
+            -0.030452160806159454,
+            -0.0017644493162895804,
+            -0.0004161721341571932,
+            -0.0008668417561368768,
+            -0.00013754911139494106,
+            -0.0026905576463639043
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -5.379736224728276,
+            -2.8335382448598705,
+            0.7352959420279221,
+            -0.19160723973215582,
+            -2.421765148800068,
+            -3.4588692755597066,
+            1.6128125983793167,
+            -0.07140921213992331
+          ],
+          "native_range_power_median_db_bins1_8": [
+            56.36685436745183,
+            62.55992713448627,
+            60.9292274796794,
+            57.04561648761975,
+            54.94594786652047,
+            52.81215959528868,
+            56.51267628408948,
+            51.52080910527164
+          ]
+        },
+        {
+          "offset_s": 0.5,
+          "label": "fast approach",
+          "window_host_s": [
+            31.81,
+            33.12
+          ],
+          "frames": 14,
+          "roi_zero_local_maximum_frames": 5,
+          "roi_nonzero_local_maximum_frames": 11,
+          "roi_negative_local_maximum_frames": 11,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 3,
+            "2": 2,
+            "1": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 6,
+            "-2": 6,
+            "-1": 5
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 11,
+          "recorded_1d_output_frames": 8,
+          "recorded_1d_numeric_distance_frames": 8,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            48.94058678415448,
+            78.44415319799064,
+            97.38051300819399
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 32.029572,
+              "end_host_s": 32.424905,
+              "approximate_duration_s": 0.4944980000000001
+            },
+            {
+              "start_host_s": 32.722632,
+              "end_host_s": 32.921265,
+              "approximate_duration_s": 0.29779800000000023
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.04551406772456173,
+            -0.07043973867646076,
+            -0.020082106260962105,
+            -0.0009776007910282563,
+            -0.0007462460629980526,
+            0.0004122629821578563,
+            -0.0006206611897126529,
+            -0.0028805059654206868
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -4.765565100073158,
+            0.6786090416239864,
+            1.7796117138199326,
+            -1.895847192528658,
+            -3.4029043140745445,
+            -4.194955823720127,
+            1.7569050605778693,
+            -0.23204444928939036
+          ],
+          "native_range_power_median_db_bins1_8": [
+            58.94349794092527,
+            62.800250884759336,
+            60.67967750833201,
+            56.79221915567097,
+            54.73972280781002,
+            52.205063563935084,
+            55.66844711560795,
+            50.43411458411904
+          ]
+        }
+      ]
+    },
+    {
+      "label": "fast retreat",
+      "window_host_s": [
+        48.980000000000004,
+        50.43
+      ],
+      "frames": 15,
+      "roi_zero_local_maximum_frames": 2,
+      "roi_nonzero_local_maximum_frames": 11,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 11,
+      "zero_peak_range_bins1_4_counts": {
+        "2": 1,
+        "4": 1
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 2,
+        "1": 5,
+        "2": 6
+      },
+      "all_range_zero_local_maximum_frames": 14,
+      "all_range_nonzero_local_maximum_frames": 12,
+      "recorded_1d_output_frames": 9,
+      "recorded_1d_numeric_distance_frames": 9,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        37.11992728664066,
+        44.9066589830426,
+        113.56032779889135
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 48.999952,
+          "end_host_s": 49.60246,
+          "approximate_duration_s": 0.7016729999999995
+        },
+        {
+          "start_host_s": 50.272596,
+          "end_host_s": 50.371737,
+          "approximate_duration_s": 0.1983060000000023
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        0.053044489910391505,
+        0.07648197566299617,
+        0.05476901100012496,
+        0.008190811017982864,
+        0.003383204653372234,
+        0.0019225805766841764,
+        0.00020979331352200572,
+        0.004182528613687358
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -4.341758475026791,
+        -1.8019742948798776,
+        -1.0770967003589729,
+        -2.2877794476710704,
+        -4.036596682124011,
+        -2.8438998600974537,
+        -0.6181286963408774,
+        -1.042154508386944
+      ],
+      "native_range_power_median_db_bins1_8": [
+        59.44916764514218,
+        62.556281285315066,
+        58.84267366409357,
+        56.290913287822654,
+        53.74753538470365,
+        52.649960379409606,
+        54.18442217449763,
+        50.622243735322286
+      ],
+      "video_window_s": [
+        48.78,
+        50.63
+      ],
+      "expected_sign": 1,
+      "nominal_travel_average_m_s": 0.4864864864864861,
+      "offset_sensitivity": [
+        {
+          "offset_s": -0.5,
+          "label": "fast retreat",
+          "window_host_s": [
+            48.480000000000004,
+            49.93
+          ],
+          "frames": 15,
+          "roi_zero_local_maximum_frames": 6,
+          "roi_nonzero_local_maximum_frames": 8,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 8,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 5,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 6,
+            "1": 5,
+            "2": 3
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 9,
+          "recorded_1d_output_frames": 12,
+          "recorded_1d_numeric_distance_frames": 12,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            29.12802122180332,
+            42.42568293563272,
+            52.64419816640974
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 48.502612,
+              "end_host_s": 49.60246,
+              "approximate_duration_s": 1.1990130000000008
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.053044489910391505,
+            0.041714111266763325,
+            0.01485785718699107,
+            0.0018311948773058627,
+            0.003383204653372234,
+            0.0006059174526656314,
+            0.00029929448559936733,
+            0.00397318900141578
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            5.693053613421522,
+            6.586311164805146,
+            -1.0770967003589729,
+            -4.543834331555435,
+            -9.111288422486052,
+            -4.457017440840067,
+            1.3236843795627484,
+            1.6320775617312222
+          ],
+          "native_range_power_median_db_bins1_8": [
+            66.13287642538924,
+            63.299204255645876,
+            58.80385106833387,
+            55.39375842807773,
+            50.77429742892292,
+            53.05810388372943,
+            55.12861714666967,
+            50.78841557212709
+          ]
+        },
+        {
+          "offset_s": -0.25,
+          "label": "fast retreat",
+          "window_host_s": [
+            48.730000000000004,
+            50.18
+          ],
+          "frames": 15,
+          "roi_zero_local_maximum_frames": 3,
+          "roi_nonzero_local_maximum_frames": 10,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 10,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 2,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 3,
+            "1": 5,
+            "2": 5
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 11,
+          "recorded_1d_output_frames": 9,
+          "recorded_1d_numeric_distance_frames": 9,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            36.3935538682221,
+            43.17925927540235,
+            52.55990309119644
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 48.801632,
+              "end_host_s": 49.60246,
+              "approximate_duration_s": 0.899993000000002
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.053044489910391505,
+            0.06616043344522145,
+            0.0439942584414456,
+            0.007454719212727576,
+            0.003383204653372234,
+            0.001061535753543753,
+            0.00020979331352200572,
+            0.00397318900141578
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -2.565019577305106,
+            0.5123127709921417,
+            -1.9406103689345797,
+            -3.302339396625393,
+            -8.046529752943409,
+            -4.457017440840067,
+            0.7394672552600001,
+            -0.93236627527211
+          ],
+          "native_range_power_median_db_bins1_8": [
+            62.708723234872465,
+            63.15446509623658,
+            58.84267366409357,
+            56.178651653570284,
+            52.22218532319927,
+            53.05810388372943,
+            54.18442217449763,
+            50.35308288166163
+          ]
+        },
+        {
+          "offset_s": 0,
+          "label": "fast retreat",
+          "window_host_s": [
+            48.980000000000004,
+            50.43
+          ],
+          "frames": 15,
+          "roi_zero_local_maximum_frames": 2,
+          "roi_nonzero_local_maximum_frames": 11,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 11,
+          "zero_peak_range_bins1_4_counts": {
+            "2": 1,
+            "4": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 2,
+            "1": 5,
+            "2": 6
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 12,
+          "recorded_1d_output_frames": 9,
+          "recorded_1d_numeric_distance_frames": 9,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            37.11992728664066,
+            44.9066589830426,
+            113.56032779889135
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 48.999952,
+              "end_host_s": 49.60246,
+              "approximate_duration_s": 0.7016729999999995
+            },
+            {
+              "start_host_s": 50.272596,
+              "end_host_s": 50.371737,
+              "approximate_duration_s": 0.1983060000000023
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.053044489910391505,
+            0.07648197566299617,
+            0.05476901100012496,
+            0.008190811017982864,
+            0.003383204653372234,
+            0.0019225805766841764,
+            0.00020979331352200572,
+            0.004182528613687358
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -4.341758475026791,
+            -1.8019742948798776,
+            -1.0770967003589729,
+            -2.2877794476710704,
+            -4.036596682124011,
+            -2.8438998600974537,
+            -0.6181286963408774,
+            -1.042154508386944
+          ],
+          "native_range_power_median_db_bins1_8": [
+            59.44916764514218,
+            62.556281285315066,
+            58.84267366409357,
+            56.290913287822654,
+            53.74753538470365,
+            52.649960379409606,
+            54.18442217449763,
+            50.622243735322286
+          ]
+        },
+        {
+          "offset_s": 0.25,
+          "label": "fast retreat",
+          "window_host_s": [
+            49.230000000000004,
+            50.68
+          ],
+          "frames": 15,
+          "roi_zero_local_maximum_frames": 1,
+          "roi_nonzero_local_maximum_frames": 12,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 12,
+          "zero_peak_range_bins1_4_counts": {
+            "4": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "1": 6,
+            "2": 6,
+            "0": 1
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 13,
+          "recorded_1d_output_frames": 6,
+          "recorded_1d_numeric_distance_frames": 6,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            43.61110920231241,
+            51.94216542301861,
+            116.34425416190419
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 49.301758,
+              "end_host_s": 49.60246,
+              "approximate_duration_s": 0.3998670000000004
+            },
+            {
+              "start_host_s": 50.272596,
+              "end_host_s": 50.371737,
+              "approximate_duration_s": 0.1983060000000023
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.04402860289306023,
+            0.07648197566299617,
+            0.06143501098865286,
+            0.018136274657128245,
+            0.0017462021851779557,
+            0.0015396127417378264,
+            0.00020979331352200572,
+            0.004182528613687358
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -5.593683404177093,
+            -5.278984543751626,
+            -1.0770967003589729,
+            -0.8899023711522716,
+            -2.682102124781937,
+            -2.4679240305220262,
+            -0.16330058146583168,
+            -0.93236627527211
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.181429972727614,
+            59.68446250990893,
+            58.87483429058574,
+            57.386828356029426,
+            54.70284107831723,
+            53.400008032421844,
+            55.00815435591562,
+            50.78841557212709
+          ]
+        },
+        {
+          "offset_s": 0.5,
+          "label": "fast retreat",
+          "window_host_s": [
+            49.480000000000004,
+            50.93
+          ],
+          "frames": 15,
+          "roi_zero_local_maximum_frames": 3,
+          "roi_nonzero_local_maximum_frames": 10,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 10,
+          "zero_peak_range_bins1_4_counts": {
+            "4": 1,
+            "3": 2
+          },
+          "roi_peak_doppler_offset_counts": {
+            "1": 4,
+            "2": 6,
+            "0": 3
+          },
+          "all_range_zero_local_maximum_frames": 14,
+          "all_range_nonzero_local_maximum_frames": 12,
+          "recorded_1d_output_frames": 6,
+          "recorded_1d_numeric_distance_frames": 6,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            45.8933635078143,
+            106.88833439973052,
+            118.90849891759922
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 49.500492,
+              "end_host_s": 49.60246,
+              "approximate_duration_s": 0.20113299999999867
+            },
+            {
+              "start_host_s": 50.272596,
+              "end_host_s": 50.371737,
+              "approximate_duration_s": 0.1983060000000023
+            },
+            {
+              "start_host_s": 50.768275,
+              "end_host_s": 50.867414,
+              "approximate_duration_s": 0.19830399999999315
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.0003083715465067467,
+            0.06019222497993223,
+            0.060209856161974946,
+            0.011464074585847153,
+            0.0006534254076282294,
+            0.0015396127417378264,
+            0.00020979331352200572,
+            -0.0002868910633705828
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -5.593683404177093,
+            -5.278984543751626,
+            -0.6261072528912064,
+            0.1869088752499497,
+            -1.6357470143597093,
+            -2.2183284944539454,
+            -0.16330058146583168,
+            -1.2184659221847354
+          ],
+          "native_range_power_median_db_bins1_8": [
+            52.937068010769266,
+            55.55611091252713,
+            59.58217683298365,
+            57.784756850711474,
+            55.255992912189534,
+            53.400008032421844,
+            55.32726377602144,
+            50.78841557212709
+          ]
+        }
+      ]
+    },
+    {
+      "label": "slow approach",
+      "window_host_s": [
+        64.38000000000001,
+        67.25
+      ],
+      "frames": 29,
+      "roi_zero_local_maximum_frames": 16,
+      "roi_nonzero_local_maximum_frames": 13,
+      "roi_negative_local_maximum_frames": 13,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "4": 5,
+        "1": 1,
+        "3": 8,
+        "2": 2
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 16,
+        "-1": 13
+      },
+      "all_range_zero_local_maximum_frames": 29,
+      "all_range_nonzero_local_maximum_frames": 20,
+      "recorded_1d_output_frames": 20,
+      "recorded_1d_numeric_distance_frames": 17,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        68.55792580612851,
+        93.771607245562,
+        112.42405422114656
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 64.450938,
+          "end_host_s": 64.450938,
+          "approximate_duration_s": 0.09916499999999928
+        },
+        {
+          "start_host_s": 65.045955,
+          "end_host_s": 66.632606,
+          "approximate_duration_s": 1.6858159999999884
+        },
+        {
+          "start_host_s": 66.92918,
+          "end_host_s": 67.028332,
+          "approximate_duration_s": 0.19831700000000296
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -0.0022288463612358702,
+        -0.03878046177567797,
+        -0.015598572504352645,
+        -0.0010532423132468723,
+        -0.0009747170717135975,
+        0.0007050439636764115,
+        0.00020629920755937917,
+        -0.0008716920223409061
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -3.0576512620594265,
+        0.7939719062731205,
+        4.241737034512674,
+        2.7573844211904137,
+        1.655641851129169,
+        -1.88303359784043,
+        -0.27477641449502344,
+        -2.5759517609686573
+      ],
+      "native_range_power_median_db_bins1_8": [
+        53.33027400554205,
+        57.878428388224144,
+        59.10267129520811,
+        57.70558686843793,
+        56.59928508870265,
+        52.791103172825835,
+        53.13836251402392,
+        49.57029671749033
+      ],
+      "video_window_s": [
+        64.18,
+        67.45
+      ],
+      "expected_sign": -1,
+      "nominal_travel_average_m_s": 0.2752293577981655,
+      "offset_sensitivity": [
+        {
+          "offset_s": -0.5,
+          "label": "slow approach",
+          "window_host_s": [
+            63.88000000000001,
+            66.75
+          ],
+          "frames": 29,
+          "roi_zero_local_maximum_frames": 18,
+          "roi_nonzero_local_maximum_frames": 9,
+          "roi_negative_local_maximum_frames": 9,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 9,
+            "4": 7,
+            "1": 1,
+            "2": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 18,
+            "-1": 9
+          },
+          "all_range_zero_local_maximum_frames": 29,
+          "all_range_nonzero_local_maximum_frames": 18,
+          "recorded_1d_output_frames": 22,
+          "recorded_1d_numeric_distance_frames": 20,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            72.01360314790938,
+            103.32857108026485,
+            143.08652661330643
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 64.054622,
+              "end_host_s": 64.450938,
+              "approximate_duration_s": 0.49548099999999806
+            },
+            {
+              "start_host_s": 65.045955,
+              "end_host_s": 66.632606,
+              "approximate_duration_s": 1.6858159999999884
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.0006966692977394712,
+            -0.03701937415536508,
+            -0.015598572504352645,
+            -0.00040845872357528936,
+            -0.00022620374757894738,
+            -9.123808002149548e-05,
+            0.00020202423630450364,
+            -0.001204782121831918
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -3.4724515265167843,
+            -0.6328558138843459,
+            4.482451128830883,
+            4.555834621172201,
+            1.9431470383716913,
+            0.04708269676666363,
+            -0.18917141727369668,
+            -2.808279306896158
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.040499345722345,
+            56.42052378669834,
+            59.49760382731128,
+            58.20503963488224,
+            57.17362455502823,
+            55.08699174460041,
+            54.409301843204645,
+            49.70464323922684
+          ]
+        },
+        {
+          "offset_s": -0.25,
+          "label": "slow approach",
+          "window_host_s": [
+            64.13000000000001,
+            67.0
+          ],
+          "frames": 29,
+          "roi_zero_local_maximum_frames": 18,
+          "roi_nonzero_local_maximum_frames": 10,
+          "roi_negative_local_maximum_frames": 10,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "4": 6,
+            "3": 9,
+            "1": 1,
+            "2": 2
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 18,
+            "-1": 10
+          },
+          "all_range_zero_local_maximum_frames": 29,
+          "all_range_nonzero_local_maximum_frames": 18,
+          "recorded_1d_output_frames": 22,
+          "recorded_1d_numeric_distance_frames": 20,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            72.01360314790938,
+            98.37400666085256,
+            122.45198798465094
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 64.153218,
+              "end_host_s": 64.450938,
+              "approximate_duration_s": 0.3968849999999975
+            },
+            {
+              "start_host_s": 65.045955,
+              "end_host_s": 66.632606,
+              "approximate_duration_s": 1.6858159999999884
+            },
+            {
+              "start_host_s": 66.92918,
+              "end_host_s": 66.92918,
+              "approximate_duration_s": 0.09916499999999928
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.0010097640809293513,
+            -0.03878046177567797,
+            -0.015598572504352645,
+            -0.00040845872357528936,
+            -0.00043236848360179753,
+            0.0006222403844061059,
+            0.00020202423630450364,
+            -0.0012583442999018724
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -3.4679555800543103,
+            0.4006508082373651,
+            4.482451128830883,
+            3.83403834729712,
+            1.937967005973554,
+            -0.6948123179855797,
+            -0.18917141727369668,
+            -2.5759517609686573
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.1393250966164,
+            57.32145631868284,
+            59.49760382731128,
+            58.19817711210441,
+            57.017269781002334,
+            54.57028860778558,
+            54.28329292081401,
+            49.70464323922684
+          ]
+        },
+        {
+          "offset_s": 0,
+          "label": "slow approach",
+          "window_host_s": [
+            64.38000000000001,
+            67.25
+          ],
+          "frames": 29,
+          "roi_zero_local_maximum_frames": 16,
+          "roi_nonzero_local_maximum_frames": 13,
+          "roi_negative_local_maximum_frames": 13,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "4": 5,
+            "1": 1,
+            "3": 8,
+            "2": 2
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 16,
+            "-1": 13
+          },
+          "all_range_zero_local_maximum_frames": 29,
+          "all_range_nonzero_local_maximum_frames": 20,
+          "recorded_1d_output_frames": 20,
+          "recorded_1d_numeric_distance_frames": 17,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            68.55792580612851,
+            93.771607245562,
+            112.42405422114656
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 64.450938,
+              "end_host_s": 64.450938,
+              "approximate_duration_s": 0.09916499999999928
+            },
+            {
+              "start_host_s": 65.045955,
+              "end_host_s": 66.632606,
+              "approximate_duration_s": 1.6858159999999884
+            },
+            {
+              "start_host_s": 66.92918,
+              "end_host_s": 67.028332,
+              "approximate_duration_s": 0.19831700000000296
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.0022288463612358702,
+            -0.03878046177567797,
+            -0.015598572504352645,
+            -0.0010532423132468723,
+            -0.0009747170717135975,
+            0.0007050439636764115,
+            0.00020629920755937917,
+            -0.0008716920223409061
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -3.0576512620594265,
+            0.7939719062731205,
+            4.241737034512674,
+            2.7573844211904137,
+            1.655641851129169,
+            -1.88303359784043,
+            -0.27477641449502344,
+            -2.5759517609686573
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.33027400554205,
+            57.878428388224144,
+            59.10267129520811,
+            57.70558686843793,
+            56.59928508870265,
+            52.791103172825835,
+            53.13836251402392,
+            49.57029671749033
+          ]
+        },
+        {
+          "offset_s": 0.25,
+          "label": "slow approach",
+          "window_host_s": [
+            64.63000000000001,
+            67.5
+          ],
+          "frames": 29,
+          "roi_zero_local_maximum_frames": 15,
+          "roi_nonzero_local_maximum_frames": 15,
+          "roi_negative_local_maximum_frames": 15,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 1,
+            "3": 8,
+            "2": 2,
+            "4": 4
+          },
+          "roi_peak_doppler_offset_counts": {
+            "-1": 15,
+            "0": 15
+          },
+          "all_range_zero_local_maximum_frames": 29,
+          "all_range_nonzero_local_maximum_frames": 22,
+          "recorded_1d_output_frames": 21,
+          "recorded_1d_numeric_distance_frames": 18,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            43.57061032826325,
+            93.26835045772287,
+            109.16894541170592
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 65.045955,
+              "end_host_s": 66.632606,
+              "approximate_duration_s": 1.6858159999999884
+            },
+            {
+              "start_host_s": 66.92918,
+              "end_host_s": 67.028332,
+              "approximate_duration_s": 0.19831700000000296
+            },
+            {
+              "start_host_s": 67.325483,
+              "end_host_s": 67.425756,
+              "approximate_duration_s": 0.19943800000000067
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.003709348964685509,
+            -0.03878046177567797,
+            -0.015598572504352645,
+            -0.0014918168592168526,
+            -0.00043236848360179753,
+            0.0008840694260712004,
+            0.0006794129637196603,
+            -0.001239331288303274
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -2.0741187306961977,
+            0.9886650633831816,
+            4.241737034512674,
+            2.3769998230673086,
+            0.9941440915734802,
+            -2.2655921897895324,
+            -0.27477641449502344,
+            -2.423777582922685
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.903339876470035,
+            58.26085441303984,
+            59.506891687665174,
+            57.63541175198061,
+            55.98785323924602,
+            52.539013518031375,
+            53.13836251402392,
+            49.44244901676504
+          ]
+        },
+        {
+          "offset_s": 0.5,
+          "label": "slow approach",
+          "window_host_s": [
+            64.88000000000001,
+            67.75
+          ],
+          "frames": 29,
+          "roi_zero_local_maximum_frames": 13,
+          "roi_nonzero_local_maximum_frames": 17,
+          "roi_negative_local_maximum_frames": 17,
+          "roi_positive_local_maximum_frames": 0,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 7,
+            "2": 2,
+            "4": 4
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 13,
+            "-1": 17
+          },
+          "all_range_zero_local_maximum_frames": 29,
+          "all_range_nonzero_local_maximum_frames": 23,
+          "recorded_1d_output_frames": 24,
+          "recorded_1d_numeric_distance_frames": 21,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            40.27259724862287,
+            87.74866297927856,
+            108.99039704276801
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 65.045955,
+              "end_host_s": 66.632606,
+              "approximate_duration_s": 1.6858159999999884
+            },
+            {
+              "start_host_s": 66.92918,
+              "end_host_s": 67.028332,
+              "approximate_duration_s": 0.19831700000000296
+            },
+            {
+              "start_host_s": 67.325483,
+              "end_host_s": 67.72258,
+              "approximate_duration_s": 0.4962619999999873
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            -0.02684790114660011,
+            -0.03878046177567797,
+            -0.013889480131330968,
+            -0.0010968507929481253,
+            -0.0009747170717135975,
+            0.0006368321691410643,
+            0.00035406780401343765,
+            -0.001239331288303274
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -1.3048839628371625,
+            3.6183909197069615,
+            4.159326542963588,
+            2.0176991238897184,
+            0.2638694259175011,
+            -2.5649277863102853,
+            -0.27477641449502344,
+            -2.139701641279725
+          ],
+          "native_range_power_median_db_bins1_8": [
+            54.98037305864564,
+            59.980747441266324,
+            59.49760382731128,
+            57.22864049947099,
+            55.207511432923425,
+            52.482427365223614,
+            53.13836251402392,
+            49.33898433914411
+          ]
+        }
+      ]
+    },
+    {
+      "label": "slow retreat",
+      "window_host_s": [
+        81.34,
+        84.5
+      ],
+      "frames": 32,
+      "roi_zero_local_maximum_frames": 14,
+      "roi_nonzero_local_maximum_frames": 19,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 19,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 3,
+        "3": 8,
+        "4": 3
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 14,
+        "1": 19
+      },
+      "all_range_zero_local_maximum_frames": 31,
+      "all_range_nonzero_local_maximum_frames": 22,
+      "recorded_1d_output_frames": 26,
+      "recorded_1d_numeric_distance_frames": 25,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        39.416692282277474,
+        85.58283263889528,
+        114.97476599431555
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 81.407946,
+          "end_host_s": 82.605488,
+          "approximate_duration_s": 1.2967069999999978
+        },
+        {
+          "start_host_s": 83.003511,
+          "end_host_s": 84.002533,
+          "approximate_duration_s": 1.0981869999999958
+        },
+        {
+          "start_host_s": 84.375524,
+          "end_host_s": 84.474403,
+          "approximate_duration_s": 0.1980439999999959
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        0.024493704038964784,
+        0.042485739297273166,
+        0.026114125576036387,
+        0.004420244075131188,
+        0.0003721225848804459,
+        0.0014428382260024634,
+        0.000799396088842385,
+        0.0014824995896484245
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -0.6980813325741553,
+        3.3061590413003,
+        2.2815558001750533,
+        -0.0027457092911012393,
+        -1.4841831955344853,
+        -2.0126688522169305,
+        0.7490040341771732,
+        -0.7278645075964716
+      ],
+      "native_range_power_median_db_bins1_8": [
+        57.54329452951765,
+        59.72334969403314,
+        59.95210896391632,
+        57.233244828302034,
+        54.70548996671268,
+        53.53369370266917,
+        54.25668327418119,
+        50.289244890699216
+      ],
+      "video_window_s": [
+        81.14,
+        84.7
+      ],
+      "expected_sign": 1,
+      "nominal_travel_average_m_s": 0.2528089887640448,
+      "offset_sensitivity": [
+        {
+          "offset_s": -0.5,
+          "label": "slow retreat",
+          "window_host_s": [
+            80.84,
+            84.0
+          ],
+          "frames": 31,
+          "roi_zero_local_maximum_frames": 14,
+          "roi_nonzero_local_maximum_frames": 18,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 18,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 6,
+            "3": 7,
+            "4": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 14,
+            "1": 18
+          },
+          "all_range_zero_local_maximum_frames": 30,
+          "all_range_nonzero_local_maximum_frames": 23,
+          "recorded_1d_output_frames": 28,
+          "recorded_1d_numeric_distance_frames": 27,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            37.073373584439075,
+            51.008087692180126,
+            110.43201138546812
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 80.906358,
+              "end_host_s": 82.605488,
+              "approximate_duration_s": 1.798294999999996
+            },
+            {
+              "start_host_s": 83.003511,
+              "end_host_s": 83.884418,
+              "approximate_duration_s": 0.9800719999999927
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.02676192194126213,
+            0.043903438304436326,
+            0.02491667737992335,
+            0.002179263419102571,
+            0.0005745041604936684,
+            0.0014614597958211995,
+            0.000531913544133038,
+            0.0015848332060189488
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            3.6155297516339164,
+            4.689474734719884,
+            1.3185051947253592,
+            -2.826204919434318,
+            -6.251999756960985,
+            -2.4358263104266094,
+            0.6772885438902583,
+            -0.19132298862230346
+          ],
+          "native_range_power_median_db_bins1_8": [
+            63.10733919015095,
+            62.22798636181956,
+            59.483315582680696,
+            56.40251757261449,
+            53.60404841127632,
+            53.32428019595056,
+            53.9158615746753,
+            50.38971432651539
+          ]
+        },
+        {
+          "offset_s": -0.25,
+          "label": "slow retreat",
+          "window_host_s": [
+            81.09,
+            84.25
+          ],
+          "frames": 32,
+          "roi_zero_local_maximum_frames": 14,
+          "roi_nonzero_local_maximum_frames": 19,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 19,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 5,
+            "3": 8,
+            "4": 1
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 14,
+            "1": 19
+          },
+          "all_range_zero_local_maximum_frames": 31,
+          "all_range_nonzero_local_maximum_frames": 23,
+          "recorded_1d_output_frames": 27,
+          "recorded_1d_numeric_distance_frames": 26,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            37.454295758483156,
+            53.2927148442263,
+            111.01442511793714
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 81.10467,
+              "end_host_s": 82.605488,
+              "approximate_duration_s": 1.5999829999999946
+            },
+            {
+              "start_host_s": 83.003511,
+              "end_host_s": 84.002533,
+              "approximate_duration_s": 1.0981869999999958
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.024493704038964784,
+            0.042485739297273166,
+            0.02492150070276576,
+            0.003087640551330725,
+            0.0005198630891420498,
+            0.0016735776659480535,
+            0.000799396088842385,
+            0.0014824995896484245
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            0.21356869453163785,
+            3.869360284388973,
+            1.5712906574961303,
+            -1.8606520595642104,
+            -2.9853325932640553,
+            -2.418315812205301,
+            0.7490040341771732,
+            -0.35023928484792655
+          ],
+          "native_range_power_median_db_bins1_8": [
+            60.851848116146165,
+            61.92900216471814,
+            59.84672693365566,
+            57.03524030189126,
+            54.44147215657882,
+            53.42568844484021,
+            54.17047595758811,
+            50.40249330950872
+          ]
+        },
+        {
+          "offset_s": 0,
+          "label": "slow retreat",
+          "window_host_s": [
+            81.34,
+            84.5
+          ],
+          "frames": 32,
+          "roi_zero_local_maximum_frames": 14,
+          "roi_nonzero_local_maximum_frames": 19,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 19,
+          "zero_peak_range_bins1_4_counts": {
+            "1": 3,
+            "3": 8,
+            "4": 3
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 14,
+            "1": 19
+          },
+          "all_range_zero_local_maximum_frames": 31,
+          "all_range_nonzero_local_maximum_frames": 22,
+          "recorded_1d_output_frames": 26,
+          "recorded_1d_numeric_distance_frames": 25,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            39.416692282277474,
+            85.58283263889528,
+            114.97476599431555
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 81.407946,
+              "end_host_s": 82.605488,
+              "approximate_duration_s": 1.2967069999999978
+            },
+            {
+              "start_host_s": 83.003511,
+              "end_host_s": 84.002533,
+              "approximate_duration_s": 1.0981869999999958
+            },
+            {
+              "start_host_s": 84.375524,
+              "end_host_s": 84.474403,
+              "approximate_duration_s": 0.1980439999999959
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.024493704038964784,
+            0.042485739297273166,
+            0.026114125576036387,
+            0.004420244075131188,
+            0.0003721225848804459,
+            0.0014428382260024634,
+            0.000799396088842385,
+            0.0014824995896484245
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -0.6980813325741553,
+            3.3061590413003,
+            2.2815558001750533,
+            -0.0027457092911012393,
+            -1.4841831955344853,
+            -2.0126688522169305,
+            0.7490040341771732,
+            -0.7278645075964716
+          ],
+          "native_range_power_median_db_bins1_8": [
+            57.54329452951765,
+            59.72334969403314,
+            59.95210896391632,
+            57.233244828302034,
+            54.70548996671268,
+            53.53369370266917,
+            54.25668327418119,
+            50.289244890699216
+          ]
+        },
+        {
+          "offset_s": 0.25,
+          "label": "slow retreat",
+          "window_host_s": [
+            81.59,
+            84.75
+          ],
+          "frames": 32,
+          "roi_zero_local_maximum_frames": 15,
+          "roi_nonzero_local_maximum_frames": 18,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 18,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 9,
+            "4": 4,
+            "1": 2
+          },
+          "roi_peak_doppler_offset_counts": {
+            "0": 15,
+            "1": 18
+          },
+          "all_range_zero_local_maximum_frames": 31,
+          "all_range_nonzero_local_maximum_frames": 21,
+          "recorded_1d_output_frames": 26,
+          "recorded_1d_numeric_distance_frames": 24,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            39.38011212809754,
+            93.58697805274858,
+            115.08804574462877
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 81.605961,
+              "end_host_s": 82.605488,
+              "approximate_duration_s": 1.0986919999999998
+            },
+            {
+              "start_host_s": 83.003511,
+              "end_host_s": 84.002533,
+              "approximate_duration_s": 1.0981869999999958
+            },
+            {
+              "start_host_s": 84.375524,
+              "end_host_s": 84.672707,
+              "approximate_duration_s": 0.39634800000000325
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.00107408422253857,
+            0.042485739297273166,
+            0.02492150070276576,
+            0.004420244075131188,
+            0.0003721225848804459,
+            0.0008247506581219191,
+            0.0009031092573164557,
+            0.0016750243839005695
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -2.7884936865734975,
+            3.1747949340705515,
+            2.7797124255359087,
+            1.6554757095746515,
+            -0.9320625478853404,
+            -1.7466774688973334,
+            0.6630129769525,
+            -0.8509569666341439
+          ],
+          "native_range_power_median_db_bins1_8": [
+            54.72375251961515,
+            59.49782675256809,
+            59.96747389716964,
+            57.3591200729859,
+            55.01673182408343,
+            53.53369370266917,
+            54.4408266427762,
+            50.40249330950872
+          ]
+        },
+        {
+          "offset_s": 0.5,
+          "label": "slow retreat",
+          "window_host_s": [
+            81.84,
+            85.0
+          ],
+          "frames": 32,
+          "roi_zero_local_maximum_frames": 17,
+          "roi_nonzero_local_maximum_frames": 15,
+          "roi_negative_local_maximum_frames": 0,
+          "roi_positive_local_maximum_frames": 15,
+          "zero_peak_range_bins1_4_counts": {
+            "3": 11,
+            "4": 4,
+            "1": 2
+          },
+          "roi_peak_doppler_offset_counts": {
+            "1": 15,
+            "0": 17
+          },
+          "all_range_zero_local_maximum_frames": 31,
+          "all_range_nonzero_local_maximum_frames": 18,
+          "recorded_1d_output_frames": 26,
+          "recorded_1d_numeric_distance_frames": 25,
+          "recorded_1d_conditional_range_cm_p05_p50_p95": [
+            40.952771237410765,
+            97.71991782433467,
+            114.97476599431555
+          ],
+          "recorded_1d_output_episodes": [
+            {
+              "start_host_s": 81.903231,
+              "end_host_s": 82.605488,
+              "approximate_duration_s": 0.8014219999999881
+            },
+            {
+              "start_host_s": 83.003511,
+              "end_host_s": 84.002533,
+              "approximate_duration_s": 1.0981869999999958
+            },
+            {
+              "start_host_s": 84.375524,
+              "end_host_s": 84.969995,
+              "approximate_duration_s": 0.6936359999999979
+            }
+          ],
+          "phase_median_cycles_per_saved_block_bins1_8": [
+            0.00024687478778091386,
+            0.035863300915521854,
+            0.02335219715754961,
+            0.003234569959050383,
+            0.0005198630891420498,
+            0.0008247506581219191,
+            0.0009031092573164557,
+            0.0014824995896484245
+          ],
+          "zero_doppler_threshold_margin_median_db_bins1_8": [
+            -3.059193248745453,
+            2.3247407892191654,
+            4.632369500709583,
+            3.4126525146667905,
+            -0.6259107666366219,
+            -1.4041183695925197,
+            0.7490040341771732,
+            -0.989958283482645
+          ],
+          "native_range_power_median_db_bins1_8": [
+            53.88569076191186,
+            59.05530174372794,
+            60.009010663381304,
+            57.64906998539238,
+            55.536057239182796,
+            53.60863841629515,
+            54.89987394356405,
+            50.40249330950872
+          ]
+        }
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "label": "120 cm A",
+      "window_host_s": [
+        20.99,
+        29.11
+      ],
+      "frames": 82,
+      "roi_zero_local_maximum_frames": 78,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 55,
+        "3": 19,
+        "2": 4
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 78
+      },
+      "all_range_zero_local_maximum_frames": 82,
+      "all_range_nonzero_local_maximum_frames": 24,
+      "recorded_1d_output_frames": 0,
+      "recorded_1d_numeric_distance_frames": 0,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": null,
+      "recorded_1d_output_episodes": [],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -3.2092315798746166e-05,
+        5.176200763166673e-05,
+        0.00013416157072658366,
+        1.4174251230095304e-05,
+        4.175754900243378e-05,
+        3.9968258202931686e-05,
+        3.09356161491458e-05,
+        2.3356229662637376e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        2.4979661663904347,
+        -2.2774112320454774,
+        -3.197172340517257,
+        -5.434674882434438,
+        -2.6182053012114834,
+        6.289341872575598,
+        12.818898157413594,
+        6.934734350591059
+      ],
+      "native_range_power_median_db_bins1_8": [
+        52.36579743071809,
+        49.45053122163684,
+        52.755364075610686,
+        50.40703028076302,
+        52.45206400989424,
+        57.13452911736313,
+        61.72094636145728,
+        57.176410792108484
+      ],
+      "nominal_target_cm": 120,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_local_maximum_frames": 19,
+      "nominal_endpoint_zero_accepted_cell_frames": 19
+    },
+    {
+      "label": "30 cm A",
+      "window_host_s": [
+        34.82,
+        46.78
+      ],
+      "frames": 120,
+      "roi_zero_local_maximum_frames": 120,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 120
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 120
+      },
+      "all_range_zero_local_maximum_frames": 120,
+      "all_range_nonzero_local_maximum_frames": 31,
+      "recorded_1d_output_frames": 120,
+      "recorded_1d_numeric_distance_frames": 120,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        31.83116271646869,
+        35.11639086191841,
+        41.01816922603019
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 34.903997,
+          "end_host_s": 46.703436,
+          "approximate_duration_s": 11.898604000000006
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        4.280488460236347e-05,
+        2.7342219375482952e-05,
+        1.1620013050273605e-05,
+        4.1217855659508195e-05,
+        1.9540784561257957e-05,
+        -1.3303435279243698e-06,
+        1.5130182115616027e-05,
+        5.8007983402004016e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        13.370120808096079,
+        13.48589726967418,
+        -1.3301324210802967,
+        -6.180581242117984,
+        -11.033598759534307,
+        -3.4173612965522424,
+        3.675838369171469,
+        4.660747168750165
+      ],
+      "native_range_power_median_db_bins1_8": [
+        67.11753743754568,
+        64.01087438380684,
+        58.45500337918032,
+        54.44760769124659,
+        49.297225349392264,
+        53.16875922035404,
+        55.35638853033019,
+        53.71578441105876
+      ],
+      "nominal_target_cm": 30,
+      "nominal_endpoint_bins": [
+        1
+      ],
+      "nominal_endpoint_zero_local_maximum_frames": 120,
+      "nominal_endpoint_zero_accepted_cell_frames": 120
+    },
+    {
+      "label": "120 cm B",
+      "window_host_s": [
+        52.63,
+        62.18000000000001
+      ],
+      "frames": 97,
+      "roi_zero_local_maximum_frames": 70,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 53,
+        "4": 7,
+        "1": 11
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 71
+      },
+      "all_range_zero_local_maximum_frames": 97,
+      "all_range_nonzero_local_maximum_frames": 29,
+      "recorded_1d_output_frames": 3,
+      "recorded_1d_numeric_distance_frames": 3,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        103.79829380590766,
+        105.81254854012782,
+        106.98909107730216
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 55.528163,
+          "end_host_s": 55.72569,
+          "approximate_duration_s": 0.2966920000000002
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -6.030253301681113e-05,
+        9.837085568761044e-05,
+        6.100549754888007e-05,
+        -3.393213948136462e-05,
+        4.676331230374849e-05,
+        2.1251521450201005e-05,
+        2.9161933704053796e-05,
+        -1.0080384066919622e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -1.3888789315052952,
+        -4.056666754604999,
+        1.2333194358830746,
+        2.1259108655206003,
+        2.5238553203948477,
+        4.628570359977633,
+        6.532645648596177,
+        1.5602994544031121
+      ],
+      "native_range_power_median_db_bins1_8": [
+        52.05077820771912,
+        49.07493300813425,
+        55.33688816659118,
+        55.11443160180904,
+        55.64114511626343,
+        55.322222750887455,
+        57.97529289013031,
+        52.82574673567278
+      ],
+      "nominal_target_cm": 120,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_local_maximum_frames": 60,
+      "nominal_endpoint_zero_accepted_cell_frames": 88
+    },
+    {
+      "label": "30 cm B",
+      "window_host_s": [
+        69.45,
+        79.14
+      ],
+      "frames": 98,
+      "roi_zero_local_maximum_frames": 98,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "1": 98,
+        "3": 2
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 100
+      },
+      "all_range_zero_local_maximum_frames": 98,
+      "all_range_nonzero_local_maximum_frames": 24,
+      "recorded_1d_output_frames": 98,
+      "recorded_1d_numeric_distance_frames": 98,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        36.35392991743027,
+        37.79607679456436,
+        42.12730840355582
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 69.507652,
+          "end_host_s": 79.122253,
+          "approximate_duration_s": 9.713766000000007
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        3.500858728136173e-05,
+        3.982139781632358e-05,
+        1.3550112719901774e-05,
+        -2.783322356672599e-05,
+        3.695392521153458e-05,
+        5.428614683772106e-05,
+        -2.1595510729373495e-05,
+        -2.1602972807038435e-06
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        15.239411004693402,
+        13.139600031365601,
+        -3.822666869512892,
+        -6.9847011579236735,
+        -9.537462373782688,
+        -3.7264184079254554,
+        0.5002483447131735,
+        4.700030403227387
+      ],
+      "native_range_power_median_db_bins1_8": [
+        67.07790937441348,
+        62.2101169038431,
+        55.71437207646948,
+        52.876694497422875,
+        50.12341568131766,
+        51.17623519687779,
+        51.02660066735459,
+        52.537240957843295
+      ],
+      "nominal_target_cm": 30,
+      "nominal_endpoint_bins": [
+        1
+      ],
+      "nominal_endpoint_zero_local_maximum_frames": 98,
+      "nominal_endpoint_zero_accepted_cell_frames": 98
+    },
+    {
+      "label": "120 cm C",
+      "window_host_s": [
+        86.7,
+        93.39
+      ],
+      "frames": 67,
+      "roi_zero_local_maximum_frames": 12,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 4,
+        "4": 8
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 12
+      },
+      "all_range_zero_local_maximum_frames": 67,
+      "all_range_nonzero_local_maximum_frames": 12,
+      "recorded_1d_output_frames": 1,
+      "recorded_1d_numeric_distance_frames": 0,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": null,
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 88.142102,
+          "end_host_s": 88.142102,
+          "approximate_duration_s": 0.09916499999999928
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -5.891002408672732e-05,
+        0.00017590678868582184,
+        4.22258446876573e-05,
+        2.3163684938939582e-05,
+        4.063123559843713e-05,
+        2.2761014062327035e-05,
+        3.472055303168903e-05,
+        5.2498460996503406e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -3.0480259132221565,
+        -6.949126170743636,
+        -0.688678416231488,
+        3.3094858839064094,
+        4.848527980697311,
+        4.711841862303844,
+        6.42246326669362,
+        1.2070979405103877
+      ],
+      "native_range_power_median_db_bins1_8": [
+        52.206356824429676,
+        48.14618155294834,
+        54.54339764446018,
+        57.455872808732835,
+        58.34887155772266,
+        56.73384915755304,
+        59.52199490404474,
+        54.587120764077184
+      ],
+      "nominal_target_cm": 120,
+      "nominal_endpoint_bins": [
+        3,
+        4
+      ],
+      "nominal_endpoint_zero_local_maximum_frames": 12,
+      "nominal_endpoint_zero_accepted_cell_frames": 67
+    }
+  ],
+  "controls": [
+    {
+      "label": "initial target absent",
+      "window_host_s": [
+        2,
+        13.99
+      ],
+      "frames": 121,
+      "roi_zero_local_maximum_frames": 28,
+      "roi_nonzero_local_maximum_frames": 2,
+      "roi_negative_local_maximum_frames": 1,
+      "roi_positive_local_maximum_frames": 1,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 14,
+        "1": 7,
+        "4": 7
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 28,
+        "7": 1,
+        "-1": 1
+      },
+      "all_range_zero_local_maximum_frames": 121,
+      "all_range_nonzero_local_maximum_frames": 35,
+      "recorded_1d_output_frames": 6,
+      "recorded_1d_numeric_distance_frames": 6,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        94.73201601762496,
+        116.19595577970166,
+        145.89498519348322
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 12.604663,
+          "end_host_s": 13.001727,
+          "approximate_duration_s": 0.4962289999999996
+        },
+        {
+          "start_host_s": 13.88565,
+          "end_host_s": 13.88565,
+          "approximate_duration_s": 0.09916499999999928
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -4.5835044303991286e-05,
+        -7.825862818694122e-06,
+        -7.325068347313144e-06,
+        1.0632046290695725e-06,
+        3.0510068641198585e-05,
+        2.963950928032996e-05,
+        4.475084383154648e-05,
+        -7.09646086011086e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -1.1594465241471,
+        -5.618788907620428,
+        -2.958492117082605,
+        -1.0365084990030773,
+        3.260731477614254,
+        11.0992388106993,
+        8.524445213117847,
+        -2.7641101206275236
+      ],
+      "native_range_power_median_db_bins1_8": [
+        52.178627650441214,
+        50.43791774260447,
+        53.79712101046937,
+        54.73192345990693,
+        56.595437425324995,
+        61.28543477017911,
+        60.01413530851999,
+        51.58152233513939
+      ]
+    },
+    {
+      "label": "post-removal quiet",
+      "window_host_s": [
+        102.39,
+        106.12
+      ],
+      "frames": 38,
+      "roi_zero_local_maximum_frames": 0,
+      "roi_nonzero_local_maximum_frames": 0,
+      "roi_negative_local_maximum_frames": 0,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {},
+      "roi_peak_doppler_offset_counts": {},
+      "all_range_zero_local_maximum_frames": 38,
+      "all_range_nonzero_local_maximum_frames": 12,
+      "recorded_1d_output_frames": 0,
+      "recorded_1d_numeric_distance_frames": 0,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": null,
+      "recorded_1d_output_episodes": [],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -4.1912573931311426e-05,
+        0.00018313382014365328,
+        3.423934989465438e-05,
+        4.830621150939963e-05,
+        4.657968190200408e-05,
+        3.3362640621510494e-05,
+        2.3305932885540513e-05,
+        3.0630018088502724e-05
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -3.243285487410529,
+        -8.26565109420924,
+        -1.2053992612843847,
+        1.0761217865964836,
+        5.180056784287833,
+        9.932488564111967,
+        7.067530133579253,
+        -3.8432296846788088
+      ],
+      "native_range_power_median_db_bins1_8": [
+        52.24046595389055,
+        48.56543541269311,
+        55.92558292677345,
+        57.014366566385974,
+        58.70343568374412,
+        61.439291234643456,
+        60.14184134317187,
+        51.33769227175654
+      ]
+    },
+    {
+      "label": "target absent, possible operator motion",
+      "window_host_s": [
+        106.62,
+        113.814919
+      ],
+      "frames": 73,
+      "roi_zero_local_maximum_frames": 40,
+      "roi_nonzero_local_maximum_frames": 3,
+      "roi_negative_local_maximum_frames": 3,
+      "roi_positive_local_maximum_frames": 0,
+      "zero_peak_range_bins1_4_counts": {
+        "3": 7,
+        "4": 15,
+        "1": 27,
+        "2": 7
+      },
+      "roi_peak_doppler_offset_counts": {
+        "0": 56,
+        "-1": 3
+      },
+      "all_range_zero_local_maximum_frames": 73,
+      "all_range_nonzero_local_maximum_frames": 24,
+      "recorded_1d_output_frames": 17,
+      "recorded_1d_numeric_distance_frames": 17,
+      "recorded_1d_conditional_range_cm_p05_p50_p95": [
+        42.310648518935906,
+        48.925172177660166,
+        70.0221943058371
+      ],
+      "recorded_1d_output_episodes": [
+        {
+          "start_host_s": 110.938979,
+          "end_host_s": 112.028911,
+          "approximate_duration_s": 1.1890969999999896
+        },
+        {
+          "start_host_s": 112.326362,
+          "end_host_s": 112.722643,
+          "approximate_duration_s": 0.49544600000000116
+        }
+      ],
+      "phase_median_cycles_per_saved_block_bins1_8": [
+        -0.00016499464056610427,
+        -0.006086397323821324,
+        9.27279278258877e-06,
+        2.678746879492499e-06,
+        4.080516429830874e-05,
+        2.1887519011066115e-05,
+        5.270323314479914e-05,
+        -0.0002420172684287569
+      ],
+      "zero_doppler_threshold_margin_median_db_bins1_8": [
+        -1.2940663130124763,
+        -2.8359132432813263,
+        -0.6130855140302558,
+        1.3203095831241616,
+        3.0414375686356236,
+        6.2055855505775845,
+        3.829432526922586,
+        -4.154462362012571
+      ],
+      "native_range_power_median_db_bins1_8": [
+        55.02803749590058,
+        56.16332664715432,
+        56.88960114678487,
+        57.12999607202663,
+        57.7309643369886,
+        58.93162550031131,
+        57.03265866127627,
+        49.92106510250112
+      ]
+    }
+  ],
+  "labels": "Absolute approximate video times, no fitted offset. 1:07:45 interpreted as 67.45 s. Placement 13.99\u201318.99, removal 95.39\u2013100.39 excluded. Motion interiors trim 0.2 s/side; holds 2 s/side. Operator motion starts at unknown time after 106.62 s; quiet post-removal analysis ends 0.5 s before that bound.",
+  "interpretation": "Candidate outputs only, not object association or detection/false-alarm accuracy. ROI bins 1\u20134 follow the supplied 30\u2013120 cm path; all usable bins remain tested. Empty means no added target, not absence of walls or other legitimate reflectors. Physical speed/distance remain uncalibrated."
+}

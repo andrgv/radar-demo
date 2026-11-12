@@ -1,0 +1,357 @@
+{
+  "estimator": {
+    "method": "candidate-real-tone-dc-v1",
+    "settings": {
+      "max_residual_fraction": 0.5,
+      "near_energy_fraction": 0.01,
+      "max_width_bins": 0.5,
+      "rx_gate_bins": 0.25,
+      "min_supported_rx": 2
+    },
+    "model": "Independent DC/cos/sin per chirp/RX; shared fast-time frequency; no window, baseline or label fit",
+    "support": "Current accepted group half-bin boundaries only; no expansion across a boundary optimum",
+    "interpretation": "Experimental estimator, empirical quality gates; not a detector or calibrated uncertainty"
+  },
+  "detector_settings": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "sessions": [
+    {
+      "recording": "recordings/rd-gui-20261112-094114-038104/live-001",
+      "frames": 2532,
+      "raw_sha256": "bc26afae519f8691ecac281f909394bb29439632bf6c34b776acc26c8b3e77d9",
+      "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+      "ca_matches_saved": true,
+      "windows": [
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "target_m": null,
+          "window_host_s": [
+            8.66,
+            22.12
+          ],
+          "variants": {
+            "ca": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 135
+              }
+            },
+            "os": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 135
+              }
+            }
+          }
+        },
+        {
+          "label": "bare A 50 cm (trim 2s)",
+          "state": "hold",
+          "target_m": 0.5,
+          "window_host_s": [
+            52.36,
+            83.1
+          ],
+          "variants": {
+            "ca": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 309,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 309,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 309
+              }
+            },
+            "os": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 309,
+                  "frames": 309,
+                  "cm_p05_p50_p95": [
+                    127.45402104528019,
+                    127.79687301370713,
+                    128.23925875200084
+                  ],
+                  "conditional_placement_mae_cm": 77.81997336236888,
+                  "output_episodes": 1,
+                  "longest_output_s": 30.9
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 309,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "phase_fit_at_support_boundary": 309
+              }
+            }
+          }
+        },
+        {
+          "label": "foil 50 cm (trim 2s)",
+          "state": "hold",
+          "target_m": 0.5,
+          "window_host_s": [
+            117.66,
+            145.49
+          ],
+          "variants": {
+            "ca": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 280,
+                  "frames": 280,
+                  "cm_p05_p50_p95": [
+                    45.941280034899094,
+                    46.136040761665214,
+                    46.650315196697996
+                  ],
+                  "conditional_placement_mae_cm": 3.8195556762596348,
+                  "output_episodes": 1,
+                  "longest_output_s": 28.0
+                },
+                "phase_m": {
+                  "numeric_frames": 280,
+                  "frames": 280,
+                  "cm_p05_p50_p95": [
+                    50.9727642498067,
+                    51.02152444880437,
+                    51.122800821604315
+                  ],
+                  "conditional_placement_mae_cm": 1.0336602925013307,
+                  "output_episodes": 1,
+                  "longest_output_s": 28.0
+                }
+              },
+              "phase_reasons": {
+                "experimental_phase_range": 280
+              }
+            },
+            "os": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 280,
+                  "frames": 280,
+                  "cm_p05_p50_p95": [
+                    45.941280034899094,
+                    46.136040761665214,
+                    46.650315196697996
+                  ],
+                  "conditional_placement_mae_cm": 3.8195556762596348,
+                  "output_episodes": 1,
+                  "longest_output_s": 28.0
+                },
+                "phase_m": {
+                  "numeric_frames": 280,
+                  "frames": 280,
+                  "cm_p05_p50_p95": [
+                    50.9727642498067,
+                    51.02152444880437,
+                    51.122800821604315
+                  ],
+                  "conditional_placement_mae_cm": 1.0336602925013307,
+                  "output_episodes": 1,
+                  "longest_output_s": 28.0
+                }
+              },
+              "phase_reasons": {
+                "experimental_phase_range": 280
+              }
+            }
+          }
+        },
+        {
+          "label": "bare B 50 cm (trim 2s)",
+          "state": "hold",
+          "target_m": 0.5,
+          "window_host_s": [
+            181.2,
+            208.38
+          ],
+          "variants": {
+            "ca": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 274,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 274,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 274
+              }
+            },
+            "os": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 274,
+                  "frames": 274,
+                  "cm_p05_p50_p95": [
+                    28.994695800137443,
+                    29.066460750026636,
+                    29.13804281762546
+                  ],
+                  "conditional_placement_mae_cm": 20.933491062743393,
+                  "output_episodes": 1,
+                  "longest_output_s": 27.4
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 274,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "poor_single_tone_model": 274
+              }
+            }
+          }
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "target_m": null,
+          "window_host_s": [
+            228.29,
+            241.71
+          ],
+          "variants": {
+            "ca": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 135
+              }
+            },
+            "os": {
+              "channels": {
+                "peak_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                },
+                "phase_m": {
+                  "numeric_frames": 0,
+                  "frames": 135,
+                  "cm_p05_p50_p95": null,
+                  "conditional_placement_mae_cm": null,
+                  "output_episodes": 0,
+                  "longest_output_s": 0
+                }
+              },
+              "phase_reasons": {
+                "no_candidate_above_noise": 135
+              }
+            }
+          }
+        }
+      ],
+      "fit_processing_ms_p50_p95_max": [
+        1.148958457633853,
+        1.440093549899757,
+        43.77316730096936
+      ]
+    }
+  ],
+  "sources": {
+    "radar_min/phase_range.py": "398a1d6e9161c6f933010a1db2a092602842869ad433d347fd03a93b39535eb9",
+    "radar_min/cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+    "radar_min/cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "tools/evaluate_phase_range.py": "102b17aaf23987bc22bf441665b9bced9612a897b1a2eacdaf870c8160312bbd"
+  },
+  "manifests": {
+    "configs/material-control-20261112.json": "04d345073109b338fde6e283e5c68265cba5a3917e5194fd5771283ee8b11220"
+  },
+  "interpretation": "Development comparison, no label fit or threshold sweep. Phase estimates require existing confirmed candidate support; rejected fits remain null. CA/OS settings unchanged. Conditional placement error does not establish physical identity or independent calibrated accuracy; read with coverage and empty outputs."
+}

@@ -1,0 +1,1127 @@
+{
+  "protocol": "First half of first trim-2 empty fits exactly one nuisance tone/RX from empty covariance, fixed 0.05\u20135m grid at 5mm. No target-label fit or nuisance-rank sweep; nuisance frequency frozen afterward. Current independent sin/cos coefficients per chirp/RX permit background phase/amplitude changes. Raw DC-centered data; no fixed waveform subtraction. Conditional candidate grid is saved acquisition half-bin bounds at 1/64 native bin. Every quiet frame used. A probe exists even without CFAR; never a primary or confirmed object.",
+  "quality_rules": {
+    "conditional_max_residual": 0.5,
+    "max_width_native_bins": 0.5,
+    "rx_gate_native_bins": 0.25,
+    "min_supported_rx": 2,
+    "near_energy_fraction": 0.01,
+    "min_basis_singular": 1e-06,
+    "scan_boundary_rejected": true,
+    "competing_optima_rejected": true,
+    "note": "Borrowed fixed geometry/residual conventions from prior phase diagnostics, applied to post-nuisance energy. New diagnostic policy, not calibrated detection or independent validation."
+  },
+  "candidate_energy_threshold": 30486160.578274515,
+  "energy_gate": "Training-99th-percentile conditional explained energy per retained chirp/RX; empirical, no false-alarm calibration.",
+  "background_nominal_tone_m_rx": [
+    [
+      2.165
+    ],
+    [
+      2.2849999999999997
+    ],
+    [
+      2.15
+    ]
+  ],
+  "background_search_bounds_m": [
+    0.05,
+    5.0
+  ],
+  "background_search_boundary_rx": [
+    false,
+    false,
+    false
+  ],
+  "background_boundary_policy": "Retained as an explicit diagnostic warning; not hidden or used to retune the model. Quality-only outputs do not certify nuisance-frequency identification.",
+  "training_sequences": [
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155
+  ],
+  "candidate_grid_m": [
+    0.17379272927536232,
+    0.1792237520652174,
+    0.18465477485507248,
+    0.19008579764492753,
+    0.1955168204347826,
+    0.20094784322463768,
+    0.20637886601449276,
+    0.21180988880434784,
+    0.2172409115942029,
+    0.22267193438405797,
+    0.22810295717391305,
+    0.23353397996376812,
+    0.2389650027536232,
+    0.24439602554347828,
+    0.24982704833333333,
+    0.25525807112318843,
+    0.2606890939130435,
+    0.26612011670289853,
+    0.2715511394927536,
+    0.2769821622826087,
+    0.28241318507246377,
+    0.28784420786231885,
+    0.2932752306521739,
+    0.298706253442029,
+    0.3041372762318841,
+    0.30956829902173916,
+    0.31499932181159424,
+    0.32043034460144926,
+    0.32586136739130434,
+    0.3312923901811594,
+    0.3367234129710145,
+    0.34215443576086957,
+    0.34758545855072465,
+    0.3530164813405797,
+    0.3584475041304348,
+    0.3638785269202899,
+    0.36930954971014496,
+    0.37474057250000004,
+    0.38017159528985506,
+    0.38560261807971014,
+    0.3910336408695652,
+    0.3964646636594203,
+    0.40189568644927537,
+    0.40732670923913045,
+    0.4127577320289855,
+    0.4181887548188406,
+    0.4236197776086957,
+    0.42905080039855076,
+    0.4344818231884058,
+    0.43991284597826086,
+    0.44534386876811594,
+    0.450774891557971,
+    0.4562059143478261,
+    0.46163693713768117,
+    0.46706795992753625,
+    0.4724989827173913,
+    0.4779300055072464,
+    0.4833610282971015,
+    0.48879205108695656,
+    0.4942230738768116,
+    0.49965409666666666,
+    0.5050851194565218,
+    0.5105161422463769,
+    0.515947165036232,
+    0.521378187826087,
+    0.526809210615942,
+    0.5322402334057971,
+    0.5376712561956521,
+    0.5431022789855072,
+    0.5485333017753623,
+    0.5539643245652174,
+    0.5593953473550725,
+    0.5648263701449275,
+    0.5702573929347826,
+    0.5756884157246377,
+    0.5811194385144928,
+    0.5865504613043478,
+    0.5919814840942029,
+    0.597412506884058,
+    0.6028435296739131,
+    0.6082745524637682,
+    0.6137055752536232,
+    0.6191365980434783,
+    0.6245676208333334,
+    0.6299986436231885,
+    0.6354296664130435,
+    0.6408606892028985,
+    0.6462917119927536,
+    0.6517227347826087,
+    0.6571537575724637,
+    0.6625847803623188,
+    0.6680158031521739,
+    0.673446825942029,
+    0.6788778487318841,
+    0.6843088715217391,
+    0.6897398943115942,
+    0.6951709171014493,
+    0.7006019398913044,
+    0.7060329626811594,
+    0.7114639854710145,
+    0.7168950082608696,
+    0.7223260310507247,
+    0.7277570538405798,
+    0.7331880766304348,
+    0.7386190994202899,
+    0.744050122210145,
+    0.7494811450000001,
+    0.754912167789855,
+    0.7603431905797101,
+    0.7657742133695652,
+    0.7712052361594203,
+    0.7766362589492753,
+    0.7820672817391304,
+    0.7874983045289855,
+    0.7929293273188406,
+    0.7983603501086957,
+    0.8037913728985507,
+    0.8092223956884058,
+    0.8146534184782609,
+    0.820084441268116,
+    0.825515464057971,
+    0.8309464868478261,
+    0.8363775096376812,
+    0.8418085324275363,
+    0.8472395552173914,
+    0.8526705780072464,
+    0.8581016007971015,
+    0.8635326235869566,
+    0.8689636463768116,
+    0.8743946691666666,
+    0.8798256919565217,
+    0.8852567147463768,
+    0.8906877375362319,
+    0.896118760326087,
+    0.901549783115942,
+    0.9069808059057971,
+    0.9124118286956522,
+    0.9178428514855073,
+    0.9232738742753623,
+    0.9287048970652174,
+    0.9341359198550725,
+    0.9395669426449276,
+    0.9449979654347826,
+    0.9504289882246377,
+    0.9558600110144928,
+    0.9612910338043479,
+    0.966722056594203,
+    0.972153079384058,
+    0.9775841021739131,
+    0.9830151249637682,
+    0.9884461477536232,
+    0.9938771705434782,
+    0.9993081933333333,
+    1.0047392161231885,
+    1.0101702389130436,
+    1.0156012617028987,
+    1.0210322844927537,
+    1.0264633072826088,
+    1.031894330072464,
+    1.037325352862319,
+    1.042756375652174,
+    1.048187398442029,
+    1.053618421231884,
+    1.059049444021739,
+    1.0644804668115941,
+    1.0699114896014492,
+    1.0753425123913043,
+    1.0807735351811594,
+    1.0862045579710145,
+    1.0916355807608695,
+    1.0970666035507246,
+    1.1024976263405797,
+    1.1079286491304348,
+    1.1133596719202898,
+    1.118790694710145,
+    1.1242217175,
+    1.129652740289855,
+    1.1350837630797102,
+    1.1405147858695652,
+    1.1459458086594203,
+    1.1513768314492754,
+    1.1568078542391305,
+    1.1622388770289855,
+    1.1676698998188406,
+    1.1731009226086957,
+    1.1785319453985508,
+    1.1839629681884059,
+    1.189393990978261,
+    1.194825013768116,
+    1.200256036557971,
+    1.2056870593478262,
+    1.2111180821376812,
+    1.2165491049275363,
+    1.2219801277173914,
+    1.2274111505072465,
+    1.2328421732971016,
+    1.2382731960869566,
+    1.2437042188768117,
+    1.2491352416666668,
+    1.2545662644565219,
+    1.259997287246377,
+    1.265428310036232,
+    1.270859332826087,
+    1.276290355615942,
+    1.281721378405797,
+    1.287152401195652,
+    1.2925834239855072,
+    1.2980144467753623,
+    1.3034454695652173,
+    1.3088764923550724,
+    1.3143075151449275,
+    1.3197385379347826,
+    1.3251695607246377,
+    1.3306005835144927,
+    1.3360316063043478,
+    1.3414626290942029,
+    1.346893651884058,
+    1.352324674673913,
+    1.3577556974637681,
+    1.3631867202536232,
+    1.3686177430434783,
+    1.3740487658333334,
+    1.3794797886231884,
+    1.3849108114130435,
+    1.3903418342028986,
+    1.3957728569927537,
+    1.4012038797826087,
+    1.4066349025724638,
+    1.412065925362319,
+    1.417496948152174,
+    1.422927970942029,
+    1.4283589937318841,
+    1.4337900165217392,
+    1.4392210393115943,
+    1.4446520621014494,
+    1.4500830848913044,
+    1.4555141076811595,
+    1.4609451304710146,
+    1.4663761532608697,
+    1.4718071760507248,
+    1.4772381988405798,
+    1.482669221630435,
+    1.48810024442029,
+    1.493531267210145,
+    1.4989622900000001,
+    1.5043933127898552,
+    1.50982433557971,
+    1.5152553583695652,
+    1.5206863811594202,
+    1.5261174039492753,
+    1.5315484267391304,
+    1.5369794495289855,
+    1.5424104723188405,
+    1.5478414951086956,
+    1.5532725178985507,
+    1.5587035406884058,
+    1.5641345634782609
+  ],
+  "spacing_m": 0.34758545855072465,
+  "manifest": {
+    "schema": 1,
+    "labels": "Consecutive user durations from first saved frame; handling excluded; primary 2s trims and 1s sensitivity. No fitted offset. Labels end 243.71s; any later tail unscored.",
+    "scene": {
+      "target": "cardboard box, bare then foil-front then bare at nominal 50 cm",
+      "operator": "B during all quiet captures; explicitly reported",
+      "fixed_geometry": "User explicitly confirmed box footprint and orientation unchanged while only foil added/removed.",
+      "dimensions": "Earlier box front about 45 x 24 cm; current dimensions not remeasured in latest message",
+      "distance_reference": "Established antenna-face to front-face protocol; current user supplies nominal 50 cm",
+      "background": "Prior setup wall a little over 2 m; current message does not remeasure"
+    },
+    "segments": [
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 0.0,
+        "end_s": 6.66,
+        "duration_s": 6.66
+      },
+      {
+        "label": "empty A",
+        "state": "target_absent",
+        "start_s": 6.66,
+        "end_s": 24.12,
+        "duration_s": 17.46
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 24.12,
+        "end_s": 50.36,
+        "duration_s": 26.24
+      },
+      {
+        "label": "bare A 50 cm",
+        "state": "hold",
+        "start_s": 50.36,
+        "end_s": 85.1,
+        "duration_s": 34.74,
+        "nominal_target_m": 0.5,
+        "material": "bare cardboard"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 85.1,
+        "end_s": 115.66,
+        "duration_s": 30.56
+      },
+      {
+        "label": "foil 50 cm",
+        "state": "hold",
+        "start_s": 115.66,
+        "end_s": 147.49,
+        "duration_s": 31.83,
+        "nominal_target_m": 0.5,
+        "material": "foil-covered front"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 147.49,
+        "end_s": 179.2,
+        "duration_s": 31.71
+      },
+      {
+        "label": "bare B 50 cm",
+        "state": "hold",
+        "start_s": 179.2,
+        "end_s": 210.38,
+        "duration_s": 31.18,
+        "nominal_target_m": 0.5,
+        "material": "bare cardboard"
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 210.38,
+        "end_s": 226.29,
+        "duration_s": 15.91
+      },
+      {
+        "label": "final empty",
+        "state": "target_absent",
+        "start_s": 226.29,
+        "end_s": 243.71,
+        "duration_s": 17.42
+      }
+    ],
+    "cases": [
+      {
+        "recording": "recordings/rd-gui-20261112-094114-038104/live-001",
+        "windows": [
+          {
+            "label": "empty A (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              7.66,
+              23.12
+            ],
+            "original_window_host_s": [
+              6.66,
+              24.12
+            ]
+          },
+          {
+            "label": "empty A (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              8.66,
+              22.12
+            ],
+            "original_window_host_s": [
+              6.66,
+              24.12
+            ]
+          },
+          {
+            "label": "bare A 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              51.36,
+              84.1
+            ],
+            "original_window_host_s": [
+              50.36,
+              85.1
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "bare A 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              52.36,
+              83.1
+            ],
+            "original_window_host_s": [
+              50.36,
+              85.1
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "foil 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              116.66,
+              146.49
+            ],
+            "original_window_host_s": [
+              115.66,
+              147.49
+            ],
+            "nominal_target_m": 0.5,
+            "material": "foil-covered front"
+          },
+          {
+            "label": "foil 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              117.66,
+              145.49
+            ],
+            "original_window_host_s": [
+              115.66,
+              147.49
+            ],
+            "nominal_target_m": 0.5,
+            "material": "foil-covered front"
+          },
+          {
+            "label": "bare B 50 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              180.2,
+              209.38
+            ],
+            "original_window_host_s": [
+              179.2,
+              210.38
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "bare B 50 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              181.2,
+              208.38
+            ],
+            "original_window_host_s": [
+              179.2,
+              210.38
+            ],
+            "nominal_target_m": 0.5,
+            "material": "bare cardboard"
+          },
+          {
+            "label": "final empty (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              227.29,
+              242.71
+            ],
+            "original_window_host_s": [
+              226.29,
+              243.71
+            ]
+          },
+          {
+            "label": "final empty (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              228.29,
+              241.71
+            ],
+            "original_window_host_s": [
+              226.29,
+              243.71
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "windows": [
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        8.66,
+        22.12
+      ],
+      "original_window_host_s": [
+        6.66,
+        24.12
+      ],
+      "role": "training only",
+      "frames": 67,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 67
+      },
+      "failure_counts": {
+        "scan_boundary": 67,
+        "poor_conditional_tone_model": 67,
+        "insufficient_consistent_rx": 67
+      },
+      "energy_changed_frames": 1,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 67,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.46011564543732686,
+        0.4628407479275304,
+        0.4658442352075802
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.26878313009001636,
+        0.27116385510973273,
+        0.27387126126480477
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5832062196554586,
+        0.5853704150166169,
+        0.5904878518557503
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        30009698.35136335,
+        30294456.395242035,
+        30433117.37332928
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.03801715952898552,
+        0.04344818231884057,
+        0.04344818231884057
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        8.66,
+        22.12
+      ],
+      "original_window_host_s": [
+        6.66,
+        24.12
+      ],
+      "role": "held-out same-empty half",
+      "frames": 68,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 68
+      },
+      "failure_counts": {
+        "scan_boundary": 68,
+        "poor_conditional_tone_model": 68,
+        "insufficient_consistent_rx": 68
+      },
+      "energy_changed_frames": 7,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 68,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.45969812144979083,
+        0.46234099622100394,
+        0.4644252655034834
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.2682655407071951,
+        0.27077807418733557,
+        0.27382568753499803
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5825011716313293,
+        0.5858450737094933,
+        0.5900068513827885
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        30077278.899386458,
+        30282528.062964283,
+        30511726.317706898
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.03801715952898552,
+        0.04344818231884057,
+        0.04344818231884057
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "bare A 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        52.36,
+        83.1
+      ],
+      "original_window_host_s": [
+        50.36,
+        85.1
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "role": "held-out interval",
+      "frames": 309,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 309
+      },
+      "failure_counts": {
+        "scan_boundary": 309,
+        "poor_conditional_tone_model": 309,
+        "insufficient_consistent_rx": 309
+      },
+      "energy_changed_frames": 309,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 309,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ],
+          "nominal_difference_mae_cm": 32.620727072463765,
+          "within_half_native_bin": 0
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.6538255496776789,
+        0.65655887204587,
+        0.6593324529642618
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.3687520423007745,
+        0.37176844584745594,
+        0.3743600866848759
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5622514384609991,
+        0.5667678053774826,
+        0.5687860754823807
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        38679390.47378258,
+        38890043.82808941,
+        39640313.566186465
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.8526705780072465,
+        0.8581016007971016,
+        0.8581016007971016
+      ],
+      "width_m_p05_p50_p95": [
+        0.021724091159420283,
+        0.021724091159420283,
+        0.021724091159420283
+      ],
+      "supported_rx_p05_p50_p95": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "foil 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        117.66,
+        145.49
+      ],
+      "original_window_host_s": [
+        115.66,
+        147.49
+      ],
+      "nominal_target_m": 0.5,
+      "material": "foil-covered front",
+      "role": "held-out interval",
+      "frames": 280,
+      "reasons": {
+        "conditional_quality_only": 280
+      },
+      "failure_counts": {},
+      "energy_changed_frames": 280,
+      "quality_frames": 280,
+      "inspection_frames": 280,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 280,
+          "cm_p05_p50_p95": [
+            51.05161422463769,
+            51.05161422463769,
+            51.05161422463769
+          ],
+          "nominal_difference_mae_cm": 1.051614224637687,
+          "within_half_native_bin": 280
+        },
+        "quality_range_m": {
+          "frames": 280,
+          "cm_p05_p50_p95": [
+            51.05161422463769,
+            51.05161422463769,
+            51.05161422463769
+          ],
+          "nominal_difference_mae_cm": 1.051614224637687,
+          "within_half_native_bin": 280
+        },
+        "inspection_range_m": {
+          "frames": 280,
+          "cm_p05_p50_p95": [
+            51.05161422463769,
+            51.05161422463769,
+            51.05161422463769
+          ],
+          "nominal_difference_mae_cm": 1.051614224637687,
+          "within_half_native_bin": 280
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.9969935283769177,
+        0.9973235299729858,
+        0.9976468884802928
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.08149134729636631,
+        0.0916306750401638,
+        0.09575734434296204
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.08167861025492755,
+        0.09187239802824657,
+        0.09604200547457138
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        1494601694.6549497,
+        1519032314.3516712,
+        1614073896.5184367
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0486076539692029,
+        0.048879205108695645,
+        0.048879205108695645
+      ],
+      "width_m_p05_p50_p95": [
+        0.03258613673913041,
+        0.03258613673913041,
+        0.03801715952898549
+      ],
+      "supported_rx_p05_p50_p95": [
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    {
+      "label": "bare B 50 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        181.2,
+        208.38
+      ],
+      "original_window_host_s": [
+        179.2,
+        210.38
+      ],
+      "nominal_target_m": 0.5,
+      "material": "bare cardboard",
+      "role": "held-out interval",
+      "frames": 274,
+      "reasons": {
+        "poor_conditional_tone_model;insufficient_consistent_rx": 274
+      },
+      "failure_counts": {
+        "poor_conditional_tone_model": 274,
+        "insufficient_consistent_rx": 274
+      },
+      "energy_changed_frames": 274,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 274,
+          "cm_p05_p50_p95": [
+            23.89650027536232,
+            23.89650027536232,
+            23.89650027536232
+          ],
+          "nominal_difference_mae_cm": 26.109446099955036,
+          "within_half_native_bin": 0
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.7170605532044834,
+        0.7217914817075735,
+        0.7254152056392803
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.4185996643417275,
+        0.42328508839694867,
+        0.4262342469831908
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5839995458792264,
+        0.5860457604294937,
+        0.58881494086317
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        44848780.12394278,
+        45028800.30786696,
+        45224091.96262427
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.16293068369565217,
+        0.16836170648550725,
+        0.16836170648550725
+      ],
+      "width_m_p05_p50_p95": [
+        0.12491352416666668,
+        0.12491352416666668,
+        0.12491352416666668
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "final empty (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        228.29,
+        241.71
+      ],
+      "original_window_host_s": [
+        226.29,
+        243.71
+      ],
+      "role": "held-out interval",
+      "frames": 135,
+      "reasons": {
+        "scan_boundary;poor_conditional_tone_model;insufficient_consistent_rx": 135
+      },
+      "failure_counts": {
+        "scan_boundary": 135,
+        "poor_conditional_tone_model": 135,
+        "insufficient_consistent_rx": 135
+      },
+      "energy_changed_frames": 133,
+      "quality_frames": 0,
+      "inspection_frames": 0,
+      "channels": {
+        "diagnostic_range_m": {
+          "frames": 135,
+          "cm_p05_p50_p95": [
+            17.37927292753623,
+            17.37927292753623,
+            17.37927292753623
+          ]
+        },
+        "quality_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        },
+        "inspection_range_m": {
+          "frames": 0,
+          "cm_p05_p50_p95": null
+        }
+      },
+      "background_residual_fraction_p05_p50_p95": [
+        0.45595145675339177,
+        0.4596017325333802,
+        0.4629053054297346
+      ],
+      "joint_raw_residual_fraction_p05_p50_p95": [
+        0.26025959809845195,
+        0.26351524495001755,
+        0.26625204674253716
+      ],
+      "conditional_residual_fraction_p05_p50_p95": [
+        0.5693456251217439,
+        0.573122033602061,
+        0.5763599806396751
+      ],
+      "unique_energy_per_trace_p05_p50_p95": [
+        30646602.29093836,
+        30840936.87553985,
+        31072052.91848123
+      ],
+      "rx_spread_m_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m_p05_p50_p95": [
+        0.03801715952898552,
+        0.03801715952898552,
+        0.04344818231884057
+      ],
+      "supported_rx_p05_p50_p95": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "hashes": {
+    "configs/material-control-20261112.json": "04d345073109b338fde6e283e5c68265cba5a3917e5194fd5771283ee8b11220",
+    "recordings/rd-gui-20261112-094114-038104/live-001/frames.grd": "bc26afae519f8691ecac281f909394bb29439632bf6c34b776acc26c8b3e77d9",
+    "recordings/rd-gui-20261112-094114-038104/live-001/arrivals.jsonl": "979cf33abccb471a172744b4ac6d9fab48b085655e2ad7c116f71e040bebcf38",
+    "recordings/rd-gui-20261112-094114-038104/live-001/config.json": "e23fa6761882efb7f7858a72622298f0be7e2807b09c15cadea08bcd9b1a7486",
+    "tools/investigate_empty_trained_tone.py": "566fd5fa71b8d8df9d1ebb2ed1b9197e8b3b314159245230e49e1c7decf66a79",
+    "tools/evaluate_tone_background.py": "2d03104b640969f9167401c1fbb5a931a15e182db538074871a46890d220fc46",
+    "tools/fit_range_signal.py": "2285519566d8f971a0b5fa16caa7c0a63954826aebe5425708f6aa9c8d4b5a3e",
+    "tools/evaluate_power_fit.py": "56fd0df89786da59232ba920b348a6456ff82d92454a131036532e7bd6835c8a",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14"
+  }
+}

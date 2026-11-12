@@ -1,0 +1,2392 @@
+{
+  "manifest": {
+    "schema": 1,
+    "labels": "Consecutive user durations from first saved frame; transitions excluded; primary 2s trims with 1s sensitivity. No fitted offset. Labeled end 261.83s; later tail unlabeled.",
+    "scene": {
+      "target": "bare cardboard box",
+      "operator": "stationary at B, described as away from sensor range, during every quiet hold; user explicitly confirmed",
+      "front_face_dimensions_cm": [
+        45,
+        24
+      ],
+      "dimensions_provenance": "Inherited prior same-box setup; not remeasured in this message",
+      "distance_reference": "Antenna face to box front surface from established protocol; latest message gives nominal placements",
+      "background_wall": "Prior setup a little over 2 m; latest message did not remeasure"
+    },
+    "segments": [
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 0,
+        "end_s": 10.18,
+        "duration_s": 10.18
+      },
+      {
+        "label": "empty A",
+        "state": "target_absent",
+        "start_s": 10.18,
+        "end_s": 25.66,
+        "duration_s": 15.48
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 25.66,
+        "end_s": 46.3,
+        "duration_s": 20.64
+      },
+      {
+        "label": "50 cm A",
+        "state": "hold",
+        "start_s": 46.3,
+        "end_s": 76.96,
+        "duration_s": 30.66,
+        "nominal_target_m": 0.5
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 76.96,
+        "end_s": 89.75,
+        "duration_s": 12.79
+      },
+      {
+        "label": "empty B",
+        "state": "target_absent",
+        "start_s": 89.75,
+        "end_s": 105.71,
+        "duration_s": 15.96
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 105.71,
+        "end_s": 126.37,
+        "duration_s": 20.66
+      },
+      {
+        "label": "50 cm B",
+        "state": "hold",
+        "start_s": 126.37,
+        "end_s": 157.46,
+        "duration_s": 31.09,
+        "nominal_target_m": 0.5
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 157.46,
+        "end_s": 169.77,
+        "duration_s": 12.31
+      },
+      {
+        "label": "empty C",
+        "state": "target_absent",
+        "start_s": 169.77,
+        "end_s": 185.75,
+        "duration_s": 15.98
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 185.75,
+        "end_s": 203.93,
+        "duration_s": 18.18
+      },
+      {
+        "label": "120 cm",
+        "state": "hold",
+        "start_s": 203.93,
+        "end_s": 235.59,
+        "duration_s": 31.66,
+        "nominal_target_m": 1.2
+      },
+      {
+        "label": "transition",
+        "state": "transition",
+        "start_s": 235.59,
+        "end_s": 245.85,
+        "duration_s": 10.26
+      },
+      {
+        "label": "final empty",
+        "state": "target_absent",
+        "start_s": 245.85,
+        "end_s": 261.83,
+        "duration_s": 15.98
+      }
+    ],
+    "cases": [
+      {
+        "recording": "recordings/rd-gui-20261111-223730-634059/live-001",
+        "windows": [
+          {
+            "label": "empty A (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              11.18,
+              24.66
+            ],
+            "original_window_host_s": [
+              10.18,
+              25.66
+            ]
+          },
+          {
+            "label": "empty A (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              12.18,
+              23.66
+            ],
+            "original_window_host_s": [
+              10.18,
+              25.66
+            ]
+          },
+          {
+            "label": "50 cm A (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              47.3,
+              75.96
+            ],
+            "original_window_host_s": [
+              46.3,
+              76.96
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm A (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              48.3,
+              74.96
+            ],
+            "original_window_host_s": [
+              46.3,
+              76.96
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty B (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              90.75,
+              104.71
+            ],
+            "original_window_host_s": [
+              89.75,
+              105.71
+            ]
+          },
+          {
+            "label": "empty B (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              91.75,
+              103.71
+            ],
+            "original_window_host_s": [
+              89.75,
+              105.71
+            ]
+          },
+          {
+            "label": "50 cm B (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              127.37,
+              156.46
+            ],
+            "original_window_host_s": [
+              126.37,
+              157.46
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "50 cm B (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              128.37,
+              155.46
+            ],
+            "original_window_host_s": [
+              126.37,
+              157.46
+            ],
+            "nominal_target_m": 0.5
+          },
+          {
+            "label": "empty C (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              170.77,
+              184.75
+            ],
+            "original_window_host_s": [
+              169.77,
+              185.75
+            ]
+          },
+          {
+            "label": "empty C (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              171.77,
+              183.75
+            ],
+            "original_window_host_s": [
+              169.77,
+              185.75
+            ]
+          },
+          {
+            "label": "120 cm (trim 1s)",
+            "state": "hold",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              204.93,
+              234.59
+            ],
+            "original_window_host_s": [
+              203.93,
+              235.59
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "120 cm (trim 2s)",
+            "state": "hold",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              205.93,
+              233.59
+            ],
+            "original_window_host_s": [
+              203.93,
+              235.59
+            ],
+            "nominal_target_m": 1.2
+          },
+          {
+            "label": "final empty (trim 1s)",
+            "state": "target_absent",
+            "trim_s": 1,
+            "operator_position": "B",
+            "window_host_s": [
+              246.85,
+              260.83
+            ],
+            "original_window_host_s": [
+              245.85,
+              261.83
+            ]
+          },
+          {
+            "label": "final empty (trim 2s)",
+            "state": "target_absent",
+            "trim_s": 2,
+            "operator_position": "B",
+            "window_host_s": [
+              247.85,
+              259.83
+            ],
+            "original_window_host_s": [
+              245.85,
+              261.83
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "manifest_sha256": "cea19702fffba795315756a23dadde1ecfa9fe360c9f3586cf0480fbe587c5fc",
+  "source_sha256": {
+    "tools/review_weak_capture.py": "b91e9f1bf5ca48fc420cb65c3d598c60a92a300df91be34962cf4537d7a05ba9",
+    "radar_min/core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+    "radar_min/cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e"
+  },
+  "upstream_report_sha256": "65b71fc20ca9502648dc7c9d68f64bd79ec0f36b92164469016b1b399d148508",
+  "raw_sha256": "b7e86311ef494952f6ecf23792dff17b6f00f91e4be33f08f022f5682c0bcca0",
+  "arrivals_sha256": "12bb8c5dfcf2571a954ea2c6d7ee22f172bc7d1a0bfa8ac73fad482941a66b82",
+  "capture_metadata": {
+    "schema": 1,
+    "created_unix_s": 1794454745.3763661,
+    "label": "live",
+    "session_id": "live-001",
+    "scene_id": "unspecified",
+    "config_fingerprint": "c4762ad1cfe12f1fcec31c144e604baca4c87520d02df42b7936001520ddfa3f",
+    "firmware_identity": "unknown; profile ID is not a firmware hash",
+    "freshness": "relative timing only; no firmware handshake",
+    "clock_sync": {
+      "algorithm": "bounded-startup-clock-v1",
+      "policy": {
+        "fit_span_s": 20.0,
+        "max_fit_span_s": 30.0,
+        "min_samples": 100,
+        "max_rate_error": 0.02,
+        "max_fit_residual_s": 0.1,
+        "p95_fit_residual_s": 0.05,
+        "max_progress_error_s": 0.5
+      },
+      "limitation": "Relative progress only; no absolute age handshake; startup latency ramps can resemble clock skew"
+    },
+    "baseline_provenance": null,
+    "detector": {
+      "algorithm": "joint-range-cfar-rd-v1",
+      "cfar": {
+        "guard_range": 1,
+        "guard_doppler": 1,
+        "training_range": 3,
+        "training_doppler": 2,
+        "min_training": 16,
+        "factor": 4.0,
+        "doppler_edge": "wrap"
+      },
+      "association": {
+        "confirmation_frames": 3,
+        "birth_margin_db": 3.0,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "max_missed_frames": 2,
+        "max_ambiguous_frames": 5,
+        "ambiguity_gap": 0.25,
+        "range_metric": "native"
+      },
+      "one_d_cfar": {
+        "guard_cells": 1,
+        "training_cells": 4,
+        "min_training_cells": 4,
+        "factor": 2.0
+      },
+      "source_sha256": {
+        "rd_live.py": "75304c3149caa1044391ca6a1aa06c04f3397a188207bcd72f48c707110d619b",
+        "range_doppler.py": "1fc286fc5cde9353878c47b0db9eecc2579e1fc0b51425a9d2e4629fd67cb38b",
+        "cfar_2d.py": "f05e20dae87fdffedb5635b81ce4cd85312945e25fc61c98bbfecc447245d7a1",
+        "rd_association.py": "49f70a938046b99f302bd7dd56fdd770ce00316e67fbfe8e8c741335f625d057",
+        "core.py": "3b1eefb383d44995faa6d8c20c84c57c23907cc55b437540027b5987875e7e14",
+        "cfar.py": "99787283ba6ee8f018dce32afafa91e8008069cbb0ba8ad6bed0b737ca740aca",
+        "cfar_range.py": "67c99a2be8f8794971a5ef96f03a85b30139dfc25cf8a25c378b19281c3a017e",
+        "joint_results.py": "509585b91faa72c5346c7c2a44a6591baa52e3a55c411e17c4eb5f90ddaaed17",
+        "cfar_os.py": "62757b31d4cac4f10a4c6f00b96540b8eb2f47ed4eb3af6bfb7f4360a4902831",
+        "motion_range.py": "283c5066c7255eeab3eb4c0d989bf7ed42f8731408a9b386cf30eb1e42a679d1",
+        "rx_diagnostics.py": "4325576e9f168be0e0fc9d1b6ed6c019f1fcc72fa77ff244b5490f20c5781643",
+        "phase_range.py": "398a1d6e9161c6f933010a1db2a092602842869ad433d347fd03a93b39535eb9",
+        "weak_candidate.py": "e82e44849587968c58e5ac3e56f47a5de6257f69f1e00af8b0fe19e97705ae76",
+        "weak_motion.py": "a150b8fd6252ec710b1ad8a777169691880645efc60e8599d3d4f0b20dba38fe",
+        "weak_features.py": "965ce3bc6cb25d5bae586fd176d8e98946b2191ac367e18083b8111d27dd3d88"
+      },
+      "measurement": "Confirmed current CFAR local maxima only; native bins; no held or predicted distance",
+      "input": "Full RD power; zero Doppler retained; no empty/background subtraction",
+      "nominal_distance": "Native RD bin centers retained beside experimental uncalibrated refinements",
+      "identity": "Radar feature hypotheses, not certified object identities or obstacle decisions",
+      "freshness": "Live stream continuity, host clock, backlog and timeout gates clear all hypotheses",
+      "primary_policy": "Exact frozen 1D baseline; no automatic RD-only promotion",
+      "refinement": "Current dense range FFT then slow-time Hann FFT; three Doppler rows; native half-bin range support; competing nearby peaks withheld",
+      "evidence": "1D and RD share ADC data; source agreement is not independent confirmation",
+      "experimental_os": {
+        "algorithm": "range-os-cfar-experimental-v1",
+        "cfar": {
+          "guard_cells": 1,
+          "training_cells": 4,
+          "min_training_cells": 4,
+          "factor": 2.0
+        },
+        "selection": "nearest qualifying peak group",
+        "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+        "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+        "edge_policy": "truncate; require minimum total reference count",
+        "os": {
+          "rank_fraction": 0.5
+        },
+        "reference": "kth smallest; k=ceil(rank_fraction*actual reference count)",
+        "threshold_interpretation": "Empirical multiplier; no calibrated Pfa; not interchangeable with CA statistics"
+      },
+      "motion_policy": "v2: two consecutive same-sign confirmed RD motion measurements; stopped continuation requires current CA threshold and local-peak support; no held/predicted range",
+      "motion_policy_settings": {
+        "motion_confirmation_frames": 2,
+        "stationary_support_required": true
+      },
+      "receiver_diagnostics": {
+        "method": "rx-Hann-support-and-tone-residual-v1",
+        "spread_note_bins": 0.25,
+        "residual_note_fraction": 0.5,
+        "scope": "Confirmed current 1D group, raw chirps across Doppler; inspection only",
+        "interpretation": "RX peaks share scene/data; agreement is not accuracy or identity. Residual at pooled FFT range includes other returns and peak bias, not a fitted confidence."
+      },
+      "experimental_weak_candidate": {
+        "method": "os-rd-raw-peak-support-v1",
+        "min_interior_rx": 2,
+        "rx_gate_bins": 0.25,
+        "max_width_bins": 0.5,
+        "scope": "One confirmed OS group, resolved OS fine peak, unique current raw RD maximum, interior raw-tone optimum and two RX frequency optima nearby",
+        "interpretation": "Inspection only; geometry checks do not accept the phase range model. Global residual/model rejection stays visible. Existing OS FFT estimate is not calibrated target identity.",
+        "phase_estimator": {
+          "method": "candidate-real-tone-dc-v1",
+          "settings": {
+            "max_residual_fraction": 0.5,
+            "near_energy_fraction": 0.01,
+            "max_width_bins": 0.5,
+            "rx_gate_bins": 0.25,
+            "min_supported_rx": 2
+          },
+          "model": "Independent DC/cos/sin per chirp/RX; shared fast-time frequency; no window, baseline or label fit",
+          "support": "Current accepted group half-bin boundaries only; no expansion across a boundary optimum",
+          "interpretation": "Experimental estimator, empirical quality gates; not a detector or calibrated uncertainty"
+        }
+      },
+      "experimental_weak_motion_link": {
+        "method": "motion-seeded-weak-stop-link-v1",
+        "motion_confirmation_frames": 2,
+        "max_range_difference_bins": 0.5,
+        "scope": "Supplement only: same current confirmed RD feature after two same-sign measured motion frames; stopped OS/raw-peak support must identify its current peak",
+        "clearing": "Invalid input, sequence gaps, missing/ambiguous/lost measurements, competitors or unsupported stops revoke the seed; stationary support cannot reseed",
+        "interpretation": "Current RD fine inspection, no held/predicted range, primary eligibility or certified physical identity"
+      },
+      "experimental_weak_feature_confirmation": {
+        "method": "consecutive-weak-scene-feature-v1",
+        "confirmation_frames": 3,
+        "range_gate": 1,
+        "doppler_gate": 2,
+        "doppler_edge": "wrap",
+        "original_association": {
+          "confirmation_frames": 3,
+          "birth_margin_db": 3.0,
+          "range_gate": 1,
+          "doppler_gate": 2,
+          "max_missed_frames": 2,
+          "max_ambiguous_frames": 5,
+          "ambiguity_gap": 0.25,
+          "range_metric": "native"
+        },
+        "isolation_range_bins": 1,
+        "isolation_doppler_bins": 2,
+        "missed_or_ambiguous_retention_frames": 0,
+        "evidence": "Confirmed OS + unique current RD maximum + original raw-peak geometry, then consecutive native-gated current observations; original RD birth margin is unchanged",
+        "range_method": "Existing current OS Hann FFT fine range, not a rejected phase estimate or Doppler-conditioned range",
+        "interpretation": "Separate weak: IDs denote scene-feature hypotheses, not objects; no primary eligibility, holding or prediction; shared ADC evidence is not independent confirmation"
+      },
+      "gui_distance_policy": "frozen 1D baseline"
+    }
+  },
+  "capture_summary": {
+    "frames": 2691,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1,
+    "received_bytes": 21172789
+  },
+  "frames": 2691,
+  "host_span_s": 266.800734,
+  "labeled_end_s": 261.83,
+  "unscored_tail_s": 4.970733999999993,
+  "clock_states": {
+    "collecting": 200,
+    "frozen": 2491
+  },
+  "fit_diagnostics": {
+    "candidate_rate": 0.9918508342236256,
+    "candidate_offset_s": 0.00027782909960460955,
+    "max_residual_s": 0.01503400417342049,
+    "p95_residual_s": 0.002268076255816709,
+    "max_limit_s": 0.1,
+    "p95_limit_s": 0.05
+  },
+  "frozen_error_ms_p95_max": [
+    140.40983034784915,
+    153.08914443752997
+  ],
+  "saved_replay_results_association_motion_rx_os_phase_weak_link_and_feature_match": true,
+  "windows": [
+    {
+      "label": "empty A (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        11.18,
+        24.66
+      ],
+      "original_window_host_s": [
+        10.18,
+        25.66
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 136
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 136
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 136
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 136
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 136
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 136,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 136
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.585299910422634,
+        44.65522295860491,
+        46.678246541873264,
+        54.2216109905868,
+        55.52562356990626,
+        61.60341195961354,
+        61.46651474651598,
+        51.516866963031234,
+        47.408913202759784
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.659662803289855,
+        -17.73642643181265,
+        -14.959074687039429,
+        -6.288290359004042,
+        -2.0226232214131548,
+        8.263117194478976,
+        8.12847601531885,
+        -6.061226980270819,
+        -12.228783741646122
+      ],
+      "current_rd_measured_bins": {
+        "1": 136,
+        "6": 120,
+        "23": 136,
+        "12": 136,
+        "7": 16
+      }
+    },
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        12.18,
+        23.66
+      ],
+      "original_window_host_s": [
+        10.18,
+        25.66
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 116
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 116
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 116
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 116
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 116
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 116,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 116
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.59043847548348,
+        44.65949191995291,
+        46.67865932730216,
+        54.2224641550782,
+        55.52562356990626,
+        61.604070965998126,
+        61.4957947624853,
+        51.82239190698313,
+        47.2459220058612
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.659662803289855,
+        -17.74246877801611,
+        -14.980703927717519,
+        -6.314296257365593,
+        -2.0662221130427634,
+        8.24268397975942,
+        8.158008146169223,
+        -5.759158876818107,
+        -12.438764642696333
+      ],
+      "current_rd_measured_bins": {
+        "1": 116,
+        "6": 100,
+        "23": 116,
+        "12": 116,
+        "7": 16
+      }
+    },
+    {
+      "label": "50 cm A (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        47.3,
+        75.96
+      ],
+      "original_window_host_s": [
+        46.3,
+        76.96
+      ],
+      "nominal_target_m": 0.5,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 290,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 290
+          }
+        },
+        "os": {
+          "numeric_frames": 34,
+          "frames": 290,
+          "presence_frames": 56,
+          "cm_p05_p50_p95": [
+            84.53536626839475,
+            85.73820244495863,
+            86.50664854192046
+          ],
+          "episodes": 1,
+          "longest_s": 3.4,
+          "reasons": {
+            "cfar_peak_uncalibrated": 56,
+            "no_candidate_above_noise": 233,
+            "checking_persistence": 1
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 34,
+          "frames": 290,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            84.53536626839475,
+            85.73820244495863,
+            86.50664854192046
+          ],
+          "episodes": 1,
+          "longest_s": 3.4,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 34,
+            "fine_peak_at_group_boundary": 22,
+            "no_candidate_above_noise": 233,
+            "checking_persistence": 1
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 290,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "raw_peak_at_support_boundary": 34,
+            "fine_peak_at_group_boundary": 22,
+            "no_candidate_above_noise": 233,
+            "checking_persistence": 1
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 290,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 290
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 290,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 290
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        57.657601159499166,
+        58.55188758985203,
+        58.93123803147013,
+        54.51346420045593,
+        54.10364569357593,
+        65.92710132331369,
+        66.36292224496103,
+        55.45923991016923,
+        53.33365572662636
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -6.526797066549507,
+        -7.870970043541385,
+        -6.835594120460634,
+        -10.75526593870584,
+        -8.92334100919099,
+        7.15747318769415,
+        8.72429612792739,
+        -5.769770471408071,
+        -10.107326178339665
+      ],
+      "current_rd_measured_bins": {
+        "7": 290,
+        "2": 45,
+        "23": 290,
+        "14": 280,
+        "16": 185
+      }
+    },
+    {
+      "label": "50 cm A (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        48.3,
+        74.96
+      ],
+      "original_window_host_s": [
+        46.3,
+        76.96
+      ],
+      "nominal_target_m": 0.5,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 268,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 268
+          }
+        },
+        "os": {
+          "numeric_frames": 23,
+          "frames": 268,
+          "presence_frames": 45,
+          "cm_p05_p50_p95": [
+            85.39470338487112,
+            86.02091921837469,
+            86.53389794642189
+          ],
+          "episodes": 1,
+          "longest_s": 2.3,
+          "reasons": {
+            "cfar_peak_uncalibrated": 45,
+            "no_candidate_above_noise": 222,
+            "checking_persistence": 1
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 23,
+          "frames": 268,
+          "presence_frames": null,
+          "cm_p05_p50_p95": [
+            85.39470338487112,
+            86.02091921837469,
+            86.53389794642189
+          ],
+          "episodes": 1,
+          "longest_s": 2.3,
+          "reasons": {
+            "experimental_os_with_unique_current_rd_support": 23,
+            "fine_peak_at_group_boundary": 22,
+            "no_candidate_above_noise": 222,
+            "checking_persistence": 1
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 268,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "raw_peak_at_support_boundary": 23,
+            "fine_peak_at_group_boundary": 22,
+            "no_candidate_above_noise": 222,
+            "checking_persistence": 1
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 268,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 268
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 268,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 268
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        57.657601159499166,
+        58.55188758985203,
+        58.93123803147013,
+        54.519993386108084,
+        54.102228706874406,
+        65.92631535660502,
+        66.35862346311023,
+        55.428929722696445,
+        53.35104328413967
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -6.527090405169481,
+        -7.870970043541385,
+        -6.835594120460634,
+        -10.751089038478835,
+        -8.92334100919099,
+        7.15747318769415,
+        8.72429612792739,
+        -5.805726832109599,
+        -10.08850453746977
+      ],
+      "current_rd_measured_bins": {
+        "7": 268,
+        "2": 34,
+        "23": 268,
+        "14": 258,
+        "16": 178
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {},
+        "locations_cm": []
+      }
+    },
+    {
+      "label": "empty B (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        90.75,
+        104.71
+      ],
+      "original_window_host_s": [
+        89.75,
+        105.71
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 141
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 141
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.69784515888435,
+        44.73611306832517,
+        46.565903096762675,
+        54.111496780420055,
+        55.376477420958594,
+        61.443545866625,
+        60.7892227836135,
+        51.09095535264536,
+        47.393105590904895
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.398476663249127,
+        -17.306313812917363,
+        -14.71669863149028,
+        -6.026774407072173,
+        -1.6414475146404561,
+        8.11873444048221,
+        7.534644256773657,
+        -6.357699050638972,
+        -11.905600200608777
+      ],
+      "current_rd_measured_bins": {
+        "7": 12,
+        "23": 141,
+        "13": 23,
+        "1": 141,
+        "6": 129,
+        "12": 115
+      }
+    },
+    {
+      "label": "empty B (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        91.75,
+        103.71
+      ],
+      "original_window_host_s": [
+        89.75,
+        105.71
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 120
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 120
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.693400707284496,
+        44.73473607583575,
+        46.566513082225,
+        54.11116975638626,
+        55.37487735009505,
+        61.43569575827817,
+        60.80152971803586,
+        51.12020519004111,
+        47.158605475873586
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.398292075040201,
+        -17.304970882508705,
+        -14.718691239527995,
+        -6.035789425365566,
+        -1.6482665254327769,
+        8.11041575721118,
+        7.532299615675063,
+        -6.223146416364337,
+        -12.101884358491745
+      ],
+      "current_rd_measured_bins": {
+        "6": 112,
+        "23": 120,
+        "13": 14,
+        "1": 120,
+        "12": 103,
+        "7": 8
+      }
+    },
+    {
+      "label": "50 cm B (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        127.37,
+        156.46
+      ],
+      "original_window_host_s": [
+        126.37,
+        157.46
+      ],
+      "nominal_target_m": 0.5,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": 294,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 294
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": 294,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 294
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "multiple_fine_peaks": 294
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "multiple_fine_peaks": 294
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 294
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 294,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 294
+          }
+        }
+      },
+      "ca_fine_reasons": {
+        "multiple_fine_peaks": 294
+      },
+      "median_power_db_bins1_9": [
+        60.9311386003218,
+        61.043980035878626,
+        59.58101648648291,
+        51.78040054506043,
+        53.21277328042201,
+        57.9472543001081,
+        59.43198873656321,
+        53.405691762732616,
+        53.186723688923585
+      ],
+      "median_ca_margin_db_bins1_9": [
+        1.171153140999691,
+        1.33844861187157,
+        -1.477731244299696,
+        -9.938364075670787,
+        -8.14799665820016,
+        -2.115428022899177,
+        0.9601198335051944,
+        -3.546907016832555,
+        -3.647725863995128
+      ],
+      "current_rd_measured_bins": {
+        "7": 294,
+        "1": 42,
+        "23": 294,
+        "16": 294,
+        "2": 252
+      }
+    },
+    {
+      "label": "50 cm B (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        128.37,
+        155.46
+      ],
+      "original_window_host_s": [
+        126.37,
+        157.46
+      ],
+      "nominal_target_m": 0.5,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": 274,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 274
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": 274,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "cfar_peak_uncalibrated": 274
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "multiple_fine_peaks": 274
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "multiple_fine_peaks": 274
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 274
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 274,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 274
+          }
+        }
+      },
+      "ca_fine_reasons": {
+        "multiple_fine_peaks": 274
+      },
+      "median_power_db_bins1_9": [
+        60.931011879656126,
+        61.043980035878626,
+        59.58101648648291,
+        51.78040054506043,
+        53.21277328042201,
+        57.946571494821015,
+        59.431511246333514,
+        53.387456683212434,
+        53.201703297512736
+      ],
+      "median_ca_margin_db_bins1_9": [
+        1.1718181173214424,
+        1.33844861187157,
+        -1.4791167011086133,
+        -9.939155120745859,
+        -8.150286301838513,
+        -2.11659918329341,
+        0.9564982884545163,
+        -3.5573437205961165,
+        -3.620379636224542
+      ],
+      "current_rd_measured_bins": {
+        "7": 274,
+        "1": 32,
+        "23": 274,
+        "16": 274,
+        "2": 242
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {
+          "2": 55
+        },
+        "locations_cm": [
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            36.93095497101449,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            37.47405725,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ],
+          [
+            38.01715952898551,
+            82.55154640579711
+          ]
+        ]
+      }
+    },
+    {
+      "label": "empty C (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        170.77,
+        184.75
+      ],
+      "original_window_host_s": [
+        169.77,
+        185.75
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 141
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 141
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 141,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 141
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.75590159256129,
+        44.78481435718527,
+        46.522196953616806,
+        54.02910060872273,
+        55.30933902097124,
+        61.57394580300882,
+        61.38031935235788,
+        53.49969301729874,
+        48.27059041595149
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.399770598586063,
+        -17.508056814350624,
+        -15.153104398333092,
+        -6.582157698036376,
+        -2.3935063841645703,
+        7.701300735142179,
+        8.122458734795963,
+        -3.9510433160929237,
+        -11.078483078101947
+      ],
+      "current_rd_measured_bins": {
+        "6": 92,
+        "23": 141,
+        "12": 18,
+        "1": 141,
+        "7": 49,
+        "13": 3
+      }
+    },
+    {
+      "label": "empty C (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        171.77,
+        183.75
+      ],
+      "original_window_host_s": [
+        169.77,
+        185.75
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 121
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 121
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 121
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 121
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 121
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 121,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 121
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.760124918095855,
+        44.787779670975695,
+        46.52090589610864,
+        54.028462297969284,
+        55.30426471125516,
+        61.57993056923103,
+        61.41679620125042,
+        53.511840651743185,
+        48.25789755729868
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.4036517135765605,
+        -17.522484393041843,
+        -15.176152942149177,
+        -6.602212928151551,
+        -2.438024178551178,
+        7.695504123946753,
+        8.16072802566443,
+        -3.9161996239618775,
+        -11.204033201489167
+      ],
+      "current_rd_measured_bins": {
+        "6": 77,
+        "23": 121,
+        "1": 121,
+        "7": 44,
+        "13": 2,
+        "12": 14
+      }
+    },
+    {
+      "label": "120 cm (trim 1s)",
+      "state": "hold",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        204.93,
+        234.59
+      ],
+      "original_window_host_s": [
+        203.93,
+        235.59
+      ],
+      "nominal_target_m": 1.2,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 299
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 299
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 299
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 299
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 299
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 299,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 299
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.43363121864667,
+        44.75934868009909,
+        48.86118434266581,
+        54.23428206641581,
+        59.07973518888275,
+        64.12140216499773,
+        63.661168195388655,
+        54.50259487678161,
+        47.697495324454806
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -8.28053897044911,
+        -19.995413855530703,
+        -15.139072250536973,
+        -8.442027582844073,
+        -0.39659359495126995,
+        9.909441691729459,
+        8.469736735767901,
+        -5.290412258892131,
+        -14.096766459359369
+      ],
+      "current_rd_measured_bins": {
+        "6": 284,
+        "16": 284,
+        "23": 252,
+        "22": 33,
+        "7": 15,
+        "15": 3
+      }
+    },
+    {
+      "label": "120 cm (trim 2s)",
+      "state": "hold",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        205.93,
+        233.59
+      ],
+      "original_window_host_s": [
+        203.93,
+        235.59
+      ],
+      "nominal_target_m": 1.2,
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 279
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 279
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 279
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 279
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 279
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 279,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 279
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.43363121864667,
+        44.75856826362319,
+        48.86157973917931,
+        54.23536546719702,
+        59.080820576985964,
+        64.11896071885644,
+        63.662545134615826,
+        54.522228633509265,
+        47.72098671671596
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -8.280152437087473,
+        -19.996819881330477,
+        -15.132305561622857,
+        -8.442027582844073,
+        -0.4003165182881101,
+        9.896404551542062,
+        8.470550718626296,
+        -5.264896824351548,
+        -14.072905565956171
+      ],
+      "current_rd_measured_bins": {
+        "6": 265,
+        "16": 264,
+        "23": 233,
+        "22": 33,
+        "7": 14,
+        "15": 3
+      },
+      "fine_peak_diagnostic": {
+        "sample_stride": 5,
+        "counts": {},
+        "locations_cm": []
+      }
+    },
+    {
+      "label": "final empty (trim 1s)",
+      "state": "target_absent",
+      "trim_s": 1,
+      "operator_position": "B",
+      "window_host_s": [
+        246.85,
+        260.83
+      ],
+      "original_window_host_s": [
+        245.85,
+        261.83
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 140
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 140
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 140
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 140
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 140
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 140,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 140
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.77507319898484,
+        44.810110664233775,
+        46.48074790512416,
+        54.04332906073158,
+        55.17756482067324,
+        61.29917627764454,
+        61.28821943466967,
+        52.77575467633833,
+        49.992168368714914
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.176060561906282,
+        -17.33008889099393,
+        -15.020226957580775,
+        -6.411867206142798,
+        -2.5196313758853988,
+        7.454045851860392,
+        7.862800327938716,
+        -4.559372633100774,
+        -9.38631373961437
+      ],
+      "current_rd_measured_bins": {
+        "7": 63,
+        "23": 140,
+        "1": 140,
+        "12": 26,
+        "6": 77,
+        "14": 107,
+        "13": 1
+      }
+    },
+    {
+      "label": "final empty (trim 2s)",
+      "state": "target_absent",
+      "trim_s": 2,
+      "operator_position": "B",
+      "window_host_s": [
+        247.85,
+        259.83
+      ],
+      "original_window_host_s": [
+        245.85,
+        261.83
+      ],
+      "channels": {
+        "baseline": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "os": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": 0,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "os_rd": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "weak": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_candidate_above_noise": 120
+          }
+        },
+        "confirmed_weak": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_current_weak_support": 120
+          }
+        },
+        "motion": {
+          "numeric_frames": 0,
+          "frames": 120,
+          "presence_frames": null,
+          "cm_p05_p50_p95": null,
+          "episodes": 0,
+          "longest_s": 0,
+          "reasons": {
+            "no_motion_episode_no_baseline": 120
+          }
+        }
+      },
+      "ca_fine_reasons": {},
+      "median_power_db_bins1_9": [
+        54.77328262027589,
+        44.810110664233775,
+        46.479498834646094,
+        54.04384013389078,
+        55.17756482067324,
+        61.29173597754376,
+        61.211987219932354,
+        52.863805085844746,
+        50.18264825162624
+      ],
+      "median_ca_margin_db_bins1_9": [
+        -5.1704768669327,
+        -17.310548421406487,
+        -15.003141291678928,
+        -6.3969446722784475,
+        -2.501431750880947,
+        7.371503712660898,
+        7.784145694265327,
+        -4.466722764942727,
+        -9.260817581113404
+      ],
+      "current_rd_measured_bins": {
+        "7": 48,
+        "23": 120,
+        "1": 120,
+        "12": 17,
+        "14": 93,
+        "6": 72
+      }
+    }
+  ],
+  "interpretation": "New capture evaluated with unchanged settings; labels used only for scoring. Empty silence is inherited through gated stages and does not compensate for missing target ranges. Peak locations and spectral contrasts are diagnostics, not accepted physical target distances."
+}

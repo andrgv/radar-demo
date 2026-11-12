@@ -1,0 +1,108 @@
+{
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "counts": {
+        "frames": 1747,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "counts": {
+        "frames": 2194,
+        "linked_inspection_frames": 1,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-004",
+      "counts": {
+        "frames": 946,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "counts": {
+        "frames": 867,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "counts": {
+        "frames": 757,
+        "linked_inspection_frames": 1,
+        "new_when_baseline_and_motion_blank": 1
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "counts": {
+        "frames": 682,
+        "linked_inspection_frames": 1,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-143819-360020/live-003",
+      "counts": {
+        "frames": 1735,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "counts": {
+        "frames": 1937,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-002",
+      "counts": {
+        "frames": 2366,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-135229-775366/live-001",
+      "counts": {
+        "frames": 1545,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    },
+    {
+      "recording": "recordings/rd-gui-20261111-133435-428121/live-001",
+      "counts": {
+        "frames": 758,
+        "linked_inspection_frames": 0,
+        "new_when_baseline_and_motion_blank": 0
+      }
+    }
+  ],
+  "original_results_association_motion_and_weak_selection_unchanged": true,
+  "framewise_link_parity": true,
+  "sources": {
+    "tools/review_weak_motion_live.py": "c1671f57eb86376441e64c6ad04fc93c6e512ce0c2ef2f86fcdf3b39e59b372b",
+    "radar_min/weak_motion.py": "a150b8fd6252ec710b1ad8a777169691880645efc60e8599d3d4f0b20dba38fe",
+    "radar_min/rd_live.py": "07c2742ee6e01dcd90c7832b26c4e640a3b00bcf5f061f3972d61811364bfabd",
+    "radar_min/rd_gui.py": "72a685f8006830bf175d6166cd13f4483cff9cf731c16366cf824d812e0a8138"
+  },
+  "inputs": {
+    "evidence/weak-candidates-live-20261111/results.jsonl.gz": "85501097c5e7fa3caa7469b8cd80fc1ec4ff3141f2bca9a66323e212cae10920",
+    "evidence/weak-motion-20261111/report.json": "098da351e82d5ff10dafd63cb00d4e8f0b2d3983dcf627eeecbedcc8bda20a7f",
+    "evidence/weak-motion-20261111/frames.jsonl.gz": "9ef04ae50328827e232f9897dfa0213fa3a5390b362287295bc88af0374b048f",
+    "evidence/weak-motion-live-20261111/report.json": "bd6aea5d55f4cd7c22c44681e53ee52f77ee14347dee02a1a3fe1fbfe7f22004",
+    "evidence/weak-motion-live-20261111/results.jsonl.gz": "3e1e0ba33bc49ebbe7ada0a9fd478625d64424fb92b7c52281eb1f38e27fd87a"
+  },
+  "interpretation": "Live adapter replay, not new physical identity/accuracy or live serial timing qualification. Link remains inspection-only; no primary or motion policy is changed."
+}
