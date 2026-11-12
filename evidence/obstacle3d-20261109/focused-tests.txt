@@ -1,0 +1,30 @@
+test_configured_complex_channel_gains_and_array_matrix_are_used (tests.test_obstacle3d.Obstacle3DTests.test_configured_complex_channel_gains_and_array_matrix_are_used) ... ok
+test_covariance_rejects_incoherent_joint_direction (tests.test_obstacle3d.Obstacle3DTests.test_covariance_rejects_incoherent_joint_direction) ... ok
+test_empty_and_missing_returns_never_report_clear_or_hold_old_point (tests.test_obstacle3d.Obstacle3DTests.test_empty_and_missing_returns_never_report_clear_or_hold_old_point) ... ok
+test_empty_recording_is_not_reported_as_complete_evaluation (tests.test_obstacle3d.Obstacle3DTests.test_empty_recording_is_not_reported_as_complete_evaluation) ... ok
+test_gap_rails_restart_and_config_mismatch_clear_persistence (tests.test_obstacle3d.Obstacle3DTests.test_gap_rails_restart_and_config_mismatch_clear_persistence) ... ok
+test_independent_rx_peaks_survive_average_power_masking (tests.test_obstacle3d.Obstacle3DTests.test_independent_rx_peaks_survive_average_power_masking) ... ok
+test_multiple_stationary_and_moving_xyz_without_reference (tests.test_obstacle3d.Obstacle3DTests.test_multiple_stationary_and_moving_xyz_without_reference) ... ok
+test_reject_changed_acquisition_axes_and_load_legacy_without_claiming_calibration (tests.test_obstacle3d.Obstacle3DTests.test_reject_changed_acquisition_axes_and_load_legacy_without_claiming_calibration) ... ok
+test_replay_live_parity_raw_recording_and_terminal_invalidation (tests.test_obstacle3d.Obstacle3DTests.test_replay_live_parity_raw_recording_and_terminal_invalidation) ... ok
+test_single_rx_return_kept_without_fabricating_angles (tests.test_obstacle3d.Obstacle3DTests.test_single_rx_return_kept_without_fabricating_angles) ... ok
+test_usb_timeout_and_close_failure_preserve_raw_and_withdraw_returns (tests.test_obstacle3d.Obstacle3DTests.test_usb_timeout_and_close_failure_preserve_raw_and_withdraw_returns) ... ok
+test_window_tail_not_promoted_and_sequence_timestamp_wrap_allowed (tests.test_obstacle3d.Obstacle3DTests.test_window_tail_not_promoted_and_sequence_timestamp_wrap_allowed) ... ok
+test_xyz_warning_and_terminal_rendering_match_export (tests.test_obstacle3d_gui.Obstacle3DGuiTests.test_xyz_warning_and_terminal_rendering_match_export) ... ok
+test_cloud_mode_records_replayable_raw_data_and_quality_fields (tests.test_pointcloud.CloudTests.test_cloud_mode_records_replayable_raw_data_and_quality_fields) ... ok
+test_empty_data_does_not_make_surface_points (tests.test_pointcloud.CloudTests.test_empty_data_does_not_make_surface_points) ... ok
+test_multiple_range_returns_preserved_when_weak_return_is_20db_lower (tests.test_pointcloud.CloudTests.test_multiple_range_returns_preserved_when_weak_return_is_20db_lower) ... ok
+test_same_range_different_dopplers_and_stationary_scene_return (tests.test_pointcloud.CloudTests.test_same_range_different_dopplers_and_stationary_scene_return) ... ok
+test_cached_renderer_updates_cells_and_survives_range_resize (tests.test_spatial.SpatialTests.test_cached_renderer_updates_cells_and_survives_range_resize) ... ok
+test_default_scene_view_retains_weaker_range_return (tests.test_spatial.SpatialTests.test_default_scene_view_retains_weaker_range_return) ... ok
+test_forward_response_inversion (tests.test_spatial.SpatialTests.test_forward_response_inversion) ... ok
+test_joint_angle_peak_and_multiple_ranges_survive (tests.test_spatial.SpatialTests.test_joint_angle_peak_and_multiple_ranges_survive) ... ok
+test_nonunitary_mixing_does_not_color_white_noise (tests.test_spatial.SpatialTests.test_nonunitary_mixing_does_not_color_white_noise) ... ok
+test_channel_mixing_recovers_known_direction (tests.test_detection_gates.DetectionGateTests.test_channel_mixing_recovers_known_direction) ... ok
+test_common_phase_cancellation_does_not_destroy_direction (tests.test_detection_gates.DetectionGateTests.test_common_phase_cancellation_does_not_destroy_direction) ... ok
+test_moving_detection_has_independent_gate (tests.test_detection_gates.DetectionGateTests.test_moving_detection_has_independent_gate) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.093s
+
+OK

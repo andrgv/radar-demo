@@ -6,6 +6,28 @@
 
 # Three-RX radar and glass-feature research
 
+The primary objective is glass-obstacle detection that transfers across setups.
+**That objective is not yet achieved.** The saved material model misses the
+closed-door recordings, and generic obstacle returns do not establish glass
+identity. The [experimental 3D view](docs/OBSTACLE_3D.md) is a secondary diagnostic,
+not the glass-detection fix.
+
+The [November 11 raw-signal audit](evidence/glass-signature-20261111/README.md)
+finds repeatable door-state changes but no isolated glass signature. It includes
+a [fixed-fixture panel/control capture plan](docs/GLASS_SIGNATURE_CAPTURE.md)
+for the next hardware session.
+
+On Linux, create a persistent project environment before running the GUI:
+
+```bash
+python -m venv .venv
+.venv/bin/python -m pip install -e '.[material-cpu]'
+.venv/bin/python -m radar gui --replay recordings/door03/closed-03 --obstacle-cloud
+```
+
+Use `.venv/bin/python` explicitly or activate `.venv`; installing into this
+environment does not add PyQt6 to a separate system/Conda Python.
+
 For the BGT60CUTR13AIP **experimental glass-versus-drywall classifier**, see
 [the material testing guide](docs/MATERIAL_CLASSIFICATION.md). It adapts a public
 XGBoost material-classification workflow to the existing recordings and USB

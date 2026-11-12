@@ -1,0 +1,53 @@
+{
+  "purpose": "EXPLORE roll and constant relative RX phase corrections; not certified 2D calibration",
+  "input_sweep": "recordings/box-angle-01",
+  "reference": "center_repeat",
+  "reference_actual_xyz_m": [
+    0.0,
+    2.0,
+    -0.11250000000000004
+  ],
+  "reference_quality_accepted": true,
+  "roll_deg": 90,
+  "rx2_rx3_correction_deg": [
+    18.02328915380906,
+    1.7593184871439576
+  ],
+  "rx2_rx3_center_expected_raw_relative_phase_deg": [
+    -173.27669170341443,
+    115.58131678420547
+  ],
+  "rx2_rx3_center_measured_raw_relative_phase_deg": [
+    168.70001914277648,
+    113.82199829706153
+  ],
+  "heldouts": [
+    {
+      "name": "check_left",
+      "actual_azimuth_deg": -4.289153328819018,
+      "actual_elevation_deg": -3.2104969777446306,
+      "raw_relative_phase_expected_deg": [
+        -159.5095791278877,
+        115.5575848635732
+      ],
+      "phase_residual_deg_rx2_rx3": [
+        0.3935352274308457,
+        12.35783696367514
+      ]
+    },
+    {
+      "name": "check_right",
+      "actual_azimuth_deg": 4.289153328819018,
+      "actual_elevation_deg": -3.2104969777446306,
+      "raw_relative_phase_expected_deg": [
+        173.7331698074706,
+        115.5575848635732
+      ],
+      "phase_residual_deg_rx2_rx3": [
+        0.4762273612449519,
+        -2.1517012349848983
+      ]
+    }
+  ],
+  "limitations": "Uses the 3-RX raw-phase model with vendor angle matrix, but only one phase reference and two same-support heldouts. Phase residuals are NOT bearing errors; RX3 cross-axis and elevation remain unvalidated. Does not alter original config."
+}

@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "kind": "pitch-rotation-static-target",
+  "coordinate_frame": "world right/forward/up, z above floor; radar yaw 0, positive pitch points upward",
+  "config_path": "configs/qualification-hpf350.json",
+  "mount_roll_deg": 90.0,
+  "target_xyz_m": [
+    0,
+    2.0,
+    0.22949999999999998
+  ],
+  "antenna_position_measured_or_assumed_fixed_center": true,
+  "target_and_support_fixed_for_target_pass": true,
+  "IMPORTANT": "Edit per-pose antenna_xyz_m if mounting translates. Set pitch_deg to MEASURED angle, not intended angle. Never change box/support/target during target pass.",
+  "poses": [
+    {
+      "name": "pitch_minus15",
+      "role": "train",
+      "pitch_deg": -15.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.002369971064174685,
+        0.3330017174577445
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    },
+    {
+      "name": "pitch_minus10",
+      "role": "holdout",
+      "pitch_deg": -10.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.001697438496507146,
+        0.3344018107957973
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    },
+    {
+      "name": "pitch_plus0",
+      "role": "train",
+      "pitch_deg": 0.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.337
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    },
+    {
+      "name": "pitch_plus10",
+      "role": "holdout",
+      "pitch_deg": 10.0,
+      "antenna_xyz_m": [
+        0.0,
+        -0.0021228214121653214,
+        0.33926395977047136
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    },
+    {
+      "name": "pitch_plus15",
+      "role": "train",
+      "pitch_deg": 15.0,
+      "antenna_xyz_m": [
+        0.0,
+        -0.003324047928080772,
+        0.34024865072061505
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    },
+    {
+      "name": "zero_repeat",
+      "role": "holdout",
+      "pitch_deg": 0.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.337
+      ],
+      "position_note": "Calculated from measured stationary bottom-edge pivot"
+    }
+  ],
+  "pivot_model": {
+    "type": "stationary_horizontal_bottom_edge",
+    "antenna_forward_offset_m": 0.013999999999999999,
+    "antenna_up_offset_m": 0.011000000000000001,
+    "zero_pitch_antenna_height_m": 0.337
+  }
+}

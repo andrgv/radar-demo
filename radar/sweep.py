@@ -9,14 +9,21 @@ from .processing import noise_threshold, range_fft
 from .storage import Recorder, replay
 
 
-def sweep_poses(distance, offset):
+def sweep_poses(distance, offset, *, full_heldout=False):
     if not np.isfinite(distance) or not np.isfinite(offset) or distance <= 0 or offset <= 0 or offset >= distance:
         raise ValueError("Use positive distance and lateral offset smaller than distance")
-    return [{"name": name, "xyz_m": xyz, "fit": fit} for name, xyz, fit in [
+    poses = [
         ("center", [0, distance, 0], True), ("left", [-offset, distance, 0], True),
         ("right", [offset, distance, 0], True), ("up", [0, distance, offset], True),
         ("check_right", [offset / 2, distance, 0], False),
-        ("center_repeat", [0, distance, 0], False)]]
+        ("center_repeat", [0, distance, 0], False)]
+    if full_heldout:
+        # Validate both horizontal and vertical signs on positions excluded from fitting.
+        poses[-1:-1] = [
+            ("check_left", [-offset / 2, distance, 0], False),
+            ("check_up", [0, distance, offset / 2], False),
+            ("check_down", [0, distance, -offset / 2], False)]
+    return [{"name": name, "xyz_m": xyz, "fit": fit} for name, xyz, fit in poses]
 
 
 def record_sweep(root, config, port, distance, offset, seconds, handheld=False):
@@ -24,7 +31,7 @@ def record_sweep(root, config, port, distance, offset, seconds, handheld=False):
     from .processing import Processor
     if not np.isfinite(seconds) or seconds < 2:
         raise ValueError("Record at least two seconds at each position")
-    poses = sweep_poses(distance, offset)
+    poses = sweep_poses(distance, offset, full_heldout=True)
     for pose in poses:
         expected_range = np.linalg.norm(pose["xyz_m"])
         if not config.ranges[2] <= expected_range <= config.ranges[-2]:

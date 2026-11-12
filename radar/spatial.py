@@ -10,6 +10,7 @@ class SpatialVolume:
     elevations: np.ndarray
     power: np.ndarray  # range, elevation, azimuth
     point_cloud: object = None
+    cloud_report: dict | None = None
 
 
 class SpatialMapper:
@@ -40,16 +41,27 @@ class SpatialMapper:
 def draw_volume(figure, volume, dynamic_range_db=30, max_range_m=4.0):
     """Show projections and a display-limited subset of reflectivity cells."""
     point_cloud=volume.point_cloud
+    cloud_report = volume.cloud_report
     keep = volume.ranges <= max_range_m
     if not np.any(keep):
         keep[0] = True
     volume = SpatialVolume(volume.ranges[keep], volume.azimuths, volume.elevations, volume.power[keep])
     cached = getattr(figure, '_radar_artists', None)
     if cached is None:
-        az_axes = figure.add_subplot(221)
-        el_axes = figure.add_subplot(222)
-        cloud = figure.add_subplot(223, projection='3d')
-        angular = figure.add_subplot(224)
+        if point_cloud is not None:
+            grid = figure.add_gridspec(3, 4, width_ratios=[1, 1, 1, 1.5])
+            cloud = figure.add_subplot(grid[:, :3], projection='3d')
+            az_axes = figure.add_subplot(grid[0, 3])
+            el_axes = figure.add_subplot(grid[1, 3])
+            angular = figure.add_subplot(grid[2, 3])
+            cloud.view_init(elev=18, azim=-70)
+            cloud.set_box_aspect((2, 1, 2))
+            cloud.scatter([0], [0], [0], marker='^', s=55, color='black', label='Sensor')
+        else:
+            az_axes = figure.add_subplot(221)
+            el_axes = figure.add_subplot(222)
+            cloud = figure.add_subplot(223, projection='3d')
+            angular = figure.add_subplot(224)
     else:
         az_axes, el_axes, cloud, angular, image, el_image, angular_image, points = cached
     db = 10 * np.log10(np.maximum(volume.power, 1e-12))
@@ -86,7 +98,7 @@ def draw_volume(figure, volume, dynamic_range_db=30, max_range_m=4.0):
         xyz=tuple(point_cloud.xyz[visible].T)
         colors=point_cloud.power_db[visible]-absolute_top
     if cached is None:
-        points = cloud.scatter(*xyz, c=colors, s=24 if point_cloud is not None else 5,
+        points = cloud.scatter(*xyz, c=colors, s=48 if point_cloud is not None else 5,
                                alpha=1 if point_cloud is not None else 0.3, cmap='magma',
                                depthshade=False, vmin=top-dynamic_range_db, vmax=top)
     else:
@@ -98,7 +110,9 @@ def draw_volume(figure, volume, dynamic_range_db=30, max_range_m=4.0):
         cloud.set(xlim=(-maximum,maximum), ylim=(0,maximum), zlim=(-maximum,maximum),
                   xlabel='Right (m)', ylabel='Forward (m)', zlabel='Up (m)', title='Reflectivity cells; NOT surface points')
     if point_cloud is not None:
-        cloud.set_title(f'Scattering centers: {len(colors)} points; angles unvalidated')
+        unresolved = sum(not c['accepted'] for c in cloud_report['components']) if cloud_report else 0
+        suffix = f' | {unresolved} unresolved' if cloud_report else ''
+        cloud.set_title(f'Point cloud: {len(colors)} returns{suffix}')
     peak_range = int(np.argmax(volume.power.max(axis=(1,2))))
     if cached is None:
         angular_image = angular.imshow(db[peak_range], extent=[volume.azimuths[0],volume.azimuths[-1],volume.elevations[0],volume.elevations[-1]], **limits)
@@ -108,7 +122,8 @@ def draw_volume(figure, volume, dynamic_range_db=30, max_range_m=4.0):
     angular.set(title=f'Angular spread at {volume.ranges[peak_range]:.2f} m', xlabel='Azimuth (deg)', ylabel='Elevation (deg)')
     if cached is None:
         figure.colorbar(image, ax=[az_axes,el_axes,angular], label='Power relative to strongest visible cell (dB)', shrink=0.6)
-        figure.suptitle('Radar reflectivity — broad lobes are ambiguity, not occupied surfaces')
+        figure.suptitle('Sensor-relative point cloud · angular calibration unverified' if point_cloud is not None
+                        else 'Radar reflectivity — broad lobes are ambiguity, not occupied surfaces')
         figure._radar_artists = (az_axes,el_axes,cloud,angular,image,el_image,angular_image,points)
 
 

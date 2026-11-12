@@ -29,6 +29,17 @@ class SourceSelectionTests(unittest.TestCase):
             main(["gui"])
         self.assertEqual(error.exception.code, 2)
 
+    def test_missing_gui_dependency_explains_project_python_instead_of_traceback(self):
+        stderr = io.StringIO()
+        with patch('radar.cli.importlib.util.find_spec', return_value=None), \
+                contextlib.redirect_stderr(stderr), self.assertRaises(SystemExit) as error:
+            main(['gui', '--replay', 'not-opened', '--obstacle-cloud'])
+        self.assertEqual(error.exception.code, 2)
+        self.assertIn('GUI dependencies missing', stderr.getvalue())
+        self.assertIn('pip install -e .', stderr.getvalue())
+        self.assertIn('-m radar gui', stderr.getvalue())
+        self.assertNotIn('Traceback', stderr.getvalue())
+
     @patch("radar.gui.run", return_value=0)
     def test_explicit_simulation(self, run):
         self.assertEqual(main(["gui", "--synthetic"]), 0)

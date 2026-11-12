@@ -1,0 +1,13 @@
+{
+  "sha256": {
+    "tools/audit_glass_signature.py": "7cf2c974569ff99b0a2a982bb2df15170dff872fd5fb69b6cb6494f342b6a34e",
+    "tools/audit_coherence_origin.py": "eb838b0d4cab06212378316af7194f0e28f5c904cecdbd32c268787f44c9c42b",
+    "tests/test_glass_signature.py": "5282a9c362ed3165c5bd9e64c64b88184313461620e17a4128499216cd6309c2",
+    "evidence/glass-signature-20261111/PROTOCOL.md": "de6b5a9531a265b570ba061043c2acb14fb4bde201ca9885ba50a84ae771b72a",
+    "evidence/glass-signature-20261111/COHERENCE_FOLLOWUP.md": "6c0690a0b6adad071d6ccf3be1c4d08fbdc09c5448cc85cacaf76c96017c9dbc",
+    "docs/GLASS_SIGNATURE_CAPTURE.md": "9b19c00bee207ec278d046ac2dae320d15a7393e34c332ba10155f33a42f77e0",
+    "evidence/glass-signature-20261111/report.json": "3a4255ea7c0ce39e915fd36ec6f440446ed43aeec652487e8b9a6e3ebb6e91a4",
+    "evidence/glass-signature-20261111/coherence-origin.json": "aa0a537c1af1d79af1cf325c5e8769a6a7cfe2b6eeb2478c6bf746d6da2a37f7",
+    "evidence/glass-signature-20261111/tests.txt": "afd53e13fbe225c15bdcedb308ca44bcab7d3e1e26c555740c4e1d373f365ded"
+  }
+}

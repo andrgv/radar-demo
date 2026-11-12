@@ -1,0 +1,76 @@
+{
+  "method": "Existing radar.spatial command, recorded configuration, all 303 frames per recording; mean matched-filter power without point extraction. Default 4 m rendering range and 30 dB display span; NPZ retains all processed range bins.",
+  "rows": [
+    {
+      "recording": "recordings/door03/closed-01",
+      "frames": 303,
+      "raw_sha256": "78cc4e8d992a1095e4f7648a06220ea9a9f312e6e732dc2444541f703489dd2e",
+      "volume_shape_range_elevation_azimuth": [
+        30,
+        25,
+        25
+      ],
+      "visible_peak_range_m": 1.7379272927536231,
+      "angular_cells_in_peak_halfpower_region": 184,
+      "angular_cells_tested": 625,
+      "halfpower_azimuth_span_deg": [
+        -60.0,
+        20.0
+      ],
+      "halfpower_elevation_span_deg": [
+        0.0,
+        60.0
+      ],
+      "interpretation": "Data-derived beam response spans within the tested field of view; not position-error bounds, occupied cells or surface extent."
+    },
+    {
+      "recording": "recordings/door04/closed-01",
+      "frames": 303,
+      "raw_sha256": "fa03c2921991d8b60fd4c7b2c140d73edfb927b102ece0c17f81e13d90594e29",
+      "volume_shape_range_elevation_azimuth": [
+        30,
+        25,
+        25
+      ],
+      "visible_peak_range_m": 0.6951709171014493,
+      "angular_cells_in_peak_halfpower_region": 282,
+      "angular_cells_tested": 625,
+      "halfpower_azimuth_span_deg": [
+        -60.0,
+        20.0
+      ],
+      "halfpower_elevation_span_deg": [
+        -60.0,
+        30.0
+      ],
+      "interpretation": "Data-derived beam response spans within the tested field of view; not position-error bounds, occupied cells or surface extent."
+    },
+    {
+      "recording": "recordings/door07/closed-01",
+      "frames": 303,
+      "raw_sha256": "c4edb8ce35430e1ef87e72a5874c6d7ce5970aed4336725e14c6a3749a4427d3",
+      "volume_shape_range_elevation_azimuth": [
+        30,
+        25,
+        25
+      ],
+      "visible_peak_range_m": 1.7379272927536231,
+      "angular_cells_in_peak_halfpower_region": 203,
+      "angular_cells_tested": 625,
+      "halfpower_azimuth_span_deg": [
+        -50.0,
+        35.0
+      ],
+      "halfpower_elevation_span_deg": [
+        -30.0,
+        45.0
+      ],
+      "interpretation": "Data-derived beam response spans within the tested field of view; not position-error bounds, occupied cells or surface extent."
+    }
+  ],
+  "conclusion": "No recognizable room reconstruction demonstrated. Dense response cells represent correlated angular hypotheses rather than independently observed geometry.",
+  "source_sha256": {
+    "radar/spatial.py": "a38aa15f6fdad70452dd2e15916a213c24895402c29c03621009a247fc5d41c7",
+    "radar/processing.py": "0839051a95ffc88c3d7902be6a6a7d6f8c4d0bfe23c6c2ab700e3401adb453b6"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "kind": "pitch-rotation-static-target",
+  "coordinate_frame": "world right/forward/up, z above floor; radar yaw 0, positive pitch points upward",
+  "config_path": "configs/qualification-hpf350.json",
+  "mount_roll_deg": 90.0,
+  "target_xyz_m": [
+    0,
+    2.0,
+    0.3925
+  ],
+  "antenna_position_measured_or_assumed_fixed_center": true,
+  "target_and_support_fixed_for_target_pass": true,
+  "IMPORTANT": "Edit per-pose antenna_xyz_m if mounting translates. Set pitch_deg to MEASURED angle, not intended angle. Never change box/support/target during target pass.",
+  "poses": [
+    {
+      "name": "pitch_minus15",
+      "role": "train",
+      "pitch_deg": -15.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        0.28407674158213697
+      ]
+    },
+    {
+      "name": "pitch_minus10",
+      "role": "holdout",
+      "pitch_deg": -10.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        0.19943068291334082
+      ]
+    },
+    {
+      "name": "pitch_plus0",
+      "role": "train",
+      "pitch_deg": 0.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        0.026240960725887958
+      ]
+    },
+    {
+      "name": "pitch_plus10",
+      "role": "holdout",
+      "pitch_deg": 10.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        -0.1477460797746542
+      ]
+    },
+    {
+      "name": "pitch_plus15",
+      "role": "train",
+      "pitch_deg": 15.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        -0.23338309823859232
+      ]
+    },
+    {
+      "name": "zero_repeat",
+      "role": "holdout",
+      "pitch_deg": 0.0,
+      "antenna_xyz_m": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "position_note": "ASSUMED: antenna center stays fixed while pitched; edit XYZ if not true",
+      "expected_range_bin": 6,
+      "expected_range_m": 2.0006889438390965,
+      "expected_direction_right_up": [
+        0.0,
+        0.026240960725887958
+      ]
+    }
+  ]
+}

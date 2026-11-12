@@ -32,7 +32,8 @@ class Window(QtWidgets.QMainWindow):
     acquisition_finished = QtCore.pyqtSignal()
 
     def __init__(self, config, port=None, recording=None, record=None, metadata=None, phase_probe_range=None,
-                 background_path=None, spatial_map=False, seconds=None, start_delay=0, point_cloud=False):
+                 background_path=None, spatial_map=False, seconds=None, start_delay=0, point_cloud=False,
+                 cloud_method='deblend'):
         super().__init__()
         if seconds is not None and (not np.isfinite(seconds) or seconds <= 0):
             raise ValueError('seconds must be finite and greater than zero')
@@ -51,6 +52,7 @@ class Window(QtWidgets.QMainWindow):
         self.spatial_map = spatial_map or point_cloud
         spatial_map=self.spatial_map
         self.point_cloud=point_cloud
+        self.cloud_method = cloud_method
         self.phase_probe_range = phase_probe_range
         self.background_path = background_path
         self.stop = threading.Event()
@@ -101,6 +103,9 @@ class Window(QtWidgets.QMainWindow):
             "Keep radar fixed, remove the box and your hands, then click."
             if record is None and (port is not None or recording is not None) else
             "Empty-scene capture requires live or replay data and no active recording.")
+        if point_cloud and cloud_method == 'deblend':
+            self.baseline_button.setEnabled(False)
+            self.baseline_label.setText('Full-scene point cloud: stationary reflections are retained.')
         baseline_controls.addWidget(self.baseline_label)
         baseline_controls.addStretch()
         layout.addLayout(baseline_controls)
@@ -207,6 +212,11 @@ class Window(QtWidgets.QMainWindow):
         self.zoom_label.setVisible(False)
         self.monitor_tabs.addTab(monitor_widget, "Live distance monitor")
         self.monitor_tabs.addTab(original_view, "Advanced diagnostics")
+        if point_cloud or spatial_map:
+            self.monitor_tabs.setCurrentIndex(1)
+        if point_cloud:
+            self.spatial_tabs.setTabText(0, '3D point cloud')
+            self.setWindowTitle(f'Wavvy | {mode} | 3D point cloud ({cloud_method})')
         layout.addWidget(self.monitor_tabs, 1)
         layout.addWidget(self.status)
         self.setCentralWidget(widget)
@@ -259,14 +269,15 @@ class Window(QtWidgets.QMainWindow):
             from .background import SpectralBackground
             background = SpectralBackground.from_path(self.background_path, self.config) if self.background_path else None
             processor = Processor(self.config, phase_probe_range=self.phase_probe_range, background=background,
-                                  spatial_map=self.spatial_map,point_cloud=self.point_cloud)
+                                  spatial_map=self.spatial_map,point_cloud=self.point_cloud, cloud_method=self.cloud_method)
             tracker = RangeTracker()
             short_range_tracker = None
             baseline_frames = None
             self.background_status = "Reference loaded" if background is not None else "Ready to capture an empty scene"
             source = Source(self.config, port, recording)
             metadata = {**(metadata or {}), "background_method": "fixed_complex_spectrum" if background else "none",
-                        "background_source": self.background_path}
+                        "background_source": self.background_path,
+                        "cloud_method": self.cloud_method if self.point_cloud else None}
             recorder = Recorder(record, self.config, metadata) if record else None
             source.transport_recorder = recorder
             if recorder is not None and background is not None:
@@ -283,7 +294,8 @@ class Window(QtWidgets.QMainWindow):
                     tracker.reset()
                     short_range_tracker = None
                     processor = Processor(self.config, phase_probe_range=self.phase_probe_range,
-                                          spatial_map=self.spatial_map, point_cloud=self.point_cloud)
+                                          spatial_map=self.spatial_map, point_cloud=self.point_cloud,
+                                          cloud_method=self.cloud_method)
                     self.background_status = "Capturing empty scene: 0/30 frames"
                 if baseline_frames is not None:
                     baseline_frames.append(frame)
@@ -295,7 +307,7 @@ class Window(QtWidgets.QMainWindow):
                         baseline_frames = None
                         processor = Processor(self.config, phase_probe_range=self.phase_probe_range,
                                               background=background, spatial_map=self.spatial_map,
-                                              point_cloud=self.point_cloud)
+                                              point_cloud=self.point_cloud, cloud_method=self.cloud_method)
                         self.background_status = "Empty-scene reference ready; now place or move the box"
                     continue
                 start = time.perf_counter()
@@ -411,7 +423,12 @@ class Window(QtWidgets.QMainWindow):
                                              self.spatial_range.value())
                 if not short_range_mode:
                     self.distance_readout.setText(range_readout(result))
-                self.status.setText(f"Frame {result.sequence} | {self.stats} | display skips {self.display_drops}")
+                if self.point_cloud:
+                    self.status.setText(f"Frame {result.sequence} | {self.stats.get('scene_points', 0)} returns | "
+                                        f"{result.features.get('cloud_unresolved_components', 0)} unresolved | "
+                                        f"{self.stats.get('processing_ms', '?')} ms | display skips {self.display_drops}")
+                else:
+                    self.status.setText(f"Frame {result.sequence} | {self.stats} | display skips {self.display_drops}")
                 return  # Hidden diagnostics must not rebuild or draw every frame.
         for axes in (self.profile, self.angle, self.cloud, self.doppler, self.temporal, self.feature_axes):
             axes.clear()
