@@ -6,6 +6,12 @@
 
 # Three-RX radar and glass-feature research
 
+For the combined multi-return CA-CFAR + RX2 azimuth top-down display, see
+[the CFAR map guide](docs/CFAR_MAP.md). Try `.venv/bin/python -m radar.cfar_map --demo --plot`
+without hardware, or use a measured reference for live/replay data.
+For real-radar testing and the persistent fixed-sensor object map, follow
+[the reference capture and live mapping steps](docs/FIXED_SCENE_MAP.md).
+
 The primary objective is glass-obstacle detection that transfers across setups.
 **That objective is not yet achieved.** The saved material model misses the
 closed-door recordings, and generic obstacle returns do not establish glass

@@ -60,6 +60,23 @@ class AcquisitionTests(unittest.TestCase):
         self.assertIsNone(source.read())
         source.close()
 
+    @patch('radar.acquisition.time.sleep')
+    @patch('radar.acquisition.serial.Serial', FakeSerial)
+    def test_synchronized_start_stops_then_starts_and_closes(self, sleep):
+        source = Source(Config(), port='FAKE', synchronize=True)
+        self.assertEqual(source.serial.commands, [b'c', b'B'])
+        sleep.assert_called_once_with(.5)
+        source.close()
+        self.assertTrue(source.serial.closed)
+
+    def test_failed_start_closes_port(self):
+        serial = FakeSerial()
+        with patch('radar.acquisition.serial.Serial', return_value=serial), \
+                patch.object(serial, 'write', side_effect=OSError('disconnected')):
+            with self.assertRaises(OSError):
+                Source(Config(), port='FAKE', synchronize=True)
+        self.assertTrue(serial.closed)
+
 
 if __name__ == "__main__":
     unittest.main()

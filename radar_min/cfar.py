@@ -56,6 +56,28 @@ def json_array(values):
     return [float(v) if np.isfinite(v) else None for v in values]
 
 
+def peak_groups(p, config, settings):
+    """All CA-CFAR peak groups; shared by the range readout and 2D map."""
+    noise, thresholds, counts = ca_thresholds(p, settings)
+    ids = np.arange(config.min_bin, config.max_bin+1)
+    qualified = ids[p[ids] > thresholds[ids]]
+    groups = np.split(qualified, np.flatnonzero(np.diff(qualified) > 1)+1)
+    candidates = []
+    for group in groups:
+        if not len(group):
+            continue
+        k = int(group[np.argmax(p[group])])
+        neighbors = p[max(1, k-1):min(len(p)-1, k+2)]
+        if p[k] < max(neighbors):
+            continue
+        candidates.append(dict(range_bin=k, bins=group.tolist(),
+            provisional_range_m=k*config.spacing_m,
+            power=float(p[k]), noise_power=float(noise[k]),
+            threshold_power=float(thresholds[k]),
+            signal_to_reference_db=float(db(p[k])-db(noise[k]))))
+    return candidates, qualified, noise, thresholds, counts
+
+
 class CfarDetector:
     def __init__(self, config, settings=None):
         self.config = config
@@ -96,25 +118,7 @@ class CfarDetector:
             self.clear()
             out['reason'] = reason
         else:
-            noise, thresholds, counts = ca_thresholds(p, self.settings)
-            ids = np.arange(self.config.min_bin, self.config.max_bin+1)
-            qualified = ids[p[ids] > thresholds[ids]]
-            # Group contiguous above-threshold cells, and select one maximum
-            # per group. A flank of a peak outside the search mask is rejected.
-            groups = np.split(qualified, np.flatnonzero(np.diff(qualified) > 1)+1)
-            candidates = []
-            for group in groups:
-                if not len(group):
-                    continue
-                k = int(group[np.argmax(p[group])])
-                neighbors = p[max(1, k-1):min(len(p)-1, k+2)]
-                if p[k] < max(neighbors):
-                    continue
-                candidates.append(dict(range_bin=k, bins=group.tolist(),
-                    provisional_range_m=k*self.config.spacing_m,
-                    power=float(p[k]), noise_power=float(noise[k]),
-                    threshold_power=float(thresholds[k]),
-                    signal_to_reference_db=float(db(p[k])-db(noise[k]))))
+            candidates, qualified, noise, thresholds, counts = peak_groups(p, self.config, self.settings)
             out.update(power=p.tolist(), power_db=db(p).tolist(),
                        noise_power=json_array(noise), threshold_power=json_array(thresholds),
                        noise_profile_db=json_array(db(noise)),
