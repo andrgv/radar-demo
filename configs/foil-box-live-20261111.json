@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "labels": "Consecutive user durations from first saved frame; transitions excluded; 1/2-second quiet trims, no fitted offset; final tail after 185.14 s unlabeled.",
+  "scene": {
+    "target": "same cardboard box, front face covered with tin foil",
+    "front_face_dimensions_cm": [
+      45,
+      24
+    ],
+    "distance_reference": "antenna face to box front surface, from prior user clarification",
+    "background_wall": "a little over 2 m, from prior clarification"
+  },
+  "cases": [
+    {
+      "recording": "recordings/rd-gui-20261111-200448-409110/live-001",
+      "windows": [
+        {
+          "label": "empty A (trim 1s)",
+          "state": "target_absent",
+          "trim_s": 1,
+          "window_host_s": [
+            1,
+            14.54
+          ],
+          "original_window_host_s": [
+            0,
+            15.54
+          ]
+        },
+        {
+          "label": "empty A (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            13.54
+          ],
+          "original_window_host_s": [
+            0,
+            15.54
+          ]
+        },
+        {
+          "label": "50 cm A (trim 1s)",
+          "state": "hold",
+          "trim_s": 1,
+          "window_host_s": [
+            33.95,
+            53.11
+          ],
+          "original_window_host_s": [
+            32.95,
+            54.11
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            34.95,
+            52.11
+          ],
+          "original_window_host_s": [
+            32.95,
+            54.11
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "empty B (trim 1s)",
+          "state": "target_absent",
+          "trim_s": 1,
+          "window_host_s": [
+            67.99,
+            77.23
+          ],
+          "original_window_host_s": [
+            66.99,
+            78.23
+          ]
+        },
+        {
+          "label": "empty B (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            68.99,
+            76.23
+          ],
+          "original_window_host_s": [
+            66.99,
+            78.23
+          ]
+        },
+        {
+          "label": "50 cm B (trim 1s)",
+          "state": "hold",
+          "trim_s": 1,
+          "window_host_s": [
+            89.07,
+            107.78
+          ],
+          "original_window_host_s": [
+            88.07,
+            108.78
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            90.07,
+            106.78
+          ],
+          "original_window_host_s": [
+            88.07,
+            108.78
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "empty C (trim 1s)",
+          "state": "target_absent",
+          "trim_s": 1,
+          "window_host_s": [
+            117.49,
+            126.38
+          ],
+          "original_window_host_s": [
+            116.49,
+            127.38
+          ]
+        },
+        {
+          "label": "empty C (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            118.49,
+            125.38
+          ],
+          "original_window_host_s": [
+            116.49,
+            127.38
+          ]
+        },
+        {
+          "label": "120 cm (trim 1s)",
+          "state": "hold",
+          "trim_s": 1,
+          "window_host_s": [
+            140.96,
+            159.84
+          ],
+          "original_window_host_s": [
+            139.96,
+            160.84
+          ],
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "state": "hold",
+          "trim_s": 2,
+          "window_host_s": [
+            141.96,
+            158.84
+          ],
+          "original_window_host_s": [
+            139.96,
+            160.84
+          ],
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "final empty (trim 1s)",
+          "state": "target_absent",
+          "trim_s": 1,
+          "window_host_s": [
+            170.58,
+            184.14
+          ],
+          "original_window_host_s": [
+            169.58,
+            185.14
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "state": "target_absent",
+          "trim_s": 2,
+          "window_host_s": [
+            171.58,
+            183.14
+          ],
+          "original_window_host_s": [
+            169.58,
+            185.14
+          ]
+        }
+      ]
+    }
+  ]
+}

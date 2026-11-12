@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "purpose": "Frozen 1D/RD review of manually rolled 120-to-50 cm motion with operator at A.",
+  "labels": "Absolute supplied times from first saved frame, 1:01.76 = 61.76 s. First stop near 13 s is approximate. Exclude 11.27\u201311.46 s and all motion from hold metrics. Holds trim 1/2 s per side; motions trim 0.2 s. No fitted timing offset. Operator/arm/hand contributions are possible.",
+  "cfar": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "cases": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-006",
+      "windows": [
+        {
+          "label": "120 cm A (trim 1s)",
+          "window_host_s": [
+            1,
+            10.27
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "original_window_host_s": [
+            0,
+            11.27
+          ]
+        },
+        {
+          "label": "120 cm A (trim 2s)",
+          "window_host_s": [
+            2,
+            9.27
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            11.27
+          ]
+        },
+        {
+          "label": "50 cm A (trim 1s)",
+          "window_host_s": [
+            14,
+            25.62
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 1,
+          "original_window_host_s": [
+            13,
+            26.62
+          ]
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "window_host_s": [
+            15,
+            24.62
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            13,
+            26.62
+          ]
+        },
+        {
+          "label": "120 cm B (trim 1s)",
+          "window_host_s": [
+            29.05,
+            41.57
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "original_window_host_s": [
+            28.05,
+            42.57
+          ]
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "window_host_s": [
+            30.05,
+            40.57
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            28.05,
+            42.57
+          ]
+        },
+        {
+          "label": "50 cm B (trim 1s)",
+          "window_host_s": [
+            46.15,
+            58.09
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 1,
+          "original_window_host_s": [
+            45.15,
+            59.09
+          ]
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "window_host_s": [
+            47.15,
+            57.09
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            45.15,
+            59.09
+          ]
+        },
+        {
+          "label": "120 cm C (trim 1s)",
+          "window_host_s": [
+            62.76,
+            74.174039
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "original_window_host_s": [
+            61.76,
+            75.174039
+          ]
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "window_host_s": [
+            63.76,
+            73.174039
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "original_window_host_s": [
+            61.76,
+            75.174039
+          ]
+        },
+        {
+          "label": "faster approach",
+          "window_host_s": [
+            11.66,
+            12.8
+          ],
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            11.46,
+            13
+          ]
+        },
+        {
+          "label": "faster retreat",
+          "window_host_s": [
+            26.82,
+            27.85
+          ],
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            26.62,
+            28.05
+          ]
+        },
+        {
+          "label": "slower approach",
+          "window_host_s": [
+            42.77,
+            44.949999999999996
+          ],
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            42.57,
+            45.15
+          ]
+        },
+        {
+          "label": "slower retreat",
+          "window_host_s": [
+            59.290000000000006,
+            61.559999999999995
+          ],
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "original_window_host_s": [
+            59.09,
+            61.76
+          ]
+        }
+      ]
+    }
+  ]
+}

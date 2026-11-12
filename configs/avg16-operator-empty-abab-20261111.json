@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "purpose": "Target-absent A-B-A-B control matched to live-004; frozen CFAR.",
+  "labels": "User supplied consecutive durations from first saved frame. No target. A beside sensor described as in range; B described as out of range, not independently verified. Exclude transitions, trim 1 or 2 s per side, no fitted offset.",
+  "cfar": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "cases": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-005",
+      "windows": [
+        {
+          "label": "A1 (trim 1s)",
+          "window_host_s": [
+            1,
+            15.23
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 1,
+          "original_window_host_s": [
+            0,
+            16.23
+          ]
+        },
+        {
+          "label": "A1 (trim 2s)",
+          "window_host_s": [
+            2,
+            14.23
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            16.23
+          ]
+        },
+        {
+          "label": "B1 (trim 1s)",
+          "window_host_s": [
+            21.77,
+            36.48
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 1,
+          "original_window_host_s": [
+            20.77,
+            37.48
+          ]
+        },
+        {
+          "label": "B1 (trim 2s)",
+          "window_host_s": [
+            22.77,
+            35.48
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            20.77,
+            37.48
+          ]
+        },
+        {
+          "label": "A2 (trim 1s)",
+          "window_host_s": [
+            44.41,
+            58.94
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 1,
+          "original_window_host_s": [
+            43.41,
+            59.94
+          ]
+        },
+        {
+          "label": "A2 (trim 2s)",
+          "window_host_s": [
+            45.41,
+            57.94
+          ],
+          "state": "target_absent",
+          "operator_position": "A",
+          "trim_s": 2,
+          "original_window_host_s": [
+            43.41,
+            59.94
+          ]
+        },
+        {
+          "label": "B2 (trim 1s)",
+          "window_host_s": [
+            64.78,
+            78.94
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 1,
+          "original_window_host_s": [
+            63.78,
+            79.94
+          ]
+        },
+        {
+          "label": "B2 (trim 2s)",
+          "window_host_s": [
+            65.78,
+            77.94
+          ],
+          "state": "target_absent",
+          "operator_position": "B",
+          "trim_s": 2,
+          "original_window_host_s": [
+            63.78,
+            79.94
+          ]
+        }
+      ]
+    }
+  ]
+}

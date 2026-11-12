@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "purpose": "Development qualification of unchanged 1D CFAR on AVG16; not independent acceptance or a firmware A/B test.",
+  "labels": "Inherited approximate video windows from evidence/rd-avg16-motion-20261110/report.json and evidence/rd-cfar2d-followup-20261110/report.json; no offset fitting. Holds trimmed 2 s/side, motion 0.2 s/side. Host seconds from first saved frame, half-open windows. Timing-only scene has no target-distance label.",
+  "cfar": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "cases": [
+    {
+      "recording": "recordings/avg16-timing-01",
+      "windows": [
+        {
+          "label": "unspecified stationary scene",
+          "window_host_s": [
+            0,
+            19.9
+          ],
+          "state": "scene_unspecified"
+        }
+      ]
+    },
+    {
+      "recording": "recordings/avg16-motion-01",
+      "windows": [
+        {
+          "label": "120 cm A",
+          "window_host_s": [
+            2,
+            9.35
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "60 cm A",
+          "window_host_s": [
+            14.8,
+            21.27
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.6
+        },
+        {
+          "label": "120 cm B",
+          "window_host_s": [
+            26.64,
+            34.64
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "60 cm B",
+          "window_host_s": [
+            39.93,
+            45.11
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.6
+        },
+        {
+          "label": "120 cm C",
+          "window_host_s": [
+            50.48,
+            57.855707
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "approach 1",
+          "window_host_s": [
+            11.549999999999999,
+            12.600000000000001
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "retreat 1",
+          "window_host_s": [
+            23.47,
+            24.44
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "approach 2",
+          "window_host_s": [
+            36.84,
+            37.73
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "retreat 2",
+          "window_host_s": [
+            47.31,
+            48.279999999999994
+          ],
+          "state": "motion"
+        }
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261110-221227-169414/live-001",
+      "windows": [
+        {
+          "label": "120 cm A",
+          "window_host_s": [
+            20.99,
+            29.11
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "30 cm A",
+          "window_host_s": [
+            34.82,
+            46.78
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.3
+        },
+        {
+          "label": "120 cm B",
+          "window_host_s": [
+            52.63,
+            62.18000000000001
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "30 cm B",
+          "window_host_s": [
+            69.45,
+            79.14
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.3
+        },
+        {
+          "label": "120 cm C",
+          "window_host_s": [
+            86.7,
+            93.39
+          ],
+          "state": "hold",
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "fast approach",
+          "window_host_s": [
+            31.31,
+            32.62
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "fast retreat",
+          "window_host_s": [
+            48.980000000000004,
+            50.43
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "slow approach",
+          "window_host_s": [
+            64.38000000000001,
+            67.25
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "slow retreat",
+          "window_host_s": [
+            81.34,
+            84.5
+          ],
+          "state": "motion"
+        },
+        {
+          "label": "initial target absent",
+          "window_host_s": [
+            2,
+            13.99
+          ],
+          "state": "target_absent"
+        },
+        {
+          "label": "post-removal quiet",
+          "window_host_s": [
+            102.39,
+            106.12
+          ],
+          "state": "target_absent"
+        },
+        {
+          "label": "target absent, possible operator motion",
+          "window_host_s": [
+            106.62,
+            113.814919
+          ],
+          "state": "target_absent_operator_possible"
+        }
+      ]
+    }
+  ]
+}

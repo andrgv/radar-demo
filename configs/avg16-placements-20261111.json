@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "purpose": "Fixed-settings review of new AVG16 stepped placements; no tuning.",
+  "labels": "User-supplied consecutive durations in seconds, starting at first saved frame. No fitted video offset. Half-open windows, 1s and 2s trims. Reflector identity unverified.",
+  "cfar": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "cases": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-001",
+      "windows": [
+        {
+          "label": "initial empty (trim 1s)",
+          "window_host_s": [
+            1,
+            17.36
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            0,
+            18.36
+          ]
+        },
+        {
+          "label": "initial empty (trim 2s)",
+          "window_host_s": [
+            2,
+            16.36
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            18.36
+          ]
+        },
+        {
+          "label": "50 cm (trim 1s)",
+          "window_host_s": [
+            23.74,
+            43.2
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            22.74,
+            44.2
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm (trim 2s)",
+          "window_host_s": [
+            24.74,
+            42.2
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            22.74,
+            44.2
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "empty after 50 cm (trim 1s)",
+          "window_host_s": [
+            50.39,
+            64.08
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            49.39,
+            65.08
+          ]
+        },
+        {
+          "label": "empty after 50 cm (trim 2s)",
+          "window_host_s": [
+            51.39,
+            63.08
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            49.39,
+            65.08
+          ]
+        },
+        {
+          "label": "80 cm (trim 1s)",
+          "window_host_s": [
+            80.57,
+            102.28
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            79.57,
+            103.28
+          ],
+          "nominal_target_m": 0.8
+        },
+        {
+          "label": "80 cm (trim 2s)",
+          "window_host_s": [
+            81.57,
+            101.28
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            79.57,
+            103.28
+          ],
+          "nominal_target_m": 0.8
+        },
+        {
+          "label": "empty after 80 cm (trim 1s)",
+          "window_host_s": [
+            107.51,
+            121.27
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            106.51,
+            122.27
+          ]
+        },
+        {
+          "label": "empty after 80 cm (trim 2s)",
+          "window_host_s": [
+            108.51,
+            120.27
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            106.51,
+            122.27
+          ]
+        },
+        {
+          "label": "120 cm (trim 1s)",
+          "window_host_s": [
+            129.86,
+            149.97
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            128.86,
+            150.97
+          ],
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "120 cm (trim 2s)",
+          "window_host_s": [
+            130.86,
+            148.97
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            128.86,
+            150.97
+          ],
+          "nominal_target_m": 1.2
+        },
+        {
+          "label": "final empty (trim 1s)",
+          "window_host_s": [
+            157.03,
+            172.138418
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            156.03,
+            173.138418
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "window_host_s": [
+            158.03,
+            171.138418
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            156.03,
+            173.138418
+          ]
+        }
+      ]
+    }
+  ]
+}

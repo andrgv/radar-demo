@@ -30,6 +30,7 @@ class ClockSync:
         self.samples = []
         self.state = 'collecting'
         self.failure = None
+        self.fit_diagnostics = None
 
     def metadata(self):
         return dict(algorithm='bounded-startup-clock-v1', policy=asdict(self.policy),
@@ -65,6 +66,9 @@ class ClockSync:
                 rate = float(np.dot(centered, y-y.mean())/np.dot(centered, centered))
                 offset = float(np.median(y-rate*x))
                 errors = abs(y-(offset+rate*x))
+                self.fit_diagnostics = dict(candidate_rate=rate, candidate_offset_s=offset,
+                    max_residual_s=float(np.max(errors)), p95_residual_s=float(np.percentile(errors,95)),
+                    max_limit_s=self.policy.max_fit_residual_s, p95_limit_s=self.policy.p95_fit_residual_s)
                 if abs(rate-1) > self.policy.max_rate_error:
                     self.failure = 'clock_rate_out_of_bounds'
                 elif (float(np.max(errors)) > self.policy.max_fit_residual_s or
@@ -82,4 +86,4 @@ class ClockSync:
                     host_seconds_per_device_second=self.rate, offset_s=self.offset,
                     residual_s=residual, raw_residual_s=raw_error,
                     device_elapsed_s=self.device_elapsed, host_elapsed_s=elapsed,
-                    fit_samples=len(self.samples))
+                    fit_samples=len(self.samples), fit_diagnostics=self.fit_diagnostics)

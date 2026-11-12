@@ -52,6 +52,10 @@ class ClockTests(unittest.TestCase):
         sync=ClockSync()
         for i in range(211):r=sync.update(i*100000,i*.1+.06*(i%2))
         self.assertEqual(r['reason'],'clock_fit_unstable')
+        fit=r['fit_diagnostics']
+        self.assertGreater(fit['p95_residual_s'],fit['p95_limit_s'])
+        self.assertEqual(fit['p95_limit_s'],.05)
+        self.assertEqual(fit['max_limit_s'],.1)
 
     def test_wrap_supported_but_restart_duplicate_and_host_reversal_fail(self):
         sync=ClockSync();base=0xffffffff-500000

@@ -4,7 +4,7 @@ import tempfile
 import unittest
 import numpy as np
 from radar.config import Config, C
-from radar.protocol import HEADER, Parser, encode
+from radar.protocol import HEADER, EDGE_TIMING, EDGE_TIMING_FULL, EDGE_TIMING_AVG16, Parser, encode
 from radar.synthetic import Target, generate
 from radar.processing import Processor, estimate_angle
 from radar.calibration import calibrate_channels, fit_range
@@ -26,6 +26,65 @@ class ProtocolTests(unittest.TestCase):
             frames.extend(parser.feed(packet[start:start + 7]))
         self.assertEqual(len(frames), 1)
         np.testing.assert_array_equal(frames[0].adc, self.frame.adc)
+
+    def test_edge_timing_roundtrip_and_recording(self):
+        frame = replace(self.frame, profile_id=0x33515401, capture_elapsed_us=3464,
+                        edge_times_us=(31, 131, 231), edge_count=3)
+        packet = encode(frame)
+        self.assertEqual(len(packet), 6580 + EDGE_TIMING.size)
+        parser = Parser()
+        frames = parser.feed(packet[:37]) + parser.feed(packet[37:])
+        self.assertEqual(len(frames), 1)
+        self.assertEqual(frames[0].edge_times_us, (31, 131, 231))
+        self.assertEqual(frames[0].capture_elapsed_us, 3464)
+        self.assertEqual(frames[0].edge_count, 3)
+        self.assertFalse(frames[0].edge_overflow)
+        self.assertEqual(encode(frames[0]), packet)
+        with tempfile.TemporaryDirectory() as folder:
+            recording = Path(folder)/'capture'
+            with Recorder(recording, self.config) as recorder:
+                recorder.write(frames[0])
+            saved = list(replay(recording))
+            self.assertEqual(saved[0].edge_times_us, (31, 131, 231))
+            from tools.analyze_mcu_edges import analyze_recording
+            summary = analyze_recording(recording, Path(folder)/'edges.csv')
+            self.assertEqual(summary['median_interval_us'], 100)
+            self.assertEqual(summary['edge_counts'], {3: 1})
+            self.assertEqual(summary['complete_edge_bursts'], 1)
+
+    def test_edge_timing_overflow(self):
+        frame = replace(self.frame, edge_times_us=tuple(range(64)), edge_count=65,
+                        edge_overflow=True)
+        decoded = Parser().feed(encode(frame))[0]
+        self.assertEqual(decoded.edge_count, 65)
+        self.assertTrue(decoded.edge_overflow)
+        self.assertEqual(decoded.edge_times_us, tuple(range(64)))
+
+    def test_full_edge_timing_roundtrip(self):
+        frame = replace(self.frame, profile_id=0x33515402,
+                        edge_times_us=tuple(range(112)), edge_count=112,
+                        edge_capacity=128)
+        packet = encode(frame)
+        self.assertEqual(len(packet), 6580 + EDGE_TIMING_FULL.size)
+        decoded = Parser().feed(packet)[0]
+        self.assertEqual(decoded.edge_count, 112)
+        self.assertEqual(decoded.edge_capacity, 128)
+        self.assertFalse(decoded.edge_overflow)
+        self.assertEqual(decoded.edge_times_us, tuple(range(112)))
+        self.assertEqual(encode(decoded), packet)
+
+    def test_avg16_edge_timing_roundtrip(self):
+        frame = replace(self.frame, profile_id=0x33515403,
+                        edge_times_us=tuple(range(272)), edge_count=272,
+                        edge_capacity=320, flags=27)
+        packet = encode(frame)
+        self.assertEqual(len(packet), 6580 + EDGE_TIMING_AVG16.size)
+        decoded = Parser().feed(packet)[0]
+        self.assertEqual(decoded.edge_count, 272)
+        self.assertEqual(decoded.edge_capacity, 320)
+        self.assertFalse(decoded.edge_overflow)
+        self.assertEqual(decoded.edge_times_us, tuple(range(272)))
+        self.assertEqual(encode(decoded), packet)
 
     def test_crc_garbage_and_header_recovery(self):
         bad_payload = bytearray(encode(self.frame))

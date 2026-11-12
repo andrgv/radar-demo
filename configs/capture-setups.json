@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "description": "Curated physical setup facts and explicit uncertainties; supplement immutable recording metadata. User timing manifests take precedence over detector outputs.",
+  "recordings": {
+    "recordings/gui-20261111-093723-246315/live-001": {
+      "setup": "User-labeled empty / 50 / empty / 80 / empty / 120 / empty stepped placements. Target material, dimensions, operator position and wall geometry were not supplied for this run. Do not retroactively assume the later cardboard/foil setup. Consecutive stopwatch durations; transitions explicitly excluded.",
+      "references": [
+        "configs/avg16-placements-20261111.json",
+        "evidence/avg16-placements-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/gui-20261111-093723-246315/live-003": {
+      "setup": "Repeated nominal 50 cm placements. Ignore 28.67\u201348.68 s as requested. Final 50 cm hold: first approximately half with operator beside sensor, potentially in range; second half in prior out-of-range position. Split time is approximate. Target material/dimensions unspecified. Operator concern is scene sensitivity, not proof of algorithmic overfitting.",
+      "references": [
+        "configs/avg16-repeat50-20261111.json",
+        "evidence/avg16-repeat50-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/gui-20261111-093723-246315/live-004": {
+      "setup": "Target stationary at nominal 50 cm throughout. Operator A/B/A/B: A beside sensor, described as in range; B described as out of range. These are user position labels, not measured angular/range boundaries. Target material unspecified.",
+      "references": [
+        "configs/avg16-operator-abab-20261111.json",
+        "evidence/avg16-operator-abab-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/gui-20261111-093723-246315/live-005": {
+      "setup": "Matched no-added-target operator A/B/A/B control for live-004. Same position definitions; walls and other scene reflectors remain present.",
+      "references": [
+        "configs/avg16-operator-empty-abab-20261111.json",
+        "evidence/avg16-operator-empty-abab-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/gui-20261111-093723-246315/live-006": {
+      "setup": "Target manually rolled 120\u219450 cm with operator at A throughout. Moves 11.46\u2013about 13, 26.62\u201328.05, 42.57\u201345.15, 59.09\u201361.76 s. Initial hold reported through 11.27 s; 11.27\u201311.46 s excluded. Slower second cycle. Operator/hand returns can accompany target motion; material unspecified.",
+      "references": [
+        "configs/avg16-motion-20261111.json",
+        "evidence/avg16-motion-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-132433-610820/live-001": {
+      "setup": "Joint-GUI exploratory trial; timing rejection stopped displayed measurements. No physical scene or distance ground truth supplied. Use for timing regression, not detection scoring.",
+      "references": [
+        "evidence/joint-gui-timing-20261111/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-133435-428121/live-001": {
+      "setup": "Stationary scene described as an object at approximately 80 cm for about 60 seconds; recording is longer. Target type and operator position unspecified. Conservative offline scoring window 2\u201373 s was used; it is not a user-timed transition annotation.",
+      "references": [
+        "evidence/joint-stationary-80cm-20261111/README.md",
+        "evidence/phase-range-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-135229-775366/live-001": {
+      "setup": "Paired empty / 80 cm / empty / 80 cm capture. Operator at B for each quiet hold, explicitly confirmed by user. Target material/dimensions not supplied for this capture. Durations end at 147.61 s; later tail unscored.",
+      "references": [
+        "configs/live-os-paired80-20261111.json",
+        "evidence/live-os-paired80-20261111/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-141606-847532/live-002": {
+      "setup": "Start at 120 cm; move to 50 cm 11.56\u201313.58 s, to 120 cm 25.06\u201327.02 s, to 50 cm 38.47\u201342.15 s, to 120 cm 53.30\u201356.61 s. Operator position, target construction and exact trajectory not supplied.",
+      "references": [
+        "configs/motion-aware-live-20261111.json",
+        "evidence/motion-aware-live-20261111/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-143819-360020/live-003": {
+      "setup": "Large bare cardboard box; front face approximately 45\u00d724 cm facing sensor. Distances antenna front face to box front surface, user estimates error no more than a few cm. Background wall a little over 2 m. Empty / 50 / empty / 50 / empty / 120 / remaining empty. Later user clarification (2026-11-11): operator at position A / within range during the 120 cm hold. Operator position in other holds is not separately confirmed. The ~32 cm feature is therefore operator-confounded; it is not established as a spurious obstacle or as the box return.",
+      "references": [
+        "configs/reflector-live-20261111.json",
+        "evidence/stopped-support-20261111/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-200448-409110/live-001": {
+      "setup": "Same cardboard box as prior run with front face covered in tin foil; nominal face 45\u00d724 cm, front-face distance reference and wall geometry inherited from prior clarification. Empty / 50 / empty / 50 / empty / 120 / empty. Operator position not explicitly supplied. Tail beyond 185.14 s unlabeled.",
+      "references": [
+        "configs/foil-box-live-20261111.json",
+        "evidence/foil-box-live-20261111/README.md",
+        "evidence/phase-range-20261111/REVIEW.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-200448-409110/live-002": {
+      "setup": "Requested independent repeat: empty / 50 / empty / 50 / empty / 120 / empty. User confirmed same foil-covered 45\u00d724 cm box, antenna-face distance reference, wall little over 2 m and operator B during every hold. User supplied all segment durations; total 230.62 s, later recording tail unlabeled.",
+      "references": [
+        "configs/foil-box-repeat-20261111.json",
+        "evidence/foil-box-repeat-20261111/README.md",
+        "evidence/foil-box-repeat-20261111/phase/README.md"
+      ]
+    },
+    "recordings/avg16-timing-01": {
+      "setup": "Ordinary stationary-scene vendor AVG16 timing/edge test. No target-distance ground truth. CHIRP_ACTIVE edges captured in each wire-v4 frame; 272 edges in 17 groups of 16 reported.",
+      "references": [
+        "docs/AVG16_TIMING_TEST.md",
+        "evidence/rd-avg16-20261110/README.md",
+        "configs/avg16-cfar-qualification.json"
+      ]
+    },
+    "recordings/avg16-motion-01": {
+      "setup": "Controlled 120/60 cm wheeled-target motion. Capture protocol called for fixed radar, fixed target orientation, nearby wall retained and operator to the side; exact operator pose/orientation compliance was not separately recorded. Actual video moves 11.35\u201312.80, 23.27\u201324.64 (corrected), 36.64\u201337.93, 47.11\u201348.48 s. Qualitative signed motion, not independently measured speed.",
+      "references": [
+        "configs/avg16-cfar-qualification.json",
+        "evidence/rd-avg16-motion-20261110/README.md"
+      ]
+    },
+    "recordings/gui-20261110-162410-575208/live-001": {
+      "setup": "Earlier fixed radar / manually moving target / nearby wall run, before AVG16 development capture. Initial far hold, approach, near approximately 30 cm, retreat, far hold, wall only. Consecutive durations 18.58/28.03/31.01/25.53/30.71/33.64 s total 167.50 s, exceeding recording span 165.73 s. Transitions approximate; far position close to wall, not a clean separation test.",
+      "references": [
+        "evidence/rd-fixed-wall-20261110/README.md"
+      ]
+    },
+    "recordings/gui-20261110-162410-575208/live-002": {
+      "setup": "Earlier fixed-radar wheeled-target 120\u219460 cm nearby-wall repeat; operator to side, hand-driven variable speed. Consecutive durations 20.48/5.86/17.29/9.63/18.24/6.04/17.51/5.46/18.09/6.74/16.21/17.43 s: wall/placement/far/approach/near/retreat/far/approach/near/retreat/far/removal+wall. Seven packet/sequence losses; final phase mixes removal and empty with unknown transition.",
+      "references": [
+        "evidence/rd-repeat-wall-20261110/README.md"
+      ]
+    },
+    "recordings/gui-20261110-221227-169414/live-001": {
+      "setup": "AVG16 empty then target 120\u219430 cm; faster and slower cycles. Video moves 31.11\u201332.82, 48.78\u201350.63, 64.18\u201367.45, 81.14\u201384.70 s; 1:07:45 interpreted as 67.45 s. Placement handling conservatively 13.99\u201318.99, removal 95.39\u2013100.39 s. User confirmed no operator movement before 106.62 s; later target-absent portion is operator-confounded.",
+      "references": [
+        "configs/avg16-cfar-qualification.json",
+        "evidence/rd-cfar2d-followup-20261110/README.md"
+      ]
+    },
+    "recordings/gui-20261109-235116-484020/live-001": {
+      "setup": "Fresh post-clock-fix CFAR run. Tentative recalled steps: initially empty, about 30 s\u219260 cm, 60 s\u219230 cm, 90 s\u2192100 cm, 120 s\u219270 cm. User may have mixed distance/order; times estimated from GUI graph, not a stopwatch. Do not score as verified range accuracy.",
+      "references": [
+        "evidence/cfar-stage1-review-235116/README.md"
+      ]
+    },
+    "recordings/gui-20261109-224819-094246/live-001": {
+      "setup": "Approximate six-second alternating empty/target states, starting and ending empty; target nominal 50 cm, five intervals. Fresh validation labels, physical setup details unspecified.",
+      "references": [
+        "configs/cfar-validation-20261109-224819.json",
+        "evidence/cfar-validation-224819/README.md"
+      ]
+    },
+    "recordings/gui-20261109-224819-094246/live-002": {
+      "setup": "Approximate six-second alternating empty/target states, starting and ending empty; target nominal 80 cm, seven intervals. Physical setup details unspecified.",
+      "references": [
+        "configs/cfar-validation-20261109-224819.json",
+        "evidence/cfar-validation-224819/README.md"
+      ]
+    },
+    "recordings/scope-timing-01": {
+      "setup": "Timing instrumentation experiment; physical target setup not established here. Use saved configuration and the timing review, not the directory name, to choose matching parser/firmware.",
+      "references": [
+        "docs/MCU_EDGE_TIMING.md",
+        "docs/SCOPE_TIMING.md",
+        "evidence/rd-mcu-edge-20261110/README.md"
+      ]
+    },
+    "recordings/edge-timing-01": {
+      "setup": "Timing instrumentation experiment; physical target setup not established here. Use saved configuration and the timing review, not the directory name, to choose matching parser/firmware.",
+      "references": [
+        "docs/MCU_EDGE_TIMING.md",
+        "docs/SCOPE_TIMING.md",
+        "evidence/rd-mcu-edge-20261110/README.md"
+      ]
+    },
+    "recordings/edge-timing-02": {
+      "setup": "Timing instrumentation experiment; physical target setup not established here. Use saved configuration and the timing review, not the directory name, to choose matching parser/firmware.",
+      "references": [
+        "docs/MCU_EDGE_TIMING.md",
+        "docs/SCOPE_TIMING.md",
+        "evidence/rd-mcu-edge-20261110/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261111-223730-634059/live-001": {
+      "setup": "Bare cardboard box; operator explicitly stationary at position B (described as away from sensor range) during all quiet holds. User supplied initial handling / empty / 50 cm / empty / repeated 50 cm / empty / 120 cm / empty with all handling durations. Same established bare-box protocol; prior front dimensions approximately 45\u00d724 cm and antenna-face to box-face reference are inherited, not remeasured in this message. Operator-B protocol is explicitly confirmed for this run, unlike the earlier bare-box 120 cm hold at A. Labeled end 261.83 s; later tail unscored. Command includes --experimental-weak; saved metadata confirms native association metric.",
+      "references": [
+        "configs/bare-box-b-20261111.json",
+        "evidence/bare-box-b-20261111/README.md"
+      ]
+    },
+    "recordings/rd-gui-20261112-094114-038104/live-001": {
+      "setup": "User-timed empty / bare / foil / bare / empty, all target holds nominal 50 cm. Operator explicitly B during quiet holds. User explicitly confirms box footprint and orientation stayed fixed while only foil was added/removed. Earlier box dimensions about 45 x 24 cm and antenna/front-face convention are inherited context, not remeasured. Wall distance not remeasured. Labels end 243.71 s; later tail unscored. Foil gives baseline ~46.1 cm and raw-tone ~51 cm; bare return after removal gives confirmed weak ~29.1 cm despite main distance withheld, so scene-feature confirmation is not box identity.",
+      "references": [
+        "configs/material-control-20261112.json",
+        "evidence/material-control-20261112/README.md",
+        "evidence/material-control-20261112-phase/README.md",
+        "docs/EMPTY_TRAINED_BACKGROUND.md"
+      ]
+    }
+  }
+}

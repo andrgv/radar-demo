@@ -1,0 +1,236 @@
+{
+  "schema": 1,
+  "purpose": "Frozen 1D CFAR repeat-placement/operator-position review; no tuning.",
+  "labels": "Consecutive user durations from first saved frame. Ignore 28.67\u201348.68 s. Final-hold midpoint is an approximate operator-position split, not a measured transition; exclude 2 s around it. One- and two-second quiet-interior trims. No offset fitting.",
+  "cfar": {
+    "guard_cells": 1,
+    "training_cells": 4,
+    "min_training_cells": 4,
+    "factor": 2
+  },
+  "cases": [
+    {
+      "recording": "recordings/gui-20261111-093723-246315/live-003",
+      "windows": [
+        {
+          "label": "initial empty (trim 1s)",
+          "window_host_s": [
+            1,
+            14.73
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            0,
+            15.73
+          ]
+        },
+        {
+          "label": "initial empty (trim 2s)",
+          "window_host_s": [
+            2,
+            13.73
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            0,
+            15.73
+          ]
+        },
+        {
+          "label": "50 cm A (trim 1s)",
+          "window_host_s": [
+            49.68,
+            78.44
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            48.68,
+            79.44
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "window_host_s": [
+            50.68,
+            77.44
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            48.68,
+            79.44
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "empty after A (trim 1s)",
+          "window_host_s": [
+            83.3,
+            96.63
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            82.3,
+            97.63
+          ]
+        },
+        {
+          "label": "empty after A (trim 2s)",
+          "window_host_s": [
+            84.3,
+            95.63
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            82.3,
+            97.63
+          ]
+        },
+        {
+          "label": "50 cm B (trim 1s)",
+          "window_host_s": [
+            108.86,
+            132.45
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            107.86,
+            133.45
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "window_host_s": [
+            109.86,
+            131.45
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            107.86,
+            133.45
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "empty after B (trim 1s)",
+          "window_host_s": [
+            148.91,
+            157.67
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            147.91,
+            158.67
+          ]
+        },
+        {
+          "label": "empty after B (trim 2s)",
+          "window_host_s": [
+            149.91,
+            156.67
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            147.91,
+            158.67
+          ]
+        },
+        {
+          "label": "50 cm C (trim 1s)",
+          "window_host_s": [
+            167.98,
+            191.21
+          ],
+          "state": "hold",
+          "trim_s": 1,
+          "original_window_host_s": [
+            166.98,
+            192.21
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "50 cm C (trim 2s)",
+          "window_host_s": [
+            168.98,
+            190.21
+          ],
+          "state": "hold",
+          "trim_s": 2,
+          "original_window_host_s": [
+            166.98,
+            192.21
+          ],
+          "nominal_target_m": 0.5
+        },
+        {
+          "label": "C first half, operator possibly in range (trim 2s)",
+          "window_host_s": [
+            168.98,
+            177.595
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            166.98,
+            179.595
+          ],
+          "operator_split_approximate": true
+        },
+        {
+          "label": "C second half, usual operator position (trim 2s)",
+          "window_host_s": [
+            181.595,
+            190.21
+          ],
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "original_window_host_s": [
+            179.595,
+            192.21
+          ],
+          "operator_split_approximate": true
+        },
+        {
+          "label": "final empty (trim 1s)",
+          "window_host_s": [
+            201.7,
+            210.64
+          ],
+          "state": "target_absent",
+          "trim_s": 1,
+          "original_window_host_s": [
+            200.7,
+            211.64
+          ]
+        },
+        {
+          "label": "final empty (trim 2s)",
+          "window_host_s": [
+            202.7,
+            209.64
+          ],
+          "state": "target_absent",
+          "trim_s": 2,
+          "original_window_host_s": [
+            200.7,
+            211.64
+          ]
+        }
+      ]
+    }
+  ]
+}

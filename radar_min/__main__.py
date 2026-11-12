@@ -8,7 +8,7 @@ import sys
 import time
 from .core import Config, Baseline, Detector, Continuity, power
 from .clock_sync import ClockSync
-from radar.protocol import Parser
+from radar.protocol import Parser, wire_size
 from radar.storage import Recorder, replay
 
 
@@ -63,18 +63,22 @@ def stream(port,config,output,seconds,detector=None,serial_factory=None,observer
                     reason=continuity_reason
                     try: power(frame,config)
                     except ValueError as error: reason=str(error)
+                    if not frame.flags & 1:reason='invalid_frame_flags'
                     # Do not learn clock rate from queued, invalid or discontinuous frames.
-                    backlog=len(frames)>2 or ser.in_waiting>2*6580
+                    backlog=len(frames)>2 or ser.in_waiting>2*wire_size(frame)
                     sync=clock.update(frame.timestamp_us,now,
                         eligible=reason is None and len(frames)==1 and not backlog,
                         restart=continuity_reason=='restart_or_duplicate')
                     if sync['reason']: reason=sync['reason']
                     if backlog: reason='serial_backlog'
                     if detector:
-                        reading=detector.update(frame)
-                        if reason:
+                        if reason and hasattr(detector,'reject_frame'):
+                            reading=detector.reject_frame(frame,reason)
+                        else:reading=detector.update(frame)
+                        if reason and not hasattr(detector,'reject_frame'):
                             detector.clear()
                             reading.update(target_detected=False,range_bin=None,range_m=None,provisional_range_m=None,experimental_range_m=None,reason=reason)
+                        if not reading.get('valid',True) and reason is None:reason=reading.get('reason','invalid_processing_frame')
                     else:
                         reading=dict(frame_sequence=frame.sequence,reason=reason or 'raw_recorded',target_detected=False,range_m=None)
                     if reason: rejected+=1
@@ -136,11 +140,52 @@ def make_detector(args, config, baseline=None):
     return Detector(baseline)
 
 
+def range_doppler_options(parser, mode=True):
+    if mode:
+        parser.add_argument('--detector',choices=['none','cfar2d'],default='none',help='Optional replay-only detector on the full map')
+        parser.add_argument('--associate',action='store_true',help='Associate CFAR radar features; requires --detector cfar2d')
+    parser.add_argument('--rd-guard-range',type=int,default=1)
+    parser.add_argument('--rd-guard-doppler',type=int,default=1)
+    parser.add_argument('--rd-training-range',type=int,default=3)
+    parser.add_argument('--rd-training-doppler',type=int,default=2)
+    parser.add_argument('--rd-min-training',type=int,default=16)
+    parser.add_argument('--rd-factor',type=float,default=4.0,help='Empirical linear-power multiplier, not a Pfa')
+    parser.add_argument('--rd-doppler-edge',choices=['wrap','truncate'],default='wrap')
+    parser.add_argument('--track-confirmation',type=int,default=3)
+    parser.add_argument('--track-birth-margin',type=float,default=3.0,help='dB above CFAR threshold required to seed/confirm a track')
+    parser.add_argument('--track-range-gate',type=int,default=1)
+    parser.add_argument('--track-doppler-gate',type=int,default=2)
+    parser.add_argument('--track-max-missed',type=int,default=2)
+    parser.add_argument('--track-max-ambiguous',type=int,default=5)
+    parser.add_argument('--track-ambiguity-gap',type=float,default=.25)
+    parser.add_argument('--track-range-metric',choices=['native','quadratic'],default='native',help='Experimental sub-bin range association cost; native gates unchanged')
+
+
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='cmd',required=True)
     fit=sub.add_parser('baseline',help='Fit empty reference; never learns from holdout')
     fit.add_argument('recording');fit.add_argument('output');fit.add_argument('--count',type=int,default=30)
     rp=sub.add_parser('replay');rp.add_argument('recording');rp.add_argument('--baseline');detector_options(rp);rp.add_argument('--skip',type=int,default=0)
+    rd=sub.add_parser('range-doppler',help='Replay-only full and mean-removed Doppler diagnostics')
+    rd.add_argument('recording');rd.add_argument('--output',help='New directory for maps, diagnostics and preview')
+    rd.add_argument('--show',action='store_true',help='Interactive frame slider; default when no output specified')
+    range_doppler_options(rd)
+    rdgui=sub.add_parser('rd-gui',help='Live/replay 2D CFAR and feature association with raw recording')
+    rdgui.add_argument('--config',help='Required for live; replay defaults to the recording config')
+    rdgui.add_argument('--port',help='Required for live')
+    rdgui.add_argument('--replay',help='Replay without serial access or creating a live recording')
+    rdgui.add_argument('--snapshot',help='Save a replay-only GUI image and exit')
+    rdgui.add_argument('--snapshot-frame',type=int,default=0)
+    rdgui.add_argument('--view-range-bins',type=int,default=0,help='Plot zoom only; 0 shows all usable bins')
+    rdgui.add_argument('--cfar-guard',type=int,default=1,help='1D comparison guard bins (frozen experimental preset)')
+    rdgui.add_argument('--cfar-training',type=int,default=4)
+    rdgui.add_argument('--cfar-min-training',type=int,default=4)
+    rdgui.add_argument('--cfar-factor',type=float,default=2.0)
+    rdgui.add_argument('--experimental-os',action='store_true',help='Inspection-only lower-median OS reference comparison; primary unchanged')
+    rdgui.add_argument('--experimental-weak',action='store_true',help='Inspection-only OS/RD/raw-peak candidate comparison; may select scene clutter; implies OS comparison; primary unchanged')
+    rdgui.add_argument('--motion-aware',action='store_true',help='Experimental measured RD motion/stop readout with frozen baseline comparison')
+    range_doppler_options(rdgui,mode=False)
+    rdgui.set_defaults(detector='cfar2d',associate=True)
     gui=sub.add_parser('gui',help='Thin experimental range display with raw recording')
     gui.add_argument('--estimator',choices=['fixed','associated'],default='fixed',help='Baseline mode only; CFAR uses a baseline-free fine peak')
     gui.add_argument('--port',default='/dev/cu.usbmodem103');gui.add_argument('--config',required=True)
@@ -153,7 +198,15 @@ def main(argv=None):
             sp.add_argument('--baseline');detector_options(sp)
     args=p.parse_args(argv)
     try:
-        if args.cmd=='gui':
+        if args.cmd=='range-doppler':
+            from .range_doppler import run_replay
+            return run_replay(args)
+        elif args.cmd=='rd-gui':
+            if args.snapshot and not args.replay:raise ValueError('--snapshot requires --replay; no implicit device access')
+            if not args.replay and (not args.config or not args.port):raise ValueError('Live rd-gui requires --config and --port')
+            from .rd_gui import launch
+            return launch(args)
+        elif args.cmd=='gui':
             from .gui import launch
             return launch(args)
         elif args.cmd=='baseline':

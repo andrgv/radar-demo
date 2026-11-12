@@ -30,7 +30,7 @@ def audit_wire(path):
             break
         if offset+HEADER.size<=len(data):
             fields=HEADER.unpack_from(data,offset)
-            if (fields[1]==1 and fields[2]==HEADER.size and
+            if (fields[1] in (1,2,3,4) and fields[2]==HEADER.size and
                     zlib.crc32(data[offset:offset+HEADER.size-4])==fields[-1]):
                 expected=HEADER.size+fields[3]+4
                 complete=offset+expected<=len(data)

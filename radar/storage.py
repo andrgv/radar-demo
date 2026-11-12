@@ -24,7 +24,9 @@ class Recorder:
     def write(self, frame, result=None):
         self.raw.write(encode(frame))
         self.timestamps.write(json.dumps({"sequence": frame.sequence, "host_unix_ns": time.time_ns(),
-            "capture_elapsed_us":frame.capture_elapsed_us}) + "\n")
+            "capture_elapsed_us":frame.capture_elapsed_us,"edge_times_us":frame.edge_times_us,
+            "edge_count":frame.edge_count,"edge_overflow":frame.edge_overflow,
+            "edge_capacity":frame.edge_capacity}) + "\n")
         if result is not None:
             self.features.write(json.dumps({"sequence": frame.sequence, **result.features,
                 "calibrated": result.calibrated, "label": self.metadata["label"]}, allow_nan=False) + "\n")

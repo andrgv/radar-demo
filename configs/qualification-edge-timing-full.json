@@ -1,0 +1,93 @@
+{
+  "profile_id": 860967938,
+  "samples": 64,
+  "chirps": 17,
+  "sample_rate_hz": 5000000,
+  "slope_hz_s": 33691406250000,
+  "carrier_hz": 60000000000,
+  "chirp_interval_s": 0.001,
+  "frame_interval_s": 0.1,
+  "geometry_wavelengths": [
+    [
+      0,
+      0
+    ],
+    [
+      0.5,
+      0
+    ],
+    [
+      0,
+      0.5
+    ]
+  ],
+  "geometry_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2.35
+    ],
+    [
+      -2.35,
+      0
+    ]
+  ],
+  "geometry_label": "Nominal portrait antenna-face coordinates; mounting and factory phase calibration unverified",
+  "mount_roll_deg": 0,
+  "gains_real": [
+    1,
+    1,
+    1
+  ],
+  "gains_imag": [
+    0,
+    0,
+    0
+  ],
+  "range_offset_m": 0,
+  "range_scale": 1,
+  "verified": false,
+  "calibration_id": "MCU-edge-timestamp-128-CHIRP_ACTIVE-on-DIO4; HPF350; timing-unverified",
+  "discard_chirps": 1,
+  "snr_db": 12,
+  "angle_matrix_real": [
+    [
+      0.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.052215576171875,
+      -0.439697265625,
+      0.0
+    ],
+    [
+      -0.061767578125,
+      0.0,
+      -0.158203125
+    ]
+  ],
+  "angle_matrix_imag": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.1063232421875,
+      0.160736083984375,
+      0.0
+    ],
+    [
+      0.018218994140625,
+      0.0,
+      -0.460418701171875
+    ]
+  ],
+  "probe_search_bins": 1,
+  "chirp_timing_verified": false,
+  "carrier_frequency_verified": false
+}

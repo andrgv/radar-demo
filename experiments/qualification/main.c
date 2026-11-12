@@ -12,9 +12,12 @@
 #define RECEIVERS 3u
 #define FRAME_WORDS (CHIRPS * SAMPLES * RECEIVERS / 2u)
 #define HEADER_BYTES 48u
-#define PAYLOAD_BYTES (FRAME_WORDS * 4u)
+#define ADC_PAYLOAD_BYTES (FRAME_WORDS * 4u)
+#define EDGE_CAPACITY (RADAR_AVG16_TEST ? 320u : 128u)
+#define EDGE_PAYLOAD_BYTES (RADAR_EDGE_TIMING ? (2u + EDGE_CAPACITY) * 4u : 0u)
+#define PAYLOAD_BYTES (ADC_PAYLOAD_BYTES + EDGE_PAYLOAD_BYTES)
 #define PACKET_BYTES (HEADER_BYTES + PAYLOAD_BYTES + 4u)
-#define PROFILE_ID (RADAR_SCOPE_OUTPUT ? 0x33515301u : ((RADAR_HPF_KHZ == 100) ? 0x33514801u : 0x33514802u))
+#define PROFILE_ID (RADAR_AVG16_TEST ? 0x33515403u : (RADAR_EDGE_TIMING ? 0x33515402u : (RADAR_SCOPE_OUTPUT ? 0x33515301u : ((RADAR_HPF_KHZ == 100) ? 0x33514801u : 0x33514802u))))
 
 static xensiv_bgt60cutrxx_mtb_t sensor;
 static cyhal_uart_t uart;
@@ -38,6 +41,18 @@ static xensiv_bgt60cutrxx_mtb_iface_config_t interface = {
 #ifndef RADAR_SCOPE_OUTPUT
 #define RADAR_SCOPE_OUTPUT 0
 #endif
+#ifndef RADAR_EDGE_TIMING
+#define RADAR_EDGE_TIMING 0
+#endif
+#ifndef RADAR_AVG16_TEST
+#define RADAR_AVG16_TEST 0
+#endif
+#if RADAR_EDGE_TIMING && !RADAR_SCOPE_OUTPUT
+#error "Edge timing requires CHIRP_ACTIVE scope routing"
+#endif
+#if RADAR_AVG16_TEST && !RADAR_EDGE_TIMING
+#error "AVG16 test requires edge timing"
+#endif
 #ifndef RADAR_HPF_KHZ
 #define RADAR_HPF_KHZ 350
 #endif
@@ -59,11 +74,52 @@ static int32_t qualification_set_hpf(void)
     return 0;
 }
 
+#if RADAR_EDGE_TIMING
+/* The IRQ pin is the sensor's CHIRP_ACTIVE marker in this variant. */
+static volatile uint32_t edge_count;
+static volatile bool edge_active;
+static volatile uint32_t edge_ticks[EDGE_CAPACITY];
+
+static void qualification_edge_irq(void *argument, cyhal_gpio_event_t event)
+{
+    (void)argument;
+    if (edge_active && (event & CYHAL_GPIO_IRQ_RISE)) {
+        uint32_t tick = cyhal_timer_read(&timer);
+        uint32_t index = edge_count;
+        if (index < EDGE_CAPACITY) edge_ticks[index] = tick;
+        edge_count = index + 1u;
+    }
+}
+
+static cyhal_gpio_callback_data_t edge_callback = {
+    .callback = qualification_edge_irq, .callback_arg = NULL
+};
+
+static void qualification_edge_begin(void)
+{
+    edge_count = 0u;
+    edge_active = true;
+    cyhal_gpio_enable_event(CYBSP_GPIO10, CYHAL_GPIO_IRQ_RISE, interface.irq_priority, true);
+}
+
+static void qualification_edge_end(uint32_t *packet, uint32_t start)
+{
+    cyhal_gpio_enable_event(CYBSP_GPIO10, CYHAL_GPIO_IRQ_RISE, interface.irq_priority, false);
+    edge_active = false;
+    uint32_t count = edge_count;
+    uint32_t *output = packet + (HEADER_BYTES + ADC_PAYLOAD_BYTES) / 4u;
+    output[0] = count;
+    output[1] = (count > EDGE_CAPACITY) ? 1u : 0u;
+    for (uint32_t index = 0; index < EDGE_CAPACITY; ++index)
+        output[2u + index] = (index < count) ? (edge_ticks[index] - start) : 0u;
+}
+#endif
+
 #if RADAR_SCOPE_OUTPUT
 static int32_t qualification_scope_output(void)
 {
     uint32_t original = 0, actual = 0;
-    /* FIFO/error status is polled over SPI. Do not turn each chirp into an MCU ISR. */
+    /* FIFO/error status is polled over SPI. Edge-timing variant replaces this callback. */
     cyhal_gpio_enable_event(CYBSP_GPIO10, CYHAL_GPIO_IRQ_RISE, interface.irq_priority, false);
     if (xensiv_bgt60cutrxx_get_reg(&sensor.dev, BGT60CUTR13B_REG_IO_CTRL, &original) != 0) return -1;
     uint32_t expected = (original & ~BGT60CUTR13B_IO_CTRL_DMUX0_SEL_msk) |
@@ -76,6 +132,11 @@ static int32_t qualification_scope_output(void)
         BGT60CUTR13B_IO_DIO4_EN_msk | BGT60CUTR13B_IO_DIO4_STREN_msk;
     if (xensiv_bgt60cutrxx_set_reg(&sensor.dev, BGT60CUTR13B_REG_IO_DIO4, expected) != 0) return -1;
     if (xensiv_bgt60cutrxx_get_reg(&sensor.dev, BGT60CUTR13B_REG_IO_DIO4, &actual) != 0 || actual != expected) return -1;
+#if RADAR_EDGE_TIMING
+    if (cyhal_gpio_init(CYBSP_GPIO10, CYHAL_GPIO_DIR_INPUT,
+                        CYHAL_GPIO_DRIVE_NONE, 0) != CY_RSLT_SUCCESS) return -1;
+    cyhal_gpio_register_callback(CYBSP_GPIO10, &edge_callback);
+#endif
     return 0;
 }
 #endif
@@ -110,6 +171,9 @@ static int32_t capture(uint32_t *packet)
         BGT60CUTR13B_IR_CLEAR_THRESHOLD_MSK | BGT60CUTR13B_IR_CLEAR_FIFO_UF_CLR_MSK |
         BGT60CUTR13B_IR_CLEAR_FIFO_OF_CLR_MSK);
     uint32_t start = cyhal_timer_read(&timer);
+    #if RADAR_EDGE_TIMING
+    qualification_edge_begin();
+#endif
     status |= xensiv_bgt60cutrxx_trigger_sequence0(&sensor.dev);
     uint32_t words = 0;
     while (status == 0 && words < FRAME_WORDS) {
@@ -135,18 +199,21 @@ static int32_t capture(uint32_t *packet)
         }
     }
     status |= stop_capture();
+#if RADAR_EDGE_TIMING
+    qualification_edge_end(packet, start);
+#endif
     uint32_t final_irq = 0;
     status |= xensiv_bgt60cutrxx_get_irq_status(&sensor.dev, &final_irq);
     if (final_irq & (BGT60CUTR13B_IR_STAT_FIFO_UF_ERR_MSK | BGT60CUTR13B_IR_STAT_FIFO_OF_ERR_MSK)) status = -1;
     if (status != 0) return status;
     packet[0] = 0x33445247u;
-    packet[1] = 1u | (HEADER_BYTES << 16);
+    packet[1] = (RADAR_AVG16_TEST ? 4u : (RADAR_EDGE_TIMING ? 3u : 1u)) | (HEADER_BYTES << 16);
     packet[2] = PAYLOAD_BYTES;
     packet[3] = sequence;
     packet[4] = start;
     packet[5] = PROFILE_ID;
     packet[6] = CHIRPS | (SAMPLES << 16);
-    packet[7] = RECEIVERS | (16u << 8) | ((3u | ((RADAR_HPF_KHZ == 100) ? 4u : 0u)) << 16);
+    packet[7] = RECEIVERS | (16u << 8) | ((3u | ((RADAR_HPF_KHZ == 100) ? 4u : 0u) | (RADAR_EDGE_TIMING ? 8u : 0u) | (RADAR_AVG16_TEST ? 16u : 0u)) << 16);
     packet[8] = dropped;
     packet[9] = errors;
     packet[10] = cyhal_timer_read(&timer) - start; /* acquisition path elapsed, NOT chirp spacing */
@@ -187,7 +254,13 @@ int main(void)
     if (qualification_scope_output() != 0) return 11;
 #endif
     if (stop_capture() != 0) return 8;
+    #if RADAR_AVG16_TEST
+    /* Preserve the generated AVG16 setting; verify it survived sensor initialization. */
+    uint32_t avg16_actual = 0u;
+    if (xensiv_bgt60cutrxx_get_reg(&sensor.dev, BGT60CUTR13B_REG_AVG_CTRL_SEQ0, &avg16_actual) != 0 || avg16_actual != 4u) return 12;
+#else
     if (xensiv_bgt60cutrxx_set_reg(&sensor.dev, BGT60CUTR13B_REG_AVG_CTRL_SEQ0, 0) != 0) return 8;
+#endif
     if (xensiv_bgt60cutrxx_set_reg(&sensor.dev, BGT60CUTR13B_REG_FIFO_CTRL, (191u << 16)) != 0) return 8;
     for (uint16_t address = BGT60CUTR13B_REG_CS_IDX0_RX1;
          address <= BGT60CUTR13B_REG_CS_IDX0_RX3; address += 4u) {

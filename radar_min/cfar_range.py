@@ -12,11 +12,16 @@ def refine_group(frame, config, bins):
     nfft = max(4096, 8*config.samples)
     spectrum = range_spectrum(frame, config, nfft=nfft)
     p = np.mean(abs(spectrum)**2, axis=(0, 2))
+    return refine_profile(p, config, bins, nfft)
+
+
+def refine_profile(p, config, bins, nfft, method='raw-Hann-dense-peak-v1'):
+    """Apply the same conservative peak rules to a current power profile."""
     coordinates = np.arange(len(p))*config.spacing_m*config.samples/nfft
     lower = (min(bins)-.5)*config.spacing_m
     upper = (max(bins)+.5)*config.spacing_m
     indices = np.flatnonzero((coordinates >= lower) & (coordinates <= upper))
-    result = dict(method='raw-Hann-dense-peak-v1', range_m=None,
+    result = dict(method=method, range_m=None,
                   support_m=[lower, upper], reason='fine_peak_at_group_boundary',
                   boundary=True, nfft=nfft)
     if len(indices) < 3:

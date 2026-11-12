@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "labels": "Absolute supplied times from first saved frame; holds trim 1/2 s and motion 0.2 s per side. No fitted timing offset. Operator position and precise ground-truth trajectory not supplied.",
+  "cases": [
+    {
+      "recording": "recordings/rd-gui-20261111-141606-847532/live-002",
+      "windows": [
+        {
+          "label": "120 cm A (trim 1s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "window_host_s": [
+            1,
+            10.56
+          ],
+          "original_window_host_s": [
+            0,
+            11.56
+          ]
+        },
+        {
+          "label": "120 cm A (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            2,
+            9.56
+          ],
+          "original_window_host_s": [
+            0,
+            11.56
+          ]
+        },
+        {
+          "label": "50 cm A (trim 1s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 1,
+          "window_host_s": [
+            14.58,
+            24.06
+          ],
+          "original_window_host_s": [
+            13.58,
+            25.06
+          ]
+        },
+        {
+          "label": "50 cm A (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "window_host_s": [
+            15.58,
+            23.06
+          ],
+          "original_window_host_s": [
+            13.58,
+            25.06
+          ]
+        },
+        {
+          "label": "120 cm B (trim 1s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "window_host_s": [
+            28.02,
+            37.47
+          ],
+          "original_window_host_s": [
+            27.02,
+            38.47
+          ]
+        },
+        {
+          "label": "120 cm B (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            29.02,
+            36.47
+          ],
+          "original_window_host_s": [
+            27.02,
+            38.47
+          ]
+        },
+        {
+          "label": "50 cm B (trim 1s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 1,
+          "window_host_s": [
+            43.15,
+            52.3
+          ],
+          "original_window_host_s": [
+            42.15,
+            53.3
+          ]
+        },
+        {
+          "label": "50 cm B (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 0.5,
+          "trim_s": 2,
+          "window_host_s": [
+            44.15,
+            51.3
+          ],
+          "original_window_host_s": [
+            42.15,
+            53.3
+          ]
+        },
+        {
+          "label": "120 cm C (trim 1s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 1,
+          "window_host_s": [
+            57.61,
+            66.658682
+          ],
+          "original_window_host_s": [
+            56.61,
+            67.658682
+          ]
+        },
+        {
+          "label": "120 cm C (trim 2s)",
+          "state": "hold",
+          "nominal_target_m": 1.2,
+          "trim_s": 2,
+          "window_host_s": [
+            58.61,
+            65.658682
+          ],
+          "original_window_host_s": [
+            56.61,
+            67.658682
+          ]
+        },
+        {
+          "label": "approach 1",
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            11.76,
+            13.38
+          ],
+          "original_window_host_s": [
+            11.56,
+            13.58
+          ]
+        },
+        {
+          "label": "retreat 1",
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            25.259999999999998,
+            26.82
+          ],
+          "original_window_host_s": [
+            25.06,
+            27.02
+          ]
+        },
+        {
+          "label": "approach 2",
+          "state": "motion",
+          "expected_phase_sign": -1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            38.67,
+            41.949999999999996
+          ],
+          "original_window_host_s": [
+            38.47,
+            42.15
+          ]
+        },
+        {
+          "label": "retreat 2",
+          "state": "motion",
+          "expected_phase_sign": 1,
+          "trim_s": 0.2,
+          "window_host_s": [
+            53.5,
+            56.41
+          ],
+          "original_window_host_s": [
+            53.3,
+            56.61
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,8 @@
 > **Baseline-free range detection:** [CA-CFAR mode](docs/CFAR_RANGE.md) adds live/replay operation without an empty capture. It now uses group confirmation and fine peak estimates; empty-scene false detections remain unresolved.
+>
+> **Range–Doppler candidate replay:** [2D CA-CFAR](docs/CFAR_2D.md) adds full-map thresholds with zero Doppler retained. Optional [feature association](docs/RANGE_DOPPLER_ASSOCIATION.md) adds persistent IDs and explicit ambiguity/loss. Physical-object identity and accuracy validation remain open.
+>
+> **Live range–Doppler GUI:** [rd-gui](docs/LIVE_RANGE_DOPPLER.md) runs 2D CFAR and feature association during raw capture, with fresh nominal range rows and blank distances for ambiguous/missing features.
 
 > **Short-range diagnosis:** [SHORT_RANGE_FINDINGS.md](SHORT_RANGE_FINDINGS.md) documents a fixed candidate-selection defect, improved 50 cm replay, and the remaining physical range limits.
 

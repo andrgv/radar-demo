@@ -73,6 +73,9 @@ class CfarDetector:
             raise ValueError('No searchable CFAR bins have enough training cells')
         self.clear()
 
+    def thresholds(self, p):
+        return ca_thresholds(p, self.settings)
+
     def clear(self):
         self.bin = None
         self.group = set()
@@ -96,7 +99,7 @@ class CfarDetector:
             self.clear()
             out['reason'] = reason
         else:
-            noise, thresholds, counts = ca_thresholds(p, self.settings)
+            noise, thresholds, counts = self.thresholds(p)
             ids = np.arange(self.config.min_bin, self.config.max_bin+1)
             qualified = ids[p[ids] > thresholds[ids]]
             # Group contiguous above-threshold cells, and select one maximum

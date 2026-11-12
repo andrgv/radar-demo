@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "recording": "recordings/rd-gui-20261111-135229-775366/live-001",
+  "labels": "User supplied consecutive durations from first saved frame. Operator B for quiet holds. Transitions excluded, 1s and 2s quiet-interior trims; no fitted offset. Labeled end 147.61s; later tail unscored.",
+  "windows": [
+    {
+      "label": "empty A (trim 1s)",
+      "state": "target_absent",
+      "operator_position": "B",
+      "trim_s": 1,
+      "window_host_s": [
+        6.53,
+        25.49
+      ],
+      "original_window_host_s": [
+        5.53,
+        26.49
+      ]
+    },
+    {
+      "label": "empty A (trim 2s)",
+      "state": "target_absent",
+      "operator_position": "B",
+      "trim_s": 2,
+      "window_host_s": [
+        7.53,
+        24.49
+      ],
+      "original_window_host_s": [
+        5.53,
+        26.49
+      ]
+    },
+    {
+      "label": "80 cm A (trim 1s)",
+      "state": "hold",
+      "operator_position": "B",
+      "trim_s": 1,
+      "window_host_s": [
+        45.38,
+        74.11
+      ],
+      "original_window_host_s": [
+        44.38,
+        75.11
+      ],
+      "nominal_target_m": 0.8
+    },
+    {
+      "label": "80 cm A (trim 2s)",
+      "state": "hold",
+      "operator_position": "B",
+      "trim_s": 2,
+      "window_host_s": [
+        46.38,
+        73.11
+      ],
+      "original_window_host_s": [
+        44.38,
+        75.11
+      ],
+      "nominal_target_m": 0.8
+    },
+    {
+      "label": "empty B (trim 1s)",
+      "state": "target_absent",
+      "operator_position": "B",
+      "trim_s": 1,
+      "window_host_s": [
+        85.05,
+        103.64
+      ],
+      "original_window_host_s": [
+        84.05,
+        104.64
+      ]
+    },
+    {
+      "label": "empty B (trim 2s)",
+      "state": "target_absent",
+      "operator_position": "B",
+      "trim_s": 2,
+      "window_host_s": [
+        86.05,
+        102.64
+      ],
+      "original_window_host_s": [
+        84.05,
+        104.64
+      ]
+    },
+    {
+      "label": "80 cm B (trim 1s)",
+      "state": "hold",
+      "operator_position": "B",
+      "trim_s": 1,
+      "window_host_s": [
+        117.8,
+        146.61
+      ],
+      "original_window_host_s": [
+        116.8,
+        147.61
+      ],
+      "nominal_target_m": 0.8
+    },
+    {
+      "label": "80 cm B (trim 2s)",
+      "state": "hold",
+      "operator_position": "B",
+      "trim_s": 2,
+      "window_host_s": [
+        118.8,
+        145.61
+      ],
+      "original_window_host_s": [
+        116.8,
+        147.61
+      ],
+      "nominal_target_m": 0.8
+    }
+  ]
+}

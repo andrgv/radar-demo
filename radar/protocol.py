@@ -5,6 +5,9 @@ import numpy as np
 
 MAGIC = b"GRD3"
 HEADER = struct.Struct("<4sHHIIIIHHBBHIIII")
+EDGE_TIMING = struct.Struct("<II64I")  # version 2: count, overflow, 64 offsets (us)
+EDGE_TIMING_FULL = struct.Struct("<II128I")  # version 3: same layout, 128 offsets
+EDGE_TIMING_AVG16 = struct.Struct("<II320I")  # version 4: AVG16 test, 320 offsets
 MAX_PAYLOAD = 1024 * 1024
 
 
@@ -18,14 +21,39 @@ class Frame:
     errors: int = 0
     flags: int = 1
     capture_elapsed_us: int | None = None
+    edge_times_us: tuple[int, ...] | None = None
+    edge_count: int | None = None
+    edge_overflow: bool = False
+    edge_capacity: int | None = None
+
+
+def wire_size(frame):
+    """Encoded packet size, including the optional edge-timing extension."""
+    capacity = (frame.edge_capacity or 64) if frame.edge_times_us is not None else 0
+    return HEADER.size+frame.adc.size*2+(8+4*capacity if capacity else 0)+4
 
 
 def encode(frame):
     chirps, samples, receivers = frame.adc.shape
     payload = np.asarray(frame.adc, dtype="<u2").tobytes()
-    header = HEADER.pack(MAGIC, 1, HEADER.size, len(payload), frame.sequence,
+    version = 2 if frame.edge_times_us is not None else 1
+    if version == 2:
+        times = tuple(frame.edge_times_us)
+        capacity = frame.edge_capacity or 64
+        if capacity not in (64, 128, 320):
+            raise ValueError("Unsupported edge timing capacity")
+        if capacity == 128:
+            version = 3
+        elif capacity == 320:
+            version = 4
+        count = len(times) if frame.edge_count is None else frame.edge_count
+        if len(times) > capacity or count < len(times) or (count > capacity) != frame.edge_overflow:
+            raise ValueError("Invalid edge timing count/overflow")
+        layout = EDGE_TIMING_AVG16 if version == 4 else EDGE_TIMING_FULL if version == 3 else EDGE_TIMING
+        payload += layout.pack(count, int(frame.edge_overflow), *(times + (0,) * (capacity - len(times))))
+    header = HEADER.pack(MAGIC, version, HEADER.size, len(payload), frame.sequence,
                          frame.timestamp_us, frame.profile_id, chirps, samples,
-                         receivers, 16, frame.flags | (2 if frame.capture_elapsed_us is not None else 0),
+                         receivers, 16, frame.flags | (2 if frame.capture_elapsed_us is not None else 0) | (8 if version in (2, 3, 4) else 0),
                          frame.dropped, frame.errors, frame.capture_elapsed_us or 0, 0)
     header = header[:-4] + struct.pack("<I", zlib.crc32(header[:-4]))
     packet = header + payload
@@ -60,9 +88,13 @@ class Parser:
             (_, version, header_bytes, length, sequence, timestamp, profile,
              chirps, samples, receivers, bits, flags, dropped, errors,
              reserved0, header_crc) = fields
-            valid = (version == 1 and header_bytes == HEADER.size and receivers == 3 and bits == 16
+            adc_bytes = chirps * samples * receivers * 2
+            timing_layout = (EDGE_TIMING if version == 2 else EDGE_TIMING_FULL if version == 3
+                             else EDGE_TIMING_AVG16 if version == 4 else None)
+            valid = (version in (1, 2, 3, 4) and header_bytes == HEADER.size and receivers == 3 and bits == 16
                      and 0 < chirps <= 1024 and 0 < samples <= 2048
-                     and length == chirps * samples * receivers * 2 and length <= MAX_PAYLOAD
+                     and length == adc_bytes + (timing_layout.size if timing_layout else 0) and length <= MAX_PAYLOAD
+                     and bool(flags & 8) == (timing_layout is not None)
                      and zlib.crc32(self.buffer[:HEADER.size - 4]) == header_crc)
             if not valid:
                 self.bad_headers += 1
@@ -78,7 +110,22 @@ class Parser:
                 self.discarded_bytes += 1
                 del self.buffer[0]
                 continue
-            adc = np.frombuffer(bytes(self.buffer[HEADER.size:packet_bytes - 4]), dtype="<u2").reshape(chirps, samples, receivers)
+            adc = np.frombuffer(bytes(self.buffer[HEADER.size:HEADER.size + adc_bytes]), dtype="<u2").reshape(chirps, samples, receivers)
+            edge_times = None
+            edge_count = None
+            edge_overflow = False
+            edge_capacity = None
+            if timing_layout is not None:
+                edge_capacity = 320 if version == 4 else 128 if version == 3 else 64
+                values = timing_layout.unpack_from(self.buffer, HEADER.size + adc_bytes)
+                edge_count, overflow = values[:2]
+                if overflow != int(edge_count > edge_capacity):
+                    self.bad_headers += 1
+                    self.discarded_bytes += 1
+                    del self.buffer[0]
+                    continue
+                edge_times = tuple(values[2:2 + min(edge_count, edge_capacity)])
+                edge_overflow = bool(overflow)
             del self.buffer[:packet_bytes]
             if self.last_sequence is not None:
                 delta = (sequence - self.last_sequence) & 0xffffffff
@@ -88,5 +135,6 @@ class Parser:
                     self.restarts += 1
             self.last_sequence = sequence
             frames.append(Frame(sequence, timestamp, profile, adc, dropped, errors, flags,
-                                reserved0 if flags & 2 else None))
+                                reserved0 if flags & 2 else None, edge_times, edge_count,
+                                edge_overflow, edge_capacity))
         return frames

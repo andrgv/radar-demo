@@ -1,6 +1,6 @@
 {
   "baseline_sha256": "12175f6a919a2cbd93612f80abc283df6861045d499a399564bdef391aef9f41",
-  "source": "C:\\Users\\andre\\radar-work\\glass-radar\\experiments\\qualification\\main.c",
+  "source": "/Users/amanda/Desktop/school/ese4500/radar-demo/experiments/qualification/main.c",
   "register_differences": [
     {
       "address": "0x1010",
@@ -21,7 +21,7 @@
       "changed_mask": "0x00000300"
     }
   ],
-  "unchanged": "Same downloaded register list, sequencer instruction bytes, AVG_CTRL_SEQ0 override, FIFO threshold/drain logic, chirp/sample counts, 100 ms frame scheduling and serial baud.",
+  "unchanged": "Same downloaded register list and sequencer instruction bytes, FIFO threshold/drain logic, chirp/sample counts, 100 ms frame scheduling and serial baud. AVG16 test preserves the vendor averaging setting; other qualification builds override it to AVG1.",
   "common_instrumentation": "Read back all three modified RX registers before streaming. Use header flag bit1 plus word10 for acquisition-path elapsed microseconds; not chirp spacing. Bit2 identifies 100 kHz. Distinct profile IDs prevent accidental host mixing.",
   "hpf_mask": 768
 }
