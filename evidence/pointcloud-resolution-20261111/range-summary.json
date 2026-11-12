@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "run": "350-a",
+      "frames": 404,
+      "mean_absolute_range_error_cm": 4.603545376656914,
+      "abs_error_p50_p90_p95_cm": [
+        4.55724915322965,
+        6.946971268040275,
+        7.586946372632318
+      ],
+      "fraction_within_5cm": 0.6212871287128713,
+      "fft_peak_mean_absolute_error_cm": 5.950904932280457
+    },
+    {
+      "run": "100-a",
+      "frames": 404,
+      "mean_absolute_range_error_cm": 1.8303694676774311,
+      "abs_error_p50_p90_p95_cm": [
+        1.2665047115504313,
+        4.296138746180187,
+        5.520015880854061
+      ],
+      "fraction_within_5cm": 0.9282178217821783,
+      "fft_peak_mean_absolute_error_cm": 10.564162195024394
+    },
+    {
+      "run": "350-b",
+      "frames": 404,
+      "mean_absolute_range_error_cm": 2.263930146563947,
+      "abs_error_p50_p90_p95_cm": [
+        1.7712903873427472,
+        5.043569453180137,
+        6.242004804757678
+      ],
+      "fraction_within_5cm": 0.8960396039603961,
+      "fft_peak_mean_absolute_error_cm": 6.858925327772997
+    }
+  ],
+  "raw_replay_report": "artifacts/resolution-hpf-replay-20261111/report.json",
+  "method": "Existing frozen background-subtracted single-tone fitter, 0.15-1.5 m search; no label fitting or retuning. All 1212 target frames included, regardless of detector acceptance. Raw replay checked each recording against retained HPF results.",
+  "limitations": "User-reported 30/40/50 cm placements; fixed scene and empty reference. Measures single-target range error, not two-target resolution, 3D accuracy or moving-room-map performance."
+}

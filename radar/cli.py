@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 import time
 import math
+import importlib.util
+import os
+import sys
 from .config import Config
 from .processing import Processor
 from .storage import Recorder, replay
@@ -24,6 +27,10 @@ def main(argv=None):
     gui.add_argument('--start-delay', type=float, default=0, help='Visible setup countdown in seconds before acquisition starts')
     gui.add_argument('--spatial-map', action='store_true', help='Show per-frame 3D reflectivity volume, not reconstructed surfaces')
     gui.add_argument('--point-cloud',action='store_true',help='Extract range-Doppler scattering centers with joint azimuth/elevation fitting')
+    gui.add_argument('--cloud-method', choices=('deblend', 'fft'),
+                     help='Point-cloud processor: raw waveform deblending (default) or legacy FFT peaks')
+    gui.add_argument('--obstacle-cloud', action='store_true',
+                     help='Experimental persistent per-RX 3D obstacles and unresolved-direction warnings')
     gui.add_argument("--metadata")
     gui.add_argument("--phase-probe", type=float, metavar="METERS",
                      help="Diagnostic phase estimate at a fixed range bin; not a detected/tracked object")
@@ -108,6 +115,15 @@ def main(argv=None):
     obstacle_live.add_argument('--model', required=True)
     obstacle_live.add_argument('--port', required=True)
     obstacle_live.add_argument('--seconds', type=float, default=60)
+    cloud_replay = commands.add_parser('obstacle3d-replay', help='Replay reference-free experimental 3D obstacle detection')
+    cloud_replay.add_argument('recording')
+    cloud_replay.add_argument('--config', help='Optional geometry config; acquisition fields must match the recording')
+    cloud_replay.add_argument('--output', required=True, help='New result directory')
+    cloud_live = commands.add_parser('obstacle3d-live', help='USB 3D obstacle candidates, warnings and raw recording')
+    cloud_live.add_argument('output')
+    cloud_live.add_argument('--port', required=True)
+    cloud_live.add_argument('--config', required=True)
+    cloud_live.add_argument('--seconds', type=float, default=60)
     material_record = commands.add_parser('material-record', help='Record a labeled glass or drywall surface')
     material_record.add_argument('output')
     material_record.add_argument('--port', required=True)
@@ -137,16 +153,64 @@ def main(argv=None):
     material_live.add_argument('--seconds', type=float, default=30)
     material_live.add_argument('--settle', type=float, default=5)
     arguments = parser.parse_args(argv)
+    if arguments.command in ('obstacle3d-live', 'obstacle3d-replay'):
+        from .obstacle3d import iter_results, load_config
+        recording = getattr(arguments, 'recording', None)
+        config = load_config(arguments.config or Path(recording) / 'config.json')
+        results = iter_results(config, recording=recording, port=getattr(arguments, 'port', None),
+                               output=arguments.output, seconds=getattr(arguments, 'seconds', None))
+        try:
+            for result in results:
+                print(json.dumps(result, allow_nan=False), flush=True)
+        except KeyboardInterrupt:
+            print(json.dumps(dict(schema=1, state='uncertain', reason='interrupted', returns=[])), flush=True)
+        except Exception:
+            print(json.dumps(dict(schema=1, state='uncertain', reason='acquisition_error', returns=[])), flush=True)
+            raise
+        finally:
+            results.close()
+        return
     if arguments.command == "gui":
+        if arguments.cloud_method and not arguments.point_cloud:
+            parser.error('--cloud-method requires --point-cloud')
+        if arguments.point_cloud and (arguments.cloud_method or 'deblend') == 'deblend' and arguments.background:
+            parser.error('--background is supported with --cloud-method fft; deblend uses original raw ADC')
+        missing = [name for name in ('PyQt6', 'matplotlib', 'serial') if importlib.util.find_spec(name) is None]
+        if missing:
+            project_python = '.venv/Scripts/python.exe' if os.name == 'nt' else '.venv/bin/python'
+            parser.error(
+                f"GUI dependencies missing in {sys.executable}: {', '.join(missing)}. "
+                f"From the checkout run `python -m venv .venv` then "
+                f"`{project_python} -m pip install -e .`; launch with "
+                f"`{project_python} -m radar gui ...` (or activate .venv first).")
         if not math.isfinite(arguments.start_delay) or arguments.start_delay < 0:
             parser.error('--start-delay must be finite and nonnegative')
         if arguments.seconds is not None and (not math.isfinite(arguments.seconds) or arguments.seconds <= 0):
             parser.error('--seconds must be finite and greater than zero')
         if arguments.port and not arguments.config:
             parser.error("Hardware acquisition requires --config; start with configs/hardware-provisional.json")
-        config = Config.load(arguments.config) if arguments.config else (
-            Config.load(Path(arguments.replay) / "config.json") if arguments.replay else
-            Config(chirp_timing_verified=True,carrier_frequency_verified=True))
+        if arguments.obstacle_cloud:
+            if arguments.synthetic:
+                parser.error('--obstacle-cloud requires a replay or USB port')
+            if arguments.background or arguments.phase_probe is not None or arguments.point_cloud or arguments.spatial_map:
+                parser.error('--obstacle-cloud uses its own 3D view; omit background/phase-probe/point-cloud/spatial-map')
+            from .obstacle3d import load_config
+            config = load_config(arguments.config or Path(arguments.replay) / 'config.json')
+            if arguments.mount_roll is not None:
+                config = replace(config, mount_roll_deg=arguments.mount_roll).validate()
+            from .qt_platform import staged_platform_plugins
+            with staged_platform_plugins():
+                from .obstacle3d_gui import run
+                return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
+                           seconds=arguments.seconds, start_delay=arguments.start_delay)
+        if arguments.point_cloud:
+            from .obstacle3d import load_config
+            config = load_config(arguments.config or Path(arguments.replay) / 'config.json') if (
+                arguments.config or arguments.replay) else Config(chirp_timing_verified=True, carrier_frequency_verified=True)
+        else:
+            config = Config.load(arguments.config) if arguments.config else (
+                Config.load(Path(arguments.replay) / "config.json") if arguments.replay else
+                Config(chirp_timing_verified=True,carrier_frequency_verified=True))
         if arguments.mount_roll is not None:
             config = replace(config, mount_roll_deg=arguments.mount_roll).validate()
         metadata = json.loads(Path(arguments.metadata).read_text()) if arguments.metadata else None
@@ -155,13 +219,15 @@ def main(argv=None):
             snapshot = Path(arguments.replay) / "spectral-background.npz"
             if snapshot.exists():
                 background_path = str(snapshot)
+        if arguments.point_cloud and (arguments.cloud_method or 'deblend') == 'deblend' and background_path:
+            parser.error('This replay has a spectral background; use --cloud-method fft to apply it')
         from .qt_platform import staged_platform_plugins
         with staged_platform_plugins():
             from .gui import run
             return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
                        metadata=metadata, phase_probe_range=arguments.phase_probe, background_path=background_path,
                        spatial_map=arguments.spatial_map, seconds=arguments.seconds, start_delay=arguments.start_delay,
-                       point_cloud=arguments.point_cloud)
+                       point_cloud=arguments.point_cloud, cloud_method=arguments.cloud_method or 'deblend')
     if arguments.command == "synthetic":
         config = Config(calibration_id="synthetic-known-geometry", verified=True,
                         chirp_timing_verified=True,carrier_frequency_verified=True)

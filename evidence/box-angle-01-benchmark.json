@@ -1,0 +1,725 @@
+{
+  "schema": 1,
+  "source_sweep": "recordings/box-angle-01",
+  "profile_id": "0x33514802",
+  "range_bin_spacing_m": 0.34758545855072465,
+  "nominal_baselines_wavelengths_rx2_rx3": [
+    [
+      0.0,
+      0.4703253742293944
+    ],
+    [
+      -0.4703253742293944,
+      0.0
+    ]
+  ],
+  "note": "Differences in complex background-subtracted spectra can reflect multipath, phase coherence, and subtraction artifacts. Raw-target comparisons help isolate whether subtraction changes phase trends. Calibration remains blocked.",
+  "poses": [
+    {
+      "name": "center",
+      "fit": true,
+      "support": "two_flat",
+      "accepted_previous": false,
+      "expected_range_m": 2.003161563628855,
+      "direction_right_up": [
+        0.0,
+        -0.056161221362593994
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 51,
+      "local_contrast_db": 11.589670221266049,
+      "residual_vs_background_power_db": -5.793842209057297,
+      "raw_target_vs_background_power_db": -5.644701928048792,
+      "relative_phase_deg": [
+        164.95617525692433,
+        121.07368833606441
+      ],
+      "min_coherence": 0.9789990960643549,
+      "per_rx_coherence": [
+        1.0000000000000018,
+        0.9789990960643549,
+        0.9845763921729402
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        5.488576476706163,
+        3.6160640399921324
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        123.06457813050037,
+        64.14115362078371
+      ],
+      "raw_target_min_coherence": 0.9761203355851137,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        4.819469498663885,
+        4.54110723938698
+      ]
+    },
+    {
+      "name": "left",
+      "fit": true,
+      "support": "two_flat",
+      "accepted_previous": false,
+      "expected_range_m": 2.0255014811152323,
+      "direction_right_up": [
+        -0.14811146908410122,
+        -0.055541800906537986
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 49,
+      "frames_target": 51,
+      "local_contrast_db": 7.623690085999678,
+      "residual_vs_background_power_db": -3.9993647263810055,
+      "raw_target_vs_background_power_db": -0.7176596246816497,
+      "relative_phase_deg": [
+        -156.23209978736068,
+        121.0273327934207
+      ],
+      "min_coherence": 0.9433513666098865,
+      "per_rx_coherence": [
+        0.9999999999999993,
+        0.9433513666098865,
+        0.9501936079170915
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        8.464721910525634,
+        6.867229854626636
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        -126.35500138312784,
+        121.08881164366
+      ],
+      "raw_target_min_coherence": 0.954048006175916,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        4.929843379329498,
+        5.717855045425359
+      ]
+    },
+    {
+      "name": "right",
+      "fit": true,
+      "support": "two_flat",
+      "accepted_previous": false,
+      "expected_range_m": 2.0255014811152323,
+      "direction_right_up": [
+        0.14811146908410122,
+        -0.055541800906537986
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 48,
+      "frames_target": 51,
+      "local_contrast_db": 11.37285056658859,
+      "residual_vs_background_power_db": 0.26809329159346285,
+      "raw_target_vs_background_power_db": 5.455660634474637,
+      "relative_phase_deg": [
+        139.15191164347658,
+        98.62011844254258
+      ],
+      "min_coherence": 0.9625597670911529,
+      "per_rx_coherence": [
+        1.0000000000000004,
+        0.9649896361680335,
+        0.9625597670911529
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        2.23613044882616,
+        2.7661291117809705
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        102.97041395497945,
+        84.62261650184075
+      ],
+      "raw_target_min_coherence": 0.9892736254957646,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        1.1670797319289428,
+        1.5780762707451057
+      ]
+    },
+    {
+      "name": "up",
+      "fit": true,
+      "support": "upright_plus_flat",
+      "accepted_previous": true,
+      "expected_range_m": 2.002886978838297,
+      "direction_right_up": [
+        0.0,
+        0.05367252427910412
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 48,
+      "local_contrast_db": 17.047935926349897,
+      "residual_vs_background_power_db": -3.9056607518294943,
+      "raw_target_vs_background_power_db": -4.381537518813808,
+      "relative_phase_deg": [
+        160.90662148065744,
+        118.74078734886913
+      ],
+      "min_coherence": 0.9887019462421192,
+      "per_rx_coherence": [
+        0.9999999999999994,
+        0.9887019462421192,
+        0.9896892569376836
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        2.015621491576079,
+        1.8135302925724048
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        -84.47274150661539,
+        128.01147849246308
+      ],
+      "raw_target_min_coherence": 0.9803657658655179,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        2.50108781050906,
+        1.874655443929322
+      ]
+    },
+    {
+      "name": "down",
+      "fit": true,
+      "support": "none",
+      "accepted_previous": false,
+      "expected_range_m": 2.012338502836936,
+      "direction_right_up": [
+        0.0,
+        -0.11056787895591426
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 51,
+      "local_contrast_db": 5.927107268145849,
+      "residual_vs_background_power_db": -0.4270909780774082,
+      "raw_target_vs_background_power_db": 0.2085314569677954,
+      "relative_phase_deg": [
+        173.08022140790985,
+        112.41156070110588
+      ],
+      "min_coherence": 0.9135502207866134,
+      "per_rx_coherence": [
+        1.0000000000000016,
+        0.9135502207866134,
+        0.9360167968601711
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        5.733463398049976,
+        4.303167797555004
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        -102.1099144942484,
+        131.5401876754973
+      ],
+      "raw_target_min_coherence": 0.8381582924027648,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        4.03509219284727,
+        8.487395894993949
+      ]
+    },
+    {
+      "name": "check_right",
+      "fit": false,
+      "support": "two_flat",
+      "accepted_previous": true,
+      "expected_range_m": 2.0087698349985246,
+      "direction_right_up": [
+        0.07467256695444661,
+        -0.05600442521583498
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 48,
+      "frames_target": 51,
+      "local_contrast_db": 19.104926995750855,
+      "residual_vs_background_power_db": 1.3268825246613587,
+      "raw_target_vs_background_power_db": 6.23767110712313,
+      "relative_phase_deg": [
+        156.18610801490658,
+        111.64656514144436
+      ],
+      "min_coherence": 0.9961935226735545,
+      "per_rx_coherence": [
+        1.0000000000000007,
+        0.9961935226735545,
+        0.9964365609258055
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        1.040522366421807,
+        0.8272294271936841
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        168.05971570284012,
+        106.63803587749953
+      ],
+      "raw_target_min_coherence": 0.9986639839714807,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        0.5989124375648052,
+        0.4590754117388184
+      ]
+    },
+    {
+      "name": "check_left",
+      "fit": false,
+      "support": "two_flat",
+      "accepted_previous": true,
+      "expected_range_m": 2.0087698349985246,
+      "direction_right_up": [
+        -0.07467256695444661,
+        -0.05600442521583498
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 48,
+      "frames_target": 49,
+      "local_contrast_db": 21.86536381628685,
+      "residual_vs_background_power_db": 3.9809472637791794,
+      "raw_target_vs_background_power_db": 7.298576043129633,
+      "relative_phase_deg": [
+        -177.1393330542659,
+        126.15610334010437
+      ],
+      "min_coherence": 0.996694041813477,
+      "per_rx_coherence": [
+        0.9999999999999987,
+        0.996694041813477,
+        0.9983185293783986
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        1.0639614919412534,
+        0.7413992354995612
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        -162.2647687799637,
+        118.9762057086166
+      ],
+      "raw_target_min_coherence": 0.9985313953389101,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        0.6549315523739154,
+        0.5099023353395764
+      ]
+    },
+    {
+      "name": "check_up",
+      "fit": false,
+      "support": "one_upright",
+      "accepted_previous": true,
+      "expected_range_m": 2.0006889438390965,
+      "direction_right_up": [
+        0.0,
+        0.026240960725887958
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 51,
+      "local_contrast_db": 20.896161680666022,
+      "residual_vs_background_power_db": 8.847185537536673,
+      "raw_target_vs_background_power_db": 10.935100946269056,
+      "relative_phase_deg": [
+        161.31179573780494,
+        125.66325185987219
+      ],
+      "min_coherence": 0.9942989371333079,
+      "per_rx_coherence": [
+        0.9999999999999993,
+        0.9942989371333079,
+        0.996599584919751
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        2.6305392379617367,
+        1.8450270696603304
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        178.0594606140511,
+        120.78871573950151
+      ],
+      "raw_target_min_coherence": 0.9962723377204641,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        2.162090444123826,
+        1.422608358334361
+      ]
+    },
+    {
+      "name": "check_down",
+      "fit": false,
+      "support": "one_flat",
+      "accepted_previous": false,
+      "expected_range_m": 2.0070018061775627,
+      "direction_right_up": [
+        0.0,
+        -0.08345782225229399
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 51,
+      "local_contrast_db": 5.273302902037335,
+      "residual_vs_background_power_db": -17.511477935936583,
+      "raw_target_vs_background_power_db": 0.7349681864431341,
+      "relative_phase_deg": [
+        166.1342458494438,
+        113.51328671619079
+      ],
+      "min_coherence": 0.7984335813797133,
+      "per_rx_coherence": [
+        1.0,
+        0.7984335813797133,
+        0.8487907650970973
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        11.539153364041628,
+        7.8649478920387015
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        156.71763809922624,
+        96.56142267706895
+      ],
+      "raw_target_min_coherence": 0.9969852502749106,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        1.1737985300144949,
+        1.0423445312791344
+      ]
+    },
+    {
+      "name": "center_repeat",
+      "fit": false,
+      "support": "two_flat",
+      "accepted_previous": true,
+      "expected_range_m": 2.003161563628855,
+      "direction_right_up": [
+        0.0,
+        -0.056161221362593994
+      ],
+      "range_bin": 6,
+      "range_bin_m": 2.0855127513043477,
+      "nearby_highest_bin": 6,
+      "nearby_highest_range_m": 2.0855127513043477,
+      "frames_background": 51,
+      "frames_target": 51,
+      "local_contrast_db": 14.119147453539673,
+      "residual_vs_background_power_db": -8.523637722412175,
+      "raw_target_vs_background_power_db": -2.061069213196657,
+      "relative_phase_deg": [
+        168.70001914277645,
+        113.82199829706155
+      ],
+      "min_coherence": 0.9873076853236602,
+      "per_rx_coherence": [
+        1.0000000000000002,
+        0.9873076853236602,
+        0.9897936631026707
+      ],
+      "temporal_phase_spread_deg_rx2_rx3": [
+        1.628301948910529,
+        1.7388749723784542
+      ],
+      "raw_target_phase_deg_rx2_rx3": [
+        164.0362533523792,
+        89.7659201946024
+      ],
+      "raw_target_min_coherence": 0.9970521025297651,
+      "raw_target_phase_spread_deg_rx2_rx3": [
+        0.8263465755248613,
+        0.7666488022207064
+      ]
+    }
+  ],
+  "subtracted_phase_comparisons": [
+    {
+      "from": "check_left",
+      "to": "check_right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        -26.674558930827516,
+        -14.50953819866001
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        -25.286690158214128
+      ],
+      "residual_deg_rx2_rx3": [
+        -26.674558930827516,
+        10.777151959554118
+      ]
+    },
+    {
+      "from": "left",
+      "to": "right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        -64.61598856916271,
+        -22.40721435087812
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        -50.15561912974459
+      ],
+      "residual_deg_rx2_rx3": [
+        -64.61598856916271,
+        27.748404778866472
+      ]
+    },
+    {
+      "from": "center",
+      "to": "center_repeat",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        3.7438438858521295,
+        -7.2516900390028525
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        3.7438438858521295,
+        -7.2516900390028525
+      ]
+    },
+    {
+      "from": "center",
+      "to": "up",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        -4.04955377626689,
+        -2.3329009871952735
+      ],
+      "predicted_deg_rx2_rx3": [
+        18.596735107901196,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        -22.646288884168086,
+        -2.3329009871952735
+      ]
+    },
+    {
+      "from": "center",
+      "to": "down",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        8.12404615098552,
+        -8.662127634958523
+      ],
+      "predicted_deg_rx2_rx3": [
+        -9.211979373533609,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        17.33602552451913,
+        -8.662127634958523
+      ]
+    },
+    {
+      "from": "up",
+      "to": "check_up",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        0.40517425714750743,
+        6.9224645110030565
+      ],
+      "predicted_deg_rx2_rx3": [
+        -4.644633741790983,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        5.0498079989384905,
+        6.9224645110030565
+      ]
+    },
+    {
+      "from": "center",
+      "to": "check_left",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        17.9044916888098,
+        5.0824150040399445
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0265482743047869,
+        12.643345079107064
+      ],
+      "residual_deg_rx2_rx3": [
+        17.877943414505012,
+        -7.56093007506712
+      ]
+    },
+    {
+      "from": "center",
+      "to": "check_right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        -8.770067242017745,
+        -9.427123194620037
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0265482743047869,
+        -12.643345079107064
+      ],
+      "residual_deg_rx2_rx3": [
+        -8.796615516322532,
+        3.2162218844870267
+      ]
+    }
+  ],
+  "raw_target_phase_comparisons": [
+    {
+      "from": "check_left",
+      "to": "check_right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        -29.675515517196175,
+        -12.338169831117057
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        -25.286690158214128
+      ],
+      "residual_deg_rx2_rx3": [
+        -29.675515517196175,
+        12.948520327097071
+      ]
+    },
+    {
+      "from": "left",
+      "to": "right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        -130.6745846618927,
+        -36.46619514181924
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        -50.15561912974459
+      ],
+      "residual_deg_rx2_rx3": [
+        -130.6745846618927,
+        13.689423987925352
+      ]
+    },
+    {
+      "from": "center",
+      "to": "center_repeat",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        40.971675221878826,
+        25.624766573818704
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        40.971675221878826,
+        25.624766573818704
+      ]
+    },
+    {
+      "from": "center",
+      "to": "up",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        152.46268036288427,
+        63.87032487167937
+      ],
+      "predicted_deg_rx2_rx3": [
+        18.596735107901196,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        133.8659452549831,
+        63.87032487167937
+      ]
+    },
+    {
+      "from": "center",
+      "to": "down",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        134.82550737525122,
+        67.39903405471358
+      ],
+      "predicted_deg_rx2_rx3": [
+        -9.211979373533609,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        144.03748674878483,
+        67.39903405471358
+      ]
+    },
+    {
+      "from": "up",
+      "to": "check_up",
+      "same_support": false,
+      "observed_deg_rx2_rx3": [
+        -97.46779787933349,
+        -7.2227627529615575
+      ],
+      "predicted_deg_rx2_rx3": [
+        -4.644633741790983,
+        0.0
+      ],
+      "residual_deg_rx2_rx3": [
+        -92.8231641375425,
+        -7.2227627529615575
+      ]
+    },
+    {
+      "from": "center",
+      "to": "check_left",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        74.6706530895359,
+        54.83505208783288
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0265482743047869,
+        12.643345079107064
+      ],
+      "residual_deg_rx2_rx3": [
+        74.64410481523112,
+        42.191707008725814
+      ]
+    },
+    {
+      "from": "center",
+      "to": "check_right",
+      "same_support": true,
+      "observed_deg_rx2_rx3": [
+        44.99513757233976,
+        42.49688225671582
+      ],
+      "predicted_deg_rx2_rx3": [
+        0.0265482743047869,
+        -12.643345079107064
+      ],
+      "residual_deg_rx2_rx3": [
+        44.96858929803497,
+        55.140227335822885
+      ]
+    }
+  ]
+}

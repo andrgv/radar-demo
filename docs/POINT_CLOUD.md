@@ -1,5 +1,12 @@
 # Per-frame scattering-center point cloud
 
+The [November 11 raw replay audit](../evidence/pointcloud-resolution-20261111/README.md)
+processes 96 recordings and 18,807 frames with these unchanged cloud defaults.
+It reports sparse output and conditional repeatability, with no surveyed angular
+ground truth. A separate replay reproduces centimetre-scale single-target range
+errors for the fixed-background tone fitter; those are not achieved XYZ accuracy
+or two-object resolution for this point cloud.
+
 ```powershell
 python -m radar gui --port COM3 --config configs/range-vendor-matrix-experimental.json --point-cloud
 ```

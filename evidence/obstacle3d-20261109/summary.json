@@ -1,0 +1,2846 @@
+{
+  "schema": 1,
+  "settings": {
+    "window_seconds": 1.0,
+    "persistence_windows": 3,
+    "contrast_db": 6.0,
+    "association_bins": 0.25,
+    "minimum_fit": 0.65,
+    "minimum_coherence": 0.9,
+    "interpolation": 8
+  },
+  "roots": [
+    "recordings",
+    "/tmp/glass-material-analysis-20261109/recordings"
+  ],
+  "protocol": "Evaluate frozen 3D obstacle settings across complete raw recordings.\n\nNo fitting or per-recording threshold/receiver selection. Range labels only score\nalready selected candidates. Empty/reference scenes contain background objects;\ncounts there are not certified false-obstacle rates. No surveyed angular labels\nare supplied by these captures, so real-data XYZ accuracy is unmeasured.\n",
+  "recordings": [
+    {
+      "recording": "recordings/connection-check-20261101",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 861034497,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/connection-check-20261101-authorized",
+      "raw_sha256": "3eefd79bb4dd6d7ad01f28527f944a14e675a03d24c60a5d9da116be11de6143",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 30,
+      "windows": 3,
+      "windows_with_persistent_candidates": 1,
+      "provisional_3d": 0,
+      "unresolved": 4,
+      "processing_ms_p50_p95": [
+        0.704307499972856,
+        8.700604799946625
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/distance-sweep-1-30cm",
+      "raw_sha256": "9b546b7141fb448d1f6d17b75401467a457a0f9d80b820d33910aaa177306184",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 23,
+      "processing_ms_p50_p95": [
+        0.7254540000758425,
+        7.486279000204377
+      ],
+      "door_state": null,
+      "measured_range_m": 0.3,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 4,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm",
+      "raw_sha256": "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 25,
+      "processing_ms_p50_p95": [
+        0.6765489997633267,
+        7.168345000081899
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm-repeat",
+      "raw_sha256": "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 13,
+      "processing_ms_p50_p95": [
+        0.5438799998955801,
+        5.573075000029348
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 3,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 3,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm-repeat-2",
+      "raw_sha256": "5d5c958747dbd38153515ad279b02e85cca3fc8930c29cf65d9cc5e20683a304",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.6291859999691951,
+        6.810722999944119
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-40cm-untouched-1",
+      "raw_sha256": "dae68cc1c426aa626a4fd95ae5827d79a2ef1127bfa099af8c6a2f6fbf8cc046",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 27,
+      "processing_ms_p50_p95": [
+        0.7573739999315876,
+        9.024595000028057
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-50cm",
+      "raw_sha256": "31095462fa839c0978e969c60207a106e863a39d7e95ac1cb717b7efac868792",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 14,
+      "processing_ms_p50_p95": [
+        0.7296680000763445,
+        8.298049000131869
+      ],
+      "door_state": null,
+      "measured_range_m": 0.5,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-after",
+      "raw_sha256": "5d4c96a88fdb258afe1784cdee7f97c1d4535bd594eec36923c59719defcad79",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 28,
+      "processing_ms_p50_p95": [
+        0.6410639998648548,
+        7.188013000359206
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/distance-sweep-1-empty-before",
+      "raw_sha256": "bc2e35cb109a941887a9926b6081cca4766c518da3289e64c74661a3307f90c4",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.5606609997812484,
+        5.676963999576401
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/distance-sweep-2-30cm",
+      "raw_sha256": "bb0be17653552ecb888b6c1475da7ff8c658ba1d7822517045d97b18d831a8be",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.6063289997655374,
+        7.341221999922709
+      ],
+      "door_state": null,
+      "measured_range_m": 0.3,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 2,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 3,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm",
+      "raw_sha256": "ae67cc5d5fd9e9aa93a4cad2a0c6ca47c9bcdabc922f5cdad87c7993daeddcdf",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 17,
+      "processing_ms_p50_p95": [
+        0.629263000064384,
+        7.05458800030101
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-40cm-repeat",
+      "raw_sha256": "ef5c05cc19125c1abeb4663ea62845bdd2db93551ef20540f1e2b02f3fddb5c5",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 23,
+      "processing_ms_p50_p95": [
+        0.5774189999101509,
+        7.0898459998716135
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-50cm",
+      "raw_sha256": "0d320ffd8a0a95f7bd108b71e2496e485a3928c8730576144eb2fadc98f65af7",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 22,
+      "processing_ms_p50_p95": [
+        0.5033299999013252,
+        6.141883000054804
+      ],
+      "door_state": null,
+      "measured_range_m": 0.5,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-after",
+      "raw_sha256": "aef771bcfb26d98bf5f38dfe09fa60ac3d5d81c62c758c7c4f5c6564519fa07e",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 17,
+      "processing_ms_p50_p95": [
+        0.5936060001658916,
+        6.293757000094047
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/distance-sweep-2-empty-before",
+      "raw_sha256": "a9c152bf05a6039606d01d15ac4458b2c61be62cbcc5eafeacf3513b2760de41",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 18,
+      "processing_ms_p50_p95": [
+        0.5956750001132605,
+        6.7326230000617215
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/door03/closed-01",
+      "raw_sha256": "78cc4e8d992a1095e4f7648a06220ea9a9f312e6e732dc2444541f703489dd2e",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 134,
+      "processing_ms_p50_p95": [
+        0.5446350000966049,
+        5.364760299880799
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/closed-02",
+      "raw_sha256": "e341524176d6b1439ae032f9101a90a551524c1233e49314568406a664281919",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 129,
+      "processing_ms_p50_p95": [
+        0.6087229999138799,
+        6.182615499938038
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/closed-03",
+      "raw_sha256": "5173af39730eb82d9ac5747383f0647ccb60153453567fe1cbbe0b90c3115f56",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 129,
+      "processing_ms_p50_p95": [
+        0.5888770001547527,
+        5.845220900255297
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/open-01",
+      "raw_sha256": "21d5e5b399e58094fdf581a91ce85d29d6c50a35bec0add8e83cdccf10f72c3f",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 43,
+      "unresolved": 116,
+      "processing_ms_p50_p95": [
+        0.5028020000281685,
+        5.465768799876968
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/open-02",
+      "raw_sha256": "15cbb6a10fe9610d8028b0bae928fe0547a5af040c6ce2136ce053ec1fbbbcfc",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 35,
+      "unresolved": 118,
+      "processing_ms_p50_p95": [
+        0.5862899997737259,
+        6.4944251002089
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/open-03",
+      "raw_sha256": "4ff018544b637b61e8424f25f48dd672216ff3d5b609926e420548712c859396",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 47,
+      "unresolved": 33,
+      "processing_ms_p50_p95": [
+        0.5908130001444079,
+        5.211035299907962
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.1176,
+      "label_source": "recordings/door03/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door03/stream",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/door04/closed-01",
+      "raw_sha256": "fa03c2921991d8b60fd4c7b2c140d73edfb927b102ece0c17f81e13d90594e29",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 56,
+      "unresolved": 65,
+      "processing_ms_p50_p95": [
+        0.49813700024969876,
+        5.023537200167993
+      ],
+      "door_state": "closed",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 28
+      }
+    },
+    {
+      "recording": "recordings/door04/closed-02",
+      "raw_sha256": "6a65034394ffed7a27dc7b9805bc2a0d158f9d493bf836f8a1a1de80ce0250b2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 56,
+      "unresolved": 83,
+      "processing_ms_p50_p95": [
+        0.5875100000594102,
+        6.116742399899522
+      ],
+      "door_state": "closed",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 28
+      }
+    },
+    {
+      "recording": "recordings/door04/closed-03",
+      "raw_sha256": "f0d3ffa857ec25fed4f7832f5ac4227561e6759daf82cd98f3b39c9f4820f2d2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 56,
+      "unresolved": 74,
+      "processing_ms_p50_p95": [
+        0.5815009999423637,
+        5.686429700335791
+      ],
+      "door_state": "closed",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 28
+      }
+    },
+    {
+      "recording": "recordings/door04/open-01",
+      "raw_sha256": "0ec2698879355fb1ec41c36cf1e496cf9f090af34d263ad13a65feb2c1e6697d",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 93,
+      "processing_ms_p50_p95": [
+        0.552916999822628,
+        5.304162599895789
+      ],
+      "door_state": "open",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door04/open-02",
+      "raw_sha256": "87ed2a3e777346cf3700b5ef69258d4f62af39c52f420ad34fc0b3584438f5f2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 87,
+      "processing_ms_p50_p95": [
+        0.5742510002164636,
+        5.511127699901407
+      ],
+      "door_state": "open",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door04/open-03",
+      "raw_sha256": "2a768e4a19f42eb335a0831e3278f8f7d10899df73eaab003b8e4be7c8895a78",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 28,
+      "unresolved": 146,
+      "processing_ms_p50_p95": [
+        0.574828000026173,
+        6.080361300291767
+      ],
+      "door_state": "open",
+      "measured_range_m": 0.635,
+      "label_source": "recordings/door04/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door04/stream",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/door07/closed-01",
+      "raw_sha256": "c4edb8ce35430e1ef87e72a5874c6d7ce5970aed4336725e14c6a3749a4427d3",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 165,
+      "processing_ms_p50_p95": [
+        0.5264880001050187,
+        5.362544900071952
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door07/closed-02",
+      "raw_sha256": "544fa720222d4dbe391d90a00cef053dd96ae3ae941b553c6fbc49da2954e7ea",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 143,
+      "processing_ms_p50_p95": [
+        0.5927105000864685,
+        5.992137700104648
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door07/closed-03",
+      "raw_sha256": "ccfaccac393365114e456a24e0e2a62ffd56a30158b768359ee224ce160a0389",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 56,
+      "unresolved": 53,
+      "processing_ms_p50_p95": [
+        0.5903460000808991,
+        5.4932038001652455
+      ],
+      "door_state": "closed",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 28
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 28
+      }
+    },
+    {
+      "recording": "recordings/door07/open-01",
+      "raw_sha256": "29d6e9fd1ba8000bb1bae8e4ebf76e59eea0923ea1afa9a45859d24bd9f7c0f0",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 205,
+      "processing_ms_p50_p95": [
+        0.5597409999609226,
+        7.058459499785385
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 27,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door07/open-02",
+      "raw_sha256": "77fd18ef9da84a511042c6d1db9e9a1a79c2ab0f23b8a2db9e7f3600bf9c28d4",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 219,
+      "processing_ms_p50_p95": [
+        0.5595419997916906,
+        6.4109655003449
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door07/open-03",
+      "raw_sha256": "e89f576cf75cb465577ab28018d61fccbc95e923d57204254a2cee338152710c",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 176,
+      "processing_ms_p50_p95": [
+        0.577013499878376,
+        6.851029149970598
+      ],
+      "door_state": "open",
+      "measured_range_m": 1.524,
+      "label_source": "recordings/door07/door-check.json",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 28,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/door07/stream",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-50cm-1",
+      "raw_sha256": "648bb3c07e77d6350128c5d0ae2df0f5a7cee3b5bee5f8d83381e5dd5c666e37",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 26,
+      "processing_ms_p50_p95": [
+        0.49506000004839734,
+        5.723351000142429
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-50cm-v2-1",
+      "raw_sha256": "799523764d46e5bfeeadec79ffdf14bb4bf89e080114637c9a790386229a30c3",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 28,
+      "processing_ms_p50_p95": [
+        0.564507000035519,
+        6.527000999994925
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-after-1m-session-1",
+      "raw_sha256": "618bfa7356a4bc057f4828788816e761f216ad4da42a6e7825a32cb4f65ad485",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 92,
+      "processing_ms_p50_p95": [
+        0.5852890001278865,
+        6.049316999906295
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-after-35cm-v2-1",
+      "raw_sha256": "0d46e988ae7bb0f8a1c66b8fca3bd25d2fe7c2abba4494cb8311d9d3fae09633",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 79,
+      "processing_ms_p50_p95": [
+        0.593783999875086,
+        6.462496699941767
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-after-50cm-1",
+      "raw_sha256": "31c107003e1f90899089bb62dc50c0a32005aa9e2f0a7b06cae858708cb392ef",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 91,
+      "processing_ms_p50_p95": [
+        0.5596075000084966,
+        6.141795499775071
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-after-50cm-v2-1",
+      "raw_sha256": "0ede7bd663f4f7b161cc2d9f0c2ea46d63c2e45c20da1247aac53e2af226c11c",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 60,
+      "processing_ms_p50_p95": [
+        0.5476589999489079,
+        5.686915500200484
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/empty-session-1",
+      "raw_sha256": "7937171e4754736a089cf6a1294fc55e52f01a2935582b3d93af8f9418f2a397",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 7,
+      "provisional_3d": 0,
+      "unresolved": 11,
+      "processing_ms_p50_p95": [
+        0.5839789996571199,
+        5.886710000140738
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/empty-001",
+      "raw_sha256": "3f088e319596bbea8fd02754c33b1e9838e1113744133b31c309a73af76c0f31",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 100,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.604672000008577,
+        5.845322100185512
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-002",
+      "raw_sha256": "24901a47ce48fd6036d1199cbf3d786227fd5f897c3043f7fdaf075ce406a557",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 874,
+      "windows": 87,
+      "windows_with_persistent_candidates": 85,
+      "provisional_3d": 0,
+      "unresolved": 265,
+      "processing_ms_p50_p95": [
+        0.5599769997388648,
+        5.930194999950796
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-003",
+      "raw_sha256": "03d4e11b0d861c09463bb9854d2c99d8655f3e7d8f02e633705106478a0921f5",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 208,
+      "windows": 20,
+      "windows_with_persistent_candidates": 18,
+      "provisional_3d": 0,
+      "unresolved": 42,
+      "processing_ms_p50_p95": [
+        0.5221394999352924,
+        5.042684200020629
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-004",
+      "raw_sha256": "aa7d761151946dff9422127bbc0a0a044b2d04dcdaf13d665763c016dcddd44c",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 207,
+      "windows": 20,
+      "windows_with_persistent_candidates": 18,
+      "provisional_3d": 0,
+      "unresolved": 42,
+      "processing_ms_p50_p95": [
+        0.4877169999417674,
+        5.005194300110815
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-144515-340260/live-005",
+      "raw_sha256": "e7041ebd55a55df7b9cfe8b7f3bf97405691114da47858c40e50aecbc9a17079",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 206,
+      "windows": 20,
+      "windows_with_persistent_candidates": 18,
+      "provisional_3d": 0,
+      "unresolved": 74,
+      "processing_ms_p50_p95": [
+        0.4984395002338715,
+        5.439819749994967
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153315-782345/empty-001",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153315-782345/empty-002",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153315-782345/empty-004",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153614-515628/empty-001",
+      "raw_sha256": "d3623a062847f49fdb9aaa6957cad318a406cad8b97a7aa61b0af02f8d09075e",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 22,
+      "processing_ms_p50_p95": [
+        0.5003419996683078,
+        5.458278999867616
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153614-515628/live-002",
+      "raw_sha256": "a5dc7fcccbb0a227da15c8ce47c1d8434b3448c9b51235524e98532c184bfe88",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 211,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 64,
+      "processing_ms_p50_p95": [
+        0.4976740001438884,
+        5.250389000138966
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/empty-001",
+      "raw_sha256": "8725674e54f63ee9bd9024c4492922e7aa38692c5384538f609c77934ccda5c4",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 10,
+      "processing_ms_p50_p95": [
+        0.6068810002943792,
+        5.563465999784967
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-002",
+      "raw_sha256": "86949665d8fa48a559d37d07537a6f8740e70e20c68ca1788f34fb7f1d03cd6c",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 209,
+      "windows": 20,
+      "windows_with_persistent_candidates": 18,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.5750330001319526,
+        5.511502399986056
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-003",
+      "raw_sha256": "a2bfce02404455049895be3115e851e137472f21712bac777e21c648723ec772",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 214,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 58,
+      "processing_ms_p50_p95": [
+        0.5999969998811139,
+        6.528032150185935
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-004",
+      "raw_sha256": "b80a0885d97d0958723333551c5e7c8f64bb840ba0adca51fe12b0d010a17b61",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 226,
+      "windows": 22,
+      "windows_with_persistent_candidates": 20,
+      "provisional_3d": 0,
+      "unresolved": 67,
+      "processing_ms_p50_p95": [
+        0.547319000133939,
+        5.9115107501384045
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-005",
+      "raw_sha256": "0e20a8f59f02abd6135a7980ab23beba10629d25e4800da334362d5b6efd98ed",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 214,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 90,
+      "processing_ms_p50_p95": [
+        0.5956919999334787,
+        6.592085050078822
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-006",
+      "raw_sha256": "f800306b24faac173d3ba743c69376fbc12bcf8bf97a96ba34d0e80554666d06",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 217,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 21,
+      "processing_ms_p50_p95": [
+        0.5041739996158867,
+        4.714025800149102
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/empty-001",
+      "raw_sha256": "6365051e73684c4499a9352edb37cf8c58e18a791751548b4f7b33e15cbd1e21",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 17,
+      "processing_ms_p50_p95": [
+        0.5984300000818621,
+        6.218080000053305
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-002",
+      "raw_sha256": "681ddeb01d30f0ee5f9a0945b76f42b0b5882c0a9d9bd136fdde2c78814c9621",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 232,
+      "windows": 23,
+      "windows_with_persistent_candidates": 21,
+      "provisional_3d": 0,
+      "unresolved": 85,
+      "processing_ms_p50_p95": [
+        0.5505274998540699,
+        5.44987505006702
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-003",
+      "raw_sha256": "8777e90787dc5de038eacce26c4d950f291471198c7eb46df4b1c718fa171ea9",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 207,
+      "windows": 20,
+      "windows_with_persistent_candidates": 18,
+      "provisional_3d": 0,
+      "unresolved": 47,
+      "processing_ms_p50_p95": [
+        0.6170370002109848,
+        6.439041700059533
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-004",
+      "raw_sha256": "3774e4dbb76c60396743ab84b65825a9bf890de40072fa939901d98126f2579d",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 213,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 81,
+      "processing_ms_p50_p95": [
+        0.5442010001388553,
+        6.10766920008245
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-005",
+      "raw_sha256": "cf9181bf07b1338f6eba22e4170e3f3fe457eecc7a14e3b8e36314723abe6a36",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 216,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 38,
+      "processing_ms_p50_p95": [
+        0.6294024999533576,
+        6.326527749820343
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-006",
+      "raw_sha256": "30613ecab2eaccef02a0492743c89392585669379b3d618a9e17336123389522",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 211,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 56,
+      "processing_ms_p50_p95": [
+        0.5318849998730002,
+        5.401830500204596
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-007",
+      "raw_sha256": "d7f1ffccec83d4da4a871ea0774167c1b2a36fbd9cc82d18867da518533d24d5",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 269,
+      "windows": 26,
+      "windows_with_persistent_candidates": 24,
+      "provisional_3d": 0,
+      "unresolved": 81,
+      "processing_ms_p50_p95": [
+        0.5973769998490752,
+        6.766934199913521
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-008",
+      "raw_sha256": "cb1af2029438c31b4b27e9b35ceab2e21566de384448cc9e545fce8e281b36ec",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 211,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 68,
+      "processing_ms_p50_p95": [
+        0.5707979998987867,
+        6.307360499931747
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-009",
+      "raw_sha256": "82e0eb711facca73b4e096ec5fc42a1696006e6e1cdf6144d695a997454e95a2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 222,
+      "windows": 22,
+      "windows_with_persistent_candidates": 20,
+      "provisional_3d": 0,
+      "unresolved": 66,
+      "processing_ms_p50_p95": [
+        0.6589489998987119,
+        7.2797249499672
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/empty-001",
+      "raw_sha256": "54e87ffb989811ca3e0e9de7fb6ebb09180aad0df69c2d3f09bf46a1d35b79d6",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 11,
+      "processing_ms_p50_p95": [
+        0.5627870000353141,
+        5.022700999688823
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-002",
+      "raw_sha256": "30a67f869563521a14d054b4e6c0279d0c3e1320dfe2f66d17c1059769e05cb8",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 214,
+      "windows": 21,
+      "windows_with_persistent_candidates": 19,
+      "provisional_3d": 0,
+      "unresolved": 37,
+      "processing_ms_p50_p95": [
+        0.6832235001184017,
+        6.613086850165927
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-003",
+      "raw_sha256": "9e9d8a1f3ab1887d16bced47cf7ad46f69548b61ddefa6804aa4eb05d9a4ef59",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 295,
+      "windows": 29,
+      "windows_with_persistent_candidates": 27,
+      "provisional_3d": 0,
+      "unresolved": 89,
+      "processing_ms_p50_p95": [
+        0.7133970002541901,
+        7.687952500145913
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-004",
+      "raw_sha256": "450d1b4b1d9e04ac8c30af0d8b60bb6db7ab95b862d7345b33160e3d9945633a",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 260,
+      "windows": 26,
+      "windows_with_persistent_candidates": 24,
+      "provisional_3d": 0,
+      "unresolved": 78,
+      "processing_ms_p50_p95": [
+        0.5981204997169698,
+        6.408342700206046
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-005",
+      "raw_sha256": "03370313bf15007f85d132977334b2a06174842ceaebc5337bdb9408d17f2f97",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 278,
+      "windows": 27,
+      "windows_with_persistent_candidates": 25,
+      "provisional_3d": 0,
+      "unresolved": 84,
+      "processing_ms_p50_p95": [
+        0.5181189999348135,
+        5.586188699930972
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/gui-20261101-163602-348990/live-006",
+      "raw_sha256": "a8a481d7245527f8f07a070b69d1965ba29dbe8d0f79e9cd816fe7eb92028786",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 254,
+      "windows": 25,
+      "windows_with_persistent_candidates": 23,
+      "provisional_3d": 0,
+      "unresolved": 75,
+      "processing_ms_p50_p95": [
+        0.5892194999432832,
+        5.9684837999157025
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf100-a-30cm",
+      "raw_sha256": "5f8f382487970447f3d20018dd35d6d24f8de5fb31af955f174188edf0934853",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 25,
+      "processing_ms_p50_p95": [
+        0.508537999849068,
+        5.459518999941793
+      ],
+      "door_state": null,
+      "measured_range_m": 0.3,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm",
+      "raw_sha256": "9c101299bcc9653b76513877979fd03657d6b290d3df99d3f671fe56fce5b280",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 22,
+      "processing_ms_p50_p95": [
+        0.5949890000920277,
+        6.141186000149901
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-40cm-repeat",
+      "raw_sha256": "dc29cfe3d52e8b8e0614fc6bc6f251c9adc68b39d899f0f5e363c5c49adb8f89",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 20,
+      "processing_ms_p50_p95": [
+        0.6018650001351489,
+        6.318000999726792
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-50cm",
+      "raw_sha256": "e209055d71104027788aa1287f937e4fc0233cb8f5a158547f2c92c9807cefbd",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.49246099979427527,
+        5.231845999787765
+      ],
+      "door_state": null,
+      "measured_range_m": 0.5,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 3,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-after",
+      "raw_sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 21,
+      "processing_ms_p50_p95": [
+        0.4639979997591581,
+        4.8360499999944295
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf100-a-empty-before",
+      "raw_sha256": "7d541e9cd8f6f01cc282ae8a6faecc35b524090a453f03a00a7150a29bbd416a",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.46266299978015013,
+        5.142498999703093
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf100-a-startup-check",
+      "raw_sha256": "18fe909c81f71865abe75c08d6e255ad22c2874a10d542b151f773e6d14469ae",
+      "profile_id": 860964865,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 30,
+      "windows": 3,
+      "windows_with_persistent_candidates": 1,
+      "provisional_3d": 0,
+      "unresolved": 2,
+      "processing_ms_p50_p95": [
+        0.557031000198549,
+        5.348748399956092
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-a-30cm",
+      "raw_sha256": "80be81bf707264d3c7947651f75f007ad79b17f469db50b955d559385e8968b9",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.5943629998910183,
+        5.937845000062225
+      ],
+      "door_state": null,
+      "measured_range_m": 0.3,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm",
+      "raw_sha256": "98e3665474b86f95aea915880a846558ff34f02b4274babbf09e98118356a9f6",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.6295630000749952,
+        6.448775000080786
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-40cm-repeat",
+      "raw_sha256": "3187d01a6fe50e336fbc0d58275cf219eccf2ce8006c902f184d77b51d49388a",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 25,
+      "processing_ms_p50_p95": [
+        0.5374279999159626,
+        5.874640999991243
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-50cm",
+      "raw_sha256": "10bf03f3f435fc2215c939b9638d4fa190b54539b902d69c358c83ac6f8440f7",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.5682250002791989,
+        5.407677000221156
+      ],
+      "door_state": null,
+      "measured_range_m": 0.5,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-after",
+      "raw_sha256": "a12b98fc6bee6bc413a886b06eacd584b558fb6cb9e7b73f700955b8d8ea4a13",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 21,
+      "processing_ms_p50_p95": [
+        0.6355069999699481,
+        6.5756389999478415
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-a-empty-before",
+      "raw_sha256": "a1d314376a295ec7c0845c3278e4d3eb100524187e11d79bfd7bdd59adfbc9a5",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 14,
+      "processing_ms_p50_p95": [
+        0.5668950002473139,
+        5.967688000055205
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-a-startup-check",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-a-startup-check-2",
+      "raw_sha256": "5bb4fb43682433b3de60b5642ef072651b9f96c51c75bf0552c029a863dbf3e0",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 30,
+      "windows": 3,
+      "windows_with_persistent_candidates": 1,
+      "provisional_3d": 0,
+      "unresolved": 2,
+      "processing_ms_p50_p95": [
+        0.5412675000115996,
+        5.235417300036713
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-b-30cm",
+      "raw_sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.4758420000143815,
+        5.015320999973483
+      ],
+      "door_state": null,
+      "measured_range_m": 0.3,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm",
+      "raw_sha256": "231db1f07daa8c85011fc2a5dbe05555a4456c33afe47997e1bfdf56e78acb99",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.47656100014137337,
+        4.695943999649899
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-40cm-repeat",
+      "raw_sha256": "2e2a43e952fa886cf09f993d8045ec99d373caaa79f8fa2197c96351693bc1c2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 16,
+      "processing_ms_p50_p95": [
+        0.5631929998344276,
+        5.932745999871258
+      ],
+      "door_state": null,
+      "measured_range_m": 0.4,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 0,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-50cm",
+      "raw_sha256": "2c61ac6d504822c82a0976b07448432231667e09f52614201a842a429fe21324",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 25,
+      "processing_ms_p50_p95": [
+        0.6365999997797189,
+        6.554049999976996
+      ],
+      "door_state": null,
+      "measured_range_m": 0.5,
+      "label_source": "DISTANCE_SWEEP_1.md / DISTANCE_SWEEP_2.md / HPF_COMPARISON_RESULTS.md",
+      "material_label": null,
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 6,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 8,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "recordings/hpf350-b-empty-after",
+      "raw_sha256": "f0adffe3aca57151aa7ad26c81f9a2d6c03e4040a35ce73d63f73eff14929abd",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 24,
+      "processing_ms_p50_p95": [
+        0.6282240001382888,
+        6.04488399994807
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-b-empty-before",
+      "raw_sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 101,
+      "windows": 10,
+      "windows_with_persistent_candidates": 8,
+      "provisional_3d": 0,
+      "unresolved": 20,
+      "processing_ms_p50_p95": [
+        0.5318030002854357,
+        5.677006999576406
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/hpf350-b-startup-check",
+      "raw_sha256": "ba87f91e4ae53c180d5b3669d3525599513346d0b92de9a1a7e48f5633dc1838",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 30,
+      "windows": 3,
+      "windows_with_persistent_candidates": 1,
+      "provisional_3d": 0,
+      "unresolved": 2,
+      "processing_ms_p50_p95": [
+        0.565777000019807,
+        6.164201249998766
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-1m-repeat-1",
+      "raw_sha256": "7f213f90de5cdc42295af471123c73ee6ecfe26418b219835080ad7fdfe9e45b",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 26,
+      "provisional_3d": 0,
+      "unresolved": 53,
+      "processing_ms_p50_p95": [
+        0.5746265001107531,
+        5.531499399739914
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-1m-session-1",
+      "raw_sha256": "e10858f7f9a510a3994aa092d5630ff931ba25a66429f117be7f919829f0c1e3",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 22,
+      "provisional_3d": 0,
+      "unresolved": 30,
+      "processing_ms_p50_p95": [
+        0.5924470001446025,
+        5.444060349896061
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-35cm-v2-1",
+      "raw_sha256": "3d1670d359d25df3f9805dd52f78cfd6f19a2a61998d59cfdcf108cb120694a7",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 72,
+      "processing_ms_p50_p95": [
+        0.6644274999416666,
+        7.039980100057618
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-50cm-1",
+      "raw_sha256": "9909a7e55d801309a7224bdfd06f360f18722aeb2212f4e9868d8817e743db78",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 107,
+      "processing_ms_p50_p95": [
+        0.5536214998755895,
+        6.52845615013575
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-50cm-v2-1",
+      "raw_sha256": "349ab3b7e8a3daf3aac354c3fb1794eaeffb2418ba793614280be79acddd004b",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 49,
+      "processing_ms_p50_p95": [
+        0.5999899999551417,
+        6.685348799783241
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-50cm-v2-repeat-1",
+      "raw_sha256": "799d79b88f5afc4923ae133bd5acd5a3e8abb7ff33a9a1288db93758171ddb3d",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 119,
+      "processing_ms_p50_p95": [
+        0.5903014998693834,
+        6.921221999755289
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "recordings/target-session-1",
+      "raw_sha256": "6bd4bf32ca825e1a1c5cd31c632ec689cfe978e684c746679389cca11228d2a6",
+      "profile_id": 861034497,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 24,
+      "provisional_3d": 0,
+      "unresolved": 40,
+      "processing_ms_p50_p95": [
+        0.5150510000930808,
+        5.079836099776002
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/closed-01",
+      "raw_sha256": "a44f452864a2c0537d7cd084c26863166cf4639d9fe02887ae733626b8a77f56",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 27,
+      "provisional_3d": 12,
+      "unresolved": 50,
+      "processing_ms_p50_p95": [
+        0.6026954999924783,
+        7.31915724979899
+      ],
+      "door_state": null,
+      "measured_range_m": 1.0,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "glass",
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 20,
+        "provisional_3d_windows": 3
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 23,
+        "provisional_3d_windows": 4
+      }
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/closed-02",
+      "raw_sha256": "c27b402e1f4f66764ad524a8d652e03860829ea11f61a8e276e46b4e4814c1e7",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 27,
+      "provisional_3d": 15,
+      "unresolved": 54,
+      "processing_ms_p50_p95": [
+        0.6206170000950806,
+        7.542576199830364
+      ],
+      "door_state": null,
+      "measured_range_m": 1.0,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "glass",
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 10,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 23,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/closed-03",
+      "raw_sha256": "ccdb149b18f9e77fe5d832f32d4d6c259c8ed9bf51bea94ee702977e26a17cfe",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 26,
+      "provisional_3d": 11,
+      "unresolved": 53,
+      "processing_ms_p50_p95": [
+        0.4829510000945447,
+        6.658240749857209
+      ],
+      "door_state": null,
+      "measured_range_m": 1.0,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "glass",
+      "angular_ground_truth_available": false,
+      "within_0.25_native_bins": {
+        "persistent_windows": 10,
+        "provisional_3d_windows": 0
+      },
+      "within_1.0_native_bins": {
+        "persistent_windows": 22,
+        "provisional_3d_windows": 0
+      }
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/open-01",
+      "raw_sha256": "ae8546fcc6d276cd8d204c99a92a84c9d98e96ae5daa73584b155750cf964f56",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 27,
+      "provisional_3d": 7,
+      "unresolved": 63,
+      "processing_ms_p50_p95": [
+        0.501461000112613,
+        7.065497899975526
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "drywall",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/open-02",
+      "raw_sha256": "ab6abefa796e64a6f4386b65e5ea44b5b3c041c4a2330dbe075c4428a866d286",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 23,
+      "provisional_3d": 14,
+      "unresolved": 36,
+      "processing_ms_p50_p95": [
+        0.532520999740882,
+        6.711516349787414
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "drywall",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/open-03",
+      "raw_sha256": "ee8a5cc5a1abd8a15126a1412503896853fd740f76ab6b738c63fe99fb3edf6d",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 304,
+      "windows": 30,
+      "windows_with_persistent_candidates": 23,
+      "provisional_3d": 0,
+      "unresolved": 41,
+      "processing_ms_p50_p95": [
+        0.5294894999678945,
+        8.090159149787722
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "experiments/materials/window-drywall-repeat.json",
+      "material_label": "drywall",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/glass-pane-100cm-01/stream",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/new-wall-test-01",
+      "raw_sha256": "161b97bff48f8fe738b8b33d543984bac1538f5adb5e1be4e6944cc9f8ee3c9b",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 22,
+      "provisional_3d": 6,
+      "unresolved": 19,
+      "processing_ms_p50_p95": [
+        0.5939779998698214,
+        7.944748250042721
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "evidence/material-transfer-check/report.json",
+      "material_label": "drywall",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/new-wall-test-02",
+      "raw_sha256": "59fee8f6c5a6dad6aba92fd49e82d7673ce7cea42e3cbbffa45f5103df07c29d",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 27,
+      "provisional_3d": 22,
+      "unresolved": 15,
+      "processing_ms_p50_p95": [
+        0.5935524998221808,
+        6.467056799851888
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "evidence/material-transfer-check/report.json",
+      "material_label": "drywall",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/new-window-test-01",
+      "raw_sha256": "08a9e8f42f3e76208bb76c03300783628d6d8e02b68a5d0d13a2c550e73229af",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 28,
+      "provisional_3d": 0,
+      "unresolved": 50,
+      "processing_ms_p50_p95": [
+        0.673805999895194,
+        9.3454481002027
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": "evidence/material-transfer-check/report.json",
+      "material_label": "glass",
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/window-100cm-closed-01",
+      "raw_sha256": "215ad46357a3e63827b22edae2a75e9801066cb644ec353fd78de0536eab9dc2",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 26,
+      "provisional_3d": 0,
+      "unresolved": 49,
+      "processing_ms_p50_p95": [
+        0.6682755001747864,
+        8.838784599947758
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/window-100cm-closed-02",
+      "raw_sha256": "550be1a78e59b1f9ed0ca3681ea2a7736d39802a5a6560153a9a20d8696e8780",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 302,
+      "windows": 30,
+      "windows_with_persistent_candidates": 25,
+      "provisional_3d": 0,
+      "unresolved": 42,
+      "processing_ms_p50_p95": [
+        0.711590500031889,
+        9.081211649731811
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/window-100cm-closed-03",
+      "raw_sha256": "0a5861b3f89c27b4a322110f2be152d333a8bbc2f035ef896b869ad028c116c6",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 303,
+      "windows": 30,
+      "windows_with_persistent_candidates": 26,
+      "provisional_3d": 0,
+      "unresolved": 53,
+      "processing_ms_p50_p95": [
+        0.6987240003581974,
+        8.921491100045385
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/window-pilot-20261108-01",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "profile_id": 860964866,
+      "complete": false,
+      "terminal_reason": "empty_or_short_recording",
+      "frames": 0,
+      "windows": 0,
+      "windows_with_persistent_candidates": 0,
+      "provisional_3d": 0,
+      "unresolved": 0,
+      "processing_ms_p50_p95": [],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    },
+    {
+      "recording": "/tmp/glass-material-analysis-20261109/recordings/window-pilot-20261108-02",
+      "raw_sha256": "5dee6e4e44d00228095291acf18c655f39c05cdeab34f1c4d7f0db1dbed54fb7",
+      "profile_id": 860964866,
+      "complete": true,
+      "terminal_reason": "recording_ended",
+      "frames": 50,
+      "windows": 5,
+      "windows_with_persistent_candidates": 3,
+      "provisional_3d": 0,
+      "unresolved": 9,
+      "processing_ms_p50_p95": [
+        0.7139540000480338,
+        6.7637935499078585
+      ],
+      "door_state": null,
+      "measured_range_m": null,
+      "label_source": null,
+      "material_label": null,
+      "angular_ground_truth_available": false
+    }
+  ],
+  "skipped": [
+    {
+      "recording": "recordings/door05",
+      "reason": "incomplete_door_experiment"
+    },
+    {
+      "recording": "recordings/door06",
+      "reason": "incomplete_door_experiment"
+    }
+  ],
+  "total_frames": 22492,
+  "complete_recordings": 109,
+  "incomplete_or_rejected_recordings": 10,
+  "angular_accuracy_verified": false
+}

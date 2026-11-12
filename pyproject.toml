@@ -10,6 +10,7 @@ dependencies = ["numpy>=1.26,<3", "PyQt6>=6.6,<7", "matplotlib>=3.8,<4", "pyseri
 
 [project.optional-dependencies]
 material = ["xgboost>=2.1,<4"]
+material-cpu = ["xgboost-cpu>=2.1,<4"]
 
 [project.scripts]
 glass-radar = "radar.cli:main"

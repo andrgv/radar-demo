@@ -1,5 +1,32 @@
 # Radar-only glass research
 
+## November 11 raw-signal audit
+
+The [paired signal audit](../evidence/glass-signature-20261111/README.md) checks
+27 fixed pane-range measurements across 18 recordings from the two physical
+doors. RX1/RX2 coherence increases consistently, but most of that effect is
+reproduced by a stationary-scene mean/power surrogate without material identity.
+No single measurement separates all recording medians across setups. The next
+step is the [fixed-fixture panel/control capture](GLASS_SIGNATURE_CAPTURE.md),
+which isolates panel insertion from frame/handle, handling and background effects
+before fitting another classifier. No new hardware data or glass model is added.
+
+## Current glass-obstacle transfer result
+
+Glass detection remains the primary objective; the experimental 3D obstacle
+view is a secondary diagnostic and is not its completion. The saved window/wall
+model reports no glass detections in 261 closed-door windows. Fixed-scene door
+state recognition also does not establish recognition of glass in new scenes.
+
+A subsequent glass-specific test adds raw cross-receiver phase/coherence to
+full-spectrum relative power without using XYZ or measured pane positions.
+Door03/door04 are grouped as the same physical door during exclusion. It still
+misses all six closed captures of that held-out door, and other folds falsely
+classify open/drywall controls as glass-blocking. This candidate was not deployed.
+See [the protocol and results](../evidence/glass-transfer-20261109/README.md) and
+`tools/audit_glass_transfer.py`. These are development results on inspected
+recordings, not proof that every possible radar method fails.
+
 ## What was investigated
 
 GlassFormer was inspected at repository commit `233a97a8b139421621561fa1bd24063abd114210`:
