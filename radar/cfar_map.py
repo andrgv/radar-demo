@@ -273,6 +273,7 @@ def iter_results(estimator, *, port=None, recording=None, demo=False, output=Non
                         if backlog or sync['reason']:
                             result = estimator.invalid('serial_backlog' if backlog else sync['reason'], frame)
                         result['clock_sync'] = sync
+                result['host_received_monotonic_s'] = now
                 if log:
                     log.write(json.dumps(result, allow_nan=False)+'\n')
                     log.flush()
@@ -362,11 +363,20 @@ def main(argv=None):
             plot = MapPlot(detector, interactive=a.plot, scene_map=scene, save_callback=save_map)
         results = iter_results(detector, port=a.port, recording=a.replay, demo=a.demo,
                                output=a.output, seconds=a.seconds, on_output_ready=archive.activate)
+        if a.port:
+            from .live_results import LiveResults
+            results = LiveResults(results)
         previous_timestamp = None
+        last_draw = 0.
         try:
             for result in results:
                 if a.port:
                     scene_time = time.monotonic()
+                    if result is not None and scene_time-result['host_received_monotonic_s'] > .5:
+                        # A delayed view must never refresh a persistent region
+                        # as currently observed. Do not mutate the worker's detector.
+                        result = dict(result, state='UNCERTAIN', reason='display_result_stale',
+                                      observations=[], obstacles=[])
                 elif result is not None and result.get('timestamp_us') is not None:
                     timestamp = result['timestamp_us']
                     if previous_timestamp is not None:
@@ -380,7 +390,7 @@ def main(argv=None):
                     result['scene_map'] = mapped
                     last_display = result
                     if a.plot:
-                        labels = [result['state']]
+                        labels = [result['state']+(': '+result['reason'] if result['state'] == 'UNCERTAIN' else '')]
                         for item in mapped['objects']:
                             if item['confirmed']:
                                 labels.append(f"Object #{item['object_id']} {item['range_m']:.3f} m, "
@@ -389,8 +399,12 @@ def main(argv=None):
                     else:
                         print(json.dumps(result, allow_nan=False), flush=True)
                 if plot:
-                    if last_display is not None:
+                    # Partial serial reads / idle mailbox polls need event
+                    # handling, not a complete axes/layout rebuild per chunk.
+                    draw_now = time.monotonic()
+                    if last_display is not None and draw_now-last_draw >= .2:
                         plot.update(dict(last_display, scene_map=mapped))
+                        last_draw = time.monotonic()
                     else:
                         plot.update(None)
                     if not plot.is_open():

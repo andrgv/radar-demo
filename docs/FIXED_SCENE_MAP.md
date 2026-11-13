@@ -82,6 +82,12 @@ detector's own confirmation. At nominal 10 Hz with an uninterrupted signal, a
 new region can become mapped on the fifth frame, about half a second after
 startup. Rejections/misses increase that delay. Many neighboring returns in a
 single frame count as one observation, not many independent confirmations.
+Live acquisition, detection and raw logging run on a background worker. The
+dashboard consumes the latest result through a bounded mailbox; a slow render
+can skip display observations and delay map confirmation, but does not pause
+serial acquisition. Results older than 0.5 seconds cannot refresh mapped regions.
+The dashboard redraws at most five times per second and pumps events between
+draws, including during partial serial reads. Timing/backlog checks remain active.
 
 ## Saved files and resume
 
