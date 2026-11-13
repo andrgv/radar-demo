@@ -95,12 +95,14 @@ identifier. If you named the sensor `upenn-radar`, use that name instead. There
 is no `serial_port` or `config_path` on the camera: those come from the dependency.
 The camera follows sensor reconfiguration and invalidates its frame/config cache.
 
-Save, then open the camera's Test/Control panel. `GetPointCloud` returns binary
+Save, then open the camera's Test/Control panel. `GetPointCloud` returns minimal XYZ ASCII
 PCD (`pointcloud/pcd`). `GetImages` returns a labeled top-down PNG named
 `radar-topdown`. This PNG is a diagnostic plot, not an optical or depth image;
 no camera intrinsics are fabricated. The same-frame result is cached across
 image/point-cloud requests. An empty valid frame has zero points and an empty
-plot; a failed/stale sensor raises an error rather than returning a previous cloud.
+plot. GetPointCloud reports "No radar points" for that frame rather than sending
+an empty cloud to viewers that cannot render it; no placeholder points are added.
+Quality and Doppler remain available through DoCommand. A failed/stale sensor raises an error rather than returning a previous cloud.
 
 Python SDK example, after connecting `robot` normally:
 

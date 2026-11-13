@@ -32,10 +32,16 @@ def packet(targets=None,frame_id='test:1'):
 
 
 def pcd_points(data):
-    header,body=data.split(b'DATA binary\n',1)
+    header,body=data.split(b'DATA ascii\n',1)
     n=int(next(line.split()[1] for line in header.splitlines() if line.startswith(b'POINTS ')))
-    assert len(body)==n*16
-    return np.frombuffer(body,dtype=[('x','<f4'),('y','<f4'),('z','<f4'),('rgb','<u4')])
+    assert b'FIELDS x y z\n' in header
+    assert b'SIZE 4 4 4\nTYPE F F F\nCOUNT 1 1 1\n' in header
+    assert f'WIDTH {n}\n'.encode() in header
+    rows=[tuple(map(float,line.split())) for line in body.splitlines()]
+    assert len(rows)==n
+    assert all(len(row)==3 for row in rows)
+    return np.array(rows,dtype=[('x','<f4'),('y','<f4'),('z','<f4')])
+
 
 
 class RawAndCloudTests(unittest.TestCase):
@@ -130,6 +136,15 @@ class CameraTests(unittest.IsolatedAsyncioTestCase):
         details=await self.camera.do_command({'command':'points'})
         self.assertEqual(details['point_count'],len(details['points']))
         self.source.do_command.assert_awaited_with({'command':'raw_frame'},timeout=None)
+
+    async def test_empty_cloud_reports_no_points_without_fabricating_data(self):
+        result={'status':{'healthy':True,'point_count':0},'points':[]}
+        with patch.object(self.camera,'_snapshot',AsyncMock(return_value=result)):
+            with self.assertRaisesRegex(RuntimeError,'No radar points'):
+                await self.camera.get_point_cloud()
+            status=await self.camera.do_command({'command':'points'})
+            self.assertTrue(status['healthy'])
+            self.assertEqual(status['points'],[])
 
     async def test_cached_frame_reused_but_new_frames_processed(self):
         import viam_module.camera as module

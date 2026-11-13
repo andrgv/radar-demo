@@ -53,16 +53,13 @@ def encode_pcd(xyz_m, snr_db):
     snr=np.asarray(snr_db,dtype=float)
     if snr.shape != (len(xyz),) or not np.isfinite(snr).all():
         raise ValueError('Point and quality counts do not match')
-    points=np.empty(len(xyz),dtype=[('x','<f4'),('y','<f4'),('z','<f4'),('rgb','<u4')])
-    points['x']=xyz[:,0];points['y']=-xyz[:,2];points['z']=xyz[:,1]
-    quality=np.clip((snr-8)/32,0,1)
-    red=(255*(1-quality)).astype(np.uint32)
-    green=(100+155*quality).astype(np.uint32)
-    points['rgb']=(red<<16)|(green<<8)|np.uint32(80)
-    header=(f'VERSION .7\nFIELDS x y z rgb\nSIZE 4 4 4 4\nTYPE F F F I\n'
-            f'COUNT 1 1 1 1\nWIDTH {len(points)}\nHEIGHT 1\nVIEWPOINT 0 0 0 1 0 0 0\n'
-            f'POINTS {len(points)}\nDATA binary\n')
-    return header.encode('ascii')+points.tobytes()
+    header=(f'VERSION .7\nFIELDS x y z\nSIZE 4 4 4\nTYPE F F F\n'
+            f'COUNT 1 1 1\nWIDTH {len(xyz)}\nHEIGHT 1\nVIEWPOINT 0 0 0 1 0 0 0\n'
+            f'POINTS {len(xyz)}\nDATA ascii\n')
+    # Minimal XYZ avoids optional color/packed-field handling in web viewers.
+    body=''.join(f'{x:.9g} {-z:.9g} {y:.9g}\n' for x,y,z in xyz)
+    return (header+body).encode('ascii')
+
 
 
 def preview_png(xyz, max_range):
