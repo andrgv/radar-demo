@@ -4,6 +4,7 @@ import sys
 from viam.module.module import Module
 from viam_module.sensor import UpennMmwave
 from viam_module.camera import MmwavePointCloud
+from viam_module.rpc_logging import configure_rpc_logging
 
 if __name__ == '__main__':
     if '--self-test' in sys.argv:
@@ -31,4 +32,5 @@ if __name__ == '__main__':
         assert Registry.lookup_resource_creator(Camera.API,MmwavePointCloud.MODEL)
         print(json.dumps({'sensor':result,'camera':cloud['status']}, allow_nan=False))
     else:
+        configure_rpc_logging()
         asyncio.run(Module.run_from_registry())
