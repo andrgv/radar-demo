@@ -199,3 +199,17 @@ point count by lowering thresholds can add ghosts. Physical near-range HPF,
 finite bandwidth and three-channel angular ambiguity remain. The module has
 synthetic and API tests plus a Linux packaged self-test; hardware and rover
 performance still require validation.
+
+### Hosted viewer compatibility
+
+The camera defaults to an image-only capability advertisement
+(`native_pointcloud_viewer: false`) to avoid the hosted Viam 3D viewer's
+missing-position-attribute crash on empty clouds. Use the image preview:
+it plots actual current-frame echoes and clears the plot on an empty frame.
+This is a 2D top-down plot, not an interactive 3D viewer.
+
+GetPointCloud remains callable directly through the SDK and returns XYZ PCD.
+Clients that gate calls on supports_pcd must explicitly enable
+`native_pointcloud_viewer: true`. That opts back into native 3D controls and
+their known empty-frame limitation. Refresh the browser after changing versions
+or this setting so the resource properties are fetched again.

@@ -94,7 +94,11 @@ class MmwavePointCloud(Camera, EasyResource):
         return ViamImage(result['png'],CameraMimeType.PNG)
 
     async def get_properties(self,*,timeout=None,**kwargs):
-        return Camera.Properties(supports_pcd=True,mime_types=['image/png'])
+        # Opt out of the hosted viewer's empty-cloud crash by default.
+        # Direct GetPointCloud calls still return measured XYZ, including empty frames.
+        return Camera.Properties(
+            supports_pcd=self.settings['native_pointcloud_viewer'],
+            mime_types=['image/png'])
 
     async def do_command(self,command,*,timeout=None,**kwargs):
         name=command.get('command')

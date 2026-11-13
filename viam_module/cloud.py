@@ -23,7 +23,10 @@ def camera_settings(attributes):
     method = attributes.get('method','deblend')
     if method not in ('deblend','fft'):
         raise ValueError('method must be deblend or fft')
-    result = dict(sensor=sensor, method=method)
+    native_viewer = attributes.get('native_pointcloud_viewer', False)
+    if not isinstance(native_viewer, bool):
+        raise ValueError('native_pointcloud_viewer must be a boolean')
+    result = dict(sensor=sensor, method=method, native_pointcloud_viewer=native_viewer)
     for key, default, lo, hi, integer in [
         ('min_range_m',.5,0,100,False), ('max_range_m',3,.01,100,False),
         ('min_snr_db',12,.01,80,False), ('min_model_fit',.8,.01,1,False),

@@ -122,7 +122,7 @@ class CameraTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(MmwavePointCloud.validate_config(self.config),(['upenn-radar'],[]))
         self.assertIsNotNone(Registry.lookup_resource_creator(Camera.API,MmwavePointCloud.MODEL))
         props=await self.camera.get_properties()
-        self.assertTrue(props.supports_pcd)
+        self.assertFalse(props.supports_pcd)
         data,mime=await self.camera.get_point_cloud()
         self.assertEqual(mime,PCD_MIME)
         response=GetPointCloudResponse(mime_type=mime,point_cloud=data)
@@ -136,6 +136,21 @@ class CameraTests(unittest.IsolatedAsyncioTestCase):
         details=await self.camera.do_command({'command':'points'})
         self.assertEqual(details['point_count'],len(details['points']))
         self.source.do_command.assert_awaited_with({'command':'raw_frame'},timeout=None)
+
+    async def test_native_viewer_is_explicitly_opt_in(self):
+        self.camera.settings['native_pointcloud_viewer']=True
+        self.assertTrue((await self.camera.get_properties()).supports_pcd)
+
+    async def test_empty_frame_keeps_image_preview_available(self):
+        result={'status':{'healthy':True,'point_count':0},'points':[],
+                'pcd':encode_pcd([],[]),
+                'png':b'\x89PNG\r\n\x1a\n',
+                'metadata':{'captured_at_unix':time.time()}}
+        with patch.object(self.camera,'_snapshot',AsyncMock(return_value=result)):
+            images,_=await self.camera.get_images()
+            self.assertEqual(len(images),1)
+            data,_=await self.camera.get_point_cloud()
+            self.assertEqual(len(pcd_points(data)),0)
 
     async def test_empty_cloud_reports_no_points_without_fabricating_data(self):
         result={'status':{'healthy':True,'point_count':0},'points':[],
