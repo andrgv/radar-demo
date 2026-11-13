@@ -11,6 +11,8 @@ For the combined multi-return CA-CFAR + RX2 azimuth top-down display, see
 without hardware, or use a measured reference for live/replay data.
 For real-radar testing and the persistent fixed-sensor object map, follow
 [the reference capture and live mapping steps](docs/FIXED_SCENE_MAP.md).
+For following one selected moving return with jump rejection, see
+[single-target tracking](docs/SELECTED_TARGET.md).
 
 The primary objective is glass-obstacle detection that transfers across setups.
 **That objective is not yet achieved.** The saved material model misses the

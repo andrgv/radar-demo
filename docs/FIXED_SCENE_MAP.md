@@ -1,5 +1,7 @@
 # Test the persistent 2D object map with the actual radar
 
+To follow one moving reflector instead, use [the selected-target mode](SELECTED_TARGET.md).
+
 This mode builds a **persistent map of object reflection regions** around a fixed
 radar. Repeated usable range/angle detections are grouped, assigned stable map
 IDs and averaged into positions. Missing returns leave remembered positions on

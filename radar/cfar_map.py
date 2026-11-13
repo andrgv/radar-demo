@@ -213,7 +213,7 @@ def demo_frame(config, sequence, z=0):
 
 
 def iter_results(estimator, *, port=None, recording=None, demo=False, output=None, seconds=None,
-                 on_output_ready=None):
+                 on_output_ready=None, target_tracker=None):
     """Live/replay share processing; raw recording precedes DSP, faults withdraw dots."""
     from .acquisition import Source
     from .storage import Recorder
@@ -227,6 +227,7 @@ def iter_results(estimator, *, port=None, recording=None, demo=False, output=Non
     with ExitStack() as stack:
         recorder = stack.enter_context(Recorder(output, cfg, estimator.metadata)) if output else None
         log = stack.enter_context((Path(output)/'obstacles2d.jsonl').open('x')) if output else None
+        target_log = stack.enter_context((Path(output)/'target_track.jsonl').open('x')) if output and target_tracker else None
         if recorder is not None and on_output_ready is not None:
             on_output_ready()
         source = None
@@ -274,6 +275,12 @@ def iter_results(estimator, *, port=None, recording=None, demo=False, output=Non
                             result = estimator.invalid('serial_backlog' if backlog else sync['reason'], frame)
                         result['clock_sync'] = sync
                 result['host_received_monotonic_s'] = now
+                if target_tracker is not None:
+                    result['selected_target'] = target_tracker.update(result)
+                    if target_log:
+                        target_log.write(json.dumps(dict(sequence=result['sequence'],
+                            timestamp_us=result['timestamp_us'], **result['selected_target']), allow_nan=False)+'\n')
+                        target_log.flush()
                 if log:
                     log.write(json.dumps(result, allow_nan=False)+'\n')
                     log.flush()
@@ -286,8 +293,13 @@ def iter_results(estimator, *, port=None, recording=None, demo=False, output=Non
                     source.close()
             finally:
                 estimator.clear()
+                terminal = estimator.invalid('stopped')
+                if target_tracker is not None:
+                    terminal['selected_target'] = target_tracker.stop()
+                    if target_log:
+                        target_log.write(json.dumps(terminal['selected_target'], allow_nan=False)+'\n')
                 if log:
-                    log.write(json.dumps(estimator.invalid('stopped'), allow_nan=False)+'\n')
+                    log.write(json.dumps(terminal, allow_nan=False)+'\n')
 
 
 def main(argv=None):
@@ -317,16 +329,27 @@ def main(argv=None):
     p.add_argument('--map-min-observations', type=int, default=3, help='Distinct localized frames before a region becomes mapped')
     p.add_argument('--map-remember-seconds', type=float, default=30, help='Age after which an unobserved region is marked stale')
     p.add_argument('--load-map', help='Resume map.json; radar must remain in exactly the same pose')
+    p.add_argument('--track-target', action='store_true', help='Follow one selected return instead of accumulating object regions')
+    p.add_argument('--target-range', type=float, help='Starting slant range for selected target; defaults to reference distance')
+    p.add_argument('--target-bearing', type=float, help='Starting bearing; defaults to reference bearing')
+    p.add_argument('--track-range-gate', type=float, default=.25, help='Range association tolerance around predicted return')
+    p.add_argument('--track-max-step', type=float, default=.35, help='Maximum range change from last measurement, including after misses')
+    p.add_argument('--track-max-misses', type=int, default=15, help='Consecutive missing frames before explicit re-lock is required')
     a = p.parse_args(argv)
     if not a.demo and (not a.reference or a.reference_xyz is None):
         p.error('Live/replay requires --reference and --reference-xyz X Y Z')
     if a.demo and (a.reference or a.reference_xyz is not None):
         p.error('--demo supplies its own synthetic reference')
+    if a.track_target and a.load_map:
+        p.error('--track-target does not load a persistent scene map')
+    if not a.track_target and (a.target_range is not None or a.target_bearing is not None):
+        p.error('--target-range/--target-bearing require --track-target')
     plot = None
     scene = None
     archive = None
     last_display = None
     scene_time = None
+    target_tracker = None
     try:
         cfg = Config.load(a.config)
         xyz = [0, 2, a.target_z or 0] if a.demo else a.reference_xyz
@@ -336,19 +359,34 @@ def main(argv=None):
             confirmation_frames=a.confirmation_frames, window=a.window,
             target_z=a.target_z, limit_deg=a.angle_limit)
         detector.metadata.update(reference_recording=a.reference, source='synthetic' if a.demo else 'live' if a.port else 'replay')
+        if a.track_target:
+            from .selected_target import SelectedTargetTracker, TargetSettings
+            start_range = float(np.linalg.norm(xyz)) if a.target_range is None else a.target_range
+            start_bearing = float(np.degrees(np.arctan2(xyz[0], xyz[1]))) if a.target_bearing is None else a.target_bearing
+            if not a.min_range <= start_range <= a.max_range:
+                raise ValueError('Selected target starting range must be inside the search interval')
+            if abs(start_bearing) >= a.angle_limit:
+                raise ValueError('Selected target starting bearing must be inside the angle search bounds')
+            target_tracker = SelectedTargetTracker(TargetSettings(start_range, start_bearing,
+                range_gate_m=a.track_range_gate, max_step_m=a.track_max_step, max_misses=a.track_max_misses),
+                assumed_z=detector.z, frame_interval_s=cfg.frame_interval_s)
+            detector.metadata['target_tracking'] = asdict(target_tracker.settings)
         from .scene_map import FixedSceneMap, SceneMapSettings, MapArchive, reference_fingerprint
         scene = FixedSceneMap(reference_fingerprint(detector), SceneMapSettings(
             merge_radius_m=a.map_merge_radius, min_observations=a.map_min_observations,
             remember_seconds=a.map_remember_seconds), assumed_z=detector.z)
         if a.load_map:
             scene.restore(a.load_map)
-        detector.metadata['scene_map'] = dict(settings=asdict(scene.settings), fingerprint=scene.fingerprint,
-                                             fixed_radar_required=True, loaded_from=a.load_map)
+        if not a.track_target:
+            detector.metadata['scene_map'] = dict(settings=asdict(scene.settings), fingerprint=scene.fingerprint,
+                                                 fixed_radar_required=True, loaded_from=a.load_map)
         if (a.port or a.plot) and not a.output:
-            a.output = str(Path('recordings')/f'fixed-map-{time.strftime("%Y%m%d-%H%M%S")}-{uuid.uuid4().hex[:6]}')
+            prefix = 'target-track' if a.track_target else 'fixed-map'
+            a.output = str(Path('recordings')/f'{prefix}-{time.strftime("%Y%m%d-%H%M%S")}-{uuid.uuid4().hex[:6]}')
         if a.output:
-            print(f'Raw recording and persistent map: {Path(a.output).resolve()}', file=sys.stderr)
-        archive = MapArchive(a.output)
+            label = 'target track' if a.track_target else 'persistent map'
+            print(f'Raw recording and {label}: {Path(a.output).resolve()}', file=sys.stderr)
+        archive = MapArchive(None if a.track_target else a.output)
         scene_time = scene.last_time if scene.last_time is not None else time.monotonic()
         scene.snapshot(now=scene_time)
 
@@ -360,9 +398,12 @@ def main(argv=None):
 
         if a.plot or a.snapshot:
             from .cfar_map_gui import MapPlot
-            plot = MapPlot(detector, interactive=a.plot, scene_map=scene, save_callback=save_map)
+            plot = MapPlot(detector, interactive=a.plot, scene_map=None if a.track_target else scene,
+                           save_callback=None if a.track_target else save_map,
+                           **(dict(target_tracker=target_tracker) if a.track_target else {}))
         results = iter_results(detector, port=a.port, recording=a.replay, demo=a.demo,
-                               output=a.output, seconds=a.seconds, on_output_ready=archive.activate)
+                               output=a.output, seconds=a.seconds, on_output_ready=archive.activate,
+                               target_tracker=target_tracker)
         if a.port:
             from .live_results import LiveResults
             results = LiveResults(results)
@@ -377,6 +418,9 @@ def main(argv=None):
                         # as currently observed. Do not mutate the worker's detector.
                         result = dict(result, state='UNCERTAIN', reason='display_result_stale',
                                       observations=[], obstacles=[])
+                        if target_tracker is not None:
+                            result['selected_target'] = dict(result['selected_target'], state='MISSING',
+                                reason='display_result_stale', measurement=None)
                 elif result is not None and result.get('timestamp_us') is not None:
                     timestamp = result['timestamp_us']
                     if previous_timestamp is not None:
@@ -384,17 +428,27 @@ def main(argv=None):
                         if 0 < delta < 0x80000000:
                             scene_time += delta/1e6
                     previous_timestamp = timestamp
-                mapped = scene.update(result, now=scene_time)
-                archive.write(mapped)
+                mapped = scene.update(result, now=scene_time) if target_tracker is None else None
+                if mapped is not None:
+                    archive.write(mapped)
                 if result is not None:
-                    result['scene_map'] = mapped
+                    if mapped is not None:
+                        result['scene_map'] = mapped
                     last_display = result
                     if a.plot:
-                        labels = [result['state']+(': '+result['reason'] if result['state'] == 'UNCERTAIN' else '')]
-                        for item in mapped['objects']:
-                            if item['confirmed']:
-                                labels.append(f"Object #{item['object_id']} {item['range_m']:.3f} m, "
-                                              f"{item['azimuth_deg']:+.2f}° ({item['state']})")
+                        if target_tracker is not None:
+                            target = result['selected_target']
+                            measurement = target['measurement']
+                            labels = [target['state'], target['reason']]
+                            if measurement:
+                                labels.append(f"Target #{target['target_id']} {measurement['range_m']:.3f} m, "
+                                              f"{measurement['azimuth_deg']:+.2f}°")
+                        else:
+                            labels = [result['state']+(': '+result['reason'] if result['state'] == 'UNCERTAIN' else '')]
+                            for item in mapped['objects']:
+                                if item['confirmed']:
+                                    labels.append(f"Object #{item['object_id']} {item['range_m']:.3f} m, "
+                                                  f"{item['azimuth_deg']:+.2f}° ({item['state']})")
                         print(' | '.join(labels), flush=True)
                     else:
                         print(json.dumps(result, allow_nan=False), flush=True)
@@ -403,7 +457,13 @@ def main(argv=None):
                     # handling, not a complete axes/layout rebuild per chunk.
                     draw_now = time.monotonic()
                     if last_display is not None and draw_now-last_draw >= .2:
-                        plot.update(dict(last_display, scene_map=mapped))
+                        view = dict(last_display)
+                        if mapped is not None:
+                            view['scene_map'] = mapped
+                        elif a.port and draw_now-view['host_received_monotonic_s'] > .5:
+                            view['selected_target'] = dict(view['selected_target'], state='MISSING',
+                                reason='waiting_for_fresh_frames', measurement=None)
+                        plot.update(view)
                         last_draw = time.monotonic()
                     else:
                         plot.update(None)
@@ -424,7 +484,8 @@ def main(argv=None):
             if archive is not None and a.output and Path(a.output).is_dir():
                 archive.write(stopped, event='stopped')
             if plot and last_display is not None and plot.is_open():
-                plot.update(dict(last_display, scene_map=stopped))
+                plot.update(dict(last_display, selected_target=target_tracker.stop()) if target_tracker is not None
+                            else dict(last_display, scene_map=stopped))
         if archive:
             archive.close()
         if plot:
