@@ -17,25 +17,40 @@ KNOWN_PROFILES = {
 }
 
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--port', required=True, help='Serial port, e.g. /dev/ttyACM0')
     ap.add_argument('--seconds', type=float, default=8)
-    args = ap.parse_args()
+    ap.add_argument('--retry-start', action='store_true',
+                    help='Retry the existing idempotent B start command once per second until frames arrive')
+    args = ap.parse_args(argv)
     if not 1 <= args.seconds <= 30:
         ap.error('--seconds must be between 1 and 30')
     parser = Parser()
     frames = []
+    received_bytes = 0
+    prefix = bytearray()
+    start_commands = 0
     try:
         with serial.Serial(args.port, 2_000_000, timeout=0.15, write_timeout=1) as device:
             device.reset_input_buffer()
             device.write(b'B')  # start standard streaming; no flash
+            device.flush()
+            start_commands += 1
             try:
-                deadline = time.monotonic() + args.seconds
+                last_start = time.monotonic()
+                deadline = last_start + args.seconds
                 while time.monotonic() < deadline and len(frames) < 10:
                     data = device.read(max(1, min(device.in_waiting, 65536)))
                     if data:
+                        received_bytes += len(data)
+                        prefix.extend(data[:max(0, 32-len(prefix))])
                         frames.extend(parser.feed(data))
+                    if args.retry_start and not frames and time.monotonic()-last_start >= 1:
+                        device.write(b'B')
+                        device.flush()
+                        start_commands += 1
+                        last_start = time.monotonic()
             finally:
                 device.write(b'c')  # stop standard streaming
                 device.flush()
@@ -44,9 +59,13 @@ def main():
         return 2
 
     print(f'Valid GRD3 packets: {len(frames)}')
+    print(f'Received serial bytes: {received_bytes}; incomplete buffered bytes: {len(parser.buffer)}; '
+          f'start commands sent: {start_commands}')
     print(f'Parser errors: bad_crc={parser.bad_crc}, bad_headers={parser.bad_headers}, '
           f'sequence_gaps={parser.gaps}, discarded_bytes={parser.discarded_bytes}')
     if not frames:
+        if prefix:
+            print('First serial bytes (hex):', prefix.hex())
         print('NO VALID GRD3 PACKETS. Check port, power, permissions, baud and '
               'whether the loaner changed firmware; this does not prove flashing is needed.')
         return 1
@@ -72,4 +91,3 @@ def main():
 
 if __name__ == '__main__':
     raise SystemExit(main())
-    
