@@ -138,10 +138,12 @@ class CameraTests(unittest.IsolatedAsyncioTestCase):
         self.source.do_command.assert_awaited_with({'command':'raw_frame'},timeout=None)
 
     async def test_empty_cloud_reports_no_points_without_fabricating_data(self):
-        result={'status':{'healthy':True,'point_count':0},'points':[]}
+        result={'status':{'healthy':True,'point_count':0},'points':[],
+                'pcd':encode_pcd([],[])}
         with patch.object(self.camera,'_snapshot',AsyncMock(return_value=result)):
-            with self.assertRaisesRegex(RuntimeError,'No radar points'):
-                await self.camera.get_point_cloud()
+            data,mime=await self.camera.get_point_cloud()
+            self.assertEqual(mime,PCD_MIME)
+            self.assertEqual(len(pcd_points(data)),0)
             status=await self.camera.do_command({'command':'points'})
             self.assertTrue(status['healthy'])
             self.assertEqual(status['points'],[])

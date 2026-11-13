@@ -77,8 +77,6 @@ class MmwavePointCloud(Camera, EasyResource):
 
     async def get_point_cloud(self,*,extra=None,timeout=None,**kwargs):
         result=await self._snapshot(timeout)
-        if result['status']['point_count']==0:
-            raise RuntimeError('No radar points in this frame; use the image preview or retry')
         return result['pcd'],PCD_MIME
 
     async def get_images(self,*,filter_source_names=None,extra=None,timeout=None,**kwargs):

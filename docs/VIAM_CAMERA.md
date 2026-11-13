@@ -100,8 +100,8 @@ PCD (`pointcloud/pcd`). `GetImages` returns a labeled top-down PNG named
 `radar-topdown`. This PNG is a diagnostic plot, not an optical or depth image;
 no camera intrinsics are fabricated. The same-frame result is cached across
 image/point-cloud requests. An empty valid frame has zero points and an empty
-plot. GetPointCloud reports "No radar points" for that frame rather than sending
-an empty cloud to viewers that cannot render it; no placeholder points are added.
+plot. GetPointCloud returns a valid zero-point PCD for that frame without raising
+an error or adding placeholder points. Some viewers may not support empty clouds.
 Quality and Doppler remain available through DoCommand. A failed/stale sensor raises an error rather than returning a previous cloud.
 
 Python SDK example, after connecting `robot` normally:
