@@ -81,6 +81,25 @@ class RuntimeTests(unittest.TestCase):
         for attrs in [{},dict(ATTRS,config_path='missing.json'),dict(ATTRS,max_range_m=float('nan'))]:
             with self.assertRaises((ValueError,FileNotFoundError)):validate(attrs)
 
+    def test_raw_export_shares_existing_source_and_disallows_stale_frames(self):
+        from viam_module.raw_frame import decode_raw
+        sources=[]
+        def factory(cfg,port):
+            src=FakeSource(cfg,port);sources.append(src);return src
+        runtime=RadarRuntime(ATTRS,source_factory=factory)
+        try:
+            wait_for(lambda:runtime.readings()['healthy'])
+            data=runtime.command({'command':'raw_frame'})
+            frame,cfg,meta=decode_raw(data,1)
+            self.assertEqual(frame.adc.shape,(17,64,3))
+            self.assertEqual(len(sources),1)
+            self.assertEqual(cfg.calibration_id,runtime.config.calibration_id)
+            sources[0].quiet=True
+            wait_for(lambda:runtime.readings()['state']=='stale')
+            with self.assertRaises(RuntimeError):runtime.command({'command':'raw_frame'})
+        finally:runtime.close()
+        with self.assertRaises(RuntimeError):runtime.command({'command':'raw_frame'})
+
     def test_start_failure_closes_port(self):
         port=MagicMock();port.write.side_effect=serial.SerialException('start failed')
         with patch('radar.acquisition.serial.Serial',return_value=port):

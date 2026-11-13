@@ -6,6 +6,7 @@ import queue
 import threading
 import time
 import sys
+import uuid
 from pathlib import Path
 
 import serial
@@ -13,6 +14,7 @@ import numpy as np
 from radar.range_azimuth import load_reference
 from radar.acquisition import Source
 from .processing import EchoProcessor, config_path, radar_config
+from .raw_frame import encode_raw
 
 
 def validate(attributes):
@@ -62,6 +64,10 @@ class RadarRuntime:
         self.stop = threading.Event()
         self.commands = queue.Queue(maxsize=8)
         self.snapshot = None
+        self.raw_frame = None
+        self.captured_at_unix = None
+        self.frame_counter = 0
+        self.session_id = uuid.uuid4().hex
         self.received_at = None
         self.state, self.error = 'starting', None
         self.reconnects = 0
@@ -73,6 +79,8 @@ class RadarRuntime:
             self.state, self.error = state, error
             if clear:
                 self.snapshot = None
+                self.raw_frame = None
+                self.captured_at_unix = None
                 self.received_at = None
 
     def readings(self):
@@ -89,15 +97,17 @@ class RadarRuntime:
                           frame_age_s=age, reconnect_count=self.reconnects,
                           config_path=self.attributes['config_path'], config_sha256=self.config_hash,
                           model='carlyworkspace:upenn-mmwave:infineon-mmwave',
-                          adapter_version='1.0.0', source_commit=self.source_revision)
+                          adapter_version='1.1.0', source_commit=self.source_revision)
             return result
 
     def command(self, command):
         name = command.get('command')
+        if name == 'raw_frame':
+            return self.latest_raw_frame()
         if name == 'status':
             return self.readings()
         if name not in ('capture_background', 'clear_background'):
-            raise ValueError('Supported commands: status, capture_background, clear_background')
+            raise ValueError('Supported commands: status, raw_frame, capture_background, clear_background')
         frames = command.get('frames', 30)
         if (isinstance(frames, bool) or not isinstance(frames, (int, float))
                 or not math.isfinite(frames) or frames != int(frames) or not 10 <= frames <= 300):
@@ -110,6 +120,19 @@ class RadarRuntime:
             except queue.Full:
                 raise RuntimeError('Background command queue is full') from None
         return {'accepted': True, 'command': name}
+
+    def latest_raw_frame(self):
+        # Export the original validated ADC, not the echo list or a reconstructed
+        # image. Never block acquisition on reconstruction or serial access.
+        with self.lock:
+            age = None if self.received_at is None else self.clock()-self.received_at
+            if (self.state != 'streaming' or self.raw_frame is None
+                    or age is None or age > self.stale_after or self.stop.is_set()):
+                raise RuntimeError(f'Raw radar frame unavailable ({self.state}): {self.error or "waiting for fresh data"}')
+            return encode_raw(self.raw_frame, self.config,
+                frame_id=f'{self.session_id}:{self.frame_counter}',
+                captured_at_unix=self.captured_at_unix,
+                age=age, stale_after=self.stale_after)
 
     def close(self):
         self.stop.set()
@@ -144,6 +167,8 @@ class RadarRuntime:
                         if self.clock()-last_frame > max(2, self.stale_after):
                             raise TimeoutError('No fresh radar frames; reconnecting serial device')
                         continue
+                    received = self.clock()
+                    captured_at_unix = time.time()
                     previous_identity = (frame.sequence, frame.timestamp_us)
                     snapshot = processor.process(frame)
                     snapshot.update(crc_errors=source.parser.bad_crc,
@@ -151,7 +176,10 @@ class RadarRuntime:
                                     sequence_gaps=source.parser.gaps)
                     with self.lock:
                         self.snapshot = snapshot
-                        self.received_at = last_frame = self.clock()
+                        self.raw_frame = frame
+                        self.captured_at_unix = captured_at_unix
+                        self.frame_counter += 1
+                        self.received_at = last_frame = received
                         self.state, self.error = 'streaming', None
             except (serial.SerialException, OSError, TimeoutError) as error:
                 self._state('reconnecting', str(error), clear=True)

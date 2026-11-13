@@ -1,5 +1,8 @@
 # UPenn mmWave Viam module
 
+For the additional camera resource, see [Raw mmWave point-cloud camera](VIAM_CAMERA.md).
+It shares this sensor's acquisition and supports rover/Linux deployment.
+
 This branch packages `carlyworkspace:upenn-mmwave` / model
 `carlyworkspace:upenn-mmwave:infineon-mmwave` using the repository's headless
 acquisition and DSP. No GUI dependencies or firmware flashing are required.

@@ -1,3 +1,5 @@
+> **Radar point-cloud camera:** The same Viam module now exposes `mmwave-pointcloud`. See [camera/rover setup](docs/VIAM_CAMERA.md) for shared raw acquisition, PCD output and sparse reconstruction.
+
 > **Viam integration (`demo-viam`):** See [the UPenn mmWave setup guide](docs/VIAM.md) for registration, builds, radar echoes, angle configuration and USB recovery.
 
 > **Baseline-free range detection:** [CA-CFAR mode](docs/CFAR_RANGE.md) adds live/replay operation without an empty capture. It now uses group confirmation and fine peak estimates; empty-scene false detections remain unresolved.
