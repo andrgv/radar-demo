@@ -213,6 +213,3 @@ Clients that gate calls on supports_pcd must explicitly enable
 `native_pointcloud_viewer: true`. That opts back into native 3D controls and
 their known empty-frame limitation. Refresh the browser after changing versions
 or this setting so the resource properties are fetched again.
-
-For experimental external-pose room mapping and the CartoRadar/PanoRadar review,
-see [RADAR_MAPPING.md](RADAR_MAPPING.md). This is not a standalone SLAM service.

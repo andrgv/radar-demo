@@ -15,7 +15,6 @@ from viam.utils import struct_to_dict
 
 from .cloud import PCD_MIME, camera_settings, reconstruct
 from .raw_frame import decode_raw
-from .mapping import RadarMap
 
 
 class MmwavePointCloud(Camera, EasyResource):
@@ -42,7 +41,6 @@ class MmwavePointCloud(Camera, EasyResource):
         self._lock=asyncio.Lock()
         self._cached=None
         self._closed=False
-        self._radar_map=RadarMap()
         return self
 
     async def _snapshot(self,timeout=None):
@@ -104,24 +102,11 @@ class MmwavePointCloud(Camera, EasyResource):
 
     async def do_command(self,command,*,timeout=None,**kwargs):
         name=command.get('command')
-        if name=='map_reset':
-            return self._radar_map.reset()
-        if name=='map_add':
-            return self._radar_map.add(command)
-        if name=='map_update_poses':
-            return self._radar_map.update_poses(command)
-        if name=='map_points':
-            return self._radar_map.points(command)
-        if name not in ('status','points','diagnostics','mapping_frame'):
-            raise ValueError('Supported camera commands: status, points, diagnostics, mapping_frame, map_add, map_points, map_reset, map_update_poses')
+        if name not in ('status','points','diagnostics'):
+            raise ValueError('Supported camera commands: status, points, diagnostics')
         result=await self._snapshot(timeout)
         output=copy.deepcopy(result['status'])
-        if name in ('points','mapping_frame'):
-            output['points']=copy.deepcopy(result['points'])
-        if name=='mapping_frame':
-            output['captured_at_unix']=result['metadata']['captured_at_unix']
-            output['schema']='upenn-mmwave/mapping-frame/v1'
-            return self._radar_map.capture(output)
+        if name=='points':output['points']=copy.deepcopy(result['points'])
         if name=='diagnostics':output['reconstruction']=copy.deepcopy(result['diagnostics'])
         return output
 

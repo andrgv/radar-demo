@@ -137,18 +137,6 @@ class CameraTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(details['point_count'],len(details['points']))
         self.source.do_command.assert_awaited_with({'command':'raw_frame'},timeout=None)
 
-    async def test_mapping_commands_use_exact_snapshot_and_do_not_fetch_for_export(self):
-        frame=await self.camera.do_command({'command':'mapping_frame'})
-        self.assertEqual(frame['schema'],'upenn-mmwave/mapping-frame/v1')
-        await self.camera.do_command({'command':'map_add','frame_id':frame['frame_id'],
-            'map_id':'test','pose_timestamp_unix':frame['captured_at_unix'],
-            'map_from_radar_optical':np.eye(4).tolist()})
-        self.source.do_command.side_effect=RuntimeError('disconnected')
-        result=await self.camera.do_command({'command':'map_points'})
-        self.assertEqual(result['keyframe_count'],1)
-        await self.camera.do_command({'command':'map_reset'})
-        self.assertEqual((await self.camera.do_command({'command':'map_points'}))['point_count'],0)
-
     async def test_native_viewer_is_explicitly_opt_in(self):
         self.camera.settings['native_pointcloud_viewer']=True
         self.assertTrue((await self.camera.get_properties()).supports_pcd)
