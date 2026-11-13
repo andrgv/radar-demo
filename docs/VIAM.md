@@ -96,7 +96,8 @@ It does not modify the original configuration files or GUI workflows.
    }
    ```
 
-6. Test **GetReadings**. Expect `healthy: true`, `state: streaming`,
+6. Test **GetReadings** for distance, azimuth and echo count. For full diagnostics,
+   use **DoCommand** with `{"command":"status"}`. Expect `healthy: true`, `state: streaming`,
    `selection: nearest_range_echo_motion_independent`, `echo_count`, `echoes`,
    and `config_path` matching the above. `source_commit` identifies the packaged
    source revision. Empty scenes can legitimately return zero echoes and null
@@ -123,6 +124,25 @@ not independently validated general-purpose angle calibration.
 repository configs, regardless of viam-server's working directory. An absolute
 path can select a host-local config. Its SHA-256 is exposed in readings. Edit
 that file and restart/reconfigure the component to load changes.
+
+## Clean default readings
+
+The sensor's default **GetReadings** panel contains only available `distance_m`,
+`azimuth_deg`, and `echo_count`. Missing distance/angle values are omitted instead
+of displayed as null; zero-degree azimuth is retained. A healthy empty scene
+returns `{"echo_count": 0}`. Connection failures instead show `status` and an
+`error` when available, so an offline sensor is not mistaken for an empty scene.
+Viam controls the visual ordering of map keys.
+
+Full echo lists, Doppler, calibration flags and diagnostics remain available:
+
+- Sensor **DoCommand**: `{"command": "status"}`.
+- **GetStatus**.
+- Python: `await sensor.get_readings(extra={"detailed": True})`.
+
+The fields described below are the full diagnostic response. This presentation
+change does not change DSP, calibration, USB acquisition, or the camera's
+`raw_frame` dependency command.
 
 ## Range-first behavior and returned values
 

@@ -26,7 +26,23 @@ class UpennMmwave(Sensor, EasyResource):
         return self
 
     async def get_readings(self, *, extra=None, timeout=None, **kwargs):
-        return self.runtime.readings()
+        readings = self.runtime.readings()
+        # Keep the standard Viam panel focused on measurements. Full telemetry
+        # remains available through GetStatus/DoCommand(status) or explicit extra.
+        if extra and extra.get('detailed') is True:
+            return readings
+        if not readings.get('healthy', False):
+            result = {'status': readings.get('state', 'unavailable')}
+            if readings.get('error'):
+                result['error'] = readings['error']
+            return result
+        result = {
+            key: readings[key]
+            for key in ('distance_m', 'azimuth_deg')
+            if readings.get(key) is not None
+        }
+        result['echo_count'] = readings.get('echo_count', 0)
+        return result
 
     async def do_command(self, command, *, timeout=None, **kwargs):
         return self.runtime.command(command)
