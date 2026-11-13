@@ -1,0 +1,6 @@
+{
+  "guard_cells": 1,
+  "training_cells": 4,
+  "min_training_cells": 4,
+  "factor": 2
+}

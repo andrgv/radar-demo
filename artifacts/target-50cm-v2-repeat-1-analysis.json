@@ -1,0 +1,59 @@
+{
+  "frames": 302,
+  "detections": 300,
+  "bins": {
+    "2": 300
+  },
+  "reasons": {
+    "checking_persistence": 2,
+    "spectral_change_uncalibrated": 300
+  },
+  "replay_detections": 300,
+  "capture": {
+    "frames": 302,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 6431
+  },
+  "first_detection_s": 0.199999,
+  "blocks": [
+    {
+      "frame_start": 0,
+      "frames": 100,
+      "detections": 98
+    },
+    {
+      "frame_start": 100,
+      "frames": 100,
+      "detections": 100
+    },
+    {
+      "frame_start": 200,
+      "frames": 100,
+      "detections": 100
+    },
+    {
+      "frame_start": 300,
+      "frames": 2,
+      "detections": 2
+    }
+  ],
+  "median_excess_db_bins1to4": [
+    5.137158678550932,
+    7.373296178163294,
+    0.06927273739398387,
+    0.012353982804899744
+  ],
+  "threshold_db_bins1to4": [
+    3.0,
+    5.9853766490747855,
+    6.5686842676759625,
+    5.214713298902696
+  ]
+}

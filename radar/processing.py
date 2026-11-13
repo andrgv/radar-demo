@@ -115,12 +115,22 @@ def noise_threshold(power, factor):
 
 
 class Processor:
-    def __init__(self, config, phase_probe_range=None, background=None, spatial_map=False, point_cloud=False):
+    def __init__(self, config, phase_probe_range=None, background=None, spatial_map=False, point_cloud=False,
+                 cloud_method='deblend'):
         self.config = config.validate()
         from .spatial import SpatialMapper
         self.spatial_mapper = SpatialMapper(config) if spatial_map or point_cloud else None
         from .pointcloud import CloudProcessor
-        self.cloud_processor=CloudProcessor(config) if point_cloud else None
+        if cloud_method not in ('fft', 'deblend'):
+            raise ValueError('Cloud method must be fft or deblend')
+        self.cloud_method = cloud_method
+        if point_cloud and cloud_method == 'deblend':
+            if background is not None:
+                raise ValueError('Raw deblended cloud requires original ADC; use cloud method fft with a spectral background')
+            from .reconstruction import SceneReconstructor
+            self.cloud_processor = SceneReconstructor(config)
+        else:
+            self.cloud_processor = CloudProcessor(config) if point_cloud else None
         self.background = background
         if background is not None:
             background.validate(config)
@@ -237,7 +247,15 @@ class Processor:
         }
         spatial_volume=self.spatial_mapper.process(spectrum) if self.spatial_mapper is not None else None
         if spatial_volume is not None and self.cloud_processor is not None:
-            spatial_volume.point_cloud=self.cloud_processor.process(spectrum)
+            spatial_volume.point_cloud=self.cloud_processor.process(
+                frame.adc if self.cloud_method == 'deblend' else spectrum)
+            if self.cloud_method == 'deblend':
+                report = self.cloud_processor.last_report
+                spatial_volume.cloud_report = report
+                features.update(cloud_method='raw_multitone_range_angle',
+                                cloud_unresolved_components=sum(not c['accepted'] for c in report['components']),
+                                cloud_residual_fraction=report.get('residual_fraction'),
+                                cloud_order_limit_reached=report.get('subspace_rank_capped', False))
         return Result(frame.sequence, frame.timestamp_us, config.ranges, velocities,
             10 * np.log10(power + 1e-12), 10 * np.log10(rd_power + 1e-12),
             self.angles, 10 * np.log10(heatmap + 1e-12), detections, features, config.verified, probe,

@@ -6,7 +6,7 @@
  * all generated code.
  * This file was automatically generated and should not be modified.
  * Configurator Backend 3.90.0
- * device-db 4.28.0.8806
+ * device-db 4.41.0.11271
  * mtb-pdl-cat1 3.24.0.47219
  *
  *******************************************************************************

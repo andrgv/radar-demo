@@ -1,5 +1,7 @@
 build/
 libs/
+.metadata/
+mtb_shared/
 .venv/
 __pycache__/
 *.egg-info/
@@ -8,3 +10,9 @@ artifacts/
 .mtbqueryapi
 .ninja_log
 *.log
+
+# Viam build output
+.venv-viam
+dist/
+*.spec
+viam_module/source_revision.txt

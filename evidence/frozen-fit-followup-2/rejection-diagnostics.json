@@ -1,0 +1,90 @@
+{
+  "live-002": {
+    "existing_reasons": {
+      "no_candidate_above_noise": 214
+    },
+    "trial_candidate_frames": 169,
+    "trial_gain_at_least_2": 0,
+    "gain_percentiles": [
+      0.08235634560503316,
+      0.3685044425065615,
+      0.9754004270933815
+    ],
+    "candidate_percentiles_cm": [
+      63.43921180524977,
+      86.64700836548519,
+      113.53616087381776
+    ]
+  },
+  "live-003": {
+    "existing_reasons": {
+      "no_candidate_above_noise": 294,
+      "ambiguous_separate_peak": 1
+    },
+    "trial_candidate_frames": 272,
+    "trial_gain_at_least_2": 0,
+    "gain_percentiles": [
+      0.6103273314373945,
+      0.725600485476832,
+      0.8367331066387441
+    ],
+    "candidate_percentiles_cm": [
+      18.108662222374864,
+      26.427305461827885,
+      33.91650382861534
+    ]
+  },
+  "live-004": {
+    "existing_reasons": {
+      "no_candidate_above_noise": 260
+    },
+    "trial_candidate_frames": 260,
+    "trial_gain_at_least_2": 1,
+    "gain_percentiles": [
+      0.7996934644940955,
+      0.9535403833645854,
+      1.1524640767380963
+    ],
+    "candidate_percentiles_cm": [
+      40.63939819084774,
+      42.83871117741339,
+      45.80483098821575
+    ]
+  },
+  "live-005": {
+    "existing_reasons": {
+      "no_candidate_above_noise": 268,
+      "checking_persistence": 1,
+      "ambiguous_separate_peak": 9
+    },
+    "trial_candidate_frames": 275,
+    "trial_gain_at_least_2": 6,
+    "gain_percentiles": [
+      0.34357065936275755,
+      0.4266917111765419,
+      1.090892595880921
+    ],
+    "candidate_percentiles_cm": [
+      47.42927542334123,
+      51.81384604665157,
+      62.04604325985525
+    ]
+  },
+  "live-006": {
+    "existing_reasons": {
+      "no_candidate_above_noise": 254
+    },
+    "trial_candidate_frames": 116,
+    "trial_gain_at_least_2": 0,
+    "gain_percentiles": [
+      0.032356150937821467,
+      0.1886893206116101,
+      0.6700557782348013
+    ],
+    "candidate_percentiles_cm": [
+      59.27521750719139,
+      109.99840343309566,
+      148.26931876223497
+    ]
+  }
+}

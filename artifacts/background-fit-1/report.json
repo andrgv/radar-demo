@@ -1,0 +1,224 @@
+{
+  "synthetic": [
+    {
+      "distance_m": 0.3,
+      "max_error_m": 4.070706938197333e-09
+    },
+    {
+      "distance_m": 0.4,
+      "max_error_m": 6.00932648087138e-09
+    },
+    {
+      "distance_m": 0.5,
+      "max_error_m": 2.986985714326096e-09
+    }
+  ],
+  "coincident_target": {
+    "range_m": null,
+    "remaining_energy_fraction": 9.747546870876058e-31,
+    "residual_fraction": null,
+    "width_m": null
+  },
+  "rows": [
+    {
+      "recording": "hpf350-a-30cm",
+      "label_m": 0.3,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.3481066531076318,
+      "mae_cm": 4.841884816508484,
+      "median_remaining_energy": 0.4675553282433735,
+      "median_residual": 0.19453994407660746,
+      "median_width_m": 0.09000000000000002
+    },
+    {
+      "recording": "hpf350-a-50cm",
+      "label_m": 0.5,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.49994212249845016,
+      "mae_cm": 1.8624047714053609,
+      "median_remaining_energy": 0.4209989286453774,
+      "median_residual": 0.22292118868617783,
+      "median_width_m": 0.12
+    },
+    {
+      "recording": "hpf350-a-40cm",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.2624498705735396,
+      "mae_cm": 13.860822166636503,
+      "median_remaining_energy": 0.541522498557973,
+      "median_residual": 0.325498475093266,
+      "median_width_m": 0.17500000000000002
+    },
+    {
+      "recording": "hpf350-a-40cm-repeat",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.279647459086867,
+      "mae_cm": 12.209029173381477,
+      "median_remaining_energy": 0.5463389958752763,
+      "median_residual": 0.33913720831708755,
+      "median_width_m": 0.17500000000000002
+    },
+    {
+      "recording": "hpf350-a-empty-before",
+      "label_m": null,
+      "frames": 11,
+      "valid": 11,
+      "median_m": 1.1426472905349327,
+      "mae_cm": null,
+      "median_remaining_energy": 0.03327272488592305,
+      "median_residual": 0.01953617163268635,
+      "median_width_m": 0.5499999999999999
+    },
+    {
+      "recording": "hpf350-a-empty-after",
+      "label_m": null,
+      "frames": 71,
+      "valid": 71,
+      "median_m": 0.1913490266663827,
+      "mae_cm": null,
+      "median_remaining_energy": 0.2495892998357611,
+      "median_residual": 0.16120899985599388,
+      "median_width_m": 0.165
+    },
+    {
+      "recording": "hpf100-a-30cm",
+      "label_m": 0.3,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.3026884297715853,
+      "mae_cm": 1.7642835149379095,
+      "median_remaining_energy": 0.3394164140574679,
+      "median_residual": 0.07741611935544482,
+      "median_width_m": 0.07999999999999996
+    },
+    {
+      "recording": "hpf100-a-50cm",
+      "label_m": 0.5,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.510122023722991,
+      "mae_cm": 2.1719852701504236,
+      "median_remaining_energy": 0.31792007930074984,
+      "median_residual": 0.09963690016312686,
+      "median_width_m": 0.1100000000000001
+    },
+    {
+      "recording": "hpf100-a-40cm",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.3547649392326572,
+      "mae_cm": 4.454873010193358,
+      "median_remaining_energy": 0.35100746099709523,
+      "median_residual": 0.15556466292271318,
+      "median_width_m": 0.14999999999999997
+    },
+    {
+      "recording": "hpf100-a-40cm-repeat",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.3511977446322699,
+      "mae_cm": 4.966009967969686,
+      "median_remaining_energy": 0.3671041523928325,
+      "median_residual": 0.16786085884353602,
+      "median_width_m": 0.15500000000000003
+    },
+    {
+      "recording": "hpf100-a-empty-before",
+      "label_m": null,
+      "frames": 11,
+      "valid": 11,
+      "median_m": 1.0219193118387204,
+      "mae_cm": null,
+      "median_remaining_energy": 0.04543205736466516,
+      "median_residual": 0.027015454474790923,
+      "median_width_m": 0.73
+    },
+    {
+      "recording": "hpf100-a-empty-after",
+      "label_m": null,
+      "frames": 71,
+      "valid": 71,
+      "median_m": 1.1570298693587637,
+      "mae_cm": null,
+      "median_remaining_energy": 0.04513077852524993,
+      "median_residual": 0.025216656236309594,
+      "median_width_m": 0.3999999999999999
+    },
+    {
+      "recording": "hpf350-b-30cm",
+      "label_m": 0.3,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.29986492893472955,
+      "mae_cm": 1.6039493516032188,
+      "median_remaining_energy": 0.4002660496787234,
+      "median_residual": 0.171605432356102,
+      "median_width_m": 0.13
+    },
+    {
+      "recording": "hpf350-b-50cm",
+      "label_m": 0.5,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.4698297501451189,
+      "mae_cm": 3.1318830645590316,
+      "median_remaining_energy": 0.3181896177267002,
+      "median_residual": 0.16757714631669332,
+      "median_width_m": 0.13
+    },
+    {
+      "recording": "hpf350-b-40cm",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.39062391120111983,
+      "mae_cm": 1.099033644333217,
+      "median_remaining_energy": 0.4001807841755369,
+      "median_residual": 0.2122403767897827,
+      "median_width_m": 0.09500000000000003
+    },
+    {
+      "recording": "hpf350-b-40cm-repeat",
+      "label_m": 0.4,
+      "frames": 101,
+      "valid": 101,
+      "median_m": 0.38219368092006806,
+      "mae_cm": 1.8318769768770564,
+      "median_remaining_energy": 0.3845265631556687,
+      "median_residual": 0.20905407350474187,
+      "median_width_m": 0.09999999999999998
+    },
+    {
+      "recording": "hpf350-b-empty-before",
+      "label_m": null,
+      "frames": 11,
+      "valid": 11,
+      "median_m": 1.202247348159237,
+      "mae_cm": null,
+      "median_remaining_energy": 0.036629689291011944,
+      "median_residual": 0.024034233361309464,
+      "median_width_m": 0.59
+    },
+    {
+      "recording": "hpf350-b-empty-after",
+      "label_m": null,
+      "frames": 71,
+      "valid": 71,
+      "median_m": 1.1191622647860093,
+      "mae_cm": null,
+      "median_remaining_energy": 0.057362098811246494,
+      "median_residual": 0.04283703388478095,
+      "median_width_m": 0.725
+    }
+  ],
+  "method": "Experimental fitted background nuisance model, offline only.",
+  "limits": "No fitted target labels or new gate. Background modes can absorb target. Late empty capture is not used for training."
+}

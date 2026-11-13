@@ -1,0 +1,67 @@
+{
+  "target-1m-session-1": {
+    "frames": 302,
+    "detected": 90,
+    "detected_bins": {
+      "4": 19,
+      "2": 71
+    },
+    "reasons": {
+      "checking_persistence": 33,
+      "no_candidate_above_noise": 164,
+      "spectral_change_uncalibrated": 90,
+      "ambiguous_separate_peak": 15
+    },
+    "replay_detections": 90,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 2309
+    },
+    "median_excess_db_bins1to4": [
+      -3.35620053614155,
+      2.5743669911091303,
+      1.3601842607863404,
+      2.224784006294662
+    ],
+    "first50_detections": 4,
+    "last100_detections": 53
+  },
+  "empty-after-1m-session-1": {
+    "frames": 302,
+    "detected": 0,
+    "detected_bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 298,
+      "checking_persistence": 4
+    },
+    "replay_detections": 0,
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 4370
+    },
+    "median_excess_db_bins1to4": [
+      -3.707866099031392,
+      -2.348487981832225,
+      -1.8556405002866185,
+      2.121589229133143
+    ],
+    "first50_detections": 0,
+    "last100_detections": 0
+  }
+}

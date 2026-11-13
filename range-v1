@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")"
+if [ -n "${WAVVY_PYTHON:-}" ]; then
+    py="$WAVVY_PYTHON"
+elif [ -x .venv/bin/python ]; then
+    py=.venv/bin/python
+elif [ -x /Users/chekaylimeyer/radar-work/radar-demo/.venv/bin/python ]; then
+    py=/Users/chekaylimeyer/radar-work/radar-demo/.venv/bin/python
+else
+    py=python3
+fi
+if [ "${1:-}" = test ]; then
+    exec "$py" -m unittest discover -s tests_min -v
+fi
+exec "$py" -m radar_min "$@"

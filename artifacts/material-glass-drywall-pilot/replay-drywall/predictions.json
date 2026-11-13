@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "recording": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/open-03",
+  "model_status": "experimental_repeat_comparison",
+  "prediction": "drywall",
+  "forced_choice": "drywall",
+  "glass_score": 0.17050540447235107,
+  "windows": 29,
+  "overlaps_training_frames": false,
+  "limitations": [
+    "Same-surface repeat test only. No evidence of recognizing a new window or wall.",
+    "Experimental comparison of glass-facing and drywall-facing radar readings. Distance, angle, window frame/coating, background and sensor placement can explain a prediction. Scores are not calibrated probabilities. Other materials can receive either label. This is not a validated glass detector.",
+    "Some surface distances were not recorded; distance can explain the class difference."
+  ],
+  "raw_sha256": "ee8a5cc5a1abd8a15126a1412503896853fd740f76ab6b738c63fe99fb3edf6d",
+  "frames": 304,
+  "discarded_tail_frames": 4,
+  "window_predictions": [
+    {
+      "first_sequence": 3336,
+      "last_sequence": 3345,
+      "prediction": "drywall",
+      "glass_score": 0.05209044739603996
+    },
+    {
+      "first_sequence": 3346,
+      "last_sequence": 3355,
+      "prediction": "drywall",
+      "glass_score": 0.03610922768712044
+    },
+    {
+      "first_sequence": 3356,
+      "last_sequence": 3365,
+      "prediction": "drywall",
+      "glass_score": 0.20155051350593567
+    },
+    {
+      "first_sequence": 3366,
+      "last_sequence": 3375,
+      "prediction": "drywall",
+      "glass_score": 0.07525165379047394
+    },
+    {
+      "first_sequence": 3376,
+      "last_sequence": 3385,
+      "prediction": "drywall",
+      "glass_score": 0.039849504828453064
+    },
+    {
+      "first_sequence": 3386,
+      "last_sequence": 3395,
+      "prediction": "drywall",
+      "glass_score": 0.09931661933660507
+    },
+    {
+      "first_sequence": 3396,
+      "last_sequence": 3405,
+      "prediction": "drywall",
+      "glass_score": 0.07063768804073334
+    },
+    {
+      "first_sequence": 3406,
+      "last_sequence": 3415,
+      "prediction": "drywall",
+      "glass_score": 0.1775655597448349
+    },
+    {
+      "first_sequence": 3416,
+      "last_sequence": 3425,
+      "prediction": "drywall",
+      "glass_score": 0.2771599292755127
+    },
+    {
+      "first_sequence": 3426,
+      "last_sequence": 3435,
+      "prediction": "drywall",
+      "glass_score": 0.06877143681049347
+    },
+    {
+      "first_sequence": 3436,
+      "last_sequence": 3445,
+      "prediction": "drywall",
+      "glass_score": 0.0641278475522995
+    },
+    {
+      "first_sequence": 3446,
+      "last_sequence": 3455,
+      "prediction": "drywall",
+      "glass_score": 0.047257788479328156
+    },
+    {
+      "first_sequence": 3456,
+      "last_sequence": 3465,
+      "prediction": "drywall",
+      "glass_score": 0.05343605950474739
+    },
+    {
+      "first_sequence": 3466,
+      "last_sequence": 3475,
+      "prediction": "drywall",
+      "glass_score": 0.06757671386003494
+    },
+    {
+      "first_sequence": 3476,
+      "last_sequence": 3485,
+      "prediction": "drywall",
+      "glass_score": 0.0888311043381691
+    },
+    {
+      "first_sequence": 3486,
+      "last_sequence": 3495,
+      "prediction": "drywall",
+      "glass_score": 0.06068915128707886
+    },
+    {
+      "first_sequence": 3496,
+      "last_sequence": 3505,
+      "prediction": "drywall",
+      "glass_score": 0.21827808022499084
+    },
+    {
+      "first_sequence": 3506,
+      "last_sequence": 3515,
+      "prediction": "drywall",
+      "glass_score": 0.03610922768712044
+    },
+    {
+      "first_sequence": 3516,
+      "last_sequence": 3525,
+      "prediction": "drywall",
+      "glass_score": 0.03610922768712044
+    },
+    {
+      "first_sequence": 3526,
+      "last_sequence": 3535,
+      "prediction": "drywall",
+      "glass_score": 0.08975233137607574
+    },
+    {
+      "first_sequence": 3536,
+      "last_sequence": 3545,
+      "prediction": "uncertain",
+      "glass_score": 0.3595222532749176
+    },
+    {
+      "first_sequence": 3546,
+      "last_sequence": 3555,
+      "prediction": "drywall",
+      "glass_score": 0.26182252168655396
+    },
+    {
+      "first_sequence": 3556,
+      "last_sequence": 3565,
+      "prediction": "uncertain",
+      "glass_score": 0.42737922072410583
+    },
+    {
+      "first_sequence": 3566,
+      "last_sequence": 3575,
+      "prediction": "uncertain",
+      "glass_score": 0.42737922072410583
+    },
+    {
+      "first_sequence": 3576,
+      "last_sequence": 3585,
+      "prediction": "uncertain",
+      "glass_score": 0.4162535071372986
+    },
+    {
+      "first_sequence": 3586,
+      "last_sequence": 3595,
+      "prediction": "drywall",
+      "glass_score": 0.06378008425235748
+    },
+    {
+      "first_sequence": 3596,
+      "last_sequence": 3605,
+      "prediction": "uncertain",
+      "glass_score": 0.37320801615715027
+    },
+    {
+      "first_sequence": 3606,
+      "last_sequence": 3615,
+      "prediction": "drywall",
+      "glass_score": 0.32746297121047974
+    },
+    {
+      "first_sequence": 3616,
+      "last_sequence": 3625,
+      "prediction": "uncertain",
+      "glass_score": 0.42737922072410583
+    }
+  ]
+}

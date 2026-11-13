@@ -1,0 +1,112 @@
+{
+  "label_basis": "User confirms box 20 cm then removed, same calibration; no synchronized position truth",
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-002",
+      "label_m": 0.2,
+      "raw_sha256": "681ddeb01d30f0ee5f9a0945b76f42b0b5882c0a9d9bd136fdde2c78814c9621",
+      "metrics": {
+        "frames": 232,
+        "reported": 0,
+        "misses": 232,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "mae_cm": null,
+        "p95_error_cm": null,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "reasons": {
+        "no_candidate_above_noise": 232
+      },
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 232,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1526561
+      },
+      "median_power_bins_0_to_4": [
+        611092.57386859,
+        1203016.7622849462,
+        306545.4011548179,
+        150083.93451538094,
+        411694.92012825405
+      ],
+      "median_power_change_vs_training_db_bins_0_to_4": [
+        4.132050447401304,
+        1.894569871590167,
+        4.969628583419372,
+        0.6490139680896224,
+        1.5283701209824514
+      ]
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-003",
+      "label_m": null,
+      "raw_sha256": "8777e90787dc5de038eacce26c4d950f291471198c7eb46df4b1c718fa171ea9",
+      "metrics": {
+        "frames": 207,
+        "reported": 0,
+        "misses": 207,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "reasons": {
+        "no_candidate_above_noise": 207
+      },
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 207,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1362061
+      },
+      "median_power_bins_0_to_4": [
+        218745.8242003636,
+        484647.2870296156,
+        87726.01730595574,
+        104606.50151947948,
+        243870.6144362965
+      ],
+      "median_power_change_vs_training_db_bins_0_to_4": [
+        -0.329621901623981,
+        -2.0538890550761697,
+        -0.4640353364299174,
+        -0.9187413188531417,
+        -0.7457902371964511
+      ]
+    }
+  ],
+  "target_vs_independent_empty_median_power_db_bins_0_to_4": [
+    4.461672349025285,
+    3.948458926666337,
+    5.433663919849288,
+    1.5677552869427644,
+    2.2741603581789027
+  ],
+  "training_median_power_bins_0_to_4": [
+    235994.54335616526,
+    777704.6425074134,
+    97618.45881745411,
+    129250.67195175728,
+    289559.9521615915
+  ]
+}

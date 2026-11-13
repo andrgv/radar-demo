@@ -1,0 +1,143 @@
+{
+  "baseline_sha256": "292993608aa620a882171d133c069145817d6a435fe9f1aef5dbcd3314ef1466",
+  "threshold_db_bins1to4": [
+    3.0,
+    5.9853766490747855,
+    6.5686842676759625,
+    5.214713298902696
+  ],
+  "empty-50cm-v2-1": {
+    "evaluated_frames": 71,
+    "detections": 0,
+    "detected_bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 71
+    },
+    "live_detections": 0,
+    "live_reasons": {
+      "raw_recorded": 101
+    },
+    "algorithms": {
+      "capture_only": 101
+    },
+    "capture": {
+      "frames": 101,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "median_excess_db_bins1to4": [
+      0.0024921514713369675,
+      0.0019263705719083646,
+      1.4769890487855406,
+      0.31781097814190673
+    ],
+    "above_threshold_frames_bins1to4": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "first100_detections": 0,
+    "last100_detections": 0,
+    "raw_sha256": "799523764d46e5bfeeadec79ffdf14bb4bf89e080114637c9a790386229a30c3"
+  },
+  "target-50cm-v2-1": {
+    "evaluated_frames": 302,
+    "detections": 179,
+    "detected_bins": {
+      "2": 179
+    },
+    "reasons": {
+      "no_candidate_above_noise": 112,
+      "checking_persistence": 10,
+      "spectral_change_uncalibrated": 179,
+      "ambiguous_separate_peak": 1
+    },
+    "live_detections": 179,
+    "live_reasons": {
+      "no_candidate_above_noise": 112,
+      "checking_persistence": 10,
+      "spectral_change_uncalibrated": 179,
+      "ambiguous_separate_peak": 1
+    },
+    "algorithms": {
+      "range-v1-qualified-first-v2": 302
+    },
+    "capture": {
+      "frames": 302,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 5824
+    },
+    "median_excess_db_bins1to4": [
+      4.329225032120714,
+      6.935464415801899,
+      1.9965826711559451,
+      0.39659174569377953
+    ],
+    "above_threshold_frames_bins1to4": [
+      187,
+      188,
+      2,
+      0
+    ],
+    "first100_detections": 0,
+    "last100_detections": 97,
+    "raw_sha256": "349ab3b7e8a3daf3aac354c3fb1794eaeffb2418ba793614280be79acddd004b"
+  },
+  "empty-after-50cm-v2-1": {
+    "evaluated_frames": 303,
+    "detections": 0,
+    "detected_bins": {},
+    "reasons": {
+      "no_candidate_above_noise": 303
+    },
+    "live_detections": 0,
+    "live_reasons": {
+      "no_candidate_above_noise": 303
+    },
+    "algorithms": {
+      "range-v1-qualified-first-v2": 303
+    },
+    "capture": {
+      "frames": 303,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1
+    },
+    "median_excess_db_bins1to4": [
+      -0.11734588459611928,
+      0.12535110654072668,
+      1.4166565702968867,
+      0.6510251076194322
+    ],
+    "above_threshold_frames_bins1to4": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "first100_detections": 0,
+    "last100_detections": 0,
+    "raw_sha256": "0ede7bd663f4f7b161cc2d9f0c2ea46d63c2e45c20da1247aac53e2af226c11c"
+  }
+}

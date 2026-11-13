@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "created_unix_s": 1793560990.692686,
+  "label": "capture",
+  "session_id": "hpf100-a-40cm-repeat",
+  "scene_id": "unspecified",
+  "config_fingerprint": "82a066f9ce7763b9a06d29cba637bdd70d464b05a7343d9ed1e60ce220c7ae8a",
+  "firmware_identity": "unknown; profile ID is not a firmware hash",
+  "freshness": "relative timing only; no firmware handshake",
+  "baseline_provenance": null
+}

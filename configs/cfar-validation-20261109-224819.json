@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "description": "User-reported fresh validation after v2 implementation; approximate six-second alternating empty/target states, starting and ending empty. No tuning.",
+  "cases": [
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-001",
+      "target_m": 0.5,
+      "interval_seconds": 6,
+      "interval_count": 5
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-002",
+      "target_m": 0.8,
+      "interval_seconds": 6,
+      "interval_count": 7
+    }
+  ]
+}

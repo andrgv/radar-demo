@@ -1,0 +1,8 @@
+{
+  "python": "3.12.4 (v3.12.4:8e8a4baf65, Jun  6 2024, 17:33:18) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "2.5.4",
+  "pyserial": "3.5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "original_head": "a6d7a089d9a44814d4258b3593a28b9daffbd8ae",
+  "original_recordings_sha256_rechecked": true
+}

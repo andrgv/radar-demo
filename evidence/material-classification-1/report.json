@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "status": "experimental_repeat_comparison",
+  "evaluation": "repeat_holdout",
+  "limitations": [
+    "Same-surface repeat test only. No evidence of recognizing a new window or wall.",
+    "Experimental comparison of glass-facing and drywall-facing radar readings. Distance, angle, window frame/coating, background and sensor placement can explain a prediction. Scores are not calibrated probabilities. Other materials can receive either label. This is not a validated glass detector.",
+    "Some surface distances were not recorded; distance can explain the class difference."
+  ],
+  "notes": "Labels follow the user's clarification: the sensor faced drywall for OPEN and the closed window for CLOSED. The original door-check notes describing removable glass and a fixed radar are inaccurate. No glass was removed. Radar direction/background changed. The drywall distance was not recorded. Pairs 1 and 2 train; pair 3 tests repeatability of those same two views. This does not test recognition of new materials or new surfaces.",
+  "features": {
+    "kind": "spectrum",
+    "window_frames": 10,
+    "skip_frames": 10,
+    "bins": [
+      2,
+      3,
+      4
+    ]
+  },
+  "training_recordings": 4,
+  "heldout_recording_metrics": {
+    "recordings": 2,
+    "correct": 2,
+    "forced_choice_accuracy": 1.0,
+    "uncertain": 0,
+    "confusion_labels": [
+      "drywall",
+      "glass"
+    ],
+    "confusion_actual_rows_predicted_columns": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "heldout_predictions": [
+    {
+      "path": "recordings/glass-pane-100cm-01/open-03",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "test",
+      "prediction": "drywall",
+      "forced_choice": "drywall",
+      "glass_score": 0.17050540447235107,
+      "windows": 29
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/closed-03",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "test",
+      "prediction": "glass",
+      "forced_choice": "glass",
+      "glass_score": 0.8814988732337952,
+      "windows": 29
+    }
+  ],
+  "recordings": [
+    {
+      "path": "recordings/glass-pane-100cm-01/open-01",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "train",
+      "raw_sha256": "ae8546fcc6d276cd8d204c99a92a84c9d98e96ae5daa73584b155750cf964f56",
+      "frames": 303,
+      "feature_windows": 29,
+      "discarded_tail_frames": 3
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/closed-01",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "train",
+      "raw_sha256": "a44f452864a2c0537d7cd084c26863166cf4639d9fe02887ae733626b8a77f56",
+      "frames": 304,
+      "feature_windows": 29,
+      "discarded_tail_frames": 4
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/open-02",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "train",
+      "raw_sha256": "ab6abefa796e64a6f4386b65e5ea44b5b3c041c4a2330dbe075c4428a866d286",
+      "frames": 304,
+      "feature_windows": 29,
+      "discarded_tail_frames": 4
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/closed-02",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "train",
+      "raw_sha256": "c27b402e1f4f66764ad524a8d652e03860829ea11f61a8e276e46b4e4814c1e7",
+      "frames": 303,
+      "feature_windows": 29,
+      "discarded_tail_frames": 3
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/open-03",
+      "label": "drywall",
+      "specimen_id": "original-drywall-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": null,
+      "split": "test",
+      "raw_sha256": "ee8a5cc5a1abd8a15126a1412503896853fd740f76ab6b738c63fe99fb3edf6d",
+      "frames": 304,
+      "feature_windows": 29,
+      "discarded_tail_frames": 4
+    },
+    {
+      "path": "recordings/glass-pane-100cm-01/closed-03",
+      "label": "glass",
+      "specimen_id": "original-window-01",
+      "scene_id": "original-room-20261108",
+      "distance_m": 1.0,
+      "split": "test",
+      "raw_sha256": "ccdb149b18f9e77fe5d832f32d4d6c259c8ed9bf51bea94ee702977e26a17cfe",
+      "frames": 304,
+      "feature_windows": 29,
+      "discarded_tail_frames": 4
+    }
+  ],
+  "parameters": {
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "tree_method": "hist",
+    "max_depth": 2,
+    "eta": 0.05,
+    "min_child_weight": 2,
+    "reg_lambda": 5,
+    "subsample": 1,
+    "colsample_bytree": 1,
+    "seed": 2026,
+    "nthread": 1
+  },
+  "boosting_rounds": 100,
+  "uncalibrated_score_margins": {
+    "drywall_max": 0.35,
+    "glass_min": 0.65
+  },
+  "upstream": {
+    "url": "https://github.com/povilasDadelo/Material-classification",
+    "inspected_commit": "0455250483e5d4acee7d61347ca9af7d5c28e477"
+  }
+}

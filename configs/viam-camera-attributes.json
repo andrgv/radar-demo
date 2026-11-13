@@ -1,0 +1,11 @@
+{
+  "sensor": "upenn-mmwave",
+  "method": "deblend",
+  "min_range_m": 0.5,
+  "max_range_m": 3.0,
+  "min_snr_db": 12,
+  "min_model_fit": 0.8,
+  "max_components": 8,
+  "max_points": 64,
+  "max_frame_age_s": 1.0
+}

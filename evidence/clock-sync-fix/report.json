@@ -1,0 +1,169 @@
+{
+  "clock_policy": {
+    "algorithm": "bounded-startup-clock-v1",
+    "policy": {
+      "fit_span_s": 20.0,
+      "max_fit_span_s": 30.0,
+      "min_samples": 100,
+      "max_rate_error": 0.02,
+      "max_fit_residual_s": 0.1,
+      "p95_fit_residual_s": 0.05,
+      "max_progress_error_s": 0.5
+    },
+    "limitation": "Relative progress only; no absolute age handshake; startup latency ramps can resemble clock skew"
+  },
+  "sessions": [
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-001",
+      "frames": 276,
+      "raw_sha256": "7a6c8e4b6c385ab865c487529c237ef64c85e29d62a971f8f61fc055e90a47cd",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {},
+      "final_clock": {
+        "reason": null,
+        "state": "frozen",
+        "host_seconds_per_device_second": 0.993267567799617,
+        "offset_s": -0.002107596636614417,
+        "residual_s": -0.004509517852977041,
+        "raw_residual_s": -0.19175900000012192,
+        "device_elapsed_s": 27.50000000000012,
+        "host_elapsed_s": 27.308241,
+        "fit_samples": 201
+      },
+      "max_corrected_error_after_freeze_s": 0.005006761073008903
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-002",
+      "frames": 423,
+      "raw_sha256": "20c22e79aff32ba8704020bf5e65dbcec474060b6ff3b342c91d3ec0b8c442e4",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {},
+      "final_clock": {
+        "reason": null,
+        "state": "frozen",
+        "host_seconds_per_device_second": 0.9930516852760044,
+        "offset_s": -0.0015628195851800086,
+        "residual_s": 0.003196693989153232,
+        "raw_residual_s": -0.2915850000003317,
+        "device_elapsed_s": 42.19999900000033,
+        "host_elapsed_s": 41.908414,
+        "fit_samples": 202
+      },
+      "max_corrected_error_after_freeze_s": 0.025773367056125096
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-003",
+      "frames": 1469,
+      "raw_sha256": "6a414251a89c519a5aa007e499cdb64ff5e631eb4aed4b5120b4ceba8a8a0485",
+      "old_timing_rejections": 741,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {
+        "sequence_gap": 1
+      },
+      "final_clock": {
+        "reason": null,
+        "state": "frozen",
+        "host_seconds_per_device_second": 0.9930156382591144,
+        "offset_s": 0.0011750111538084695,
+        "residual_s": 0.01431972858631525,
+        "raw_residual_s": -1.0105079999959514,
+        "device_elapsed_s": 146.89999999999594,
+        "host_elapsed_s": 145.889492,
+        "fit_samples": 199
+      },
+      "max_corrected_error_after_freeze_s": 0.04382267536766449
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-004",
+      "frames": 119,
+      "raw_sha256": "99e1dc390d62bbe90d5ff5a00dc147ded7ef6c76f45fcccef59ab1b082e44d1d",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {},
+      "final_clock": {
+        "reason": null,
+        "state": "collecting",
+        "host_seconds_per_device_second": 1.0,
+        "offset_s": 0.0,
+        "residual_s": -0.08674299999997359,
+        "raw_residual_s": -0.08674299999997359,
+        "device_elapsed_s": 11.799999999999974,
+        "host_elapsed_s": 11.713257,
+        "fit_samples": 119
+      },
+      "max_corrected_error_after_freeze_s": null
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-005",
+      "frames": 244,
+      "raw_sha256": "6e2773bd42f04fe071f83d8d0ed2194279ce45ad967e87e7601f55338ee099c6",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {},
+      "final_clock": {
+        "reason": null,
+        "state": "frozen",
+        "host_seconds_per_device_second": 0.9923983061263485,
+        "offset_s": -0.0003987035875017142,
+        "residual_s": 0.002371857115459619,
+        "raw_residual_s": -0.1827480000000783,
+        "device_elapsed_s": 24.299999000000078,
+        "host_elapsed_s": 24.117251,
+        "fit_samples": 202
+      },
+      "max_corrected_error_after_freeze_s": 0.005608146917641221
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-006",
+      "frames": 490,
+      "raw_sha256": "88c144688ce7a9631c1b99e0f36b2003e67e89e215ed16e7f9108424fec7c0f5",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {
+        "sequence_gap": 1
+      },
+      "final_clock": {
+        "reason": null,
+        "state": "frozen",
+        "host_seconds_per_device_second": 0.9927278461304389,
+        "offset_s": 0.0014025234304089196,
+        "residual_s": 0.017294016177665128,
+        "raw_residual_s": -0.33763900000042923,
+        "device_elapsed_s": 49.000000000000426,
+        "host_elapsed_s": 48.662361,
+        "fit_samples": 199
+      },
+      "max_corrected_error_after_freeze_s": 0.052796492747503976
+    },
+    {
+      "recording": "recordings/gui-20261109-224819-094246/live-007",
+      "frames": 194,
+      "raw_sha256": "65575244d4843034e639c45c728de448e4b38a6c9561cc84076a407beea10ab5",
+      "old_timing_rejections": 0,
+      "new_clock_rejections": 0,
+      "new_other_gate_reasons": {
+        "sequence_gap": 1
+      },
+      "final_clock": {
+        "reason": null,
+        "state": "collecting",
+        "host_seconds_per_device_second": 1.0,
+        "offset_s": 0.0,
+        "residual_s": -0.1380160000000039,
+        "raw_residual_s": -0.1380160000000039,
+        "device_elapsed_s": 19.400000000000006,
+        "host_elapsed_s": 19.261984,
+        "fit_samples": 193
+      },
+      "max_corrected_error_after_freeze_s": null
+    }
+  ],
+  "validation_limit": "Uses saved wall-clock frame arrival times as a proxy for read-loop monotonic times. Actual transport backlog flags are retained, but exact original chunk sizes are not reconstructed. Synthetic stream tests exercise the real acquisition path separately.",
+  "source_sha256": {
+    "radar_min/clock_sync.py": "cf3d608e9b0747ba69e5ccf96e159b04c2b0b80164ebf825f1c682dca218fbc1",
+    "radar_min/__main__.py": "3599222f40c87e78cc4a91fcd662957f9b7ae92621adb6b80128cff6bc73cd67",
+    "tools/validate_clock_sync.py": "6c1206429777e138689338c7d530b28b19986c990aa5993877c54bf0534661ff"
+  }
+}

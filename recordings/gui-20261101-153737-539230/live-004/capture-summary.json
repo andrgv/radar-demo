@@ -1,0 +1,13 @@
+{
+  "frames": 226,
+  "rejected_frames": 0,
+  "serial": {
+    "gaps": 0,
+    "bad_crc": 0,
+    "bad_headers": 0,
+    "restarts": 0,
+    "discarded_bytes": 0
+  },
+  "incomplete_tail_bytes": 1,
+  "received_bytes": 1487081
+}

@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-11-01T19:24:47.542389+00:00",
+  "status": "Return-to-350 kHz control programmed, verified and streaming",
+  "image_sha256": "a68e0646857d76d1511be8a5ec9ba2c8130a7d3ff897966afd6e391073163897",
+  "frames": 30,
+  "profile_ids": [
+    "0x33514802"
+  ],
+  "flags": [
+    3
+  ],
+  "elapsed_us_min_median_max": [
+    3461.0,
+    3461.0,
+    3467.0
+  ],
+  "adc_min": 27319,
+  "adc_max": 39779,
+  "container_rails": 0,
+  "capture_summary": {
+    "frames": 30,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "scene": "Unspecified startup diagnostic, excluded from reference and accuracy evaluation",
+  "next_step": "Fresh 350-b empty reference, then 30/50/40 cm, untouched repeat and separate empty holdout. All three authorized flashes are complete; captures remain."
+}

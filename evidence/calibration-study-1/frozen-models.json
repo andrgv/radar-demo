@@ -1,0 +1,117 @@
+{
+  "status": "EXPERIMENTAL_NOT_LIVE_NOT_VALIDATED",
+  "features": [
+    "fine_peak_m",
+    "positive_residual_centroid_m",
+    "positive_residual_width_m",
+    "roi_power_ratio_db",
+    "residual_fraction_bin1",
+    "residual_fraction_bin2",
+    "residual_fraction_bin3",
+    "residual_fraction_bin4"
+  ],
+  "models": {
+    "constant": {
+      "kind": "constant",
+      "intercept": 0.4115384615384615
+    },
+    "linear_peak": {
+      "kind": "linear_peak",
+      "intercept": 0.4115384615384615,
+      "columns": [
+        0
+      ],
+      "mean": [
+        0.3878225760038445
+      ],
+      "scale": [
+        0.14819529408891036
+      ],
+      "coef": [
+        0.030514732420149265
+      ],
+      "ridge_alpha": 0
+    },
+    "spectral_ridge": {
+      "kind": "spectral_ridge",
+      "intercept": 0.4115384615384615,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "mean": [
+        0.38782257600384434,
+        0.4950696505720897,
+        0.24157101792869073,
+        3.350430778838755,
+        0.6586298456842579,
+        0.24512563178694313,
+        0.042244305939745264,
+        0.054000216589053726
+      ],
+      "scale": [
+        0.14819529408891036,
+        0.10075621712923451,
+        0.07976589641425395,
+        1.13637839388034,
+        0.16452186270567887,
+        0.14237134403469234,
+        0.06663875697662165,
+        0.07794032801067671
+      ],
+      "coef": [
+        0.013442659773900386,
+        0.012909144056699517,
+        -0.014552296157635945,
+        -0.011315738100924773,
+        -0.009409759491547898,
+        0.01187909988114768,
+        -0.010181950086148306,
+        0.006869104277135111
+      ],
+      "ridge_alpha": 0.1
+    }
+  },
+  "training_recordings": [
+    "target-50cm-1",
+    "target-35cm-v2-1",
+    "target-50cm-v2-repeat-1",
+    "distance-sweep-1-30cm",
+    "distance-sweep-1-40cm",
+    "distance-sweep-1-50cm",
+    "distance-sweep-1-40cm-repeat",
+    "distance-sweep-1-40cm-repeat-2",
+    "distance-sweep-1-40cm-untouched-1",
+    "distance-sweep-2-30cm",
+    "distance-sweep-2-40cm",
+    "distance-sweep-2-50cm",
+    "distance-sweep-2-40cm-repeat"
+  ],
+  "training_raw_sha256": [
+    "9909a7e55d801309a7224bdfd06f360f18722aeb2212f4e9868d8817e743db78",
+    "3d1670d359d25df3f9805dd52f78cfd6f19a2a61998d59cfdcf108cb120694a7",
+    "799d79b88f5afc4923ae133bd5acd5a3e8abb7ff33a9a1288db93758171ddb3d",
+    "9b546b7141fb448d1f6d17b75401467a457a0f9d80b820d33910aaa177306184",
+    "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699",
+    "31095462fa839c0978e969c60207a106e863a39d7e95ac1cb717b7efac868792",
+    "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff",
+    "5d5c958747dbd38153515ad279b02e85cca3fc8930c29cf65d9cc5e20683a304",
+    "dae68cc1c426aa626a4fd95ae5827d79a2ef1127bfa099af8c6a2f6fbf8cc046",
+    "bb0be17653552ecb888b6c1475da7ff8c658ba1d7822517045d97b18d831a8be",
+    "ae67cc5d5fd9e9aa93a4cad2a0c6ca47c9bcdabc922f5cdad87c7993daeddcdf",
+    "0d320ffd8a0a95f7bd108b71e2496e485a3928c8730576144eb2fadc98f65af7",
+    "ef5c05cc19125c1abeb4663ea62845bdd2db93551ef20540f1e2b02f3fddb5c5"
+  ],
+  "label_range_m": [
+    0.3,
+    0.5
+  ],
+  "native_gate_required": true,
+  "centimeter_accuracy_validated": false
+}

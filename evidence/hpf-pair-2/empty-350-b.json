@@ -1,0 +1,48 @@
+{
+  "recording": "recordings/hpf350-b-empty-before",
+  "raw_sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0",
+  "profile_id": "0x33514802",
+  "flags": [
+    3
+  ],
+  "frames": 101,
+  "training_frames": 30,
+  "unused_empty_frames": 71,
+  "empty_detections": 0,
+  "reasons": {
+    "no_candidate_above_noise": 71
+  },
+  "frame_interval_ms_min_median_max": [
+    100.0,
+    100.0,
+    100.0
+  ],
+  "elapsed_us_min_median_max": [
+    3462.0,
+    3462.0,
+    3462.0
+  ],
+  "adc_min": 26628,
+  "adc_max": 40082,
+  "adc_container_rails": 0,
+  "thresholds_bins1to4_db": [
+    3.126121397488344,
+    8.692762709295362,
+    22.842594426583076,
+    8.037579325219887
+  ],
+  "capture_summary": {
+    "frames": 101,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "baseline": "artifacts/hpf350-b-baseline.json",
+  "limitation": "Within-recording holdout only; separate empty-after remains required. No physical distance validated."
+}

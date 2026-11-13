@@ -1,0 +1,107 @@
+test_silent_device_returns_control (test_acquisition.AcquisitionTests.test_silent_device_returns_control) ... ok
+test_start_read_stop_with_fragmented_transport (test_acquisition.AcquisitionTests.test_start_read_stop_with_fragmented_transport) ... ok
+test_added_target_survives_and_no_background_target_is_detected (test_background.BackgroundTests.test_added_target_survives_and_no_background_target_is_detected) ... ok
+test_background_removes_heldout_static_clutter (test_background.BackgroundTests.test_background_removes_heldout_static_clutter) ... ok
+test_mismatch_and_short_recording_rejected (test_background.BackgroundTests.test_mismatch_and_short_recording_rejected) ... ok
+test_reference_is_independent_of_channel_gain_corrections (test_background.BackgroundTests.test_reference_is_independent_of_channel_gain_corrections) ... ok
+test_snapshot_roundtrip (test_background.BackgroundTests.test_snapshot_roundtrip) ... ok
+test_explicit_simulation (test_cli.SourceSelectionTests.test_explicit_simulation) ... ok
+test_gui_requires_explicit_source (test_cli.SourceSelectionTests.test_gui_requires_explicit_source) ... ok
+test_live_and_simulation_are_mutually_exclusive (test_cli.SourceSelectionTests.test_live_and_simulation_are_mutually_exclusive) ... ok
+test_channel_mixing_recovers_known_direction (test_detection_gates.DetectionGateTests.test_channel_mixing_recovers_known_direction) ... ok
+test_common_phase_cancellation_does_not_destroy_direction (test_detection_gates.DetectionGateTests.test_common_phase_cancellation_does_not_destroy_direction) ... ok
+test_moving_detection_has_independent_gate (test_detection_gates.DetectionGateTests.test_moving_detection_has_independent_gate) ... ok
+test_known_spectral_bin_and_repeated_adc (test_diagnostics.DiagnosticTests.test_known_spectral_bin_and_repeated_adc) ... ok
+test_azimuth_uses_rx3_relative_to_rx1 (test_geometry.PhysicalGeometryTests.test_azimuth_uses_rx3_relative_to_rx1) ... ok
+test_documented_spacing_converts_with_carrier (test_geometry.PhysicalGeometryTests.test_documented_spacing_converts_with_carrier) ... ok
+test_elevation_uses_rx2_relative_to_rx1 (test_geometry.PhysicalGeometryTests.test_elevation_uses_rx2_relative_to_rx1) ... ok
+test_invalid_physical_geometry_rejected (test_geometry.PhysicalGeometryTests.test_invalid_physical_geometry_rejected) ... ok
+test_mount_rotation_does_not_reorder_receivers (test_geometry.PhysicalGeometryTests.test_mount_rotation_does_not_reorder_receivers) ... ok
+test_physical_geometry_full_processing (test_geometry.PhysicalGeometryTests.test_physical_geometry_full_processing) ... ok
+test_conjugation_sign_ambiguity_is_exact (test_model_audit.ModelAuditTests.test_conjugation_sign_ambiguity_is_exact) ... ok
+test_consistency_scoring_does_not_certify_true_model (test_model_audit.ModelAuditTests.test_consistency_scoring_does_not_certify_true_model) ... ok
+test_raw_chirps_also_have_coherent_scene_ambiguity (test_model_audit.ModelAuditTests.test_raw_chirps_also_have_coherent_scene_ambiguity) ... ok
+test_register_profile_reveals_highpass_corner (test_model_audit.ModelAuditTests.test_register_profile_reveals_highpass_corner) ... ok
+test_two_distinct_nonnegative_scenes_have_equal_covariance (test_model_audit.ModelAuditTests.test_two_distinct_nonnegative_scenes_have_equal_covariance) ... ok
+test_original_corrupt_wire_is_preserved_but_replay_is_clean (test_paired.PairedTests.test_original_corrupt_wire_is_preserved_but_replay_is_clean) ... ok
+test_pair_isolates_range_change_and_identical_pair_has_no_excess (test_paired.PairedTests.test_pair_isolates_range_change_and_identical_pair_has_no_excess) ... ok
+test_wire_audit_locates_deleted_bytes_without_counting_shutdown_tail (test_paired.PairedTests.test_wire_audit_locates_deleted_bytes_without_counting_shutdown_tail) ... ok
+test_common_chirp_phase_cancellation (test_phase_probe.PhaseProbeTests.test_common_chirp_phase_cancellation) ... ok
+test_disabled_by_default (test_phase_probe.PhaseProbeTests.test_disabled_by_default) ... ok
+test_gate_does_not_chase_distant_target (test_phase_probe.PhaseProbeTests.test_gate_does_not_chase_distant_target) ... ok
+test_gate_follows_neighboring_peak_without_temporal_smoothing (test_phase_probe.PhaseProbeTests.test_gate_follows_neighboring_peak_without_temporal_smoothing) ... ok
+test_noise_probe_not_coherent (test_phase_probe.PhaseProbeTests.test_noise_probe_not_coherent) ... ok
+test_outside_range_rejected (test_phase_probe.PhaseProbeTests.test_outside_range_rejected) ... ok
+test_probe_does_not_bypass_detection_threshold (test_phase_probe.PhaseProbeTests.test_probe_does_not_bypass_detection_threshold) ... ok
+test_cloud_mode_records_replayable_raw_data_and_quality_fields (test_pointcloud.CloudTests.test_cloud_mode_records_replayable_raw_data_and_quality_fields) ... ok
+test_empty_data_does_not_make_surface_points (test_pointcloud.CloudTests.test_empty_data_does_not_make_surface_points) ... ok
+test_multiple_range_returns_preserved_when_weak_return_is_20db_lower (test_pointcloud.CloudTests.test_multiple_range_returns_preserved_when_weak_return_is_20db_lower) ... ok
+test_same_range_different_dopplers_and_stationary_scene_return (test_pointcloud.CloudTests.test_same_range_different_dopplers_and_stationary_scene_return) ... ok
+test_staged_cocoa_plugin_is_not_hidden (test_qt_platform.QtPlatformTests.test_staged_cocoa_plugin_is_not_hidden) ... ok
+test_only_verified_timing_and_carrier_enable_mps (test_qualification.QualificationTests.test_only_verified_timing_and_carrier_enable_mps) ... ok
+test_optional_elapsed_header_is_backward_compatible (test_qualification.QualificationTests.test_optional_elapsed_header_is_backward_compatible) ... ok
+test_qualification_register_difference_is_only_hpf1 (test_qualification.QualificationTests.test_qualification_register_difference_is_only_hpf1) ... ok
+test_scope_mux_preserves_spi_and_io_voltage_fields (test_qualification.QualificationTests.test_scope_mux_preserves_spi_and_io_voltage_fields) ... ok
+test_unverified_timing_does_not_leak_placeholder_velocity (test_qualification.QualificationTests.test_unverified_timing_does_not_leak_placeholder_velocity) ... ok
+test_backlogged_capture_is_not_reported_as_valid_movement (test_range_check.RangeCheckTests.test_backlogged_capture_is_not_reported_as_valid_movement) ... ok
+test_guided_capture_saves_three_raw_sessions (test_range_check.RangeCheckTests.test_guided_capture_saves_three_raw_sessions) ... Keep the radar fixed and aimed the same way. Move only the box.
+Measure from the radar antenna face to the nearest face of the box.
+Step away and keep your hands still. Recording starts in 3 seconds...
+Saved empty: 29 raw frames
+Step away and keep your hands still. Recording starts in 3 seconds...
+Saved near: 29 raw frames
+Step away and keep your hands still. Recording starts in 3 seconds...
+Saved far: 29 raw frames
+ok
+test_inverted_shift_is_rejected (test_range_check.RangeCheckTests.test_inverted_shift_is_rejected) ... ok
+test_outward_shift_is_reported_without_claiming_calibration (test_range_check.RangeCheckTests.test_outward_shift_is_reported_without_claiming_calibration) ... ok
+test_background_subtracted_peaks_are_labeled_as_scene_changes (test_range_readout.RangeReadoutTests.test_background_subtracted_peaks_are_labeled_as_scene_changes) ... ok
+test_no_detection_does_not_report_strongest_noise_bin (test_range_readout.RangeReadoutTests.test_no_detection_does_not_report_strongest_noise_bin) ... ok
+test_numeric_distances_with_provisional_scale (test_range_readout.RangeReadoutTests.test_numeric_distances_with_provisional_scale) ... ok
+test_verified_configuration_label (test_range_readout.RangeReadoutTests.test_verified_configuration_label) ... ok
+test_audit_preserves_raw_files_and_detects_format_alternatives (test_recording_audit.RecordingAuditTests.test_audit_preserves_raw_files_and_detects_format_alternatives) ... ok
+test_nominal_range_model_reproduces_independent_metadata (test_recording_audit.RecordingAuditTests.test_nominal_range_model_reproduces_independent_metadata) ... ok
+test_q15_signed_packing_and_matrix_shapes (test_recording_audit.RecordingAuditTests.test_q15_signed_packing_and_matrix_shapes) ... ok
+test_source_derived_config_matches_loaded_firmware (test_recording_audit.RecordingAuditTests.test_source_derived_config_matches_loaded_firmware) ... ok
+test_grouped_baseline_and_artifacts (test_research.ResearchTests.test_grouped_baseline_and_artifacts) ... ok
+test_specimen_leakage_rejected (test_research.ResearchTests.test_specimen_leakage_rejected) ... ok
+test_unverified_data_rejected (test_research.ResearchTests.test_unverified_data_rejected) ... ok
+test_cached_renderer_updates_cells_and_survives_range_resize (test_spatial.SpatialTests.test_cached_renderer_updates_cells_and_survives_range_resize) ... ok
+test_default_scene_view_retains_weaker_range_return (test_spatial.SpatialTests.test_default_scene_view_retains_weaker_range_return) ... ok
+test_forward_response_inversion (test_spatial.SpatialTests.test_forward_response_inversion) ... ok
+test_joint_angle_peak_and_multiple_ranges_survive (test_spatial.SpatialTests.test_joint_angle_peak_and_multiple_ranges_survive) ... ok
+test_nonunitary_mixing_does_not_color_white_noise (test_spatial.SpatialTests.test_nonunitary_mixing_does_not_color_white_noise) ... ok
+test_failed_direction_does_not_produce_a_fit (test_sweep.SweepTests.test_failed_direction_does_not_produce_a_fit) ... ok
+test_handheld_report_does_not_claim_precision_calibration (test_sweep.SweepTests.test_handheld_report_does_not_claim_precision_calibration) ... ok
+test_known_baselines_recovered_with_heldout_positions (test_sweep.SweepTests.test_known_baselines_recovered_with_heldout_positions) ... ok
+test_position_geometry_and_invalid_plan (test_sweep.SweepTests.test_position_geometry_and_invalid_plan) ... ok
+test_bad_geometry (test_system.ProcessingTests.test_bad_geometry) ... ok
+test_channel_calibration (test_system.ProcessingTests.test_channel_calibration) ... ok
+test_coherent_broadband_clutter_is_not_a_calibration_target (test_system.ProcessingTests.test_coherent_broadband_clutter_is_not_a_calibration_target) ... ok
+test_configuration_mismatch (test_system.ProcessingTests.test_configuration_mismatch) ... ok
+test_fractional_bin_with_empirical_range_scale (test_system.ProcessingTests.test_fractional_bin_with_empirical_range_scale) ... ok
+test_gap_resets_temporal_features (test_system.ProcessingTests.test_gap_resets_temporal_features) ... ok
+test_invalid_direction (test_system.ProcessingTests.test_invalid_direction) ... ok
+test_negative_velocity (test_system.ProcessingTests.test_negative_velocity) ... ok
+test_noise_does_not_become_material_classification (test_system.ProcessingTests.test_noise_does_not_become_material_classification) ... ok
+test_nonpositive_range_scale_rejected (test_system.ProcessingTests.test_nonpositive_range_scale_rejected) ... ok
+test_range_fit (test_system.ProcessingTests.test_range_fit) ... ok
+test_recording_roundtrip (test_system.ProcessingTests.test_recording_roundtrip) ... ok
+test_stationary_and_moving (test_system.ProcessingTests.test_stationary_and_moving) ... ok
+test_crc_garbage_and_header_recovery (test_system.ProtocolTests.test_crc_garbage_and_header_recovery) ... ok
+test_loss_wrap_restart (test_system.ProtocolTests.test_loss_wrap_restart) ... ok
+test_random_chunk_boundaries_and_dropped_bytes (test_system.ProtocolTests.test_random_chunk_boundaries_and_dropped_bytes) ... ok
+test_truncation (test_system.ProtocolTests.test_truncation) ... ok
+test_wire_layout_and_fragmentation (test_system.ProtocolTests.test_wire_layout_and_fragmentation) ... ok
+test_current_observation_is_not_the_smoothed_track_value (test_tracking.RangeTrackerTests.test_current_observation_is_not_the_smoothed_track_value) ... ok
+test_empty_scene_reference_removes_static_clutter (test_tracking.RangeTrackerTests.test_empty_scene_reference_removes_static_clutter) ... ok
+test_large_jump_is_not_reported_as_continuous_motion (test_tracking.RangeTrackerTests.test_large_jump_is_not_reported_as_continuous_motion) ... ok
+test_requires_repeated_hits_and_does_not_hold_a_missing_dot (test_tracking.RangeTrackerTests.test_requires_repeated_hits_and_does_not_hold_a_missing_dot) ... ok
+test_short_range_accepts_close_in_broad_change_but_not_weak_noise (test_tracking.RangeTrackerTests.test_short_range_accepts_close_in_broad_change_but_not_weak_noise) ... ok
+test_short_range_amplitude_tracks_near_then_far_without_distant_clutter (test_tracking.RangeTrackerTests.test_short_range_amplitude_tracks_near_then_far_without_distant_clutter) ... ok
+test_tentative_hits_must_be_consecutive (test_tracking.RangeTrackerTests.test_tentative_hits_must_be_consecutive) ... ok
+
+----------------------------------------------------------------------
+Ran 94 tests in 1.423s
+
+OK

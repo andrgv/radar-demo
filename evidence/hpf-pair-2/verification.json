@@ -1,0 +1,22 @@
+[
+  {
+    "hpf_khz": 350,
+    "profile_id": "0x33514802",
+    "flags": 3,
+    "elapsed_telemetry_roundtrip": true,
+    "wrong_profile_rejected": true,
+    "hex_checksums_valid": true,
+    "register_array_address": "0x10009a68",
+    "register_pairs": 603
+  },
+  {
+    "hpf_khz": 100,
+    "profile_id": "0x33514801",
+    "flags": 7,
+    "elapsed_telemetry_roundtrip": true,
+    "wrong_profile_rejected": true,
+    "hex_checksums_valid": true,
+    "register_array_address": "0x10009a60",
+    "register_pairs": 603
+  }
+]

@@ -1,0 +1,359 @@
+{
+  "source_revision": "efbc17b8266ae6cf3628c154bcdbded20c88efa4",
+  "session": "recordings/gui-20261101-153737-539230",
+  "label_basis": "Requested order: empty, 30 cm, 40 cm, 50 cm, empty; inferred from user done; no external synchronized truth",
+  "training_raw_sha256": "8725674e54f63ee9bd9024c4492922e7aa38692c5384538f609c77934ccda5c4",
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-002",
+      "label_m": null,
+      "raw_sha256": "86949665d8fa48a559d37d07537a6f8740e70e20c68ca1788f34fb7f1d03cd6c",
+      "capture": {
+        "frames": 209,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1375221
+      },
+      "presence_frames": 0,
+      "live_replay_matches": true,
+      "nonconverged": {
+        "one_pass": 0,
+        "joint": 0,
+        "three_component": 0
+      },
+      "methods": {
+        "associated": {
+          "frames": 209,
+          "reported": 0,
+          "misses": 209,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "one_pass": {
+          "frames": 209,
+          "reported": 0,
+          "misses": 209,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "joint": {
+          "frames": 209,
+          "reported": 0,
+          "misses": 209,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "three_component": {
+          "frames": 209,
+          "reported": 0,
+          "misses": 209,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-003",
+      "label_m": 0.3,
+      "raw_sha256": "a2bfce02404455049895be3115e851e137472f21712bac777e21c648723ec772",
+      "capture": {
+        "frames": 214,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1408121
+      },
+      "presence_frames": 0,
+      "live_replay_matches": true,
+      "nonconverged": {
+        "one_pass": 0,
+        "joint": 0,
+        "three_component": 0
+      },
+      "methods": {
+        "associated": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "one_pass": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "joint": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "three_component": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-004",
+      "label_m": 0.4,
+      "raw_sha256": "b80a0885d97d0958723333551c5e7c8f64bb840ba0adca51fe12b0d010a17b61",
+      "capture": {
+        "frames": 226,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1487081
+      },
+      "presence_frames": 78,
+      "live_replay_matches": true,
+      "nonconverged": {
+        "one_pass": 0,
+        "joint": 0,
+        "three_component": 0
+      },
+      "methods": {
+        "associated": {
+          "frames": 226,
+          "reported": 78,
+          "misses": 148,
+          "adjacent_pairs": 67,
+          "jumps_over_20cm": 0,
+          "median_cm": 37.65659413220995,
+          "mae_cm": 2.8439702944220713,
+          "p95_error_cm": 5.960565380074619,
+          "within_2cm": 30,
+          "errors_over_10cm": 0
+        },
+        "one_pass": {
+          "frames": 226,
+          "reported": 78,
+          "misses": 148,
+          "adjacent_pairs": 67,
+          "jumps_over_20cm": 0,
+          "median_cm": 38.25,
+          "mae_cm": 2.237179487179489,
+          "p95_error_cm": 4.575,
+          "within_2cm": 38,
+          "errors_over_10cm": 0
+        },
+        "joint": {
+          "frames": 226,
+          "reported": 78,
+          "misses": 148,
+          "adjacent_pairs": 67,
+          "jumps_over_20cm": 0,
+          "median_cm": 38.0,
+          "mae_cm": 2.3461538461538476,
+          "p95_error_cm": 5.000000000000004,
+          "within_2cm": 36,
+          "errors_over_10cm": 0
+        },
+        "three_component": {
+          "frames": 226,
+          "reported": 77,
+          "misses": 149,
+          "adjacent_pairs": 66,
+          "jumps_over_20cm": 0,
+          "median_cm": 37.0,
+          "mae_cm": 3.6168831168831193,
+          "p95_error_cm": 8.000000000000002,
+          "within_2cm": 23,
+          "errors_over_10cm": 2
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-005",
+      "label_m": 0.5,
+      "raw_sha256": "0e20a8f59f02abd6135a7980ab23beba10629d25e4800da334362d5b6efd98ed",
+      "capture": {
+        "frames": 214,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1408121
+      },
+      "presence_frames": 0,
+      "live_replay_matches": true,
+      "nonconverged": {
+        "one_pass": 0,
+        "joint": 0,
+        "three_component": 0
+      },
+      "methods": {
+        "associated": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "one_pass": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "joint": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        },
+        "three_component": {
+          "frames": 214,
+          "reported": 0,
+          "misses": 214,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "mae_cm": null,
+          "p95_error_cm": null,
+          "within_2cm": 0,
+          "errors_over_10cm": 0
+        }
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-153737-539230/live-006",
+      "label_m": null,
+      "raw_sha256": "f800306b24faac173d3ba743c69376fbc12bcf8bf97a96ba34d0e80554666d06",
+      "capture": {
+        "frames": 217,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1427861
+      },
+      "presence_frames": 0,
+      "live_replay_matches": true,
+      "nonconverged": {
+        "one_pass": 0,
+        "joint": 0,
+        "three_component": 0
+      },
+      "methods": {
+        "associated": {
+          "frames": 217,
+          "reported": 0,
+          "misses": 217,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "one_pass": {
+          "frames": 217,
+          "reported": 0,
+          "misses": 217,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "joint": {
+          "frames": 217,
+          "reported": 0,
+          "misses": 217,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        },
+        "three_component": {
+          "frames": 217,
+          "reported": 0,
+          "misses": 217,
+          "adjacent_pairs": 0,
+          "jumps_over_20cm": 0,
+          "median_cm": null,
+          "false_detections": 0
+        }
+      }
+    }
+  ]
+}

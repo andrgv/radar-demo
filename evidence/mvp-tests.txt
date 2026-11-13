@@ -1,0 +1,18 @@
+test_baseline_does_not_fit_holdout (test_range_min.RangeTests.test_baseline_does_not_fit_holdout) ... ok
+test_baseline_roundtrip_and_holdout_overlap_blocked (test_range_min.RangeTests.test_baseline_roundtrip_and_holdout_overlap_blocked) ... ok
+test_fft_known_frequency_amplitude_and_dc (test_range_min.RangeTests.test_fft_known_frequency_amplitude_and_dc) ... ok
+test_gap_duplicate_and_restart (test_range_min.RangeTests.test_gap_duplicate_and_restart) ... ok
+test_malformed_config_adc_profile (test_range_min.RangeTests.test_malformed_config_adc_profile) ... ok
+test_new_bin_does_not_keep_previous_detection (test_range_min.RangeTests.test_new_bin_does_not_keep_previous_detection) ... ok
+test_persistence_and_immediate_disappearance (test_range_min.RangeTests.test_persistence_and_immediate_disappearance) ... ok
+test_serial_capture_preserves_corruption_and_replays (test_range_min.RangeTests.test_serial_capture_preserves_corruption_and_replays) ... ok
+test_serial_timeout_clears_and_closes (test_range_min.RangeTests.test_serial_timeout_clears_and_closes) ...
+NO RELIABLE READING: serial timeout
+ok
+test_timestamp_and_device_error (test_range_min.RangeTests.test_timestamp_and_device_error) ... ok
+test_wire_chunks_crc_resync_wrap (test_range_min.RangeTests.test_wire_chunks_crc_resync_wrap) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.083s
+
+OK

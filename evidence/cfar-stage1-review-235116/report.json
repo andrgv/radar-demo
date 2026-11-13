@@ -1,0 +1,360 @@
+{
+  "recording": "recordings/gui-20261109-235116-484020/live-001",
+  "raw_sha256": "58be18c9b3d2962037d51e724d29c9ccc3b480ce05256f63eda9b384c84a2b07",
+  "frames": 1386,
+  "duration_host_s": 137.7006297078915,
+  "metadata": {
+    "schema": 1,
+    "created_unix_s": 1794286283.370316,
+    "label": "live",
+    "session_id": "live-001",
+    "scene_id": "unspecified",
+    "config_fingerprint": "d786481dc1c82847aefd841ec7789886884d08c0bdd0e3a624ccd8d862b11c32",
+    "firmware_identity": "unknown; profile ID is not a firmware hash",
+    "freshness": "relative timing only; no firmware handshake",
+    "clock_sync": {
+      "algorithm": "bounded-startup-clock-v1",
+      "policy": {
+        "fit_span_s": 20.0,
+        "max_fit_span_s": 30.0,
+        "min_samples": 100,
+        "max_rate_error": 0.02,
+        "max_fit_residual_s": 0.1,
+        "p95_fit_residual_s": 0.05,
+        "max_progress_error_s": 0.5
+      },
+      "limitation": "Relative progress only; no absolute age handshake; startup latency ramps can resemble clock skew"
+    },
+    "baseline_provenance": null,
+    "detector": {
+      "algorithm": "range-ca-cfar-v2",
+      "cfar": {
+        "guard_cells": 1,
+        "training_cells": 4,
+        "min_training_cells": 4,
+        "factor": 2.0
+      },
+      "selection": "nearest qualifying peak group",
+      "confirmation": "overlapping group support; maximum moves at most one bin per frame",
+      "estimator": "raw-Hann-dense-peak-v1; no empty subtraction",
+      "edge_policy": "truncate; require minimum total reference count"
+    }
+  },
+  "transport": {
+    "frames": 1386,
+    "rejected_frames": 2,
+    "serial": {
+      "gaps": 2,
+      "bad_crc": 2,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 12759
+    },
+    "incomplete_tail_bytes": 1,
+    "received_bytes": 9132640
+  },
+  "numeric_outputs": 846,
+  "reasons": {
+    "no_candidate_above_noise": 448,
+    "checking_persistence": 90,
+    "cfar_peak_uncalibrated": 846,
+    "sequence_gap": 2
+  },
+  "clock": {
+    "final": {
+      "reason": null,
+      "state": "frozen",
+      "host_seconds_per_device_second": 0.9925841251275007,
+      "offset_s": 0.0013990771301983784,
+      "residual_s": 0.027812475580503815,
+      "raw_residual_s": -0.9993702921049135,
+      "device_elapsed_s": 138.6999999999964,
+      "host_elapsed_s": 137.7006297078915,
+      "fit_samples": 201
+    },
+    "first_freeze_host_s": 19.853486666921526,
+    "frozen_frames": 1186,
+    "frozen_rate_count": 1,
+    "max_corrected_error_after_freeze_s": 0.04963185660434988,
+    "p95_corrected_error_after_freeze_s": 0.036096808043083684,
+    "max_raw_elapsed_error_s": 0.9993702921049135,
+    "invalid_frames": 0,
+    "timing_rejections": 0
+  },
+  "scene_label_status": "Tentative labels supplied: empty, ~30 s 60 cm, ~60 s 30 cm, ~90 s 100 cm, ~120 s 70 cm. User may have mixed distances and read transition times from UI graph; not stopwatch. Do not use as verified calibration/accuracy labels.",
+  "source_sha256": {
+    "radar_min/clock_sync.py": "cf3d608e9b0747ba69e5ccf96e159b04c2b0b80164ebf825f1c682dca218fbc1",
+    "radar_min/cfar.py": "20d3dc522291dd86303757956eff6965022b3321bcd181488da90aea8799ee3c",
+    "radar_min/cfar_range.py": "d6b049cc35a8833067006c793a8bfc43b4452d10ef028fa22b4e70acd206a726",
+    "radar_min/__main__.py": "3599222f40c87e78cc4a91fcd662957f9b7ae92621adb6b80128cff6bc73cd67"
+  },
+  "ten_second_diagnostics": [
+    {
+      "host_start_s": 0,
+      "frames": 101,
+      "numeric_frames": 0,
+      "range_cm_p05_median_p95": null,
+      "reasons": {
+        "no_candidate_above_noise": 100,
+        "checking_persistence": 1
+      }
+    },
+    {
+      "host_start_s": 10,
+      "frames": 101,
+      "numeric_frames": 0,
+      "range_cm_p05_median_p95": null,
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "host_start_s": 20,
+      "frames": 101,
+      "numeric_frames": 0,
+      "range_cm_p05_median_p95": null,
+      "reasons": {
+        "no_candidate_above_noise": 101
+      }
+    },
+    {
+      "host_start_s": 30,
+      "frames": 100,
+      "numeric_frames": 64,
+      "range_cm_p05_median_p95": [
+        50.32215358882646,
+        57.39336843508305,
+        71.7338950600369
+      ],
+      "reasons": {
+        "no_candidate_above_noise": 21,
+        "checking_persistence": 15,
+        "cfar_peak_uncalibrated": 64
+      }
+    },
+    {
+      "host_start_s": 40,
+      "frames": 100,
+      "numeric_frames": 29,
+      "range_cm_p05_median_p95": [
+        46.56498052091907,
+        56.961445306501886,
+        68.98150914824144
+      ],
+      "reasons": {
+        "sequence_gap": 1,
+        "no_candidate_above_noise": 39,
+        "checking_persistence": 31,
+        "cfar_peak_uncalibrated": 29
+      }
+    },
+    {
+      "host_start_s": 50,
+      "frames": 100,
+      "numeric_frames": 45,
+      "range_cm_p05_median_p95": [
+        44.95555445605785,
+        49.55926604876229,
+        57.51749933145199
+      ],
+      "reasons": {
+        "no_candidate_above_noise": 42,
+        "checking_persistence": 12,
+        "cfar_peak_uncalibrated": 45,
+        "sequence_gap": 1
+      }
+    },
+    {
+      "host_start_s": 60,
+      "frames": 100,
+      "numeric_frames": 65,
+      "range_cm_p05_median_p95": [
+        33.057440956319255,
+        38.44850973419071,
+        50.94078042259278
+      ],
+      "reasons": {
+        "checking_persistence": 17,
+        "cfar_peak_uncalibrated": 65,
+        "no_candidate_above_noise": 18
+      }
+    },
+    {
+      "host_start_s": 70,
+      "frames": 101,
+      "numeric_frames": 101,
+      "range_cm_p05_median_p95": [
+        36.2307207263761,
+        38.282232616034776,
+        40.28282195282532
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 101
+      }
+    },
+    {
+      "host_start_s": 80,
+      "frames": 101,
+      "numeric_frames": 101,
+      "range_cm_p05_median_p95": [
+        36.96262670491233,
+        37.7891664663131,
+        41.639805006605194
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 101
+      }
+    },
+    {
+      "host_start_s": 90,
+      "frames": 101,
+      "numeric_frames": 78,
+      "range_cm_p05_median_p95": [
+        36.37782411070631,
+        108.37770734515914,
+        112.41118438001538
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 78,
+        "no_candidate_above_noise": 15,
+        "checking_persistence": 8
+      }
+    },
+    {
+      "host_start_s": 100,
+      "frames": 101,
+      "numeric_frames": 101,
+      "range_cm_p05_median_p95": [
+        107.34008861265167,
+        109.23393800948904,
+        111.51022631462209
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 101
+      }
+    },
+    {
+      "host_start_s": 110,
+      "frames": 100,
+      "numeric_frames": 100,
+      "range_cm_p05_median_p95": [
+        108.12368745721174,
+        110.21154087225729,
+        112.7242564419585
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 100
+      }
+    },
+    {
+      "host_start_s": 120,
+      "frames": 101,
+      "numeric_frames": 84,
+      "range_cm_p05_median_p95": [
+        72.54499896900353,
+        84.95715232965063,
+        112.85869406284287
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 84,
+        "no_candidate_above_noise": 11,
+        "checking_persistence": 6
+      }
+    },
+    {
+      "host_start_s": 130,
+      "frames": 78,
+      "numeric_frames": 78,
+      "range_cm_p05_median_p95": [
+        81.48659926323397,
+        83.22404050071526,
+        84.65879105025893
+      ],
+      "reasons": {
+        "cfar_peak_uncalibrated": 78
+      }
+    }
+  ],
+  "tentative_interval_metrics": [
+    {
+      "label": "empty",
+      "start_host_s": 3,
+      "end_host_s": 27,
+      "tentative_target_m": null,
+      "frames": 241,
+      "range_frames": 0,
+      "range_cm_p05_median_p95": null,
+      "conditional_mae_cm_if_label_correct": null
+    },
+    {
+      "label": "60 cm tentative",
+      "start_host_s": 33,
+      "end_host_s": 57,
+      "tentative_target_m": 0.6,
+      "frames": 240,
+      "range_frames": 89,
+      "range_cm_p05_median_p95": [
+        47.816773855108266,
+        55.874105740460436,
+        68.35547552403061
+      ],
+      "conditional_mae_cm_if_label_correct": 5.672550257103629
+    },
+    {
+      "label": "30 cm tentative",
+      "start_host_s": 63,
+      "end_host_s": 87,
+      "tentative_target_m": 0.3,
+      "frames": 242,
+      "range_frames": 224,
+      "range_cm_p05_median_p95": [
+        35.82737865977438,
+        37.71963619351846,
+        40.69008075922065
+      ],
+      "conditional_mae_cm_if_label_correct": 8.077437145191956
+    },
+    {
+      "label": "100 cm tentative",
+      "start_host_s": 93,
+      "end_host_s": 117,
+      "tentative_target_m": 1.0,
+      "frames": 242,
+      "range_frames": 223,
+      "range_cm_p05_median_p95": [
+        106.84846412394374,
+        109.5840279870459,
+        112.10804499825895
+      ],
+      "conditional_mae_cm_if_label_correct": 10.081326300277237
+    },
+    {
+      "label": "70 cm tentative",
+      "start_host_s": 123,
+      "end_host_s": 135,
+      "tentative_target_m": 0.7,
+      "frames": 121,
+      "range_frames": 104,
+      "range_cm_p05_median_p95": [
+        72.85587712055505,
+        82.764436419892,
+        98.83530303821992
+      ],
+      "conditional_mae_cm_if_label_correct": 13.18832964519964
+    },
+    {
+      "label": "late 70 cm tentative",
+      "start_host_s": 130,
+      "end_host_s": 135,
+      "tentative_target_m": 0.7,
+      "frames": 50,
+      "range_frames": 50,
+      "range_cm_p05_median_p95": [
+        81.29948234759154,
+        83.12101434450403,
+        84.47913080217862
+      ],
+      "conditional_mae_cm_if_label_correct": 13.086077438352788
+    }
+  ]
+}

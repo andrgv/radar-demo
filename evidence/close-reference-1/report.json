@@ -1,0 +1,1745 @@
+[
+  {
+    "recording": "recordings/hpf350-a-empty-before",
+    "label_m": null,
+    "start": 30,
+    "stop": 71,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "a1d314376a295ec7c0845c3278e4d3eb100524187e11d79bfd7bdd59adfbc9a5",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-30cm",
+    "label_m": 0.3,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "80be81bf707264d3c7947651f75f007ad79b17f469db50b955d559385e8968b9",
+    "median_truth_objective_loss_fraction": 0.005687008452347514,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 23,
+        "misses": 78,
+        "adjacent_pairs": 15,
+        "jumps_over_20cm": 0,
+        "median_cm": 33.89991242486265,
+        "mae_cm": 3.611444596724637,
+        "p95_error_cm": 4.937386465522884,
+        "within_2cm": 2,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 23,
+        "misses": 78,
+        "adjacent_pairs": 15,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.06516339979582,
+        "mae_cm": 3.773750067268079,
+        "p95_error_cm": 5.05640420118901,
+        "within_2cm": 2,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 34,
+        "misses": 67,
+        "adjacent_pairs": 24,
+        "jumps_over_20cm": 0,
+        "median_cm": 33.96918289878845,
+        "mae_cm": 3.792321492709344,
+        "p95_error_cm": 5.112388268007086,
+        "within_2cm": 2,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 34,
+        "misses": 67,
+        "adjacent_pairs": 24,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.12971455236862,
+        "mae_cm": 3.9483093791756594,
+        "p95_error_cm": 5.232803518337435,
+        "within_2cm": 2,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 23,
+        "misses": 78,
+        "adjacent_pairs": 15,
+        "jumps_over_20cm": 0,
+        "median_cm": 23.900725832305653,
+        "mae_cm": 6.017660632999634,
+        "p95_error_cm": 10.250690361428921,
+        "within_2cm": 1,
+        "errors_over_10cm": 2
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 23,
+        "misses": 78,
+        "adjacent_pairs": 15,
+        "jumps_over_20cm": 0,
+        "median_cm": 33.89715064569474,
+        "mae_cm": 3.6090183562402354,
+        "p95_error_cm": 4.9370956055982145,
+        "within_2cm": 2,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "98e3665474b86f95aea915880a846558ff34f02b4274babbf09e98118356a9f6",
+    "median_truth_objective_loss_fraction": 0.010578403306649432,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 29,
+        "misses": 72,
+        "adjacent_pairs": 19,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.00022043354792,
+        "mae_cm": 5.999992892202171,
+        "p95_error_cm": 8.053246270764403,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 29,
+        "misses": 72,
+        "adjacent_pairs": 19,
+        "jumps_over_20cm": 0,
+        "median_cm": 33.84682504370461,
+        "mae_cm": 6.138370610670832,
+        "p95_error_cm": 8.272153811943614,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 45,
+        "misses": 56,
+        "adjacent_pairs": 34,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.71772765449768,
+        "mae_cm": 5.461562570274658,
+        "p95_error_cm": 7.558328562389541,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 45,
+        "misses": 56,
+        "adjacent_pairs": 34,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.620478825039875,
+        "mae_cm": 5.594971271920176,
+        "p95_error_cm": 7.73152255850012,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "mae_cm": null,
+        "p95_error_cm": null,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 29,
+        "misses": 72,
+        "adjacent_pairs": 19,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.001635671502434,
+        "mae_cm": 6.002470944529264,
+        "p95_error_cm": 8.055190374967166,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm-repeat",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "3187d01a6fe50e336fbc0d58275cf219eccf2ce8006c902f184d77b51d49388a",
+    "median_truth_objective_loss_fraction": 0.01142795122465443,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 37,
+        "misses": 64,
+        "adjacent_pairs": 27,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.58387104317628,
+        "mae_cm": 5.564670410670736,
+        "p95_error_cm": 7.932884908989253,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 37,
+        "misses": 64,
+        "adjacent_pairs": 27,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.47264294528706,
+        "mae_cm": 5.696032127359093,
+        "p95_error_cm": 8.095139656586033,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 62,
+        "misses": 39,
+        "adjacent_pairs": 55,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.55064772428571,
+        "mae_cm": 5.56918646863568,
+        "p95_error_cm": 7.7646178570490765,
+        "within_2cm": 0,
+        "errors_over_10cm": 1
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 62,
+        "misses": 39,
+        "adjacent_pairs": 55,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.440783885892834,
+        "mae_cm": 5.696037858331452,
+        "p95_error_cm": 7.938845172481636,
+        "within_2cm": 0,
+        "errors_over_10cm": 1
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 2,
+        "misses": 99,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": 16.466352045755706,
+        "mae_cm": 23.533647954244298,
+        "p95_error_cm": 23.913579684674925,
+        "within_2cm": 0,
+        "errors_over_10cm": 2
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 37,
+        "misses": 64,
+        "adjacent_pairs": 27,
+        "jumps_over_20cm": 0,
+        "median_cm": 34.58419075306987,
+        "mae_cm": 5.568084825005727,
+        "p95_error_cm": 7.937863911768758,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-50cm",
+    "label_m": 0.5,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "10bf03f3f435fc2215c939b9638d4fa190b54539b902d69c358c83ac6f8440f7",
+    "median_truth_objective_loss_fraction": 0.005251460947117315,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 31,
+        "misses": 70,
+        "adjacent_pairs": 22,
+        "jumps_over_20cm": 0,
+        "median_cm": 53.64423809780684,
+        "mae_cm": 3.4951082924068504,
+        "p95_error_cm": 5.023566206121272,
+        "within_2cm": 3,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 31,
+        "misses": 70,
+        "adjacent_pairs": 22,
+        "jumps_over_20cm": 0,
+        "median_cm": 52.9691962731759,
+        "mae_cm": 2.799631351873536,
+        "p95_error_cm": 4.3368985031937815,
+        "within_2cm": 10,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 45,
+        "misses": 56,
+        "adjacent_pairs": 34,
+        "jumps_over_20cm": 0,
+        "median_cm": 53.543082730851445,
+        "mae_cm": 3.5198479557332414,
+        "p95_error_cm": 5.184911397232723,
+        "within_2cm": 6,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 45,
+        "misses": 56,
+        "adjacent_pairs": 34,
+        "jumps_over_20cm": 0,
+        "median_cm": 52.91725879919642,
+        "mae_cm": 2.8286782969372917,
+        "p95_error_cm": 4.450489714010739,
+        "within_2cm": 15,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "mae_cm": null,
+        "p95_error_cm": null,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 31,
+        "misses": 70,
+        "adjacent_pairs": 22,
+        "jumps_over_20cm": 0,
+        "median_cm": 53.644134797591704,
+        "mae_cm": 3.4951722218580237,
+        "p95_error_cm": 5.022880178544847,
+        "within_2cm": 3,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-empty-after",
+    "label_m": null,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-a-empty-before",
+    "refreshed_reference": "recordings/hpf350-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      162.02125412784832,
+      163.08401309446558,
+      120.0561528336697
+    ],
+    "raw_sha256": "a12b98fc6bee6bc413a886b06eacd584b558fb6cb9e7b73f700955b8d8ea4a13",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-before",
+    "label_m": null,
+    "start": 30,
+    "stop": 71,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "7d541e9cd8f6f01cc282ae8a6faecc35b524090a453f03a00a7150a29bbd416a",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-30cm",
+    "label_m": 0.3,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "5f8f382487970447f3d20018dd35d6d24f8de5fb31af955f174188edf0934853",
+    "median_truth_objective_loss_fraction": 0.0007819314188043497,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 48,
+        "misses": 53,
+        "adjacent_pairs": 38,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.354163863532303,
+        "mae_cm": 0.9115617401825836,
+        "p95_error_cm": 2.5554508118144286,
+        "within_2cm": 44,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 48,
+        "misses": 53,
+        "adjacent_pairs": 38,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.72906492414848,
+        "mae_cm": 1.006531523921944,
+        "p95_error_cm": 2.626855206954998,
+        "within_2cm": 43,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 46,
+        "misses": 55,
+        "adjacent_pairs": 35,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.34153247336688,
+        "mae_cm": 0.9592744079466902,
+        "p95_error_cm": 2.5787846532982455,
+        "within_2cm": 42,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 46,
+        "misses": 55,
+        "adjacent_pairs": 35,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.716730982759678,
+        "mae_cm": 1.0512491656076652,
+        "p95_error_cm": 2.6542847478438865,
+        "within_2cm": 41,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 48,
+        "misses": 53,
+        "adjacent_pairs": 38,
+        "jumps_over_20cm": 0,
+        "median_cm": 29.808051735277154,
+        "mae_cm": 0.7768614396518428,
+        "p95_error_cm": 1.8228685201682433,
+        "within_2cm": 46,
+        "errors_over_10cm": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 48,
+        "misses": 53,
+        "adjacent_pairs": 38,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.353814367552378,
+        "mae_cm": 0.9115563989804892,
+        "p95_error_cm": 2.555257809038431,
+        "within_2cm": 44,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "9c101299bcc9653b76513877979fd03657d6b290d3df99d3f671fe56fce5b280",
+    "median_truth_objective_loss_fraction": 0.003164338592757948,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 33,
+        "misses": 68,
+        "adjacent_pairs": 25,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.84250175248154,
+        "mae_cm": 2.560081934479961,
+        "p95_error_cm": 5.311404275149857,
+        "within_2cm": 14,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 33,
+        "misses": 68,
+        "adjacent_pairs": 25,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.51864689129232,
+        "mae_cm": 2.3548252560200553,
+        "p95_error_cm": 4.892958030760371,
+        "within_2cm": 17,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 40,
+        "misses": 61,
+        "adjacent_pairs": 32,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.15364394900236,
+        "mae_cm": 3.071825501964188,
+        "p95_error_cm": 6.384425261363351,
+        "within_2cm": 13,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 40,
+        "misses": 61,
+        "adjacent_pairs": 32,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.64009708185083,
+        "mae_cm": 2.8927157228168605,
+        "p95_error_cm": 6.194206599032199,
+        "within_2cm": 15,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 33,
+        "misses": 68,
+        "adjacent_pairs": 25,
+        "jumps_over_20cm": 0,
+        "median_cm": 21.59776586971715,
+        "mae_cm": 17.61287032444527,
+        "p95_error_cm": 20.308310059404143,
+        "within_2cm": 0,
+        "errors_over_10cm": 33
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 33,
+        "misses": 68,
+        "adjacent_pairs": 25,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.8332754137728,
+        "mae_cm": 2.5578766183067287,
+        "p95_error_cm": 5.304129854895559,
+        "within_2cm": 14,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm-repeat",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "dc29cfe3d52e8b8e0614fc6bc6f251c9adc68b39d899f0f5e363c5c49adb8f89",
+    "median_truth_objective_loss_fraction": 0.0022282932943956113,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.73627746385429,
+        "mae_cm": 2.525489533545987,
+        "p95_error_cm": 5.682670594280117,
+        "within_2cm": 9,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.43239642454812,
+        "mae_cm": 2.1569095224029002,
+        "p95_error_cm": 5.3733911910516206,
+        "within_2cm": 8,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 10,
+        "misses": 91,
+        "adjacent_pairs": 5,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.52702253402051,
+        "mae_cm": 2.5876200705183128,
+        "p95_error_cm": 5.7932689613173975,
+        "within_2cm": 6,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 10,
+        "misses": 91,
+        "adjacent_pairs": 5,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.13782844883037,
+        "mae_cm": 2.1315446068832804,
+        "p95_error_cm": 5.373892368222517,
+        "within_2cm": 5,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 23.086496929078155,
+        "mae_cm": 16.33158281069216,
+        "p95_error_cm": 18.305252730370587,
+        "within_2cm": 0,
+        "errors_over_10cm": 17
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.7301915764993,
+        "mae_cm": 2.519357300260926,
+        "p95_error_cm": 5.677245370373842,
+        "within_2cm": 9,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-50cm",
+    "label_m": 0.5,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "e209055d71104027788aa1287f937e4fc0233cb8f5a158547f2c92c9807cefbd",
+    "median_truth_objective_loss_fraction": 0.0009550623997886909,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 18,
+        "misses": 83,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 49.45044416954374,
+        "mae_cm": 0.5821592316520185,
+        "p95_error_cm": 1.0790673151968406,
+        "within_2cm": 18,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 18,
+        "misses": 83,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 49.48297905594275,
+        "mae_cm": 0.6031750419217687,
+        "p95_error_cm": 1.165293628985741,
+        "within_2cm": 18,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 9,
+        "jumps_over_20cm": 0,
+        "median_cm": 49.524261078700185,
+        "mae_cm": 0.6377675461952872,
+        "p95_error_cm": 1.3222145395969929,
+        "within_2cm": 17,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 17,
+        "misses": 84,
+        "adjacent_pairs": 9,
+        "jumps_over_20cm": 0,
+        "median_cm": 49.554311100786954,
+        "mae_cm": 0.6734271276941791,
+        "p95_error_cm": 1.3882700869058393,
+        "within_2cm": 17,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 18,
+        "misses": 83,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 23.0648170287062,
+        "mae_cm": 27.168175947047953,
+        "p95_error_cm": 29.89499184302977,
+        "within_2cm": 0,
+        "errors_over_10cm": 18
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 18,
+        "misses": 83,
+        "adjacent_pairs": 12,
+        "jumps_over_20cm": 0,
+        "median_cm": 49.44899582773542,
+        "mae_cm": 0.5826629546724577,
+        "p95_error_cm": 1.0798686571119118,
+        "within_2cm": 18,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-after",
+    "label_m": null,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf100-a-empty-before",
+    "refreshed_reference": "recordings/hpf100-a-empty-before",
+    "reference_difference_rms_per_rx": [
+      492.95781151700146,
+      330.34350035620486,
+      338.54465407288177
+    ],
+    "raw_sha256": "1789891372445f37045946f392de374af67a9e1ea8cdce33405c00155a00ff34",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-before",
+    "label_m": null,
+    "start": 30,
+    "stop": 71,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "24ca138c751c60cd469eedecef9725c72bdd32b8c5fc00aac3047f750a2e4ca0",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 41,
+        "reported": 0,
+        "misses": 41,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-30cm",
+    "label_m": 0.3,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689",
+    "median_truth_objective_loss_fraction": 0.0010164547271466924,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 49,
+        "misses": 52,
+        "adjacent_pairs": 42,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.049991917522977,
+        "mae_cm": 1.8713999614790238,
+        "p95_error_cm": 5.747853684120561,
+        "within_2cm": 34,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 49,
+        "misses": 52,
+        "adjacent_pairs": 42,
+        "jumps_over_20cm": 0,
+        "median_cm": 29.79484230660163,
+        "mae_cm": 1.9507643434902737,
+        "p95_error_cm": 6.2898920263900315,
+        "within_2cm": 34,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 63,
+        "misses": 38,
+        "adjacent_pairs": 56,
+        "jumps_over_20cm": 0,
+        "median_cm": 29.96489542730336,
+        "mae_cm": 2.0864267500782896,
+        "p95_error_cm": 6.151818271831884,
+        "within_2cm": 42,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 63,
+        "misses": 38,
+        "adjacent_pairs": 56,
+        "jumps_over_20cm": 0,
+        "median_cm": 29.692187069303976,
+        "mae_cm": 2.1917226189297483,
+        "p95_error_cm": 6.710261114086173,
+        "within_2cm": 41,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 30,
+        "misses": 71,
+        "adjacent_pairs": 21,
+        "jumps_over_20cm": 0,
+        "median_cm": 21.844859548007385,
+        "mae_cm": 8.53076342536294,
+        "p95_error_cm": 13.825207754305314,
+        "within_2cm": 0,
+        "errors_over_10cm": 9
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 49,
+        "misses": 52,
+        "adjacent_pairs": 42,
+        "jumps_over_20cm": 0,
+        "median_cm": 30.049161297446798,
+        "mae_cm": 1.8715140284598666,
+        "p95_error_cm": 5.750308066991662,
+        "within_2cm": 34,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "231db1f07daa8c85011fc2a5dbe05555a4456c33afe47997e1bfdf56e78acb99",
+    "median_truth_objective_loss_fraction": 0.0029836302464775317,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 55,
+        "misses": 46,
+        "adjacent_pairs": 47,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.459115726581594,
+        "mae_cm": 1.5228560578643353,
+        "p95_error_cm": 2.8423926077075494,
+        "within_2cm": 40,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 55,
+        "misses": 46,
+        "adjacent_pairs": 47,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.16392649796099,
+        "mae_cm": 1.3178506182388934,
+        "p95_error_cm": 2.6047779412275265,
+        "within_2cm": 44,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 89,
+        "misses": 12,
+        "adjacent_pairs": 85,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.645988035414064,
+        "mae_cm": 1.665430344245408,
+        "p95_error_cm": 2.9243227930670344,
+        "within_2cm": 60,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 89,
+        "misses": 12,
+        "adjacent_pairs": 85,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.457059393163384,
+        "mae_cm": 1.4411127617483894,
+        "p95_error_cm": 2.660989239132877,
+        "within_2cm": 70,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 49,
+        "misses": 52,
+        "adjacent_pairs": 38,
+        "jumps_over_20cm": 0,
+        "median_cm": 25.061757425546194,
+        "mae_cm": 14.680039805889963,
+        "p95_error_cm": 20.80722875031957,
+        "within_2cm": 0,
+        "errors_over_10cm": 40
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 55,
+        "misses": 46,
+        "adjacent_pairs": 47,
+        "jumps_over_20cm": 0,
+        "median_cm": 41.4561068398971,
+        "mae_cm": 1.5216800083583544,
+        "p95_error_cm": 2.8430530825942615,
+        "within_2cm": 40,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm-repeat",
+    "label_m": 0.4,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "2e2a43e952fa886cf09f993d8045ec99d373caaa79f8fa2197c96351693bc1c2",
+    "median_truth_objective_loss_fraction": 0.0015573823482117677,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 46,
+        "misses": 55,
+        "adjacent_pairs": 41,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.40000047399925,
+        "mae_cm": 1.0263480896221957,
+        "p95_error_cm": 2.263881187658216,
+        "within_2cm": 37,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 46,
+        "misses": 55,
+        "adjacent_pairs": 41,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.082960465220665,
+        "mae_cm": 1.0482570643236218,
+        "p95_error_cm": 2.5114290471603975,
+        "within_2cm": 40,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 62,
+        "misses": 39,
+        "adjacent_pairs": 56,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.76393534267445,
+        "mae_cm": 1.0782185016853847,
+        "p95_error_cm": 2.257709567443662,
+        "within_2cm": 53,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 62,
+        "misses": 39,
+        "adjacent_pairs": 56,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.42396689656934,
+        "mae_cm": 1.048638926223571,
+        "p95_error_cm": 2.395182179882602,
+        "within_2cm": 56,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 5,
+        "misses": 96,
+        "adjacent_pairs": 1,
+        "jumps_over_20cm": 0,
+        "median_cm": 18.580841768546986,
+        "mae_cm": 16.46558274856394,
+        "p95_error_cm": 22.757653701822527,
+        "within_2cm": 0,
+        "errors_over_10cm": 3
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 46,
+        "misses": 55,
+        "adjacent_pairs": 41,
+        "jumps_over_20cm": 0,
+        "median_cm": 40.399064029018064,
+        "mae_cm": 1.026159004674702,
+        "p95_error_cm": 2.2632578801234455,
+        "within_2cm": 37,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-50cm",
+    "label_m": 0.5,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "2c61ac6d504822c82a0976b07448432231667e09f52614201a842a429fe21324",
+    "median_truth_objective_loss_fraction": 0.01332037889820263,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 57,
+        "misses": 44,
+        "adjacent_pairs": 50,
+        "jumps_over_20cm": 0,
+        "median_cm": 45.8797731826397,
+        "mae_cm": 4.060798579452322,
+        "p95_error_cm": 6.38292666231434,
+        "within_2cm": 5,
+        "errors_over_10cm": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 57,
+        "misses": 44,
+        "adjacent_pairs": 50,
+        "jumps_over_20cm": 0,
+        "median_cm": 46.636953914637466,
+        "mae_cm": 3.37315922458161,
+        "p95_error_cm": 5.652266406305655,
+        "within_2cm": 10,
+        "errors_over_10cm": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 57,
+        "misses": 44,
+        "adjacent_pairs": 44,
+        "jumps_over_20cm": 0,
+        "median_cm": 45.771742164243236,
+        "mae_cm": 4.33646911352773,
+        "p95_error_cm": 6.688010147933178,
+        "within_2cm": 3,
+        "errors_over_10cm": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 57,
+        "misses": 44,
+        "adjacent_pairs": 44,
+        "jumps_over_20cm": 0,
+        "median_cm": 46.55335157163009,
+        "mae_cm": 3.601314819181799,
+        "p95_error_cm": 5.832727298374967,
+        "within_2cm": 8,
+        "errors_over_10cm": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 41,
+        "misses": 60,
+        "adjacent_pairs": 25,
+        "jumps_over_20cm": 0,
+        "median_cm": 58.32561497183595,
+        "mae_cm": 8.213116644632594,
+        "p95_error_cm": 11.688924976587378,
+        "within_2cm": 0,
+        "errors_over_10cm": 9
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 57,
+        "misses": 44,
+        "adjacent_pairs": 50,
+        "jumps_over_20cm": 0,
+        "median_cm": 45.876957111085254,
+        "mae_cm": 4.061639329793311,
+        "p95_error_cm": 6.385528224971752,
+        "within_2cm": 5,
+        "errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-after",
+    "label_m": null,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/hpf350-b-empty-before",
+    "refreshed_reference": "recordings/hpf350-b-empty-before",
+    "reference_difference_rms_per_rx": [
+      146.0750996163816,
+      141.36765393967266,
+      110.40098159302987
+    ],
+    "raw_sha256": "f0adffe3aca57151aa7ad26c81f9a2d6c03e4040a35ce73d63f73eff14929abd",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "wave_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "detector_only": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "chirp_mean_reference": {
+        "frames": 101,
+        "reported": 0,
+        "misses": 101,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-003",
+    "label_m": null,
+    "start": 30,
+    "stop": null,
+    "original_reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "refreshed_reference": "recordings/gui-20261101-144515-340260/live-003",
+    "reference_difference_rms_per_rx": [
+      423.9362857997739,
+      412.0515820446672,
+      483.988645116496
+    ],
+    "raw_sha256": "03d4e11b0d861c09463bb9854d2c99d8655f3e7d8f02e633705106478a0921f5",
+    "median_truth_objective_loss_fraction": null,
+    "methods": {
+      "original": {
+        "frames": 178,
+        "reported": 1,
+        "misses": 177,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": 117.01411528369843,
+        "false_detections": 1
+      },
+      "wave_only": {
+        "frames": 178,
+        "reported": 1,
+        "misses": 177,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": 131.07529732428225,
+        "false_detections": 1
+      },
+      "detector_only": {
+        "frames": 178,
+        "reported": 0,
+        "misses": 178,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "refreshed": {
+        "frames": 178,
+        "reported": 0,
+        "misses": 178,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "false_detections": 0
+      },
+      "no_wave_subtraction": {
+        "frames": 178,
+        "reported": 1,
+        "misses": 177,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": 134.12952657051648,
+        "false_detections": 1
+      },
+      "chirp_mean_reference": {
+        "frames": 178,
+        "reported": 1,
+        "misses": 177,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": 117.01250371807603,
+        "false_detections": 1
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-004",
+    "label_m": 0.3,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "refreshed_reference": "recordings/gui-20261101-144515-340260/live-003",
+    "reference_difference_rms_per_rx": [
+      423.9362857997739,
+      412.0515820446672,
+      483.988645116496
+    ],
+    "raw_sha256": "aa7d761151946dff9422127bbc0a0a044b2d04dcdaf13d665763c016dcddd44c",
+    "median_truth_objective_loss_fraction": 0.0188074572910689,
+    "methods": {
+      "original": {
+        "frames": 207,
+        "reported": 70,
+        "misses": 137,
+        "adjacent_pairs": 46,
+        "jumps_over_20cm": 0,
+        "median_cm": 20.932873153558603,
+        "mae_cm": 8.884882587549987,
+        "p95_error_cm": 14.298306298331632,
+        "within_2cm": 2,
+        "errors_over_10cm": 27
+      },
+      "wave_only": {
+        "frames": 207,
+        "reported": 105,
+        "misses": 102,
+        "adjacent_pairs": 81,
+        "jumps_over_20cm": 0,
+        "median_cm": 23.384939009554852,
+        "mae_cm": 7.061213473552426,
+        "p95_error_cm": 14.105168542470107,
+        "within_2cm": 13,
+        "errors_over_10cm": 30
+      },
+      "detector_only": {
+        "frames": 207,
+        "reported": 55,
+        "misses": 152,
+        "adjacent_pairs": 36,
+        "jumps_over_20cm": 0,
+        "median_cm": 20.766974019975425,
+        "mae_cm": 9.248310536629578,
+        "p95_error_cm": 14.377369277808464,
+        "within_2cm": 2,
+        "errors_over_10cm": 24
+      },
+      "refreshed": {
+        "frames": 207,
+        "reported": 78,
+        "misses": 129,
+        "adjacent_pairs": 57,
+        "jumps_over_20cm": 0,
+        "median_cm": 23.454456124646505,
+        "mae_cm": 6.901215666848366,
+        "p95_error_cm": 14.001303894790935,
+        "within_2cm": 9,
+        "errors_over_10cm": 19
+      },
+      "no_wave_subtraction": {
+        "frames": 207,
+        "reported": 62,
+        "misses": 145,
+        "adjacent_pairs": 42,
+        "jumps_over_20cm": 0,
+        "median_cm": 20.031485266504596,
+        "mae_cm": 9.191618855321034,
+        "p95_error_cm": 13.80463305560353,
+        "within_2cm": 2,
+        "errors_over_10cm": 30
+      },
+      "chirp_mean_reference": {
+        "frames": 207,
+        "reported": 70,
+        "misses": 137,
+        "adjacent_pairs": 46,
+        "jumps_over_20cm": 0,
+        "median_cm": 20.929603153155618,
+        "mae_cm": 8.887014931137955,
+        "p95_error_cm": 14.295222177721403,
+        "within_2cm": 2,
+        "errors_over_10cm": 27
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-005",
+    "label_m": 0.5,
+    "start": 0,
+    "stop": null,
+    "original_reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "refreshed_reference": "recordings/gui-20261101-144515-340260/live-003",
+    "reference_difference_rms_per_rx": [
+      423.9362857997739,
+      412.0515820446672,
+      483.988645116496
+    ],
+    "raw_sha256": "e7041ebd55a55df7b9cfe8b7f3bf97405691114da47858c40e50aecbc9a17079",
+    "median_truth_objective_loss_fraction": 0.0019790308117850295,
+    "methods": {
+      "original": {
+        "frames": 206,
+        "reported": 141,
+        "misses": 65,
+        "adjacent_pairs": 124,
+        "jumps_over_20cm": 1,
+        "median_cm": 49.73728430177978,
+        "mae_cm": 1.8323960033094457,
+        "p95_error_cm": 4.323012400957483,
+        "within_2cm": 111,
+        "errors_over_10cm": 4
+      },
+      "wave_only": {
+        "frames": 206,
+        "reported": 141,
+        "misses": 65,
+        "adjacent_pairs": 124,
+        "jumps_over_20cm": 0,
+        "median_cm": 48.30893804796092,
+        "mae_cm": 2.3283592144260004,
+        "p95_error_cm": 3.9027540416923245,
+        "within_2cm": 87,
+        "errors_over_10cm": 2
+      },
+      "detector_only": {
+        "frames": 206,
+        "reported": 121,
+        "misses": 85,
+        "adjacent_pairs": 94,
+        "jumps_over_20cm": 5,
+        "median_cm": 49.86984245960396,
+        "mae_cm": 3.12567485584062,
+        "p95_error_cm": 11.790108585519787,
+        "within_2cm": 84,
+        "errors_over_10cm": 8
+      },
+      "refreshed": {
+        "frames": 206,
+        "reported": 121,
+        "misses": 85,
+        "adjacent_pairs": 94,
+        "jumps_over_20cm": 4,
+        "median_cm": 48.37518655360715,
+        "mae_cm": 3.419867825476387,
+        "p95_error_cm": 5.602902629265671,
+        "within_2cm": 73,
+        "errors_over_10cm": 5
+      },
+      "no_wave_subtraction": {
+        "frames": 206,
+        "reported": 118,
+        "misses": 88,
+        "adjacent_pairs": 91,
+        "jumps_over_20cm": 14,
+        "median_cm": 31.644106631233704,
+        "mae_cm": 20.00637196811953,
+        "p95_error_cm": 32.18480756848871,
+        "within_2cm": 0,
+        "errors_over_10cm": 107
+      },
+      "chirp_mean_reference": {
+        "frames": 206,
+        "reported": 141,
+        "misses": 65,
+        "adjacent_pairs": 124,
+        "jumps_over_20cm": 1,
+        "median_cm": 49.73709081150294,
+        "mae_cm": 1.832485626657596,
+        "p95_error_cm": 4.317060031088271,
+        "within_2cm": 111,
+        "errors_over_10cm": 4
+      }
+    }
+  }
+]

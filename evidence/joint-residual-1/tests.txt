@@ -1,0 +1,50 @@
+test_connected_bins_preserve_low_side_component (test_associated_fit.AssociatedFitTests.test_connected_bins_preserve_low_side_component) ... ok
+test_constant_and_nonfinite (test_associated_fit.AssociatedFitTests.test_constant_and_nonfinite) ... ok
+test_disconnected_qualified_bin_does_not_expand_support (test_associated_fit.AssociatedFitTests.test_disconnected_qualified_bin_does_not_expand_support) ... ok
+test_known_tone_and_subbin_refinement (test_associated_fit.AssociatedFitTests.test_known_tone_and_subbin_refinement) ... ok
+test_search_limit_cannot_promote_secondary_peak (test_associated_fit.AssociatedFitTests.test_search_limit_cannot_promote_secondary_peak) ... ok
+test_distinct_target_with_phase_and_amplitude_changing_background (test_background_tone.BackgroundToneTests.test_distinct_target_with_phase_and_amplitude_changing_background) ... ok
+test_near_target_with_stronger_far_component (test_close_models.CloseModelTests.test_near_target_with_stronger_far_component) ... ok
+test_weighted_basis_matches_weighted_data_across_phase (test_close_models.CloseModelTests.test_weighted_basis_matches_weighted_data_across_phase) ... ok
+test_rejected_and_stale_estimate_never_main_readout (test_gui_stream.GuiStreamTests.test_rejected_and_stale_estimate_never_main_readout) ... ok
+test_search_boundary_preserves_presence_but_not_distance (test_gui_stream.GuiStreamTests.test_search_boundary_preserves_presence_but_not_distance) ... ok
+test_stop_saves_raw_and_observer_fields_then_closes (test_gui_stream.GuiStreamTests.test_stop_saves_raw_and_observer_fields_then_closes) ... ok
+test_timeout_observer_receives_clear (test_gui_stream.GuiStreamTests.test_timeout_observer_receives_clear) ...
+NO RELIABLE READING: serial timeout
+ok
+test_constant_and_invalid (test_joint_components.JointComponentTests.test_constant_and_invalid) ... ok
+test_known_components_and_monotonic_objective (test_joint_components.JointComponentTests.test_known_components_and_monotonic_objective) ... ok
+test_known_three_components_and_input_preserved (test_multi_component.MultiComponentTests.test_known_three_components_and_input_preserved) ... ok
+test_affine_mapping_and_no_prediction_clipping (test_offline_calibration.CalibrationTests.test_affine_mapping_and_no_prediction_clipping) ... ok
+test_distance_splits_remove_every_occurrence (test_offline_calibration.CalibrationTests.test_distance_splits_remove_every_occurrence) ... ok
+test_fitting_ignores_test_labels_and_features (test_offline_calibration.CalibrationTests.test_fitting_ignores_test_labels_and_features) ... ok
+test_group_splits_hold_entire_setup_out (test_offline_calibration.CalibrationTests.test_group_splits_hold_entire_setup_out) ... ok
+test_long_capture_does_not_dominate_fit (test_offline_calibration.CalibrationTests.test_long_capture_does_not_dominate_fit) ... ok
+test_future_samples_cannot_change_previous_output (test_range_average.AverageTests.test_future_samples_cannot_change_previous_output) ... ok
+test_rejected_frame_clears_previous_distance (test_range_average.AverageTests.test_rejected_frame_clears_previous_distance) ... ok
+test_baseline_does_not_fit_holdout (test_range_min.RangeTests.test_baseline_does_not_fit_holdout) ... ok
+test_baseline_roundtrip_and_holdout_overlap_blocked (test_range_min.RangeTests.test_baseline_roundtrip_and_holdout_overlap_blocked) ... ok
+test_fft_known_frequency_amplitude_and_dc (test_range_min.RangeTests.test_fft_known_frequency_amplitude_and_dc) ... ok
+test_gap_duplicate_and_restart (test_range_min.RangeTests.test_gap_duplicate_and_restart) ... ok
+test_malformed_config_adc_profile (test_range_min.RangeTests.test_malformed_config_adc_profile) ... ok
+test_new_bin_does_not_keep_previous_detection (test_range_min.RangeTests.test_new_bin_does_not_keep_previous_detection) ... ok
+test_noisy_neighbor_cannot_block_qualified_bin (test_range_min.RangeTests.test_noisy_neighbor_cannot_block_qualified_bin) ... ok
+test_persistence_and_immediate_disappearance (test_range_min.RangeTests.test_persistence_and_immediate_disappearance) ... ok
+test_separate_competing_peak_still_rejects (test_range_min.RangeTests.test_separate_competing_peak_still_rejects) ... ok
+test_serial_capture_preserves_corruption_and_replays (test_range_min.RangeTests.test_serial_capture_preserves_corruption_and_replays) ... ok
+test_serial_timeout_clears_and_closes (test_range_min.RangeTests.test_serial_timeout_clears_and_closes) ...
+NO RELIABLE READING: serial timeout
+ok
+test_timestamp_and_device_error (test_range_min.RangeTests.test_timestamp_and_device_error) ... ok
+test_wire_chunks_crc_resync_wrap (test_range_min.RangeTests.test_wire_chunks_crc_resync_wrap) ... ok
+test_constant_has_no_frequency (test_signal_fit.SignalFitTests.test_constant_has_no_frequency) ... ok
+test_independent_trace_offsets_amplitudes_and_phases (test_signal_fit.SignalFitTests.test_independent_trace_offsets_amplitudes_and_phases) ... ok
+test_invalid_samples_rejected (test_signal_fit.SignalFitTests.test_invalid_samples_rejected) ... ok
+test_known_frequency_across_phase_and_range (test_signal_fit.SignalFitTests.test_known_frequency_across_phase_and_range) ... ok
+test_noisy_known_tone (test_signal_fit.SignalFitTests.test_noisy_known_tone) ... ok
+test_near_target_and_interference_below_previous_cutoff (test_supported_nuisance.SupportedNuisanceTests.test_near_target_and_interference_below_previous_cutoff) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.754s
+
+OK

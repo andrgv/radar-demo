@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 import time
 import math
+import importlib.util
+import os
+import sys
 from .config import Config
 from .processing import Processor
 from .storage import Recorder, replay
@@ -24,6 +27,10 @@ def main(argv=None):
     gui.add_argument('--start-delay', type=float, default=0, help='Visible setup countdown in seconds before acquisition starts')
     gui.add_argument('--spatial-map', action='store_true', help='Show per-frame 3D reflectivity volume, not reconstructed surfaces')
     gui.add_argument('--point-cloud',action='store_true',help='Extract range-Doppler scattering centers with joint azimuth/elevation fitting')
+    gui.add_argument('--cloud-method', choices=('deblend', 'fft'),
+                     help='Point-cloud processor: raw waveform deblending (default) or legacy FFT peaks')
+    gui.add_argument('--obstacle-cloud', action='store_true',
+                     help='Experimental persistent per-RX 3D obstacles and unresolved-direction warnings')
     gui.add_argument("--metadata")
     gui.add_argument("--phase-probe", type=float, metavar="METERS",
                      help="Diagnostic phase estimate at a fixed range bin; not a detected/tracked object")
@@ -76,17 +83,134 @@ def main(argv=None):
     paired.add_argument('recordings')
     paired.add_argument('--config', required=True)
     paired.add_argument('--output', required=True)
+    range_check = commands.add_parser('range-check', help='Guided empty/near/far raw capture and provisional range-response check')
+    range_check.add_argument('output')
+    range_check.add_argument('--port', required=True)
+    range_check.add_argument('--config', required=True)
+    range_check.add_argument('--seconds', type=float, default=6)
+    range_check_analyze = commands.add_parser('range-check-analyze', help='Recheck a saved empty/near/far raw capture')
+    range_check_analyze.add_argument('recordings')
+    door = commands.add_parser('door-check', help='Guided repeated open/closed raw capture; final pair held out')
+    door.add_argument('output')
+    door.add_argument('--port', required=True)
+    door.add_argument('--config', required=True)
+    door_distance = door.add_mutually_exclusive_group(required=True)
+    door_distance.add_argument('--distance', type=float, help='Measured antenna-to-closed-glass distance in meters')
+    door_distance.add_argument('--distance-inches', type=float, help='Measured antenna-to-closed-glass distance in inches')
+    door.add_argument('--seconds', type=float, default=30)
+    door.add_argument('--repeats', type=int, default=3)
+    door.add_argument('--settle', type=float, default=5)
+    door.add_argument('--notes', default='')
+    door_analysis = commands.add_parser('door-check-analyze', help='Reanalyze a saved open/closed experiment')
+    door_analysis.add_argument('recordings')
+    obstacle_fit = commands.add_parser('obstacle-fit', help='Fit fixed-scene obstacle template; reserve final pair')
+    obstacle_fit.add_argument('experiment')
+    obstacle_fit.add_argument('output')
+    obstacle_replay = commands.add_parser('obstacle-replay', help='Evaluate obstacle template on a saved recording')
+    obstacle_replay.add_argument('recording')
+    obstacle_replay.add_argument('--model', required=True)
+    obstacle_replay.add_argument('--output', required=True)
+    obstacle_live = commands.add_parser('obstacle-live', help='Fixed-scene obstacle indication and raw recording')
+    obstacle_live.add_argument('output')
+    obstacle_live.add_argument('--model', required=True)
+    obstacle_live.add_argument('--port', required=True)
+    obstacle_live.add_argument('--seconds', type=float, default=60)
+    cloud_replay = commands.add_parser('obstacle3d-replay', help='Replay reference-free experimental 3D obstacle detection')
+    cloud_replay.add_argument('recording')
+    cloud_replay.add_argument('--config', help='Optional geometry config; acquisition fields must match the recording')
+    cloud_replay.add_argument('--output', required=True, help='New result directory')
+    cloud_live = commands.add_parser('obstacle3d-live', help='USB 3D obstacle candidates, warnings and raw recording')
+    cloud_live.add_argument('output')
+    cloud_live.add_argument('--port', required=True)
+    cloud_live.add_argument('--config', required=True)
+    cloud_live.add_argument('--seconds', type=float, default=60)
+    material_record = commands.add_parser('material-record', help='Record a labeled glass or drywall surface')
+    material_record.add_argument('output')
+    material_record.add_argument('--port', required=True)
+    material_record.add_argument('--config', required=True)
+    material_record.add_argument('--label', choices=('glass', 'drywall'), required=True)
+    material_record.add_argument('--specimen', required=True, help='Physical surface ID, such as window-02')
+    material_record.add_argument('--scene', required=True, help='Room and setup ID, such as room02-day01')
+    material_record.add_argument('--distance', type=float, required=True, help='Measured antenna-to-surface meters')
+    material_record.add_argument('--seconds', type=float, default=30)
+    material_record.add_argument('--settle', type=float, default=5)
+    material_record.add_argument('--notes', default='')
+    material_train = commands.add_parser('material-train', help='Train XGBoost with whole recordings held out')
+    material_train.add_argument('manifest')
+    material_train.add_argument('output')
+    material_train.add_argument('--features', choices=('spectrum', 'waveform'), default='spectrum')
+    material_train.add_argument('--window-frames', type=int, default=10)
+    material_train.add_argument('--skip-frames', type=int, default=10)
+    material_train.add_argument('--bins', type=int, nargs='+', help='Optional fixed FFT bins; choose before evaluation')
+    material_predict = commands.add_parser('material-predict', help='Try a saved material model on a recording')
+    material_predict.add_argument('recording')
+    material_predict.add_argument('--model', required=True, help='Model directory or model.json')
+    material_predict.add_argument('--output', help='Fresh directory for detailed predictions')
+    material_live = commands.add_parser('material-live', help='Experimental live glass/drywall comparison and raw capture')
+    material_live.add_argument('output')
+    material_live.add_argument('--port', required=True)
+    material_live.add_argument('--model', required=True)
+    material_live.add_argument('--seconds', type=float, default=30)
+    material_live.add_argument('--settle', type=float, default=5)
     arguments = parser.parse_args(argv)
+    if arguments.command in ('obstacle3d-live', 'obstacle3d-replay'):
+        from .obstacle3d import iter_results, load_config
+        recording = getattr(arguments, 'recording', None)
+        config = load_config(arguments.config or Path(recording) / 'config.json')
+        results = iter_results(config, recording=recording, port=getattr(arguments, 'port', None),
+                               output=arguments.output, seconds=getattr(arguments, 'seconds', None))
+        try:
+            for result in results:
+                print(json.dumps(result, allow_nan=False), flush=True)
+        except KeyboardInterrupt:
+            print(json.dumps(dict(schema=1, state='uncertain', reason='interrupted', returns=[])), flush=True)
+        except Exception:
+            print(json.dumps(dict(schema=1, state='uncertain', reason='acquisition_error', returns=[])), flush=True)
+            raise
+        finally:
+            results.close()
+        return
     if arguments.command == "gui":
+        if arguments.cloud_method and not arguments.point_cloud:
+            parser.error('--cloud-method requires --point-cloud')
+        if arguments.point_cloud and (arguments.cloud_method or 'deblend') == 'deblend' and arguments.background:
+            parser.error('--background is supported with --cloud-method fft; deblend uses original raw ADC')
+        missing = [name for name in ('PyQt6', 'matplotlib', 'serial') if importlib.util.find_spec(name) is None]
+        if missing:
+            project_python = '.venv/Scripts/python.exe' if os.name == 'nt' else '.venv/bin/python'
+            parser.error(
+                f"GUI dependencies missing in {sys.executable}: {', '.join(missing)}. "
+                f"From the checkout run `python -m venv .venv` then "
+                f"`{project_python} -m pip install -e .`; launch with "
+                f"`{project_python} -m radar gui ...` (or activate .venv first).")
         if not math.isfinite(arguments.start_delay) or arguments.start_delay < 0:
             parser.error('--start-delay must be finite and nonnegative')
         if arguments.seconds is not None and (not math.isfinite(arguments.seconds) or arguments.seconds <= 0):
             parser.error('--seconds must be finite and greater than zero')
         if arguments.port and not arguments.config:
             parser.error("Hardware acquisition requires --config; start with configs/hardware-provisional.json")
-        config = Config.load(arguments.config) if arguments.config else (
-            Config.load(Path(arguments.replay) / "config.json") if arguments.replay else
-            Config(chirp_timing_verified=True,carrier_frequency_verified=True))
+        if arguments.obstacle_cloud:
+            if arguments.synthetic:
+                parser.error('--obstacle-cloud requires a replay or USB port')
+            if arguments.background or arguments.phase_probe is not None or arguments.point_cloud or arguments.spatial_map:
+                parser.error('--obstacle-cloud uses its own 3D view; omit background/phase-probe/point-cloud/spatial-map')
+            from .obstacle3d import load_config
+            config = load_config(arguments.config or Path(arguments.replay) / 'config.json')
+            if arguments.mount_roll is not None:
+                config = replace(config, mount_roll_deg=arguments.mount_roll).validate()
+            from .qt_platform import staged_platform_plugins
+            with staged_platform_plugins():
+                from .obstacle3d_gui import run
+                return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
+                           seconds=arguments.seconds, start_delay=arguments.start_delay)
+        if arguments.point_cloud:
+            from .obstacle3d import load_config
+            config = load_config(arguments.config or Path(arguments.replay) / 'config.json') if (
+                arguments.config or arguments.replay) else Config(chirp_timing_verified=True, carrier_frequency_verified=True)
+        else:
+            config = Config.load(arguments.config) if arguments.config else (
+                Config.load(Path(arguments.replay) / "config.json") if arguments.replay else
+                Config(chirp_timing_verified=True,carrier_frequency_verified=True))
         if arguments.mount_roll is not None:
             config = replace(config, mount_roll_deg=arguments.mount_roll).validate()
         metadata = json.loads(Path(arguments.metadata).read_text()) if arguments.metadata else None
@@ -95,11 +219,15 @@ def main(argv=None):
             snapshot = Path(arguments.replay) / "spectral-background.npz"
             if snapshot.exists():
                 background_path = str(snapshot)
-        from .gui import run
-        return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
-                   metadata=metadata, phase_probe_range=arguments.phase_probe, background_path=background_path,
-                   spatial_map=arguments.spatial_map, seconds=arguments.seconds, start_delay=arguments.start_delay,
-                   point_cloud=arguments.point_cloud)
+        if arguments.point_cloud and (arguments.cloud_method or 'deblend') == 'deblend' and background_path:
+            parser.error('This replay has a spectral background; use --cloud-method fft to apply it')
+        from .qt_platform import staged_platform_plugins
+        with staged_platform_plugins():
+            from .gui import run
+            return run(config, port=arguments.port, recording=arguments.replay, record=arguments.record,
+                       metadata=metadata, phase_probe_range=arguments.phase_probe, background_path=background_path,
+                       spatial_map=arguments.spatial_map, seconds=arguments.seconds, start_delay=arguments.start_delay,
+                       point_cloud=arguments.point_cloud, cloud_method=arguments.cloud_method or 'deblend')
     if arguments.command == "synthetic":
         config = Config(calibration_id="synthetic-known-geometry", verified=True,
                         chirp_timing_verified=True,carrier_frequency_verified=True)
@@ -195,4 +323,59 @@ def main(argv=None):
         from .research import evaluate
         report = evaluate(arguments.root, arguments.output, set(arguments.heldout_scenes))
         print(json.dumps({key: value for key, value in report.items() if key != "model"}, indent=2))
+    elif arguments.command == "range-check":
+        from .range_check import record_range_check
+        report = record_range_check(arguments.output, Config.load(arguments.config), arguments.port,
+                                    arguments.seconds)
+        print(json.dumps(report, indent=2))
+    elif arguments.command == "range-check-analyze":
+        from .range_check import analyze_range_check
+        print(json.dumps(analyze_range_check(arguments.recordings), indent=2))
+    elif arguments.command in ('door-check', 'door-check-analyze'):
+        from .door_check import record_door_check, analyze_door_check
+        if arguments.command == 'door-check':
+            distance_m = (arguments.distance_inches * 0.0254
+                          if arguments.distance_inches is not None else arguments.distance)
+            report = record_door_check(arguments.output, Config.load(arguments.config), arguments.port,
+                                       distance_m, arguments.seconds, arguments.repeats,
+                                       arguments.settle, arguments.notes)
+        else:
+            report = analyze_door_check(arguments.recordings)
+        print(json.dumps({key: report[key] for key in ('selected_bin', 'heldout', 'limitations')}, indent=2))
+    elif arguments.command == 'obstacle-fit':
+        from .obstacle import fit_experiment
+        model = fit_experiment(arguments.experiment, arguments.output)
+        print(json.dumps({key: model[key] for key in ('selected_bins', 'training_sessions', 'assumptions')}, indent=2))
+    elif arguments.command == 'obstacle-replay':
+        from .obstacle import replay_obstacle
+        report = replay_obstacle(arguments.recording, arguments.model, arguments.output)
+        print(json.dumps({key: report[key] for key in ('counts', 'frames', 'discarded_tail_frames')}, indent=2))
+    elif arguments.command == 'obstacle-live':
+        from .obstacle import live_obstacle
+        print(json.dumps(live_obstacle(arguments.port, arguments.model, arguments.output, arguments.seconds), indent=2))
+    elif arguments.command in ('material-record', 'material-train', 'material-predict', 'material-live'):
+        from .material import FeatureSpec, capture_material, load_material, predict_material, train_material
+        try:
+            if arguments.command == 'material-train':
+                report = train_material(arguments.manifest, arguments.output,
+                    FeatureSpec(arguments.features, arguments.window_frames, arguments.skip_frames, arguments.bins))
+                report = {key: report[key] for key in
+                          ('status', 'heldout_recording_metrics', 'heldout_predictions', 'limitations')}
+                report['saved_model'] = str(Path(arguments.output) / 'model.json')
+            elif arguments.command == 'material-predict':
+                report = predict_material(arguments.recording, arguments.model, arguments.output)
+                report = {key: value for key, value in report.items() if key != 'window_predictions'}
+            elif arguments.command == 'material-record':
+                metadata = dict(label=arguments.label, specimen_id=arguments.specimen,
+                                scene_id=arguments.scene, distance_m=arguments.distance, notes=arguments.notes)
+                report = capture_material(arguments.output, Config.load(arguments.config), arguments.port,
+                                          arguments.seconds, arguments.settle, metadata)
+            else:
+                model, config, _, _ = load_material(arguments.model)
+                print('\n'.join(model['limitations']), flush=True)
+                report = capture_material(arguments.output, config, arguments.port,
+                                          arguments.seconds, arguments.settle, model_path=arguments.model)
+            print(json.dumps(report, indent=2))
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
     return 0

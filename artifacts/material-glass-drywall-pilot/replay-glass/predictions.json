@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "recording": "/Users/shafaamunjal/Documents/ChatGPT/senior_design/radar-demo/recordings/glass-pane-100cm-01/closed-03",
+  "model_status": "experimental_repeat_comparison",
+  "prediction": "glass",
+  "forced_choice": "glass",
+  "glass_score": 0.8814988732337952,
+  "windows": 29,
+  "overlaps_training_frames": false,
+  "limitations": [
+    "Same-surface repeat test only. No evidence of recognizing a new window or wall.",
+    "Experimental comparison of glass-facing and drywall-facing radar readings. Distance, angle, window frame/coating, background and sensor placement can explain a prediction. Scores are not calibrated probabilities. Other materials can receive either label. This is not a validated glass detector.",
+    "Some surface distances were not recorded; distance can explain the class difference."
+  ],
+  "raw_sha256": "ccdb149b18f9e77fe5d832f32d4d6c259c8ed9bf51bea94ee702977e26a17cfe",
+  "frames": 304,
+  "discarded_tail_frames": 4,
+  "window_predictions": [
+    {
+      "first_sequence": 3717,
+      "last_sequence": 3726,
+      "prediction": "glass",
+      "glass_score": 0.9490311741828918
+    },
+    {
+      "first_sequence": 3727,
+      "last_sequence": 3736,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3737,
+      "last_sequence": 3746,
+      "prediction": "glass",
+      "glass_score": 0.8053194284439087
+    },
+    {
+      "first_sequence": 3747,
+      "last_sequence": 3756,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3757,
+      "last_sequence": 3766,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3767,
+      "last_sequence": 3776,
+      "prediction": "glass",
+      "glass_score": 0.8753748536109924
+    },
+    {
+      "first_sequence": 3777,
+      "last_sequence": 3786,
+      "prediction": "glass",
+      "glass_score": 0.7200589179992676
+    },
+    {
+      "first_sequence": 3787,
+      "last_sequence": 3796,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3797,
+      "last_sequence": 3806,
+      "prediction": "glass",
+      "glass_score": 0.8884711861610413
+    },
+    {
+      "first_sequence": 3807,
+      "last_sequence": 3816,
+      "prediction": "drywall",
+      "glass_score": 0.33015337586402893
+    },
+    {
+      "first_sequence": 3817,
+      "last_sequence": 3826,
+      "prediction": "glass",
+      "glass_score": 0.915511965751648
+    },
+    {
+      "first_sequence": 3827,
+      "last_sequence": 3836,
+      "prediction": "glass",
+      "glass_score": 0.8549886345863342
+    },
+    {
+      "first_sequence": 3837,
+      "last_sequence": 3846,
+      "prediction": "glass",
+      "glass_score": 0.9233130216598511
+    },
+    {
+      "first_sequence": 3847,
+      "last_sequence": 3856,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3857,
+      "last_sequence": 3866,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3867,
+      "last_sequence": 3876,
+      "prediction": "glass",
+      "glass_score": 0.7613721489906311
+    },
+    {
+      "first_sequence": 3877,
+      "last_sequence": 3886,
+      "prediction": "uncertain",
+      "glass_score": 0.6074475646018982
+    },
+    {
+      "first_sequence": 3887,
+      "last_sequence": 3896,
+      "prediction": "glass",
+      "glass_score": 0.7491690516471863
+    },
+    {
+      "first_sequence": 3897,
+      "last_sequence": 3906,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3907,
+      "last_sequence": 3916,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3917,
+      "last_sequence": 3926,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3927,
+      "last_sequence": 3936,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3937,
+      "last_sequence": 3946,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3947,
+      "last_sequence": 3956,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3957,
+      "last_sequence": 3966,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3967,
+      "last_sequence": 3976,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3977,
+      "last_sequence": 3986,
+      "prediction": "glass",
+      "glass_score": 0.7998669743537903
+    },
+    {
+      "first_sequence": 3987,
+      "last_sequence": 3996,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    },
+    {
+      "first_sequence": 3997,
+      "last_sequence": 4006,
+      "prediction": "glass",
+      "glass_score": 0.9614616632461548
+    }
+  ]
+}

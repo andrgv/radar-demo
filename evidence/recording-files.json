@@ -1,0 +1,177 @@
+[
+  {
+    "path": "recordings/box_range_01/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_01/empty/arrivals.jsonl",
+    "bytes": 5124,
+    "sha256": "969237c8bc422ee08308e58730cea1272f13533fcb290ac076f316428b6a3082"
+  },
+  {
+    "path": "recordings/box_range_01/empty/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_01/empty/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_01/empty/frames.grd",
+    "bytes": 401380,
+    "sha256": "72e0a2b4aa68e4405b0c996c0448d155f17f63a22726a6682f6ce408f3b11ae1"
+  },
+  {
+    "path": "recordings/box_range_01/empty/metadata.json",
+    "bytes": 226,
+    "sha256": "7be55b8bac902da1439fc36730df6b43a3a6147680f033259f9e7bed166056f7"
+  },
+  {
+    "path": "recordings/box_range_01/near/arrivals.jsonl",
+    "bytes": 5040,
+    "sha256": "f5e136cdfc19e5a85283367b13d184a6c2380129fccdb531f781e481c005de05"
+  },
+  {
+    "path": "recordings/box_range_01/near/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_01/near/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_01/near/frames.grd",
+    "bytes": 394800,
+    "sha256": "6c1505ab9e6b5f1fe926acd8af86bc35e099564006e502b2f9549c15c4017d29"
+  },
+  {
+    "path": "recordings/box_range_01/near/metadata.json",
+    "bytes": 225,
+    "sha256": "16abcd24ad03204a6e77566162ccf5f752efad79e34e5b9a3f4f963426a617e7"
+  },
+  {
+    "path": "recordings/box_range_02/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_02/empty/arrivals.jsonl",
+    "bytes": 5124,
+    "sha256": "403365b1354abe8695c8c71e6076b71a23852958f79d10b4a79e63bcafce298d"
+  },
+  {
+    "path": "recordings/box_range_02/empty/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_02/empty/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_02/empty/frames.grd",
+    "bytes": 401380,
+    "sha256": "4482783aa2a6ff518b3becd2aef08eb426b0ab370d0fff80af5b9906812da5c6"
+  },
+  {
+    "path": "recordings/box_range_02/empty/metadata.json",
+    "bytes": 226,
+    "sha256": "8d042f3091dfbbb14ec15b49a92938cb1ac3d84437b6b3de3b8e17bf1285b3a9"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty/arrivals.jsonl",
+    "bytes": 5124,
+    "sha256": "8c830feba4161ec1eaad9aa291fef9149f92e1adcb324dd7831cac5764c3ddcf"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty/frames.grd",
+    "bytes": 401380,
+    "sha256": "8df44edd82c9348505348e7f037d4bad0f2daa20e4d01587b5d0cfd358ceb3ca"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/empty/metadata.json",
+    "bytes": 239,
+    "sha256": "315bfc1fb590c59c31907803a30023da3a2bdbb5b8bd6973e8d60b8b43f6e133"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far/arrivals.jsonl",
+    "bytes": 5040,
+    "sha256": "7780c656f76e93354609da23f5bb8a1b6d2af62fc0e7ed24d31a462f7d3c8e0b"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far/frames.grd",
+    "bytes": 394800,
+    "sha256": "ee34d7dccdb004641662e410100dda0109849b484c9ff0a3d122a78499153cb0"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/far/metadata.json",
+    "bytes": 235,
+    "sha256": "05abb6f876d25d5bb888c99dc72a8b17ceb9f826e6a3750c6f5f6c7eaaf3db90"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near/arrivals.jsonl",
+    "bytes": 5124,
+    "sha256": "88a60b5dc476337b8ea574e8f654c72d57c77e9f217dfe02bffef10bc3771d20"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near/config.json",
+    "bytes": 1046,
+    "sha256": "4d763b6688cbb0fc50b3d80ffb0bb85ef5817031d3805d5f3c6ac6f9db61021e"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near/features.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near/frames.grd",
+    "bytes": 401380,
+    "sha256": "85e4099fb7182e500b926e9e985b1bb15a13d6a1f7bd022fd968485bebacc921"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/near/metadata.json",
+    "bytes": 237,
+    "sha256": "0e41e74987dfbcd8e14eb0be290f0371d0873716739782a6378118a524c6bf49"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/range-check-report.json",
+    "bytes": 2574,
+    "sha256": "f03733af7c5110721f115fa67f3c109a7bbef6ee95a0d46239d7156675e1e88a"
+  },
+  {
+    "path": "recordings/box_range_20261028_002954/range-check.json",
+    "bytes": 212,
+    "sha256": "72c68bf3957332ea40c2a80b5a5e06207e882feb97585e60d15aff2232161b60"
+  }
+]

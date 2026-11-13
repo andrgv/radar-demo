@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "measured_distances_m": {
+    "near": 0.25,
+    "far": 0.55
+  },
+  "seconds_per_position": 6,
+  "one_continuous_sensor_session": true,
+  "note": "User-measured labels, not radar ground truth"
+}

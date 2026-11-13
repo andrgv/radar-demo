@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "created_unix_s": 1794070255.3677673,
+  "label": "unknown",
+  "session_id": "open-01",
+  "scene_id": "door07",
+  "door_state": "open",
+  "pair": 1,
+  "notes": "",
+  "measured_glass_distance_m": 1.524
+}

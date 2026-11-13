@@ -1,0 +1,181 @@
+{
+  "model": "artifacts/material-glass-drywall-pilot",
+  "interpretation": "New target types follow the user-described window/wall tests; physical novelty and geometry are not independently verified. No fitting or threshold changes.",
+  "sessions": {
+    "new-window-test-01": {
+      "decision": "glass",
+      "forced_choice": "glass",
+      "score": 0.8173764376290913,
+      "counts": {
+        "glass": 23,
+        "uncertain": 4,
+        "drywall": 2
+      },
+      "frames": 302,
+      "overlaps_training": false,
+      "first_six_mean_score": 0.6259599427382151,
+      "remaining_mean_score": 0.8673111754267112,
+      "features": [
+        {
+          "name": "rx1_spectrum_2",
+          "train_min": 52.56620407104492,
+          "train_max": 71.37855529785156,
+          "first_six_median_db": 64.22483825683594,
+          "remaining_median_db": 66.64403533935547,
+          "new_windows_outside_training_range": 1
+        },
+        {
+          "name": "rx1_spectrum_3",
+          "train_min": 56.694252014160156,
+          "train_max": 78.34915161132812,
+          "first_six_median_db": 70.2162857055664,
+          "remaining_median_db": 71.6414566040039,
+          "new_windows_outside_training_range": 1
+        },
+        {
+          "name": "rx1_spectrum_4",
+          "train_min": 54.2161865234375,
+          "train_max": 77.97913360595703,
+          "first_six_median_db": 72.26741027832031,
+          "remaining_median_db": 71.53736114501953,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_2",
+          "train_min": 54.1461181640625,
+          "train_max": 72.08126068115234,
+          "first_six_median_db": 62.84000015258789,
+          "remaining_median_db": 66.93138122558594,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_3",
+          "train_min": 54.55119705200195,
+          "train_max": 79.49673461914062,
+          "first_six_median_db": 66.26658630371094,
+          "remaining_median_db": 72.4062728881836,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_4",
+          "train_min": 57.86710739135742,
+          "train_max": 77.65293884277344,
+          "first_six_median_db": 68.45642852783203,
+          "remaining_median_db": 70.2909927368164,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx3_spectrum_2",
+          "train_min": 46.41736602783203,
+          "train_max": 72.4583740234375,
+          "first_six_median_db": 64.39833068847656,
+          "remaining_median_db": 66.11418151855469,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx3_spectrum_3",
+          "train_min": 53.41469192504883,
+          "train_max": 78.30941009521484,
+          "first_six_median_db": 64.64662170410156,
+          "remaining_median_db": 71.88732147216797,
+          "new_windows_outside_training_range": 1
+        },
+        {
+          "name": "rx3_spectrum_4",
+          "train_min": 56.62592697143555,
+          "train_max": 75.80047607421875,
+          "first_six_median_db": 70.89207458496094,
+          "remaining_median_db": 71.37664031982422,
+          "new_windows_outside_training_range": 2
+        }
+      ]
+    },
+    "new-wall-test-01": {
+      "decision": "uncertain",
+      "forced_choice": "drywall",
+      "score": 0.403293506081762,
+      "counts": {
+        "drywall": 6,
+        "uncertain": 23
+      },
+      "frames": 302,
+      "overlaps_training": false,
+      "first_six_mean_score": 0.1526259295642376,
+      "remaining_mean_score": 0.4686850477819857,
+      "features": [
+        {
+          "name": "rx1_spectrum_2",
+          "train_min": 52.56620407104492,
+          "train_max": 71.37855529785156,
+          "first_six_median_db": 62.92201232910156,
+          "remaining_median_db": 57.14653015136719,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx1_spectrum_3",
+          "train_min": 56.694252014160156,
+          "train_max": 78.34915161132812,
+          "first_six_median_db": 67.87908172607422,
+          "remaining_median_db": 64.8822250366211,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx1_spectrum_4",
+          "train_min": 54.2161865234375,
+          "train_max": 77.97913360595703,
+          "first_six_median_db": 61.700233459472656,
+          "remaining_median_db": 62.91263961791992,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_2",
+          "train_min": 54.1461181640625,
+          "train_max": 72.08126068115234,
+          "first_six_median_db": 62.8601188659668,
+          "remaining_median_db": 57.02277374267578,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_3",
+          "train_min": 54.55119705200195,
+          "train_max": 79.49673461914062,
+          "first_six_median_db": 68.02484130859375,
+          "remaining_median_db": 65.29420471191406,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx2_spectrum_4",
+          "train_min": 57.86710739135742,
+          "train_max": 77.65293884277344,
+          "first_six_median_db": 61.10504913330078,
+          "remaining_median_db": 63.44839096069336,
+          "new_windows_outside_training_range": 1
+        },
+        {
+          "name": "rx3_spectrum_2",
+          "train_min": 46.41736602783203,
+          "train_max": 72.4583740234375,
+          "first_six_median_db": 62.591156005859375,
+          "remaining_median_db": 57.14999008178711,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx3_spectrum_3",
+          "train_min": 53.41469192504883,
+          "train_max": 78.30941009521484,
+          "first_six_median_db": 68.08855438232422,
+          "remaining_median_db": 64.46574401855469,
+          "new_windows_outside_training_range": 0
+        },
+        {
+          "name": "rx3_spectrum_4",
+          "train_min": 56.62592697143555,
+          "train_max": 75.80047607421875,
+          "first_six_median_db": 63.901885986328125,
+          "remaining_median_db": 63.91957092285156,
+          "new_windows_outside_training_range": 0
+        }
+      ]
+    }
+  }
+}

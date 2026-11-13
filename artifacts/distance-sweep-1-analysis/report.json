@@ -1,0 +1,233 @@
+{
+  "method": "Median empty linear power subtracted from per-frame averaged Hann FFT power; maximum in fixed 0.15\u20131.50 m provisional search interval. No label-dependent fit, offset, threshold or search tuning.",
+  "training_frames": 30,
+  "nfft": 4096,
+  "native_samples": 64,
+  "fine_grid_m": 0.005431022789855073,
+  "native_spacing_m": 0.34758545855072465,
+  "limits": "Exploratory provisional coordinates, not certified target association or calibrated distances. Detection gate is the unchanged native-bin detector. Ungated peaks include rejected frames.",
+  "thresholds_bins1to4": [
+    3.9592723811487485,
+    17.315144861431907,
+    16.135398565455134,
+    7.5263329769318315
+  ],
+  "captures": {
+    "empty-before": {
+      "frames": 71,
+      "reported_distance_m": null,
+      "raw_sha256": "bc2e35cb109a941887a9926b6081cca4766c518da3289e64c74661a3307f90c4",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 0,
+      "native_gate_bins": {},
+      "native_gate_reasons": {
+        "no_candidate_above_noise": 71
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.15206863811594204,
+        1.0264633072826086,
+        1.4446520621014494
+      ],
+      "median_residual_profile_peak_m": 1.0318943300724637,
+      "search_boundary_peak_frames": 24,
+      "accepted_peak_p05_median_p95_m": null
+    },
+    "30cm": {
+      "frames": 101,
+      "reported_distance_m": 0.3,
+      "raw_sha256": "9b546b7141fb448d1f6d17b75401467a457a0f9d80b820d33910aaa177306184",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 58,
+      "native_gate_bins": {
+        "1": 58
+      },
+      "native_gate_reasons": {
+        "checking_persistence": 21,
+        "spectral_change_uncalibrated": 58,
+        "ambiguous_separate_peak": 8,
+        "no_candidate_above_noise": 14
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.24982704833333333,
+        0.32586136739130434,
+        0.38017159528985506
+      ],
+      "median_residual_profile_peak_m": 0.32586136739130434,
+      "search_boundary_peak_frames": 0,
+      "accepted_peak_p05_median_p95_m": [
+        0.2715511394927536,
+        0.32043034460144926,
+        0.3484001119692029
+      ],
+      "ungated_median_bias_m": 0.025861367391304346,
+      "ungated_nominal_mae_m": 0.04431094308544983
+    },
+    "40cm": {
+      "frames": 101,
+      "reported_distance_m": 0.4,
+      "raw_sha256": "91fa6afb1558bcbeefb75531c21cb49b860d3e7e3badb1a1a9921f8851295699",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 93,
+      "native_gate_bins": {
+        "1": 93
+      },
+      "native_gate_reasons": {
+        "checking_persistence": 5,
+        "ambiguous_separate_peak": 3,
+        "spectral_change_uncalibrated": 93
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.32586136739130434,
+        0.34758545855072465,
+        0.40732670923913045
+      ],
+      "median_residual_profile_peak_m": 0.3530164813405797,
+      "search_boundary_peak_frames": 0,
+      "accepted_peak_p05_median_p95_m": [
+        0.32586136739130434,
+        0.34758545855072465,
+        0.40298189100724624
+      ],
+      "ungated_median_bias_m": -0.052414541449275376,
+      "ungated_nominal_mae_m": 0.04945095969579568
+    },
+    "50cm": {
+      "frames": 101,
+      "reported_distance_m": 0.5,
+      "raw_sha256": "31095462fa839c0978e969c60207a106e863a39d7e95ac1cb717b7efac868792",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 0,
+      "native_gate_bins": {},
+      "native_gate_reasons": {
+        "ambiguous_separate_peak": 3,
+        "checking_persistence": 4,
+        "no_candidate_above_noise": 94
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.32586136739130434,
+        0.4236197776086956,
+        1.3251695607246377
+      ],
+      "median_residual_profile_peak_m": 0.4344818231884058,
+      "search_boundary_peak_frames": 0,
+      "accepted_peak_p05_median_p95_m": null,
+      "ungated_median_bias_m": -0.07638022239130438,
+      "ungated_nominal_mae_m": 0.1969292761249821
+    },
+    "40cm-repeat": {
+      "frames": 101,
+      "reported_distance_m": 0.4,
+      "raw_sha256": "5239b86b3364cbb06a9f55fa13435b15951a3dedf59e13ad4a835332bfe784ff",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 92,
+      "native_gate_bins": {
+        "1": 92
+      },
+      "native_gate_reasons": {
+        "checking_persistence": 5,
+        "spectral_change_uncalibrated": 92,
+        "ambiguous_separate_peak": 4
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.15206863811594204,
+        0.24982704833333333,
+        0.28241318507246377
+      ],
+      "median_residual_profile_peak_m": 0.24982704833333333,
+      "search_boundary_peak_frames": 12,
+      "accepted_peak_p05_median_p95_m": [
+        0.15206863811594204,
+        0.24982704833333333,
+        0.28241318507246377
+      ],
+      "ungated_median_bias_m": -0.1501729516666667,
+      "ungated_nominal_mae_m": 0.15974445717750035
+    },
+    "empty-after": {
+      "frames": 101,
+      "reported_distance_m": null,
+      "raw_sha256": "5d4c96a88fdb258afe1784cdee7f97c1d4535bd594eec36923c59719defcad79",
+      "capture": {
+        "frames": 101,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1
+      },
+      "native_gate_detections": 0,
+      "native_gate_bins": {},
+      "native_gate_reasons": {
+        "no_candidate_above_noise": 101
+      },
+      "ungated_peak_p05_median_p95_m": [
+        0.15206863811594204,
+        1.2328421732971016,
+        1.49896229
+      ],
+      "median_residual_profile_peak_m": 1.3686177430434783,
+      "search_boundary_peak_frames": 32,
+      "accepted_peak_p05_median_p95_m": null
+    }
+  },
+  "repeat_median_difference_m": -0.09775841021739132
+}

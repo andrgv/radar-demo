@@ -1,0 +1,59 @@
+{
+  "recording": "recordings/hpf350-b-30cm",
+  "measured_distance_m": 0.3,
+  "raw_sha256": "d135a4c63a2e56417d89a9b4b504912b348e28d53190f16aee052142cdfc3689",
+  "frames": 101,
+  "native_detections": 49,
+  "reasons": {
+    "ambiguous_separate_peak": 35,
+    "checking_persistence": 17,
+    "spectral_change_uncalibrated": 49
+  },
+  "joint_fit": {
+    "valid_fits": 101,
+    "boundary_fits": 0,
+    "range_p05_median_p95_m": [
+      0.22937059689418166,
+      0.2992331386826526,
+      0.32059284219812734
+    ],
+    "all_frame_errors": {
+      "frames": 101,
+      "mae_cm": 2.160205016845962,
+      "bias_cm": -1.1299937347232134,
+      "within_1cm": 0.37623762376237624
+    },
+    "gated_errors": {
+      "frames": 49,
+      "mae_cm": 1.8711022052924793,
+      "bias_cm": -0.6747691761673207,
+      "within_1cm": 0.42857142857142855
+    },
+    "residual_fraction_median": 0.4531005742834129,
+    "near_optimal_width_median_m": 0.08999999999999997
+  },
+  "fft_peak": {
+    "p05_median_p95_m": [
+      0.2932752306521739,
+      0.3149993218115942,
+      0.3584475041304348
+    ],
+    "mae_cm": 2.062261947409959
+  },
+  "adc_min": 27063,
+  "adc_max": 39054,
+  "container_rails": 0,
+  "capture_summary": {
+    "frames": 101,
+    "rejected_frames": 0,
+    "serial": {
+      "gaps": 0,
+      "bad_crc": 0,
+      "bad_headers": 0,
+      "restarts": 0,
+      "discarded_bytes": 0
+    },
+    "incomplete_tail_bytes": 1
+  },
+  "limits": "Single capture; nominal range conversion, no calibration or detector changes. Both estimates include rejected frames."
+}

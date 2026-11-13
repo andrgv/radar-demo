@@ -1,0 +1,5 @@
+Searching installed tools in progress...
+Incompatible processor. This Qt build requires the following features:
+    neon
+/bin/bash: line 1: 97813 Abort trap: 6           /Applications/ModusToolbox/tools_3.9/mtbquery/mtbquery --alltools @MTB_TOOLS_DIR=/Applications/ModusToolbox/tools_3.9 > /private/var/folders/h5/_nkl6j796h9_76h4002l8s100000gn/T/wavvy-hpf-build-im4cva6d/radar-demo/build/qualification-350/mtbquery-info.mk > /private/var/folders/h5/_nkl6j796h9_76h4002l8s100000gn/T/wavvy-hpf-build-im4cva6d/radar-demo/build/qualification-350/mtbquery-info.mk
+/Applications/ModusToolbox/tools_3.9/make/core_version3/query-v3.mk:82: *** Searching installed tools failed with error code: 134.  Stop.

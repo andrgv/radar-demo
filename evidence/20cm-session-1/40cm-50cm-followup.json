@@ -1,0 +1,90 @@
+{
+  "label_basis": "User confirms requested 40 cm then 50 cm order; same session baseline, no synchronized position truth",
+  "recordings": [
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-004",
+      "label_m": 0.4,
+      "raw_sha256": "3774e4dbb76c60396743ab84b65825a9bf890de40072fa939901d98126f2579d",
+      "metrics": {
+        "frames": 213,
+        "reported": 90,
+        "misses": 123,
+        "adjacent_pairs": 78,
+        "jumps_over_20cm": 0,
+        "median_cm": 39.67083886429915,
+        "mae_cm": 0.7112963576052356,
+        "p95_error_cm": 1.5711315056971118,
+        "within_2cm": 88,
+        "errors_over_10cm": 0
+      },
+      "reported_percentiles_cm": [
+        38.42886849430289,
+        39.67083886429914,
+        40.96536146207982
+      ],
+      "max_adjacent_jump_cm": 1.9023116858540579,
+      "reasons": {
+        "checking_persistence": 41,
+        "spectral_change_uncalibrated": 90,
+        "ambiguous_separate_peak": 82
+      },
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 213,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 2857,
+        "received_bytes": 1404397
+      }
+    },
+    {
+      "recording": "recordings/gui-20261101-155623-972019/live-005",
+      "label_m": 0.5,
+      "raw_sha256": "cf9181bf07b1338f6eba22e4170e3f3fe457eecc7a14e3b8e36314723abe6a36",
+      "metrics": {
+        "frames": 216,
+        "reported": 0,
+        "misses": 216,
+        "adjacent_pairs": 0,
+        "jumps_over_20cm": 0,
+        "median_cm": null,
+        "mae_cm": null,
+        "p95_error_cm": null,
+        "within_2cm": 0,
+        "errors_over_10cm": 0
+      },
+      "reported_percentiles_cm": null,
+      "max_adjacent_jump_cm": null,
+      "reasons": {
+        "ambiguous_separate_peak": 47,
+        "no_candidate_above_noise": 169
+      },
+      "live_replay_matches": true,
+      "capture": {
+        "frames": 216,
+        "rejected_frames": 0,
+        "serial": {
+          "gaps": 0,
+          "bad_crc": 0,
+          "bad_headers": 0,
+          "restarts": 0,
+          "discarded_bytes": 0
+        },
+        "incomplete_tail_bytes": 1,
+        "received_bytes": 1421281
+      },
+      "rejected_candidate_only_percentiles_cm": [
+        47.765280167600125,
+        49.797734663356565,
+        52.29363821436654
+      ],
+      "rejected_candidate_only_count": 216
+    }
+  ]
+}

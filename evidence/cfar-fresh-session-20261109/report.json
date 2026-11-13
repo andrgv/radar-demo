@@ -1,0 +1,109 @@
+{
+  "live-001": {
+    "recording": "recordings/gui-20261109-215257-942086/live-001",
+    "raw_sha256": "219dcb30dbb48ed851b61ef577e5f479265f4c1281d3b0e83193837b1073b7eb",
+    "frames": 726,
+    "duration_s": 72.5,
+    "accepted_frames": 408,
+    "accepted_bins": {
+      "3": 57,
+      "2": 262,
+      "1": 83,
+      "4": 6
+    },
+    "candidate_bin_switches": 147,
+    "reasons": {
+      "no_candidate_above_noise": 48,
+      "checking_persistence": 270,
+      "cfar_peak_uncalibrated": 408
+    },
+    "transport": {
+      "frames": 726,
+      "rejected_frames": 0,
+      "serial": {
+        "gaps": 0,
+        "bad_crc": 0,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 0
+      },
+      "incomplete_tail_bytes": 1,
+      "received_bytes": 4777081
+    },
+    "scene_transition_times_s": null
+  },
+  "live-002": {
+    "recording": "recordings/gui-20261109-215257-942086/live-002",
+    "raw_sha256": "8b82ed0ad8d1e669cf8389287016b12b40d8007c46b35e143aa24fe8be6f2912",
+    "frames": 290,
+    "duration_s": 29.0,
+    "accepted_frames": 186,
+    "accepted_bins": {
+      "2": 132,
+      "1": 54
+    },
+    "candidate_bin_switches": 47,
+    "reasons": {
+      "checking_persistence": 94,
+      "cfar_peak_uncalibrated": 186,
+      "sequence_gap": 1,
+      "no_candidate_above_noise": 9
+    },
+    "transport": {
+      "frames": 290,
+      "rejected_frames": 1,
+      "serial": {
+        "gaps": 1,
+        "bad_crc": 1,
+        "bad_headers": 0,
+        "restarts": 0,
+        "discarded_bytes": 5751
+      },
+      "incomplete_tail_bytes": 1,
+      "received_bytes": 1913952
+    },
+    "scene_transition_times_s": null,
+    "approximate_scene_windows": {
+      "initial_0_to_3s": {
+        "frames": 29,
+        "accepted_frames": 24,
+        "accepted_bins": {
+          "2": 24
+        },
+        "no_accepted_reading": 5
+      },
+      "initial_0_to_5s": {
+        "frames": 49,
+        "accepted_frames": 39,
+        "accepted_bins": {
+          "2": 39
+        },
+        "no_accepted_reading": 10
+      },
+      "central_8_to_24s": {
+        "frames": 160,
+        "accepted_frames": 83,
+        "accepted_bins": {
+          "2": 32,
+          "1": 51
+        },
+        "no_accepted_reading": 77
+      },
+      "ending_27s_onward": {
+        "frames": 21,
+        "accepted_frames": 21,
+        "accepted_bins": {
+          "2": 21
+        },
+        "no_accepted_reading": 0
+      }
+    },
+    "scene_timing_note": "User estimates insertion around 5 s, removal a couple seconds before end. Boundaries uncertain. User confirms UI showed 70 cm during empty scene, with no actual object there and nearest actual object at least 140 cm away. Original target placement remains approximately 50 cm.",
+    "user_scene_description": {
+      "target_placement_m_approx": 0.5,
+      "empty_scene_ui_readout_cm_approx": 70,
+      "empty_scene_nearest_actual_object_m_lower_bound": 1.4,
+      "transition_times_approx": true
+    }
+  }
+}

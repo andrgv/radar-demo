@@ -1,0 +1,1122 @@
+[
+  {
+    "recording": "recordings/hpf350-a-empty-before",
+    "label_m": null,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 123.49999999999999,
+        "accepted_median_cm": null,
+        "boundary_frames": 19
+      },
+      "2": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 118.0,
+        "accepted_median_cm": null,
+        "boundary_frames": 11
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-30cm",
+    "label_m": 0.3,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 23,
+        "all_median_cm": 35.0,
+        "accepted_median_cm": 35.0,
+        "boundary_frames": 0,
+        "all_mae_cm": 9.698019801980198,
+        "accepted_mae_cm": 14.021739130434781,
+        "accepted_within_2cm": 1,
+        "accepted_errors_over_10cm": 4
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 23,
+        "all_median_cm": 34.5,
+        "accepted_median_cm": 35.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 6.396039603960396,
+        "accepted_mae_cm": 5.391304347826086,
+        "accepted_within_2cm": 1,
+        "accepted_errors_over_10cm": 2
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm",
+    "label_m": 0.4,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 29,
+        "all_median_cm": 18.5,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 38,
+        "all_mae_cm": 19.16831683168317,
+        "accepted_mae_cm": 20.20689655172414,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 25
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 29,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 77,
+        "all_mae_cm": 23.074257425742577,
+        "accepted_mae_cm": 23.586206896551722,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 29
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-40cm-repeat",
+    "label_m": 0.4,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 37,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 18.0,
+        "boundary_frames": 55,
+        "all_mae_cm": 21.173267326732677,
+        "accepted_mae_cm": 20.837837837837842,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 37
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 37,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 89,
+        "all_mae_cm": 24.212871287128714,
+        "accepted_mae_cm": 24.581081081081084,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 37
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-50cm",
+    "label_m": 0.5,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 31,
+        "all_median_cm": 48.0,
+        "accepted_median_cm": 49.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 3.5396039603960414,
+        "accepted_mae_cm": 2.2580645161290342,
+        "accepted_within_2cm": 14,
+        "accepted_errors_over_10cm": 0
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 31,
+        "all_median_cm": 49.5,
+        "accepted_median_cm": 51.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 2.7029702970297045,
+        "accepted_mae_cm": 2.0161290322580663,
+        "accepted_within_2cm": 18,
+        "accepted_errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-a-empty-after",
+    "label_m": null,
+    "reference": "recordings/hpf350-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          2.85
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.78
+        ],
+        [
+          0.28500000000000003,
+          1.55
+        ],
+        [
+          2.85,
+          1.365
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 108.0,
+        "accepted_median_cm": null,
+        "boundary_frames": 8
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 116.5,
+        "accepted_median_cm": null,
+        "boundary_frames": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-before",
+    "label_m": null,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 104.0,
+        "accepted_median_cm": null,
+        "boundary_frames": 0
+      },
+      "2": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 108.0,
+        "accepted_median_cm": null,
+        "boundary_frames": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-30cm",
+    "label_m": 0.3,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 48,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 61,
+        "all_mae_cm": 26.678217821782173,
+        "accepted_mae_cm": 21.479166666666668,
+        "accepted_within_2cm": 1,
+        "accepted_errors_over_10cm": 43
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 48,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 58,
+        "all_mae_cm": 28.71287128712871,
+        "accepted_mae_cm": 23.010416666666668,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 42
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm",
+    "label_m": 0.4,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 33,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 26.5,
+        "boundary_frames": 58,
+        "all_mae_cm": 17.856435643564357,
+        "accepted_mae_cm": 14.34848484848485,
+        "accepted_within_2cm": 5,
+        "accepted_errors_over_10cm": 20
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 33,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 76,
+        "all_mae_cm": 21.84158415841584,
+        "accepted_mae_cm": 21.84848484848485,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 30
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-40cm-repeat",
+    "label_m": 0.4,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 17,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 68,
+        "all_mae_cm": 23.806930693069308,
+        "accepted_mae_cm": 19.676470588235293,
+        "accepted_within_2cm": 2,
+        "accepted_errors_over_10cm": 13
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 17,
+        "all_median_cm": 15.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 73,
+        "all_mae_cm": 22.603960396039604,
+        "accepted_mae_cm": 21.382352941176467,
+        "accepted_within_2cm": 1,
+        "accepted_errors_over_10cm": 16
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-50cm",
+    "label_m": 0.5,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 18,
+        "all_median_cm": 48.0,
+        "accepted_median_cm": 48.75,
+        "boundary_frames": 0,
+        "all_mae_cm": 5.133663366336635,
+        "accepted_mae_cm": 4.138888888888889,
+        "accepted_within_2cm": 5,
+        "accepted_errors_over_10cm": 1
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 18,
+        "all_median_cm": 50.5,
+        "accepted_median_cm": 49.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 5.5594059405940595,
+        "accepted_mae_cm": 4.333333333333334,
+        "accepted_within_2cm": 3,
+        "accepted_errors_over_10cm": 0
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf100-a-empty-after",
+    "label_m": null,
+    "reference": "recordings/hpf100-a-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.28500000000000003
+        ],
+        [
+          0.05
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          0.8400000000000001
+        ],
+        [
+          0.28500000000000003,
+          1.3900000000000001
+        ],
+        [
+          0.05,
+          2.905
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 115.5,
+        "accepted_median_cm": null,
+        "boundary_frames": 0
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 114.5,
+        "accepted_median_cm": null,
+        "boundary_frames": 1
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-before",
+    "label_m": null,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 109.00000000000001,
+        "accepted_median_cm": null,
+        "boundary_frames": 2
+      },
+      "2": {
+        "frames": 71,
+        "accepted": 0,
+        "all_median_cm": 109.5,
+        "accepted_median_cm": null,
+        "boundary_frames": 2
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-30cm",
+    "label_m": 0.3,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 49,
+        "all_median_cm": 30.5,
+        "accepted_median_cm": 31.0,
+        "boundary_frames": 0,
+        "all_mae_cm": 1.91089108910891,
+        "accepted_mae_cm": 2.040816326530611,
+        "accepted_within_2cm": 24,
+        "accepted_errors_over_10cm": 0
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 49,
+        "all_median_cm": 40.0,
+        "accepted_median_cm": 15.0,
+        "boundary_frames": 47,
+        "all_mae_cm": 35.94059405940594,
+        "accepted_mae_cm": 24.673469387755098,
+        "accepted_within_2cm": 0,
+        "accepted_errors_over_10cm": 45
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm",
+    "label_m": 0.4,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 55,
+        "all_median_cm": 46.5,
+        "accepted_median_cm": 46.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 5.985148514851482,
+        "accepted_mae_cm": 5.5090909090909035,
+        "accepted_within_2cm": 6,
+        "accepted_errors_over_10cm": 0
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 55,
+        "all_median_cm": 33.5,
+        "accepted_median_cm": 36.0,
+        "boundary_frames": 23,
+        "all_mae_cm": 11.198019801980198,
+        "accepted_mae_cm": 10.200000000000001,
+        "accepted_within_2cm": 7,
+        "accepted_errors_over_10cm": 18
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-40cm-repeat",
+    "label_m": 0.4,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 46,
+        "all_median_cm": 43.99999999999999,
+        "accepted_median_cm": 43.99999999999999,
+        "boundary_frames": 0,
+        "all_mae_cm": 4.212871287128709,
+        "accepted_mae_cm": 4.086956521739128,
+        "accepted_within_2cm": 5,
+        "accepted_errors_over_10cm": 0
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 46,
+        "all_median_cm": 31.0,
+        "accepted_median_cm": 37.5,
+        "boundary_frames": 39,
+        "all_mae_cm": 14.480198019801982,
+        "accepted_mae_cm": 9.749999999999998,
+        "accepted_within_2cm": 5,
+        "accepted_errors_over_10cm": 17
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-50cm",
+    "label_m": 0.5,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 57,
+        "all_median_cm": 48.0,
+        "accepted_median_cm": 47.5,
+        "boundary_frames": 1,
+        "all_mae_cm": 7.975247524752476,
+        "accepted_mae_cm": 3.3245614035087736,
+        "accepted_within_2cm": 19,
+        "accepted_errors_over_10cm": 1
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 57,
+        "all_median_cm": 61.5,
+        "accepted_median_cm": 58.5,
+        "boundary_frames": 1,
+        "all_mae_cm": 20.25247524752475,
+        "accepted_mae_cm": 16.307017543859654,
+        "accepted_within_2cm": 8,
+        "accepted_errors_over_10cm": 28
+      }
+    }
+  },
+  {
+    "recording": "recordings/hpf350-b-empty-after",
+    "label_m": null,
+    "reference": "recordings/hpf350-b-empty-before",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          0.05
+        ],
+        [
+          0.060000000000000005
+        ],
+        [
+          2.8699999999999997
+        ]
+      ],
+      "2": [
+        [
+          0.05,
+          2.795
+        ],
+        [
+          0.060000000000000005,
+          2.7849999999999997
+        ],
+        [
+          2.8699999999999997,
+          0.05
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 110.99999999999999,
+        "accepted_median_cm": null,
+        "boundary_frames": 5
+      },
+      "2": {
+        "frames": 101,
+        "accepted": 0,
+        "all_median_cm": 111.99999999999999,
+        "accepted_median_cm": null,
+        "boundary_frames": 6
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-003",
+    "label_m": null,
+    "reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          2.1399999999999997
+        ],
+        [
+          0.05
+        ],
+        [
+          2.36
+        ]
+      ],
+      "2": [
+        [
+          2.1399999999999997,
+          1.3800000000000001
+        ],
+        [
+          0.05,
+          2.9699999999999998
+        ],
+        [
+          2.36,
+          1.35
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 208,
+        "accepted": 1,
+        "all_median_cm": 110.99999999999999,
+        "accepted_median_cm": 117.0,
+        "boundary_frames": 2
+      },
+      "2": {
+        "frames": 208,
+        "accepted": 1,
+        "all_median_cm": 99.5,
+        "accepted_median_cm": 99.5,
+        "boundary_frames": 10
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-004",
+    "label_m": 0.3,
+    "reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          2.1399999999999997
+        ],
+        [
+          0.05
+        ],
+        [
+          2.36
+        ]
+      ],
+      "2": [
+        [
+          2.1399999999999997,
+          1.3800000000000001
+        ],
+        [
+          0.05,
+          2.9699999999999998
+        ],
+        [
+          2.36,
+          1.35
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 207,
+        "accepted": 133,
+        "all_median_cm": 21.0,
+        "accepted_median_cm": 21.5,
+        "boundary_frames": 61,
+        "all_mae_cm": 13.154589371980673,
+        "accepted_mae_cm": 12.522556390977444,
+        "accepted_within_2cm": 11,
+        "accepted_errors_over_10cm": 61
+      },
+      "2": {
+        "frames": 207,
+        "accepted": 133,
+        "all_median_cm": 19.5,
+        "accepted_median_cm": 21.0,
+        "boundary_frames": 73,
+        "all_mae_cm": 13.855072463768108,
+        "accepted_mae_cm": 13.06766917293233,
+        "accepted_within_2cm": 8,
+        "accepted_errors_over_10cm": 66
+      }
+    }
+  },
+  {
+    "recording": "recordings/gui-20261101-144515-340260/live-005",
+    "label_m": 0.5,
+    "reference": "recordings/gui-20261101-144515-340260/empty-001",
+    "background_nominal_ranges": {
+      "1": [
+        [
+          2.1399999999999997
+        ],
+        [
+          0.05
+        ],
+        [
+          2.36
+        ]
+      ],
+      "2": [
+        [
+          2.1399999999999997,
+          1.3800000000000001
+        ],
+        [
+          0.05,
+          2.9699999999999998
+        ],
+        [
+          2.36,
+          1.35
+        ]
+      ]
+    },
+    "methods": {
+      "1": {
+        "frames": 206,
+        "accepted": 141,
+        "all_median_cm": 50.0,
+        "accepted_median_cm": 49.0,
+        "boundary_frames": 0,
+        "all_mae_cm": 14.766990291262136,
+        "accepted_mae_cm": 14.783687943262414,
+        "accepted_within_2cm": 66,
+        "accepted_errors_over_10cm": 31
+      },
+      "2": {
+        "frames": 206,
+        "accepted": 141,
+        "all_median_cm": 49.0,
+        "accepted_median_cm": 48.5,
+        "boundary_frames": 0,
+        "all_mae_cm": 9.218446601941748,
+        "accepted_mae_cm": 7.297872340425533,
+        "accepted_within_2cm": 47,
+        "accepted_errors_over_10cm": 23
+      }
+    }
+  }
+]

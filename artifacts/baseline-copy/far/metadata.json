@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "created_unix_s": 1793161888.806496,
+  "label": "far",
+  "session_id": "far",
+  "scene_id": "box_range_20261028_002954",
+  "measured_distance_m": 0.55,
+  "range_check": true,
+  "one_continuous_sensor_session": true
+}

@@ -1,0 +1,81 @@
+{
+  "stage": "/var/folders/h5/_nkl6j796h9_76h4002l8s100000gn/T/wavvy-hpf-build-zb_v1yl0",
+  "original": "/Users/chekaylimeyer/radar-work/radar-demo",
+  "flash_performed": false,
+  "source_commit": "2143df6dc597d81e0dade9fa3d825050d58d8329",
+  "original_firmware_sha256": "12175f6a919a2cbd93612f80abc283df6861045d499a399564bdef391aef9f41",
+  "qualification_sha256": "cf1aec9a72701a3391f0fc5fc497c5659a98a3940bf88c268513b042237df117",
+  "source_manifest": {
+    "baseline_sha256": "12175f6a919a2cbd93612f80abc283df6861045d499a399564bdef391aef9f41",
+    "source": "/var/folders/h5/_nkl6j796h9_76h4002l8s100000gn/T/wavvy-hpf-build-zb_v1yl0/radar-demo/experiments/qualification/main.c",
+    "register_differences": [
+      {
+        "address": "0x1010",
+        "hpf350": "0xa1161",
+        "hpf100": "0xa1061",
+        "changed_mask": "0x00000300"
+      },
+      {
+        "address": "0x1014",
+        "hpf350": "0xa1161",
+        "hpf100": "0xa1061",
+        "changed_mask": "0x00000300"
+      },
+      {
+        "address": "0x1018",
+        "hpf350": "0xa1161",
+        "hpf100": "0xa1061",
+        "changed_mask": "0x00000300"
+      }
+    ],
+    "unchanged": "Same downloaded register list, sequencer instruction bytes, AVG_CTRL_SEQ0 override, FIFO threshold/drain logic, chirp/sample counts, 100 ms frame scheduling and serial baud.",
+    "common_instrumentation": "Read back all three modified RX registers before streaming. Use header flag bit1 plus word10 for acquisition-path elapsed microseconds; not chirp spacing. Bit2 identifies 100 kHz. Distinct profile IDs prevent accidental host mixing.",
+    "hpf_mask": 768
+  },
+  "restoration": {
+    "glass-radar-3rx.elf": "e028bb762af9dcd1f7ab859455b4bab3791b693f3159d029287db73c328974be",
+    "glass-radar-3rx.hex": "06d8a1729f79d861a36e7c0a63997c2fffbfc7e015a60a08c1740cf98a49d123"
+  },
+  "builds": [
+    {
+      "hpf_khz": 350,
+      "profile_id": "0x33514802",
+      "command": [
+        "make",
+        "build",
+        "-j4",
+        "CY_TOOLS_DIR=/Applications/ModusToolbox/tools_3.9",
+        "CY_BUILD_LOCATION=build/qualification-350",
+        "RADAR_QUALIFICATION=1",
+        "RADAR_HPF_KHZ=350",
+        "RADAR_SCOPE_OUTPUT=0"
+      ],
+      "files": {
+        "glass-radar-3rx.map": "ef5f312dfd8491a2de0ce31c23f9e9af978586d1c0ef906792c80b2bc10f1341",
+        "range-config.json": "f307f15f433b04c98716818d2f19c0b3c91d1e08f7618587ce9b4edc774e66d6",
+        "glass-radar-3rx.elf": "5c7131ec00f6735878c9235344b278e9711a511e2c4f2a22e48c52179c37b69a",
+        "glass-radar-3rx.hex": "a68e0646857d76d1511be8a5ec9ba2c8130a7d3ff897966afd6e391073163897"
+      }
+    },
+    {
+      "hpf_khz": 100,
+      "profile_id": "0x33514801",
+      "command": [
+        "make",
+        "build",
+        "-j4",
+        "CY_TOOLS_DIR=/Applications/ModusToolbox/tools_3.9",
+        "CY_BUILD_LOCATION=build/qualification-100",
+        "RADAR_QUALIFICATION=1",
+        "RADAR_HPF_KHZ=100",
+        "RADAR_SCOPE_OUTPUT=0"
+      ],
+      "files": {
+        "glass-radar-3rx.map": "d3b9f94a92b273de813071933b4114d392f96c8be706d67ad372ac607dbd9f23",
+        "range-config.json": "fdff73a2c5a46d2a3d41bfe8bf7626a81aeed59f9b68348d2b33f16c1b2e4d14",
+        "glass-radar-3rx.elf": "ea385d0a343c440a30b676c59d773b3c21c02c23dbf050af548b63ede64389e4",
+        "glass-radar-3rx.hex": "c5cd0aaf9e2a0fcdbece5194ee5d33b98b42777198ffaefe06ff605b32395389"
+      }
+    }
+  ]
+}

@@ -61,28 +61,43 @@ class CloudProcessor:
             np.array([x[5] for x in candidates]).reshape(-1,2),np.array([x[6] for x in candidates]))
 
 
-def main():
+def main(argv=None):
     import argparse,json,time
     from pathlib import Path
     from dataclasses import asdict
-    from .config import Config
+    from .obstacle3d import load_config
+    from .material import _check_frame
+    from .protocol import Parser
     from .storage import replay
     from .processing import range_fft
     p=argparse.ArgumentParser()
     p.add_argument('recording');p.add_argument('--config',required=True);p.add_argument('--output',required=True)
-    args=p.parse_args()
-    config=Config.load(args.config);processor=CloudProcessor(config)
-    out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+    p.add_argument('--method', choices=('deblend','fft'), default='deblend')
+    args=p.parse_args(argv)
+    config=load_config(args.config)
+    if args.method == 'deblend':
+        from .reconstruction import SceneReconstructor
+        processor = SceneReconstructor(config)
+    else:
+        processor = CloudProcessor(config)
+    out=Path(args.output);out.mkdir(parents=True,exist_ok=False)
     counts=[];timings=[];all_xyz=[]
+    parser=Parser();previous=None
     with (out/'points.jsonl').open('w',encoding='utf-8') as destination:
-        for frame in replay(args.recording):
-            start=time.perf_counter();cloud=processor.process(range_fft(frame.adc,config));timings.append((time.perf_counter()-start)*1000)
+        for frame in replay(args.recording,parser):
+            _check_frame(frame, config, previous);previous=frame
+            start=time.perf_counter()
+            cloud=processor.process(frame.adc if args.method=='deblend' else range_fft(frame.adc,config))
+            timings.append((time.perf_counter()-start)*1000)
             destination.write(json.dumps(dict(sequence=frame.sequence,timestamp_us=frame.timestamp_us,
-                **{k:v.tolist() for k,v in asdict(cloud).items()}))+'\n')
+                **{k:v.tolist() for k,v in asdict(cloud).items()},
+                **(dict(reconstruction=processor.last_report) if args.method=='deblend' else {})),allow_nan=False)+'\n')
             counts.append(len(cloud.xyz));all_xyz.extend(cloud.xyz)
+    if not counts or any(getattr(parser,k) for k in ('bad_crc','bad_headers','gaps','restarts','discarded_bytes')) or parser.buffer:
+        raise ValueError('Empty, corrupt or discontinuous raw recording; partial diagnostic output preserved')
     report=dict(frames=len(counts),points=int(sum(counts)),points_per_frame_p05_median_p95=np.percentile(counts,[5,50,95]).tolist(),
         processing_ms_p50_p95=np.percentile(timings,[50,95]).tolist(),
-        config=asdict(config),caveats='Uncalibrated sensor-relative scattering centers, not surfaces. Doppler units are cycles/chirp because timing is unverified. Model fit is not probability. No temporal accumulation/pose estimation.')
+        config=asdict(config),method=args.method,caveats='Uncalibrated sensor-relative scattering centers, not surfaces. Doppler units are cycles/chirp because timing is unverified. Model fit is not probability. No temporal accumulation/pose estimation.')
     (out/'report.json').write_text(json.dumps(report,indent=2))
     print(json.dumps({k:v for k,v in report.items() if k!='config'},indent=2))
 

@@ -1,0 +1,21 @@
+{
+  "sha256": {
+    "tools/replay_hpf_series.py": "3125cba02890038be1749ef622208da2d0e73988735db1f47c3925837bb54436",
+    "tools/fit_range_signal.py": "2285519566d8f971a0b5fa16caa7c0a63954826aebe5425708f6aa9c8d4b5a3e",
+    "tools/audit_pointcloud_recordings.py": "0b58a4bc7f9a339f7adff4df93c6765cdd0991ba7fc45864871bc33da12a2b4e",
+    "tests/test_pointcloud_recording_audit.py": "0ebf707d99dcb4c82126e07a540801511925e65c94c2261c7740d143b131c98c",
+    "radar/pointcloud.py": "ff0df5082eaa7b64d7640cd5decb2746582e3f8ea6ab3ce3ded5ecf3ae6a9f64",
+    "evidence/pointcloud-resolution-20261111/range-summary.json": "78485aef5468e5c7a506037b095c04142beddd9f579f4378e17580795c0ef24a",
+    "artifacts/resolution-hpf-replay-20261111/report.json": "5aa0c246876975f81e62b60fe2f8c0f64b031eb62a272785b4e3fc31b3c76da9",
+    "evidence/pointcloud-resolution-20261111/README.md": "554d11febced3e5aaa0254e75943ca0df33c5c5f7fcea7d1460e78520b08bcf8",
+    "evidence/pointcloud-resolution-20261111/pointcloud-report.json": "a774e0257b9b66e111c60520abba5e46f7024b83cbb6dcaa5ba5a7ef71f451a2",
+    "evidence/pointcloud-resolution-20261111/range-replay.json": "5aa0c246876975f81e62b60fe2f8c0f64b031eb62a272785b4e3fc31b3c76da9",
+    "evidence/pointcloud-resolution-20261111/range-localization.png": "5dc19d7090b6dd6d54beb0a2094047260a6cad153016fd0566227e49c750fc70"
+  },
+  "validation": {
+    "focused_pointcloud_tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "range_replay": "All 12 target recording MAEs and native detection counts reproduce the retained HPF evidence; no retuning."
+  }
+}
